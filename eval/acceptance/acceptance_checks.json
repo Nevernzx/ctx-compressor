@@ -1,0 +1,61 @@
+{
+  "generated_at_utc": "2026-11-17T03:28:17.579356+00:00",
+  "seed": 20261117,
+  "budget": 3000,
+  "budget_status": "占位，正式值由 §6 试验定",
+  "dataset": "/root/workplace/ctx-compressor/data/raw/musique/musique_ans_v1.0_dev.jsonl",
+  "corpus_split": "dev only",
+  "corpus_size": 21100,
+  "valid_examples": 2417,
+  "skipped_examples": 0,
+  "skipped": [],
+  "tasks": [
+    {
+      "task": 1,
+      "example_ids": [
+        "2hop__49409_67668",
+        "2hop__543853_124498",
+        "2hop__75714_148696",
+        "2hop__39231_17335"
+      ],
+      "hops": 8,
+      "natural_hits": 6
+    },
+    {
+      "task": 2,
+      "example_ids": [
+        "2hop__412633_15781",
+        "3hop1__92991_78276_68042",
+        "3hop1__66872_709625_84283",
+        "2hop__606439_127399"
+      ],
+      "hops": 10,
+      "natural_hits": 10
+    },
+    {
+      "task": 3,
+      "example_ids": [
+        "3hop1__36497_73181_68042",
+        "4hop1__436202_765799_282674_759393",
+        "2hop__370564_71701",
+        "2hop__512773_346751"
+      ],
+      "hops": 11,
+      "natural_hits": 9
+    }
+  ],
+  "checks": {
+    "resolved_queries": 58,
+    "gold_in_candidates": 58,
+    "budget_respected": 58,
+    "legal_sft_targets": 58,
+    "append_prefix_preserved": 29,
+    "stable_local_ids": 58,
+    "step_count_matches_hops": 3,
+    "distinct_questions": 12
+  },
+  "failures": [],
+  "passed": true,
+  "trajectory_records": 58,
+  "elapsed_seconds": 7.525365313980728
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-17T19:22:06.795031+00:00",
+  "status": "readonly_review_complete",
+  "final_acceptance_status": "pending_actual_completion",
+  "reviewer": "task05_eval",
+  "scope": "Read-only review of Task05 report, checkpoint selection, measured timing, final resource gates and delivery order; this is not execution of the finalizer or model audit.",
+  "reviewed_sources": [
+    {
+      "path": "scripts/sft_run_report.py",
+      "sha256": "54ec9c7ad134bea221a493dc0719724e63c6a8933c4ed540f6928167e80bb8be"
+    },
+    {
+      "path": "scripts/finalize_sft_artifacts.py",
+      "sha256": "50b6e3fb4e4ad1de8ecc70ce5d5d1cd4c4beaaa8f13e65418a15ee69f4590570"
+    },
+    {
+      "path": "scripts/checksums_task05.py",
+      "sha256": "1a3d973c5261ec7f6d528ce848e777506791da8a311d59da073ea52c642418b8"
+    },
+    {
+      "path": "scripts/wait_train_then_eval.py",
+      "sha256": "2cbfa79162d85e9cae728d215d526c13a63894799a9f6f905c1f645ccd58d856"
+    },
+    {
+      "path": "scripts/train_sft_worker.py",
+      "sha256": "0be97ace75037842ea77e0171c34675ccbaaae08de980711df5126d28ea64ac1"
+    },
+    {
+      "path": "src/heldout_eval.py",
+      "sha256": "807fde4994a7b5a94e44f3e1119825a176924a12b280c31dfb25c78616d7b03c"
+    }
+  ],
+  "observed_report_status": "pending",
+  "observed_report_failure_reasons": [],
+  "blocking_findings": [],
+  "checks": {
+    "section6_eight_rows": "Selected checkpoint, base, bm25 and oracle, each in reselect and append mode at mid budget 2814; eight rows, 249 heldout train tasks per row.",
+    "checkpoint_pooling": "Each of five checkpoints requires all six mode/budget cells with 249 tasks each. Primary loss count is tasks missing at least one gold passage at the final state; pooled denominator is 1494 task-mode-budget trajectories, with 249 underlying independent tasks.",
+    "checkpoint_tie_break": "Ascending pooled evidence-loss count, descending pooled final-recall mean, ascending checkpoint step. Evaluation loss does not select the checkpoint.",
+    "metric_denominators": "Report preserves count/n for rates, n for means, step versus task macro denominators, question counts, 1494 pooled counts, 249 cell counts, and one-run timing denominators. Strategy validation checks metric counts, finite values, rate consistency and pooled sums/means.",
+    "truthful_pending": "Missing measurements or artifacts keep report pending; malformed completed evidence fails. At review time final training/model/resource evidence is still incomplete.",
+    "final_lifecycle_gate": "Requires formal 2500 optimizer steps, 40000 sample exposures, epoch 2, five saved checkpoints, six complete model strategies and watcher evaluation_complete with exit_code 0. Exact recorded task and watcher PIDs must have exited before inventory.",
+    "final_resource_gate": "Current physical GPU 1 UUID must match preflight/history; memory_used_mib must be below 2048 and no recorded task PID may remain in nvidia-smi compute processes. Root growth is current raw df used bytes minus the original preflight root_df_used_bytes, limited to 300000000 bytes without offsetting or resetting the baseline.",
+    "inventory_publication": "Full external inventory is deferred until completion/process/resource gates pass, then completion evidence, PID source evidence and current GPU/df are rechecked before successful receipts are published.",
+    "checksum_chain": "Task05 checksum finalization checks frozen old Task01-04 content and final external inventory coverage; it must run after the final Task05 documents and receipts exist."
+  },
+  "delivery_notes": [
+    {
+      "topic": "Report build, plot, build",
+      "instruction": "Allow an initial build exit code 2 when the final loss CSV or matching SVG receipt is pending, then plot, then build again. Do not use an unconditional first-build && plot chain. Exit 1 indicates failed evidence and must not be ignored. Final delivery requires build exit 0."
+    },
+    {
+      "topic": "Measured training timing boundary",
+      "train_seconds": "CUDA-synchronized on_train_begin to CUDA-synchronized on_train_end, including all five scheduled evaluations and checkpoint saves for formal training.",
+      "wall_seconds": "Worker work interval starts after initial GPU checks, input hashes/JSON checks, source snapshot and initial config writes, but before torch/Swift imports, model startup and sample encoding. It ends after requesting and joining the monitor, before final worker_result/config writes. It is not the full OS process lifetime.",
+      "instruction": "Final report and delivery prose must describe these measured intervals accurately. Do not change the running training source."
+    },
+    {
+      "topic": "Terminal resource acceptance",
+      "instruction": "Wait for training, all six model rollouts, inference shutdown and watcher exit before independent final model audit and final inventory/resource acceptance. Current read-only review does not certify actual GPU release or final root-disk growth."
+    }
+  ],
+  "actions": {
+    "tests_rerun": false,
+    "gpu_execution": false,
+    "model_inference": false,
+    "full_inventory_executed": false,
+    "source_modified": false,
+    "old_task_artifacts_modified": false
+  }
+}

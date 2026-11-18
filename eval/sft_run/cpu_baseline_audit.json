@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "strategies": {
+    "no_compress": {
+      "n_trajectories": 1494,
+      "n_step_records": 13956,
+      "sha256": "efab1373c1b520a5646ef3be3d89fe9264fe6158f0339cf6cedada9406385356",
+      "verified": true
+    },
+    "latest": {
+      "n_trajectories": 1494,
+      "n_step_records": 13956,
+      "sha256": "76e9c3aea9c7efd07de2235c9cb73e1a72df9c3a27f2d7e7ff7b5ffabfad3c93",
+      "verified": true
+    },
+    "bm25": {
+      "n_trajectories": 1494,
+      "n_step_records": 13956,
+      "sha256": "d543140a7e9e2fb20ec54e08766137004df33c99fab46d75ff62313b0f2f1ef9",
+      "verified": true
+    },
+    "oracle": {
+      "n_trajectories": 1494,
+      "n_step_records": 13956,
+      "sha256": "1eef089c2bcf9d120e0d2b64480854f5571dbdf81a4a971a80de9c1287d37a5b",
+      "verified": true
+    }
+  },
+  "elapsed_seconds": 14.416229652008042,
+  "checks": [
+    "saved heldout/train inputs only",
+    "full six-cell task coverage",
+    "saved retrieval steps",
+    "closed-loop local IDs and retained contexts",
+    "original CPU policy action equality",
+    "train-index BM25 scores",
+    "existing apply_action",
+    "available-gold step recalls",
+    "Task 02 aggregates",
+    "task-final loss count",
+    "external rollout sha256"
+  ],
+  "no_gpu_api_downloads_installs_or_dev_inputs": true
+}

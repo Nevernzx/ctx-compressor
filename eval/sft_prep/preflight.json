@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-11-17T12:16:37.980943+00:00",
+  "root_df_used_bytes": 931307966464,
+  "root_final_growth_limit_bytes": 300000000,
+  "root_df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         937G  868G   22G  98% /\n",
+  "gpu": {
+    "physical_index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "name": "NVIDIA RTX 5880 Ada Generation",
+    "memory_total_mib": 49140,
+    "memory_used_mib": 375,
+    "driver_version": "580.95.05"
+  },
+  "prior_delivery_files_verified": 136,
+  "authorized_old_file_changes": [
+    "src/build_traj.py: hop_queries only",
+    "tests/test_build_traj.py: out-of-range reference expectations only"
+  ]
+}

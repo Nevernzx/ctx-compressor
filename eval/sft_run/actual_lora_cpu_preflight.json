@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-17T19:00:18.112568+00:00",
+  "status": "passed_cpu_only",
+  "scope": "Read-only actual checkpoint config parsing plus safetensors CPU inspection",
+  "checkpoints": [
+    {
+      "step": 500,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500",
+      "status": "cpu_compatible",
+      "base_path_verified": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+      "trainer_global_step": 500,
+      "actual_parser": "vllm.lora.peft_helper.PEFTHelper.from_local_dir + validate_legal",
+      "parsed_helper": {
+        "r": 16,
+        "lora_alpha": 32,
+        "target_modules": [
+          "v_proj",
+          "q_proj",
+          "gate_proj",
+          "down_proj",
+          "k_proj",
+          "o_proj",
+          "up_proj"
+        ],
+        "bias": "none",
+        "modules_to_save": [],
+        "use_rslora": false,
+        "use_dora": false,
+        "vllm_lora_scaling_factor": 2.0,
+        "vllm_max_position_embeddings": 40960
+      },
+      "peft_writer_version": "0.18.0",
+      "extra_fields_filtered_by_installed_parser": {
+        "alora_invocation_tokens": null,
+        "alpha_pattern": {},
+        "arrow_config": null,
+        "auto_mapping": null,
+        "base_model_name_or_path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+        "corda_config": null,
+        "ensure_weight_tying": false,
+        "eva_config": null,
+        "exclude_modules": null,
+        "fan_in_fan_out": false,
+        "inference_mode": true,
+        "init_lora_weights": true,
+        "layer_replication": null,
+        "layers_pattern": null,
+        "layers_to_transform": null,
+        "loftq_config": {},
+        "lora_bias": false,
+        "lora_dropout": 0.05,
+        "megatron_config": null,
+        "megatron_core": "megatron.core",
+        "peft_type": "LORA",
+        "peft_version": "0.18.0",
+        "qalora_group_size": 16,
+        "rank_pattern": {},
+        "revision": null,
+        "target_parameters": null,
+        "task_type": "CAUSAL_LM",
+        "trainable_token_indices": null,
+        "use_qalora": false
+      },
+      "inactive_extended_features_checked": {
+        "alora_invocation_tokens": null,
+        "alpha_pattern": {},
+        "arrow_config": null,
+        "corda_config": null,
+        "ensure_weight_tying": false,
+        "eva_config": null,
+        "exclude_modules": null,
+        "fan_in_fan_out": false,
+        "layer_replication": null,
+        "layers_pattern": null,
+        "layers_to_transform": null,
+        "loftq_config": {},
+        "lora_bias": false,
+        "megatron_config": null,
+        "rank_pattern": {},
+        "target_parameters": null,
+        "trainable_token_indices": null,
+        "use_qalora": false
+      },
+      "empty_modules_to_save_accepted": true,
+      "weights": {
+        "tensor_count": 392,
+        "layer_module_count": 196,
+        "transformer_layers": 28,
+        "parameter_count": 17432576,
+        "cpu_tensor_bytes": 69730304,
+        "dtype_counts": {
+          "torch.float32": 392
+        },
+        "shapes_by_module_and_role": {
+          "down_proj:A": [
+            16,
+            6144
+          ],
+          "down_proj:B": [
+            2048,
+            16
+          ],
+          "gate_proj:A": [
+            16,
+            2048
+          ],
+          "gate_proj:B": [
+            6144,
+            16
+          ],
+          "up_proj:A": [
+            16,
+            2048
+          ],
+          "up_proj:B": [
+            6144,
+            16
+          ],
+          "k_proj:A": [
+            16,
+            2048
+          ],
+          "k_proj:B": [
+            1024,
+            16
+          ],
+          "o_proj:A": [
+            16,
+            2048
+          ],
+          "o_proj:B": [
+            2048,
+            16
+          ],
+          "q_proj:A": [
+            16,
+            2048
+          ],
+          "q_proj:B": [
+            2048,
+            16
+          ],
+          "v_proj:A": [
+            16,
+            2048
+          ],
+          "v_proj:B": [
+            1024,
+            16
+          ]
+        },
+        "all_A_B_pairs_present": true,
+        "all_tensors_finite": true,
+        "bf16_conversion_finite": true,
+        "maximum_absolute_value": 0.04813244938850403,
+        "safetensors_header_bytes": 52072,
+        "metadata": {
+          "format": "pt"
+        },
+        "tensor_names_sha256": "db4186653e9c7017cea7d4f7485421842b851aecc96c92cda259e55ba73d8792"
+      },
+      "files_before_and_after_equal": true,
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "9de5734a99ad1caca2f53602135e8f9e2ec619c2237e50d0355a09bd95a448aa"
+        }
+      ]
+    },
+    {
+      "step": 1000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000",
+      "status": "cpu_compatible",
+      "base_path_verified": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+      "trainer_global_step": 1000,
+      "actual_parser": "vllm.lora.peft_helper.PEFTHelper.from_local_dir + validate_legal",
+      "parsed_helper": {
+        "r": 16,
+        "lora_alpha": 32,
+        "target_modules": [
+          "v_proj",
+          "q_proj",
+          "gate_proj",
+          "down_proj",
+          "k_proj",
+          "o_proj",
+          "up_proj"
+        ],
+        "bias": "none",
+        "modules_to_save": [],
+        "use_rslora": false,
+        "use_dora": false,
+        "vllm_lora_scaling_factor": 2.0,
+        "vllm_max_position_embeddings": 40960
+      },
+      "peft_writer_version": "0.18.0",
+      "extra_fields_filtered_by_installed_parser": {
+        "alora_invocation_tokens": null,
+        "alpha_pattern": {},
+        "arrow_config": null,
+        "auto_mapping": null,
+        "base_model_name_or_path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+        "corda_config": null,
+        "ensure_weight_tying": false,
+        "eva_config": null,
+        "exclude_modules": null,
+        "fan_in_fan_out": false,
+        "inference_mode": true,
+        "init_lora_weights": true,
+        "layer_replication": null,
+        "layers_pattern": null,
+        "layers_to_transform": null,
+        "loftq_config": {},
+        "lora_bias": false,
+        "lora_dropout": 0.05,
+        "megatron_config": null,
+        "megatron_core": "megatron.core",
+        "peft_type": "LORA",
+        "peft_version": "0.18.0",
+        "qalora_group_size": 16,
+        "rank_pattern": {},
+        "revision": null,
+        "target_parameters": null,
+        "task_type": "CAUSAL_LM",
+        "trainable_token_indices": null,
+        "use_qalora": false
+      },
+      "inactive_extended_features_checked": {
+        "alora_invocation_tokens": null,
+        "alpha_pattern": {},
+        "arrow_config": null,
+        "corda_config": null,
+        "ensure_weight_tying": false,
+        "eva_config": null,
+        "exclude_modules": null,
+        "fan_in_fan_out": false,
+        "layer_replication": null,
+        "layers_pattern": null,
+        "layers_to_transform": null,
+        "loftq_config": {},
+        "lora_bias": false,
+        "megatron_config": null,
+        "rank_pattern": {},
+        "target_parameters": null,
+        "trainable_token_indices": null,
+        "use_qalora": false
+      },
+      "empty_modules_to_save_accepted": true,
+      "weights": {
+        "tensor_count": 392,
+        "layer_module_count": 196,
+        "transformer_layers": 28,
+        "parameter_count": 17432576,
+        "cpu_tensor_bytes": 69730304,
+        "dtype_counts": {
+          "torch.float32": 392
+        },
+        "shapes_by_module_and_role": {
+          "down_proj:A": [
+            16,
+            6144
+          ],
+          "down_proj:B": [
+            2048,
+            16
+          ],
+          "gate_proj:A": [
+            16,
+            2048
+          ],
+          "gate_proj:B": [
+            6144,
+            16
+          ],
+          "up_proj:A": [
+            16,
+            2048
+          ],
+          "up_proj:B": [
+            6144,
+            16
+          ],
+          "k_proj:A": [
+            16,
+            2048
+          ],
+          "k_proj:B": [
+            1024,
+            16
+          ],
+          "o_proj:A": [
+            16,
+            2048
+          ],
+          "o_proj:B": [
+            2048,
+            16
+          ],
+          "q_proj:A": [
+            16,
+            2048
+          ],
+          "q_proj:B": [
+            2048,
+            16
+          ],
+          "v_proj:A": [
+            16,
+            2048
+          ],
+          "v_proj:B": [
+            1024,
+            16
+          ]
+        },
+        "all_A_B_pairs_present": true,
+        "all_tensors_finite": true,
+        "bf16_conversion_finite": true,
+        "maximum_absolute_value": 0.08095245063304901,
+        "safetensors_header_bytes": 52072,
+        "metadata": {
+          "format": "pt"
+        },
+        "tensor_names_sha256": "db4186653e9c7017cea7d4f7485421842b851aecc96c92cda259e55ba73d8792"
+      },
+      "files_before_and_after_equal": true,
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "27e631f8fc76f92d382725ce79cc4614631280585937e8c462815347e836e23a"
+        }
+      ]
+    }
+  ],
+  "llm_engine_created": false,
+  "base_model_loaded": false,
+  "gpu_adapter_loading_tested": false,
+  "checkpoint_files_modified": false,
+  "installed_files_modified": false,
+  "limitations": [
+    "No GPU adapter activation or generation was attempted.",
+    "Live model-manager module discovery was not instantiated; Qwen3 module support was checked against installed source."
+  ],
+  "cuda_initialized_before": false,
+  "versions": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "safetensors": "0.8.0"
+  },
+  "engine_lora_config": {
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "lora_dtype": "bfloat16"
+  },
+  "qwen3_module_support": {
+    "method": "Installed Qwen3 SupportsLoRA declaration, packed mapping, LinearBase inheritance and worker expansion logic",
+    "packed_modules_mapping": {
+      "qkv_proj": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ],
+      "gate_up_proj": [
+        "gate_proj",
+        "up_proj"
+      ]
+    },
+    "linear_layer_support": {
+      "qkv_proj": {
+        "installed_linear_class": "QKVParallelLinear",
+        "inherits": [
+          "QKVParallelLinear",
+          "ColumnParallelLinear",
+          "LinearBase"
+        ],
+        "source": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/models/qwen3.py"
+      },
+      "o_proj": {
+        "installed_linear_class": "RowParallelLinear",
+        "inherits": [
+          "RowParallelLinear",
+          "LinearBase"
+        ],
+        "source": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/models/qwen3.py"
+      },
+      "gate_up_proj": {
+        "installed_linear_class": "MergedColumnParallelLinear",
+        "inherits": [
+          "MergedColumnParallelLinear",
+          "ColumnParallelLinear",
+          "LinearBase"
+        ],
+        "source": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py"
+      },
+      "down_proj": {
+        "installed_linear_class": "RowParallelLinear",
+        "inherits": [
+          "RowParallelLinear",
+          "LinearBase"
+        ],
+        "source": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py"
+      }
+    },
+    "expanded_expected_modules": [
+      "down_proj",
+      "gate_proj",
+      "k_proj",
+      "o_proj",
+      "q_proj",
+      "up_proj",
+      "v_proj"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/peft_helper.py",
+      "bytes": 4871,
+      "sha256": "1fd158f1535ac4490a33e06306cc3fcf583c8c3236352985cba378fbe2e30d6a"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/config/lora.py",
+      "bytes": 5596,
+      "sha256": "2da93d6b2d71de534d52d93e2200cdfa93680cd0fcc6b63c700d04b94e6274fb"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/utils.py",
+      "bytes": 9413,
+      "sha256": "570b8a7ed4be93092c80160df80082e344ae3fe287b4ed9af1156a312a1677fc"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/worker_manager.py",
+      "bytes": 11295,
+      "sha256": "faa80702dd418c9230da6d04f1671098ba38b1777b0deb23452acf6ae86d1eaf"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/models.py",
+      "bytes": 35031,
+      "sha256": "669483e0f20c49abe95f719b60b8992a7b5178cd772b11850585663856719d72"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/models/qwen3.py",
+      "bytes": 13140,
+      "sha256": "ebcfa01f530ecd7c123cdddc6085d015dd809cb0a0189887a09f8a17a11f00ec"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py",
+      "bytes": 20928,
+      "sha256": "ae57d84ad2a2cbc986538ce221d082f4662e169413988ddaaf4a48539dee1bff"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py",
+      "bytes": 69055,
+      "sha256": "b2cc3cb18d161976a957f0b70af302291baa66aaed99229497674f266e1aac4d"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json",
+      "bytes": 726,
+      "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+    }
+  ],
+  "cuda_initialized_after": false
+}

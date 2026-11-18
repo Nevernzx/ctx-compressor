@@ -1,0 +1,14 @@
+{
+  "README.md": {
+    "size_bytes": 28886,
+    "sha256": "8d4ae38f8e762eacc2d1476cb6e6da63ad984a4cba9db24dd7c3164be294117c"
+  },
+  "NOTES.md": {
+    "size_bytes": 23921,
+    "sha256": "f48e0a92dbfe5c755cb2bf57b69d81321e1c3f41ef12be60ca055eaecb0e21b7"
+  },
+  "HANDOFF.md": {
+    "size_bytes": 16819,
+    "sha256": "45f4b668b0f6fc055c1dd525a54603918ac54443e3143830a6de201538d37be3"
+  }
+}

@@ -1,0 +1,1097 @@
+{
+  "schema_version": 1,
+  "status": "failed",
+  "task_acceptance_status": "failed",
+  "failure_reasons": [
+    "Final root growth exceeds 300 MB"
+  ],
+  "non_root_gates_passed": true,
+  "utc": "2026-11-18T03:43:11.146854+00:00",
+  "root_final_used_bytes": 932274503680,
+  "root_baseline_used_bytes": 931440451584,
+  "root_delta_bytes": 834052096,
+  "root_limit_bytes": 300000000,
+  "root_limit_passed": false,
+  "unknown_growth_subtracted": false,
+  "df": "Filesystem         1B-blocks         Used       Avail Use% Mounted on\noverlay        1005867986944 932274503680 22422712320  98% /\n",
+  "gpu1_after": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_percent": 0
+  },
+  "gpu_released": true,
+  "only_gpu1": true,
+  "task05_gpu_processes_remaining": [],
+  "recorded_task05_processes_alive": [],
+  "process_checks": {
+    "passed": true,
+    "recorded_pid_count": 16,
+    "checks": [
+      {
+        "pid": 714854,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch_before_initialization_fix.json",
+            "field": "waits_for_training_pid",
+            "observed_at_unix": 1794928435.3065767,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch_initial.json",
+            "field": "waits_for_training_pid",
+            "observed_at_unix": 1794928435.2047875,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/pipeline_launch.json",
+            "field": "initial_pipeline_pid",
+            "observed_at_unix": 1794928698.244491,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/pipeline_launch_initial.json",
+            "field": "pid",
+            "observed_at_unix": 1794927611.101016,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/pipeline_launch.json",
+            "field": "initial_pipeline_pid",
+            "observed_at_unix": 1794928698.244491,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 714857,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/orchestrator_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794927611.1578162,
+            "time_basis": "record_file_mtime_upper_bound"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 714858,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794927611.1590683,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_config.json",
+            "field": "pid",
+            "observed_at_unix": 1794927611.256126,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_result.json",
+            "field": "pid",
+            "observed_at_unix": 1794927611.256126,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794927611.256126,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench.json",
+            "field": "trials[0].pid",
+            "observed_at_unix": 1794929493.600288,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench_progress.json",
+            "field": "completed[0].pid",
+            "observed_at_unix": 1794929195.0768867,
+            "time_basis": "record_file_mtime_upper_bound"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 717587,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794927903.513286,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_config.json",
+            "field": "pid",
+            "observed_at_unix": 1794927903.621642,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_result.json",
+            "field": "pid",
+            "observed_at_unix": 1794927903.621642,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794927903.621642,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench.json",
+            "field": "trials[1].pid",
+            "observed_at_unix": 1794929493.600288,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench_progress.json",
+            "field": "completed[1].pid",
+            "observed_at_unix": 1794929195.0768867,
+            "time_basis": "record_file_mtime_upper_bound"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 721529,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch_before_initialization_fix.json",
+            "field": "previous_watcher_pid",
+            "observed_at_unix": 1794928435.3065767,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch_initial.json",
+            "field": "pid",
+            "observed_at_unix": 1794928435.2047875,
+            "time_basis": "record_file_mtime_upper_bound"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 722344,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch_before_initialization_fix.json",
+            "field": "pid",
+            "observed_at_unix": 1794928435.3065767,
+            "time_basis": "record_file_mtime_upper_bound"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 722667,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794928478.0145798,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_config.json",
+            "field": "pid",
+            "observed_at_unix": 1794928478.121686,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_result.json",
+            "field": "pid",
+            "observed_at_unix": 1794928478.121686,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794928478.121686,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/batch8_initialization_failure.json",
+            "field": "pid",
+            "observed_at_unix": 1794928490.885698,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 724147,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/evaluation_launch_attempt1_exit.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794955609.585386,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/evaluation_launch.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794955279.3352952,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_launch.json",
+            "field": "waits_for_training_pid",
+            "observed_at_unix": 1794928698.246118,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_started.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794928698.2749374,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_status.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794955306.818427,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/evaluation_launch.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794955279.3350074,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_started.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794956018.7017,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_status.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794972420.428794,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/evaluation_launch.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794956018.7142131,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/pipeline_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.244491,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_config.json",
+            "field": "pid",
+            "observed_at_unix": 1794929197.233622,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_result.json",
+            "field": "pid",
+            "observed_at_unix": 1794929197.233622,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794929197.233622,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/continuation_launch_compiler_fix.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch.json",
+            "field": "training_pid",
+            "observed_at_unix": 1794956018.714387,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/pipeline_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.244491,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/train_run_config.json",
+            "field": "pid",
+            "observed_at_unix": 1794929197.233622,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/train_run_config.json",
+            "field": "runtime.pid",
+            "observed_at_unix": 1794929197.233622,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 724148,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/evaluation_launch_attempt1_exit.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794955609.585386,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/evaluation_launch.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794955279.3352952,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.246118,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.2749374,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_status.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794955306.818427,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/evaluation_launch.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794955279.3350074,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch.json",
+            "field": "previous_watcher_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/continuation_launch_compiler_fix.json",
+            "field": "previous_watcher_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 724151,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/orchestrator_resumed.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.301999,
+            "time_basis": "record_file_mtime_upper_bound"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 724152,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.304159,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_config.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.419187,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_result.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.419187,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794928698.419187,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench.json",
+            "field": "trials[2].pid",
+            "observed_at_unix": 1794929493.600288,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench_progress.json",
+            "field": "completed[2].pid",
+            "observed_at_unix": 1794929195.0768867,
+            "time_basis": "record_file_mtime_upper_bound"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 892732,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/evaluation_launch_attempt1_exit.json",
+            "field": "pid",
+            "observed_at_unix": 1794955609.585386,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/evaluation_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794955279.3352952,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/model_rollout_run.json",
+            "field": "pid",
+            "observed_at_unix": 1794955285.881545,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_status.json",
+            "field": "pid",
+            "observed_at_unix": 1794955306.818427,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/evaluation_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794955279.3350074,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch.json",
+            "field": "previous_evaluation_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/continuation_launch_compiler_fix.json",
+            "field": "previous_evaluation_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 892830,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/evaluation_launch_attempt1_exit.json",
+            "field": "engine_pid",
+            "observed_at_unix": 1794955609.585386,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch.json",
+            "field": "previous_engine_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/continuation_launch_compiler_fix.json",
+            "field": "previous_engine_pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 898552,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_started.json",
+            "field": "pid",
+            "observed_at_unix": 1794956018.7017,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_status.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794972420.428794,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/evaluation_launch.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794956018.7142131,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/continuation_launch_compiler_fix.json",
+            "field": "pid",
+            "observed_at_unix": 1794956018.668008,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794956018.714387,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch_engine_runtime.json",
+            "field": "watcher_pid",
+            "observed_at_unix": 1794956192.596023,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 898553,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_status.json",
+            "field": "pid",
+            "observed_at_unix": 1794972420.428794,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/evaluation_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794956018.7142131,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch.json",
+            "field": "pid",
+            "observed_at_unix": 1794956018.714387,
+            "time_basis": "record_file_mtime_upper_bound"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch_engine_runtime.json",
+            "field": "pid",
+            "observed_at_unix": 1794956192.596023,
+            "time_basis": "recorded_utc"
+          },
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/model_rollout_run.json",
+            "field": "pid",
+            "observed_at_unix": 1794956024.589431,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      },
+      {
+        "pid": 898637,
+        "exists": false,
+        "recorded_identity": [
+          {
+            "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch_engine_runtime.json",
+            "field": "engine_pid",
+            "observed_at_unix": 1794956192.596023,
+            "time_basis": "recorded_utc"
+          }
+        ],
+        "active": false,
+        "classification": "exited"
+      }
+    ],
+    "active": [],
+    "sources": [
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/evaluation_launch_attempt1_exit.json",
+        "bytes": 586,
+        "sha256": "ad5a2b45dfebb3392f77f1e19dc319cecd67c6235562fb6f8dd8d30185dc9669"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/evaluation_launch.json",
+        "bytes": 221,
+        "sha256": "061dfb75a4640f5c3876843219921fa41096997919b68f1e400eef822fa78e65"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/model_rollout_run.json",
+        "bytes": 12000,
+        "sha256": "83654de5c5c859839c54a5c9205dff1487670c16488337bed8aa20bd866ce096"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_launch.json",
+        "bytes": 157,
+        "sha256": "93cb9391e8445c8a7ffe068d657e9e22a00e7a28ef818c82dba263b357f9fa31"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_started.json",
+        "bytes": 70,
+        "sha256": "a2426a92738e2f30380ded585d60242fa12e03c028c4cc2a667e7576f7f8bfb8"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_status.json",
+        "bytes": 317,
+        "sha256": "89f510e472d65e49d6eb84af254e8691c10085ec749b113889a29d0dd6f2592c"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/evaluation_launch.json",
+        "bytes": 221,
+        "sha256": "061dfb75a4640f5c3876843219921fa41096997919b68f1e400eef822fa78e65"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/launch.json",
+        "bytes": 44,
+        "sha256": "7068f16677decc48c868b42ac20d6a532553a54870597538da81a26a09da1184"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_config.json",
+        "bytes": 1926,
+        "sha256": "8fcb253535cd43e73477f5b1196ee07b5ad2b48fde2dd4d0b2efff9335a1a276"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_result.json",
+        "bytes": 14861,
+        "sha256": "4d0162c7e61fd9b38c007ed10ffa7534f4548b73026bc84cf888d78652448250"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_started.json",
+        "bytes": 368,
+        "sha256": "0bf6bb90216b6e3879376de6acf9e03142577648cf64a129d3a8f1f64c0fcb6d"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/launch.json",
+        "bytes": 44,
+        "sha256": "e1a2c79ee39ea66d124e7a7311e8a7cc7d808d208b7961131758cd7d18c73381"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_config.json",
+        "bytes": 2159,
+        "sha256": "8bc4fffcd7eb488bf8decbf286d29a53bee6e5564412f5ad86d84ed2795cd398"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_result.json",
+        "bytes": 16091,
+        "sha256": "7ab6e93c746c4ff599eaf01f2c7a2194dfd81579a0fed49f5feef50cdee0bc99"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_started.json",
+        "bytes": 368,
+        "sha256": "f000ed38e1e250a783bf68ad99cacced9393671734d146d9d03ae60cf9932a12"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/launch.json",
+        "bytes": 44,
+        "sha256": "86621c8795db4ce35ab215f8d33f4c822a11f39f6a6756b2016911e740208607"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_config.json",
+        "bytes": 2158,
+        "sha256": "55b61c3edcbdf46982fee86261425940192bf7f2ab03c008e2a344e6f32e24e4"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_result.json",
+        "bytes": 17606,
+        "sha256": "5d4d0f7590b8253c7dd32479618cdf61a44f401b213d93653820af2b609972b1"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_started.json",
+        "bytes": 368,
+        "sha256": "d81aca3f28cfa85a1cbcf899cf051ca0eab8c3187a7dd60bbd9cbb0ce9322a23"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/launch.json",
+        "bytes": 44,
+        "sha256": "049a9ed01dd071439ffc3807fb34de9206506e250651e05faec23e606cfdd713"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_config.json",
+        "bytes": 2158,
+        "sha256": "7a1040030966d9ec9942d003c6de415f95f10013e54b6e4941582aaafa14e13d"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_result.json",
+        "bytes": 3701,
+        "sha256": "2faf5125ca1263fc54ecd10fc477f1f022101ce8a5635e4afef863451f627a86"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_started.json",
+        "bytes": 368,
+        "sha256": "1c8cbd11dc216949ae0aae0fd5d46c5fd87aedded8f9aa86ae00b75fbd414b39"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/orchestrator_resumed.json",
+        "bytes": 125,
+        "sha256": "067f99c0f60aae6946c445ceae8b76c03bc77b0bd77327ac2266cb241b2cc623"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/orchestrator_started.json",
+        "bytes": 44,
+        "sha256": "d30b98d8f5b3c205eccf3f919769ecf5f16d16b0deb9335830f72cce4049df4e"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch.json",
+        "bytes": 735,
+        "sha256": "fc215850593abf5297ee9132ffde7feca29fbf01b1957eeec79fdcfadf420cec"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch_before_initialization_fix.json",
+        "bytes": 218,
+        "sha256": "6ac46f5af8e0c000bb58e1e1f1765dc65a1e1c29992fc88f2eed6ac3b9459f2b"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch_initial.json",
+        "bytes": 97,
+        "sha256": "57fad05bac01756a0f5b0eb012248fae927e5ac1c925e68ccbded8f8cf75131c"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_started.json",
+        "bytes": 70,
+        "sha256": "2b2d33f8d08de0c2c30f33b6cf7a3da454640b57433e5f608e7291b05314ea31"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_status.json",
+        "bytes": 319,
+        "sha256": "b7bc16cb2deaa5563415c397ce9cd40f3dc88a1e2b5a5f7eaed1d2831a68c135"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/evaluation_launch.json",
+        "bytes": 221,
+        "sha256": "23bb1abbe7f5f9726de4ef2ee30e239519d503fb1a840f529e24e04bccc7d6b0"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/pipeline_launch.json",
+        "bytes": 440,
+        "sha256": "c23ff32a9e354f9f3f1792413dc4b131b5e19e3ed198a7bbd5e2cf99995ceeee"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/pipeline_launch_initial.json",
+        "bytes": 462,
+        "sha256": "80129bceaf061083b88cc8794eb032edfd012e82e401d79bb3a9fd9340fbb348"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_config.json",
+        "bytes": 2355,
+        "sha256": "f887ef988b3b2104214b3208128a42927de33628d54b367173d23870b39b1ece"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_result.json",
+        "bytes": 1074861,
+        "sha256": "686038d5ce327249827b6f9729c459217827043113da28001c5c33193ca2d413"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_started.json",
+        "bytes": 359,
+        "sha256": "92537699c33656da3194e2fbc29cfbd82de60c610c3acafb10fb528de22c789c"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/batch8_initialization_failure.json",
+        "bytes": 300,
+        "sha256": "5bf53e766dad4d3db9ccffc9dfed266ebf4a11d8561dde9a23a355d6176db709"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench.json",
+        "bytes": 57670,
+        "sha256": "db4567d12253858a07b4003a04f8c8c6ed97b96834da07efd0dee47ecad52c97"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench_progress.json",
+        "bytes": 55673,
+        "sha256": "cff1439a87a1c18a83349a88c900717996e926b00fe6d09bd363a4a8cd95e83d"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/continuation_launch_compiler_fix.json",
+        "bytes": 735,
+        "sha256": "fc215850593abf5297ee9132ffde7feca29fbf01b1957eeec79fdcfadf420cec"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch.json",
+        "bytes": 221,
+        "sha256": "23bb1abbe7f5f9726de4ef2ee30e239519d503fb1a840f529e24e04bccc7d6b0"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch_engine_runtime.json",
+        "bytes": 1745,
+        "sha256": "080acd8e4315d1b247a86c29d9dc48cc562a1d93529839db449512a32ca6ad4f"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/model_rollout_run.json",
+        "bytes": 31086,
+        "sha256": "a9e82afc0107bc88a78ecda14b543e51e2fe1942fd6338188cdaaa4452e55efa"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/pipeline_launch.json",
+        "bytes": 440,
+        "sha256": "c23ff32a9e354f9f3f1792413dc4b131b5e19e3ed198a7bbd5e2cf99995ceeee"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/train_run_config.json",
+        "bytes": 1152822,
+        "sha256": "7cf35de5bcca08aa3fe726f299e0f2939a915bcbb7180943ea59f7bdae92f546"
+      }
+    ]
+  },
+  "gpu_identity_evidence": {
+    "passed": true,
+    "gpu_index": 1,
+    "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "worker_stages": [
+      {
+        "worker_config": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_config.json",
+        "cuda_visible_devices": "1",
+        "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+        "resource_samples": 867,
+        "archived_initialization": false
+      },
+      {
+        "worker_config": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_config.json",
+        "cuda_visible_devices": "1",
+        "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+        "resource_samples": 141,
+        "archived_initialization": false
+      },
+      {
+        "worker_config": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_config.json",
+        "cuda_visible_devices": "1",
+        "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+        "resource_samples": 279,
+        "archived_initialization": false
+      },
+      {
+        "worker_config": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_config.json",
+        "cuda_visible_devices": "1",
+        "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+        "resource_samples": 242,
+        "archived_initialization": false
+      },
+      {
+        "worker_config": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_config.json",
+        "cuda_visible_devices": "1",
+        "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+        "resource_samples": 7,
+        "archived_initialization": true
+      }
+    ],
+    "model_resource_samples": 818,
+    "model_cuda_visible_devices": "1",
+    "sources": [
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl",
+        "bytes": 258503,
+        "sha256": "cc0a06f18b4a0a4a951995a65a6eafec06488581a9aa7c3db29fbf20daeadb71",
+        "lines": 867
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_config.json",
+        "bytes": 2355,
+        "sha256": "f887ef988b3b2104214b3208128a42927de33628d54b367173d23870b39b1ece"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_started.json",
+        "bytes": 359,
+        "sha256": "92537699c33656da3194e2fbc29cfbd82de60c610c3acafb10fb528de22c789c"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/resources.jsonl",
+        "bytes": 41611,
+        "sha256": "d66e80db996081d29e25c318789561000cdfb6aac08b28bf9feffc29e9b95a2f",
+        "lines": 141
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_config.json",
+        "bytes": 1926,
+        "sha256": "8fcb253535cd43e73477f5b1196ee07b5ad2b48fde2dd4d0b2efff9335a1a276"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/worker_started.json",
+        "bytes": 368,
+        "sha256": "0bf6bb90216b6e3879376de6acf9e03142577648cf64a129d3a8f1f64c0fcb6d"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/resources.jsonl",
+        "bytes": 82722,
+        "sha256": "92e50b7c0cd1f04fe55c7284ee34d2c39c3835e9f607b2f65352f117b5811b5c",
+        "lines": 279
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_config.json",
+        "bytes": 2159,
+        "sha256": "8bc4fffcd7eb488bf8decbf286d29a53bee6e5564412f5ad86d84ed2795cd398"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_4/worker_started.json",
+        "bytes": 368,
+        "sha256": "f000ed38e1e250a783bf68ad99cacced9393671734d146d9d03ae60cf9932a12"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/resources.jsonl",
+        "bytes": 71757,
+        "sha256": "823ce52525a64155986ee60b6f456987b2189a61d4e13caa238ee90f98981d6a",
+        "lines": 242
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_config.json",
+        "bytes": 2158,
+        "sha256": "55b61c3edcbdf46982fee86261425940192bf7f2ab03c008e2a344e6f32e24e4"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_8/worker_started.json",
+        "bytes": 368,
+        "sha256": "d81aca3f28cfa85a1cbcf899cf051ca0eab8c3187a7dd60bbd9cbb0ce9322a23"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/resources.jsonl",
+        "bytes": 2049,
+        "sha256": "768ee0e5bc845c7fa912540291630077800c85f012288a1420ce3209b3423fcb",
+        "lines": 7
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_config.json",
+        "bytes": 2158,
+        "sha256": "7a1040030966d9ec9942d003c6de415f95f10013e54b6e4941582aaafa14e13d"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/worker_started.json",
+        "bytes": 368,
+        "sha256": "1c8cbd11dc216949ae0aae0fd5d46c5fd87aedded8f9aa86ae00b75fbd414b39"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/model_rollout_run.json",
+        "bytes": 31086,
+        "sha256": "a9e82afc0107bc88a78ecda14b543e51e2fe1942fd6338188cdaaa4452e55efa"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/model_resources.jsonl",
+        "bytes": 343747,
+        "sha256": "a078351a1b9f1941269bcf40f0bde27543b2849a2c026bf3eea1d12d48847661",
+        "lines": 818
+      }
+    ],
+    "evidence_scope": "all recorded worker visibility/physical UUID and GPU monitor samples, plus model visibility/device samples; no continuous system-wide process-tracing claim"
+  },
+  "current_compute_processes": [],
+  "formal_optimizer_steps": 2500,
+  "formal_sample_exposures": 40000,
+  "checkpoint_count": 5,
+  "signals_sent": 0,
+  "completion_evidence": {
+    "passed": true,
+    "records": [
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/preflight.json",
+        "bytes": 516,
+        "sha256": "9ad9ae714cbfef9b3f105c7f7976305b8c850b9cf42e4d698b305798bd0fccc0"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench.json",
+        "bytes": 57670,
+        "sha256": "db4567d12253858a07b4003a04f8c8c6ed97b96834da07efd0dee47ecad52c97"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/train_run_config.json",
+        "bytes": 1152822,
+        "sha256": "7cf35de5bcca08aa3fe726f299e0f2939a915bcbb7180943ea59f7bdae92f546"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/cpu_baseline_results.json",
+        "bytes": 146284,
+        "sha256": "6bdd96c3108e6122abe6335f658d45e89a70703083cb9386724e62b9ad48edb7"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/model_rollout_run.json",
+        "bytes": 31086,
+        "sha256": "a9e82afc0107bc88a78ecda14b543e51e2fe1942fd6338188cdaaa4452e55efa"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/model_inference_preflight.json",
+        "bytes": 4579,
+        "sha256": "b5e7a1643a6c45e3e681dc748488f5b9f20e6a33599ac8e20d9543397148b6dc"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_result.json",
+        "bytes": 1074861,
+        "sha256": "686038d5ce327249827b6f9729c459217827043113da28001c5c33193ca2d413"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_status.json",
+        "bytes": 319,
+        "sha256": "b7bc16cb2deaa5563415c397ce9cd40f3dc88a1e2b5a5f7eaed1d2831a68c135"
+      }
+    ],
+    "formal_optimizer_steps": 2500,
+    "formal_sample_exposures": 40000,
+    "formal_epochs": 2,
+    "checkpoint_count": 5,
+    "model_strategies": 6,
+    "cpu_strategies": 4
+  },
+  "exporter_sha256": "801bfb540de322dfd682ade613ec575c175e07daa9015484761bbc1ad4fab9f4",
+  "strict_finalizer_sha256": "50b6e3fb4e4ad1de8ecc70ce5d5d1cd4c4beaaa8f13e65418a15ee69f4590570",
+  "pre_inventory_machine_snapshot": {
+    "utc": "2026-11-18T03:43:04.755970+00:00",
+    "gpu1": {
+      "index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "memory_used_mib": 375,
+      "utilization_percent": 0
+    },
+    "compute_processes": [],
+    "df_raw": "Filesystem         1B-blocks         Used       Avail Use% Mounted on\noverlay        1005867986944 932274503680 22422712320  98% /\n",
+    "root_used_bytes": 932274503680,
+    "root_available_bytes": 22422712320
+  },
+  "non_root_gates_verified_before_and_after_inventory": true
+}

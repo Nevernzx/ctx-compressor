@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-17T12:38:08.044039+00:00",
+  "scope": "Independent read-only review of root benchmark implementation against Task 04 and installed ms-swift 3.12.6; no GPU initialization, training, API calls, or document changes by reviewer.",
+  "status": "no_blocking_findings",
+  "blocking_findings": [],
+  "other_findings": [],
+  "reviewed_files": {
+    "scripts/bench_sft.py": "92803886a0a1a187dfc106240ad1a3b0da8c4f9ecca71a45ae247e8375733d1c",
+    "tests/test_bench_sft.py": "5eb78ef764740eb9f251c79ce760a7bca21d596e2938ccc179c8eda4b9874c2a",
+    "scripts/train_environment.sh": "69144940856583a4fe7aff447c60ec0ee91255f9d28f1719a114872268ec2b89",
+    "scripts/setup_train_env.sh": "e2c79a2f5a2a1add15e26c055d7057f0c14c87262b61b7741dd88d1a93d3957e",
+    "scripts/download_policy_model.py": "8a7421df7a0a0998a8b8d0a8df8685b0eecb393988132f21507e67c92b62948b",
+    "src/sft_protocol.py": "5b7d73cc0ecc368fb2730eb1435c73bede6bc97639ccc7abd4f2921e94158574",
+    "scripts/make_sft_data.py": "08072d7eb405cea44980139881ee8b17fbfbb4c03a52b495ff8f47ad2cb1c13a",
+    "scripts/make_train_traj.py": "39bb31503eef49ec71160fd7b7aab5d7f998f646d09e5c528a724aabaa14a65b"
+  },
+  "checks": {
+    "exact_optimizer_step_ceiling": "max_steps=100; counted_step rejects any training batch after global_step 100; on_step_end requests stop at 100; completion asserts exactly 100 optimizer steps and 100 loss logs.",
+    "training_sample_count_and_isolation": "Uniform reservoir sampling yields 800 reselect + 800 append, train only, unique (task,step,mode); completion asserts 1600 consumed samples and selected full-token sum.",
+    "lora_configuration": "r=16, alpha=32, dropout=0.05, target_modules all-linear; bf16=True/fp16=False and model bfloat16; SDPA; gradient checkpointing enabled, non-reentrant.",
+    "optimizer_schedule": "batch size 1; gradient accumulation 16; learning_rate=1e-4; cosine; warmup_ratio=0.03; AdamW; no packing.",
+    "assistant_only_loss": "Each of 1600 actual SwiftSft encodings compared to the common helper input_ids/labels and measured metadata; helper checks all supervised content equals empty-think block + target JSON + assistant terminator.",
+    "no_truncation": "Dataset max 8390 <= max_length 8392 <= 16384; explicit truncation_strategy raise; selected row lengths rechecked against saved metadata.",
+    "longest_probe": "Located from global SFT maximum; after trainer.train returns, same trainer/model/optimizer remain resident; one compute_loss and accelerator.backward, no optimizer.step or scheduler.step; gradients cleared afterward.",
+    "single_gpu": "CUDA_VISIBLE_DEVICES must equal 1; physical UUID verified and GPU1 memory must be <2048 MiB before startup; torch CUDA visible device count asserted 1.",
+    "paths_and_runtime_state": "Model/env/dataset/run paths under /root/userfolder/ctx-compressor; source train_environment sends caches/tmp/pycache/HF/ModelScope/Swift/torch/triton to external cache; local small eval results only.",
+    "no_llm_api_or_formal_training": "No inference/LLM API path; local model; offline HF flags and cleared proxies from sourced environment; no GRPO/evaluation/packing/checkpoint; already-started sentinel blocks automatic reruns.",
+    "installed_source_compatibility": "Read installed SwiftSft._prepare_template, run, trainer.training_step/compute_loss and template.forward_context. SwiftSft sets train mode; subclass dataset/train overrides bypass default save behavior; ordinary Qwen forward_context is nullcontext.",
+    "prior_data_validation": "Reference audit passed, all old dev query/pid bytes and 65 old data/eval file hashes unchanged. SFT 93214 states encoded with zero truncation/drop and 12 exact HF inference-prefix checks."
+  },
+  "runtime_checks_pending": [
+    "Benchmark reaches exactly 100 optimizer steps with no OOM",
+    "Observed first/last ten-step loss means and decrease",
+    "Longest-sample probe finite gradients/no OOM",
+    "GPU release and final root filesystem increment <=300 MB"
+  ],
+  "not_reviewed": "Unfinished checksums/report scripts; runtime benchmark outcome not yet available."
+}

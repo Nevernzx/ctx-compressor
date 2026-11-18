@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "task": "TASK_05",
+  "created_utc": "2026-11-17T19:17:54.979625+00:00",
+  "scope": {
+    "host": "5880",
+    "metadata_only_for_unrelated_paths": true,
+    "full_filesystem_scan": false,
+    "focused_metadata_walks": 1,
+    "paths_moved_deleted_or_modified": [],
+    "gpu_initializations": 0,
+    "environment_changes": 0,
+    "tests_run": 0
+  },
+  "source_evidence": [
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/preflight.json",
+      "bytes": 516,
+      "sha256": "9ad9ae714cbfef9b3f105c7f7976305b8c850b9cf42e4d698b305798bd0fccc0"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/root_disk_investigation.json",
+      "bytes": 7448,
+      "sha256": "1b1a010657aa247a0e628c208bfdf94a538a711e5da71427492e0c4d0e5087bf"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/pytest_tmp_migration.json",
+      "bytes": 1412195,
+      "sha256": "bc37254532c6f507e7b90d308e0c38e2fb3b78e02f928e4c73e24e0563fc3c58"
+    }
+  ],
+  "training_snapshot": {
+    "optimizer_steps": 1382,
+    "consumed_samples": 22112,
+    "epoch": 1.1056,
+    "seconds_so_far": 13595.62540410203
+  },
+  "raw_filesystem_accounting": {
+    "baseline_used_bytes": 931440451584,
+    "current_df": [
+      {
+        "source": "overlay",
+        "size_bytes": 1005867986944,
+        "used_bytes": 931670265856,
+        "available_bytes": 23026950144,
+        "mount": "/"
+      },
+      {
+        "source": "/dev/sda1",
+        "size_bytes": 15873098706944,
+        "used_bytes": 14271386456064,
+        "available_bytes": 801677389824,
+        "mount": "/root/userfolder"
+      },
+      {
+        "source": "/dev/nvme0n1p2",
+        "size_bytes": 1005867986944,
+        "used_bytes": 931670265856,
+        "available_bytes": 23026950144,
+        "mount": "/etc/hosts"
+      }
+    ],
+    "df_raw": "Filesystem          1B-blocks           Used        Avail Mounted on\noverlay         1005867986944   931670265856  23026950144 /\n/dev/sda1      15873098706944 14271386456064 801677389824 /root/userfolder\n/dev/nvme0n1p2  1005867986944   931670265856  23026950144 /etc/hosts\n",
+    "raw_global_root_delta_bytes": 229814272,
+    "root_limit_bytes": 300000000,
+    "remaining_headroom_bytes": 70185728,
+    "unknown_growth_subtracted": false,
+    "root_and_etc_hosts_used_bytes_identical": true,
+    "interpretation": "Root overlay and /etc/hosts expose the same shared /dev/nvme0n1p2 filesystem usage. Global df growth is not attributable to this task from df alone. The original limit remains unchanged."
+  },
+  "mount_confirmation": {
+    "root": "overlay backed by /dev/nvme0n1p2",
+    "external": "/root/userfolder on separate /dev/sda1 ext4",
+    "task_writable_regular_fd_device": 2049,
+    "root_metadata_device": 93
+  },
+  "focused_size_comparison": {
+    "earlier_snapshot_utc": "2026-11-17T15:48:58Z",
+    "current_snapshot_utc": "2026-11-17T19:15:07Z",
+    "directories": [
+      {
+        "path": "/root/.cache",
+        "before_allocated": 9939808256,
+        "after_allocated": 9939808256
+      },
+      {
+        "path": "/tmp",
+        "before_allocated": 1739206656,
+        "after_allocated": 1721933824,
+        "change_bytes": -17272832,
+        "attribution": "Exactly the already verified pytest-7/8 relocation before accounting for its project JSON receipt"
+      },
+      {
+        "path": "/root/workplace/ctx-compressor",
+        "before_allocated": 2223865856,
+        "after_allocated": 2225393664,
+        "change_bytes": 1527808,
+        "attribution": "Small project artifacts; largest new file is the complete migration receipt"
+      },
+      {
+        "path": "/root/.nv",
+        "before_allocated": 237568,
+        "after_allocated": 237568
+      },
+      {
+        "path": "/root/.triton",
+        "before_allocated": 12288,
+        "after_allocated": 12288
+      },
+      {
+        "path": "/var/log",
+        "before_allocated": 512000,
+        "after_allocated": 512000
+      },
+      {
+        "path": "/var/cache",
+        "before_allocated": 1765376,
+        "after_allocated": 1765376
+      }
+    ],
+    "ssh_paths_current_allocated": {
+      "/root/.ssh": 28672,
+      "/run/sshd": 4096
+    }
+  },
+  "mtime_ctime_inspection": {
+    "since_utc": "2026-11-17T15:50:50.114849+00:00",
+    "no_recent_entries": [
+      "/root/.cache",
+      "/root/.ssh",
+      "/root/.nv",
+      "/root/.triton",
+      "/var/log",
+      "/var/cache",
+      "/run/sshd"
+    ],
+    "tmp_only_recent_entry": "/tmp/pytest-of-root directory metadata at the authorized 18:18UTC migration; external archive symlinks were not traversed",
+    "project_recent_entries_n": 23,
+    "project_recent_allocated_bytes": 2035712,
+    "note": "Sum of currently allocated recently modified entries is not a net-growth measurement.",
+    "largest_recent_project_files": [
+      {
+        "path": "eval/sft_run/pytest_tmp_migration.json",
+        "bytes": 1412195,
+        "allocated_bytes": 1413120,
+        "mtime_utc": "2026-11-17T18:18:29.623980+00:00"
+      },
+      {
+        "path": "eval/sft_run/sft_run_results.json",
+        "bytes": 223805,
+        "allocated_bytes": 225280,
+        "mtime_utc": "2026-11-17T17:47:25.670712+00:00"
+      },
+      {
+        "path": "eval/sft_run/tests.xml",
+        "bytes": 57331,
+        "allocated_bytes": 57344,
+        "mtime_utc": "2026-11-17T16:39:04.393492+00:00"
+      },
+      {
+        "path": ".pytest_cache/v/cache/nodeids",
+        "bytes": 41990,
+        "allocated_bytes": 45056,
+        "mtime_utc": "2026-11-17T16:39:04.395902+00:00"
+      }
+    ]
+  },
+  "task_process_regular_fd_snapshot": [
+    {
+      "pid": 724147,
+      "fds": [
+        {
+          "numbers": [
+            1,
+            2
+          ],
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train.log",
+          "bytes": 414070,
+          "allocated_bytes": 421888,
+          "device": 2049,
+          "deleted": false
+        },
+        {
+          "numbers": [
+            3
+          ],
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl",
+          "bytes": 135653,
+          "allocated_bytes": 143360,
+          "device": 2049,
+          "deleted": false
+        }
+      ]
+    },
+    {
+      "pid": 724148,
+      "fds": [
+        {
+          "numbers": [
+            1,
+            2
+          ],
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation.log",
+          "bytes": 0,
+          "allocated_bytes": 0,
+          "device": 2049,
+          "deleted": false
+        }
+      ]
+    }
+  ],
+  "ssh_fd_snapshot": {
+    "checked_sshd_pids": [
+      1,
+      1597,
+      815429
+    ],
+    "regular_file_fds_found": 0,
+    "fd_types_observed": [
+      "pty",
+      "socket",
+      "pipe",
+      "/dev/null"
+    ],
+    "conclusion": "No container-visible regular SSH log/cache fd was found; host-side logging is not measured by this snapshot."
+  },
+  "persistent_growth_evidence": {
+    "saved_resource_file": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl",
+    "large_changes_since_first_investigation_n": 46,
+    "latest_large_changes": [
+      {
+        "utc": "2026-11-17T18:12:33.351022+00:00",
+        "optimizer_step": 1000,
+        "change_bytes": 4104192,
+        "raw_global_root_delta_bytes": 190369792
+      },
+      {
+        "utc": "2026-11-17T18:17:33.793536+00:00",
+        "optimizer_step": 1031,
+        "change_bytes": 4235264,
+        "raw_global_root_delta_bytes": 194605056
+      },
+      {
+        "utc": "2026-11-17T18:18:03.838897+00:00",
+        "optimizer_step": 1034,
+        "change_bytes": -15859712,
+        "raw_global_root_delta_bytes": 178745344
+      },
+      {
+        "utc": "2026-11-17T18:22:34.247371+00:00",
+        "optimizer_step": 1064,
+        "change_bytes": 4399104,
+        "raw_global_root_delta_bytes": 183173120
+      },
+      {
+        "utc": "2026-11-17T18:27:34.692457+00:00",
+        "optimizer_step": 1095,
+        "change_bytes": 4235264,
+        "raw_global_root_delta_bytes": 187408384
+      },
+      {
+        "utc": "2026-11-17T18:32:35.152479+00:00",
+        "optimizer_step": 1128,
+        "change_bytes": 4079616,
+        "raw_global_root_delta_bytes": 191520768
+      },
+      {
+        "utc": "2026-11-17T18:37:35.596650+00:00",
+        "optimizer_step": 1159,
+        "change_bytes": 4235264,
+        "raw_global_root_delta_bytes": 195760128
+      },
+      {
+        "utc": "2026-11-17T18:42:36.086135+00:00",
+        "optimizer_step": 1191,
+        "change_bytes": 4235264,
+        "raw_global_root_delta_bytes": 200011776
+      },
+      {
+        "utc": "2026-11-17T18:47:36.787270+00:00",
+        "optimizer_step": 1223,
+        "change_bytes": 4403200,
+        "raw_global_root_delta_bytes": 204410880
+      },
+      {
+        "utc": "2026-11-17T18:52:37.383151+00:00",
+        "optimizer_step": 1255,
+        "change_bytes": 4071424,
+        "raw_global_root_delta_bytes": 208556032
+      },
+      {
+        "utc": "2026-11-17T18:57:37.824632+00:00",
+        "optimizer_step": 1286,
+        "change_bytes": 4366336,
+        "raw_global_root_delta_bytes": 212922368
+      },
+      {
+        "utc": "2026-11-17T19:02:38.269764+00:00",
+        "optimizer_step": 1319,
+        "change_bytes": 4104192,
+        "raw_global_root_delta_bytes": 217067520
+      },
+      {
+        "utc": "2026-11-17T19:07:38.718470+00:00",
+        "optimizer_step": 1342,
+        "change_bytes": 4333568,
+        "raw_global_root_delta_bytes": 221409280
+      },
+      {
+        "utc": "2026-11-17T19:12:39.160629+00:00",
+        "optimizer_step": 1361,
+        "change_bytes": 4136960,
+        "raw_global_root_delta_bytes": 225583104
+      },
+      {
+        "utc": "2026-11-17T19:17:39.613697+00:00",
+        "optimizer_step": 1381,
+        "change_bytes": 4235264,
+        "raw_global_root_delta_bytes": 229814272
+      }
+    ],
+    "latest_saved_monitor": {
+      "utc": "2026-11-17T19:17:39.613697+00:00",
+      "optimizer_step": 1381,
+      "root_delta_bytes": 229814272
+    },
+    "attribution": "unknown",
+    "interpretation": "Approximately 4MB positive jumps roughly five minutes apart continue. No matching ongoing write was identified in inspected task paths, cache trees or SSH metadata. Do not subtract this unknown growth from the acceptance counter."
+  },
+  "possible_task_owned_transfer_candidates": [
+    {
+      "path": "/tmp/pytest-of-root/pytest-6",
+      "root_is_symlink": false,
+      "lock_file_exists": false,
+      "regular_files": 24,
+      "directories_including_root": 7,
+      "symlinks": 6,
+      "regular_file_bytes": 311659,
+      "allocated_bytes": 417792,
+      "file_mtime_range_utc": [
+        "2026-11-17T15:12:39.387092+00:00",
+        "2026-11-17T15:12:39.457270+00:00"
+      ],
+      "ownership": "Task05 tests/test_sft_run_report.py, 23 passing targeted tests; names and times match execution receipt at 2026-11-17T15:12:39Z",
+      "top_level_fixture_names": [
+        "test_claimed_resource_pass_can0",
+        "test_claimed_resource_pass_cancurrent",
+        "test_complete_report_requires_0",
+        "test_complete_report_requires_current",
+        "test_existing_cpu_results_are_0",
+        "test_existing_cpu_results_are_current",
+        "test_grouping_is_a_measured_co0",
+        "test_grouping_is_a_measured_cocurrent",
+        "test_missing_all_measurements_0",
+        "test_missing_all_measurements_current",
+        "test_test_xml_counts_actual_ca0",
+        "test_test_xml_counts_actual_cacurrent"
+      ],
+      "action_taken": "none; previously outside the authorized pytest-7/8 migration scope",
+      "safety_status": "Candidate only. Recheck active PID/cwd/fd usage and perform complete file/link verification before any separately authorized reversible transfer."
+    }
+  ],
+  "not_transfer_candidates": [
+    {
+      "paths": [
+        "/root/workplace/ctx-compressor/data",
+        "/root/workplace/ctx-compressor/.conda",
+        "/root/workplace/ctx-compressor/.cache"
+      ],
+      "reason": "Existing protected task data/environment/cache, not new Task05 temporary output."
+    },
+    {
+      "path": "/root/.cache/pip",
+      "reason": "Existing large cache, unchanged in the observation window; Task05 ownership not established."
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run",
+      "reason": "Requested formal small results/provenance. Current largest file is only the 1.41MB migration receipt; moving it would alter delivery layout and does not explain persistent growth."
+    }
+  ],
+  "recommendations": [
+    {
+      "action": "Continue recording raw df and the existing monitor; retain the 300000000-byte gate.",
+      "command": "ssh 5880 \"df -B1 / /root/userfolder; tail -n 1 /root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl\"",
+      "executed_here": false
+    },
+    {
+      "action": "If further root headroom is needed, separately authorize the same verified reversible relocation for pytest-6 only after rechecking active use. Its measured maximum reclaim is small and cannot resolve the unidentified continuing growth by itself.",
+      "candidate_allocated_bytes": 417792,
+      "executed_here": false
+    },
+    {
+      "action": "Have the host/storage administrator compare timestamped growth on /dev/nvme0n1p2, particularly container logging, journald and other containers, using host-level metadata. This agent has no proof of a particular host writer and has not inspected unrelated contents.",
+      "executed_here": false
+    },
+    {
+      "action": "Do not claim resource acceptance by deducting an estimated host/unknown component; retain failure/pending if the measured gate is exceeded.",
+      "executed_here": false
+    }
+  ],
+  "conclusion": {
+    "continuous_growth_attributable_to_task05": false,
+    "attribution_unknown": true,
+    "known_training_cache_and_logs_external": true,
+    "large_additional_task_owned_root_files_found": false,
+    "migration_or_cleanup_performed": false
+  }
+}

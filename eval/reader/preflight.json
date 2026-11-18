@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-11-17T06:48:21Z",
+  "root_df_used_bytes": 931190407168,
+  "root_df_available_bytes": 23506808832,
+  "userfolder_available_bytes": 859443654656,
+  "root_growth_limit_bytes": 300000000,
+  "gpu": {
+    "physical_index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "name": "NVIDIA RTX 5880 Ada Generation",
+    "memory_total_mib": 49140,
+    "memory_used_mib": 375,
+    "driver_version": "580.95.05"
+  },
+  "previous_delivery_files_verified": 89
+}

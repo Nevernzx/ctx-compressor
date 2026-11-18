@@ -1,0 +1,106 @@
+{
+  "status": "archived_zero_output_initialization_failure",
+  "utc": "2026-11-17T22:46:49.585386+00:00",
+  "archive_root": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z",
+  "files": [
+    {
+      "original_path": "/root/workplace/ctx-compressor/eval/sft_run/model_rollout_run.json",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/model_rollout_run.json",
+      "bytes": 12000,
+      "sha256": "83654de5c5c859839c54a5c9205dff1487670c16488337bed8aa20bd866ce096",
+      "operation": "move"
+    },
+    {
+      "original_path": "/root/workplace/ctx-compressor/eval/sft_run/evaluation_launch.json",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/project_eval/evaluation_launch.json",
+      "bytes": 221,
+      "sha256": "061dfb75a4640f5c3876843219921fa41096997919b68f1e400eef822fa78e65",
+      "operation": "copy"
+    },
+    {
+      "original_path": "/root/userfolder/ctx-compressor/eval_rollouts/model_resources.jsonl",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/rollout_root/model_resources.jsonl",
+      "bytes": 417,
+      "sha256": "78f36b71d2dd4719a1d954898cf8087a9a78f5530f8a1baf6232a3d98fffa327",
+      "operation": "move"
+    },
+    {
+      "original_path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_model_eval.log",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/heldout_model_eval.log",
+      "bytes": 41890,
+      "sha256": "0f7bae1817a41084e00f17d9ba2d80553fa8917591503de2daf1bd9da6c51674",
+      "operation": "move"
+    },
+    {
+      "original_path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/evaluation_launch.json",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/evaluation_launch.json",
+      "bytes": 221,
+      "sha256": "061dfb75a4640f5c3876843219921fa41096997919b68f1e400eef822fa78e65",
+      "operation": "copy"
+    },
+    {
+      "original_path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_started.json",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_started.json",
+      "bytes": 70,
+      "sha256": "a2426a92738e2f30380ded585d60242fa12e03c028c4cc2a667e7576f7f8bfb8",
+      "operation": "copy"
+    },
+    {
+      "original_path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_status.json",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_status.json",
+      "bytes": 317,
+      "sha256": "89f510e472d65e49d6eb84af254e8691c10085ec749b113889a29d0dd6f2592c",
+      "operation": "copy"
+    },
+    {
+      "original_path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation_launch.json",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation_launch.json",
+      "bytes": 157,
+      "sha256": "93cb9391e8445c8a7ffe068d657e9e22a00e7a28ef818c82dba263b357f9fa31",
+      "operation": "copy"
+    },
+    {
+      "original_path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation.log",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/continuation.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "operation": "copy"
+    },
+    {
+      "original_path": "/root/workplace/ctx-compressor/scripts/run_heldout_model.sh",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/source/run_heldout_model.sh",
+      "bytes": 233,
+      "sha256": "1d7d558696b720db0593090ff489a522cba336c320898a09324266375206934d",
+      "operation": "copy"
+    },
+    {
+      "original_path": "/root/workplace/ctx-compressor/scripts/rollout_model.py",
+      "archive_path": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/source/rollout_model.py",
+      "bytes": 31153,
+      "sha256": "649ecd4685a484d976a0f0015b7eb0780989f05809c157757176643097c7d7d5",
+      "operation": "copy"
+    }
+  ],
+  "original_bytes_verified": true,
+  "model_output_directories_absent": true,
+  "small_model_metrics_absent": true,
+  "old_attempt_cuda_visible_devices": "1",
+  "old_attempt_resource_samples": 1,
+  "old_attempt_resource_indices_all_one": true,
+  "exit_proof": {
+    "utc": "2026-11-17T22:46:49.585386+00:00",
+    "pid": 892732,
+    "engine_pid": 892830,
+    "watcher_pid": 724148,
+    "training_pid": 724147,
+    "all_recorded_processes_exited": true,
+    "engine_pid_source": "/root/userfolder/ctx-compressor/eval_rollouts/initialization_attempts/missing_c_compiler_20261117T224125Z/training_run/heldout_model_eval.log:16",
+    "gpu_after": "1, GPU-4318dc90-4126-038a-9402-1323533db94f, 375, 0",
+    "strategies_completed": 0,
+    "outputs_generated": 0,
+    "failure_kind": "missing_c_compiler_during_initialization",
+    "oom": false,
+    "training_restarted": false
+  },
+  "next_step": "Only restart the existing watcher after an isolated compiler toolchain passes CPU compilation checks. Formal training and CPU baselines remain unchanged."
+}

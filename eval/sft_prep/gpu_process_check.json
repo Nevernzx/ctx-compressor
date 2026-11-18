@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-17T12:38:04.234214+00:00",
+  "benchmark_pid": 660606,
+  "cuda_visible_devices": "1",
+  "observed_processes": [
+    {
+      "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "pid": 660606,
+      "used_memory_mib": 6856
+    }
+  ],
+  "only_gpu1": true,
+  "actual_process_cuda_visible_devices": "1",
+  "actual_process_executable": "/root/userfolder/ctx-compressor/envs/train/bin/python"
+}

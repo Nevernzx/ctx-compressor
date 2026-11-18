@@ -1,0 +1,11 @@
+{
+  "pid": 724147,
+  "posix_session_id": 724147,
+  "nohup": true,
+  "detached": true,
+  "utc": "2026-11-17T15:18:18.244491+00:00",
+  "initial_pipeline_pid": 714854,
+  "reason": "zero-step length-column initialization fix; reuse completed A1/A4; A8 unchanged hparams",
+  "log": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/pipeline_resume.log",
+  "training_log": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train.log"
+}

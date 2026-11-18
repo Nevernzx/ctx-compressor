@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "status": "passed_cpu_only",
+  "created_at_utc": "2026-11-17T22:52:18.759277+00:00",
+  "authorization": "Task05 coordinator authorized separate external build-toolchain preparation; no modifications to ctxc/reader/train installations or Task04 scripts.",
+  "reason": "Initial zero-output C attempt failed at Triton host extension compilation because no compiler existed.",
+  "toolchain_work": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118",
+  "toolchain_prefix": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc",
+  "installer": {
+    "path": "/root/anaconda3/bin/conda",
+    "version": "25.5.1",
+    "solver": "libmamba",
+    "channel": "https://conda.anaconda.org/conda-forge",
+    "requested_packages": [
+      "gcc_linux-64=13",
+      "gxx_linux-64=13",
+      "sysroot_linux-64=2.17"
+    ],
+    "command_script": {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/prepare_toolchain.sh",
+      "bytes": 1543,
+      "sha256": "d62e745be838fd723cb9645d08a379fe629e379965cb4c9d99a2d3e2357cbeb9"
+    },
+    "log": {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/prepare_toolchain.log",
+      "bytes": 27611,
+      "sha256": "d087354ff7e92f5842b36297c00539c93c18fc7662ae388ba08dc4ba35e44cff"
+    },
+    "packages": [
+      {
+        "name": "_openmp_mutex",
+        "version": "4.5",
+        "build": "20_gnu",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/_openmp_mutex-4.5-20_gnu.conda",
+          "bytes": 28948,
+          "sha256": "1dd3fffd892081df9726d7eb7e0dea6198962ba775bd88842135a4ddb4deb3c9"
+        },
+        "metadata_sha256": "1dd3fffd892081df9726d7eb7e0dea6198962ba775bd88842135a4ddb4deb3c9",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/_openmp_mutex-4.5-20_gnu.json",
+          "bytes": 1374,
+          "sha256": "155787e7a16be8761a3a3955a8a5967038aaaaf9c800e5233f59d781d8eec0ae"
+        }
+      },
+      {
+        "name": "binutils_impl_linux-64",
+        "version": "2.46.1",
+        "build": "default_hfdba357_103",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/binutils_impl_linux-64-2.46.1-default_hfdba357_103.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/binutils_impl_linux-64-2.46.1-default_hfdba357_103.conda",
+          "bytes": 3706604,
+          "sha256": "98f9ddc6dc5d56a824b7eaea5bab6ad4bb47642288fc70d6b1b4024ac39d5595"
+        },
+        "metadata_sha256": "98f9ddc6dc5d56a824b7eaea5bab6ad4bb47642288fc70d6b1b4024ac39d5595",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/binutils_impl_linux-64-2.46.1-default_hfdba357_103.json",
+          "bytes": 111030,
+          "sha256": "f42353b022b605aa1f99bbd7eda749a397fb1d3ba0b9c950af403964435c6be5"
+        }
+      },
+      {
+        "name": "binutils_linux-64",
+        "version": "2.46.1",
+        "build": "default_h4852527_103",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/binutils_linux-64-2.46.1-default_h4852527_103.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/binutils_linux-64-2.46.1-default_h4852527_103.conda",
+          "bytes": 36335,
+          "sha256": "606a42c754752fb905fe2012d52ff370d47b5b6adefd5f7befc4ec30ce758f23"
+        },
+        "metadata_sha256": "606a42c754752fb905fe2012d52ff370d47b5b6adefd5f7befc4ec30ce758f23",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/binutils_linux-64-2.46.1-default_h4852527_103.json",
+          "bytes": 2038,
+          "sha256": "78e93cff14bfee5e855f1830ad7e03d95f45fdfb66271d90f391a69b59eb697a"
+        }
+      },
+      {
+        "name": "gcc_impl_linux-64",
+        "version": "13.4.0",
+        "build": "h649a46b_20",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-13.4.0-h649a46b_20.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/gcc_impl_linux-64-13.4.0-h649a46b_20.conda",
+          "bytes": 70367721,
+          "sha256": "7f9dbd59dcdf76e9a937b2f926f00627265b3b80c8a40f529f0f78846929d835"
+        },
+        "metadata_sha256": "7f9dbd59dcdf76e9a937b2f926f00627265b3b80c8a40f529f0f78846929d835",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/gcc_impl_linux-64-13.4.0-h649a46b_20.json",
+          "bytes": 293067,
+          "sha256": "df0f606bcaa848f0df4933d8cb28d775bfb9167b4107889664220f7d298ef756"
+        }
+      },
+      {
+        "name": "gcc_linux-64",
+        "version": "13.4.0",
+        "build": "h5174b15_28",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_linux-64-13.4.0-h5174b15_28.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/gcc_linux-64-13.4.0-h5174b15_28.conda",
+          "bytes": 29387,
+          "sha256": "4a6e12079dcff41b45b02a8af124afda58822eae9efedd6925080866c87a7d5c"
+        },
+        "metadata_sha256": "4a6e12079dcff41b45b02a8af124afda58822eae9efedd6925080866c87a7d5c",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/gcc_linux-64-13.4.0-h5174b15_28.json",
+          "bytes": 3614,
+          "sha256": "aa832052a45c5b148eb55d53478337d6fdb3cd2fdc87e229cd8871564e5eefec"
+        }
+      },
+      {
+        "name": "gxx_impl_linux-64",
+        "version": "13.4.0",
+        "build": "h5415f34_20",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gxx_impl_linux-64-13.4.0-h5415f34_20.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/gxx_impl_linux-64-13.4.0-h5415f34_20.conda",
+          "bytes": 14001935,
+          "sha256": "688ef3ea82110a862b3b6be6175b087c698b54c542944fc8b7b92f2bffb82050"
+        },
+        "metadata_sha256": "688ef3ea82110a862b3b6be6175b087c698b54c542944fc8b7b92f2bffb82050",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/gxx_impl_linux-64-13.4.0-h5415f34_20.json",
+          "bytes": 4569,
+          "sha256": "a0ff5f8ce7d4420a33efd1b12553b37ecafee579be225c47778b241ee95d071e"
+        }
+      },
+      {
+        "name": "gxx_linux-64",
+        "version": "13.4.0",
+        "build": "hb11295d_28",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gxx_linux-64-13.4.0-hb11295d_28.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/gxx_linux-64-13.4.0-hb11295d_28.conda",
+          "bytes": 27880,
+          "sha256": "ad5bb39b993b36d4bbeed3590b89233bc416b430ba53b92a2b1a24e3ab1bff60"
+        },
+        "metadata_sha256": "ad5bb39b993b36d4bbeed3590b89233bc416b430ba53b92a2b1a24e3ab1bff60",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/gxx_linux-64-13.4.0-hb11295d_28.json",
+          "bytes": 3654,
+          "sha256": "a56f1eba5ef02ddcbe6dd51db8f62413f9238d63e1b25df12559ddaaf462cb99"
+        }
+      },
+      {
+        "name": "kernel-headers_linux-64",
+        "version": "3.10.0",
+        "build": "he073ed8_18",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/noarch/kernel-headers_linux-64-3.10.0-he073ed8_18.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/kernel-headers_linux-64-3.10.0-he073ed8_18.conda",
+          "bytes": 943486,
+          "sha256": "a922841ad80bd7b222502e65c07ecb67e4176c4fa5b03678a005f39fcc98be4b"
+        },
+        "metadata_sha256": "a922841ad80bd7b222502e65c07ecb67e4176c4fa5b03678a005f39fcc98be4b",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/kernel-headers_linux-64-3.10.0-he073ed8_18.json",
+          "bytes": 323861,
+          "sha256": "dab0c5e5dc90d0f90321149565c1465d79590987385ec2b06d7c7d19ec64caa5"
+        }
+      },
+      {
+        "name": "ld_impl_linux-64",
+        "version": "2.46.1",
+        "build": "default_hbd61a6d_103",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda",
+          "bytes": 742109,
+          "sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28"
+        },
+        "metadata_sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.json",
+          "bytes": 2211,
+          "sha256": "224f07a88adde49daf74e0dfb4778e8b9500655018457c498112be5809ede88b"
+        }
+      },
+      {
+        "name": "libgcc",
+        "version": "16.2.0",
+        "build": "ha9f2e26_7",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-16.2.0-ha9f2e26_7.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/libgcc-16.2.0-ha9f2e26_7.conda",
+          "bytes": 1058444,
+          "sha256": "e031634c3a928f9594eba868bc46ef5230d6571a364a0c63215b06c4563bfcea"
+        },
+        "metadata_sha256": "e031634c3a928f9594eba868bc46ef5230d6571a364a0c63215b06c4563bfcea",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/libgcc-16.2.0-ha9f2e26_7.json",
+          "bytes": 5662,
+          "sha256": "89b44a58e5cba437dd0c901e7fcaea1d4444219914c72de4f0ba2806d9f5b888"
+        }
+      },
+      {
+        "name": "libgcc-devel_linux-64",
+        "version": "13.4.0",
+        "build": "hd1d28cc_120",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/noarch/libgcc-devel_linux-64-13.4.0-hd1d28cc_120.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/libgcc-devel_linux-64-13.4.0-hd1d28cc_120.conda",
+          "bytes": 2843917,
+          "sha256": "46f98e05c26957fffbc9224e70fc16218e5bc3d432288b6baf7e89619d517030"
+        },
+        "metadata_sha256": "46f98e05c26957fffbc9224e70fc16218e5bc3d432288b6baf7e89619d517030",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/libgcc-devel_linux-64-13.4.0-hd1d28cc_120.json",
+          "bytes": 7095,
+          "sha256": "2cfcab6d1004d80799cdc595939fb1826a90717cb6c2ed4a9905fa3c5a75b5eb"
+        }
+      },
+      {
+        "name": "libgomp",
+        "version": "16.2.0",
+        "build": "he0feb66_7",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libgomp-16.2.0-he0feb66_7.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/libgomp-16.2.0-he0feb66_7.conda",
+          "bytes": 640566,
+          "sha256": "92a0bb350c7be6a4eedcb4e111c60aefd176018e6b1c009a6e025dbe9bbcd758"
+        },
+        "metadata_sha256": "92a0bb350c7be6a4eedcb4e111c60aefd176018e6b1c009a6e025dbe9bbcd758",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/libgomp-16.2.0-he0feb66_7.json",
+          "bytes": 2091,
+          "sha256": "6bac4cb9d9851802ae2522e83910c334dd8dad8874f9686ec71063ac82599a10"
+        }
+      },
+      {
+        "name": "libsanitizer",
+        "version": "13.4.0",
+        "build": "hf18ac3d_20",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libsanitizer-13.4.0-hf18ac3d_20.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/libsanitizer-13.4.0-hf18ac3d_20.conda",
+          "bytes": 6486765,
+          "sha256": "bd710792a12dd3e15e74a331efc385384230b6b60d50ecbd2646fbc0be254658"
+        },
+        "metadata_sha256": "bd710792a12dd3e15e74a331efc385384230b6b60d50ecbd2646fbc0be254658",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/libsanitizer-13.4.0-hf18ac3d_20.json",
+          "bytes": 5177,
+          "sha256": "795d03138d74a9f8dca577468e1e7132eac565db3e5ef206c268013f9bf68fcd"
+        }
+      },
+      {
+        "name": "libstdcxx",
+        "version": "16.2.0",
+        "build": "h934c35e_7",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-16.2.0-h934c35e_7.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/libstdcxx-16.2.0-h934c35e_7.conda",
+          "bytes": 6615436,
+          "sha256": "fa7018298629fc429971fffd6ecba3d27a7b02e4e890d6a93ea01ffebe8cb745"
+        },
+        "metadata_sha256": "fa7018298629fc429971fffd6ecba3d27a7b02e4e890d6a93ea01ffebe8cb745",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/libstdcxx-16.2.0-h934c35e_7.json",
+          "bytes": 2400,
+          "sha256": "16add525e4fe7c238c20c9e8bf25f0fadacd1f3b41de0ce6f433984cef10d53b"
+        }
+      },
+      {
+        "name": "libstdcxx-devel_linux-64",
+        "version": "13.4.0",
+        "build": "h6963c3b_120",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/noarch/libstdcxx-devel_linux-64-13.4.0-h6963c3b_120.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/libstdcxx-devel_linux-64-13.4.0-h6963c3b_120.conda",
+          "bytes": 18953032,
+          "sha256": "c322903ff3c6330ad9a9da72b2b86503595fc072a7d90405021491168c21701c"
+        },
+        "metadata_sha256": "c322903ff3c6330ad9a9da72b2b86503595fc072a7d90405021491168c21701c",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/libstdcxx-devel_linux-64-13.4.0-h6963c3b_120.json",
+          "bytes": 368224,
+          "sha256": "c1edea9fdb90d8009fc0e66b16a9099570372c0175d9d34fcbee8001a8bbdea5"
+        }
+      },
+      {
+        "name": "libzlib",
+        "version": "1.3.2",
+        "build": "h25fd6f3_3",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_3.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/libzlib-1.3.2-h25fd6f3_3.conda",
+          "bytes": 63713,
+          "sha256": "eb8a0db0aa570124f7d2a93d7c7f596e3390df5e047818d873baad32985fc736"
+        },
+        "metadata_sha256": "eb8a0db0aa570124f7d2a93d7c7f596e3390df5e047818d873baad32985fc736",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/libzlib-1.3.2-h25fd6f3_3.json",
+          "bytes": 1658,
+          "sha256": "0b0e6772dbc87bf71a03566bb5a74fc77425a31bffbf2a5684920485fd115f12"
+        }
+      },
+      {
+        "name": "sysroot_linux-64",
+        "version": "2.17",
+        "build": "h0157908_18",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.17-h0157908_18.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/sysroot_linux-64-2.17-h0157908_18.conda",
+          "bytes": 15166921,
+          "sha256": "69ab5804bdd2e8e493d5709eebff382a72fab3e9af6adf93a237ccf8f7dbd624"
+        },
+        "metadata_sha256": "69ab5804bdd2e8e493d5709eebff382a72fab3e9af6adf93a237ccf8f7dbd624",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/sysroot_linux-64-2.17-h0157908_18.json",
+          "bytes": 568788,
+          "sha256": "a467f88e1c83320d8fc96764e2214517c615d16573c0daae104ec94f9b0a6cc1"
+        }
+      },
+      {
+        "name": "tzdata",
+        "version": "2026e",
+        "build": "h5d301ff_0",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/noarch/tzdata-2026e-h5d301ff_0.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/tzdata-2026e-h5d301ff_0.conda",
+          "bytes": 119208,
+          "sha256": "2b7ca858879f183ce2dcc65b300f48a0133d5430550f35b23d80d405a0788dbf"
+        },
+        "metadata_sha256": "2b7ca858879f183ce2dcc65b300f48a0133d5430550f35b23d80d405a0788dbf",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/tzdata-2026e-h5d301ff_0.json",
+          "bytes": 212355,
+          "sha256": "44a3594e9572289e92af06dddb9c4e58b08bf1e7962883e6b2d066f51d8157f2"
+        }
+      },
+      {
+        "name": "zstd",
+        "version": "1.5.7",
+        "build": "hb78ec9c_7",
+        "channel": "https://conda.anaconda.org/conda-forge/noarch",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_7.conda",
+        "archive": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs/zstd-1.5.7-hb78ec9c_7.conda",
+          "bytes": 601301,
+          "sha256": "47d682b9f6d6ec9eb1a6e6c3e75ea6273e899e78fb7fc59f81d39745009fbc60"
+        },
+        "metadata_sha256": "47d682b9f6d6ec9eb1a6e6c3e75ea6273e899e78fb7fc59f81d39745009fbc60",
+        "installed_metadata": {
+          "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/conda-meta/zstd-1.5.7-hb78ec9c_7.json",
+          "bytes": 6927,
+          "sha256": "caa6fe25a8c27e77b70e5bd2a47c9fa821f2c7ff8c47361170981682863d7024"
+        }
+      }
+    ]
+  },
+  "isolation": {
+    "prefix": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc",
+    "package_cache": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/pkgs",
+    "temporary": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/tmp",
+    "xdg_cache": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/xdg",
+    "register_envs": false,
+    "home_changed": false,
+    "proxy_variables_unset": true,
+    "cuda_visible_devices_for_preparation": "",
+    "downloads_on": "5880 only",
+    "conda_registry_caveat": "Conda may touch existing ~/.conda/environments.txt during transaction verification even with register_envs=false; its bytes remained unchanged. All package and repodata caches were external."
+  },
+  "explicit_lock": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run/toolchain.explicit.lock.txt",
+    "bytes": 3065,
+    "sha256": "dd4bfde6a5bca4d2ca62334816a4b6dc710c4d897af4acb90f02a0eae00c994b"
+  },
+  "package_and_critical_file_checksums": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run/TOOLCHAIN_SHA256SUMS",
+    "bytes": 12579,
+    "sha256": "a00a7613441de7fb1ffd7bb07a09c2bcc6a8c49b1f9b79cb32841930657eb9dc"
+  },
+  "checksum_entries": 74,
+  "checksum_scope": "All 19 downloaded archives, installed package metadata, compiler/frontend/assembler/linker and selected sysroot files, preparation/proof sources/logs/artifacts. Not a hash of every extracted header/library or repodata cache.",
+  "cpu_validation": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run/toolchain_compiler_cpu_validation.json",
+    "bytes": 10123,
+    "sha256": "2dcc5fb8eee0c2c310fa05f70bd1d0b7e00cad389751d4839c80f79574c4825c"
+  },
+  "actual_wrapper_prefix_cpu_validation": {
+    "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/validate_actual_wrapper_cpu.sh",
+    "bytes": 816,
+    "sha256": "d71e57cd59062c3a5aec6fa25ea6467bcbdbf422dde6bd16111924d0c1f70398"
+  },
+  "actual_wrapper_prefix_cpu_log": {
+    "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/validate_actual_wrapper_cpu.log",
+    "bytes": 186,
+    "sha256": "f8329a209203a11d0e6a6c460202ce1f10b3962924c066c8e0f15d93a4f9ad4b"
+  },
+  "protected_files_comparison": {
+    "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/protected_files_after_comparison.json",
+    "bytes": 871,
+    "sha256": "e0bd9743542c087d365b741115717d9ae114d64d29cbdcc7d6805bb09452c620"
+  },
+  "protected_checked_count": 1061,
+  "protected_unchanged_count": 1060,
+  "unexpected_protected_changes": [],
+  "wrapper_before": {
+    "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/run_heldout_model.before.sh",
+    "bytes": 233,
+    "sha256": "1d7d558696b720db0593090ff489a522cba336c320898a09324266375206934d"
+  },
+  "wrapper_after": {
+    "path": "/root/workplace/ctx-compressor/scripts/run_heldout_model.sh",
+    "bytes": 590,
+    "sha256": "4020ac2387b865381458c02fa7b9af0c68b605d2f7853e5f0670ec30da017ab6"
+  },
+  "wrapper_change": "Add absolute CC and CXX, prepend only independent toolchain bin, and require both executables. Compiler's own sysroot is used. No activation or LD_LIBRARY_PATH change.",
+  "runner_unchanged": {
+    "path": "/root/workplace/ctx-compressor/scripts/rollout_model.py",
+    "bytes": 31153,
+    "sha256": "649ecd4685a484d976a0f0015b7eb0780989f05809c157757176643097c7d7d5"
+  },
+  "cuda_initialized": false,
+  "gpu_queries_or_engine_launches": 0,
+  "limitations": "CPU compilation/linking/loading proof only. Actual vLLM GPU initialization and LoRA kernels await coordinator restart."
+}

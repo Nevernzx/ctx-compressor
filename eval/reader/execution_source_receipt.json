@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-11-17T08:15:12.438097+00:00",
+  "reader_job_pid": 556782,
+  "runner_source_sha256": "f88e1b19b1e055afd72d3ec4f71b48c871da8a388c2fa612d4c09c430baa4c29",
+  "reader_report_sha256": "8099a2bf7cd1b0c4eb7217077e4f6751ef39ed12b201f1aa7b0667bc5cca68c7",
+  "protocol_source_sha256": {
+    "src/reader.py": "5253dd24e2f3bc8c11b9774d50b15827e0e954103e470948748a32b23bdfda3b",
+    "src/qa_metrics.py": "865fe2c83af0e72a5de6eebaf31f2d55b5e79ef61e721c8598130a95e4d4232e"
+  },
+  "note": "Runtime source unchanged since this full process started; postflight validates all root-disk alerts independently."
+}

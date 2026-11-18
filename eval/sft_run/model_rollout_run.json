@@ -1,0 +1,1043 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "started_at_utc": "2026-11-17T22:53:44.589431+00:00",
+  "pid": 898553,
+  "cuda_visible_devices": "1",
+  "gpu_before": {
+    "index": 1,
+    "memory_used_mib": 375,
+    "memory_total_mib": 49140,
+    "utilization_gpu": 0
+  },
+  "vllm_worker_multiproc_method": "spawn",
+  "root_before": {
+    "used_bytes": 931859263488,
+    "available_bytes": 22837952512,
+    "df_raw": "        Used       Avail\n931859263488 22837952512\n"
+  },
+  "task05_resource_baseline": {
+    "utc": "2026-11-17T14:49:56.831734+00:00",
+    "root_df_used_bytes": 931440451584,
+    "root_final_growth_limit_bytes": 300000000,
+    "gpu": {
+      "physical_index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "name": "NVIDIA RTX 5880 Ada Generation",
+      "memory_total_mib": 49140,
+      "memory_used_mib": 375,
+      "driver_version": "580.95.05"
+    },
+    "prior_files_verified": 187,
+    "new_old_file_changes_authorized": [],
+    "training_root": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117"
+  },
+  "root_startup_diagnostics": {
+    "utc": "2026-11-17T22:53:44.588746+00:00",
+    "phase": "startup",
+    "root_df": {
+      "used_bytes": 931859263488,
+      "available_bytes": 22837952512,
+      "df_raw": "        Used       Avail\n931859263488 22837952512\n"
+    },
+    "root_delta_bytes": 418811904,
+    "root_peak_delta_bytes": 418811904,
+    "root_limit_bytes": 300000000,
+    "root_over_limit": true,
+    "root_limit_event": "enter"
+  },
+  "root_disk_diagnostics": {
+    "policy": "observe during inference; finalizer enforces final raw df delta <= 300000000 bytes",
+    "baseline_used_bytes": 931440451584,
+    "limit_bytes": 300000000,
+    "sample_count_including_startup_and_shutdown": 820,
+    "over_limit_sample_count": 820,
+    "peak_delta_bytes": 865083392,
+    "last_delta_bytes": 817438720,
+    "last_over_limit": true,
+    "threshold_events": [
+      {
+        "utc": "2026-11-17T22:53:44.588746+00:00",
+        "phase": "startup",
+        "root_delta_bytes": 418811904,
+        "root_limit_bytes": 300000000,
+        "root_limit_event": "enter"
+      }
+    ],
+    "monitor_error": null
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "preflight": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run/model_inference_preflight.json",
+    "bytes": 4579,
+    "sha256": "b5e7a1643a6c45e3e681dc748488f5b9f20e6a33599ac8e20d9543397148b6dc"
+  },
+  "template_check": {
+    "reference": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+      "bytes": 40731,
+      "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "prompt_tokens": 1814,
+    "masked_input_tokens": 1810,
+    "empty_think_tokens": 4,
+    "exact_token_ids_match": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+  },
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 256,
+    "n": 1,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "input_truncation": false
+  },
+  "lora_loading": "native vLLM LoRA; base loaded once; sequential adapters, rank16",
+  "checkpoint_inputs": [
+    {
+      "strategy": "checkpoint-500",
+      "step": 500,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "9de5734a99ad1caca2f53602135e8f9e2ec619c2237e50d0355a09bd95a448aa"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-1000",
+      "step": 1000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "27e631f8fc76f92d382725ce79cc4614631280585937e8c462815347e836e23a"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-1500",
+      "step": 1500,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1500",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1500/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1500/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "a428ca2802cff90f7e4b1d94c1984d770dd0f85810abbd75d3eb1b1d7fcc51ec"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-2000",
+      "step": 2000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "10352edbc5f65e916f7aa9746036e12f29345614740d7aa617294c8e81c63850"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-2500",
+      "step": 2500,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2500",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2500/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2500/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "fbc4f004127f72865eee8c1da2b2e5776d10b67605d84d4282d41099aeb6b125"
+        }
+      ]
+    }
+  ],
+  "strategies": {
+    "base": {
+      "checkpoint_step": null,
+      "status": "complete",
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 699.6739323439542,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 371349
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 717.3513936689124,
+          "prompt_tokens": 3948417,
+          "generated_tokens": 372017
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 703.4358922829852,
+          "prompt_tokens": 3727395,
+          "generated_tokens": 368677
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 707.4051617570221,
+          "prompt_tokens": 3828903,
+          "generated_tokens": 369950
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 709.6037993179634,
+          "prompt_tokens": 3831153,
+          "generated_tokens": 370580
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 699.7210846240632,
+          "prompt_tokens": 3758385,
+          "generated_tokens": 366198
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 702.5827047410421,
+          "prompt_tokens": 3785199,
+          "generated_tokens": 367157
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 705.9868355940562,
+          "prompt_tokens": 3851049,
+          "generated_tokens": 367296
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 515.7903491149191,
+          "prompt_tokens": 2764128,
+          "generated_tokens": 256471
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 315.56504683895037,
+          "prompt_tokens": 1615986,
+          "generated_tokens": 152680
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 141.4261265490204,
+          "prompt_tokens": 761973,
+          "generated_tokens": 67502
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 36.86658638785593,
+          "prompt_tokens": 205617,
+          "generated_tokens": 16118
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 7.970597767038271,
+          "prompt_tokens": 31446,
+          "generated_tokens": 3072
+        }
+      ],
+      "output_limit_hits": 11155,
+      "max_prompt_tokens": 6372,
+      "invalid_counts": {
+        "invalid_json": 13956
+      },
+      "actual_training_prefix_check": {
+        "identity": {
+          "task": 0,
+          "step": 0,
+          "mode": "reselect",
+          "budget_tier": "tight",
+          "budget": 1876,
+          "split": "heldout"
+        },
+        "exact_token_ids_match": true,
+        "runtime_echoed_exact_prompt_ids": true,
+        "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+        "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "elapsed_seconds": 6761.375192513922,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/base/metrics.json",
+        "bytes": 29864,
+        "sha256": "b644a4552e5665cb57042b9d8bf66d25b3f0dcc7adc4b6b145f9be7fa5a2b68a"
+      }
+    },
+    "checkpoint-500": {
+      "checkpoint_step": 500,
+      "status": "complete",
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 154.3006429800298,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14181
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 170.9351507939864,
+          "prompt_tokens": 4088915,
+          "generated_tokens": 15953
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 171.26705961115658,
+          "prompt_tokens": 4060384,
+          "generated_tokens": 16392
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 178.81502085085958,
+          "prompt_tokens": 4223869,
+          "generated_tokens": 16404
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 184.1588713771198,
+          "prompt_tokens": 4360578,
+          "generated_tokens": 16391
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 187.52100512082689,
+          "prompt_tokens": 4378125,
+          "generated_tokens": 17737
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 195.51758229010738,
+          "prompt_tokens": 4543279,
+          "generated_tokens": 18665
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 203.14006871497259,
+          "prompt_tokens": 4706790,
+          "generated_tokens": 18633
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 151.22291369200684,
+          "prompt_tokens": 3444564,
+          "generated_tokens": 13131
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 89.16602699598297,
+          "prompt_tokens": 2056065,
+          "generated_tokens": 7855
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 42.00976343406364,
+          "prompt_tokens": 969712,
+          "generated_tokens": 3359
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 11.735722335986793,
+          "prompt_tokens": 262986,
+          "generated_tokens": 822
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.108878714032471,
+          "prompt_tokens": 42723,
+          "generated_tokens": 150
+        }
+      ],
+      "output_limit_hits": 0,
+      "max_prompt_tokens": 7602,
+      "invalid_counts": {
+        "invalid_candidate_id": 37,
+        "invalid_json": 1,
+        "over_budget": 9
+      },
+      "actual_training_prefix_check": {
+        "identity": {
+          "task": 0,
+          "step": 0,
+          "mode": "reselect",
+          "budget_tier": "tight",
+          "budget": 1876,
+          "split": "heldout"
+        },
+        "exact_token_ids_match": true,
+        "runtime_echoed_exact_prompt_ids": true,
+        "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+        "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "elapsed_seconds": 1852.9897110511083,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-500/metrics.json",
+        "bytes": 32313,
+        "sha256": "b05cbf0b4a3c34b6a73fd40ea6100dc8d196d28bad1b7032cd297ae3ae33d6c5"
+      }
+    },
+    "checkpoint-1000": {
+      "checkpoint_step": 1000,
+      "status": "complete",
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 148.8277899310924,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14159
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 171.86360403406434,
+          "prompt_tokens": 4083041,
+          "generated_tokens": 16183
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 171.47525284206495,
+          "prompt_tokens": 4077856,
+          "generated_tokens": 15969
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 181.6317680850625,
+          "prompt_tokens": 4288640,
+          "generated_tokens": 16182
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 187.59292833297513,
+          "prompt_tokens": 4448103,
+          "generated_tokens": 16053
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 190.7723149920348,
+          "prompt_tokens": 4482963,
+          "generated_tokens": 17538
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 207.492622456979,
+          "prompt_tokens": 4657724,
+          "generated_tokens": 18466
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 214.72460859711282,
+          "prompt_tokens": 4845900,
+          "generated_tokens": 18219
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 167.44274195819162,
+          "prompt_tokens": 3563179,
+          "generated_tokens": 12879
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 113.47517899284139,
+          "prompt_tokens": 2122861,
+          "generated_tokens": 7482
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 54.32474459405057,
+          "prompt_tokens": 1003261,
+          "generated_tokens": 3333
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 15.492172109894454,
+          "prompt_tokens": 268057,
+          "generated_tokens": 825
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.1873877530451864,
+          "prompt_tokens": 43526,
+          "generated_tokens": 150
+        }
+      ],
+      "output_limit_hits": 0,
+      "max_prompt_tokens": 7583,
+      "invalid_counts": {
+        "invalid_candidate_id": 52,
+        "over_budget": 12
+      },
+      "actual_training_prefix_check": {
+        "identity": {
+          "task": 0,
+          "step": 0,
+          "mode": "reselect",
+          "budget_tier": "tight",
+          "budget": 1876,
+          "split": "heldout"
+        },
+        "exact_token_ids_match": true,
+        "runtime_echoed_exact_prompt_ids": true,
+        "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+        "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "elapsed_seconds": 1942.7513532210141,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-1000/metrics.json",
+        "bytes": 32268,
+        "sha256": "94af4c877e0fdcf6d35078b9aaa33bdae15f8a630da3a0a00031b263fda6fe56"
+      }
+    },
+    "checkpoint-1500": {
+      "checkpoint_step": 1500,
+      "status": "complete",
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 183.5853818259202,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14211
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 195.44720854097977,
+          "prompt_tokens": 4083937,
+          "generated_tokens": 15787
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 189.29690875601955,
+          "prompt_tokens": 4075648,
+          "generated_tokens": 16173
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 195.63441072613932,
+          "prompt_tokens": 4261374,
+          "generated_tokens": 16131
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 187.40245943004265,
+          "prompt_tokens": 4418081,
+          "generated_tokens": 16239
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 190.19153576507233,
+          "prompt_tokens": 4440214,
+          "generated_tokens": 17710
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 197.8968505510129,
+          "prompt_tokens": 4605026,
+          "generated_tokens": 18348
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 205.6407605339773,
+          "prompt_tokens": 4782274,
+          "generated_tokens": 18440
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 151.79151093796827,
+          "prompt_tokens": 3502603,
+          "generated_tokens": 12883
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 91.09555160207674,
+          "prompt_tokens": 2090751,
+          "generated_tokens": 7572
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 42.46019585989416,
+          "prompt_tokens": 986716,
+          "generated_tokens": 3356
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 11.852525003021583,
+          "prompt_tokens": 265584,
+          "generated_tokens": 822
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.0802935659885406,
+          "prompt_tokens": 41830,
+          "generated_tokens": 150
+        }
+      ],
+      "output_limit_hits": 0,
+      "max_prompt_tokens": 7694,
+      "invalid_counts": {
+        "invalid_candidate_id": 108,
+        "over_budget": 10
+      },
+      "actual_training_prefix_check": {
+        "identity": {
+          "task": 0,
+          "step": 0,
+          "mode": "reselect",
+          "budget_tier": "tight",
+          "budget": 1876,
+          "split": "heldout"
+        },
+        "exact_token_ids_match": true,
+        "runtime_echoed_exact_prompt_ids": true,
+        "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+        "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "elapsed_seconds": 1968.6830900839996,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-1500/metrics.json",
+        "bytes": 32374,
+        "sha256": "ca0220bf9cf54f0d21ba76cc19dfa93d44a5fb3cbd2aff4e6c83ab545508ee9d"
+      }
+    },
+    "checkpoint-2000": {
+      "checkpoint_step": 2000,
+      "status": "complete",
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 149.7734799759928,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14190
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 171.8045656401664,
+          "prompt_tokens": 4079895,
+          "generated_tokens": 15798
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 172.19812995707616,
+          "prompt_tokens": 4078582,
+          "generated_tokens": 16051
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 181.805042601889,
+          "prompt_tokens": 4274745,
+          "generated_tokens": 16004
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 188.16699345596135,
+          "prompt_tokens": 4437295,
+          "generated_tokens": 16078
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 192.14749859203584,
+          "prompt_tokens": 4475338,
+          "generated_tokens": 17591
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 200.24795186985284,
+          "prompt_tokens": 4644470,
+          "generated_tokens": 18220
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 207.32598253688775,
+          "prompt_tokens": 4831654,
+          "generated_tokens": 18373
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 153.0747107269708,
+          "prompt_tokens": 3537468,
+          "generated_tokens": 12824
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 94.51768864598125,
+          "prompt_tokens": 2111419,
+          "generated_tokens": 7518
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 45.38712032302283,
+          "prompt_tokens": 1000913,
+          "generated_tokens": 3357
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 12.63280671206303,
+          "prompt_tokens": 270980,
+          "generated_tokens": 819
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.300516220042482,
+          "prompt_tokens": 43365,
+          "generated_tokens": 150
+        }
+      ],
+      "output_limit_hits": 0,
+      "max_prompt_tokens": 7664,
+      "invalid_counts": {
+        "invalid_candidate_id": 37,
+        "over_budget": 7
+      },
+      "actual_training_prefix_check": {
+        "identity": {
+          "task": 0,
+          "step": 0,
+          "mode": "reselect",
+          "budget_tier": "tight",
+          "budget": 1876,
+          "split": "heldout"
+        },
+        "exact_token_ids_match": true,
+        "runtime_echoed_exact_prompt_ids": true,
+        "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+        "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "elapsed_seconds": 1881.8024505511858,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-2000/metrics.json",
+        "bytes": 32408,
+        "sha256": "9d9057ceb782f94fd77a91006a169d54ae6a02f93669b0f0a3a97d05645e2ccc"
+      }
+    },
+    "checkpoint-2500": {
+      "checkpoint_step": 2500,
+      "status": "complete",
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 175.92376629891805,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14186
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 213.73312272201292,
+          "prompt_tokens": 4079558,
+          "generated_tokens": 15816
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 201.39392114197835,
+          "prompt_tokens": 4071287,
+          "generated_tokens": 16134
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 179.66517492500134,
+          "prompt_tokens": 4260273,
+          "generated_tokens": 16065
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 186.83623529807664,
+          "prompt_tokens": 4421271,
+          "generated_tokens": 16151
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 189.01583616714925,
+          "prompt_tokens": 4451984,
+          "generated_tokens": 17646
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 196.8355206940323,
+          "prompt_tokens": 4615906,
+          "generated_tokens": 18263
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 204.2085667499341,
+          "prompt_tokens": 4801049,
+          "generated_tokens": 18364
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 150.85224897391163,
+          "prompt_tokens": 3519813,
+          "generated_tokens": 12891
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 89.83988156286068,
+          "prompt_tokens": 2100313,
+          "generated_tokens": 7521
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 42.52081592893228,
+          "prompt_tokens": 994017,
+          "generated_tokens": 3360
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 11.881065804045647,
+          "prompt_tokens": 268066,
+          "generated_tokens": 822
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.0776822469197214,
+          "prompt_tokens": 42803,
+          "generated_tokens": 150
+        }
+      ],
+      "output_limit_hits": 0,
+      "max_prompt_tokens": 7694,
+      "invalid_counts": {
+        "invalid_candidate_id": 27,
+        "over_budget": 7
+      },
+      "actual_training_prefix_check": {
+        "identity": {
+          "task": 0,
+          "step": 0,
+          "mode": "reselect",
+          "budget_tier": "tight",
+          "budget": 1876,
+          "split": "heldout"
+        },
+        "exact_token_ids_match": true,
+        "runtime_echoed_exact_prompt_ids": true,
+        "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+        "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "elapsed_seconds": 1958.797404421959,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-2500/metrics.json",
+        "bytes": 32360,
+        "sha256": "684348361c9e4db5c38b054662175bde2b31bd23dba6aacbf266dc147133463d"
+      }
+    }
+  },
+  "input_files": {
+    "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+      "bytes": 62323855,
+      "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+    },
+    "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+      "bytes": 83690752,
+      "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json",
+      "bytes": 9732,
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json",
+      "bytes": 726,
+      "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+    }
+  },
+  "engine_tokenizer_check": {
+    "reference": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+      "bytes": 40731,
+      "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "prompt_tokens": 1814,
+    "masked_input_tokens": 1810,
+    "empty_think_tokens": 4,
+    "exact_token_ids_match": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+  },
+  "engine_initialization_seconds": 22.989038297208026,
+  "no_compress_baseline": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run/no_compress_results.json",
+    "bytes": 30050,
+    "sha256": "73bbf3061c1396d02a5871f66f4548e14cf9db219e18e9338779618a3860fe96"
+  },
+  "active_strategy": "checkpoint-2500",
+  "monitor_thread_stopped": true,
+  "root_disk_diagnostics_complete": true,
+  "engine_shutdown": {
+    "required": true,
+    "completed": true
+  },
+  "root_after": {
+    "used_bytes": 932257890304,
+    "available_bytes": 22439325696,
+    "df_raw": "        Used       Avail\n932257890304 22439325696\n"
+  },
+  "root_shutdown_diagnostics": {
+    "utc": "2026-11-18T03:26:57.312937+00:00",
+    "phase": "shutdown",
+    "root_df": {
+      "used_bytes": 932257890304,
+      "available_bytes": 22439325696,
+      "df_raw": "        Used       Avail\n932257890304 22439325696\n"
+    },
+    "root_delta_bytes": 817438720,
+    "root_peak_delta_bytes": 865083392,
+    "root_limit_bytes": 300000000,
+    "root_over_limit": true,
+    "root_limit_event": null
+  },
+  "completed_at_utc": "2026-11-18T03:26:58.942099+00:00",
+  "elapsed_seconds": 16394.352712813066,
+  "peak_gpu_memory_used_mib": 46307
+}

@@ -1,0 +1,1100 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-17T12:34:52.256707+00:00",
+  "elapsed_seconds": 218.1694628649857,
+  "packages": {
+    "ms-swift": "3.12.6",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "torch": "2.8.0"
+  },
+  "protocol": {
+    "template_type": "qwen3",
+    "truncation_strategy": "raise",
+    "loss_scale": "last_round",
+    "enable_thinking": false,
+    "add_non_thinking_prefix": true,
+    "template_backend": "swift",
+    "padding_side": "right",
+    "padding_free": false,
+    "mode": "train",
+    "measurement_max_length": null,
+    "n_input_tokens": "number of labels=-100 tokens: user content plus role/template headers",
+    "n_target_tokens": "number of supervised tokens: 4 empty-think tokens + target JSON + 2 terminator tokens",
+    "length_identity": "n_input_tokens + n_target_tokens == total_tokens; loss_tokens == n_target_tokens",
+    "inference_prefix": "HF apply_chat_template(user, add_generation_prompt=True, enable_thinking=False)",
+    "inference_prefix_extra_tokens_above_masked_prefix": 4
+  },
+  "max_length": 8392,
+  "observed_max_tokens": 8390,
+  "benchmark_allowed": true,
+  "overall": {
+    "samples": 93214,
+    "lengths": {
+      "n_input_tokens": {
+        "n": 93214,
+        "mean": 3237.141620357457,
+        "p50": 3176.0,
+        "p90": 4269.0,
+        "p99": 5288.0,
+        "max": 8371
+      },
+      "n_target_tokens": {
+        "n": 93214,
+        "mean": 17.90390928401313,
+        "p50": 16.0,
+        "p90": 23.0,
+        "p99": 27.0,
+        "max": 30
+      },
+      "total_tokens": {
+        "n": 93214,
+        "mean": 3255.0455296414702,
+        "p50": 3194.0,
+        "p90": 4290.0,
+        "p99": 5308.0,
+        "max": 8390
+      },
+      "loss_tokens": {
+        "n": 93214,
+        "mean": 17.90390928401313,
+        "p50": 16.0,
+        "p90": 23.0,
+        "p99": 27.0,
+        "max": 30
+      }
+    },
+    "target_add_empty": {
+      "count": 226,
+      "n": 93214,
+      "rate": 0.002424528504301929
+    },
+    "target_drop_nonempty": {
+      "count": 41612,
+      "n": 93214,
+      "rate": 0.4464136288540348
+    },
+    "budget_binding": {
+      "count": 137,
+      "n": 93214,
+      "rate": 0.0014697363057051516
+    }
+  },
+  "mode_tier": {
+    "append|loose": {
+      "samples": 15903,
+      "lengths": {
+        "n_input_tokens": {
+          "n": 15903,
+          "mean": 3130.3844557630637,
+          "p50": 3061.0,
+          "p90": 4122.800000000001,
+          "p99": 5142.959999999999,
+          "max": 8281
+        },
+        "n_target_tokens": {
+          "n": 15903,
+          "mean": 15.394013708105389,
+          "p50": 15.0,
+          "p90": 16.0,
+          "p99": 16.0,
+          "max": 16
+        },
+        "total_tokens": {
+          "n": 15903,
+          "mean": 3145.778469471169,
+          "p50": 3077.0,
+          "p90": 4138.800000000001,
+          "p99": 5158.959999999999,
+          "max": 8297
+        },
+        "loss_tokens": {
+          "n": 15903,
+          "mean": 15.394013708105389,
+          "p50": 15.0,
+          "p90": 16.0,
+          "p99": 16.0,
+          "max": 16
+        }
+      },
+      "target_add_empty": {
+        "count": 13,
+        "n": 15903,
+        "rate": 0.0008174558259447903
+      },
+      "target_drop_nonempty": {
+        "count": 0,
+        "n": 15903,
+        "rate": 0.0
+      },
+      "budget_binding": {
+        "count": 0,
+        "n": 15903,
+        "rate": 0.0
+      }
+    },
+    "append|mid": {
+      "samples": 15179,
+      "lengths": {
+        "n_input_tokens": {
+          "n": 15179,
+          "mean": 3124.7982080505963,
+          "p50": 3060.0,
+          "p90": 4110.0,
+          "p99": 5116.439999999999,
+          "max": 7936
+        },
+        "n_target_tokens": {
+          "n": 15179,
+          "mean": 15.388036102510046,
+          "p50": 15.0,
+          "p90": 16.0,
+          "p99": 16.0,
+          "max": 16
+        },
+        "total_tokens": {
+          "n": 15179,
+          "mean": 3140.186244153106,
+          "p50": 3075.0,
+          "p90": 4126.0,
+          "p99": 5132.439999999999,
+          "max": 7952
+        },
+        "loss_tokens": {
+          "n": 15179,
+          "mean": 15.388036102510046,
+          "p50": 15.0,
+          "p90": 16.0,
+          "p99": 16.0,
+          "max": 16
+        }
+      },
+      "target_add_empty": {
+        "count": 13,
+        "n": 15179,
+        "rate": 0.0008564464062191185
+      },
+      "target_drop_nonempty": {
+        "count": 0,
+        "n": 15179,
+        "rate": 0.0
+      },
+      "budget_binding": {
+        "count": 3,
+        "n": 15179,
+        "rate": 0.00019764147835825812
+      }
+    },
+    "append|tight": {
+      "samples": 15525,
+      "lengths": {
+        "n_input_tokens": {
+          "n": 15525,
+          "mean": 3138.6735587761673,
+          "p50": 3075.0,
+          "p90": 4147.6,
+          "p99": 5126.76,
+          "max": 8287
+        },
+        "n_target_tokens": {
+          "n": 15525,
+          "mean": 15.384669887278584,
+          "p50": 15.0,
+          "p90": 16.0,
+          "p99": 16.0,
+          "max": 16
+        },
+        "total_tokens": {
+          "n": 15525,
+          "mean": 3154.0582286634462,
+          "p50": 3091.0,
+          "p90": 4162.6,
+          "p99": 5142.76,
+          "max": 8300
+        },
+        "loss_tokens": {
+          "n": 15525,
+          "mean": 15.384669887278584,
+          "p50": 15.0,
+          "p90": 16.0,
+          "p99": 16.0,
+          "max": 16
+        }
+      },
+      "target_add_empty": {
+        "count": 83,
+        "n": 15525,
+        "rate": 0.00534621578099839
+      },
+      "target_drop_nonempty": {
+        "count": 0,
+        "n": 15525,
+        "rate": 0.0
+      },
+      "budget_binding": {
+        "count": 75,
+        "n": 15525,
+        "rate": 0.004830917874396135
+      }
+    },
+    "reselect|loose": {
+      "samples": 15903,
+      "lengths": {
+        "n_input_tokens": {
+          "n": 15903,
+          "mean": 3341.953530780356,
+          "p50": 3287.0,
+          "p90": 4386.0,
+          "p99": 5424.98,
+          "max": 8371
+        },
+        "n_target_tokens": {
+          "n": 15903,
+          "mean": 20.398289630887255,
+          "p50": 20.0,
+          "p90": 27.0,
+          "p99": 27.0,
+          "max": 27
+        },
+        "total_tokens": {
+          "n": 15903,
+          "mean": 3362.3518204112434,
+          "p50": 3308.0,
+          "p90": 4409.0,
+          "p99": 5448.98,
+          "max": 8390
+        },
+        "loss_tokens": {
+          "n": 15903,
+          "mean": 20.398289630887255,
+          "p50": 20.0,
+          "p90": 27.0,
+          "p99": 27.0,
+          "max": 27
+        }
+      },
+      "target_add_empty": {
+        "count": 40,
+        "n": 15903,
+        "rate": 0.0025152486952147394
+      },
+      "target_drop_nonempty": {
+        "count": 14197,
+        "n": 15903,
+        "rate": 0.8927246431490914
+      },
+      "budget_binding": {
+        "count": 0,
+        "n": 15903,
+        "rate": 0.0
+      }
+    },
+    "reselect|mid": {
+      "samples": 15179,
+      "lengths": {
+        "n_input_tokens": {
+          "n": 15179,
+          "mean": 3337.5975360695697,
+          "p50": 3282.0,
+          "p90": 4368.200000000001,
+          "p99": 5387.099999999997,
+          "max": 8243
+        },
+        "n_target_tokens": {
+          "n": 15179,
+          "mean": 20.42506093945583,
+          "p50": 20.0,
+          "p90": 27.0,
+          "p99": 27.0,
+          "max": 27
+        },
+        "total_tokens": {
+          "n": 15179,
+          "mean": 3358.0225970090255,
+          "p50": 3302.0,
+          "p90": 4391.200000000001,
+          "p99": 5412.319999999996,
+          "max": 8270
+        },
+        "loss_tokens": {
+          "n": 15179,
+          "mean": 20.42506093945583,
+          "p50": 20.0,
+          "p90": 27.0,
+          "p99": 27.0,
+          "max": 27
+        }
+      },
+      "target_add_empty": {
+        "count": 31,
+        "n": 15179,
+        "rate": 0.002042295276368667
+      },
+      "target_drop_nonempty": {
+        "count": 13547,
+        "n": 15179,
+        "rate": 0.8924830357731076
+      },
+      "budget_binding": {
+        "count": 3,
+        "n": 15179,
+        "rate": 0.00019764147835825812
+      }
+    },
+    "reselect|tight": {
+      "samples": 15525,
+      "lengths": {
+        "n_input_tokens": {
+          "n": 15525,
+          "mean": 3349.2248631239936,
+          "p50": 3303.0,
+          "p90": 4394.0,
+          "p99": 5358.0,
+          "max": 8329
+        },
+        "n_target_tokens": {
+          "n": 15525,
+          "mean": 20.433880837359098,
+          "p50": 20.0,
+          "p90": 27.0,
+          "p99": 27.0,
+          "max": 30
+        },
+        "total_tokens": {
+          "n": 15525,
+          "mean": 3369.6587439613527,
+          "p50": 3324.0,
+          "p90": 4417.0,
+          "p99": 5383.280000000001,
+          "max": 8349
+        },
+        "loss_tokens": {
+          "n": 15525,
+          "mean": 20.433880837359098,
+          "p50": 20.0,
+          "p90": 27.0,
+          "p99": 27.0,
+          "max": 30
+        }
+      },
+      "target_add_empty": {
+        "count": 46,
+        "n": 15525,
+        "rate": 0.002962962962962963
+      },
+      "target_drop_nonempty": {
+        "count": 13868,
+        "n": 15525,
+        "rate": 0.8932689210950081
+      },
+      "budget_binding": {
+        "count": 56,
+        "n": 15525,
+        "rate": 0.003607085346215781
+      }
+    }
+  },
+  "splits": {
+    "train": {
+      "tasks": 4735,
+      "samples": 88562,
+      "mode_tier": {
+        "append|loose": {
+          "samples": 14961,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 14961,
+              "mean": 3128.8175924069246,
+              "p50": 3062.0,
+              "p90": 4122.0,
+              "p99": 5137.999999999998,
+              "max": 8281
+            },
+            "n_target_tokens": {
+              "n": 14961,
+              "mean": 15.394425506316423,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            },
+            "total_tokens": {
+              "n": 14961,
+              "mean": 3144.212017913241,
+              "p50": 3077.0,
+              "p90": 4138.0,
+              "p99": 5153.999999999998,
+              "max": 8297
+            },
+            "loss_tokens": {
+              "n": 14961,
+              "mean": 15.394425506316423,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            }
+          },
+          "target_add_empty": {
+            "count": 13,
+            "n": 14961,
+            "rate": 0.0008689258739389078
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 14961,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 14961,
+            "rate": 0.0
+          }
+        },
+        "append|mid": {
+          "samples": 14470,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 14470,
+              "mean": 3125.161437456807,
+              "p50": 3060.0,
+              "p90": 4110.0,
+              "p99": 5112.239999999998,
+              "max": 7936
+            },
+            "n_target_tokens": {
+              "n": 14470,
+              "mean": 15.388251554941258,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            },
+            "total_tokens": {
+              "n": 14470,
+              "mean": 3140.5496890117483,
+              "p50": 3076.0,
+              "p90": 4126.0,
+              "p99": 5127.549999999997,
+              "max": 7952
+            },
+            "loss_tokens": {
+              "n": 14470,
+              "mean": 15.388251554941258,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            }
+          },
+          "target_add_empty": {
+            "count": 12,
+            "n": 14470,
+            "rate": 0.00082930200414651
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 14470,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 2,
+            "n": 14470,
+            "rate": 0.00013821700069108501
+          }
+        },
+        "append|tight": {
+          "samples": 14850,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 14850,
+              "mean": 3138.587744107744,
+              "p50": 3076.0,
+              "p90": 4146.0,
+              "p99": 5131.02,
+              "max": 8287
+            },
+            "n_target_tokens": {
+              "n": 14850,
+              "mean": 15.383771043771043,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            },
+            "total_tokens": {
+              "n": 14850,
+              "mean": 3153.971515151515,
+              "p50": 3092.0,
+              "p90": 4162.0,
+              "p99": 5146.530000000001,
+              "max": 8300
+            },
+            "loss_tokens": {
+              "n": 14850,
+              "mean": 15.383771043771043,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            }
+          },
+          "target_add_empty": {
+            "count": 79,
+            "n": 14850,
+            "rate": 0.00531986531986532
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 14850,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 71,
+            "n": 14850,
+            "rate": 0.004781144781144781
+          }
+        },
+        "reselect|loose": {
+          "samples": 14961,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 14961,
+              "mean": 3340.324176191431,
+              "p50": 3290.0,
+              "p90": 4384.0,
+              "p99": 5420.4,
+              "max": 8371
+            },
+            "n_target_tokens": {
+              "n": 14961,
+              "mean": 20.400641668337677,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            },
+            "total_tokens": {
+              "n": 14961,
+              "mean": 3360.724817859769,
+              "p50": 3310.0,
+              "p90": 4406.0,
+              "p99": 5445.0,
+              "max": 8390
+            },
+            "loss_tokens": {
+              "n": 14961,
+              "mean": 20.400641668337677,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            }
+          },
+          "target_add_empty": {
+            "count": 39,
+            "n": 14961,
+            "rate": 0.0026067776218167233
+          },
+          "target_drop_nonempty": {
+            "count": 13357,
+            "n": 14961,
+            "rate": 0.8927879152463071
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 14961,
+            "rate": 0.0
+          }
+        },
+        "reselect|mid": {
+          "samples": 14470,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 14470,
+              "mean": 3337.814236351071,
+              "p50": 3283.0,
+              "p90": 4365.1,
+              "p99": 5384.619999999999,
+              "max": 8243
+            },
+            "n_target_tokens": {
+              "n": 14470,
+              "mean": 20.417553559087768,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            },
+            "total_tokens": {
+              "n": 14470,
+              "mean": 3358.231789910159,
+              "p50": 3302.0,
+              "p90": 4388.1,
+              "p99": 5411.0,
+              "max": 8270
+            },
+            "loss_tokens": {
+              "n": 14470,
+              "mean": 20.417553559087768,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            }
+          },
+          "target_add_empty": {
+            "count": 28,
+            "n": 14470,
+            "rate": 0.0019350380096751902
+          },
+          "target_drop_nonempty": {
+            "count": 12915,
+            "n": 14470,
+            "rate": 0.8925362819626814
+          },
+          "budget_binding": {
+            "count": 2,
+            "n": 14470,
+            "rate": 0.00013821700069108501
+          }
+        },
+        "reselect|tight": {
+          "samples": 14850,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 14850,
+              "mean": 3349.511447811448,
+              "p50": 3304.5,
+              "p90": 4393.1,
+              "p99": 5371.040000000001,
+              "max": 8329
+            },
+            "n_target_tokens": {
+              "n": 14850,
+              "mean": 20.437643097643097,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 30
+            },
+            "total_tokens": {
+              "n": 14850,
+              "mean": 3369.949090909091,
+              "p50": 3325.0,
+              "p90": 4417.0,
+              "p99": 5391.02,
+              "max": 8349
+            },
+            "loss_tokens": {
+              "n": 14850,
+              "mean": 20.437643097643097,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 30
+            }
+          },
+          "target_add_empty": {
+            "count": 45,
+            "n": 14850,
+            "rate": 0.0030303030303030303
+          },
+          "target_drop_nonempty": {
+            "count": 13264,
+            "n": 14850,
+            "rate": 0.8931986531986532
+          },
+          "budget_binding": {
+            "count": 53,
+            "n": 14850,
+            "rate": 0.003569023569023569
+          }
+        }
+      }
+    },
+    "heldout": {
+      "tasks": 249,
+      "samples": 4652,
+      "mode_tier": {
+        "append|loose": {
+          "samples": 942,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 942,
+              "mean": 3155.2696390658175,
+              "p50": 3052.0,
+              "p90": 4157.799999999999,
+              "p99": 5292.190000000004,
+              "max": 7690
+            },
+            "n_target_tokens": {
+              "n": 942,
+              "mean": 15.387473460721868,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            },
+            "total_tokens": {
+              "n": 942,
+              "mean": 3170.657112526539,
+              "p50": 3067.5,
+              "p90": 4173.799999999999,
+              "p99": 5307.010000000005,
+              "max": 7706
+            },
+            "loss_tokens": {
+              "n": 942,
+              "mean": 15.387473460721868,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            }
+          },
+          "target_add_empty": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          }
+        },
+        "append|mid": {
+          "samples": 709,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 709,
+              "mean": 3117.385049365303,
+              "p50": 3045.0,
+              "p90": 4104.600000000001,
+              "p99": 5218.559999999999,
+              "max": 7509
+            },
+            "n_target_tokens": {
+              "n": 709,
+              "mean": 15.3836389280677,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            },
+            "total_tokens": {
+              "n": 709,
+              "mean": 3132.768688293371,
+              "p50": 3061.0,
+              "p90": 4120.600000000001,
+              "p99": 5234.559999999999,
+              "max": 7525
+            },
+            "loss_tokens": {
+              "n": 709,
+              "mean": 15.3836389280677,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            }
+          },
+          "target_add_empty": {
+            "count": 1,
+            "n": 709,
+            "rate": 0.0014104372355430183
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 709,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 1,
+            "n": 709,
+            "rate": 0.0014104372355430183
+          }
+        },
+        "append|tight": {
+          "samples": 675,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 675,
+              "mean": 3140.5614814814817,
+              "p50": 3044.0,
+              "p90": 4175.200000000001,
+              "p99": 4966.08,
+              "max": 5398
+            },
+            "n_target_tokens": {
+              "n": 675,
+              "mean": 15.404444444444444,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            },
+            "total_tokens": {
+              "n": 675,
+              "mean": 3155.965925925926,
+              "p50": 3059.0,
+              "p90": 4191.200000000001,
+              "p99": 4979.599999999999,
+              "max": 5414
+            },
+            "loss_tokens": {
+              "n": 675,
+              "mean": 15.404444444444444,
+              "p50": 15.0,
+              "p90": 16.0,
+              "p99": 16.0,
+              "max": 16
+            }
+          },
+          "target_add_empty": {
+            "count": 4,
+            "n": 675,
+            "rate": 0.005925925925925926
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 675,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 4,
+            "n": 675,
+            "rate": 0.005925925925925926
+          }
+        },
+        "reselect|loose": {
+          "samples": 942,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 942,
+              "mean": 3367.831210191083,
+              "p50": 3259.5,
+              "p90": 4454.0,
+              "p99": 5544.570000000001,
+              "max": 7834
+            },
+            "n_target_tokens": {
+              "n": 942,
+              "mean": 20.360934182590235,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            },
+            "total_tokens": {
+              "n": 942,
+              "mean": 3388.192144373673,
+              "p50": 3278.0,
+              "p90": 4473.8,
+              "p99": 5569.210000000001,
+              "max": 7857
+            },
+            "loss_tokens": {
+              "n": 942,
+              "mean": 20.360934182590235,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            }
+          },
+          "target_add_empty": {
+            "count": 1,
+            "n": 942,
+            "rate": 0.0010615711252653928
+          },
+          "target_drop_nonempty": {
+            "count": 840,
+            "n": 942,
+            "rate": 0.89171974522293
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          }
+        },
+        "reselect|mid": {
+          "samples": 709,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 709,
+              "mean": 3333.174894217207,
+              "p50": 3259.0,
+              "p90": 4417.2,
+              "p99": 5404.7199999999975,
+              "max": 7809
+            },
+            "n_target_tokens": {
+              "n": 709,
+              "mean": 20.578279266572636,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            },
+            "total_tokens": {
+              "n": 709,
+              "mean": 3353.75317348378,
+              "p50": 3276.0,
+              "p90": 4441.6,
+              "p99": 5429.399999999997,
+              "max": 7836
+            },
+            "loss_tokens": {
+              "n": 709,
+              "mean": 20.578279266572636,
+              "p50": 20.0,
+              "p90": 27.0,
+              "p99": 27.0,
+              "max": 27
+            }
+          },
+          "target_add_empty": {
+            "count": 3,
+            "n": 709,
+            "rate": 0.004231311706629055
+          },
+          "target_drop_nonempty": {
+            "count": 632,
+            "n": 709,
+            "rate": 0.8913963328631875
+          },
+          "budget_binding": {
+            "count": 1,
+            "n": 709,
+            "rate": 0.0014104372355430183
+          }
+        },
+        "reselect|tight": {
+          "samples": 675,
+          "lengths": {
+            "n_input_tokens": {
+              "n": 675,
+              "mean": 3342.92,
+              "p50": 3293.0,
+              "p90": 4400.6,
+              "p99": 5147.08,
+              "max": 5493
+            },
+            "n_target_tokens": {
+              "n": 675,
+              "mean": 20.351111111111113,
+              "p50": 20.0,
+              "p90": 26.0,
+              "p99": 27.0,
+              "max": 27
+            },
+            "total_tokens": {
+              "n": 675,
+              "mean": 3363.271111111111,
+              "p50": 3317.0,
+              "p90": 4425.8,
+              "p99": 5170.52,
+              "max": 5516
+            },
+            "loss_tokens": {
+              "n": 675,
+              "mean": 20.351111111111113,
+              "p50": 20.0,
+              "p90": 26.0,
+              "p99": 27.0,
+              "max": 27
+            }
+          },
+          "target_add_empty": {
+            "count": 1,
+            "n": 675,
+            "rate": 0.0014814814814814814
+          },
+          "target_drop_nonempty": {
+            "count": 604,
+            "n": 675,
+            "rate": 0.8948148148148148
+          },
+          "budget_binding": {
+            "count": 3,
+            "n": 675,
+            "rate": 0.0044444444444444444
+          }
+        }
+      }
+    }
+  },
+  "longest_sample": {
+    "task": 1054,
+    "step": 9,
+    "mode": "reselect",
+    "tier": "loose",
+    "split": "train",
+    "n_input_tokens": 8371,
+    "n_target_tokens": 19,
+    "total_tokens": 8390,
+    "loss_tokens": 19,
+    "target_add_empty": false,
+    "target_drop_nonempty": true,
+    "budget_binding": false,
+    "line_1based": 19686,
+    "path": "/root/userfolder/ctx-compressor/data/sft/train.jsonl"
+  },
+  "files": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/sft/train.jsonl",
+      "lines": 88562,
+      "bytes": 1169658306,
+      "sha256": "34c2179e3b9d42d67ae8e129dc72f414712e92fb13411dd9652936db42837004"
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/sft/heldout.jsonl",
+      "lines": 4652,
+      "bytes": 61561401,
+      "sha256": "7cb660ddb328f932cca4932613caf620cbbd113f67bd29be5d11eea784e20613"
+    }
+  },
+  "trajectory_inputs": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/train_tasks.jsonl",
+      "lines": 4735,
+      "bytes": 1184195307,
+      "sha256": "ae96199b83b264bd926312e1e91e3b2af753b20117a6cb88161c8f3b23033e56"
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+      "lines": 249,
+      "bytes": 62323855,
+      "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+    }
+  },
+  "validation": {
+    "expected_samples": 93214,
+    "actual_samples": 93214,
+    "truncated_samples": 0,
+    "dropped_samples": 0,
+    "all_targets_legal_pure_oracle": true,
+    "all_labels_assistant_only": true,
+    "prompt_fields_whitelisted": true,
+    "template_prefix_checks": 12,
+    "template_prefix_checks_passed": true,
+    "model_weights_loaded": false,
+    "cuda_visible_devices": "",
+    "workers": 4,
+    "in_flight_tasks_limit": 8,
+    "ordered_streaming_output": true
+  },
+  "code_sha256": {
+    "src/sft_protocol.py": "5b7d73cc0ecc368fb2730eb1435c73bede6bc97639ccc7abd4f2921e94158574",
+    "scripts/make_sft_data.py": "08072d7eb405cea44980139881ee8b17fbfbb4c03a52b495ff8f47ad2cb1c13a"
+  },
+  "template_check_sha256": "ee373c2f2cf467409bab01aeef7a883e2c0727f78fa9ba064a9bc04c5927da77"
+}

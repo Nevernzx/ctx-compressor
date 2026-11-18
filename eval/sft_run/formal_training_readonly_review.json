@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-17T15:35:37.174484+00:00",
+  "reviewer": "task05_inference independent read-only review",
+  "status": "pass_with_notes",
+  "blocking_findings": [],
+  "scope": "Formal worker and installed library semantics; no running source/environment changes, GPU use, model loading, network requests or full test suite.",
+  "worker_pid": 724147,
+  "source_matches_running_archive_and_config": true,
+  "minimal_cpu_checks": {
+    "cuda_initialized": false,
+    "inputs": {
+      "train_input": {
+        "samples": 20000,
+        "unique_sample_ids": 20000,
+        "split_mode_counts": {
+          "train|reselect": 10000,
+          "train|append": 10000
+        },
+        "total_tokens": 64867108,
+        "max_sequence_tokens": 8121,
+        "sha256_verified": true
+      },
+      "eval_input": {
+        "samples": 1000,
+        "unique_sample_ids": 1000,
+        "split_mode_counts": {
+          "heldout|reselect": 500,
+          "heldout|append": 500
+        },
+        "total_tokens": 3214183,
+        "max_sequence_tokens": 6989,
+        "sha256_verified": true
+      }
+    },
+    "sampler": {
+      "implementation": "Installed BatchSamplerShard class executed unchanged in isolation on CPU",
+      "world_size": 1,
+      "batch_size": 1,
+      "gradient_accumulation": 16,
+      "data_seed": 20261118,
+      "shuffle": true,
+      "group_by_length": false,
+      "epochs_checked": 2,
+      "per_epoch_unique_samples": 20000,
+      "each_sample_seen_exactly": 2,
+      "total_exposures": 40000,
+      "epoch_orders_differ": true
+    },
+    "trainer_count_calculation": {
+      "implementation": "Installed Trainer.set_initial_training_values method executed unchanged in isolation",
+      "epochs": 2,
+      "steps_per_epoch": 1250,
+      "unique_examples": 20000,
+      "total_exposures": 40000,
+      "optimizer_steps": 2500,
+      "expected_full_sequence_tokens": 129734216
+    },
+    "actual_TrainArguments_constant_keywords": {
+      "model_type": "qwen3",
+      "template": "qwen3",
+      "train_type": "lora",
+      "lora_rank": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "torch_dtype": "bfloat16",
+      "bf16": true,
+      "fp16": false,
+      "attn_impl": "sdpa",
+      "gradient_checkpointing": true,
+      "prediction_loss_only": true,
+      "learning_rate": 0.0001,
+      "lr_scheduler_type": "cosine",
+      "warmup_ratio": 0.03,
+      "packing": false,
+      "padding_free": false,
+      "truncation_strategy": "raise",
+      "strict": true,
+      "enable_thinking": false,
+      "add_non_thinking_prefix": true,
+      "loss_scale": "last_round",
+      "split_dataset_ratio": 0.0,
+      "dataset_shuffle": false,
+      "dataset_num_proc": 1,
+      "dataloader_num_workers": 0,
+      "add_version": false,
+      "save_steps": 500,
+      "save_total_limit": 5,
+      "save_only_model": false,
+      "eval_steps": 500,
+      "logging_steps": 1,
+      "logging_first_step": true,
+      "logging_nan_inf_filter": false,
+      "disable_tqdm": true,
+      "use_hf": false,
+      "check_model": false,
+      "optim": "adamw_torch",
+      "weight_decay": 0.0,
+      "max_grad_norm": 1.0,
+      "load_from_cache_file": false,
+      "load_best_model_at_end": false
+    }
+  },
+  "findings": {
+    "assistant_only_and_template": "Every train/eval row passes encode_sft_record: masked user prefix followed by the exact assistant suffix, empty think and im_end. The first row of each split also compares all input_ids and labels with make_sft_template. max_length=8392 and truncation_strategy=raise prevent truncation.",
+    "two_epoch_coverage": "The installed sampler produced all 20,000 indices once in each of two epochs. Batch 1 with accumulation 16 gives 1,250 updates per epoch and 2,500 total. Worker success additionally requires 40,000 consumed samples, epoch 2.0 and twice the sum of full sequence tokens.",
+    "checkpoints_and_eval": "DefaultFlowCallback schedules save and eval at 500, 1000, 1500, 2000 and 2500; Trainer runs _maybe_log_save_evaluate before honoring the stop flag. Save limit is five. The worker validates the exact five checkpoint steps and five eval-curve steps.",
+    "heldout_loss_only": "The verified 1,000-row heldout file is the sole eval_dataset. prediction_loss_only=True uses the non-generation prediction_step path. load_best_model_at_end=False; eval loss does not select the checkpoint.",
+    "nan_and_oom": "Every microbatch loss is checked; gradients are checked after clipping and before optimizer.step; logged train/eval losses are checked with logging_nan_inf_filter=False. Caught failures write training_stop.json and failed worker_result.json. No automatic retry or resume.",
+    "gpu_and_root": "GPU 1 UUID, initial memory below 2,048 MiB and one visible GPU are checked. Data, checkpoints and caches are external. The 30-second monitor records resource values but does not automatically abort on root or VRAM thresholds. Coordinator monitoring and final root-growth validation remain necessary.",
+    "no_api": "Formal check_model=False bypasses the installed ModelScope metadata version-request branch. Active process has all three HF offline flags and no proxies. The reviewed worker contains no remote inference API client. Earlier A1 metadata-request uncertainty is separately preserved in network_guard_audit.json.",
+    "continuation": "The detached watcher waits for PID 724147 and requires status=ok, 2,500 steps, 40,000 samples and no stop marker before launching heldout evaluation. The inference runner requires five checkpoints with rank 16/alpha 32, safetensors and matching trainer_state.global_step. Both use the same checkpoint directory.",
+    "inference_compatibility": "Saved template token proof and native context preflight are compatible: 34,489 + 256 < 40,960. Base plus five native LoRA strategies use 249 heldout tasks across six cells, greedy generation and 256 output tokens. No dev, F1 or remote API path."
+  },
+  "notes": [
+    {
+      "severity": "informational",
+      "code": "monitor_records_without_auto_abort",
+      "detail": "Parent confirmed continuous coordinator monitoring and final root growth <=300 MB. No change requested to running code."
+    },
+    {
+      "severity": "metadata_correction",
+      "code": "sampler_shuffle_wording",
+      "detail": "dataset_shuffle=False does not disable Swift train_dataloader_shuffle=True. A1/A4 use seeded shuffling without length grouping; A8 additionally groups lengths. Parent will correct the original sample order wording without altering measured values or archived source."
+    },
+    {
+      "severity": "pending_runtime",
+      "code": "review_is_not_completion_certification",
+      "detail": "The run was encoding at review start. Actual completion, five checkpoint files and five finite eval-loss observations still require final artifact verification."
+    }
+  ],
+  "runtime_environment_subset": {
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "TMPDIR": "/root/userfolder/ctx-compressor/cache/tmp",
+    "CUDA_VISIBLE_DEVICES": "1",
+    "PYTHONPYCACHEPREFIX": "/root/userfolder/ctx-compressor/cache/pycache",
+    "HF_HUB_OFFLINE": "1"
+  },
+  "resource_snapshot": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 7713,
+    "utilization_percent": 100,
+    "root_used_bytes": 931484442624,
+    "utc": "2026-11-17T15:35:18.656348+00:00",
+    "pid": 724147,
+    "alive": true,
+    "optimizer_step": 26,
+    "nonfinite": false,
+    "root_delta_bytes": 43991040
+  },
+  "continuation_snapshot": {
+    "status": "waiting_training_exit",
+    "training_pid": 724147,
+    "watcher_pid": 724148,
+    "utc": "2026-11-17T15:35:18.313105+00:00"
+  },
+  "source_files": [
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/train_sft_worker.py",
+      "sha256": "0be97ace75037842ea77e0171c34675ccbaaae08de980711df5126d28ea64ac1"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/worker_source.py",
+      "sha256": "0be97ace75037842ea77e0171c34675ccbaaae08de980711df5126d28ea64ac1"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/src/training_control.py",
+      "sha256": "45c083025d5c272e2ca51930fe0bf35c038d2006519bb41355bf078744a5de60"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/src/sft_protocol.py",
+      "sha256": "5b7d73cc0ecc368fb2730eb1435c73bede6bc97639ccc7abd4f2921e94158574"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/train_sft.sh",
+      "sha256": "8a96a87a143e67e8b9d4744d0a2c3f5376de3872c42056d092f4a4d5a76004bc"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/train_environment.sh",
+      "sha256": "69144940856583a4fe7aff447c60ec0ee91255f9d28f1719a114872268ec2b89"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/wait_train_then_eval.py",
+      "sha256": "2cbfa79162d85e9cae728d215d526c13a63894799a9f6f905c1f645ccd58d856"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/run_heldout_model.sh",
+      "sha256": "1d7d558696b720db0593090ff489a522cba336c320898a09324266375206934d"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/rollout_model.py",
+      "sha256": "3e9501326c3271764ab84605f11c9cf04c5f0a82f5af6cc97d8b590297a96f57"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/llm/data_loader.py",
+      "sha256": "81befe805e85b7e3180b44f21b579f70227f3e6e59bfd729e21b6e3a03bbb528"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/transformers/trainer.py",
+      "sha256": "c3eac8fa28bda6330fd4dee131e7fe7d9bdc0fa35d9de944fce52cb97b379bab"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/transformers/trainer_callback.py",
+      "sha256": "6247d4e6afb62bb1b645c99d6832e76a364e7525e268234a4ac989028b7c84df"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/llm/train/sft.py",
+      "sha256": "cb760edc370ec967e62adb2e02ba9c62cfb1296f29b081b71e785a92be908e50"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/trainers/mixin.py",
+      "sha256": "7dd3e9fc6a2feb191775181a0cae19c5f56e7cff54591b6ff9d522e44e4beb5d"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/trainers/trainers.py",
+      "sha256": "55cfe24eebb6728aafd186cb8c23d91162bfbc2a647dbe18af1d9e13a5b4403e"
+    }
+  ],
+  "saved_training_args_check": {
+    "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/args.json",
+    "sha256": "80a144dafa9e9a35656e4ee3db9bc3ba604b6a7c22c6fbfd14299fa24055b98e",
+    "checked_fields": {
+      "per_device_train_batch_size": 1,
+      "gradient_accumulation_steps": 16,
+      "max_steps": 2500,
+      "num_train_epochs": 2,
+      "max_length": 8392,
+      "truncation_strategy": "raise",
+      "loss_scale": "last_round",
+      "enable_thinking": false,
+      "add_non_thinking_prefix": true,
+      "save_steps": 500,
+      "save_total_limit": 5,
+      "save_only_model": false,
+      "save_safetensors": true,
+      "eval_steps": 500,
+      "eval_strategy": "steps",
+      "prediction_loss_only": true,
+      "predict_with_generate": false,
+      "load_best_model_at_end": false,
+      "check_model": false,
+      "train_dataloader_shuffle": true,
+      "dataset_shuffle": false,
+      "group_by_length": false,
+      "dataloader_drop_last": false,
+      "seed": 20261118,
+      "data_seed": 20261118
+    },
+    "all_match": true,
+    "encoding_completed_before_args_saved": true,
+    "explanation": "Installed SwiftSft.run saves args only after _prepare_dataset returns; the running worker therefore completed all 20,000 train and 1,000 heldout row template/length validations before this artifact appeared."
+  }
+}

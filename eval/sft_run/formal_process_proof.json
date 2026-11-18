@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-17T15:29:27.596438+00:00",
+  "pid": 724147,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "1",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "WANDB_MODE": null,
+    "TMPDIR": "/root/userfolder/ctx-compressor/cache/tmp",
+    "HF_HOME": "/root/userfolder/ctx-compressor/cache/huggingface",
+    "MODELSCOPE_CACHE": "/root/userfolder/ctx-compressor/cache/modelscope"
+  },
+  "proxy_variables_present": [],
+  "process": "    PID    PPID     SID     ELAPSED STAT COMMAND\n 724147       1  724147       11:09 Rsl  /root/userfolder/ctx-compressor/envs/train/bin/python -u -B scripts/train_sft_worker.py train\n",
+  "gpu_processes": "724147, GPU-4318dc90-4126-038a-9402-1323533db94f, 4214 MiB\n"
+}

@@ -1,0 +1,77 @@
+{
+  "started_at_utc": "2026-11-17T06:19:11.309064+00:00",
+  "finished_at_utc": "2026-11-17T06:25:34.857687+00:00",
+  "elapsed_seconds": 383.54862567503005,
+  "timings_seconds": {
+    "dev_corpus_and_filter_seconds": 7.430762059986591,
+    "one_time_dev_retrieval_seconds": 1.118157914141193,
+    "dev_statistics_seconds": 1.8835783200338483,
+    "train_reference_seconds": 2.3442048518918455,
+    "all_closed_loop_configurations_seconds": 369.97132883011363,
+    "input_hashes_seconds": 0.24404932418838143
+  },
+  "command": "bash scripts/run_python.sh scripts/feasibility.py --seed 20261117 --n-tasks 150",
+  "seed": 20261117,
+  "n_tasks": 150,
+  "top_n": 20,
+  "questions_per_task": 4,
+  "retrieval_seed": "zero-based task_index",
+  "dataset_sha256": {
+    "data/raw/musique/musique_ans_v1.0_train.jsonl": "83a75b1e11e4e9bb8f8308e72ac40ca617ae4431b3a0d955b61cab259248490a",
+    "data/raw/musique/musique_ans_v1.0_dev.jsonl": "15fa63794d18a94ce12411aca6e2327e65b6e83b0b1490efab3f1962e48abf3b"
+  },
+  "tokenizer_sha256": {
+    "data/raw/qwen3_tokenizer/LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "data/raw/qwen3_tokenizer/config.json": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
+    "data/raw/qwen3_tokenizer/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "data/raw/qwen3_tokenizer/tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "data/raw/qwen3_tokenizer/tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "data/raw/qwen3_tokenizer/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "python_version": "3.11.18 (main, Oct 26 2026, 18:19:35) [GCC 14.3.0]",
+  "package_versions": {
+    "bm25s": "0.3.16",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pytest": "9.2.0"
+  },
+  "cpu": {
+    "processes": 1,
+    "threads_observed": 5,
+    "maximum_allowed_threads": 16,
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4",
+      "TOKENIZERS_PARALLELISM": "false",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1"
+    }
+  },
+  "maximum_rss_bytes": 627765248,
+  "data_bytes": 45912232,
+  "no_downloads_or_installs_or_api": true,
+  "output_directory": "/root/workplace/ctx-compressor/eval/feasibility",
+  "data_directory": "/root/workplace/ctx-compressor/data/feasibility"
+}

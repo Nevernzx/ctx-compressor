@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-17T14:49:56.831734+00:00",
+  "root_df_used_bytes": 931440451584,
+  "root_final_growth_limit_bytes": 300000000,
+  "gpu": {
+    "physical_index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "name": "NVIDIA RTX 5880 Ada Generation",
+    "memory_total_mib": 49140,
+    "memory_used_mib": 375,
+    "driver_version": "580.95.05"
+  },
+  "prior_files_verified": 187,
+  "new_old_file_changes_authorized": [],
+  "training_root": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117"
+}

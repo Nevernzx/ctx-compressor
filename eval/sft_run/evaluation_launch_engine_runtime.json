@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-17T22:56:32.596023+00:00",
+  "pid": 898553,
+  "engine_pid": 898637,
+  "watcher_pid": 898552,
+  "engine_pid_source": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_model_eval.log",
+  "engine_cmdline": "VLLM::EngineCore                                                                                                                                                               ",
+  "selected_launcher_environment": {
+    "CUDA_VISIBLE_DEVICES": "1",
+    "CC": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+    "CXX": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-g++",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "TRITON_CACHE_DIR": "/root/userfolder/ctx-compressor/cache/triton",
+    "TMPDIR": "/root/userfolder/ctx-compressor/cache/tmp",
+    "CUDA_CACHE_PATH": "/root/userfolder/ctx-compressor/cache/cuda",
+    "VLLM_NO_USAGE_STATS": "1"
+  },
+  "launcher_proxy_variables": {},
+  "engine_proc_selected_env_keys_observable": [],
+  "environment_evidence_scope": "Environment values were read from the runner/launcher. The titled VLLM::EngineCore proc environ does not expose these selected keys, so no worker-environ-value claim is made; its physical GPU identity is independently measured by NVML.",
+  "engine_gpu_process": "898637, GPU-4318dc90-4126-038a-9402-1323533db94f, 34694",
+  "engine_tokenizer_exact_match": true,
+  "engine_initialization_seconds": 22.989038297208026,
+  "wrapper_sha256": "4020ac2387b865381458c02fa7b9af0c68b605d2f7853e5f0670ec30da017ab6",
+  "runner_sha256": "649ecd4685a484d976a0f0015b7eb0780989f05809c157757176643097c7d7d5"
+}

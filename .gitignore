@@ -1,0 +1,10 @@
+data/raw/
+data/traj/
+.venv/
+.conda/
+.cache/
+.tmp/
+__pycache__/
+.pytest_cache/
+*.pyc
+logs/

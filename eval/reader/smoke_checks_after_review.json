@@ -1,0 +1,9 @@
+{
+  "n": 40,
+  "length_finished": 1,
+  "empty_predictions": 0,
+  "long_answers_over_20_words": 1,
+  "unclosed_think": 0,
+  "max_no_compress_prompt_tokens": 32382,
+  "automatic_pass": true
+}

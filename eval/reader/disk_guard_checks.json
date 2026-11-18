@@ -1,0 +1,10 @@
+{
+  "scope": "synthetic control-flow checks; no inference and no filesystem growth induced",
+  "passed": 4,
+  "cases": [
+    "transient alert pauses and needs two below-limit rechecks before continuing",
+    "persistent over-limit disk usage is rejected",
+    "large writable root file belonging to this task is rejected",
+    "GPU isolation failures remain fatal"
+  ]
+}

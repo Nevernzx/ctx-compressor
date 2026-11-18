@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "reviewed_at_utc": "2026-11-17T07:46:54.389473+00:00",
+  "reviewers": [
+    "primary agent: all 40 raw/parsed outputs inspected",
+    "independent data agent: all 40 reparsed and GPU UUID checked"
+  ],
+  "smoke_predictions_sha256": "5913d50b781b93410ff48b01dc27724b66d4699f78e7dd509e0027064823bf8e",
+  "initial_runner_sha256": "dbbfb326b0db40676fb9f3ce02fd0c78878ba2116432cfb2d0010da74091a141",
+  "n": 40,
+  "parse_mismatches": 0,
+  "empty_predictions": 0,
+  "input_truncations": 0,
+  "long_answers_over_20_words": 1,
+  "output_limit_hits": 1,
+  "output_limit_rate": 0.025,
+  "max_prompt_tokens": 32382,
+  "observations": [
+    "no_compress/task4/question1 is a 35-word explanation using all 48 output tokens; unchanged parsing and EM/F1=0 are correct.",
+    "The other 39 outputs finish with stop and contain at most 20 parsed words. no_compress/task4/question3 is still a 16-word explanatory sentence, scored unchanged.",
+    "All 40 input token sequences were verified unchanged by the runner. Recorded GPU process UUID equals physical GPU 1.",
+    "Task03 specifies max_tokens=48 and prohibits input-context truncation. Initial code incorrectly made an output-limit hit an extra completion failure.",
+    "Correct only that guard; keep templates, model, context, decoding settings and answer parsing unchanged. Keep and reuse these exact 40 smoke outputs; generate each of the 12000 full predictions once."
+  ]
+}

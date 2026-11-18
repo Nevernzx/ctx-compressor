@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="13" skipped="0" tests="26" time="0.862" timestamp="2026-11-18T04:49:22.729707+08:00" hostname="3bdbc4338107"><testcase classname="tests.test_export_sft_resource_failure" name="test_excess_root_never_masks_another_failed_gate[active_pid]" time="0.010" /><testcase classname="tests.test_export_sft_resource_failure" name="test_excess_root_never_masks_another_failed_gate[history_failed]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_excess_root_never_masks_another_failed_gate[wrong_uuid]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_excess_root_never_masks_another_failed_gate[wrong_index]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_excess_root_never_masks_another_failed_gate[gpu_busy]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_excess_root_never_masks_another_failed_gate[remaining_gpu_pid]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_excess_root_never_masks_another_failed_gate[changed_limit]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_root_within_original_limit_refuses_failure_export_before_inventory[299999999]" time="0.010"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_root_within_original_limi0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3ebaf7e90&gt;
+delta = 299999999
+
+    @pytest.mark.parametrize("delta", [299999999, 300000000])
+    def test_root_within_original_limit_refuses_failure_export_before_inventory(tmp_path, monkeypatch, delta):
+        project, external, baseline, snapshot = prepare(tmp_path, monkeypatch)
+        snapshot["root_used_bytes"] = baseline["root_df_used_bytes"] + delta
+        def forbidden(*args):
+            raise AssertionError("Inventory must not start when root gate passes")
+        monkeypatch.setattr(final, "freeze_inventory", forbidden)
+        with pytest.raises(ValueError, match="use scripts/finalize_sft_artifacts.py"):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebd4df60&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_root_within_original_limit_refuses_failure_export_before_inventory[300000000]" time="0.010"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_root_within_original_limi1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3eba67710&gt;
+delta = 300000000
+
+    @pytest.mark.parametrize("delta", [299999999, 300000000])
+    def test_root_within_original_limit_refuses_failure_export_before_inventory(tmp_path, monkeypatch, delta):
+        project, external, baseline, snapshot = prepare(tmp_path, monkeypatch)
+        snapshot["root_used_bytes"] = baseline["root_df_used_bytes"] + delta
+        def forbidden(*args):
+            raise AssertionError("Inventory must not start when root gate passes")
+        monkeypatch.setattr(final, "freeze_inventory", forbidden)
+        with pytest.raises(ValueError, match="use scripts/finalize_sft_artifacts.py"):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebb22650&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_failed_export_preserves_raw_values_and_passes_inventory_integrity" time="0.009"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_failed_export_preserves_r0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3ebb44850&gt;
+
+    def test_failed_export_preserves_raw_values_and_passes_inventory_integrity(tmp_path, monkeypatch):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+&gt;       first = export.export_failed_acceptance(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_export_sft_resource_failure.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3eba6f3d0&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[root_recovers]" time="0.009"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3ebb50f10&gt;
+mutation = 'root_recovers'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebafb640&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[gpu_busy]" time="0.020"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3eba50d10&gt;
+mutation = 'gpu_busy'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebb209a0&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[wrong_uuid]" time="0.010"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3eba49b50&gt;
+mutation = 'wrong_uuid'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebd4e980&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[remaining_gpu_pid]" time="0.010"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3eba027d0&gt;
+mutation = 'remaining_gpu_pid'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db48f8d5360&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[pid_active]" time="0.010"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a4')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3eba89dd0&gt;
+mutation = 'pid_active'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebb21cc0&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[watcher_changes]" time="0.009"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a5')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3ebb2b6d0&gt;
+mutation = 'watcher_changes'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebd4faf0&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[history_changes]" time="0.009"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a6')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db48f901050&gt;
+mutation = 'history_changes'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3eba4d2a0&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_all_gates_are_rechecked_after_inventory_before_any_publication[pid_sources_change]" time="0.009"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_all_gates_are_rechecked_a7')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3ebbe7710&gt;
+mutation = 'pid_sources_change'
+
+    @pytest.mark.parametrize("mutation", ["root_recovers", "gpu_busy", "wrong_uuid", "remaining_gpu_pid",
+                                          "pid_active", "watcher_changes", "history_changes", "pid_sources_change"])
+    def test_all_gates_are_rechecked_after_inventory_before_any_publication(tmp_path, monkeypatch, mutation):
+        project, external, _, snapshot = prepare(tmp_path, monkeypatch)
+        real_inventory = final.freeze_inventory
+        def change_after_hashing(root):
+            inventory = real_inventory(root)
+            if mutation == "root_recovers":
+                snapshot["root_used_bytes"] = 1300000000
+            elif mutation == "gpu_busy":
+                snapshot["gpu1"]["memory_used_mib"] = 2048
+            elif mutation == "wrong_uuid":
+                snapshot["gpu1"]["uuid"] = "GPU-other"
+            elif mutation == "remaining_gpu_pid":
+                snapshot["compute_processes"] = [{"pid": 200}]
+            elif mutation == "pid_active":
+                monkeypatch.setattr(final, "process_snapshot", lambda pid: {
+                    "pid": pid, "exists": True, "state": "S", "start_unix": 0,
+                    "cmdline": ["python", "train_sft_worker.py"]})
+            elif mutation == "watcher_changes":
+                save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+            elif mutation == "history_changes":
+                path = external / "eval_rollouts/model_resources.jsonl"
+                value = final.load(path)
+                value["new_metadata"] = "late modification"
+                save(path, value)  # Valid GPU index still cannot hide changed history.
+            else:
+                save(external / "runs/sft_20k_20261117/evaluation_launch_late.json", {"pid": 333})
+            return inventory
+        monkeypatch.setattr(final, "freeze_inventory", change_after_hashing)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebd4d930&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_incomplete_work_and_gpu_history_block_before_inventory[incomplete_train]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_incomplete_work_and_gpu_history_block_before_inventory[incomplete_model]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_incomplete_work_and_gpu_history_block_before_inventory[watcher_running]" time="0.009" /><testcase classname="tests.test_export_sft_resource_failure" name="test_incomplete_work_and_gpu_history_block_before_inventory[wrong_history]" time="0.012"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_incomplete_work_and_gpu_h3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3eba2ac50&gt;
+mutation = 'wrong_history'
+
+    @pytest.mark.parametrize("mutation", ["incomplete_train", "incomplete_model", "watcher_running", "wrong_history"])
+    def test_incomplete_work_and_gpu_history_block_before_inventory(tmp_path, monkeypatch, mutation):
+        project, external, _, _ = prepare(tmp_path, monkeypatch)
+        if mutation == "incomplete_train":
+            path = external / "runs/sft_20k_20261117/worker_result.json"
+            value = final.load(path); value["status"] = "running"; save(path, value)
+        elif mutation == "incomplete_model":
+            path = project / "eval/sft_run/model_rollout_run.json"
+            value = final.load(path); value["status"] = "running"; save(path, value)
+        elif mutation == "watcher_running":
+            save(external / "runs/sft_20k_20261117/continuation_status.json", {"status": "evaluating", "exit_code": 0})
+        else:
+            path = external / "runs/batch_bench_20261117/initialization_attempts/batch_8_missing_length/resources.jsonl"
+            value = final.load(path); value["uuid"] = "GPU-other"; save(path, value)
+        def forbidden(*args):
+            raise AssertionError("Inventory must not start for another failed gate")
+        monkeypatch.setattr(final, "freeze_inventory", forbidden)
+        with pytest.raises(ValueError):
+&gt;           export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:145: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebb20ee0&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_proven_unrelated_reused_pid_remains_excluded" time="0.011" /><testcase classname="tests.test_export_sft_resource_failure" name="test_report_keeps_checkpoint_selection_when_resource_export_is_failed" time="0.011"><failure message="TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given">tmp_path = PosixPath('/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118/test_report_keeps_checkpoint_s0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7db3ebaf6810&gt;
+
+    def test_report_keeps_checkpoint_selection_when_resource_export_is_failed(tmp_path, monkeypatch):
+        project, external, _, _ = prepare(tmp_path, monkeypatch)
+&gt;       export.export_failed_acceptance(project, external)
+
+tests/test_export_sft_resource_failure.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/export_sft_resource_failure.py:67: in export_failed_acceptance
+    processes = final.verify_processes(project, external)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/finalize_sft_artifacts.py:226: in verify_processes
+    checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = &lt;list_iterator object at 0x7db3ebb0e950&gt;
+
+&gt;   checks = [classify_process(identities[pid], process_snapshot(pid, proc_root)) for pid in sorted(identities)]
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: forbid_real_machine_queries.&lt;locals&gt;.&lt;lambda&gt;() takes 1 positional argument but 2 were given
+
+scripts/finalize_sft_artifacts.py:226: TypeError</failure></testcase><testcase classname="tests.test_export_sft_resource_failure" name="test_cli_always_returns_one_and_distinguishes_export_completion[True]" time="0.001" /><testcase classname="tests.test_export_sft_resource_failure" name="test_cli_always_returns_one_and_distinguishes_export_completion[False]" time="0.001" /></testsuite></testsuites>

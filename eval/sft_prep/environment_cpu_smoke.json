@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-11-17T12:25:51.990242+00:00",
+  "device": "cpu",
+  "cuda_visible_devices": "",
+  "cuda_initialized": false,
+  "imports": [
+    "swift.llm.get_model_tokenizer",
+    "swift.llm.get_template",
+    "swift.trainers.Seq2SeqTrainer",
+    "transformers.Qwen3ForCausalLM",
+    "peft",
+    "trl",
+    "accelerate"
+  ],
+  "synthetic_cpu_check": {
+    "description": "one forward/backward on a randomly initialized one-layer tiny Qwen3; no pretrained weights or optimizer step",
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "gradient_checkpointing": true,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": "all-linear",
+    "loss_finite": true,
+    "trainable_parameters": 16384
+  },
+  "status": "passed"
+}

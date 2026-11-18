@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-17T12:55:06.737680+00:00",
+  "root_final_used_bytes": 931340771328,
+  "root_baseline_used_bytes": 931307966464,
+  "root_delta_bytes": 32804864,
+  "root_limit_bytes": 300000000,
+  "root_limit_passed": true,
+  "gpu1_after": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_percent": 0
+  },
+  "task04_gpu_processes_remaining": [],
+  "benchmark_pid_alive": false,
+  "gpu_released": true,
+  "only_gpu1": true,
+  "gpu_identity_evidence": "gpu_process_check.json",
+  "benchmark_pid": 660606,
+  "benchmark_optimizer_steps": 100,
+  "longest_probe_extra_optimizer_steps": 0
+}

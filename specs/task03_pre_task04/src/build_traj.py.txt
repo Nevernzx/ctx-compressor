@@ -1,0 +1,278 @@
+"""MuSiQue corpus construction, seeded retrieval and closed-loop trajectories.
+
+Public functions from PLAN v2 §5 retain their positional signatures.  No model
+weights or online services are required: ``ntok`` is supplied by the caller.
+"""
+
+import json
+import random
+import re
+
+import bm25s
+
+
+def render_paragraph(title, paragraph_text):
+    """The exact selectable fragment: title, one newline, then original body."""
+    return f"{title}\n{paragraph_text}"
+
+
+def build_corpus(examples, ntok):
+    """Deduplicate one split by (title, original body) and build its BM25 index."""
+    key2pid, corpus = {}, []
+    for ex in examples:
+        for p in ex["paragraphs"]:
+            key = (p["title"], p["paragraph_text"])
+            if key not in key2pid:
+                text = render_paragraph(*key)
+                count = ntok(text)
+                if type(count) is not int or count < 0:
+                    raise ValueError("ntok must return a nonnegative Python int")
+                key2pid[key] = len(corpus)
+                corpus.append({"title": p["title"], "text": text,
+                               "paragraph_text": p["paragraph_text"],
+                               "ntok": count})
+    if not corpus:
+        raise ValueError("cannot index an empty corpus")
+    index = bm25s.BM25()
+    index.index(bm25s.tokenize([c["text"] for c in corpus], show_progress=False),
+                show_progress=False)
+    return corpus, index, key2pid
+
+
+def hop_queries(ex, key2pid):
+    """Return (resolved query, supporting pid) for each hop.
+
+    ``#k`` refers to the k-th previous hop's answer (one based), not the hop's
+    dataset ``id``. ``entity >> relation`` is retained as ordinary query text.
+    Missing evidence or unresolved/forward references reject the whole example;
+    callers that skip such examples must record the rejection reason/count.
+    """
+    by_idx = {p["idx"]: p for p in ex["paragraphs"]}
+    answers, out = [], []
+    for hop in ex["question_decomposition"]:
+        if not isinstance(hop.get("question"), str):
+            raise ValueError("missing_or_invalid_hop_question")
+
+        def fill(match):
+            k = int(match.group(1))
+            if not 1 <= k <= len(answers):
+                raise ValueError(f"unresolved_reference:{match.group(0)}")
+            return answers[k - 1]
+
+        q = re.sub(r"#(\d+)", fill, hop["question"])
+        if re.search(r"#\d", q):
+            raise ValueError("unresolved_reference_in_resolved_query")
+        answer = hop.get("answer")
+        if not isinstance(answer, str):
+            raise ValueError("missing_or_invalid_hop_answer")
+        idx = hop.get("paragraph_support_idx")
+        if type(idx) is not int or idx not in by_idx:
+            raise ValueError("missing_or_invalid_paragraph_support_idx")
+        g = by_idx[idx]
+        key = (g["title"], g["paragraph_text"])
+        if key not in key2pid:
+            raise ValueError("support_paragraph_not_in_corpus")
+        answers.append(answer)
+        out.append((q, key2pid[key]))
+    if not out:
+        raise ValueError("empty_question_decomposition")
+    return out
+
+
+def sample_tasks(examples, n_tasks, seed, questions_per_task=4):
+    """Seeded sampling without replacement across tasks, preserving draw order."""
+    if type(n_tasks) is not int or n_tasks < 0:
+        raise ValueError("n_tasks must be a nonnegative integer")
+    if type(questions_per_task) is not int or questions_per_task <= 0:
+        raise ValueError("questions_per_task must be a positive integer")
+    examples = list(examples)
+    ids = [ex.get("id", i) for i, ex in enumerate(examples)]
+    if len(set(ids)) != len(ids):
+        raise ValueError("duplicate example ids: cannot guarantee unique questions")
+    need = n_tasks * questions_per_task
+    if need > len(examples):
+        raise ValueError("not enough examples for disjoint tasks")
+    selected = random.Random(seed).sample(examples, need)
+    return [selected[i:i + questions_per_task]
+            for i in range(0, need, questions_per_task)]
+
+
+def simulate_task(exs, index, key2pid, top_n=20, seed=0):
+    """Run questions in order; inject missed gold into last retrieval position."""
+    if type(top_n) is not int or top_n <= 0:
+        raise ValueError("top_n must be a positive integer")
+    k = min(top_n, len(key2pid))
+    if not k:
+        raise ValueError("cannot retrieve from an empty corpus")
+    rng, steps = random.Random(seed), []
+    for question_index, ex in enumerate(exs):
+        hops = hop_queries(ex, key2pid)
+        for hop_index, (q, gold) in enumerate(hops):
+            ids, _ = index.retrieve(bm25s.tokenize([q], show_progress=False),
+                                    k=k, show_progress=False)
+            new = [int(i) for i in ids[0]]
+            hit = gold in new
+            if not hit:
+                new[-1] = gold
+            rng.shuffle(new)
+            steps.append({"new": new, "gold": gold, "natural_hit": hit,
+                          "original_query": ex["question_decomposition"][hop_index]["question"],
+                          "query": q, "example_id": ex.get("id"),
+                          "question_index": question_index,
+                          "hop_index": hop_index})
+    return steps
+
+
+def _check_budget_mode(budget, mode):
+    if type(budget) is not int or budget <= 0:
+        raise ValueError("budget must be a positive integer")
+    if mode not in ("append", "reselect"):
+        raise ValueError("mode must be append or reselect")
+
+
+def make_sample(questions, kept, new, gold_upto, corpus, budget, mode, lid):
+    """Construct a state with stable trajectory-local IDs and available gold."""
+    _check_budget_mode(budget, mode)
+    kept = list(dict.fromkeys(kept))
+    kept_set = set(kept)
+    new = [p for p in dict.fromkeys(new) if p not in kept_set]
+    cand = kept + new
+    for p in cand:
+        lid.setdefault(p, len(lid))
+    return {"questions": list(questions), "mode": mode, "budget": budget,
+            "kept_ids": [lid[p] for p in kept], "new_ids": [lid[p] for p in new],
+            "ntok": {lid[p]: corpus[p]["ntok"] for p in cand},
+            "text": {lid[p]: corpus[p]["text"] for p in cand},
+            "gold": [lid[p] for p in cand if p in gold_upto],
+            "pid_by_lid": {lid[p]: p for p in cand}}
+
+
+def oracle_action(s):
+    """Greedily maximize retained evidence count; prefer kept evidence on ties."""
+    _check_budget_mode(s["budget"], s["mode"])
+    kept, gold, nt = set(s["kept_ids"]), set(s["gold"]), s["ntok"]
+    if s["mode"] == "append":
+        used, add = sum(nt[i] for i in kept), []
+        if used > s["budget"]:
+            raise ValueError("append state already exceeds budget")
+        for i in sorted(gold - kept, key=lambda i: (nt[i], i)):
+            if used + nt[i] <= s["budget"]:
+                add.append(i)
+                used += nt[i]
+        return {"add": sorted(add), "drop": []}
+    keep, used = set(), 0
+    for i in sorted(gold, key=lambda i: (nt[i], i not in kept, i)):
+        if used + nt[i] <= s["budget"]:
+            keep.add(i)
+            used += nt[i]
+    return {"add": sorted(keep - kept), "drop": sorted(kept - keep)}
+
+
+def apply_action(s, act):
+    """Return kept IDs in stable prefix/arrival order, or None if invalid.
+
+    Repeated add/drop IDs intentionally have set semantics, matching PLAN v2.
+    Boolean values are not integer fragment IDs. ``drop`` may be omitted, but
+    ``add`` is required, as it is in the PLAN reward format validator.
+    """
+    if not isinstance(act, dict) or "add" not in act:
+        return None
+    add_list, drop_list = act["add"], act.get("drop", [])
+    if not isinstance(add_list, list) or not isinstance(drop_list, list):
+        return None
+    if any(type(i) is not int for i in add_list + drop_list):
+        return None
+    if type(s["budget"]) is not int or s["budget"] <= 0:
+        return None
+    if s["mode"] not in ("append", "reselect"):
+        return None
+    add, drop = set(add_list), set(drop_list)
+    if not add <= set(s["new_ids"]) or not drop <= set(s["kept_ids"]):
+        return None
+    if s["mode"] == "append" and drop:
+        return None
+    keep = ([i for i in s["kept_ids"] if i not in drop]
+            + [i for i in s["new_ids"] if i in add])
+    if sum(s["ntok"][i] for i in keep) > s["budget"]:
+        return None
+    return keep
+
+
+def make_oracle_noise_policy(seed):
+    """Return seeded oracle + up to 1–3 fitting new non-evidence fragments.
+
+    This is Claude's interpretation of PLAN §4. The policy changes rollout
+    states only; ``sft_target`` remains the clean oracle action. In append mode
+    it returns the clean oracle without adding noise.
+    """
+    rng = random.Random(seed)
+
+    def policy(s):
+        action = oracle_action(s)
+        if s["mode"] != "reselect":
+            return action
+        keep = apply_action(s, action)
+        used = sum(s["ntok"][i] for i in keep)
+        candidates = [i for i in s["new_ids"] if i not in set(s["gold"])]
+        rng.shuffle(candidates)
+        want = rng.randint(1, 3)
+        added = 0
+        for i in candidates:
+            if added == want:
+                break
+            if used + s["ntok"][i] <= s["budget"]:
+                action["add"].append(i)
+                used += s["ntok"][i]
+                added += 1
+        action["add"].sort()
+        return action
+
+    return policy
+
+
+def rollout(questions, steps, corpus, budget, mode, policy=oracle_action):
+    """Closed-loop rollout; malformed actions leave this step's state unchanged."""
+    _check_budget_mode(budget, mode)
+    kept, gold_upto, lid, samples = [], set(), {}, []
+    for st in steps:
+        gold_upto.add(st["gold"])
+        s = make_sample(questions, kept, st["new"], gold_upto, corpus, budget, mode, lid)
+        s["sft_target"] = oracle_action(s)
+        action = policy(s)
+        keep = apply_action(s, action)
+        s["action_valid"] = keep is not None
+        if keep is None:
+            keep = list(s["kept_ids"])
+        s["action"] = action
+        s["keep_after"] = keep
+        s["used_after"] = sum(s["ntok"][i] for i in keep)
+        gold = set(s["gold"])
+        s["recall"] = len(gold & set(keep)) / len(gold) if gold else 1.0
+        samples.append(s)
+        pid_of = {v: k for k, v in lid.items()}
+        kept = [pid_of[i] for i in keep]
+    return samples
+
+
+def render_input(s):
+    """Render the fixed compressor input without oracle/evidence information."""
+    used = sum(s["ntok"][i] for i in s["kept_ids"])
+    lines = ["任务问题："]
+    lines.extend(f"{i}. {question}" for i, question in enumerate(s["questions"], 1))
+    lines.extend([f"模式：{s['mode']}", f"预算：{s['budget']} token",
+                  f"已用 token：{used}", "", "已保留："])
+    for ids, heading in ((s["kept_ids"], None), (s["new_ids"], "新返回：")):
+        if heading:
+            lines.extend(["", heading])
+        if not ids:
+            lines.append("（空）")
+        for i in ids:
+            lines.extend([f"[编号 {i} | {s['ntok'][i]} token]", s["text"][i]])
+    return "\n".join(lines)
+
+
+def render_target(s):
+    """Compact SFT JSON with fixed add, drop key order."""
+    target = s["sft_target"]
+    return json.dumps({"add": target["add"], "drop": target["drop"]},
+                      ensure_ascii=False, separators=(",", ":"))

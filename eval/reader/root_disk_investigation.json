@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-11-17T08:08:02.432200+00:00",
+  "incident_peak_root_delta_bytes": 341770240,
+  "full_predictions_at_stop": 0,
+  "scope": "containerd overlay filesystem df counter; /dev/shm is separate tmpfs",
+  "specific_writer_attribution": "not established; no attribution to another process is asserted",
+  "inspection": "No newly modified >1MB files found in /tmp, /root/.cache, /root/.nv, /root/.config or /var/tmp; all required reader cache variables and actual tempfile directory point to userfolder.",
+  "idle_diagnostic": "eval/reader/root_disk_idle_diagnostic.json",
+  "cpu_diagnostic": "eval/reader/root_disk_cpu_diagnostic.json",
+  "guard_check_results": "eval/reader/disk_guard_checks.json",
+  "handling": "Pause new inference submissions on a threshold alert and capture writable-root-file metadata. Reject a large task-owned root writer or sustained over-limit usage; resume only after two below-limit readings separated by two seconds. Preserve every alert and investigation; never change the original baseline or increase the 300MB threshold.",
+  "unchanged_model_protocol": true,
+  "original_smoke_outputs_reused": 40,
+  "prior_full_outputs_generated": 0
+}

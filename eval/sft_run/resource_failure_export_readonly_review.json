@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-17T20:53:10.140598+00:00",
+  "status": "readonly_review_complete",
+  "reviewer": "task05_eval",
+  "acceptance_status": "not_evaluated_no_terminal_export_executed",
+  "scope": "Independent read-only review of the new failed-resource exporter and its fixture evidence; no tests, inventory, GPU queries or training were executed by this reviewer.",
+  "reviewed_files": [
+    {
+      "path": "scripts/export_sft_resource_failure.py",
+      "bytes": 7161,
+      "sha256": "801bfb540de322dfd682ade613ec575c175e07daa9015484761bbc1ad4fab9f4"
+    },
+    {
+      "path": "tests/test_export_sft_resource_failure.py",
+      "bytes": 9771,
+      "sha256": "58b003f9f4cd1eaf66a331c6016d5a7bfa3c850441a4b5396334b11eb9f4e23e"
+    },
+    {
+      "path": "scripts/finalize_sft_artifacts.py",
+      "bytes": 22992,
+      "sha256": "50b6e3fb4e4ad1de8ecc70ce5d5d1cd4c4beaaa8f13e65418a15ee69f4590570"
+    },
+    {
+      "path": "scripts/sft_run_report.py",
+      "bytes": 43309,
+      "sha256": "54ec9c7ad134bea221a493dc0719724e63c6a8933c4ed540f6928167e80bb8be"
+    },
+    {
+      "path": "scripts/checksums_task05.py",
+      "bytes": 13387,
+      "sha256": "1a3d973c5261ec7f6d528ce848e777506791da8a311d59da073ea52c642418b8"
+    },
+    {
+      "path": "eval/sft_run/resource_failure_export_tests.xml",
+      "bytes": 4319,
+      "sha256": "a1da237bad8f7548f99a29771a8ad01e77fe2bf2470bef9a1a17c4d796e6b458"
+    },
+    {
+      "path": "eval/sft_run/resource_failure_export_test_receipt.json",
+      "bytes": 5398,
+      "sha256": "333c824724ffebf56e2f2cea63c7966ee5e05bacdcbff738b64ad2c71e54aa2f"
+    }
+  ],
+  "existing_fixture_xml_counts": {
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "blocking_findings": [],
+  "checks": {
+    "strict_finalizer_unchanged": "SHA256 matches the preceding independent final-delivery review. No strict acceptance gate was weakened.",
+    "sole_root_failure": "Reuses strict completion_evidence, verify_processes and verify_gpu_history. Requires all formal B/C/checkpoint/baseline/watcher completion, inactive exact task PIDs, physical GPU 1 UUID/history, integer GPU memory below 2048 MiB, and no exact recorded task compute PID. Original limit must equal 300000000, and raw current-used minus original-baseline-used must be strictly above it.",
+    "before_and_after_inventory": "All non-root gates run before inventory; completion, PID evidence, GPU history, baseline and machine snapshot are independently rechecked after inventory. Root recovery to or below the original limit blocks all new publication. GPU/PID/history/completion changes also block.",
+    "inventory_stability": "Uses unchanged exhaustive freeze_inventory with full file hashes, actual JSONL line counts, file-set/stat stability checks and symlink/unfinished-artifact rejection.",
+    "failure_publication": "Writes failed resource evidence first, with root_limit_passed=false and no subtraction; manifest complete=true means exhaustive inventory only and also carries task/resource acceptance failed. An I/O failure may leave only the new failed receipt, never a new manifest paired with a stale successful receipt.",
+    "exit_status": "Successful failed-evidence export returns code 1 with export_complete=true and status=failed. Rejected export returns code 1 with export_complete=false. Invalid invocation may be rejected by argparse before export.",
+    "report_compatibility": "Existing report retains all complete strategy metrics and checkpoint selection while root flags/raw delta keep its overall status failed. Existing checksums code accepts the complete file inventory and verifies coverage/hashes independently of acceptance status.",
+    "fixture_evidence": "Read the 26-case passing XML and source. Fixtures cover non-root failures, root boundaries/recovery, post-inventory mutations, repeated export, unrelated reused PIDs, report/checksum compatibility and CLI return status. Autouse fixture blocks subprocess.check_output and mocks process snapshots. Original 13 failed fixtures from the mock signature error remain archived."
+  },
+  "delivery_notes": [
+    "This is a failure-evidence export path, not a finalizer success path. Real execution remains deferred until all B/C and watcher processes have completed and actual GPU release is proven.",
+    "On this branch, exporter exit 1 and report build exit 1 are expected only when JSON/failed resource evidence establishes the intended raw-root failure. Inspect export_complete and failure reasons explicitly, then generate the plot and rebuild the report without changing failed acceptance to complete. Avoid && chains that suppress delivery artifacts on the expected nonzero result.",
+    "If root growth recovers to at most 300000000 bytes, use the unchanged strict finalizer instead; do not export a fabricated root failure.",
+    "No actual terminal resource measurements or acceptance results are asserted by this review."
+  ],
+  "actions": {
+    "tests_rerun": false,
+    "source_modified": false,
+    "gpu_queried": false,
+    "gpu_execution": false,
+    "inventory_executed": false,
+    "training_or_inference_changed": false,
+    "old_artifacts_modified": false
+  }
+}

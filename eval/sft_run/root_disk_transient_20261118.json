@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-17T22:23:12.451751+00:00",
+  "status": "readonly_transient_event_record",
+  "scope": {
+    "single_focused_du_snapshot": true,
+    "focused_paths": [
+      "/root/.cache",
+      "/tmp",
+      "/root/workplace/ctx-compressor",
+      "/root/.nv",
+      "/root/.triton",
+      "/var/log",
+      "/var/cache",
+      "/root/.ssh",
+      "/run/sshd"
+    ],
+    "recursive_mtime_scan": false,
+    "deleted_content_search": false,
+    "other_file_contents_read": false,
+    "task_resource_log_rows_read": true,
+    "gpu_query_or_initialization": false,
+    "source_code_changed": false,
+    "files_moved_or_deleted": false
+  },
+  "event_reported_by_parent": {
+    "jump": {
+      "before_utc": "2026-11-17T22:20:26Z",
+      "before_raw_delta_bytes": 384585728,
+      "after_utc": "2026-11-17T22:20:56Z",
+      "after_raw_delta_bytes": 625639424,
+      "increase_bytes": 241053696
+    },
+    "recovery": {
+      "utc": "2026-11-17T22:21:56Z",
+      "raw_delta_bytes": 384602112,
+      "change_from_before_jump_bytes": 16384
+    },
+    "no_task_cleanup_or_migration_during_event": true,
+    "training_pid": 724147,
+    "training_step_approximately": 2387,
+    "parent_reports_no_nan_or_oom": true
+  },
+  "raw_resource_log_evidence": {
+    "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl",
+    "captured_prefix_bytes": 248051,
+    "captured_prefix_sha256": "69e23d53d0f489d0a32295a71f29ed8fd24c2bbc7a7eade1ac37aba04b17ffc9",
+    "hash_scope": "Captured append-only file prefix, not a claim that the active full log is frozen.",
+    "rows": [
+      {
+        "source_line_1based": 826,
+        "raw_line": "{\"index\": 1, \"uuid\": \"GPU-4318dc90-4126-038a-9402-1323533db94f\", \"memory_used_mib\": 7671, \"utilization_percent\": 95, \"root_used_bytes\": 931825020928, \"utc\": \"2026-11-17T22:19:56.617932+00:00\", \"pid\": 724147, \"alive\": true, \"optimizer_step\": 2381, \"nonfinite\": false, \"root_delta_bytes\": 384569344}",
+        "parsed": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 7671,
+          "utilization_percent": 95,
+          "root_used_bytes": 931825020928,
+          "utc": "2026-11-17T22:19:56.617932+00:00",
+          "pid": 724147,
+          "alive": true,
+          "optimizer_step": 2381,
+          "nonfinite": false,
+          "root_delta_bytes": 384569344
+        }
+      },
+      {
+        "source_line_1based": 827,
+        "raw_line": "{\"index\": 1, \"uuid\": \"GPU-4318dc90-4126-038a-9402-1323533db94f\", \"memory_used_mib\": 7671, \"utilization_percent\": 100, \"root_used_bytes\": 931825037312, \"utc\": \"2026-11-17T22:20:26.662644+00:00\", \"pid\": 724147, \"alive\": true, \"optimizer_step\": 2384, \"nonfinite\": false, \"root_delta_bytes\": 384585728}",
+        "parsed": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 7671,
+          "utilization_percent": 100,
+          "root_used_bytes": 931825037312,
+          "utc": "2026-11-17T22:20:26.662644+00:00",
+          "pid": 724147,
+          "alive": true,
+          "optimizer_step": 2384,
+          "nonfinite": false,
+          "root_delta_bytes": 384585728
+        }
+      },
+      {
+        "source_line_1based": 828,
+        "raw_line": "{\"index\": 1, \"uuid\": \"GPU-4318dc90-4126-038a-9402-1323533db94f\", \"memory_used_mib\": 7671, \"utilization_percent\": 100, \"root_used_bytes\": 932066091008, \"utc\": \"2026-11-17T22:20:56.707831+00:00\", \"pid\": 724147, \"alive\": true, \"optimizer_step\": 2387, \"nonfinite\": false, \"root_delta_bytes\": 625639424}",
+        "parsed": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 7671,
+          "utilization_percent": 100,
+          "root_used_bytes": 932066091008,
+          "utc": "2026-11-17T22:20:56.707831+00:00",
+          "pid": 724147,
+          "alive": true,
+          "optimizer_step": 2387,
+          "nonfinite": false,
+          "root_delta_bytes": 625639424
+        }
+      },
+      {
+        "source_line_1based": 829,
+        "raw_line": "{\"index\": 1, \"uuid\": \"GPU-4318dc90-4126-038a-9402-1323533db94f\", \"memory_used_mib\": 7671, \"utilization_percent\": 93, \"root_used_bytes\": 931825049600, \"utc\": \"2026-11-17T22:21:26.752669+00:00\", \"pid\": 724147, \"alive\": true, \"optimizer_step\": 2390, \"nonfinite\": false, \"root_delta_bytes\": 384598016}",
+        "parsed": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 7671,
+          "utilization_percent": 93,
+          "root_used_bytes": 931825049600,
+          "utc": "2026-11-17T22:21:26.752669+00:00",
+          "pid": 724147,
+          "alive": true,
+          "optimizer_step": 2390,
+          "nonfinite": false,
+          "root_delta_bytes": 384598016
+        }
+      },
+      {
+        "source_line_1based": 830,
+        "raw_line": "{\"index\": 1, \"uuid\": \"GPU-4318dc90-4126-038a-9402-1323533db94f\", \"memory_used_mib\": 7671, \"utilization_percent\": 39, \"root_used_bytes\": 931825053696, \"utc\": \"2026-11-17T22:21:56.797594+00:00\", \"pid\": 724147, \"alive\": true, \"optimizer_step\": 2393, \"nonfinite\": false, \"root_delta_bytes\": 384602112}",
+        "parsed": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 7671,
+          "utilization_percent": 39,
+          "root_used_bytes": 931825053696,
+          "utc": "2026-11-17T22:21:56.797594+00:00",
+          "pid": 724147,
+          "alive": true,
+          "optimizer_step": 2393,
+          "nonfinite": false,
+          "root_delta_bytes": 384602112
+        }
+      },
+      {
+        "source_line_1based": 831,
+        "raw_line": "{\"index\": 1, \"uuid\": \"GPU-4318dc90-4126-038a-9402-1323533db94f\", \"memory_used_mib\": 7671, \"utilization_percent\": 100, \"root_used_bytes\": 931825053696, \"utc\": \"2026-11-17T22:22:26.843658+00:00\", \"pid\": 724147, \"alive\": true, \"optimizer_step\": 2397, \"nonfinite\": false, \"root_delta_bytes\": 384602112}",
+        "parsed": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 7671,
+          "utilization_percent": 100,
+          "root_used_bytes": 931825053696,
+          "utc": "2026-11-17T22:22:26.843658+00:00",
+          "pid": 724147,
+          "alive": true,
+          "optimizer_step": 2397,
+          "nonfinite": false,
+          "root_delta_bytes": 384602112
+        }
+      }
+    ]
+  },
+  "comparison_source": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run/root_disk_followup_20261118.json",
+    "sha256": "d581b5fe8df7b2e4d38475be29ec2424a230707580b9b9ef58a5ae0465b9baaf",
+    "earlier_du_snapshot_utc": "2026-11-17T19:15:07Z"
+  },
+  "focused_directory_size_comparison": [
+    {
+      "path": "/root/.cache",
+      "previous_allocated_bytes": 9939808256,
+      "current_allocated_bytes": 9939808256,
+      "change_bytes": 0
+    },
+    {
+      "path": "/tmp",
+      "previous_allocated_bytes": 1721933824,
+      "current_allocated_bytes": 1721933824,
+      "change_bytes": 0
+    },
+    {
+      "path": "/root/workplace/ctx-compressor",
+      "previous_allocated_bytes": 2225393664,
+      "current_allocated_bytes": 2225549312,
+      "change_bytes": 155648
+    },
+    {
+      "path": "/root/.nv",
+      "previous_allocated_bytes": 237568,
+      "current_allocated_bytes": 237568,
+      "change_bytes": 0
+    },
+    {
+      "path": "/root/.triton",
+      "previous_allocated_bytes": 12288,
+      "current_allocated_bytes": 12288,
+      "change_bytes": 0
+    },
+    {
+      "path": "/var/log",
+      "previous_allocated_bytes": 512000,
+      "current_allocated_bytes": 512000,
+      "change_bytes": 0
+    },
+    {
+      "path": "/var/cache",
+      "previous_allocated_bytes": 1765376,
+      "current_allocated_bytes": 1765376,
+      "change_bytes": 0
+    },
+    {
+      "path": "/root/.ssh",
+      "previous_allocated_bytes": 28672,
+      "current_allocated_bytes": 28672,
+      "change_bytes": 0
+    },
+    {
+      "path": "/run/sshd",
+      "previous_allocated_bytes": 4096,
+      "current_allocated_bytes": 4096,
+      "change_bytes": 0
+    }
+  ],
+  "mounts": {
+    "/": "/      overlay overlay",
+    "/root/userfolder": "/root/userfolder /dev/sda1[/userfolder/25_niezhengxin] ext4",
+    "/tmp": "/      overlay overlay",
+    "/root/workplace/ctx-compressor": "/      overlay overlay",
+    "/etc/hosts": "/etc/hosts /dev/nvme0n1p2[/var/lib/docker/containers/3bdbc43381074548245a68899bbd6c0a4cc4b0df6fa53a6a65699be3877a66a7/hosts] ext4"
+  },
+  "task_writable_regular_fd_snapshot": [
+    {
+      "pid": 724147,
+      "exists": true,
+      "writable_regular_fds": [
+        {
+          "fd": 1,
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train.log",
+          "bytes": 711139,
+          "allocated_bytes": 716800,
+          "device": 2049,
+          "inode": 310069867,
+          "mtime_ns": 1794954191596618875,
+          "ctime_ns": 1794954191596618875,
+          "deleted": false
+        },
+        {
+          "fd": 2,
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train.log",
+          "bytes": 711139,
+          "allocated_bytes": 716800,
+          "device": 2049,
+          "inode": 310069867,
+          "mtime_ns": 1794954191596618875,
+          "ctime_ns": 1794954191596618875,
+          "deleted": false
+        },
+        {
+          "fd": 3,
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl",
+          "bytes": 248051,
+          "allocated_bytes": 253952,
+          "device": 2049,
+          "inode": 310069871,
+          "mtime_ns": 1794954176887992286,
+          "ctime_ns": 1794954176887992286,
+          "deleted": false
+        }
+      ]
+    },
+    {
+      "pid": 724148,
+      "exists": true,
+      "writable_regular_fds": [
+        {
+          "fd": 1,
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation.log",
+          "bytes": 0,
+          "allocated_bytes": 0,
+          "device": 2049,
+          "inode": 310069514,
+          "mtime_ns": 1794928345036002457,
+          "ctime_ns": 1794928345036002457,
+          "deleted": false
+        },
+        {
+          "fd": 2,
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/continuation.log",
+          "bytes": 0,
+          "allocated_bytes": 0,
+          "device": 2049,
+          "inode": 310069514,
+          "mtime_ns": 1794928345036002457,
+          "ctime_ns": 1794928345036002457,
+          "deleted": false
+        }
+      ]
+    }
+  ],
+  "current_raw_filesystem_accounting": {
+    "df_raw": "Filesystem          1B-blocks           Used    Available Use% Mounted on\noverlay         1005867986944   931829411840  22867804160  98% /\n/dev/sda1      15873098706944 14271857803264 801206042624  95% /root/userfolder\n/dev/nvme0n1p2  1005867986944   931829411840  22867804160  98% /etc/hosts\n",
+    "filesystems": [
+      {
+        "source": "overlay",
+        "size_bytes": 1005867986944,
+        "used_bytes": 931829411840,
+        "available_bytes": 22867804160,
+        "mount": "/"
+      },
+      {
+        "source": "/dev/sda1",
+        "size_bytes": 15873098706944,
+        "used_bytes": 14271857803264,
+        "available_bytes": 801206042624,
+        "mount": "/root/userfolder"
+      },
+      {
+        "source": "/dev/nvme0n1p2",
+        "size_bytes": 1005867986944,
+        "used_bytes": 931829411840,
+        "available_bytes": 22867804160,
+        "mount": "/etc/hosts"
+      }
+    ],
+    "root_baseline_used_bytes": 931440451584,
+    "root_delta_bytes": 388960256,
+    "root_limit_bytes": 300000000,
+    "unknown_growth_subtracted": false,
+    "measurement_timing": "After the parent's reported recovery; not a snapshot during the transient peak."
+  },
+  "conclusions": {
+    "transient_source": "unknown",
+    "attributable_task05_omitted_path_identified": false,
+    "current_cache_and_fd_evidence_scope": "Current metadata cannot identify a short-lived allocation that was already gone. No conclusion that a different host/container caused it.",
+    "task_writable_regular_fds_all_external": true,
+    "root_df_is_shared_backing_filesystem_measure": true,
+    "no_cleanup_requested_or_performed": true,
+    "final_acceptance": "Use terminal raw df minus unchanged preflight baseline with the original 300000000-byte threshold. Do not offset the transient or any unknown growth."
+  },
+  "recommendations": [
+    "Retain exact append-only resource log rows and this metadata receipt as transient evidence.",
+    "Do not pursue vanished files or widen the scan while training is active; no omitted task-owned transfer candidate was established by this check.",
+    "If terminal raw delta remains over the original threshold, use the reviewed failed-acceptance delivery path after B/C and all lifecycle/GPU gates genuinely finish."
+  ],
+  "event_from_raw_log": {
+    "before": {
+      "utc": "2026-11-17T22:20:26.662644+00:00",
+      "optimizer_step": 2384,
+      "root_delta_bytes": 384585728
+    },
+    "peak": {
+      "utc": "2026-11-17T22:20:56.707831+00:00",
+      "optimizer_step": 2387,
+      "root_delta_bytes": 625639424
+    },
+    "first_observed_recovery": {
+      "utc": "2026-11-17T22:21:26.752669+00:00",
+      "optimizer_step": 2390,
+      "root_delta_bytes": 384598016
+    },
+    "rise_bytes": 241053696,
+    "drop_to_next_sample_bytes": 241041408,
+    "recovery_above_pre_jump_bytes": 12288,
+    "sampling_cadence_seconds_approximately": 30,
+    "note": "The raw next sample already records recovery at 22:21:26 UTC, earlier than the parent first reported noticing recovery at 22:21:56. The peak allocation lifetime is not measurable exactly from 30-second snapshots."
+  }
+}

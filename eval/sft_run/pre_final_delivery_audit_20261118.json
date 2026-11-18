@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-17T23:14:38.720693+00:00",
+  "status": "pre_final_readonly_review_passed",
+  "final_task_acceptance_status": "pending_actual_C_and_terminal_gates",
+  "scope": {
+    "in_memory_report_only": true,
+    "existing_files_modified": false,
+    "tests_rerun": false,
+    "finalizer_or_failure_export_run": false,
+    "external_inventory_run": false,
+    "task_checksums_freeze_run": false,
+    "toolchain_74_known_files_readonly_hash_check": true,
+    "gpu_query_or_initialization": false,
+    "training_or_inference_modified": false
+  },
+  "specifications": [
+    {
+      "path": "/root/workplace/ctx-compressor/specs/TASK_05_sft_train_and_heldout_eval_20261117.md",
+      "bytes": 8009,
+      "sha256": "31c6916b1be40fad48465f379c87dc794935684e34b5944eeb29e6066851f7d2"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/specs/PLAN_v2.md",
+      "bytes": 29939,
+      "sha256": "798b82548719e1530b88a304c90113f03d75f3d8d44f7663a329c446839ec31f"
+    }
+  ],
+  "sources": [
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/final_tests_receipt.json",
+      "bytes": 8741,
+      "sha256": "b6a8e880596a71315a0a252e324fb27b3546659dedafc8ee66a3317474ed6b10"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/tests.xml",
+      "bytes": 61402,
+      "sha256": "bda5d5317b32a1941e489f9f6d55423d09883e1fae3aff9a67b8227f5450b134"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench.json",
+      "bytes": 57670,
+      "sha256": "db4567d12253858a07b4003a04f8c8c6ed97b96834da07efd0dee47ecad52c97"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/train_run_config.json",
+      "bytes": 1152822,
+      "sha256": "7cf35de5bcca08aa3fe726f299e0f2939a915bcbb7180943ea59f7bdae92f546"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/sample_manifest.json",
+      "bytes": 5379,
+      "sha256": "df6c87834f0063e4e6d154a7dcb138cf3b5ad51635b78df7cff1b4fcabf0b4a2"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/toolchain_preparation_receipt.json",
+      "bytes": 22990,
+      "sha256": "758fedd877ca7d2c6f8cb6efe74e893658f047a13930d7c0a68df32f48f5073e"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/TOOLCHAIN_SHA256SUMS",
+      "bytes": 12579,
+      "sha256": "a00a7613441de7fb1ffd7bb07a09c2bcc6a8c49b1f9b79cb32841930657eb9dc"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/sft_run_report.py",
+      "bytes": 43309,
+      "sha256": "54ec9c7ad134bea221a493dc0719724e63c6a8933c4ed540f6928167e80bb8be"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/train_sft_worker.py",
+      "bytes": 21652,
+      "sha256": "0be97ace75037842ea77e0171c34675ccbaaae08de980711df5126d28ea64ac1"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/src/heldout_eval.py",
+      "bytes": 16362,
+      "sha256": "807fde4994a7b5a94e44f3e1119825a176924a12b280c31dfb25c78616d7b03c"
+    }
+  ],
+  "specification_mapping": [
+    {
+      "requirement": "Task05 sections 3/6.1: 2 epochs, 2500 optimizer steps, no NaN/OOM and five saved checkpoints",
+      "implementation": "training_summary validates counts, all 2500 train losses, five eval steps, exposure tokens, frozen hyperparameters and checkpoints; render_report B prints counts, paths, timings and flags",
+      "observed": "B complete; C evaluation is still pending"
+    },
+    {
+      "requirement": "Task05 section6.4 A selection and measured throughput",
+      "implementation": "batch_summary reselects eligible measured configuration; A table includes group_by_length, all30-step trials and longest probes",
+      "observed": "Selected1x16, group_by_length=false; other trials exceed40000000000 bytes"
+    },
+    {
+      "requirement": "Task05 sections3/5: five fixed heldout losses and train/eval curves",
+      "implementation": "loss_rows and loss_csv merge actual train/eval rows at steps500/1000/1500/2000/2500; plot uses raw unsmoothed data; no eval loss in selection",
+      "observed": "2500 train loss records and5 eval records available; final build/plot/build still needed to refresh old pending output"
+    },
+    {
+      "requirement": "Task05 sections4/6.4: all five checkpoint pooled evidence-loss rates and selected checkpoint",
+      "implementation": "C table emits five count/n rates plus recall n; select_complete_checkpoints waits for all5, then shared helper sorts loss count ascending, recall descending, earlier step",
+      "observed": "No provisional winner asserted"
+    },
+    {
+      "requirement": "Task05 section6.4: selected/base/bm25/oracle at mid budget in both modes",
+      "implementation": "render_report fixed four strategies times two modes makes8 rows at budget2814; observed in-memory table has8 rows and columns for recall, evidence loss,4 invalid rates and any-invalid",
+      "observed": "Selected/base rows remain NA until valid model results exist"
+    },
+    {
+      "requirement": "Task05 sections4/5: all strategy-mode-budget metrics and denominators",
+      "implementation": "validate_strategy enforces train-heldout249 tasks/cell,1494 trajectories and6 cells; mean renders n, rate renders count/n; full quality/cost/invalid/output-limit/group tables preserve original metrics",
+      "observed": "All4 completed CPU baselines pass current pure validator"
+    },
+    {
+      "requirement": "Task05 sections1/6.2: GPU1 released and raw root growth<=300000000",
+      "implementation": "Strict finalizer retains original gates; independent failure exporter only permits root-only failure and still returns1; report failed evidence retains complete metrics",
+      "observed": "Not terminally evaluated while C runner active"
+    },
+    {
+      "requirement": "Task05 sections5/6.3: original264 tests plus all new tests pass",
+      "implementation": "Current full462-case XML matches receipt; every recorded Python source SHA checked against current files",
+      "observed": "462 passed; no rerun in this review"
+    },
+    {
+      "requirement": "PLAN section4/7 as restricted by Task05: own-state closed loop, invalid no-op, heldout loss-count checkpoint selection; no dev/F1/API/GRPO",
+      "implementation": "Report uses existing shared metrics/actions, requires saved train-heldout steps, exposes four invalid reason counts, full grid and exact prefix evidence",
+      "observed": "Task05 narrower scope takes precedence over broader PLAN future work"
+    }
+  ],
+  "A_measured": {
+    "selected": {
+      "batch_size": 1,
+      "gradient_accumulation_steps": 16,
+      "tokens_per_second": 5695.282197305358,
+      "selection_peak_bytes": 7492075520,
+      "seconds_per_sample": 0.5691018848665408,
+      "group_by_length": false
+    },
+    "trials": [
+      {
+        "batch_size": 1,
+        "gradient_accumulation_steps": 16,
+        "group_by_length": false,
+        "optimizer_steps": 30,
+        "consumed_samples": 480,
+        "consumed_tokens": 1555774,
+        "tokens_per_second": 5695.282197305358,
+        "selection_peak_bytes": 7492075520,
+        "oom": false,
+        "nonfinite": false
+      },
+      {
+        "batch_size": 4,
+        "gradient_accumulation_steps": 4,
+        "group_by_length": false,
+        "optimizer_steps": 30,
+        "consumed_samples": 480,
+        "consumed_tokens": 1555774,
+        "tokens_per_second": 2852.4726064066317,
+        "selection_peak_bytes": 49548361728,
+        "oom": false,
+        "nonfinite": false
+      },
+      {
+        "batch_size": 8,
+        "gradient_accumulation_steps": 2,
+        "group_by_length": true,
+        "optimizer_steps": 30,
+        "consumed_samples": 480,
+        "consumed_tokens": 1555774,
+        "tokens_per_second": 3432.511441582958,
+        "selection_peak_bytes": 41059090432,
+        "oom": false,
+        "nonfinite": false
+      }
+    ],
+    "formal_estimate": {
+      "sample_exposures": 40000,
+      "sequence_tokens": 129734216,
+      "train_loop_seconds": 22779.242802293786,
+      "train_loop_hours": 6.327567445081607,
+      "overhead": "model startup, 21k CPU encodings, five eval-loss passes and checkpoint saves are additional; final report records actual wall time"
+    },
+    "comparison_note": "Complete configurations differ in group_by_length; do not attribute all differences to batch size."
+  },
+  "B_measured": {
+    "status": "ok",
+    "epochs": 2.0,
+    "optimizer_steps": 2500,
+    "sample_exposures": 40000,
+    "sequence_tokens": 129734216,
+    "oom": false,
+    "nonfinite": false,
+    "train_loss_records": 2500,
+    "eval_loss_records": 5,
+    "eval_losses": [
+      {
+        "step": 500,
+        "loss": 0.05651583,
+        "n_samples": 1000,
+        "runtime_seconds": 161.0283
+      },
+      {
+        "step": 1000,
+        "loss": 0.03912761,
+        "n_samples": 1000,
+        "runtime_seconds": 161.412
+      },
+      {
+        "step": 1500,
+        "loss": 0.02924843,
+        "n_samples": 1000,
+        "runtime_seconds": 251.1043
+      },
+      {
+        "step": 2000,
+        "loss": 0.02796355,
+        "n_samples": 1000,
+        "runtime_seconds": 160.6599
+      },
+      {
+        "step": 2500,
+        "loss": 0.02731489,
+        "n_samples": 1000,
+        "runtime_seconds": 159.5071
+      }
+    ],
+    "train_seconds": 25774.874464072986,
+    "wall_seconds": 26053.937669807114,
+    "startup_seconds": 279.05108531494625,
+    "checkpoints": [
+      {
+        "step": 500,
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500",
+        "directory_exists": true,
+        "required_artifacts_exist": true
+      },
+      {
+        "step": 1000,
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000",
+        "directory_exists": true,
+        "required_artifacts_exist": true
+      },
+      {
+        "step": 1500,
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1500",
+        "directory_exists": true,
+        "required_artifacts_exist": true
+      },
+      {
+        "step": 2000,
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+        "directory_exists": true,
+        "required_artifacts_exist": true
+      },
+      {
+        "step": 2500,
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2500",
+        "directory_exists": true,
+        "required_artifacts_exist": true
+      }
+    ]
+  },
+  "timing_boundaries": {
+    "n_formal_runs": 1,
+    "train_seconds": "CUDA-synchronized on_train_begin to CUDA-synchronized on_train_end; includes all scheduled evaluation and checkpoint save intervals.",
+    "wall_seconds": "Worker work interval starts after initial resource checks, manifest/input verification, marker/config/source-snapshot writes, then includes imports, model startup, encoding, training/eval/save and monitor shutdown. Ends before final worker_result/config writes. Not full OS process lifetime.",
+    "eval_point_elapsed_seconds": "on_log uses the last optimizer-step elapsed value, before that step's eval/save; use eval_runtime for the actual eval duration.",
+    "report_labels": "Training loop seconds explicitly says includes eval/save; work-wall seconds explicitly says includes startup/encoding. Final narrative should preserve these boundaries."
+  },
+  "mid_budget_table": {
+    "budget": 2814,
+    "rows": 8,
+    "strategies": [
+      "selected_checkpoint",
+      "base",
+      "bm25",
+      "oracle"
+    ],
+    "modes": [
+      "reselect",
+      "append"
+    ],
+    "columns": "| 策略 | 模式 | 任务末召回 | 证据丢失率 | 非法JSON | 候选编号非法 | append drop | 超预算 | 任一非法 |",
+    "final_recall_n_per_row": 249,
+    "evidence_loss_n_per_row": 249,
+    "invalid_rate_n_per_row": 2326,
+    "invalid_reasons": [
+      "invalid_json",
+      "invalid_candidate_id",
+      "append_drop",
+      "over_budget"
+    ],
+    "any_invalid_included": true
+  },
+  "checkpoint_selection_and_path": {
+    "currently_selected": null,
+    "pooled_n_per_checkpoint": 1494,
+    "independent_task_n": 249,
+    "candidate_n": 5,
+    "mode_budget_cell_n": 6,
+    "best_absolute_path_mapping": {
+      "500": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500",
+      "1000": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1000",
+      "1500": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-1500",
+      "2000": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+      "2500": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2500"
+    },
+    "caveat": "Existing selected_checkpoint JSON contains strategy/step, not a standalone path field; report separately prints all five absolute checkpoint paths. Final reply must explicitly join the selected step to this recorded path map. No source modification is needed."
+  },
+  "completed_cpu_validation": [
+    {
+      "strategy": "no_compress",
+      "n_tasks_per_cell": 249,
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "mid_invalid_denominators": {
+        "reselect": 2326,
+        "append": 2326
+      }
+    },
+    {
+      "strategy": "latest",
+      "n_tasks_per_cell": 249,
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "mid_invalid_denominators": {
+        "reselect": 2326,
+        "append": 2326
+      }
+    },
+    {
+      "strategy": "bm25",
+      "n_tasks_per_cell": 249,
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "mid_invalid_denominators": {
+        "reselect": 2326,
+        "append": 2326
+      }
+    },
+    {
+      "strategy": "oracle",
+      "n_tasks_per_cell": 249,
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "mid_invalid_denominators": {
+        "reselect": 2326,
+        "append": 2326
+      }
+    }
+  ],
+  "current_in_memory_report": {
+    "status": "pending",
+    "missing_inputs": [
+      "base_results.json",
+      "checkpoint-1000_results.json",
+      "checkpoint-1500_results.json",
+      "checkpoint-2000_results.json",
+      "checkpoint-2500_results.json",
+      "checkpoint-500_results.json",
+      "external_artifact_manifest.json",
+      "final_resource_check.json",
+      "five_complete_checkpoint_metrics",
+      "model_rollout_completion"
+    ],
+    "failure_reasons": [],
+    "model_result_names_present": [],
+    "note": "Read-only assembly and render; no existing JSON/MD/CSV/SVG overwritten."
+  },
+  "test_evidence": {
+    "counts": {
+      "n": 462,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "junit_sha_matches_receipt": true,
+    "python_source_records": 82,
+    "current_python_source_files": 82,
+    "all_hashes_match": true,
+    "all_current_src_scripts_tests_python_files_covered": true,
+    "mismatches": [],
+    "unrecorded_python_files": [],
+    "recorded_missing_python_files": []
+  },
+  "wrapper_audited_exception": {
+    "path": "/root/workplace/ctx-compressor/scripts/run_heldout_model.sh",
+    "current_sha256": "4020ac2387b865381458c02fa7b9af0c68b605d2f7853e5f0670ec30da017ab6",
+    "matches_toolchain_preparation_receipt": true,
+    "python_runner_unchanged": true,
+    "independent_protected_file_comparison": {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/protected_files_after_comparison.json",
+      "bytes": 871,
+      "sha256": "e0bd9743542c087d365b741115717d9ae114d64d29cbdcc7d6805bb09452c620"
+    },
+    "protected_checked_count": 1061,
+    "protected_unchanged_count": 1060,
+    "unexpected_changes": [],
+    "scope": "Only Task05 shell wrapper gained isolated toolchain CC/CXX/PATH; Python462-test source snapshot remains exact. Not an exemption from final artifact hashing."
+  },
+  "toolchain_integrity": {
+    "manifest": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/TOOLCHAIN_SHA256SUMS",
+      "bytes": 12579,
+      "sha256": "a00a7613441de7fb1ffd7bb07a09c2bcc6a8c49b1f9b79cb32841930657eb9dc"
+    },
+    "n_checked": 74,
+    "matched": 74,
+    "total_bytes_read": 231881838,
+    "elapsed_seconds": 0.22883766307495534,
+    "mismatches": [],
+    "scope": "All 19 downloaded archives, installed package metadata, compiler/frontend/assembler/linker and selected sysroot files, preparation/proof sources/logs/artifacts. Not a hash of every extracted header/library or repodata cache.",
+    "note": "This is a hash verification of74 listed toolchain files; no new inventory, compiler execution or GPU initialization."
+  },
+  "remaining_actions_after_C": [
+    "Wait for base and all5 checkpoints to finish1494 trajectories each, model_rollout_run status complete, engine shutdown and watcher exit. Do not choose from partial results.",
+    "Run existing CPU audit_model_rollouts.py after completion to independently reparse raw outputs, replay state chains, verify all metrics and pooled checkpoint winner.",
+    "After all exact lifecycle PIDs have exited, obtain real terminal GPU/df evidence. Use strict finalizer if all resource gates pass, or the reviewed independent failed exporter only when raw root growth is the sole failed gate. Do not subtract unknown growth or relax limits.",
+    "Freeze stable exhaustive paths/bytes/SHA256/JSONL lines for the3 allowed external artifact roots; retain separate74-file toolchain manifest and its lock/audit. No active logs may be inventoried as final.",
+    "Run report build, CPU plot, report build. Inspect each actual exit code: root-failure branch expects build1/plot0/build1; successful branch first build may return2 for stale plot then final0. Preserve all other failures, and require no missing_inputs at completed-evidence delivery.",
+    "Root append README/NOTES/HANDOFF, including actual timing boundaries, A group_by_length distinction, initialization/toolchain exception, all final metrics and the real resource outcome. Old document prefixes and Task01-04 protected artifacts remain unchanged.",
+    "Root writes final SHA256SUMS then performs checksums_task05.py check --slow after all small outputs/docs are final. Integrity success must not erase a failed resource acceptance status. Sync small project artifacts/mirror; keep large files external.",
+    "Final Chinese reply must state A choice/token rate, n=1 formal elapsed time, all5 pooled loss count/n, selected checkpoint absolute path, and8 mid-budget rows including recall n, loss count/n and all4 invalid rates (plus any-invalid). Use status=fail sentinel if any final acceptance gate fails; do not claim training effectiveness."
+  ]
+}

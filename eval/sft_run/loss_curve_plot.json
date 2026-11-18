@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "csv_sha256": "de1da7b6a5520a4519c73f8b57dd1a120515d02dce06b375407109882e5961e2",
+  "svg_sha256": "4137504ffa6a94d0822d66fbb27df89d94cbc63628a598277d7f3261ff575878",
+  "train_points": 2500,
+  "eval_points": 5,
+  "smoothing": false,
+  "eval_loss_used_for_checkpoint_selection": false,
+  "cuda_visible_devices": "",
+  "matplotlib_version": "3.11.2",
+  "source_sha256": "54ec9c7ad134bea221a493dc0719724e63c6a8933c4ed540f6928167e80bb8be"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-17T15:04:56.400979+00:00",
+  "scope": "Task 05 A1 default model metadata version check; no external model inference API",
+  "installed_versions": {
+    "ms_swift": "3.12.6",
+    "transformers": "4.57.6"
+  },
+  "a1": {
+    "console_path": "/root/userfolder/ctx-compressor/runs/batch_bench_20261117/batch_1/console.log",
+    "logged_check_model": true,
+    "codepath_capable_of_network_attempt": true,
+    "actual_request_dispatch_observed_in_a1": null,
+    "server_receipt_confirmed": null,
+    "uncertainty": "A1 ran with the default check_model=True. Source reaches HTTP transport for this local model directory; retained logs do not prove whether packets were dispatched or received. Exceptions are swallowed and Swift lowers ModelScope logging to CRITICAL."
+  },
+  "cpu_blocked_reproduction": {
+    "local_model_id": "unknown",
+    "actual_network_performed": false,
+    "method": "Patch requests.sessions.Session.request to record method/URL and raise before dispatch; also patch socket.socket.connect to deny network, then execute installed get_model_id_from_cache and check_local_model_is_latest against the preserved local model directory.",
+    "request_attempts_intercepted_before_dispatch": [
+      {
+        "method": "GET",
+        "url": "https://modelscope.cn/api/v1/models/unknown/revisions"
+      },
+      {
+        "method": "GET",
+        "url": "https://modelscope.cn/api/v1/models/unknown/repo/files"
+      }
+    ],
+    "explanation": "Absent .mdl metadata makes load_model_meta use model_id=unknown, not None. The installed latest-version checker has no local-directory early return."
+  },
+  "subsequent_workers": {
+    "batch_4_check_model": false,
+    "batch_8_check_model": false,
+    "formal_check_model": false,
+    "worker_path": "/root/workplace/ctx-compressor/scripts/train_sft_worker.py",
+    "worker_sha256_at_audit": "83f30bdb809cf420f362efae13bfac22bf122d69207bf5dbb8eca7e5eb2f4c13",
+    "guard": "TrainArguments explicitly sets check_model=False; future trainer initialization bypasses the metadata version check."
+  },
+  "source_files": [
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/trainers/arguments.py",
+      "sha256": "012f1bc3cefc7ba35a33f9b6ca8bca0a1cfc410bb0308c8e1f9495586cac42d3"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/trainers/mixin.py",
+      "sha256": "7dd3e9fc6a2feb191775181a0cae19c5f56e7cff54591b6ff9d522e44e4beb5d"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/modelscope/hub/check_model.py",
+      "sha256": "933212bc087c333b79f6aaa768ddd915e998c3657c6014d4daac24f60e780cf7"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/modelscope/hub/utils/caching.py",
+      "sha256": "1861f0bcbccf07a30e524ec05f42a654f3e18d5ea0ae391fdaee54daffa2cd4d"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/modelscope_hub/compat/hub_api.py",
+      "sha256": "8d0a8dbeb4170b379c9aa0134a9a44306101a9680eb551bd7060b3a9c648cdd3"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/modelscope_hub/_legacy_api.py",
+      "sha256": "63b6efb73b2692d01788cae6b2949617f1a0eb3cb184ec28242e98acccd9ad77"
+    }
+  ],
+  "unchanged": {
+    "model_files": true,
+    "installed_environments": true,
+    "old_task_artifacts": true
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "schema_version": 1,
+  "status": "passed_first_round_runtime_and_source_audit",
+  "started_at_utc": "2026-11-18T01:16:30.296162+00:00",
+  "created_at_utc": "2026-11-18T01:16:43.972308+00:00",
+  "scope": {
+    "strategy": "checkpoint-500",
+    "first_batch_only": true,
+    "n_records": 1494,
+    "full_strategy_evaluation_claimed": false,
+    "all_six_evaluations_claimed": false,
+    "final_checkpoint_selection_claimed": false
+  },
+  "run_at_read": {
+    "pid": 898553,
+    "status": "running",
+    "active_strategy": "checkpoint-500",
+    "checkpoint500_status": "running",
+    "checkpoint500_saved_steps": 12996,
+    "first_batch": {
+      "step": 0,
+      "n": 1494,
+      "seconds": 154.3006429800298,
+      "prompt_tokens": 3592749,
+      "generated_tokens": 14181
+    }
+  },
+  "record_prefix": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-500/steps.jsonl",
+    "prefix_lines": 1494,
+    "prefix_bytes": 19443321,
+    "prefix_sha256": "56ba24282f31df8678c66ea61c018c3e46eaf3adc67c2787e30e2643f0fbcaa7",
+    "prefix_rechecked_byte_identical": true,
+    "stat_before": {
+      "device": 2049,
+      "inode": 310259799,
+      "bytes": 197873603,
+      "mtime_ns": 1794964507589852358
+    },
+    "stat_after": {
+      "device": 2049,
+      "inode": 310259799,
+      "bytes": 208604614,
+      "mtime_ns": 1794964602795767634
+    },
+    "whole_file_frozen_or_hashed": false,
+    "note": "Only the first completed, fsynced 1494-row batch was read and verified twice; the full steps file may continue to grow."
+  },
+  "observed_runtime": {
+    "backend_log_evidence": [
+      "\u001b[1;36m(EngineCore_DP0 pid=898637)\u001b[0;0m INFO 11-18 06:53:53 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='/root/userfolder/ctx-compressor/models/Qwen3-1.7B', speculative_config=None, tokenizer='/root/userfolder/ctx-compressor/models/Qwen3-1.7B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=40960, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=20261118, served_model_name=/root/userfolder/ctx-compressor/models/Qwen3-1.7B, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={\"level\":0,\"debug_dump_path\":\"\",\"cache_dir\":\"\",\"backend\":\"\",\"custom_ops\":[],\"splitting_ops\":null,\"use_inductor\":true,\"compile_sizes\":[],\"inductor_compile_config\":{\"enable_auto_functionalized_v2\":false},\"inductor_passes\":{},\"cudagraph_mode\":0,\"use_cudagraph\":true,\"cudagraph_num_of_warmups\":0,\"cudagraph_capture_sizes\":[],\"cudagraph_copy_inputs\":false,\"full_cuda_graph\":false,\"use_inductor_graph_partition\":false,\"pass_config\":{},\"max_capture_size\":0,\"local_cache_dir\":null}",
+      "\u001b[1;36m(EngineCore_DP0 pid=898637)\u001b[0;0m INFO 11-18 06:53:56 [cuda.py:366] Using Flash Attention backend on V1 engine.",
+      "\u001b[1;36m(EngineCore_DP0 pid=898637)\u001b[0;0m INFO 11-18 06:53:57 [punica_selector.py:19] Using PunicaWrapperGPU.",
+      "2026-11-18T00:49:33.058325+00:00 checkpoint-500 step=0 n=1494 total=1494 seconds=154.301 invalid={}"
+    ],
+    "log_prefix": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_model_eval.log",
+      "prefix_bytes": 9946,
+      "prefix_sha256": "838484a99e07759b101b58e6d73c7bb4d88ae4aeb52d38b925fbd047ae6eee23"
+    },
+    "v1": true,
+    "flash_attention": true,
+    "punica_gpu": true,
+    "no_traceback_in_read_log_prefix": true,
+    "actual_engine_template_check": {
+      "reference": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+        "bytes": 40731,
+        "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "identity": {
+        "task": 0,
+        "step": 0,
+        "mode": "reselect",
+        "budget_tier": "tight",
+        "budget": 1876,
+        "split": "heldout"
+      },
+      "prompt_tokens": 1814,
+      "masked_input_tokens": 1810,
+      "empty_think_tokens": 4,
+      "exact_token_ids_match": true,
+      "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+    },
+    "actual_strategy_template_check": {
+      "identity": {
+        "task": 0,
+        "step": 0,
+        "mode": "reselect",
+        "budget_tier": "tight",
+        "budget": 1876,
+        "split": "heldout"
+      },
+      "exact_token_ids_match": true,
+      "runtime_echoed_exact_prompt_ids": true,
+      "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+      "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "first_batch_completed": true,
+    "distinct_raw_outputs_from_base_same_initial_states": 1494,
+    "difference_is_not_numerical_equivalence_or_adapter_correctness_test": true
+  },
+  "adapter_identity": {
+    "name": "checkpoint-500",
+    "lora_int_id": 1,
+    "id_derived_from_unchanged_runner_strategy_enumeration": true,
+    "lora_request_object_introspected_in_live_process": false,
+    "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500",
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500/adapter_config.json",
+        "bytes": 1078,
+        "sha256": "22819d97c9c3a02ef8dc4adc82b4670cf377bbca483d99a72f597195a6c2b26f"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-500/adapter_model.safetensors",
+        "bytes": 69782384,
+        "sha256": "9de5734a99ad1caca2f53602135e8f9e2ec619c2237e50d0355a09bd95a448aa"
+      }
+    ],
+    "current_files_equal_runner_startup_digests": true,
+    "rank": 16,
+    "alpha": 32
+  },
+  "source_inference": {
+    "conclusion": "The unchanged runner passes the native LoRARequest(name=checkpoint-500,id=1,real checkpoint path) on each generate call. Installed V1 code preserves the request and per-token ID, then requires LRU adapter loading and activation before forwarding tokens. Combined with successful actual checkpoint-500 generation, this supports actual native adapter activation without a silent base fallback. It is not a direct live-manager or GPU-weight readback.",
+    "required_path": [
+      "runner enumerate base=0 and checkpoint-500=1, then llm.generate(...,lora_request=adapter)",
+      "Processor -> EngineCoreRequest.lora_request -> CachedRequestState -> InputBatch ID/request maps",
+      "GPU model runner set_active_loras -> LoRAMapping -> LRUCacheWorkerLoRAManager._apply_adapters",
+      "add_adapter: missing ID invokes _load_adapter, validates PEFTHelper and reads actual local checkpoint; failure raises",
+      "activate_adapter: registered LoRA -> GPU slot -> module.set_lora(A,B); no free slot or invalid bias raises",
+      "initialization dummy adapters are removed by context exit and final warmup cleanup; remove_all_adapters clears registered/active adapters and slots"
+    ],
+    "activation_debug_line_present_in_log": false,
+    "activation_log_level": "DEBUG",
+    "source_evidence": [
+      {
+        "path": "/root/workplace/ctx-compressor/scripts/rollout_model.py",
+        "bytes": 31153,
+        "sha256": "649ecd4685a484d976a0f0015b7eb0780989f05809c157757176643097c7d7d5",
+        "line_start": 389,
+        "line_end": 421
+      },
+      {
+        "path": "/root/workplace/ctx-compressor/scripts/rollout_model.py",
+        "bytes": 31153,
+        "sha256": "649ecd4685a484d976a0f0015b7eb0780989f05809c157757176643097c7d7d5",
+        "line_start": 479,
+        "line_end": 508
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/engine/processor.py",
+        "bytes": 23913,
+        "sha256": "85f46c065ecb1cf8b2923883473146a729c3b0556356b726cc1dfac9df1f6123",
+        "line_start": 445,
+        "line_end": 454
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py",
+        "bytes": 195684,
+        "sha256": "ea6b7bfe4082349e80042df4801c7ef9e18c80d1c3879eeb6ac6e9c476303574",
+        "line_start": 591,
+        "line_end": 605
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py",
+        "bytes": 195684,
+        "sha256": "ea6b7bfe4082349e80042df4801c7ef9e18c80d1c3879eeb6ac6e9c476303574",
+        "line_start": 1259,
+        "line_end": 1261
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/gpu_input_batch.py",
+        "bytes": 38119,
+        "sha256": "ae4c75dbee6a6d768ce79a1bf1f148aa2590cabd510d0e01e486fad845393abd",
+        "line_start": 433,
+        "line_end": 444
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/gpu_input_batch.py",
+        "bytes": 38119,
+        "sha256": "ae4c75dbee6a6d768ce79a1bf1f148aa2590cabd510d0e01e486fad845393abd",
+        "line_start": 804,
+        "line_end": 825
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/lora_model_runner_mixin.py",
+        "bytes": 6972,
+        "sha256": "514affcf11c21d402e9c04453dbc3a9e3a4e4e5480387eac9d2dd3799869a6fd",
+        "line_start": 34,
+        "line_end": 83
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/lora_model_runner_mixin.py",
+        "bytes": 6972,
+        "sha256": "514affcf11c21d402e9c04453dbc3a9e3a4e4e5480387eac9d2dd3799869a6fd",
+        "line_start": 85,
+        "line_end": 116
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py",
+        "bytes": 195684,
+        "sha256": "ea6b7bfe4082349e80042df4801c7ef9e18c80d1c3879eeb6ac6e9c476303574",
+        "line_start": 3528,
+        "line_end": 3536
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/worker_manager.py",
+        "bytes": 11295,
+        "sha256": "faa80702dd418c9230da6d04f1671098ba38b1777b0deb23452acf6ae86d1eaf",
+        "line_start": 82,
+        "line_end": 143
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/worker_manager.py",
+        "bytes": 11295,
+        "sha256": "faa80702dd418c9230da6d04f1671098ba38b1777b0deb23452acf6ae86d1eaf",
+        "line_start": 227,
+        "line_end": 267
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/models.py",
+        "bytes": 35031,
+        "sha256": "669483e0f20c49abe95f719b60b8992a7b5178cd772b11850585663856719d72",
+        "line_start": 402,
+        "line_end": 439
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/models.py",
+        "bytes": 35031,
+        "sha256": "669483e0f20c49abe95f719b60b8992a7b5178cd772b11850585663856719d72",
+        "line_start": 468,
+        "line_end": 472
+      }
+    ],
+    "prefix_cache_source_receipt": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/sampling_config_cpu_check.json",
+      "bytes": 16652,
+      "sha256": "14db93671797149db3a6aeb0f2b7cf1f3bdc7dcff6c35bc1d899b3022835d8e3"
+    },
+    "prefix_cache_review_source_digests_unchanged": true,
+    "transformers_numeric_equivalence_test_performed": false
+  },
+  "first_batch_checks": {
+    "cells": {
+      "reselect|tight": 249,
+      "reselect|mid": 249,
+      "reselect|loose": 249,
+      "append|tight": 249,
+      "append|mid": 249,
+      "append|loose": 249
+    },
+    "independent_action_classification": {
+      "valid": 1494
+    },
+    "invalid_noops_verified": 0,
+    "finish_reasons": {
+      "stop": 1494
+    },
+    "prompt_tokens": 3592749,
+    "generated_tokens": 14181,
+    "input_truncations": 0,
+    "output_limit_hits": 0,
+    "all_runtime_prompt_ids_match": true,
+    "all_1494_prompts_reencoded_exactly": true,
+    "all_1494_output_id_decodes_equal_raw_output": true,
+    "all_state_action_classifications_match_independent_parser": true,
+    "first_prompt_equals_actual_training_prefix": true,
+    "n_valid": 1494,
+    "strict_parser_source": {
+      "path": "/root/workplace/ctx-compressor/scripts/audit_model_rollouts.py",
+      "bytes": 24274,
+      "sha256": "32350acc757094b26a06d9fe0b4b752a8d606df82c195a6ec9b10b75272c9f97"
+    }
+  },
+  "representatives_six_cells": [
+    {
+      "index": 0,
+      "trajectory_id": "checkpoint-500|reselect|tight|0",
+      "step": 0,
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ],
+      "generated_tokens": 9,
+      "finish_reason": "stop",
+      "invalid_reason": null,
+      "action_valid": true,
+      "decoded_ids_equal_raw_output": true,
+      "prompt_reencoded_exactly": true,
+      "input_truncated": false
+    },
+    {
+      "index": 249,
+      "trajectory_id": "checkpoint-500|reselect|mid|0",
+      "step": 0,
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ],
+      "generated_tokens": 9,
+      "finish_reason": "stop",
+      "invalid_reason": null,
+      "action_valid": true,
+      "decoded_ids_equal_raw_output": true,
+      "prompt_reencoded_exactly": true,
+      "input_truncated": false
+    },
+    {
+      "index": 498,
+      "trajectory_id": "checkpoint-500|reselect|loose|0",
+      "step": 0,
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ],
+      "generated_tokens": 9,
+      "finish_reason": "stop",
+      "invalid_reason": null,
+      "action_valid": true,
+      "decoded_ids_equal_raw_output": true,
+      "prompt_reencoded_exactly": true,
+      "input_truncated": false
+    },
+    {
+      "index": 747,
+      "trajectory_id": "checkpoint-500|append|tight|0",
+      "step": 0,
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ],
+      "generated_tokens": 9,
+      "finish_reason": "stop",
+      "invalid_reason": null,
+      "action_valid": true,
+      "decoded_ids_equal_raw_output": true,
+      "prompt_reencoded_exactly": true,
+      "input_truncated": false
+    },
+    {
+      "index": 996,
+      "trajectory_id": "checkpoint-500|append|mid|0",
+      "step": 0,
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ],
+      "generated_tokens": 9,
+      "finish_reason": "stop",
+      "invalid_reason": null,
+      "action_valid": true,
+      "decoded_ids_equal_raw_output": true,
+      "prompt_reencoded_exactly": true,
+      "input_truncated": false
+    },
+    {
+      "index": 1245,
+      "trajectory_id": "checkpoint-500|append|loose|0",
+      "step": 0,
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ],
+      "generated_tokens": 9,
+      "finish_reason": "stop",
+      "invalid_reason": null,
+      "action_valid": true,
+      "decoded_ids_equal_raw_output": true,
+      "prompt_reencoded_exactly": true,
+      "input_truncated": false
+    }
+  ],
+  "invalid_representatives": [],
+  "protected_runtime_scope": {
+    "gpu_process_started": false,
+    "gpu_query": false,
+    "cuda_initialized": false,
+    "new_generation": false,
+    "json_repair": false,
+    "code_or_parameters_changed": false,
+    "local_cpu_tokenizer_only": true,
+    "audited_rollout_prefix_unchanged": true
+  }
+}

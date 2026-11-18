@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-17T22:53:38.668008+00:00",
+  "pid": 898552,
+  "session_id": 898552,
+  "training_pid": 724147,
+  "previous_watcher_pid": 724148,
+  "previous_evaluation_pid": 892732,
+  "previous_engine_pid": 892830,
+  "nohup": true,
+  "detached": true,
+  "training_restarted": false,
+  "reason": "Zero-output missing-C-compiler initialization resolved with isolated validated toolchain",
+  "gpu_before": "1, GPU-4318dc90-4126-038a-9402-1323533db94f, 375, 0",
+  "wrapper_sha256": "4020ac2387b865381458c02fa7b9af0c68b605d2f7853e5f0670ec30da017ab6",
+  "runner_sha256": "649ecd4685a484d976a0f0015b7eb0780989f05809c157757176643097c7d7d5",
+  "toolchain_receipt_sha256": "758fedd877ca7d2c6f8cb6efe74e893658f047a13930d7c0a68df32f48f5073e"
+}

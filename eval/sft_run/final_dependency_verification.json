@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "status": "passed_dependency_verification",
+  "task_acceptance_status": "not_evaluated",
+  "started_at_utc": "2026-11-18T03:21:29.033889+00:00",
+  "finished_at_utc": "2026-11-18T03:21:41.098884+00:00",
+  "verification_seconds": 12.064995107008144,
+  "scope": {
+    "fixed_toolchain_root": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118",
+    "model_rollout_outputs_read": false,
+    "gpu_queried_or_initialized": false,
+    "model_runtime_imported": false,
+    "tests_rerun": false,
+    "new_generation": false,
+    "original_sources_or_manifest_modified": false,
+    "downloads_or_installs": false,
+    "meaning": "Additional dependency and historical-test evidence verification only; not terminal resource acceptance or whole-task completion."
+  },
+  "historical_test_verification": {
+    "receipt": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/final_tests_receipt.json",
+      "bytes": 8741,
+      "sha256": "b6a8e880596a71315a0a252e324fb27b3546659dedafc8ee66a3317474ed6b10"
+    },
+    "junit": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/tests.xml",
+      "bytes": 61402,
+      "sha256": "bda5d5317b32a1941e489f9f6d55423d09883e1fae3aff9a67b8227f5450b134"
+    },
+    "actual_junit_counts": {
+      "tests": 462,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "historical_python_sources": 82,
+    "all_82_source_hashes_match": true,
+    "source_files_stable_during_verification": true,
+    "source_sha256_mapping_digest": "dce50835361df673bc357defd3598f33adf9ee3d8f4449074e9889f4f267edb0",
+    "new_python_sources_since_tests": [
+      "scripts/inventory_sft_toolchain.py"
+    ]
+  },
+  "new_inventory_auditor_relationship": {
+    "source": {
+      "path": "/root/workplace/ctx-compressor/scripts/inventory_sft_toolchain.py",
+      "bytes": 10106,
+      "sha256": "a19529e1dfea7ccfa045f105e516679edaa38e0fb8941be10062e2656fb53d99"
+    },
+    "included_in_historical_462_tests": false,
+    "original_execution_evidence": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/toolchain_full_artifact_manifest.json",
+      "bytes": 1938386,
+      "sha256": "cfb4c85776f3201c2c9cf111ab4c278e4c57e283313cfa8e625dbadbb4f89e97"
+    },
+    "original_full_inventory_status": "additional_dependency_inventory_complete",
+    "validation_boundary": "The new pure-CPU inventory script was validated by its original actual full-tree execution and independent review; it is not retroactively counted in the 462 historical pytest cases. This new inline verifier independently rehashed and checked the produced tree manifest."
+  },
+  "selected_toolchain_sha256sum": {
+    "manifest": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/TOOLCHAIN_SHA256SUMS",
+      "bytes": 12579,
+      "sha256": "a00a7613441de7fb1ffd7bb07a09c2bcc6a8c49b1f9b79cb32841930657eb9dc"
+    },
+    "command": "cd /root/workplace/ctx-compressor && sha256sum -c eval/sft_run/TOOLCHAIN_SHA256SUMS",
+    "observed_exit_code": 0,
+    "observed_ok_entries": 74,
+    "observed_failed_entries": 0,
+    "execution": "Read-only SSH command executed immediately before this inline verification; stdout contained 74 OK lines.",
+    "ssh_tool_wall_seconds": 0.226637728
+  },
+  "full_tree_verification": {
+    "manifest": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/toolchain_full_artifact_manifest.json",
+      "bytes": 1938386,
+      "sha256": "cfb4c85776f3201c2c9cf111ab4c278e4c57e283313cfa8e625dbadbb4f89e97"
+    },
+    "regular_paths": 9887,
+    "symlinks": 230,
+    "directories_including_root": 784,
+    "unique_regular_inodes_hashed": 5522,
+    "all_bytes_and_sha256_match": true,
+    "all_symlink_targets_match": true,
+    "exact_path_and_kind_coverage": true,
+    "before_after_full_entry_sets_metadata_and_targets_equal": true,
+    "before_fd_check": {
+      "visible_pids_checked": 11,
+      "writable_toolchain_fds": [],
+      "permission_or_io_blind_spots": [],
+      "benign_vanished_process_or_fd_races": 1,
+      "scope": "Visible /proc FD-path and access-flag snapshots; not continuous writer tracing."
+    },
+    "after_fd_check": {
+      "visible_pids_checked": 11,
+      "writable_toolchain_fds": [],
+      "permission_or_io_blind_spots": [],
+      "benign_vanished_process_or_fd_races": 1,
+      "scope": "Visible /proc FD-path and access-flag snapshots; not continuous writer tracing."
+    },
+    "regular_path_logical_bytes": 2349284307,
+    "unique_inode_logical_bytes": 1744699797,
+    "unique_regular_inode_allocated_bytes": 1758597120,
+    "size_boundary": "These describe the existing external dependency tree, not root-disk growth; path logical bytes count hardlinked paths repeatedly."
+  }
+}

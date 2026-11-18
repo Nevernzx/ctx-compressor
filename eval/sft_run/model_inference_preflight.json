@@ -1,0 +1,122 @@
+{
+  "status": "ok",
+  "created_at_utc": "2026-11-17T15:00:19.797267+00:00",
+  "template_check": {
+    "reference": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+      "bytes": 40731,
+      "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "prompt_tokens": 1814,
+    "masked_input_tokens": 1810,
+    "empty_think_tokens": 4,
+    "exact_token_ids_match": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+  },
+  "context_check": {
+    "method": "all historical paragraphs retained + current returns, both modes, budget=5628",
+    "n_tasks": 249,
+    "n_saved_steps": 2326,
+    "n_prompts": 4652,
+    "max_union_prompt_tokens": 34489,
+    "worst": {
+      "task": 233,
+      "step": 12,
+      "union_fragments": 259
+    },
+    "max_tokens": 256,
+    "max_model_len": 40960,
+    "remaining_tokens_at_union_max": 6215,
+    "every_actual_prompt_checked_before_generation": true,
+    "input_truncations": 0
+  },
+  "vllm_cpu_check": {
+    "versions": {
+      "vllm": "0.11.0",
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2"
+    },
+    "qwen3_supports_lora": true,
+    "qwen3_source": {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/model_executor/models/qwen3.py",
+      "bytes": 13140,
+      "sha256": "ebcfa01f530ecd7c123cdddc6085d015dd809cb0a0189887a09f8a17a11f00ec"
+    },
+    "engine_args": [
+      "enable_lora",
+      "max_lora_rank",
+      "max_loras",
+      "max_cpu_loras"
+    ],
+    "generate_accepts_lora_request": true,
+    "request_id": 1,
+    "sampling_params": "SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0, top_p=1.0, top_k=0, min_p=0.0, seed=20261118, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=False, max_tokens=256, min_tokens=0, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, structured_outputs=None, extra_args=None)",
+    "cuda_initialized": false,
+    "engine_created": false
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "input_files": {
+    "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+      "bytes": 62323855,
+      "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+    },
+    "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+      "bytes": 83690752,
+      "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json",
+      "bytes": 9732,
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json",
+      "bytes": 726,
+      "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+    }
+  },
+  "expected_strategies": [
+    "base",
+    "checkpoint-500",
+    "checkpoint-1000",
+    "checkpoint-1500",
+    "checkpoint-2000",
+    "checkpoint-2500"
+  ],
+  "expected_trajectories_per_strategy": 1494,
+  "expected_outputs_per_strategy": 13956
+}

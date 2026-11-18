@@ -1,0 +1,453 @@
+{
+  "schema": "task05_gpu_accounting_observation_v1",
+  "utc": "2026-11-18T01:42:51.239621+00:00",
+  "status": "observation_only",
+  "gpu_index": 1,
+  "gpu_uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+  "task_engine_pid": 898637,
+  "task_pid_exists": {
+    "898552": true,
+    "898553": true,
+    "898637": true
+  },
+  "resource_log_prefix": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts/model_resources.jsonl",
+    "bytes": 213000,
+    "sha256": "7051917f99f332ea6b7a628e571c5079ee708613bac4b65e09f1e3d1cef3ad7c",
+    "lines": 507
+  },
+  "recent_resource_samples": [
+    {
+      "utc": "2026-11-18T01:36:05.976072+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35081,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:36:26.019070+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35081,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 0
+      }
+    },
+    {
+      "utc": "2026-11-18T01:36:46.060741+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35081,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 96
+      }
+    },
+    {
+      "utc": "2026-11-18T01:37:06.105493+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35574,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 94
+      }
+    },
+    {
+      "utc": "2026-11-18T01:37:26.149797+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 36366,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 99
+      }
+    },
+    {
+      "utc": "2026-11-18T01:37:46.192618+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 95
+      }
+    },
+    {
+      "utc": "2026-11-18T01:38:06.239020+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 92
+      }
+    },
+    {
+      "utc": "2026-11-18T01:38:26.283003+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932176695296,
+        "available_bytes": 22520520704,
+        "df_raw": "        Used       Avail\n932176695296 22520520704\n"
+      },
+      "root_delta_bytes": 736243712,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 36414,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:38:46.325511+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181061632,
+        "available_bytes": 22516154368,
+        "df_raw": "        Used       Avail\n932181061632 22516154368\n"
+      },
+      "root_delta_bytes": 740610048,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:39:06.370932+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181061632,
+        "available_bytes": 22516154368,
+        "df_raw": "        Used       Avail\n932181061632 22516154368\n"
+      },
+      "root_delta_bytes": 740610048,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:39:26.415059+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181061632,
+        "available_bytes": 22516154368,
+        "df_raw": "        Used       Avail\n932181061632 22516154368\n"
+      },
+      "root_delta_bytes": 740610048,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 36366,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:39:46.460869+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181061632,
+        "available_bytes": 22516154368,
+        "df_raw": "        Used       Avail\n932181061632 22516154368\n"
+      },
+      "root_delta_bytes": 740610048,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35574,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:40:06.504179+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 0
+      }
+    },
+    {
+      "utc": "2026-11-18T01:40:26.593466+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 98
+      }
+    },
+    {
+      "utc": "2026-11-18T01:40:46.639874+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 36366,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:41:06.683178+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 96
+      }
+    },
+    {
+      "utc": "2026-11-18T01:41:26.725771+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 46307,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:41:46.768444+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35898,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:42:06.810352+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 36366,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    },
+    {
+      "utc": "2026-11-18T01:42:26.852418+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35822,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 95
+      }
+    },
+    {
+      "utc": "2026-11-18T01:42:46.895726+00:00",
+      "phase": "monitor",
+      "root_df": {
+        "used_bytes": 932181082112,
+        "available_bytes": 22516133888,
+        "df_raw": "        Used       Avail\n932181082112 22516133888\n"
+      },
+      "root_delta_bytes": 740630528,
+      "root_peak_delta_bytes": 783495168,
+      "root_limit_bytes": 300000000,
+      "root_over_limit": true,
+      "root_limit_event": null,
+      "gpu": {
+        "index": 1,
+        "memory_used_mib": 35714,
+        "memory_total_mib": 49140,
+        "utilization_gpu": 100
+      }
+    }
+  ],
+  "current_gpu_csv": "1, GPU-4318dc90-4126-038a-9402-1323533db94f, 36366 MiB, 49140 MiB, 95 %",
+  "current_gpu1_compute_apps_csv": [
+    "898637, VLLM::EngineCore, GPU-4318dc90-4126-038a-9402-1323533db94f, 34700 MiB",
+    "966795, /root/anaconda3/envs/medsam3/bin/python, GPU-4318dc90-4126-038a-9402-1323533db94f, 1280 MiB"
+  ],
+  "interpretation": [
+    "Current per-process accounting includes the task engine and a separate non-task process.",
+    "Only whole-device memory was sampled at the earlier peak; its complete per-process attribution is unknown.",
+    "No process was killed, paused or reconfigured. No hyperparameters were changed.",
+    "GPU occupancy does not identify the source of the independent raw root-disk delta."
+  ],
+  "task_acceptance_status": "not_evaluated"
+}

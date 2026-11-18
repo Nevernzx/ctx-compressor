@@ -1,0 +1,261 @@
+import copy
+import json
+import random
+
+import numpy as np
+import pytest
+
+from src.build_traj import (
+    apply_action, build_corpus, hop_queries, make_oracle_noise_policy,
+    make_sample, oracle_action, render_input, render_paragraph,
+    render_target, rollout, sample_tasks, simulate_task,
+)
+
+
+def example():
+    return {
+        "id": "synthetic-3hop", "question": "Where was the river explorer born?",
+        "paragraphs": [
+            {"idx": 7, "title": "Explorer", "paragraph_text": "Ada explored River Red.", "is_supporting": True},
+            {"idx": 3, "title": "Ada", "paragraph_text": "Ada was born in York.", "is_supporting": True},
+            {"idx": 8, "title": "York", "paragraph_text": "York lies in England.", "is_supporting": True},
+        ],
+        "question_decomposition": [
+            {"id": 1, "question": "Who explored River Red?", "answer": "Ada", "paragraph_support_idx": 7},
+            {"id": 2, "question": "#1 >> birthplace", "answer": "York", "paragraph_support_idx": 3},
+            {"id": 3, "question": "Where is #2 and who is #1?", "answer": "England", "paragraph_support_idx": 8},
+        ],
+    }
+
+
+def keymap(ex):
+    return {(p["title"], p["paragraph_text"]): i for i, p in enumerate(ex["paragraphs"])}
+
+
+def test_placeholder_replacement_uses_previous_answers_and_actual_idx():
+    ex = example()
+    assert hop_queries(ex, keymap(ex)) == [
+        ("Who explored River Red?", 0),
+        ("Ada >> birthplace", 1),
+        ("Where is York and who is Ada?", 2),
+    ]
+
+
+@pytest.mark.parametrize("query", ["#0 birthplace", "#2 birthplace", "#99 birthplace"])
+def test_out_of_range_reference_is_preserved(query):
+    ex = example()
+    ex["question_decomposition"][1]["question"] = query
+    stats = {}
+    assert hop_queries(ex, keymap(ex), stats=stats)[1] == (query, 1)
+    assert stats["preserved_reference_count"] == 1
+
+
+@pytest.mark.parametrize("support", [None, "", 999])
+def test_invalid_support_is_rejected(support):
+    ex = example()
+    ex["question_decomposition"][0]["paragraph_support_idx"] = support
+    with pytest.raises(ValueError):
+        hop_queries(ex, keymap(ex))
+
+
+def test_missing_support_is_rejected():
+    ex = example()
+    del ex["question_decomposition"][0]["paragraph_support_idx"]
+    with pytest.raises(ValueError):
+        hop_queries(ex, keymap(ex))
+
+
+def test_corpus_dedup_is_exact_title_and_body_and_token_count_includes_title():
+    ex = example()
+    duplicate = copy.deepcopy(ex)
+    duplicate["paragraphs"].append({"idx": 9, "title": "Other title", "paragraph_text": "Ada explored River Red."})
+    corpus, _, keys = build_corpus([ex, duplicate], len)
+    assert len(corpus) == len(keys) == 4
+    for (title, body), pid in keys.items():
+        assert corpus[pid]["text"] == render_paragraph(title, body)
+        assert corpus[pid]["ntok"] == len(render_paragraph(title, body))
+
+
+def state(mode="reselect"):
+    return {"questions": ["Q"], "mode": mode, "budget": 10,
+            "kept_ids": [0], "new_ids": [1, 2, 3],
+            "ntok": {0: 4, 1: 6, 2: 3, 3: 3},
+            "text": {i: f"paragraph {i}" for i in range(4)}, "gold": [0, 1, 2, 3]}
+
+
+@pytest.mark.parametrize("mode", ["reselect", "append"])
+def test_oracle_selects_shortest_evidence_first(mode):
+    s = state(mode)
+    action = oracle_action(s)
+    assert action == {"add": [2, 3], "drop": []}
+    assert apply_action(s, action) == [0, 2, 3]
+
+
+def test_reselect_tie_prefers_already_kept_evidence():
+    s = state()
+    s.update(budget=4, kept_ids=[3], new_ids=[0, 1, 2], gold=[0, 3])
+    s["ntok"][3] = 4
+    assert oracle_action(s) == {"add": [], "drop": []}
+
+
+def test_reselect_removes_non_evidence_while_append_keeps_it():
+    s = state()
+    s["gold"] = [2, 3]
+    assert oracle_action(s) == {"add": [2, 3], "drop": [0]}
+    s["mode"] = "append"
+    assert oracle_action(s) == {"add": [2, 3], "drop": []}
+
+
+@pytest.mark.parametrize("mode", ["reselect", "append"])
+@pytest.mark.parametrize("seed", list(range(10)))
+def test_oracle_is_legal_on_many_feasible_random_states(mode, seed):
+    rng = random.Random(seed)
+    noise = make_oracle_noise_policy(seed)
+    for _ in range(200):
+        n = rng.randint(1, 60)
+        order = list(range(n))
+        rng.shuffle(order)
+        split = rng.randrange(n + 1)
+        ntok = {i: rng.randint(1, 400) for i in order}
+        kept, new = order[:split], order[split:]
+        used = sum(ntok[i] for i in kept)
+        s = {"mode": mode, "budget": max(1, used + rng.randint(0, 1000)),
+             "kept_ids": kept, "new_ids": new, "ntok": ntok,
+             "gold": [i for i in order if rng.random() < 0.45]}
+        keep = apply_action(s, oracle_action(s))
+        assert keep is not None
+        assert sum(ntok[i] for i in keep) <= s["budget"]
+        if mode == "reselect":
+            noisy_keep = apply_action(s, noise(s))
+            assert noisy_keep is not None
+            assert sum(ntok[i] for i in noisy_keep) <= s["budget"]
+
+
+def synthetic_rollout(mode, policy=oracle_action):
+    corpus = [{"title": f"title {i}", "text": f"text {i}", "ntok": 20 + i} for i in range(20)]
+    rng = random.Random(17)
+    steps = [{"gold": i, "new": [i] + rng.sample(list(range(i + 1, 20)), 3)} for i in range(12)]
+    return rollout(["Q1", "Q2", "Q3", "Q4"], steps, corpus, 140, mode, policy)
+
+
+@pytest.mark.parametrize("mode", ["reselect", "append"])
+def test_complete_rollout_respects_budget_and_append_prefix(mode):
+    samples = synthetic_rollout(mode)
+    previous = []
+    for s in samples:
+        assert apply_action(s, s["sft_target"]) is not None
+        assert sum(s["ntok"][i] for i in s["keep_after"]) <= s["budget"]
+        if mode == "append":
+            assert s["keep_after"][:len(previous)] == previous
+        previous = s["keep_after"]
+
+
+def test_noise_rollout_keeps_clean_targets_and_teaches_drop():
+    corpus = [{"title": str(i), "text": str(i), "ntok": 10} for i in range(8)]
+    steps = [{"gold": 0, "new": [0, 2, 3, 4]}, {"gold": 1, "new": [1, 5, 6, 7]}]
+    samples = rollout(["Q"], steps, corpus, 100, "reselect", make_oracle_noise_policy(31))
+    assert samples[0]["sft_target"] == oracle_action(samples[0])
+    assert len(samples[0]["keep_after"]) > 1
+    assert samples[1]["sft_target"] == oracle_action(samples[1])
+    assert samples[1]["sft_target"]["drop"]
+    for s in samples:
+        assert sum(s["ntok"][i] for i in s["keep_after"]) <= s["budget"]
+
+
+def test_invalid_policy_action_preserves_previous_keep():
+    calls = 0
+
+    def policy(s):
+        nonlocal calls
+        calls += 1
+        return oracle_action(s) if calls == 1 else {"add": [999], "drop": []}
+
+    samples = synthetic_rollout("reselect", policy)
+    assert samples[0]["keep_after"]
+    assert all(s["keep_after"] == s["kept_ids"] == samples[0]["keep_after"] for s in samples[1:])
+
+
+def test_noise_in_append_is_exactly_pure_oracle():
+    s = state("append")
+    s["gold"] = [0]
+    s["budget"] = 100
+    assert make_oracle_noise_policy(9)(s) == oracle_action(s)
+
+
+def test_noise_is_seeded_adds_at_most_three_and_can_add_zero():
+    s = state()
+    s["gold"] = [0]
+    s["budget"] = 100
+    first, second = make_oracle_noise_policy(44), make_oracle_noise_policy(44)
+    for _ in range(20):
+        a, b = first(s), second(s)
+        assert a == b
+        assert 1 <= len(a["add"]) <= 3
+        assert not set(a["add"]) & set(s["gold"])
+    s["budget"] = 4
+    assert first(s) == oracle_action(s) == {"add": [], "drop": []}
+
+
+@pytest.mark.parametrize("action", [[], {"add": [[1]]}, {"add": [True]}, {"add": None}])
+def test_apply_action_rejects_malformed_inputs_without_raising(action):
+    assert apply_action(state(), action) is None
+
+
+def test_stable_ids_when_evidence_disappears_and_returns():
+    corpus = [{"title": str(i), "text": str(i), "ntok": 10} for i in range(3)]
+    lid = {}
+    first = make_sample(["Q"], [], [2, 0], {0}, corpus, 100, "reselect", lid)
+    first_id = lid[2]
+    make_sample(["Q"], [0], [1], {0, 1}, corpus, 100, "reselect", lid)
+    third = make_sample(["Q"], [0, 1], [2], {0, 1}, corpus, 100, "reselect", lid)
+    assert first_id in first["new_ids"]
+    assert third["new_ids"] == [first_id]
+    assert len(set(lid.values())) == len(lid) == 3
+
+
+def test_gold_only_counts_seen_evidence_still_available():
+    corpus = [{"title": str(i), "text": str(i), "ntok": 10} for i in range(4)]
+    s = make_sample(["Q"], [0], [1, 2], {0, 1, 3}, corpus, 100, "reselect", {0: 0, 3: 1})
+    assert set(s["gold"]) == {0, 2}
+
+
+class FakeIndex:
+    def retrieve(self, queries, k, **kwargs):
+        return np.array([[0, 1][:k]]), np.array([[1.0, 0.5][:k]])
+
+
+def test_simulate_injects_missing_gold_and_reports_natural_hit_deterministically():
+    ex = example()
+    a = simulate_task([ex], FakeIndex(), keymap(ex), top_n=2, seed=12)
+    b = simulate_task([ex], FakeIndex(), keymap(ex), top_n=2, seed=12)
+    assert a == b
+    assert len(a) == 3
+    assert [s["natural_hit"] for s in a] == [True, True, False]
+    assert all(s["gold"] in s["new"] and len(s["new"]) == 2 for s in a)
+    assert a[1]["original_query"] == "#1 >> birthplace"
+    assert a[1]["query"] == "Ada >> birthplace"
+
+
+def test_seeded_task_sampling_is_unique_and_four_questions_per_task():
+    examples = [{"id": str(i), "question": f"Q{i}"} for i in range(30)]
+    tasks = sample_tasks(examples, n_tasks=3, seed=19)
+    assert tasks == sample_tasks(examples, n_tasks=3, seed=19)
+    assert all(len(t) == 4 for t in tasks)
+    assert len({ex["id"] for t in tasks for ex in t}) == 12
+
+
+def test_render_input_includes_questions_groups_and_token_accounting():
+    s = state()
+    s["questions"] = ["Unique question A", "Unique question B"]
+    rendered = render_input(s)
+    for value in ["Unique question A", "Unique question B", "reselect", "10", "4", "已保留", "新返回"]:
+        assert value in rendered
+    assert rendered.index("已保留") < rendered.index("新返回")
+    assert all(text in rendered for text in s["text"].values())
+
+
+def test_target_is_compact_json_with_fixed_key_order():
+    s = state()
+    s["sft_target"] = {"drop": [0], "add": [2, 3]}
+    assert render_target(s) == '{"add":[2,3],"drop":[0]}'
+    assert json.loads(render_target(s)) == s["sft_target"]

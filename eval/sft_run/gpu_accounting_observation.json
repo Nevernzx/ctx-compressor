@@ -1,0 +1,7 @@
+{
+  "utc": "2026-11-17T19:08:23.931085+00:00",
+  "training_pid": 724147,
+  "gpu_query": "1, GPU-4318dc90-4126-038a-9402-1323533db94f, 10063, 49140, 100",
+  "visible_compute_processes": "724147, GPU-4318dc90-4126-038a-9402-1323533db94f, 7146",
+  "interpretation": "Whole-card and visible per-process NVML accounting differ. No attribution of the difference is established, and no amount is subtracted from measured peaks. No process was signaled or configuration changed."
+}

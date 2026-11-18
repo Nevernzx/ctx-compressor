@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-17T20:50:43.303084+00:00",
+  "status": "fixture_tests_passed",
+  "acceptance_status": "not_evaluated_no_terminal_export_executed",
+  "implementation_files": [
+    {
+      "path": "scripts/export_sft_resource_failure.py",
+      "bytes": 7161,
+      "sha256": "801bfb540de322dfd682ade613ec575c175e07daa9015484761bbc1ad4fab9f4"
+    },
+    {
+      "path": "tests/test_export_sft_resource_failure.py",
+      "bytes": 9771,
+      "sha256": "58b003f9f4cd1eaf66a331c6016d5a7bfa3c850441a4b5396334b11eb9f4e23e"
+    }
+  ],
+  "unchanged_existing_sources": [
+    {
+      "path": "scripts/finalize_sft_artifacts.py",
+      "bytes": 22992,
+      "sha256": "50b6e3fb4e4ad1de8ecc70ce5d5d1cd4c4beaaa8f13e65418a15ee69f4590570",
+      "matches_prior_readonly_review": true
+    },
+    {
+      "path": "scripts/sft_run_report.py",
+      "bytes": 43309,
+      "sha256": "54ec9c7ad134bea221a493dc0719724e63c6a8933c4ed540f6928167e80bb8be",
+      "matches_prior_readonly_review": true
+    },
+    {
+      "path": "scripts/checksums_task05.py",
+      "bytes": 13387,
+      "sha256": "1a3d973c5261ec7f6d528ce848e777506791da8a311d59da073ea52c642418b8",
+      "matches_prior_readonly_review": true
+    },
+    {
+      "path": "scripts/checksums_task04.py",
+      "bytes": 13792,
+      "sha256": "2c5547400870c3cccd8b25607aa94c16ace0f1475b452ce5529688dce0b0914b",
+      "matches_prior_readonly_review": true
+    }
+  ],
+  "latest_test_result": {
+    "n": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "pytest_exit_code": 0,
+    "elapsed_seconds_reported": 0.96,
+    "xml": {
+      "path": "eval/sft_run/resource_failure_export_tests.xml",
+      "bytes": 4319,
+      "sha256": "a1da237bad8f7548f99a29771a8ad01e77fe2bf2470bef9a1a17c4d796e6b458"
+    }
+  },
+  "test_command": "CUDA_VISIBLE_DEVICES='' TMPDIR=/root/userfolder/ctx-compressor/cache/tmp .conda/envs/ctxc/bin/python -B -m pytest -q -p no:cacheprovider tests/test_export_sft_resource_failure.py --basetemp=/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_retry_20261118 --junitxml=eval/sft_run/resource_failure_export_tests.xml",
+  "working_directory": "/root/workplace/ctx-compressor",
+  "test_environment": {
+    "python": "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "cuda_visible_devices": "",
+    "temporary_directories_external": true,
+    "pytest_cache_disabled": true,
+    "subprocess_queries_forbidden_by_autouse_fixture": true,
+    "proc_snapshots_mocked": true,
+    "gpu_initialization": false,
+    "real_inventory_execution": false,
+    "fixtures_only": true
+  },
+  "initial_test_attempt": {
+    "result": {
+      "n": 26,
+      "failures": 13,
+      "errors": 0,
+      "skipped": 0
+    },
+    "xml": {
+      "path": "eval/sft_run/resource_failure_export_tests_initial.xml",
+      "bytes": 43290,
+      "sha256": "4a6ffcee4d579c99da08cad5c91cf42569b0ae6e07004791a6a61b9c331d262b"
+    },
+    "cause": "Test mock process_snapshot accepted only pid, while original verify_processes also passes proc_root. Only the test mock signature was corrected; initial fixture artifacts and XML retained.",
+    "basetemp": "/root/userfolder/ctx-compressor/cache/tmp/pytest_task05_resource_failure_export_20261118"
+  },
+  "covered_behaviors": [
+    "All non-root gates precede the unique raw-root failure check, including exact task compute PIDs; changed threshold, wrong GPU identity/history, active PID and >=2048 MiB are rejected.",
+    "Raw delta 299999999 or 300000000 refuses before inventory with instruction to use strict finalizer; 300000001 produces failed evidence without subtraction.",
+    "B/C incomplete or watcher running and archived zero-step A8 wrong GPU evidence block before inventory.",
+    "After inventory, root recovery, GPU occupancy/identity, exact compute PID, active PID, watcher change, valid-but-changed GPU history and changed PID sources all block publication.",
+    "A stable failed export can be rerun with identical file inventory; checksums verify_final_artifacts slow fixture coverage passes.",
+    "Proven unrelated reused PID remains excluded using original classification semantics.",
+    "Report retains all five complete checkpoint results and selects checkpoint500 for a fixture tie while overall status stays failed.",
+    "CLI returns1 for successful failed-evidence export and refused export; export_complete distinguishes the two."
+  ],
+  "terminal_cli_not_executed": "CUDA_VISIBLE_DEVICES='' .conda/envs/ctxc/bin/python -B scripts/export_sft_resource_failure.py",
+  "terminal_cli_expected_result": {
+    "exit_code": 1,
+    "status": "failed",
+    "export_complete": true,
+    "task_acceptance_status": "failed",
+    "note": "Only when all non-root gates pass and both before/after raw root deltas exceed original 300000000; otherwise no newly published outputs and export_complete=false, except partial I/O failure may leave the first failed receipt written."
+  },
+  "outputs_when_eventually_authorized": [
+    "eval/sft_run/final_resource_check.json",
+    "eval/sft_run/external_artifact_manifest.json"
+  ],
+  "independent_review_requested_from": "task05_eval",
+  "constraints": {
+    "strict_finalizer_modified": false,
+    "training_or_inference_modified": false,
+    "old_artifacts_modified": false,
+    "final_sha_written": false,
+    "terminal_gpu_queried": false,
+    "terminal_inventory_executed": false
+  }
+}

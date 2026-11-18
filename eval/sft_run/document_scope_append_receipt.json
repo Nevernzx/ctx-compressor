@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-17T18:32:11.516002+00:00",
+  "note_append_offset": 27958,
+  "handoff_append_offset": 19310,
+  "task04_document_prefixes_verified": true,
+  "quoted_blocks_exact": true,
+  "task_spec_sha256": "31c6916b1be40fad48465f379c87dc794935684e34b5944eeb29e6066851f7d2",
+  "snapshot_step": 1125,
+  "snapshot_samples": 18000
+}

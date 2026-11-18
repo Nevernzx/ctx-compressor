@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "task": "TASK_05",
+  "created_utc": "2026-11-17T14:52:36.204680+00:00",
+  "run_dir": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117",
+  "protocol": {
+    "rng": "random.Random",
+    "seed": 20261118,
+    "training_rng_instances": 1,
+    "mode_order": [
+      "reselect",
+      "append"
+    ],
+    "task_order": "ascending numeric task ID",
+    "within_task_order": "ascending (step, source_line_1based)",
+    "minimum_per_task": 2,
+    "training_samples_per_mode": 10000,
+    "task_draw": "random.sample(group, min(2, len(group))), including groups with <= 2 rows",
+    "fill_draw": "uniform random.sample from unselected rows in ascending source line order",
+    "output_order": "ascending source line; source bytes unchanged",
+    "eval_loss": {
+      "seed": 20261118,
+      "separate_rng": true,
+      "samples": 1000,
+      "draw": "uniform random.sample from all heldout rows in ascending source line order",
+      "used_for_checkpoint_selection": false,
+      "purpose": "fixed diagnostic loss curve only"
+    }
+  },
+  "sources": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/sft/train.jsonl",
+      "lines": 88562,
+      "bytes": 1169658306,
+      "sha256": "34c2179e3b9d42d67ae8e129dc72f414712e92fb13411dd9652936db42837004",
+      "full_sha256_verified": true,
+      "task_count": 4735,
+      "full_sha256_verified_after_copy": true
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/sft/heldout.jsonl",
+      "lines": 4652,
+      "bytes": 61561401,
+      "sha256": "7cb660ddb328f932cca4932613caf620cbbd113f67bd29be5d11eea784e20613",
+      "full_sha256_verified": true,
+      "task_count": 249,
+      "full_sha256_verified_after_copy": true
+    }
+  },
+  "source_manifest": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_prep/sft_data_stats.json",
+    "sha256": "f0c95181b7602a99c06b44069780252c6a7d5b4d770ee2089b4dcf2a5d4db7af"
+  },
+  "files": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train_20k.jsonl",
+      "bytes": 263034720,
+      "lines": 20000,
+      "sha256": "4ac15328d12398fe9dc26ef90bff603e7b338d2ab4992eb26da3ed67c87152b0"
+    },
+    "eval_loss": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_eval_loss_1k.jsonl",
+      "bytes": 13034765,
+      "lines": 1000,
+      "sha256": "f4a738129e7bece5a288d7105187ca08f9a512a652d9e57334c6f0ac5585d7bb"
+    },
+    "sample_ids": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/sample_ids.json",
+      "bytes": 8728052,
+      "sha256": "b3fad1a224831bf52ce55c98aaf9cd264e2065fdf8ab19ad332afa9434617451"
+    }
+  },
+  "statistics": {
+    "train": {
+      "samples": 20000,
+      "unique_tasks": 4735,
+      "by_tier": {
+        "tight": 6669,
+        "mid": 6556,
+        "loose": 6775
+      },
+      "by_mode": {
+        "reselect": {
+          "samples": 10000,
+          "tasks": 4735,
+          "min_samples_per_task": 2,
+          "max_samples_per_task": 5,
+          "by_tier": {
+            "tight": 3326,
+            "mid": 3284,
+            "loose": 3390
+          }
+        },
+        "append": {
+          "samples": 10000,
+          "tasks": 4735,
+          "min_samples_per_task": 2,
+          "max_samples_per_task": 5,
+          "by_tier": {
+            "tight": 3343,
+            "mid": 3272,
+            "loose": 3385
+          }
+        }
+      },
+      "tokens": {
+        "n_input_tokens": {
+          "sum": 64509209,
+          "max": 8098
+        },
+        "n_target_tokens": {
+          "sum": 357899,
+          "max": 30
+        },
+        "total_tokens": {
+          "sum": 64867108,
+          "max": 8121
+        },
+        "loss_tokens": {
+          "sum": 357899,
+          "max": 30
+        }
+      }
+    },
+    "eval_loss": {
+      "samples": 1000,
+      "unique_tasks": 246,
+      "by_tier": {
+        "tight": 287,
+        "mid": 296,
+        "loose": 417
+      },
+      "by_mode": {
+        "reselect": {
+          "samples": 500,
+          "tasks": 222,
+          "min_samples_per_task": 1,
+          "max_samples_per_task": 6,
+          "by_tier": {
+            "tight": 147,
+            "mid": 136,
+            "loose": 217
+          }
+        },
+        "append": {
+          "samples": 500,
+          "tasks": 223,
+          "min_samples_per_task": 1,
+          "max_samples_per_task": 5,
+          "by_tier": {
+            "tight": 140,
+            "mid": 160,
+            "loose": 200
+          }
+        }
+      },
+      "tokens": {
+        "n_input_tokens": {
+          "sum": 3196268,
+          "max": 6969
+        },
+        "n_target_tokens": {
+          "sum": 17915,
+          "max": 27
+        },
+        "total_tokens": {
+          "sum": 3214183,
+          "max": 6989
+        },
+        "loss_tokens": {
+          "sum": 17915,
+          "max": 27
+        }
+      }
+    }
+  },
+  "validation": {
+    "original_jsonl_bytes_preserved": true,
+    "source_sha256_verified_twice": true,
+    "models_loaded": false,
+    "cuda_visible_devices": "",
+    "training_tasks_per_mode": 4735,
+    "eval_loss_used_for_checkpoint_selection": false
+  },
+  "elapsed_seconds": 11.311670352006331,
+  "python_version": "3.11.18 (main, Oct 26 2026, 18:19:35) [GCC 14.3.0]",
+  "code_sha256": {
+    "scripts/sample_sft_subset.py": "5f10ffd72ecd7cb816b62c10798f3d830e898fb65effe6583ac71dbe411e269e"
+  }
+}

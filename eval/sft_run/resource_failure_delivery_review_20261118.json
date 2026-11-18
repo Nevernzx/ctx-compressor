@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-17T20:45:27.937075+00:00",
+  "status": "readonly_review_complete",
+  "final_acceptance_status": "not_evaluated_training_and_rollouts_still_in_progress",
+  "scenario": "B and C have genuinely completed, all recorded task/watcher processes have exited, GPU 1 is below 2048 MiB, but terminal raw root df growth still exceeds 300000000 bytes.",
+  "trigger": {
+    "source": "parent-provided observation; no new terminal snapshot taken by this review",
+    "utc": "2026-11-17T20:42:47Z",
+    "training_step": 1779,
+    "raw_root_delta_bytes": 302219264,
+    "threshold_bytes": 300000000
+  },
+  "scope": {
+    "source_read_only": true,
+    "source_modified": false,
+    "finalizer_executed": false,
+    "inventory_executed": false,
+    "tests_executed": false,
+    "gpu_used": false,
+    "filesystem_cleanup": false,
+    "only_output": "this new review JSON"
+  },
+  "reviewed_sources": [
+    {
+      "path": "scripts/finalize_sft_artifacts.py",
+      "bytes": 22992,
+      "sha256": "50b6e3fb4e4ad1de8ecc70ce5d5d1cd4c4beaaa8f13e65418a15ee69f4590570"
+    },
+    {
+      "path": "scripts/sft_run_report.py",
+      "bytes": 43309,
+      "sha256": "54ec9c7ad134bea221a493dc0719724e63c6a8933c4ed540f6928167e80bb8be"
+    },
+    {
+      "path": "scripts/checksums_task05.py",
+      "bytes": 13387,
+      "sha256": "1a3d973c5261ec7f6d528ce848e777506791da8a311d59da073ea52c642418b8"
+    },
+    {
+      "path": "scripts/checksums_task04.py",
+      "bytes": 13792,
+      "sha256": "2c5547400870c3cccd8b25607aa94c16ace0f1475b452ce5529688dce0b0914b"
+    }
+  ],
+  "current_cli_behavior": {
+    "finalizer": {
+      "source": "scripts/finalize_sft_artifacts.py:315,351,381",
+      "all_inventory_resources_share_the_gate": true,
+      "root_limit_check": "resource_record requires original preflight limit == 300000000 and raw current used minus original preflight used <= 300000000",
+      "on_root_failure": {
+        "exit_code": 1,
+        "stdout": {
+          "status": "failed",
+          "error": "Final root growth exceeds 300 MB"
+        },
+        "writes_final_resource_check": false,
+        "writes_external_artifact_manifest": false
+      },
+      "limitation": "The existing inventory CLI cannot export a completed-file inventory in this failure scenario. The existing failure stdout does not itself contain the raw resource snapshot. No existing CLI-only chain produces both complete inventory and detailed failed resource evidence."
+    },
+    "report": {
+      "source": "scripts/sft_run_report.py:221,293,296,354,628",
+      "independent_checkpoint_selection": "Five fully validated checkpoint result grids still select by pooled evidence-loss count ascending, final recall descending, then earlier step. Resource failure does not remove strategies or suppress selection.",
+      "failure_record_requirements": [
+        "final_resource_check.json must contain actual raw root_delta_bytes, original root_limit_bytes=300000000 and root_limit_passed=false",
+        "actual GPU identity/memory, gpu_released, only_gpu1, remaining exact task GPU PIDs, process checks and provenance evidence must be retained"
+      ],
+      "outputs_before_exit": [
+        "sft_run_results.json with all validated strategies and selected_checkpoint",
+        "sft_run_report.md with full metrics, denominators and failed resource values",
+        "loss_curve.csv"
+      ],
+      "expected_final_status": "failed",
+      "expected_exit_code": 1,
+      "status_enum_note": "Current report schema uses failed, not the literal fail. Both mean unsuccessful acceptance; do not rewrite it to complete.",
+      "missing_resource_record_effect": "If resources are simply absent the report marks that input pending; a detailed explicit failed receipt is required for truthful terminal failed delivery."
+    },
+    "checksums": {
+      "source": "scripts/checksums_task05.py:165,201",
+      "requires_complete_inventory": true,
+      "checks_resource_acceptance_status": false,
+      "checks_report_acceptance_status": false,
+      "can_hash_failed_reports": true,
+      "passed_true_meaning": "File integrity, protected prior-task preservation, subset reproduction and external inventory coverage only. It is not resource acceptance or overall task success."
+    }
+  },
+  "minimal_necessary_strategy": {
+    "recommendation": "Keep the strict existing finalizer and report/checksums thresholds unchanged. If the final root gate still fails, add one small explicit failure-delivery exporter, or an equivalent reviewed one-off wrapper, after authorization to implement. No such exporter was implemented or run in this review.",
+    "reuse_existing_functions": [
+      "completion_evidence",
+      "verify_processes",
+      "verify_gpu_history",
+      "current_machine_snapshot",
+      "freeze_inventory",
+      "atomic_write"
+    ],
+    "preconditions_before_inventory": [
+      "B/C/CPU/watcher completion evidence satisfies the same completion_evidence checks",
+      "all recorded Task05 PID identities are inactive, with existing zombie/PID-reuse rules",
+      "GPU UUID and physical index match preflight/history, recorded only-GPU1 provenance passes",
+      "GPU 1 memory <2048 MiB and no exact recorded task PID remains in compute processes",
+      "only the unchanged raw root limit may be the failed acceptance gate for this narrow exporter"
+    ],
+    "important_ordering": "The existing resource_record raises at the root check before its exact remaining-GPU-PID check. A failure exporter must still evaluate that later PID condition explicitly; catching the root exception alone is insufficient.",
+    "failure_resource_evidence": {
+      "schema_version": 1,
+      "status": "failed",
+      "root_limit_bytes": 300000000,
+      "root_limit_passed": false,
+      "root_delta_bytes": "actual terminal raw df used minus original preflight used; no offset/reset/unknown subtraction",
+      "root_baseline_used_bytes": "original preflight raw bytes",
+      "root_final_used_bytes": "actual terminal raw df bytes",
+      "df": "actual complete df stdout",
+      "gpu1_after": "actual snapshot including index/UUID/memory",
+      "gpu_released": "actual <2048 MiB test, not assumed",
+      "only_gpu1": "actual existing history verification and its scope",
+      "task05_gpu_processes_remaining": "actual exact-task identity-filtered compute process records",
+      "process_checks": "all existing recorded PID identity evidence",
+      "gpu_identity_evidence": "existing history verification result",
+      "completion_evidence": "existing completion_evidence result",
+      "failure_reasons": [
+        "Final root growth exceeds 300 MB"
+      ],
+      "signals_sent": 0
+    },
+    "inventory": "Only after the above non-root conditions pass, use freeze_inventory on the same three allowed external roots and recheck completion evidence/PID sources/current machine after hashing. Preserve all files, bytes, SHA256 and actual JSONL lines. No external file may change.",
+    "inventory_complete_semantics": "external_artifact_manifest.complete=true means exhaustive stable file coverage only. Add explicit resource_acceptance_status=failed and overall_acceptance_status=failed if useful; never label overall task complete.",
+    "no_success_on_failure": "Do not bypass resource_record to produce its success schema, clamp delta, alter baseline or limit, monkeypatch checks, suppress the failed receipt or represent successful checksum verification as successful acceptance."
+  },
+  "future_command_chain_not_executed": [
+    {
+      "order": 1,
+      "action": "Wait for complete B/C, watcher and inference shutdown; perform the existing model audit; freeze all external writers. Capture failed terminal resource evidence and independent complete inventory using the narrow exporter described above.",
+      "command": null,
+      "reason": "No suitable failure-export CLI exists yet; it must be implemented/reviewed separately."
+    },
+    {
+      "order": 2,
+      "working_directory": "/root/workplace/ctx-compressor",
+      "command": "CUDA_VISIBLE_DEVICES='' .conda/envs/ctxc/bin/python -B scripts/sft_run_report.py build",
+      "expected_exit": 1,
+      "purpose": "Write complete metrics and final loss CSV despite the documented root acceptance failure; inspect any additional failure reasons."
+    },
+    {
+      "order": 3,
+      "working_directory": "/root/workplace/ctx-compressor",
+      "command": "CUDA_VISIBLE_DEVICES='' MPLCONFIGDIR=/root/userfolder/ctx-compressor/cache/matplotlib /root/userfolder/ctx-compressor/envs/train/bin/python -B scripts/sft_run_report.py plot",
+      "expected_exit": 0,
+      "purpose": "Create measured loss SVG and matching receipt using CPU and external plotting cache."
+    },
+    {
+      "order": 4,
+      "working_directory": "/root/workplace/ctx-compressor",
+      "command": "CUDA_VISIBLE_DEVICES='' .conda/envs/ctxc/bin/python -B scripts/sft_run_report.py build",
+      "expected_exit": 1,
+      "purpose": "Publish full report with matching plot, all strategies and selected checkpoint, status=failed; missing_inputs should be empty if all work/evidence is complete."
+    },
+    {
+      "order": 5,
+      "action": "Root appends final documents with completed work and failed raw-resource gate, finalizes all small evidence files, and preserves the original baseline and threshold."
+    },
+    {
+      "order": 6,
+      "working_directory": "/root/workplace/ctx-compressor",
+      "command": "CUDA_VISIBLE_DEVICES='' .conda/envs/ctxc/bin/python -B scripts/checksums_task05.py write --slow",
+      "expected_exit": 0,
+      "purpose": "Root-only final SHA256SUMS generation over truthful failed reports and all complete files."
+    },
+    {
+      "order": 7,
+      "working_directory": "/root/workplace/ctx-compressor",
+      "command": "CUDA_VISIBLE_DEVICES='' .conda/envs/ctxc/bin/python -B scripts/checksums_task05.py check --slow",
+      "expected_exit": 0,
+      "purpose": "Verify integrity independently of overall resource failure, then sync small delivery files/mirror without copying large external artifacts."
+    }
+  ],
+  "execution_notes": [
+    "Run each stage separately and retain its real exit code. Do not chain build && plot: failed build has already written the required CSV but exits 1. Do not use unconditional || true; inspect and record the expected root-only failure.",
+    "Final resource check must use the terminal raw filesystem snapshot, not the trigger observation at step1779. No final values are asserted by this receipt.",
+    "Do not write mutable checksum stdout logs into included project files after SHA256SUMS creation, or into any inventoried external root after freezing; use terminal output or a separate external cache location.",
+    "The earlier final_delivery_readonly_review.json describes the successful acceptance path and says final build must return 0. This receipt adds a deliberate failed-acceptance delivery path; it does not weaken that success criterion.",
+    "A completed stable inventory, completed B/C runtime statuses and selected checkpoint may coexist with overall report status failed. Deliver all completed measurements while plainly stating the failed final raw root limit."
+  ]
+}

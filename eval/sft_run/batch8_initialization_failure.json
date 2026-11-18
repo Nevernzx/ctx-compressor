@@ -1,0 +1,10 @@
+{
+  "stage": "benchmark",
+  "batch_size": 8,
+  "pid": 722667,
+  "error": "KeyError(\"Column length not in the dataset. Current columns in the dataset: ['input_ids', 'labels']\")",
+  "oom": false,
+  "nonfinite": false,
+  "utc": "2026-11-17T15:14:50.885698+00:00",
+  "automatic_retry_allowed": false
+}

@@ -1,0 +1,22 @@
+{
+  "status": "running",
+  "oom": false,
+  "optimizer_steps": 100,
+  "consumed_samples": 1600,
+  "consumed_tokens": 5190363,
+  "loss_tokens": 28680,
+  "initial_gpu": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_percent": 0,
+    "root_used_bytes": 931326881792,
+    "utc": "2026-11-17T12:36:34.720050+00:00"
+  },
+  "config_sha256": "eac00ae1739f0532535dff8ea21898fbfdb2614fe0b8acb5b500246d9d9f47ac",
+  "load_and_initialization_seconds": 7.128789266105741,
+  "selected_total_tokens": 5190363,
+  "train_start_monotonic": 1592702.663789033,
+  "training_startup_seconds": 43.475338699063286,
+  "training_seconds_so_far": 926.3707358920947
+}

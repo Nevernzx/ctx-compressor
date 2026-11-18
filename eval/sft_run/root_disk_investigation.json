@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "task": "TASK_05",
+  "investigation": "Read-only root-filesystem growth investigation during formal SFT",
+  "observed_interval_utc": [
+    "2026-11-17T15:48:58+00:00",
+    "2026-11-17T15:50:50.114849+00:00"
+  ],
+  "process_pid": 724147,
+  "scope": {
+    "remote_host_alias": "5880",
+    "filesystem_mutations_during_investigation": 0,
+    "files_moved_or_deleted": 0,
+    "environment_changes": 0,
+    "gpu_initializations": 0,
+    "tests_or_finalizers_run": 0,
+    "whole_filesystem_scan": false,
+    "final_output": "Only this small investigation JSON was created after read-only inspection"
+  },
+  "mounts": {
+    "root_and_project": {
+      "paths": ["/", "/tmp", "/root/workplace/ctx-compressor"],
+      "filesystem": "overlay",
+      "backing_filesystem": "/dev/nvme0n1p2",
+      "size_bytes": 1005867986944,
+      "used_bytes_at_154858": 931510464512,
+      "available_bytes_at_154858": 23186751488,
+      "overlay_upperdir_reported_by_findmnt": "/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/49/fs"
+    },
+    "external_userfolder": {
+      "path": "/root/userfolder",
+      "source": "/dev/sda1[/userfolder/25_niezhengxin]",
+      "filesystem": "ext4",
+      "size_bytes": 15873098706944,
+      "used_bytes_at_154858": 14269320642560,
+      "available_bytes_at_154858": 803743203328,
+      "independent_from_root_backing_device": true
+    },
+    "shared_statfs_evidence": {
+      "root_used_bytes_at_second_sample": 931510480896,
+      "etc_hosts_used_bytes_at_same_sample": 931510480896,
+      "etc_hosts_mount_source": "/dev/nvme0n1p2",
+      "size_bytes_both": 1005867986944,
+      "interpretation": "df on the overlay reports usage of the shared backing filesystem, not a measurement of this task or this container alone. Writes outside the inspected container-visible paths can change the same df counter."
+    }
+  },
+  "actual_training_environment_from_proc_whitelist": {
+    "CUDA_VISIBLE_DEVICES": "1",
+    "TMPDIR": "/root/userfolder/ctx-compressor/cache/tmp",
+    "TMP": "/root/userfolder/ctx-compressor/cache/tmp",
+    "TEMP": "/root/userfolder/ctx-compressor/cache/tmp",
+    "XDG_CACHE_HOME": "/root/userfolder/ctx-compressor/cache/xdg",
+    "HF_HOME": "/root/userfolder/ctx-compressor/cache/huggingface",
+    "HF_DATASETS_CACHE": "/root/userfolder/ctx-compressor/cache/huggingface/datasets",
+    "MODELSCOPE_CACHE": "/root/userfolder/ctx-compressor/cache/modelscope",
+    "TORCH_HOME": "/root/userfolder/ctx-compressor/cache/torch",
+    "TORCHINDUCTOR_CACHE_DIR": "/root/userfolder/ctx-compressor/cache/torchinductor",
+    "TRITON_CACHE_DIR": "/root/userfolder/ctx-compressor/cache/triton",
+    "CUDA_CACHE_PATH": "/root/userfolder/ctx-compressor/cache/cuda",
+    "PYTHONPYCACHEPREFIX": "/root/userfolder/ctx-compressor/cache/pycache",
+    "SWIFT_HOME": "/root/userfolder/ctx-compressor/cache/swift",
+    "SWIFT_CACHE_DIR": "/root/userfolder/ctx-compressor/cache/swift",
+    "MPLCONFIGDIR": "/root/userfolder/ctx-compressor/cache/matplotlib"
+  },
+  "training_writable_regular_file_descriptors": {
+    "1": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train.log",
+    "2": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train.log",
+    "3": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl"
+  },
+  "recent_changes": {
+    "formal_window_cutoff_utc": "2026-11-17T15:20:00+00:00",
+    "pytest_directories": [
+      {
+        "path": "/tmp/pytest-of-root/pytest-7",
+        "regular_files": 949,
+        "directories": 628,
+        "allocated_bytes_including_directories": 6475776,
+        "minimum_file_mtime_utc": "2026-11-17T15:37:22.669774+00:00",
+        "maximum_file_mtime_utc": "2026-11-17T15:37:22.940233+00:00"
+      },
+      {
+        "path": "/tmp/pytest-of-root/pytest-8",
+        "regular_files": 1591,
+        "directories": 935,
+        "allocated_bytes_including_directories": 10657792,
+        "minimum_file_mtime_utc": "2026-11-17T15:39:05.843167+00:00",
+        "maximum_file_mtime_utc": "2026-11-17T15:39:06.440695+00:00"
+      }
+    ],
+    "pytest_directories_total_allocated_bytes": 17133568,
+    "project_recent_ctime_allocated_bytes_by_family": {
+      "eval": 479232,
+      "scripts": 53248,
+      ".pytest_cache": 40960,
+      "tests": 32768,
+      "notes_task05_execution.md": 8192
+    },
+    "no_recent_file_mtime_or_ctime_in_checked_trees": [
+      "/root/.cache",
+      "/root/workplace/ctx-compressor/.cache",
+      "/root/workplace/ctx-compressor/.conda",
+      "/root/workplace/ctx-compressor/logs",
+      "/root/.codex",
+      "/root/.claude",
+      "/root/.config"
+    ],
+    "no_recent_regular_file_mtime_in_checked_trees": [
+      "/root/.nv",
+      "/root/.triton",
+      "/var/log",
+      "/var/cache"
+    ],
+    "earlier_small_plot_cache_write": {
+      "path": "/root/.cache/matplotlib/fontlist-v3.11.0.json",
+      "mtime_utc": "2026-11-17T15:09:33.603810+00:00",
+      "allocated_bytes": 28672,
+      "before_formal_window": true
+    },
+    "interpretation": "Recent visible allocations are primarily one-time pytest fixture files/directories and small project reports/code. No continuing formal-training cache or log growth was found on root in these inspected paths. These measurements do not attribute every byte of the shared df delta."
+  },
+  "saved_training_resource_series": {
+    "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl",
+    "preflight_root_used_bytes": 931440451584,
+    "first_monitor": {
+      "utc": "2026-11-17T15:26:39.551163+00:00",
+      "optimizer_step": 0,
+      "root_delta_bytes": 39845888
+    },
+    "latest_monitor": {
+      "utc": "2026-11-17T15:50:50.114849+00:00",
+      "optimizer_step": 126,
+      "root_delta_bytes": 70029312
+    },
+    "adjacent_sample_changes_at_least_128KiB": [
+      {"utc": "2026-11-17T15:31:48.207792+00:00", "optimizer_step": 3, "root_delta_bytes": 43986944, "change_bytes": 4075520},
+      {"utc": "2026-11-17T15:36:48.789713+00:00", "optimizer_step": 36, "root_delta_bytes": 48238592, "change_bytes": 4235264},
+      {"utc": "2026-11-17T15:37:48.877468+00:00", "optimizer_step": 42, "root_delta_bytes": 54390784, "change_bytes": 6152192},
+      {"utc": "2026-11-17T15:39:19.013011+00:00", "optimizer_step": 52, "root_delta_bytes": 61313024, "change_bytes": 6922240},
+      {"utc": "2026-11-17T15:41:49.229462+00:00", "optimizer_step": 68, "root_delta_bytes": 65576960, "change_bytes": 4235264},
+      {"utc": "2026-11-17T15:46:49.758966+00:00", "optimizer_step": 100, "root_delta_bytes": 70012928, "change_bytes": 4366336}
+    ],
+    "unattributed_pattern": "Besides the pytest-associated changes, approximately 4.1-4.4 MB increases occur about five minutes apart at 15:31, 15:36, 15:41 and 15:46 UTC. No matching continuing write was identified in the inspected task/cache/log paths. This is an observation, not proof of task attribution or a forecast of linear growth.",
+    "root_limit_bytes": 300000000,
+    "latest_observed_within_limit": true
+  },
+  "conclusion": {
+    "external_storage_mount_confirmed": true,
+    "actual_training_cache_redirection_confirmed": true,
+    "actual_training_log_fds_external": true,
+    "identified_recent_root_allocations": "One-time pytest fixtures plus small project report/code files",
+    "unexplained_shared_filesystem_growth_remains": true,
+    "additional_scanning_stopped_at_parent_request": true,
+    "existing_user_and_test_files_preserved": true
+  }
+}

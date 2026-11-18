@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-17T17:47:02.123812+00:00",
+  "status": "extrapolation_only",
+  "scope": "formal B training wall time; excludes checkpoint saves and C rollout evaluation",
+  "basis": {
+    "startup": {
+      "seconds": 279.05108531494625,
+      "n_runs": 1,
+      "source_field": "progress.startup_seconds"
+    },
+    "first_500_steps": {
+      "train_seconds": 4655.659253456863,
+      "optimizer_steps_n": 500,
+      "sample_exposures_n": 8000,
+      "elapsed_precedes_first_eval_and_checkpoint_save": true
+    },
+    "first_eval": {
+      "seconds": 161.0283,
+      "loss": 0.05651583,
+      "n_runs": 1,
+      "n_samples": 1000
+    },
+    "A_benchmark": {
+      "tokens_per_second": 5695.282197305358,
+      "n_trials": 1,
+      "optimizer_steps_n": 30,
+      "sample_exposures_n": 480,
+      "original_train_loop_seconds": 22779.242802293786
+    },
+    "planned": {
+      "optimizer_steps": 2500,
+      "sample_exposures": 40000,
+      "epochs": 2,
+      "eval_runs": 5
+    }
+  },
+  "estimates": [
+    {
+      "method": "A_token_throughput",
+      "training_component_seconds": 22779.242802293786,
+      "startup_component_seconds": 279.05108531494625,
+      "eval_component_seconds": 805.1415,
+      "wall_seconds": 23863.435387608733,
+      "wall_hours": 6.628732052113537,
+      "formula": "22779.242802293786 + 279.05108531494625 + 5 × 161.0283"
+    },
+    {
+      "method": "first_500_training_steps",
+      "training_component_seconds": 23278.296267284313,
+      "startup_component_seconds": 279.05108531494625,
+      "eval_component_seconds": 805.1415,
+      "wall_seconds": 24362.48885259926,
+      "wall_hours": 6.767358014610906,
+      "formula": "4655.659253456863 × 5 + 279.05108531494625 + 5 × 161.0283"
+    }
+  ],
+  "checkpoint_save_seconds": null,
+  "checkpoint_save_time_estimated": false,
+  "estimates_are_confidence_interval": false,
+  "checkpoint_selection_affected": false,
+  "assumptions": [
+    "A throughput or first500 training speed is extrapolated to all2500 optimizer steps",
+    "One observed startup is included once",
+    "All five scheduled eval runs use the first observed eval runtime",
+    "Checkpoint-save overhead is unestimated and excluded",
+    "Both estimates exclude C closed-loop evaluation"
+  ],
+  "sources": {
+    "batch_bench": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/batch_bench.json",
+      "bytes": 57670,
+      "sha256": "db4567d12253858a07b4003a04f8c8c6ed97b96834da07efd0dee47ecad52c97"
+    },
+    "metrics_prefix_through_first_eval": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/metrics.jsonl",
+      "bytes": 168723,
+      "lines": 501,
+      "sha256": "9f45a829e678440e505120b9103c843d52c1c60b300f2e4df5785decd2c8daaf",
+      "hash_scope": "immutable prefix through first step500 eval row; later appended rows excluded"
+    },
+    "live_progress_snapshot": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/progress.json",
+      "bytes_at_read": 793,
+      "sha256_at_read": "e5a786b6026f53f6b6c26fb630afaeb2db5916239c1b5089221fdd4aaa5b3c4e",
+      "live_file_can_change": true,
+      "observed_optimizer_steps": 853,
+      "startup_seconds": 279.05108531494625
+    }
+  },
+  "observed_step500_records": {
+    "train": {
+      "step": 500,
+      "elapsed_seconds": 4655.659253456863,
+      "loss": 0.04728004,
+      "grad_norm": 0.46506262,
+      "learning_rate": 9.261e-05,
+      "token_acc": 0.9739777,
+      "epoch": 0.4,
+      "global_step/max_steps": "500/2500",
+      "percentage": "20.00%",
+      "elapsed_time": "1h 17m 36s",
+      "remaining_time": "5h 10m 23s",
+      "memory(GiB)": 7.1,
+      "train_speed(s/it)": 9.311321
+    },
+    "eval": {
+      "step": 500,
+      "elapsed_seconds": 4655.659253456863,
+      "eval_loss": 0.05651583,
+      "eval_runtime": 161.0283,
+      "eval_samples_per_second": 6.21,
+      "eval_steps_per_second": 6.21,
+      "eval_token_acc": 0.97856545,
+      "epoch": 0.4,
+      "global_step/max_steps": "500/2500",
+      "percentage": "20.00%",
+      "elapsed_time": "1h 20m 17s",
+      "remaining_time": "5h 21m 7s",
+      "memory(GiB)": 7.1,
+      "train_speed(s/it)": 9.633379
+    }
+  }
+}

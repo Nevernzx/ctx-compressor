@@ -1,0 +1,9 @@
+{
+  "pid": 898553,
+  "session_id": 898553,
+  "training_pid": 724147,
+  "watcher_pid": 898552,
+  "log": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_model_eval.log",
+  "nohup": true,
+  "detached": true
+}

@@ -1,0 +1,548 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-11-17T12:22:52.723420+00:00",
+  "finished_at_utc": "2026-11-17T12:26:15.948320+00:00",
+  "elapsed_seconds": 203.2249190120492,
+  "timings_seconds": {
+    "build_corpus_seconds": 28.531824647216126,
+    "save_corpus_and_index_seconds": 1.7653813939541578,
+    "train_generation_seconds": 162.1659605288878,
+    "heldout_generation_seconds": 8.72904740809463
+  },
+  "settings": {
+    "seed": 20261118,
+    "top_n": 20,
+    "questions_per_task": 4,
+    "budgets": {
+      "tight": 1876,
+      "mid": 2814,
+      "loose": 5628
+    },
+    "task_index_base": 0,
+    "retrieval_seed": "task index, reset to zero within each split",
+    "tier": "random.Random(20261118 + task).choice(['tight','mid','loose'])",
+    "reselect_policy": "make_oracle_noise_policy(seed=task)",
+    "append_policy": "oracle_action",
+    "sft_target": "oracle_action in both modes"
+  },
+  "schema": {
+    "task_record": "one task per JSONL line; shared steps; rollouts[mode] contains full states",
+    "integer_key_state_fields": [
+      "ntok",
+      "text",
+      "pid_by_lid"
+    ],
+    "restore_integer_keys": "{field: {int(k): v for k, v in state[field].items()}}",
+    "corpus_key2pid": "{(row['title'], row['paragraph_text']): row['pid']} from corpus_train.jsonl",
+    "binary_file_lines": "null means not a JSONL record file"
+  },
+  "source": {
+    "train": {
+      "path": "/root/workplace/ctx-compressor/data/raw/musique/musique_ans_v1.0_train.jsonl",
+      "bytes": 241046755,
+      "lines": 19938,
+      "sha256": "83a75b1e11e4e9bb8f8308e72ac40ca617ae4431b3a0d955b61cab259248490a"
+    },
+    "tokenizer": {
+      "path": "/root/workplace/ctx-compressor/data/raw/qwen3_tokenizer/tokenizer.json",
+      "bytes": 11422654,
+      "lines": null,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "build_traj": {
+      "path": "/root/workplace/ctx-compressor/src/build_traj.py",
+      "bytes": 11967,
+      "lines": null,
+      "sha256": "903753dc0cba429030607764acabb61f85ca2276ca2840792ca538576ea2109f"
+    },
+    "generator": {
+      "path": "/root/workplace/ctx-compressor/scripts/make_train_traj.py",
+      "bytes": 17225,
+      "lines": null,
+      "sha256": "39bb31503eef49ec71160fd7b7aab5d7f998f646d09e5c528a724aabaa14a65b"
+    }
+  },
+  "corpus": {
+    "paragraphs": 84559,
+    "built_from_all_train_questions": 19938,
+    "includes_heldout_paragraphs": true
+  },
+  "filtering": {
+    "total": 19938,
+    "valid": 19938,
+    "rejected": 0,
+    "rejected_examples": [],
+    "rejection_reasons": {},
+    "literal_out_of_range_reference_count": 2,
+    "literal_out_of_range_reference_examples": [
+      {
+        "id": "2hop__444285_737459",
+        "occurrences": [
+          {
+            "hop_index": 0,
+            "reference": "#9",
+            "question": "#9 Dream >> performer"
+          }
+        ]
+      },
+      {
+        "id": "2hop__169108_61463",
+        "occurrences": [
+          {
+            "hop_index": 0,
+            "reference": "#9",
+            "question": "#9 Dream >> lyrics by"
+          }
+        ]
+      }
+    ]
+  },
+  "partitions": {
+    "train": {
+      "pool_questions": 18942,
+      "tasks": 4735,
+      "used_questions": 18940,
+      "discarded_ids": [
+        "3hop2__683614_28338_160498",
+        "3hop1__239060_830682_68600"
+      ],
+      "discarded_questions": 2
+    },
+    "heldout": {
+      "pool_questions": 996,
+      "tasks": 249,
+      "used_questions": 996,
+      "discarded_ids": [],
+      "discarded_questions": 0
+    }
+  },
+  "statistics": {
+    "train": {
+      "tasks": 4735,
+      "retrieval_steps": 44281,
+      "samples": 88562,
+      "natural_hit": {
+        "count": 37374,
+        "n": 44281,
+        "rate": 0.8440188794291005
+      },
+      "natural_hit_by_hop": {
+        "1": {
+          "count": 17095,
+          "n": 18940,
+          "rate": 0.9025871172122492
+        },
+        "2": {
+          "count": 15366,
+          "n": 18940,
+          "rate": 0.81129883843717
+        },
+        "3": {
+          "count": 4086,
+          "n": 5288,
+          "rate": 0.7726928895612708
+        },
+        "4": {
+          "count": 827,
+          "n": 1113,
+          "rate": 0.74303683737646
+        }
+      },
+      "mode_tier": {
+        "reselect|tight": {
+          "tasks": 1583,
+          "samples": 14850,
+          "target_add_empty": {
+            "count": 45,
+            "n": 14850,
+            "rate": 0.0030303030303030303
+          },
+          "target_drop_nonempty": {
+            "count": 13264,
+            "n": 14850,
+            "rate": 0.8931986531986532
+          },
+          "budget_binding": {
+            "count": 53,
+            "n": 14850,
+            "rate": 0.003569023569023569
+          },
+          "available_gold": 78094,
+          "target_retained_gold": 78041,
+          "noisy_actions": 14825
+        },
+        "reselect|mid": {
+          "tasks": 1553,
+          "samples": 14470,
+          "target_add_empty": {
+            "count": 28,
+            "n": 14470,
+            "rate": 0.0019350380096751902
+          },
+          "target_drop_nonempty": {
+            "count": 12915,
+            "n": 14470,
+            "rate": 0.8925362819626814
+          },
+          "budget_binding": {
+            "count": 2,
+            "n": 14470,
+            "rate": 0.00013821700069108501
+          },
+          "available_gold": 75657,
+          "target_retained_gold": 75655,
+          "noisy_actions": 14470
+        },
+        "reselect|loose": {
+          "tasks": 1599,
+          "samples": 14961,
+          "target_add_empty": {
+            "count": 39,
+            "n": 14961,
+            "rate": 0.0026067776218167233
+          },
+          "target_drop_nonempty": {
+            "count": 13357,
+            "n": 14961,
+            "rate": 0.8927879152463071
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 14961,
+            "rate": 0.0
+          },
+          "available_gold": 78543,
+          "target_retained_gold": 78543,
+          "noisy_actions": 14961
+        },
+        "append|tight": {
+          "tasks": 1583,
+          "samples": 14850,
+          "target_add_empty": {
+            "count": 79,
+            "n": 14850,
+            "rate": 0.00531986531986532
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 14850,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 71,
+            "n": 14850,
+            "rate": 0.004781144781144781
+          },
+          "available_gold": 78082,
+          "target_retained_gold": 78011,
+          "noisy_actions": 0
+        },
+        "append|mid": {
+          "tasks": 1553,
+          "samples": 14470,
+          "target_add_empty": {
+            "count": 12,
+            "n": 14470,
+            "rate": 0.00082930200414651
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 14470,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 2,
+            "n": 14470,
+            "rate": 0.00013821700069108501
+          },
+          "available_gold": 75657,
+          "target_retained_gold": 75655,
+          "noisy_actions": 0
+        },
+        "append|loose": {
+          "tasks": 1599,
+          "samples": 14961,
+          "target_add_empty": {
+            "count": 13,
+            "n": 14961,
+            "rate": 0.0008689258739389078
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 14961,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 14961,
+            "rate": 0.0
+          },
+          "available_gold": 78543,
+          "target_retained_gold": 78543,
+          "noisy_actions": 0
+        }
+      }
+    },
+    "heldout": {
+      "tasks": 249,
+      "retrieval_steps": 2326,
+      "samples": 4652,
+      "natural_hit": {
+        "count": 1930,
+        "n": 2326,
+        "rate": 0.8297506448839209
+      },
+      "natural_hit_by_hop": {
+        "1": {
+          "count": 887,
+          "n": 996,
+          "rate": 0.8905622489959839
+        },
+        "2": {
+          "count": 773,
+          "n": 996,
+          "rate": 0.7761044176706827
+        },
+        "3": {
+          "count": 221,
+          "n": 272,
+          "rate": 0.8125
+        },
+        "4": {
+          "count": 49,
+          "n": 62,
+          "rate": 0.7903225806451613
+        }
+      },
+      "mode_tier": {
+        "reselect|tight": {
+          "tasks": 71,
+          "samples": 675,
+          "target_add_empty": {
+            "count": 1,
+            "n": 675,
+            "rate": 0.0014814814814814814
+          },
+          "target_drop_nonempty": {
+            "count": 604,
+            "n": 675,
+            "rate": 0.8948148148148148
+          },
+          "budget_binding": {
+            "count": 3,
+            "n": 675,
+            "rate": 0.0044444444444444444
+          },
+          "available_gold": 3605,
+          "target_retained_gold": 3602,
+          "noisy_actions": 672
+        },
+        "reselect|mid": {
+          "tasks": 76,
+          "samples": 709,
+          "target_add_empty": {
+            "count": 3,
+            "n": 709,
+            "rate": 0.004231311706629055
+          },
+          "target_drop_nonempty": {
+            "count": 632,
+            "n": 709,
+            "rate": 0.8913963328631875
+          },
+          "budget_binding": {
+            "count": 1,
+            "n": 709,
+            "rate": 0.0014104372355430183
+          },
+          "available_gold": 3717,
+          "target_retained_gold": 3716,
+          "noisy_actions": 709
+        },
+        "reselect|loose": {
+          "tasks": 102,
+          "samples": 942,
+          "target_add_empty": {
+            "count": 1,
+            "n": 942,
+            "rate": 0.0010615711252653928
+          },
+          "target_drop_nonempty": {
+            "count": 840,
+            "n": 942,
+            "rate": 0.89171974522293
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          },
+          "available_gold": 4880,
+          "target_retained_gold": 4880,
+          "noisy_actions": 942
+        },
+        "append|tight": {
+          "tasks": 71,
+          "samples": 675,
+          "target_add_empty": {
+            "count": 4,
+            "n": 675,
+            "rate": 0.005925925925925926
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 675,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 4,
+            "n": 675,
+            "rate": 0.005925925925925926
+          },
+          "available_gold": 3605,
+          "target_retained_gold": 3601,
+          "noisy_actions": 0
+        },
+        "append|mid": {
+          "tasks": 76,
+          "samples": 709,
+          "target_add_empty": {
+            "count": 1,
+            "n": 709,
+            "rate": 0.0014104372355430183
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 709,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 1,
+            "n": 709,
+            "rate": 0.0014104372355430183
+          },
+          "available_gold": 3717,
+          "target_retained_gold": 3716,
+          "noisy_actions": 0
+        },
+        "append|loose": {
+          "tasks": 102,
+          "samples": 942,
+          "target_add_empty": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          },
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          },
+          "budget_binding": {
+            "count": 0,
+            "n": 942,
+            "rate": 0.0
+          },
+          "available_gold": 4880,
+          "target_retained_gold": 4880,
+          "noisy_actions": 0
+        }
+      }
+    }
+  },
+  "files": {
+    "split_ids": {
+      "path": "/root/userfolder/ctx-compressor/data/splits/train_heldout_ids.json",
+      "bytes": 568198,
+      "lines": null,
+      "sha256": "945ef9c83bb11ddd968bacf6eb2f99961cff6e07849a12089a4c5600b6d80a93"
+    },
+    "corpus": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+      "bytes": 83690752,
+      "lines": 84559,
+      "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+    },
+    "index": [
+      {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/bm25_train/data.csc.index.npy",
+        "bytes": 13910636,
+        "lines": null,
+        "sha256": "a83b396cc3f4138da81b75058cf69b9a211df136adcdfcd60aa400acc6c67607"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/bm25_train/indices.csc.index.npy",
+        "bytes": 13910636,
+        "lines": null,
+        "sha256": "499b352b74914300b16dbdf50e71328ceeee9db218d26867b6e7eaceac77dc71"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/bm25_train/indptr.csc.index.npy",
+        "bytes": 1432160,
+        "lines": null,
+        "sha256": "5eb18ef9b2d58c26d8e2b6a067cb8e6a9558f8b179817737ea3cc519ec4607df"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/bm25_train/params.index.json",
+        "bytes": 224,
+        "lines": null,
+        "sha256": "e6dec5249bceb7c65ded9dd8290e923ab95cef48071d6053672711eb4aaa98f4"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/bm25_train/vocab.index.json",
+        "bytes": 3364461,
+        "lines": null,
+        "sha256": "498dab5fbf0d846d1e95c3fedd20d57db8063a0514dcd4272034ebef136ac603"
+      }
+    ],
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/train_tasks.jsonl",
+      "bytes": 1184195307,
+      "lines": 4735,
+      "sha256": "ae96199b83b264bd926312e1e91e3b2af753b20117a6cb88161c8f3b23033e56"
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+      "bytes": 62323855,
+      "lines": 249,
+      "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+    }
+  },
+  "validation": {
+    "all_states_checked": true,
+    "pure_oracle_targets": true,
+    "legal_targets_and_actions": true,
+    "append_prefix_preserved": true,
+    "retrieval_shared_between_modes": true,
+    "no_downloads_installs_api_or_gpu": true,
+    "dev_inputs_not_read": true
+  },
+  "runtime": {
+    "python": "3.11.18 (main, Oct 26 2026, 18:19:35) [GCC 14.3.0]",
+    "cpu_processes": 1,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "maximum_rss_bytes": 822706176,
+    "packages": {
+      "bm25s": "0.3.16",
+      "numpy": "2.4.6",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

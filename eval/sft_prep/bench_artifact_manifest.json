@@ -1,0 +1,63 @@
+{
+  "utc": "2026-11-17T12:54:32.238802+00:00",
+  "run_dir": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117",
+  "files": [
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/benchmark_samples.jsonl",
+      "bytes": 21020966,
+      "sha256": "ad3503b8cba31cf4599be6df8a6bfd77fe748e3161214adef3799e6705f00904",
+      "lines": 1600
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/console.log",
+      "bytes": 46910,
+      "sha256": "9415f75acd414607773208779239b524f49738b8a5e0bd3ce39ee357d5b94050"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/initial_config.json",
+      "bytes": 534373,
+      "sha256": "eac00ae1739f0532535dff8ea21898fbfdb2614fe0b8acb5b500246d9d9f47ac"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/longest_sample.json",
+      "bytes": 28906,
+      "sha256": "fb6ac068835b65c72fb6c61d0c14f7481ad6fc2c2149345624050e8c6d75c32a"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/loss_curve.jsonl",
+      "bytes": 32797,
+      "sha256": "65d66c46585cb944eb9286bcba05c51819d73b192653f8563fd8fdd6fed88aab",
+      "lines": 100
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/output/args.json",
+      "bytes": 18697,
+      "sha256": "cebdf24502e1152e049ae8143a8ff64517a46282dd67ebd9e9ef8b3d11d16428"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/output/logging.jsonl",
+      "bytes": 28118,
+      "sha256": "75d7b567fffbe333651d80b638aa3b45078b508b1fb92c66e7f2c8319957f338",
+      "lines": 101
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/resources.jsonl",
+      "bytes": 91316,
+      "sha256": "be95025b19b4a2fa1da2aebc458fdce47e092fe762b5ab2411991de513a20a4f",
+      "lines": 472
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/bench_task04_20261117/started.json",
+      "bytes": 205,
+      "sha256": "58c74d2bff27870ff00586d71849647563f6ceede159c78c159852a9931b9db3"
+    }
+  ],
+  "file_count": 9,
+  "total_bytes": 21802288,
+  "generated_weight_or_checkpoint_files": [],
+  "optimizer_steps": 100,
+  "probe_optimizer_steps": 0,
+  "initial_config_sha256": "eac00ae1739f0532535dff8ea21898fbfdb2614fe0b8acb5b500246d9d9f47ac",
+  "initial_config_restoration": "Only final status/completed_optimizer_steps fields reversed after completion; exact serialized bytes verified against the pre-run SHA256 in bench_results",
+  "benchmark_script_sha256": "92803886a0a1a187dfc106240ad1a3b0da8c4f9ecca71a45ae247e8375733d1c"
+}

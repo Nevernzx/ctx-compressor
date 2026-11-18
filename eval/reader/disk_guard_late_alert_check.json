@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "case": "task-owned root writer added during the pause is rejected before marking alerts handled",
+  "new_runner_sha256": "0be33adeb6eda3b3b9bef9034a9969b1e7a41942866205f05cd6220a997c9912",
+  "inference_rerun": false,
+  "prediction_files_modified": false
+}

@@ -1,0 +1,31 @@
+{
+  "corpus_paragraphs_verified": 21100,
+  "distinct_questions": 600,
+  "n_prompts": 12000,
+  "input_truncations": 0,
+  "max_prompt_tokens_by_config": {
+    "no_compress": 32382,
+    "latest|reselect|tight": 1981,
+    "latest|reselect|mid": 2922,
+    "latest|reselect|loose": 5727,
+    "latest|append|tight": 1979,
+    "latest|append|mid": 2917,
+    "latest|append|loose": 5736,
+    "bm25|reselect|tight": 1981,
+    "bm25|reselect|mid": 2920,
+    "bm25|reselect|loose": 5724,
+    "bm25|append|tight": 1980,
+    "bm25|append|mid": 2912,
+    "bm25|append|loose": 5731,
+    "oracle|reselect|tight": 1963,
+    "oracle|reselect|mid": 2827,
+    "oracle|reselect|loose": 2827,
+    "oracle|append|tight": 1963,
+    "oracle|append|mid": 2827,
+    "oracle|append|loose": 2827,
+    "no_context": 100
+  },
+  "max_prompt_tokens": 32382,
+  "max_new_tokens": 48,
+  "max_model_len": 40960
+}

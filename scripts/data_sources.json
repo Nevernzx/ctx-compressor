@@ -1,0 +1,144 @@
+[
+  {
+    "url": "https://api.github.com/repos/Alab-NII/2wikimultihop/git/blobs/342ce459a34de236d05b2be3f01e5f08f6c712e8",
+    "path": "2wikimultihopqa/LICENSE",
+    "size": 11337,
+    "expected_count": null,
+    "source_kind": "official",
+    "accept": "application/vnd.github.raw+json"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/2WikiMultihopQA/repo?Revision=75d023a1becf3e2e73401639536eae3d0bc82d2c&FilePath=dev.json",
+    "path": "2wikimultihopqa/dev.json",
+    "size": 55934464,
+    "expected_count": 12576,
+    "source_kind": "mirror",
+    "sha256": "48b9bdc69654dc580fda5f935a48b88cb89f11887587310af60d406c8d0111a6"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/hotpotqa/hotpot/master/README.md",
+    "path": "hotpotqa/OFFICIAL_README.md",
+    "size": 6839,
+    "expected_count": null,
+    "source_kind": "official"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/OpenDataLab/HotpotQA/repo?Revision=8f4804ba8c47c8d911bdf8d5fb6dabb23535f544&FilePath=raw%2Fhotpot_dev_distractor_v1.json",
+    "path": "hotpotqa/hotpot_dev_distractor_v1.json",
+    "size": 46320117,
+    "expected_count": 7405,
+    "source_kind": "mirror",
+    "sha256": "4e9ecb5c8d3b719f624d66b60f8d56bf227f03914f5f0753d6fa1b359d7104ea"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/OpenDataLab/HotpotQA/repo?Revision=8f4804ba8c47c8d911bdf8d5fb6dabb23535f544&FilePath=raw%2Fhotpot_dev_fullwiki_v1.json",
+    "path": "hotpotqa/hotpot_dev_fullwiki_v1.json",
+    "size": 47454698,
+    "expected_count": 7405,
+    "source_kind": "mirror",
+    "sha256": "2f1f3e594a3066a3084cc57950ca2713c24712adaad03af6ccce18d1846d5618"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/StonyBrookNLP/musique/main/LICENSE",
+    "path": "musique/LICENSE",
+    "size": 18652,
+    "expected_count": null,
+    "source_kind": "official"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/MuSiQue/repo?Revision=aa92b9e2a0bb07120885f620e6f9116ea4f62376&FilePath=musique_ans_v1.0_dev.jsonl",
+    "path": "musique/musique_ans_v1.0_dev.jsonl",
+    "size": 30439728,
+    "expected_count": 2417,
+    "source_kind": "mirror",
+    "sha256": "15fa63794d18a94ce12411aca6e2327e65b6e83b0b1490efab3f1962e48abf3b"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/MuSiQue/repo?Revision=aa92b9e2a0bb07120885f620e6f9116ea4f62376&FilePath=musique_ans_v1.0_test.jsonl",
+    "path": "musique/musique_ans_v1.0_test.jsonl",
+    "size": 28366572,
+    "expected_count": 2459,
+    "source_kind": "mirror",
+    "sha256": "92ee3067957b8ebce885baa71156a7c0c29f3bc72cca04510aef506911dd768f"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/MuSiQue/repo?Revision=aa92b9e2a0bb07120885f620e6f9116ea4f62376&FilePath=musique_ans_v1.0_train.jsonl",
+    "path": "musique/musique_ans_v1.0_train.jsonl",
+    "size": 241046755,
+    "expected_count": 19938,
+    "source_kind": "mirror",
+    "sha256": "83a75b1e11e4e9bb8f8308e72ac40ca617ae4431b3a0d955b61cab259248490a"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/MuSiQue/repo?Revision=aa92b9e2a0bb07120885f620e6f9116ea4f62376&FilePath=musique_full_v1.0_dev.jsonl",
+    "path": "musique/musique_full_v1.0_dev.jsonl",
+    "size": 59422562,
+    "expected_count": 4834,
+    "source_kind": "mirror",
+    "sha256": "8cab31d56a3a1c4ef491b205a8dab3f1ac9c66e472098c6cf1de4e20294f7a4a"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/MuSiQue/repo?Revision=aa92b9e2a0bb07120885f620e6f9116ea4f62376&FilePath=musique_full_v1.0_test.jsonl",
+    "path": "musique/musique_full_v1.0_test.jsonl",
+    "size": 55558292,
+    "expected_count": null,
+    "source_kind": "mirror",
+    "sha256": "01d7b0f752bdc1fc98856d605560e021a89be903baeb9daff11adeb7fac61328"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/MuSiQue/repo?Revision=aa92b9e2a0bb07120885f620e6f9116ea4f62376&FilePath=musique_full_v1.0_train.jsonl",
+    "path": "musique/musique_full_v1.0_train.jsonl",
+    "size": 476696984,
+    "expected_count": 39876,
+    "source_kind": "mirror",
+    "sha256": "b1cd998f7e0e2838d6fda024e4ad1eb0e7fc3edefdadb0bd9b5b10b0907f2034"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-1.7B/repo?Revision=4855588ea1a12789f2e965e5f52a9e4a24c94b2a&FilePath=LICENSE",
+    "path": "qwen3_tokenizer/LICENSE",
+    "size": 11343,
+    "expected_count": null,
+    "source_kind": "official",
+    "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-1.7B/repo?Revision=ba16748358494dc16019aa354b05b6a175b67ff5&FilePath=config.json",
+    "path": "qwen3_tokenizer/config.json",
+    "size": 726,
+    "expected_count": null,
+    "source_kind": "official",
+    "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-1.7B/repo?Revision=ba16748358494dc16019aa354b05b6a175b67ff5&FilePath=merges.txt",
+    "path": "qwen3_tokenizer/merges.txt",
+    "size": 1671853,
+    "expected_count": null,
+    "source_kind": "official",
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-1.7B/repo?Revision=ba16748358494dc16019aa354b05b6a175b67ff5&FilePath=tokenizer.json",
+    "path": "qwen3_tokenizer/tokenizer.json",
+    "size": 11422654,
+    "expected_count": null,
+    "source_kind": "official",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-1.7B/repo?Revision=c230923b64efe6d30f13552ace594b9578fab252&FilePath=tokenizer_config.json",
+    "path": "qwen3_tokenizer/tokenizer_config.json",
+    "size": 9732,
+    "expected_count": null,
+    "source_kind": "official",
+    "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/models/Qwen/Qwen3-1.7B/repo?Revision=ba16748358494dc16019aa354b05b6a175b67ff5&FilePath=vocab.json",
+    "path": "qwen3_tokenizer/vocab.json",
+    "size": 2776833,
+    "expected_count": null,
+    "source_kind": "official",
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  }
+]

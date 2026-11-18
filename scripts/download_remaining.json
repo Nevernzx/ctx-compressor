@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/OpenDataLab/HotpotQA/repo?Revision=8f4804ba8c47c8d911bdf8d5fb6dabb23535f544&FilePath=raw%2Fhotpot_dev_distractor_v1.json",
+    "path": "hotpotqa/hotpot_dev_distractor_v1.json",
+    "size": 46320117,
+    "sha256": "4e9ecb5c8d3b719f624d66b60f8d56bf227f03914f5f0753d6fa1b359d7104ea",
+    "expected_count": 7405
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/OpenDataLab/HotpotQA/repo?Revision=8f4804ba8c47c8d911bdf8d5fb6dabb23535f544&FilePath=raw%2Fhotpot_dev_fullwiki_v1.json",
+    "path": "hotpotqa/hotpot_dev_fullwiki_v1.json",
+    "size": 47454698,
+    "sha256": "2f1f3e594a3066a3084cc57950ca2713c24712adaad03af6ccce18d1846d5618",
+    "expected_count": 7405
+  },
+  {
+    "url": "https://www.modelscope.cn/api/v1/datasets/voidful/2WikiMultihopQA/repo?Revision=75d023a1becf3e2e73401639536eae3d0bc82d2c&FilePath=dev.json",
+    "path": "2wikimultihopqa/dev.json",
+    "size": 55934464,
+    "sha256": "48b9bdc69654dc580fda5f935a48b88cb89f11887587310af60d406c8d0111a6",
+    "expected_count": 12576
+  },
+  {
+    "url": "https://raw.githubusercontent.com/StonyBrookNLP/musique/main/LICENSE",
+    "path": "musique/LICENSE",
+    "source_kind": "official"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/hotpotqa/hotpot/master/README.md",
+    "path": "hotpotqa/OFFICIAL_README.md",
+    "source_kind": "official"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Alab-NII/2wikimultihop/main/LICENSE",
+    "path": "2wikimultihopqa/LICENSE",
+    "source_kind": "official"
+  }
+]

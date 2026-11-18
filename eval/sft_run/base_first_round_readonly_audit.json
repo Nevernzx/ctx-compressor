@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "status": "passed_readonly_audit",
+  "created_at_utc": "2026-11-17T23:08:50.556520+00:00",
+  "current_run": {
+    "pid": 898553,
+    "started_at_utc": "2026-11-17T22:53:44.589431+00:00",
+    "status_at_read": "running",
+    "engine_initialization_seconds": 22.989038297208026,
+    "engine_tokenizer_check": {
+      "reference": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+        "bytes": 40731,
+        "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+      },
+      "identity": {
+        "task": 0,
+        "step": 0,
+        "mode": "reselect",
+        "budget_tier": "tight",
+        "budget": 1876,
+        "split": "heldout"
+      },
+      "prompt_tokens": 1814,
+      "masked_input_tokens": 1810,
+      "empty_think_tokens": 4,
+      "exact_token_ids_match": true,
+      "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+    },
+    "generation": {
+      "temperature": 0,
+      "max_tokens": 256,
+      "n": 1,
+      "seed": 20261118,
+      "enable_thinking": false,
+      "input_truncation": false
+    }
+  },
+  "startup": {
+    "v1_log": true,
+    "flash_attention_log": true,
+    "punica_gpu_log": true,
+    "engine_warmup_completed_log": true,
+    "missing_c_compiler_error_in_new_log": false,
+    "traceback_in_new_log": false,
+    "evidence_lines": [
+      "\u001b[1;36m(EngineCore_DP0 pid=898637)\u001b[0;0m INFO 11-18 06:53:53 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='/root/userfolder/ctx-compressor/models/Qwen3-1.7B', speculative_config=None, tokenizer='/root/userfolder/ctx-compressor/models/Qwen3-1.7B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=40960, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=20261118, served_model_name=/root/userfolder/ctx-compressor/models/Qwen3-1.7B, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={\"level\":0,\"debug_dump_path\":\"\",\"cache_dir\":\"\",\"backend\":\"\",\"custom_ops\":[],\"splitting_ops\":null,\"use_inductor\":true,\"compile_sizes\":[],\"inductor_compile_config\":{\"enable_auto_functionalized_v2\":false},\"inductor_passes\":{},\"cudagraph_mode\":0,\"use_cudagraph\":true,\"cudagraph_num_of_warmups\":0,\"cudagraph_capture_sizes\":[],\"cudagraph_copy_inputs\":false,\"full_cuda_graph\":false,\"use_inductor_graph_partition\":false,\"pass_config\":{},\"max_capture_size\":0,\"local_cache_dir\":null}",
+      "\u001b[1;36m(EngineCore_DP0 pid=898637)\u001b[0;0m INFO 11-18 06:53:56 [cuda.py:366] Using Flash Attention backend on V1 engine.",
+      "\u001b[1;36m(EngineCore_DP0 pid=898637)\u001b[0;0m INFO 11-18 06:53:57 [punica_selector.py:19] Using PunicaWrapperGPU.",
+      "\u001b[1;36m(EngineCore_DP0 pid=898637)\u001b[0;0m INFO 11-18 06:54:06 [core.py:210] init engine (profile, create kv cache, warmup model) took 8.51 seconds",
+      "2026-11-17T23:05:56.723044+00:00 base step=0 n=1494 total=1494 seconds=699.674 invalid={'invalid_json': 1494}"
+    ],
+    "conclusion": "The replacement run completed initialization and its first base generation round; the missing-host-compiler initialization failure is resolved for this actual run. Trained-adapter activation remains a later check."
+  },
+  "first_batch": {
+    "step": 0,
+    "n": 1494,
+    "seconds": 699.6739323439542,
+    "prompt_tokens": 3592749,
+    "generated_tokens": 371349
+  },
+  "actual_training_prefix_check": {
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "exact_token_ids_match": true,
+    "runtime_echoed_exact_prompt_ids": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20",
+    "training_reference_sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+  },
+  "record_prefix": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts/base/steps.jsonl",
+    "records": 1494,
+    "bytes": 22460613,
+    "sha256": "2642be3070e24324c7a7290ebc342542aba377eac8f21803e06270f2220160b6",
+    "hash_scope": "First 1494 complete JSONL lines only; file remains live and is not hashed as a final artifact."
+  },
+  "record_checks": {
+    "unique_trajectory_ids": 1494,
+    "unique_tasks": 249,
+    "config_counts": {
+      "base|reselect|tight": 249,
+      "base|reselect|mid": 249,
+      "base|reselect|loose": 249,
+      "base|append|tight": 249,
+      "base|append|mid": 249,
+      "base|append|loose": 249
+    },
+    "all_step_zero": true,
+    "first_actual_prompt_ids_equal_training_reference": true,
+    "all_runtime_prompt_ids_match": true,
+    "input_truncations": 0,
+    "max_generated_tokens": 256,
+    "generated_tokens": 371349,
+    "prompt_tokens": 3592749,
+    "output_limit_hits": 1247,
+    "finish_reasons": {
+      "stop": 247,
+      "length": 1247
+    },
+    "recorded_invalid_reasons": {
+      "invalid_json": 1494
+    },
+    "actual_parser_none_count": 1494,
+    "strict_json_classes": {
+      "whole_string_json_syntax_error": 1494
+    },
+    "output_text_shapes": {
+      "natural_language_or_other": 1418,
+      "markdown_fence": 3,
+      "starts_with_bracket_but_invalid_json": 73
+    },
+    "starts_with_paragraph_label_count": 73
+  },
+  "sampled_output_audit": {
+    "sample_count": 9,
+    "all_decoded_output_ids_equal_saved_raw_text": true,
+    "samples": [
+      {
+        "record_index": 0,
+        "trajectory_id": "base|reselect|tight|0",
+        "mode": "reselect",
+        "budget_tier": "tight",
+        "task": 0,
+        "step": 0,
+        "raw_output_excerpt": "Based on the provided information, here are the answers to the questions:\n\n1. **In one source of foreign inhabitants in the country where the performer of Live and Learn originated, what is something that is not consistent between the Jewish population?**  \n   - **Answer:** The answer is not provided in the given text.\n\n2. **In 2018, who was elected mayor of",
+        "raw_output_characters": 836,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "position": 0
+        },
+        "generated_tokens": 197,
+        "finish_reason": "stop",
+        "output_limit_hit": false,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 1,
+        "trajectory_id": "base|reselect|tight|1",
+        "mode": "reselect",
+        "budget_tier": "tight",
+        "task": 1,
+        "step": 0,
+        "raw_output_excerpt": "Based on the provided information, here are the answers to your questions:\n\n1. **Who is the mother of the artist who released Hello Broadway?**  \n   - **Answer:** The artist who released *Hello Broadway* is Marvin Gaye. The mother of Marvin Gaye is **Sidney Alderman Blackmer**.\n\n2. **When was the brand opened in Georges Kopp's birthplace?**  \n   - **Answer:*",
+        "raw_output_characters": 1065,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "position": 0
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 78,
+        "trajectory_id": "base|reselect|tight|78",
+        "mode": "reselect",
+        "budget_tier": "tight",
+        "task": 78,
+        "step": 0,
+        "raw_output_excerpt": "[编号 0 | 89 token]\nTosi (Nepal)\nTosi is a village in Achham District in the Seti Zone of western Nepal. At the time of the 1991 Nepal census, the village had a population of 1962 living in 355 houses. At the time of the 2001 Nepal census, the population was 2015, of which 33% was literate.\n\n[编号 1 | 175 token]\nVisa requirements for Indian citizens\nVisa require",
+        "raw_output_characters": 1021,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 2 (char 1)",
+          "position": 1
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 250,
+        "trajectory_id": "base|reselect|mid|1",
+        "mode": "reselect",
+        "budget_tier": "mid",
+        "task": 1,
+        "step": 0,
+        "raw_output_excerpt": "Based on the provided information, here are the answers to your questions:\n\n1. **Who is the mother of the artist who released Hello Broadway?**  \n   - **Answer:** The artist who released *Hello Broadway* is Marvin Gaye. The mother of Marvin Gaye is **Sidney Alderman Blackmer**.\n\n2. **When was the brand opened in Georges Kopp's birthplace?**  \n   - **Answer:*",
+        "raw_output_characters": 1052,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "position": 0
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 500,
+        "trajectory_id": "base|reselect|loose|2",
+        "mode": "reselect",
+        "budget_tier": "loose",
+        "task": 2,
+        "step": 0,
+        "raw_output_excerpt": "Here are the answers to your questions:\n\n1. **When did the author of \"I Don't Mean to Be Rude, But...\" announce he was no longer going to be a judge?**  \n   - **Answer:** The author of \"I Don't Mean to Be Rude, But...\" is Simon Cowell. He announced he was no longer going to be a judge in 2003, as the book was published that year.\n\n2. **Who sings the rap in \"",
+        "raw_output_characters": 946,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "position": 0
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 750,
+        "trajectory_id": "base|append|tight|3",
+        "mode": "append",
+        "budget_tier": "tight",
+        "task": 3,
+        "step": 0,
+        "raw_output_excerpt": "[编号 0 | 66 token]\nPeggy Littleton\nPeggy \"Peg\" Littleton is the county commissioner for Colorado Springs, Colo., the second-largest city in Colorado and the 41st-largest city in the United States. Her Commissioner District 5 is a jurisdiction of El Paso County, Colo., the state's most populous county.\n\n[编号 1 | 34 token]\nThe Peggy Neville Show\nThe Peggy Nevill",
+        "raw_output_characters": 954,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 2 (char 1)",
+          "position": 1
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 982,
+        "trajectory_id": "base|append|tight|235",
+        "mode": "append",
+        "budget_tier": "tight",
+        "task": 235,
+        "step": 0,
+        "raw_output_excerpt": "```\n[编号 0 | 102 token]\nGo Your Own Way\n``Go Your Own Way'' is a song by the British-American rock band Fleetwood Mac from their eleventh studio album Rumours (1977). It released as the album's first single in December 1976 on both sides of the Atlantic. Written and sung by Lindsey Buckingham, it became the band's first top ten hit in the United States. The a",
+        "raw_output_characters": 952,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "position": 0
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 1000,
+        "trajectory_id": "base|append|mid|4",
+        "mode": "append",
+        "budget_tier": "mid",
+        "task": 4,
+        "step": 0,
+        "raw_output_excerpt": "Here are the answers to your questions based on the provided information:\n\n1. **How old was the performer of \"I Hope You Find It\" when she started in Hanna Montana?**  \n   - The performer of \"I Hope You Find It\" is Miley Cyrus. She started in Hanna Montana at the age of **14**.\n\n2. **When did the performer of \"I Look to You\" record \"The Greatest Love of All\"",
+        "raw_output_characters": 1007,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "position": 0
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      },
+      {
+        "record_index": 1250,
+        "trajectory_id": "base|append|loose|5",
+        "mode": "append",
+        "budget_tier": "loose",
+        "task": 5,
+        "step": 0,
+        "raw_output_excerpt": "Based on the provided information, here are the answers to the tasks:\n\n1. **How did the Japanese beat the country whose government disagreed on the language used to describe the torch route?**  \n   The Japanese beat the country (China) by **safely navigating the torch route** through the disputed territory of the Spratly and Paracel Islands. Despite China's ",
+        "raw_output_characters": 1142,
+        "invalid_reason": "invalid_json",
+        "strict_parse_action_is_none": true,
+        "parse_detail": {
+          "json_syntax_valid": false,
+          "exception": "JSONDecodeError",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "position": 0
+        },
+        "generated_tokens": 256,
+        "finish_reason": "length",
+        "output_limit_hit": true,
+        "decoded_output_ids_equal_raw_output": true,
+        "runtime_prompt_ids_match": true,
+        "input_truncated": false,
+        "prompt_and_output_ids_are_separate_fields": true
+      }
+    ],
+    "conclusion": "All nine sampled saved raw texts exactly equal decoding their generated output token IDs. Prompt token IDs are stored separately. Some generated completions themselves repeat supplied paragraph text (for example [编号 ...]); this is model-generated copying, not application-level prompt concatenation or extraction confusion. All 1494 first-round raw strings fail whole-string strict JSON syntax parsing before action-schema validation. No repair or regeneration was applied.",
+    "representative_categories": [
+      {
+        "kind": "natural-language answers",
+        "example_record": 0,
+        "short_excerpt": "Based on the provided information, here are the answers to the questions:",
+        "reason": "JSONDecodeError at char 0; this example stopped naturally at 197 tokens."
+      },
+      {
+        "kind": "model-generated paragraph copying",
+        "example_record": 78,
+        "short_excerpt": "[编号 0 | 89 token]\\nTosi (Nepal)",
+        "reason": "Not a JSON array; JSONDecodeError at char 1. Output-ID decoding exactly reproduces this text."
+      },
+      {
+        "kind": "fenced paragraph text",
+        "example_record": 982,
+        "short_excerpt": "code fence followed by [编号 0 | 102 token]",
+        "reason": "JSONDecodeError at char 0; strict parser intentionally does not extract fenced content."
+      }
+    ]
+  },
+  "protected_runtime_scope": {
+    "read_existing_first_round_only": true,
+    "code_or_parameters_changed": false,
+    "gpu_process_started": false,
+    "gpu_query": false,
+    "cuda_initialized": false,
+    "local_tokenizer_decode_only": true,
+    "new_generation": false
+  }
+}

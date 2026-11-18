@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-17T19:06:46.807794+00:00",
+  "status": "passed_cpu_only",
+  "no_parameter_change_required": true,
+  "engine_parameters_modified": false,
+  "preflight_modified": false,
+  "llm_created": false,
+  "model_config_instance_created": false,
+  "cuda_initialized_before": false,
+  "cuda_initialized_after": false,
+  "gpu_generation_tested": false,
+  "versions": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.6"
+  },
+  "local_generation_config": {
+    "bos_token_id": 151643,
+    "do_sample": true,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "pad_token_id": 151643,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95,
+    "transformers_version": "4.51.0"
+  },
+  "local_generation_config_file": {
+    "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/generation_config.json",
+    "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "bytes": 239
+  },
+  "actual_loaded_generation_config_diff": {
+    "do_sample": true,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95,
+    "pad_token_id": 151643,
+    "bos_token_id": 151643,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "transformers_version": "4.57.6"
+  },
+  "model_default_sampling_params_if_omitted": {
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "explicit_sampling_before_engine_clone": {
+    "temperature": 0,
+    "max_tokens": 256,
+    "seed": 20261118,
+    "n": 1,
+    "top_p": 1.0,
+    "top_k": 0,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "ignore_eos": false,
+    "stop_token_ids": [],
+    "all_stop_token_ids": [],
+    "sampling_type": "GREEDY",
+    "truncate_prompt_tokens": null
+  },
+  "after_actual_generation_config_update": {
+    "temperature": 0,
+    "max_tokens": 256,
+    "seed": 20261118,
+    "n": 1,
+    "top_p": 1.0,
+    "top_k": 0,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "ignore_eos": false,
+    "stop_token_ids": [
+      151643
+    ],
+    "all_stop_token_ids": [
+      151643,
+      151645
+    ],
+    "sampling_type": "GREEDY",
+    "truncate_prompt_tokens": null
+  },
+  "checks": {
+    "explicit_parameters_preserved": true,
+    "greedy_preserved": true,
+    "max_tokens_256_preserved": true,
+    "seed_preserved": true,
+    "original_sampling_object_unchanged": true,
+    "local_generation_config_unchanged": true
+  },
+  "installed_call_path": [
+    "LLM.generate: get_default_sampling_params is called only when sampling_params is None. The runner always supplies an explicit SamplingParams instance.",
+    "LLM._validate_and_add_requests forwards that instance after setting output_kind=FINAL_ONLY; it does not replace temperature or max_tokens.",
+    "V1 Processor clones params. It fills max_tokens from context capacity only when max_tokens is None, which is false for the explicit 256.",
+    "SamplingParams.update_from_generation_config only adds EOS stop IDs in installed vLLM 0.11; it does not assign temperature, top_p, top_k, seed or max_tokens.",
+    "temperature=0 causes SamplingParams.__post_init__ to normalize top_p=1, top_k=0 and min_p=0; sampling_type is GREEDY."
+  ],
+  "eos_behavior": {
+    "primary_eos": 151645,
+    "additional_eos": 151643,
+    "meaning": "Auto generation config retains the model's additional EOS token. EOS can end a response before the fixed 256-token ceiling; this does not change the ceiling or greedy decoding."
+  },
+  "swift_training_log_64_tokens": {
+    "observed_in_train_log": true,
+    "base_disk_generation_config_contains_64": false,
+    "source_explanation": "SwiftSft._prepare_generation_config assigns a newly prepared GenerationConfig to the training model instance. prepare_generation_config constructs GenerationConfig with max_new_tokens=request_config.max_tokens. The local base generation_config.json still has no max_new_tokens.",
+    "separate_inference_process": "The reader LLM reloads the base directory and receives explicit max_tokens=256. The LoRA loader reads adapter_config/adapter weights, not the trainer's in-memory model.generation_config.",
+    "checkpoint_generation_config_files": {
+      "500": false,
+      "1000": false
+    }
+  },
+  "lora_prefix_caching_source_review": {
+    "status": "source_confirmed_for_v1_runtime_unexecuted",
+    "independent_reviewer": "task05_eval",
+    "configuration_explicit_rejection_found_for_current_qwen3_settings": false,
+    "configuration_findings": [
+      "EngineArgs creates LoRAConfig; VllmConfig invokes LoRAConfig.verify_with_cache_config. The latter rejects only V0 CPU offload, not prefix caching.",
+      "CacheConfig prefix validation checks V0 sliding-window and hash algorithm restrictions. Current Qwen3 has no sliding window.",
+      "V1 non-pooling models default to prefix caching; prompt embeddings can disable it. Current inputs are token IDs.",
+      "The inspected GPU model runner prefix restriction is for Mamba, which is not Qwen3."
+    ],
+    "cache_key_findings": [
+      "LLM.generate and request submission retain LoRARequest through Processor into EngineCoreRequest.",
+      "EngineCore installs the request block hasher when prefix caching is enabled; Request preserves lora_request and computes its block hashes.",
+      "_gen_lora_extra_hash_keys returns [] for base requests and [lora_request.lora_int_id] for LoRA requests.",
+      "generate_block_hash_extra_keys includes LoRA identity in extra_keys for each block; hash_block_tokens hashes (parent_block_hash, token_ids, extra_keys).",
+      "Cache lookup and insertion both use that block hash plus cache group ID.",
+      "Current runner uses base=None and distinct LoRA integer IDs 1, 2, 3, 4, 5 for checkpoints 500 through 2500, satisfying adapter identity uniqueness."
+    ],
+    "strategy_adapter_ids": {
+      "base": null,
+      "checkpoint-500": 1,
+      "checkpoint-1000": 2,
+      "checkpoint-1500": 3,
+      "checkpoint-2000": 4,
+      "checkpoint-2500": 5
+    },
+    "backend_selection": {
+      "installed_default": "VLLM_USE_V1 defaults to 1; EngineArgs also consults its V1 support oracle.",
+      "actual_startup_backend_confirmed": false,
+      "required_runtime_check": "Confirm V1 selection from the eventual GPU startup log."
+    },
+    "no_engine_created": true,
+    "no_gpu_initialization": true,
+    "cache_hit_or_cross_adapter_numerical_test_performed": false,
+    "limitations": "This establishes installed source-level acceptance and adapter identity in V1 cache keys. Actual GPU activation, backend selection and cache behavior remain runtime checks.",
+    "source_evidence": [
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/engine/arg_utils.py",
+        "sha256": "2238ade872b5f7478330fa9ca1214389520e08991582090e3e03e2feabcf95ac",
+        "line_start": 1387,
+        "line_end": 1405
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/config/__init__.py",
+        "sha256": "4c654a12b57c517939954bbae0a1f66063fbdeb47d1a86d5f965d3f8d56e59a5",
+        "line_start": 315,
+        "line_end": 317
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/config/lora.py",
+        "sha256": "2da93d6b2d71de534d52d93e2200cdfa93680cd0fcc6b63c700d04b94e6274fb",
+        "line_start": 123,
+        "line_end": 126
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/config/cache.py",
+        "sha256": "46a9c19c14d89245be0b9af81f74a6f7a548f27c4b5cc36e0f1d65590c05ed01",
+        "line_start": 188,
+        "line_end": 202
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/engine/arg_utils.py",
+        "sha256": "2238ade872b5f7478330fa9ca1214389520e08991582090e3e03e2feabcf95ac",
+        "line_start": 1544,
+        "line_end": 1561
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py",
+        "sha256": "ea6b7bfe4082349e80042df4801c7ef9e18c80d1c3879eeb6ac6e9c476303574",
+        "line_start": 4112,
+        "line_end": 4121
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/envs.py",
+        "sha256": "a70016521a542d7bfa4884c0f9c3efc74df8cd030f5971a58774a87ab35d3803",
+        "line_start": 900,
+        "line_end": 901
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/engine/arg_utils.py",
+        "sha256": "2238ade872b5f7478330fa9ca1214389520e08991582090e3e03e2feabcf95ac",
+        "line_start": 1144,
+        "line_end": 1159
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/entrypoints/llm.py",
+        "sha256": "ee4a1ae908f6e04b822c8ef55bb1ecff89a781cee90944a3d989e85286b6489a",
+        "line_start": 1516,
+        "line_end": 1521
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/entrypoints/llm.py",
+        "sha256": "ee4a1ae908f6e04b822c8ef55bb1ecff89a781cee90944a3d989e85286b6489a",
+        "line_start": 1569,
+        "line_end": 1573
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py",
+        "sha256": "3af31a24d08709a3bb4001d1665c8bc8953a3cc2b62241f758f433afacbd6afa",
+        "line_start": 230,
+        "line_end": 240
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/engine/processor.py",
+        "sha256": "85f46c065ecb1cf8b2923883473146a729c3b0556356b726cc1dfac9df1f6123",
+        "line_start": 445,
+        "line_end": 454
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/engine/core.py",
+        "sha256": "4573563d926cafe0f1e11ebb25e862ce3bc722af9a24425dec791b9d43cfbedd",
+        "line_start": 153,
+        "line_end": 164
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/engine/core.py",
+        "sha256": "4573563d926cafe0f1e11ebb25e862ce3bc722af9a24425dec791b9d43cfbedd",
+        "line_start": 441,
+        "line_end": 442
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/request.py",
+        "sha256": "be457706757fe6734c5a1bd9f3261722276ec27616dac996d6b1c33cacdfa5ec",
+        "line_start": 54,
+        "line_end": 54
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/request.py",
+        "sha256": "be457706757fe6734c5a1bd9f3261722276ec27616dac996d6b1c33cacdfa5ec",
+        "line_start": 118,
+        "line_end": 147
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/kv_cache_utils.py",
+        "sha256": "0824beae09a3a8faeb54e8e0605d1661045e34a33a2026de537e6849a4c78ee4",
+        "line_start": 502,
+        "line_end": 544
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/kv_cache_utils.py",
+        "sha256": "0824beae09a3a8faeb54e8e0605d1661045e34a33a2026de537e6849a4c78ee4",
+        "line_start": 547,
+        "line_end": 613
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/sched/scheduler.py",
+        "sha256": "357ac414a5b5da8c3423984dd1fdde860584a0d417c30ac2ee25874ea9e5a04c",
+        "line_start": 379,
+        "line_end": 384
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/kv_cache_manager.py",
+        "sha256": "f02d1d095365b83c5fcb9eff14ac887f35234495b8718f24718a218244dd5590",
+        "line_start": 167,
+        "line_end": 183
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/kv_cache_coordinator.py",
+        "sha256": "19285af400c0525b0855388a7a635111ec01bf728acaba9b72fbd793ed38b2dc",
+        "line_start": 251,
+        "line_end": 264
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/single_type_kv_cache_manager.py",
+        "sha256": "90c94e5b7555af87cd6080b314e9fc272dd9f9749f84bcbf6a1d7d6d718b4c41",
+        "line_start": 272,
+        "line_end": 280
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/block_pool.py",
+        "sha256": "8cd4b2fe35a26dcf8aa7d8e8ec16922b7cd3e67e02c800026902dad9b1274368",
+        "line_start": 177,
+        "line_end": 182
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/core/block_pool.py",
+        "sha256": "8cd4b2fe35a26dcf8aa7d8e8ec16922b7cd3e67e02c800026902dad9b1274368",
+        "line_start": 217,
+        "line_end": 230
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/request.py",
+        "sha256": "24bc423ee32dd9a3da32a3a73437f1c9de4ae0fac52519068948ba673f0f6709",
+        "line_start": 22,
+        "line_end": 23
+      }
+    ]
+  },
+  "source_evidence": [
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/entrypoints/llm.py",
+      "sha256": "ee4a1ae908f6e04b822c8ef55bb1ecff89a781cee90944a3d989e85286b6489a",
+      "bytes": 73189,
+      "line_start": 327,
+      "line_end": 399
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/config/model.py",
+      "sha256": "cdc56efde88003b399204128c97086ba8ed06b7117e2e12ccdbd070b8892d362",
+      "bytes": 82694,
+      "line_start": 235,
+      "line_end": 246
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/config/model.py",
+      "sha256": "cdc56efde88003b399204128c97086ba8ed06b7117e2e12ccdbd070b8892d362",
+      "bytes": 82694,
+      "line_start": 1315,
+      "line_end": 1395
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/v1/engine/processor.py",
+      "sha256": "85f46c065ecb1cf8b2923883473146a729c3b0556356b726cc1dfac9df1f6123",
+      "bytes": 23913,
+      "line_start": 403,
+      "line_end": 420
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/sampling_params.py",
+      "sha256": "8219442773ae7cca6d3b63507438e8b0654fbcf024bf7f037dd80ed9f860bf01",
+      "bytes": 26277,
+      "line_start": 350,
+      "line_end": 358
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/sampling_params.py",
+      "sha256": "8219442773ae7cca6d3b63507438e8b0654fbcf024bf7f037dd80ed9f860bf01",
+      "bytes": 26277,
+      "line_start": 460,
+      "line_end": 486
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/sampling_params.py",
+      "sha256": "8219442773ae7cca6d3b63507438e8b0654fbcf024bf7f037dd80ed9f860bf01",
+      "bytes": 26277,
+      "line_start": 522,
+      "line_end": 528
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/llm/train/sft.py",
+      "sha256": "cb760edc370ec967e62adb2e02ba9c62cfb1296f29b081b71e785a92be908e50",
+      "bytes": 16836,
+      "line_start": 44,
+      "line_end": 49
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/train/lib/python3.11/site-packages/swift/llm/infer/infer_engine/utils.py",
+      "sha256": "a4e8ec5cd709ac0aff11cf2ce7a67f3b90ff97225b6fc580725577a35c4cd223",
+      "bytes": 26492,
+      "line_start": 145,
+      "line_end": 177
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/vllm/lora/models.py",
+      "sha256": "669483e0f20c49abe95f719b60b8992a7b5178cd772b11850585663856719d72",
+      "bytes": 35031,
+      "line_start": 188,
+      "line_end": 322
+    }
+  ],
+  "runner_source": {
+    "path": "/root/workplace/ctx-compressor/scripts/rollout_model.py",
+    "sha256": "649ecd4685a484d976a0f0015b7eb0780989f05809c157757176643097c7d7d5",
+    "bytes": 31153
+  },
+  "inference_helper_source": {
+    "path": "/root/workplace/ctx-compressor/src/model_inference.py",
+    "sha256": "3ae4d9301363735cbf215c3386193febf258cc53cfb14b605ab53ecc2230bda6",
+    "bytes": 3937
+  }
+}

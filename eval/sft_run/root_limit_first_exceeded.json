@@ -1,0 +1,24 @@
+{
+  "recorded_utc": "2026-11-17T20:43:33.492200+00:00",
+  "status": "intermediate_root_limit_exceeded",
+  "final_acceptance_status": "pending",
+  "baseline_used_bytes": 931440451584,
+  "limit_bytes": 300000000,
+  "first_exceeded_resource_sample": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 8271,
+    "utilization_percent": 99,
+    "root_used_bytes": 931742670848,
+    "utc": "2026-11-17T20:42:47.372658+00:00",
+    "pid": 724147,
+    "alive": true,
+    "optimizer_step": 1777,
+    "nonfinite": false,
+    "root_delta_bytes": 302219264
+  },
+  "resources_path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/resources.jsonl",
+  "resources_prefix_bytes": 188339,
+  "resources_prefix_sha256": "7a0c6cad233b2cd96d5cba2c9ad61a3a855affec5b0460d5293bce061fd5d60d",
+  "interpretation": "This is a runtime observation, not a final acceptance measurement. Raw root usage is retained without subtracting unattributed growth. Existing training continues because the task specifies a final root delta limit; the final raw limit remains mandatory. No unrelated files or processes were changed."
+}

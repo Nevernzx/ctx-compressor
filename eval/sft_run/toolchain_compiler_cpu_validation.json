@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "status": "passed_cpu_only",
+  "created_at_utc": "2026-11-17T22:52:03.184380+00:00",
+  "toolchain_prefix": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc",
+  "compiler": {
+    "stdout": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 13.4.0-20) 13.4.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  "cxx_compiler": {
+    "stdout": "x86_64-conda-linux-gnu-g++ (conda-forge gcc 13.4.0-20) 13.4.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  "sysroot": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/../x86_64-conda-linux-gnu/sysroot",
+  "assembler": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/../lib/gcc/x86_64-conda-linux-gnu/13.4.0/../../../../x86_64-conda-linux-gnu/bin/as",
+  "linker": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/../libexec/gcc/x86_64-conda-linux-gnu/13.4.0/ld",
+  "reader_python": "/root/userfolder/ctx-compressor/envs/reader/bin/python",
+  "reader_prefix": "/root/userfolder/ctx-compressor/envs/reader",
+  "python_include": "/root/workplace/ctx-compressor/.conda/envs/ctxc/include/python3.11",
+  "environment": {
+    "CC": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+    "CXX": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-g++",
+    "PATH": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "LD_LIBRARY_PATH": null,
+    "TMPDIR": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/cache/tmp",
+    "TRITON_CACHE_DIR": "/root/userfolder/ctx-compressor/cache/triton",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "checks": {
+    "c_hello_compile": {
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    },
+    "c_hello_run": {
+      "stdout": "task05 C host OK\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "cpp_hello_compile": {
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    },
+    "cpp_hello_run": {
+      "stdout": "task05 C++ host 13 OK\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "reader_python_host_extension": {
+      "answer": 42,
+      "artifact": {
+        "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/task05_host_probe.cpython-311-x86_64-linux-gnu.so",
+        "bytes": 15768,
+        "sha256": "f95b4d791ff5698858b92ef3dbad666803838260da3cf11ac279adf4f3c4a4f0"
+      }
+    },
+    "actual_triton_driver_extension": {
+      "source": {
+        "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/triton/backends/nvidia/driver.c",
+        "bytes": 16281,
+        "sha256": "1e82c15c950519369005547b6f8161810c2801550caf6a1e054d8d7a34c49d24"
+      },
+      "artifact": {
+        "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/cuda_utils.cpython-311-x86_64-linux-gnu.so",
+        "bytes": 26272,
+        "sha256": "df0e5e07891e0bebf33d821a1bc928aa77b667da3d9a034427b83e8923c75d89"
+      },
+      "compiled_and_imported": true,
+      "cuda_methods_called": false,
+      "source_PyInit_checked": "Only PyModule_Create and PyModule_AddFunctions; no CUDA initialization call"
+    }
+  },
+  "cuda_initialized_before": false,
+  "cuda_initialized_after": false,
+  "gpu_queries": 0,
+  "llm_or_cuda_driver_created": false,
+  "runtime_scope": "C/C++ host programs and Python extensions only; no GPU kernel compilation/launch or numerical LoRA validation.",
+  "source_build": {
+    "path": "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/triton/runtime/build.py",
+    "bytes": 3784,
+    "sha256": "bdbe85d7e77dfa34f13dfc5e2c65419a04be6af96144ac70f8257fd4298bc2c6"
+  },
+  "executed_commands": [
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello.c",
+        "-O2",
+        "-o",
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_c"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_c",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_c"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-g++",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-g++",
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello.cpp",
+        "-O2",
+        "-o",
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_cpp"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_cpp",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_cpp"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/task05_host_probe.c",
+        "-O3",
+        "-shared",
+        "-fPIC",
+        "-Wno-psabi",
+        "-o",
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/task05_host_probe.cpython-311-x86_64-linux-gnu.so",
+        "-I/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks",
+        "-I/root/workplace/ctx-compressor/.conda/envs/ctxc/include/python3.11"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+        "/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/triton/backends/nvidia/driver.c",
+        "-O3",
+        "-shared",
+        "-fPIC",
+        "-Wno-psabi",
+        "-o",
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/cuda_utils.cpython-311-x86_64-linux-gnu.so",
+        "-lcuda",
+        "-L/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/triton/backends/nvidia/lib",
+        "-L/lib/x86_64-linux-gnu",
+        "-I/root/userfolder/ctx-compressor/envs/reader/lib/python3.11/site-packages/triton/backends/nvidia/include",
+        "-I/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks",
+        "-I/root/workplace/ctx-compressor/.conda/envs/ctxc/include/python3.11"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+        "--version"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-g++",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-g++",
+        "--version"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+        "-print-sysroot"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+        "-print-prog-name=as"
+      ],
+      "cwd": null
+    },
+    {
+      "executable": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+      "argv": [
+        "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+        "-print-prog-name=ld"
+      ],
+      "cwd": null
+    }
+  ],
+  "files": [
+    {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello.c",
+      "bytes": 70,
+      "sha256": "7df0e4b2e1613d4cb85e55dd59dd14f9e0247635bb60e9c78b4c2e552fa4ca70"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_c",
+      "bytes": 16000,
+      "sha256": "ede29577d7bc4cc5e4457f2246f04e3723e957b22cb447ef8bdd90c89ebaf508"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello.cpp",
+      "bytes": 187,
+      "sha256": "0106ec3c11ba0c83c4f55a39b110823f3adf706d91d11d5ec4549f9599e577c0"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/hello_cpp",
+      "bytes": 17216,
+      "sha256": "623061b8f9b2e6225a981f511f852354f0e2e16980f701b8d044a6c10032c564"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/checks/task05_host_probe.c",
+      "bytes": 376,
+      "sha256": "2eed8d5060ed0eac67948cbca11c5ba8c5a8f6f61b59a42e34f623ad64953396"
+    }
+  ]
+}
