@@ -1,0 +1,1479 @@
+{
+  "status": "ok",
+  "source": "CPU replay of original completion strings, saved returns and state IDs",
+  "inputs": {
+    "task05_heldout_sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac",
+    "task06_heldout_sha256": "faefaeaa56be1374c5851ecf0a5b98a1fb0fce1d1364ff336cc7aaae9ff00492",
+    "shared_projection_sha256": "07fa05e04b1ea89b0e352d607e76eb9045bba2459b6b7e8316575de2eb7f2512",
+    "retrieval_tasks": 249,
+    "retrieval_steps": 2326,
+    "step0_prompts_per_checkpoint": 1494,
+    "shared_engine_generation_and_lora": true
+  },
+  "checkpoints": [
+    {
+      "checkpoint_step": 500,
+      "raw_sha256": "ca51a6a3c050982d37ce29ce0e250e0014dfd856203b9eab98f7bd3577892949",
+      "matched_step0_prompts": 1494,
+      "input_truncations": 0,
+      "output_cap_hits": 0,
+      "combined": {
+        "trajectory_n": 1494,
+        "step_n": 13956,
+        "final_recall": 0.7442960393763597,
+        "evidence_loss_count": 1361,
+        "evidence_loss_rate": 0.9109772423025435,
+        "single_step_recall": 0.9143779646359146,
+        "mean_cached_cost": 1849.2471887550196,
+        "invalid_counts": {
+          "invalid_json": 0,
+          "invalid_candidate_id": 3,
+          "append_drop": 0,
+          "over_budget": 21
+        },
+        "diagnostics": {
+          "new_gold_add": [
+            10643,
+            14286
+          ],
+          "kept_gold_survival": [
+            21737,
+            22121
+          ],
+          "all_gold_among_valid_reselect": [
+            2622,
+            6224
+          ],
+          "all_gold_valid_drop": [
+            118,
+            2622
+          ]
+        },
+        "first_error_counts": {
+          "invalid_output": 4,
+          "new_gold_not_added": 1256,
+          "old_gold_dropped": 81,
+          "both": 20,
+          "none": 133
+        }
+      },
+      "cells": {
+        "reselect|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.7124401256931367,
+          "evidence_loss_count": 232,
+          "evidence_loss_rate": 0.9317269076305221,
+          "single_step_recall": 0.9071653613893473,
+          "mean_cached_cost": 1858.1829317269085,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 7
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1766,
+              2384
+            ],
+            "kept_gold_survival": [
+              7227,
+              7359
+            ],
+            "all_gold_among_valid_reselect": [
+              870,
+              2070
+            ],
+            "all_gold_valid_drop": [
+              41,
+              870
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 199,
+            "old_gold_dropped": 26,
+            "both": 7,
+            "none": 17
+          }
+        },
+        "reselect|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.7164517432589715,
+          "evidence_loss_count": 233,
+          "evidence_loss_rate": 0.9357429718875502,
+          "single_step_recall": 0.9071762800589075,
+          "mean_cached_cost": 1872.6993975903615,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1770,
+              2381
+            ],
+            "kept_gold_survival": [
+              7235,
+              7361
+            ],
+            "all_gold_among_valid_reselect": [
+              868,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              39,
+              868
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 198,
+            "old_gold_dropped": 28,
+            "both": 7,
+            "none": 16
+          }
+        },
+        "reselect|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.7190899573429684,
+          "evidence_loss_count": 233,
+          "evidence_loss_rate": 0.9357429718875502,
+          "single_step_recall": 0.9090186349429651,
+          "mean_cached_cost": 1869.8271084337343,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1776,
+              2381
+            ],
+            "kept_gold_survival": [
+              7275,
+              7401
+            ],
+            "all_gold_among_valid_reselect": [
+              884,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              38,
+              884
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 200,
+            "old_gold_dropped": 27,
+            "both": 6,
+            "none": 16
+          }
+        },
+        "append|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.7717978362556666,
+          "evidence_loss_count": 221,
+          "evidence_loss_rate": 0.8875502008032129,
+          "single_step_recall": 0.9210831909563604,
+          "mean_cached_cost": 1822.9337349397583,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 1,
+            "append_drop": 0,
+            "over_budget": 14
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1775,
+              2380
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 2,
+            "new_gold_not_added": 219,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 28
+          }
+        },
+        "append|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.7737474373016531,
+          "evidence_loss_count": 221,
+          "evidence_loss_rate": 0.8875502008032129,
+          "single_step_recall": 0.9211565507674673,
+          "mean_cached_cost": 1834.7265060240945,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 1,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1780,
+              2380
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 1,
+            "new_gold_not_added": 220,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 28
+          }
+        },
+        "append|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.7722491364057616,
+          "evidence_loss_count": 221,
+          "evidence_loss_rate": 0.8875502008032129,
+          "single_step_recall": 0.92066776970044,
+          "mean_cached_cost": 1837.1134538152612,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 1,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1776,
+              2380
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 1,
+            "new_gold_not_added": 220,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 28
+          }
+        }
+      },
+      "checked_cell_position_pairs": 78
+    },
+    {
+      "checkpoint_step": 1000,
+      "raw_sha256": "f76a9b3510f9643234d1ff3875d56a7ca388b74393781c12dfc402116236260a",
+      "matched_step0_prompts": 1494,
+      "input_truncations": 0,
+      "output_cap_hits": 0,
+      "combined": {
+        "trajectory_n": 1494,
+        "step_n": 13956,
+        "final_recall": 0.8276277214530215,
+        "evidence_loss_count": 1196,
+        "evidence_loss_rate": 0.8005354752342704,
+        "single_step_recall": 0.9453617341783688,
+        "mean_cached_cost": 1810.1790829986628,
+        "invalid_counts": {
+          "invalid_json": 0,
+          "invalid_candidate_id": 0,
+          "append_drop": 11,
+          "over_budget": 17
+        },
+        "diagnostics": {
+          "new_gold_add": [
+            11811,
+            14213
+          ],
+          "kept_gold_survival": [
+            24154,
+            24491
+          ],
+          "all_gold_among_valid_reselect": [
+            3699,
+            6224
+          ],
+          "all_gold_valid_drop": [
+            197,
+            3699
+          ]
+        },
+        "first_error_counts": {
+          "invalid_output": 3,
+          "new_gold_not_added": 1056,
+          "old_gold_dropped": 133,
+          "both": 4,
+          "none": 298
+        }
+      },
+      "cells": {
+        "reselect|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8027523458246338,
+          "evidence_loss_count": 213,
+          "evidence_loss_rate": 0.8554216867469879,
+          "single_step_recall": 0.9411590881173811,
+          "mean_cached_cost": 1821.9413654618477,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 7
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1968,
+              2369
+            ],
+            "kept_gold_survival": [
+              8045,
+              8161
+            ],
+            "all_gold_among_valid_reselect": [
+              1240,
+              2070
+            ],
+            "all_gold_valid_drop": [
+              69,
+              1240
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 1,
+            "new_gold_not_added": 164,
+            "old_gold_dropped": 46,
+            "both": 2,
+            "none": 36
+          }
+        },
+        "reselect|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8075706087754267,
+          "evidence_loss_count": 212,
+          "evidence_loss_rate": 0.8514056224899599,
+          "single_step_recall": 0.9411136918875489,
+          "mean_cached_cost": 1828.4660642570284,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1971,
+              2369
+            ],
+            "kept_gold_survival": [
+              8059,
+              8166
+            ],
+            "all_gold_among_valid_reselect": [
+              1229,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              63,
+              1229
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 167,
+            "old_gold_dropped": 44,
+            "both": 1,
+            "none": 37
+          }
+        },
+        "reselect|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8054824581933001,
+          "evidence_loss_count": 211,
+          "evidence_loss_rate": 0.8473895582329317,
+          "single_step_recall": 0.9408975518605743,
+          "mean_cached_cost": 1833.693775100402,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1973,
+              2369
+            ],
+            "kept_gold_survival": [
+              8050,
+              8164
+            ],
+            "all_gold_among_valid_reselect": [
+              1230,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              65,
+              1230
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 167,
+            "old_gold_dropped": 43,
+            "both": 1,
+            "none": 38
+          }
+        },
+        "append|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8467558657317683,
+          "evidence_loss_count": 188,
+          "evidence_loss_rate": 0.7550200803212851,
+          "single_step_recall": 0.9490993183276044,
+          "mean_cached_cost": 1784.8255020080348,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 5,
+            "over_budget": 10
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1958,
+              2370
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 2,
+            "new_gold_not_added": 186,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 61
+          }
+        },
+        "append|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8531308606609804,
+          "evidence_loss_count": 186,
+          "evidence_loss_rate": 0.7469879518072289,
+          "single_step_recall": 0.9504827478817137,
+          "mean_cached_cost": 1798.4512048192794,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 2,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1974,
+              2368
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 186,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 63
+          }
+        },
+        "append|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.85007418953202,
+          "evidence_loss_count": 186,
+          "evidence_loss_rate": 0.7469879518072289,
+          "single_step_recall": 0.9494180069953907,
+          "mean_cached_cost": 1793.6965863453838,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 4,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              1967,
+              2368
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 186,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 63
+          }
+        }
+      },
+      "checked_cell_position_pairs": 78
+    },
+    {
+      "checkpoint_step": 1500,
+      "raw_sha256": "b7be667b3ff9d370c2659fee4b5a24f76e9251618a2ab2dc03d09e58645279ad",
+      "matched_step0_prompts": 1494,
+      "input_truncations": 0,
+      "output_cap_hits": 0,
+      "combined": {
+        "trajectory_n": 1494,
+        "step_n": 13956,
+        "final_recall": 0.882036212708903,
+        "evidence_loss_count": 990,
+        "evidence_loss_rate": 0.6626506024096386,
+        "single_step_recall": 0.9591553871433471,
+        "mean_cached_cost": 1823.254919678715,
+        "invalid_counts": {
+          "invalid_json": 0,
+          "invalid_candidate_id": 0,
+          "append_drop": 0,
+          "over_budget": 23
+        },
+        "diagnostics": {
+          "new_gold_add": [
+            12319,
+            14183
+          ],
+          "kept_gold_survival": [
+            26116,
+            26189
+          ],
+          "all_gold_among_valid_reselect": [
+            3832,
+            6220
+          ],
+          "all_gold_valid_drop": [
+            30,
+            3832
+          ]
+        },
+        "first_error_counts": {
+          "invalid_output": 1,
+          "new_gold_not_added": 965,
+          "old_gold_dropped": 30,
+          "both": 0,
+          "none": 498
+        }
+      },
+      "cells": {
+        "reselect|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8740346779503401,
+          "evidence_loss_count": 171,
+          "evidence_loss_rate": 0.6867469879518072,
+          "single_step_recall": 0.9575868778684751,
+          "mean_cached_cost": 1822.925903614458,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 11
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2046,
+              2364
+            ],
+            "kept_gold_survival": [
+              8688,
+              8713
+            ],
+            "all_gold_among_valid_reselect": [
+              1272,
+              2066
+            ],
+            "all_gold_valid_drop": [
+              11,
+              1272
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 161,
+            "old_gold_dropped": 11,
+            "both": 0,
+            "none": 77
+          }
+        },
+        "reselect|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8784127964850851,
+          "evidence_loss_count": 169,
+          "evidence_loss_rate": 0.678714859437751,
+          "single_step_recall": 0.9595489969092696,
+          "mean_cached_cost": 1832.6592369477908,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2057,
+              2363
+            ],
+            "kept_gold_survival": [
+              8708,
+              8733
+            ],
+            "all_gold_among_valid_reselect": [
+              1281,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              10,
+              1281
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 160,
+            "old_gold_dropped": 10,
+            "both": 0,
+            "none": 79
+          }
+        },
+        "reselect|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8784320654802577,
+          "evidence_loss_count": 169,
+          "evidence_loss_rate": 0.678714859437751,
+          "single_step_recall": 0.9594085896428952,
+          "mean_cached_cost": 1831.158634538152,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2055,
+              2363
+            ],
+            "kept_gold_survival": [
+              8720,
+              8743
+            ],
+            "all_gold_among_valid_reselect": [
+              1279,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              9,
+              1279
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 161,
+            "old_gold_dropped": 9,
+            "both": 0,
+            "none": 79
+          }
+        },
+        "append|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8847837347837346,
+          "evidence_loss_count": 158,
+          "evidence_loss_rate": 0.6345381526104418,
+          "single_step_recall": 0.9573587955466694,
+          "mean_cached_cost": 1811.8265060240963,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 12
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2048,
+              2367
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 1,
+            "new_gold_not_added": 158,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 90
+          }
+        },
+        "append|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8885351038965491,
+          "evidence_loss_count": 162,
+          "evidence_loss_rate": 0.6506024096385542,
+          "single_step_recall": 0.9605756930563443,
+          "mean_cached_cost": 1821.5618473895588,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2057,
+              2361
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 163,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 86
+          }
+        },
+        "append|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8880188976574513,
+          "evidence_loss_count": 161,
+          "evidence_loss_rate": 0.6465863453815262,
+          "single_step_recall": 0.9604533698364287,
+          "mean_cached_cost": 1819.397389558233,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2056,
+              2365
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 162,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 87
+          }
+        }
+      },
+      "checked_cell_position_pairs": 78
+    },
+    {
+      "checkpoint_step": 2000,
+      "raw_sha256": "d1b0de03f70b8ffc3dbc5535c9b5166c50f31c01c766a0981854439483aa0751",
+      "matched_step0_prompts": 1494,
+      "input_truncations": 0,
+      "output_cap_hits": 0,
+      "combined": {
+        "trajectory_n": 1494,
+        "step_n": 13956,
+        "final_recall": 0.8900648826853643,
+        "evidence_loss_count": 956,
+        "evidence_loss_rate": 0.6398929049531459,
+        "single_step_recall": 0.961782508477476,
+        "mean_cached_cost": 1802.5673025435058,
+        "invalid_counts": {
+          "invalid_json": 0,
+          "invalid_candidate_id": 0,
+          "append_drop": 0,
+          "over_budget": 30
+        },
+        "diagnostics": {
+          "new_gold_add": [
+            12443,
+            14190
+          ],
+          "kept_gold_survival": [
+            26225,
+            26293
+          ],
+          "all_gold_among_valid_reselect": [
+            3964,
+            6216
+          ],
+          "all_gold_valid_drop": [
+            28,
+            3964
+          ]
+        },
+        "first_error_counts": {
+          "invalid_output": 6,
+          "new_gold_not_added": 928,
+          "old_gold_dropped": 28,
+          "both": 0,
+          "none": 532
+        }
+      },
+      "cells": {
+        "reselect|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8821455206997373,
+          "evidence_loss_count": 164,
+          "evidence_loss_rate": 0.6586345381526104,
+          "single_step_recall": 0.9596919632388227,
+          "mean_cached_cost": 1796.867871485943,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 14
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2064,
+              2366
+            ],
+            "kept_gold_survival": [
+              8744,
+              8765
+            ],
+            "all_gold_among_valid_reselect": [
+              1314,
+              2063
+            ],
+            "all_gold_valid_drop": [
+              8,
+              1314
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 3,
+            "new_gold_not_added": 154,
+            "old_gold_dropped": 8,
+            "both": 0,
+            "none": 84
+          }
+        },
+        "reselect|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.885062238074286,
+          "evidence_loss_count": 163,
+          "evidence_loss_rate": 0.6546184738955824,
+          "single_step_recall": 0.9607756567021378,
+          "mean_cached_cost": 1817.2489959839338,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 1
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2073,
+              2365
+            ],
+            "kept_gold_survival": [
+              8742,
+              8764
+            ],
+            "all_gold_among_valid_reselect": [
+              1328,
+              2076
+            ],
+            "all_gold_valid_drop": [
+              10,
+              1328
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 154,
+            "old_gold_dropped": 10,
+            "both": 0,
+            "none": 85
+          }
+        },
+        "reselect|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8843908657161668,
+          "evidence_loss_count": 163,
+          "evidence_loss_rate": 0.6546184738955824,
+          "single_step_recall": 0.9607853811422149,
+          "mean_cached_cost": 1814.1795180722877,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2074,
+              2364
+            ],
+            "kept_gold_survival": [
+              8739,
+              8764
+            ],
+            "all_gold_among_valid_reselect": [
+              1322,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              10,
+              1322
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 154,
+            "old_gold_dropped": 10,
+            "both": 0,
+            "none": 85
+          }
+        },
+        "append|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8942724277061623,
+          "evidence_loss_count": 155,
+          "evidence_loss_rate": 0.6224899598393574,
+          "single_step_recall": 0.9625891794743875,
+          "mean_cached_cost": 1786.6620481927685,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 14
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2072,
+              2365
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 3,
+            "new_gold_not_added": 153,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 93
+          }
+        },
+        "append|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8958646552020041,
+          "evidence_loss_count": 156,
+          "evidence_loss_rate": 0.6265060240963856,
+          "single_step_recall": 0.96311448535223,
+          "mean_cached_cost": 1799.405220883532,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 1
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2077,
+              2366
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 157,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 92
+          }
+        },
+        "append|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8986535887138294,
+          "evidence_loss_count": 155,
+          "evidence_loss_rate": 0.6224899598393574,
+          "single_step_recall": 0.9637383849550634,
+          "mean_cached_cost": 1801.0401606425683,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2083,
+              2364
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 156,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 93
+          }
+        }
+      },
+      "checked_cell_position_pairs": 78
+    },
+    {
+      "checkpoint_step": 2500,
+      "raw_sha256": "d1456fa14e6409ff1e116c7c6b3d11a1d10c864b2cb48c712a513cbb7f3c699f",
+      "matched_step0_prompts": 1494,
+      "input_truncations": 0,
+      "output_cap_hits": 0,
+      "combined": {
+        "trajectory_n": 1494,
+        "step_n": 13956,
+        "final_recall": 0.8887314344141654,
+        "evidence_loss_count": 961,
+        "evidence_loss_rate": 0.643239625167336,
+        "single_step_recall": 0.9597708004790956,
+        "mean_cached_cost": 1800.4485274431045,
+        "invalid_counts": {
+          "invalid_json": 0,
+          "invalid_candidate_id": 0,
+          "append_drop": 0,
+          "over_budget": 27
+        },
+        "diagnostics": {
+          "new_gold_add": [
+            12433,
+            14216
+          ],
+          "kept_gold_survival": [
+            26061,
+            26138
+          ],
+          "all_gold_among_valid_reselect": [
+            3924,
+            6218
+          ],
+          "all_gold_valid_drop": [
+            28,
+            3924
+          ]
+        },
+        "first_error_counts": {
+          "invalid_output": 5,
+          "new_gold_not_added": 936,
+          "old_gold_dropped": 26,
+          "both": 0,
+          "none": 527
+        }
+      },
+      "cells": {
+        "reselect|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8792805253648628,
+          "evidence_loss_count": 167,
+          "evidence_loss_rate": 0.6706827309236948,
+          "single_step_recall": 0.9574427173094389,
+          "mean_cached_cost": 1795.675702811244,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 12
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2061,
+              2371
+            ],
+            "kept_gold_survival": [
+              8675,
+              8701
+            ],
+            "all_gold_among_valid_reselect": [
+              1298,
+              2065
+            ],
+            "all_gold_valid_drop": [
+              10,
+              1298
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 2,
+            "new_gold_not_added": 157,
+            "old_gold_dropped": 9,
+            "both": 0,
+            "none": 81
+          }
+        },
+        "reselect|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8829527901817057,
+          "evidence_loss_count": 162,
+          "evidence_loss_rate": 0.6506024096385542,
+          "single_step_recall": 0.9579043878162512,
+          "mean_cached_cost": 1804.2002008032116,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 1
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2070,
+              2370
+            ],
+            "kept_gold_survival": [
+              8693,
+              8718
+            ],
+            "all_gold_among_valid_reselect": [
+              1321,
+              2076
+            ],
+            "all_gold_valid_drop": [
+              9,
+              1321
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 155,
+            "old_gold_dropped": 8,
+            "both": 0,
+            "none": 86
+          }
+        },
+        "reselect|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8826434721013035,
+          "evidence_loss_count": 164,
+          "evidence_loss_rate": 0.6586345381526104,
+          "single_step_recall": 0.9584902426798361,
+          "mean_cached_cost": 1809.648393574296,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2070,
+              2371
+            ],
+            "kept_gold_survival": [
+              8693,
+              8719
+            ],
+            "all_gold_among_valid_reselect": [
+              1305,
+              2077
+            ],
+            "all_gold_valid_drop": [
+              9,
+              1305
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 156,
+            "old_gold_dropped": 9,
+            "both": 0,
+            "none": 84
+          }
+        },
+        "append|tight": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8926193507518807,
+          "evidence_loss_count": 157,
+          "evidence_loss_rate": 0.6305220883534136,
+          "single_step_recall": 0.9604685691207594,
+          "mean_cached_cost": 1788.4383534136527,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 13
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2069,
+              2369
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 3,
+            "new_gold_not_added": 155,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 91
+          }
+        },
+        "append|mid": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.897114097415302,
+          "evidence_loss_count": 155,
+          "evidence_loss_rate": 0.6224899598393574,
+          "single_step_recall": 0.9624960450841766,
+          "mean_cached_cost": 1803.1226907630507,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 1
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2081,
+              2367
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 156,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 93
+          }
+        },
+        "append|loose": {
+          "trajectory_n": 249,
+          "step_n": 2326,
+          "final_recall": 0.8977783706699367,
+          "evidence_loss_count": 156,
+          "evidence_loss_rate": 0.6265060240963856,
+          "single_step_recall": 0.961822840864111,
+          "mean_cached_cost": 1801.6058232931712,
+          "invalid_counts": {
+            "invalid_json": 0,
+            "invalid_candidate_id": 0,
+            "append_drop": 0,
+            "over_budget": 0
+          },
+          "diagnostics": {
+            "new_gold_add": [
+              2082,
+              2368
+            ],
+            "kept_gold_survival": [
+              0,
+              0
+            ],
+            "all_gold_among_valid_reselect": [
+              0,
+              0
+            ],
+            "all_gold_valid_drop": [
+              0,
+              0
+            ]
+          },
+          "first_error_counts": {
+            "invalid_output": 0,
+            "new_gold_not_added": 157,
+            "old_gold_dropped": 0,
+            "both": 0,
+            "none": 92
+          }
+        }
+      },
+      "checked_cell_position_pairs": 78
+    }
+  ],
+  "selected_checkpoint": 2000,
+  "n_steps_all": 69780,
+  "training": {
+    "optimizer_steps": 2500,
+    "consumed_samples": 40000,
+    "epoch": 2.0,
+    "finite_training_and_eval_logs": true,
+    "oom": false,
+    "nonfinite": false,
+    "wait_seconds": 130812.47743699397,
+    "train_seconds": 24081.216813953128,
+    "train_process_wall_seconds": 24365.276379214134,
+    "evaluation_wall_seconds": 9938.612289990066
+  }
+}

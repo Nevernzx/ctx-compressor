@@ -1,0 +1,426 @@
+{
+  "files": [
+    {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train_v2/heldout_tasks.jsonl",
+      "bytes": 61318859,
+      "sha256": "faefaeaa56be1374c5851ecf0a5b98a1fb0fce1d1364ff336cc7aaae9ff00492"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train_v2/train_tasks.jsonl",
+      "bytes": 1164969302,
+      "sha256": "06e2a6783c0d4d670d9931c24414d0f3c3a1f05f5cedcdf9afe27dd293c46d49"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v2/heldout.jsonl",
+      "bytes": 60588959,
+      "sha256": "53b76a4d26ed68b898aeb0bff8f11fd4ee3e5147b17fc71030fb93e8aebc99c9"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v2/train.jsonl",
+      "bytes": 1151049084,
+      "sha256": "8a40e66fd1f39e573f72b93fb9c8783f5c90d5d2a43bb1db3cd35a1dc99cd1a1"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/card_polls.jsonl",
+      "bytes": 50420,
+      "sha256": "5faa79c71acf4e3e7b335b6d58bc599b82b9c046aa2e977486baf12d805cba61"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoint_status.json",
+      "bytes": 551,
+      "sha256": "889b60b48674e6717dfc2904580bb60f48a330bd5b30dc5f237be23f9d25cdea"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/args.json",
+      "bytes": 18907,
+      "sha256": "0cbd9071f9a1da113d5d99c105702c2c81f50caf647c046372a7209b9a26d2ef"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/README.md",
+      "bytes": 5252,
+      "sha256": "291447fc7f5bdc59e7281326a5f9542f8733ee1caa8c22b44f156e5de5dd47cd"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/adapter_config.json",
+      "bytes": 1078,
+      "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/adapter_model.safetensors",
+      "bytes": 69782384,
+      "sha256": "9df1667837e99db7bcfdbe9890b1f4c3c0b3b282919c82ab4f6229ed5b09ee22"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/additional_config.json",
+      "bytes": 67,
+      "sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/args.json",
+      "bytes": 18907,
+      "sha256": "0cbd9071f9a1da113d5d99c105702c2c81f50caf647c046372a7209b9a26d2ef"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/optimizer.pt",
+      "bytes": 139790651,
+      "sha256": "d28e6b6ee7707e34fa5069202ffa2414a3b0fa99c1bb4ce44e3d15e3c1500e29"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/rng_state.pth",
+      "bytes": 14645,
+      "sha256": "424fc27585926f89c80eaf644d504dfd2ea7b8524f33a5b535706d9b27d2cc43"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/scheduler.pt",
+      "bytes": 1465,
+      "sha256": "d4e3e722383131bbc639137a835bdc5ab43b3bb70025aa1ef703a32dac346531"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/trainer_state.json",
+      "bytes": 212895,
+      "sha256": "f77c2d0853953438f26b97aad5c63c4084e304f7e32dc5ad0112fc3c75d17d00"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/training_args.bin",
+      "bytes": 6993,
+      "sha256": "80895abd7bbdec665d779e96b10b3c24c61328f61542fec82a331c6cdd4490db"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/README.md",
+      "bytes": 5252,
+      "sha256": "291447fc7f5bdc59e7281326a5f9542f8733ee1caa8c22b44f156e5de5dd47cd"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/adapter_config.json",
+      "bytes": 1078,
+      "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/adapter_model.safetensors",
+      "bytes": 69782384,
+      "sha256": "70147fcf43820391be5b9409aaf8c9fa192711d208d28ecb5c61e3c2be829479"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/additional_config.json",
+      "bytes": 67,
+      "sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/args.json",
+      "bytes": 18907,
+      "sha256": "0cbd9071f9a1da113d5d99c105702c2c81f50caf647c046372a7209b9a26d2ef"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/optimizer.pt",
+      "bytes": 139790651,
+      "sha256": "84931a276987eea2e1443e2ca01e422583e4d0d1bdd638f9bb5ad83909c3389a"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/rng_state.pth",
+      "bytes": 14645,
+      "sha256": "df72a6be9d0abb841cbb59dfe259d87857fb250ab5aeb8d0c3bca3f74d624d93"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/scheduler.pt",
+      "bytes": 1465,
+      "sha256": "181976474b4df00dde87a4a559edc024b3a0609a92e06261ed99fe18e60e2273"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/trainer_state.json",
+      "bytes": 319271,
+      "sha256": "3d281cc3a7f38a297708711c6250b16787ec5ca31ffc0abf45d13e3ba687fbf7"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/training_args.bin",
+      "bytes": 6993,
+      "sha256": "80895abd7bbdec665d779e96b10b3c24c61328f61542fec82a331c6cdd4490db"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/README.md",
+      "bytes": 5252,
+      "sha256": "291447fc7f5bdc59e7281326a5f9542f8733ee1caa8c22b44f156e5de5dd47cd"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/adapter_config.json",
+      "bytes": 1078,
+      "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/adapter_model.safetensors",
+      "bytes": 69782384,
+      "sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/additional_config.json",
+      "bytes": 67,
+      "sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/args.json",
+      "bytes": 18907,
+      "sha256": "0cbd9071f9a1da113d5d99c105702c2c81f50caf647c046372a7209b9a26d2ef"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/optimizer.pt",
+      "bytes": 139790651,
+      "sha256": "cdbeebd68cab0ea9582e03b776fcd32b7713be518a15941752ff42e4bd68ebb1"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/rng_state.pth",
+      "bytes": 14645,
+      "sha256": "7c64538fcaef981957171980fd45c630f44519156c2b40335b759ff04ca476d4"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/scheduler.pt",
+      "bytes": 1465,
+      "sha256": "bb724bbf4a51649d8776a395557744a7f31ecc4472827569690a614a3a7ff0d1"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/trainer_state.json",
+      "bytes": 425792,
+      "sha256": "2dcece510fdc3f9456c7df2b7df0034f3b49743945a025cba7aff8db928d9d52"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/training_args.bin",
+      "bytes": 6993,
+      "sha256": "80895abd7bbdec665d779e96b10b3c24c61328f61542fec82a331c6cdd4490db"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/README.md",
+      "bytes": 5252,
+      "sha256": "291447fc7f5bdc59e7281326a5f9542f8733ee1caa8c22b44f156e5de5dd47cd"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/adapter_config.json",
+      "bytes": 1078,
+      "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/adapter_model.safetensors",
+      "bytes": 69782384,
+      "sha256": "41e952fc6dedf18374f1d007ae32ef696bbeffed7709052dd84e9fbcacbccf1b"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/additional_config.json",
+      "bytes": 67,
+      "sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/args.json",
+      "bytes": 18907,
+      "sha256": "0cbd9071f9a1da113d5d99c105702c2c81f50caf647c046372a7209b9a26d2ef"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/optimizer.pt",
+      "bytes": 139790651,
+      "sha256": "47a183ac2d40b0b385b7e34dd00b27ab3b67158c468fbdb625a2a16c19804b14"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/rng_state.pth",
+      "bytes": 14645,
+      "sha256": "5ef04930b155e54da71d75050b5c3c9feb553e8a0934f50e7f6c82169d67c3ac"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/scheduler.pt",
+      "bytes": 1465,
+      "sha256": "23193ec23e8f14d461c3ccc5f0289787fa87335be2d28346a8383a86aa4824ae"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/trainer_state.json",
+      "bytes": 532616,
+      "sha256": "a0111a7409d6fc5b26c3f52929fd13e2d63384e0c0f2e248464ea8aa5b753ea9"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/training_args.bin",
+      "bytes": 6993,
+      "sha256": "80895abd7bbdec665d779e96b10b3c24c61328f61542fec82a331c6cdd4490db"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/README.md",
+      "bytes": 5252,
+      "sha256": "291447fc7f5bdc59e7281326a5f9542f8733ee1caa8c22b44f156e5de5dd47cd"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/adapter_config.json",
+      "bytes": 1078,
+      "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/adapter_model.safetensors",
+      "bytes": 69782384,
+      "sha256": "9e7f65a58a51738c933041783bc45b7d512f1743adef3889d5846936db2bd1a7"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/additional_config.json",
+      "bytes": 67,
+      "sha256": "c7799462ebedae6557ffad31566029e2d2f958b7b40e46e972cf901bcaf45733"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/args.json",
+      "bytes": 18907,
+      "sha256": "0cbd9071f9a1da113d5d99c105702c2c81f50caf647c046372a7209b9a26d2ef"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/optimizer.pt",
+      "bytes": 139790651,
+      "sha256": "bf80306204a5f31900117ab06542c1da17ca17387d276b826e275b7a281582fb"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/rng_state.pth",
+      "bytes": 14645,
+      "sha256": "fd293bc675f1dec5ee9337762d566234a5e816a847305cc5bff91c857237818a"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/scheduler.pt",
+      "bytes": 1465,
+      "sha256": "78732ccbe10bec06bcfeafcdf4ec5d1c81d15b074be1ad50b39c3aec4c495d71"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/trainer_state.json",
+      "bytes": 106635,
+      "sha256": "c78de75ba9ee2a06ded70d6168d9cdb4ea4d9ba6682589ac937483373dcb364b"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/training_args.bin",
+      "bytes": 6993,
+      "sha256": "80895abd7bbdec665d779e96b10b3c24c61328f61542fec82a331c6cdd4490db"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/logging.jsonl",
+      "bytes": 720085,
+      "sha256": "1f1956efce2efe6c1be0ae6191283d17418fa198258ee376aa8b698f22457602"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation_started.json",
+      "bytes": 395,
+      "sha256": "3bf2223a4c84cc0e034f5b9297a6148c691b595cac9b9b05a9b64c512fa08f26"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation_status.json",
+      "bytes": 1544,
+      "sha256": "78f6ad2012327b90a1bedb2d62e0a0084bbf02cb3c47ac1a2ae0ebf2f93f5d89"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/evaluating.log",
+      "bytes": 12079,
+      "sha256": "613a37fd26d85373ea5e58d1e44a4f60fa13a697be15a89c13431b8c858a599a"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/heldout_eval_loss_1k.jsonl",
+      "bytes": 12829257,
+      "sha256": "8536500669e12550d2dd1f87b2313dc17475503da6d2415e8c17ffcbbc615277"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/metrics.jsonl",
+      "bytes": 850396,
+      "sha256": "fb3a69a4f04bf3ca05564880325ddfde851a40589dda4435a85fe6b5c33a1445"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/progress.json",
+      "bytes": 1150,
+      "sha256": "35b86ed1d2a4a5b144aa56ee130c08d70e39bdb77bb1d4e8aeca48daf4086037"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/resolved_args_diff.json",
+      "bytes": 394,
+      "sha256": "50c596d85718c33b599c9554ecadf4489996ee6f3d987f885e65124bc447373e"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/resources.jsonl",
+      "bytes": 382208,
+      "sha256": "c21e4248ae516b5c5c8f3cdfa3c3a912adf5a7a734842c128d5db0f802778ff9"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/sample_ids.json",
+      "bytes": 8731138,
+      "sha256": "572b94df94d436d2ac8af74b550daa55b255aed9271429ed097a026169ab17e4"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/train_20k.jsonl",
+      "bytes": 258839400,
+      "sha256": "952127caaeb6ed35f871caf4b93b12cba51b2e2f31030d86a0f30e1c230ed6cf"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/training.log",
+      "bytes": 739828,
+      "sha256": "6c79358a2a84c078178887f8444cee92f60b95cb9056ff6513645f1043e1f37e"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/waiting_resources.json",
+      "bytes": 3443,
+      "sha256": "1045ab6c5d318e230267003d8828d8831f4c027ecb36f15401b97df665c7e647"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/worker_result.json",
+      "bytes": 1074863,
+      "sha256": "d10d681f5fb4375ae3b84c94c72b10d59823249e9bb547eb9f7b03f94e4279b4"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/worker_started.json",
+      "bytes": 110,
+      "sha256": "b0369e7138e7a2ba5f0ddc8ec3db4e64c0993ce381d17d758664aa1f08e9c12f"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-1000/metrics.json",
+      "bytes": 32460,
+      "sha256": "4e81590ff0bc678d0fbe28fd24de54d919149a2a69cc337e5d4be812ad59f9ca"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-1000/steps.jsonl",
+      "bytes": 229207029,
+      "sha256": "f76a9b3510f9643234d1ff3875d56a7ca388b74393781c12dfc402116236260a"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-1500/metrics.json",
+      "bytes": 32334,
+      "sha256": "291a0b7787248bc82b2d5e15f1856756b9f43d53abfe7eee1c7e79fa43fcdd22"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-1500/steps.jsonl",
+      "bytes": 230413501,
+      "sha256": "b7be667b3ff9d370c2659fee4b5a24f76e9251618a2ab2dc03d09e58645279ad"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-2000/metrics.json",
+      "bytes": 32420,
+      "sha256": "131d73ef6bf0e1ca6d9a4f651f3b6ddd850d0c90e6d458d0d1f617d7e54c674b"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-2000/steps.jsonl",
+      "bytes": 229945498,
+      "sha256": "d1b0de03f70b8ffc3dbc5535c9b5166c50f31c01c766a0981854439483aa0751"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-2500/metrics.json",
+      "bytes": 32404,
+      "sha256": "620101d57cc38177740468cdd709a8b99f761b23c65fc62d2aec1f8b50f46ea6"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-2500/steps.jsonl",
+      "bytes": 229919819,
+      "sha256": "d1456fa14e6409ff1e116c7c6b3d11a1d10c864b2cb48c712a513cbb7f3c699f"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-500/metrics.json",
+      "bytes": 32481,
+      "sha256": "0a9fdbc2b5aab72ca284ee568320e6121f1ec3b4b7f3ba133dd54837b814ddce"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-500/steps.jsonl",
+      "bytes": 229627826,
+      "sha256": "ca51a6a3c050982d37ce29ce0e250e0014dfd856203b9eab98f7bd3577892949"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/model_resources.jsonl",
+      "bytes": 137037,
+      "sha256": "15c1f1cbc54630763c723a614f135553da4638dfe0c6d68037cec16ba5e68124"
+    }
+  ],
+  "file_count": 84,
+  "external_root": "/root/userfolder/ctx-compressor"
+}

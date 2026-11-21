@@ -1,0 +1,269 @@
+{
+  "n_tasks": 30,
+  "n_trajectories": 180,
+  "n_states": 1644,
+  "scope": "train",
+  "step0_sft": {
+    "budget_substituted_n": 120,
+    "budget_substituted_mismatches": 0,
+    "direct_n": 60,
+    "direct_mismatches": 0,
+    "trajectories": 180,
+    "tasks_with_same_sft_tier_in_both_modes": 30,
+    "literal_check_unavailable_n": 120,
+    "definition": "Only the native tier has an SFT row. For other tiers replace exactly the unique budget header in its original SFT text; all other UTF-8 bytes are compared."
+  },
+  "gold_recompute_n": 1644,
+  "gold_mismatches": 0,
+  "prompt_reencode_n": 1644,
+  "reencode_mismatches": 0,
+  "rerender_mismatches": 0,
+  "prompt_lengths": {
+    "n": 1644,
+    "mean": 2863.0200729927005,
+    "p50": 2762.5,
+    "p90": 3717.2000000000003,
+    "p99": 4521.0,
+    "max": 7288,
+    "min": 1302,
+    "max_length": 8392,
+    "exceeds_8392": 0,
+    "prompt_plus_256_exceeds_8392": 0
+  },
+  "cells": {
+    "reselect|tight": {
+      "n": 274,
+      "invalid": {
+        "count": 1,
+        "n": 274,
+        "rate": 0.0036496350364963502
+      },
+      "kept_non_gold": {
+        "count": 17,
+        "n": 274,
+        "rate": 0.06204379562043796
+      },
+      "lost_gold": {
+        "count": 194,
+        "n": 274,
+        "rate": 0.708029197080292
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 194,
+        "n": 274,
+        "rate": 0.708029197080292
+      }
+    },
+    "reselect|mid": {
+      "n": 274,
+      "invalid": {
+        "count": 0,
+        "n": 274,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 17,
+        "n": 274,
+        "rate": 0.06204379562043796
+      },
+      "lost_gold": {
+        "count": 194,
+        "n": 274,
+        "rate": 0.708029197080292
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 194,
+        "n": 274,
+        "rate": 0.708029197080292
+      }
+    },
+    "reselect|loose": {
+      "n": 274,
+      "invalid": {
+        "count": 0,
+        "n": 274,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 19,
+        "n": 274,
+        "rate": 0.06934306569343066
+      },
+      "lost_gold": {
+        "count": 195,
+        "n": 274,
+        "rate": 0.7116788321167883
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 195,
+        "n": 274,
+        "rate": 0.7116788321167883
+      }
+    },
+    "append|tight": {
+      "n": 274,
+      "invalid": {
+        "count": 0,
+        "n": 274,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 43,
+        "n": 274,
+        "rate": 0.15693430656934307
+      },
+      "lost_gold": {
+        "count": 40,
+        "n": 274,
+        "rate": 0.145985401459854
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 46,
+        "n": 274,
+        "rate": 0.1678832116788321
+      }
+    },
+    "append|mid": {
+      "n": 274,
+      "invalid": {
+        "count": 0,
+        "n": 274,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 43,
+        "n": 274,
+        "rate": 0.15693430656934307
+      },
+      "lost_gold": {
+        "count": 40,
+        "n": 274,
+        "rate": 0.145985401459854
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 46,
+        "n": 274,
+        "rate": 0.1678832116788321
+      }
+    },
+    "append|loose": {
+      "n": 274,
+      "invalid": {
+        "count": 0,
+        "n": 274,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 43,
+        "n": 274,
+        "rate": 0.15693430656934307
+      },
+      "lost_gold": {
+        "count": 40,
+        "n": 274,
+        "rate": 0.145985401459854
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 46,
+        "n": 274,
+        "rate": 0.1678832116788321
+      }
+    }
+  },
+  "pooled": {
+    "n": 1644,
+    "invalid": {
+      "count": 1,
+      "n": 1644,
+      "rate": 0.0006082725060827251
+    },
+    "kept_non_gold": {
+      "count": 182,
+      "n": 1644,
+      "rate": 0.11070559610705596
+    },
+    "lost_gold": {
+      "count": 703,
+      "n": 1644,
+      "rate": 0.4276155717761557
+    },
+    "prior_gold_missing_from_kept": {
+      "count": 721,
+      "n": 1644,
+      "rate": 0.43856447688564476
+    }
+  },
+  "metric_definitions": {
+    "kept_non_gold": "any retained paragraph outside step-wise seen gold, before action",
+    "lost_gold": "any gold seen through current step unavailable from kept plus new before action",
+    "prior_gold_missing_from_kept": "any gold seen before this step absent from retained area, even if retrieved again now"
+  },
+  "base_model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+  "inference_adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+  "source_adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+  "source_adapter_sha256": "10352edbc5f65e916f7aa9746036e12f29345614740d7aa617294c8e81c63850",
+  "model_output_label": "替身 v1 checkpoint-2000，非正式结果",
+  "task_ids": [
+    3632,
+    4252,
+    3166,
+    2405,
+    1744,
+    1139,
+    3420,
+    869,
+    3476,
+    1097,
+    1034,
+    2529,
+    1782,
+    3825,
+    3009,
+    2708,
+    1283,
+    4481,
+    2448,
+    723,
+    2449,
+    438,
+    952,
+    2833,
+    4723,
+    3288,
+    3018,
+    2578,
+    3101,
+    3006
+  ],
+  "engine": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "seed": 20261120,
+  "cuda_visible_devices": "0",
+  "engine_and_data_startup_seconds": 30.247183992993087,
+  "rollout_seconds": 248.60293287597597,
+  "vllm_generate_seconds": 236.612463561818,
+  "wall_including_checks_seconds": 295.95978687913157,
+  "state_file": {
+    "path": "/root/userfolder/ctx-compressor/grpo_prep/states/v1ckpt2000_smoke30/states.jsonl",
+    "bytes": 42712002,
+    "sha256": "25d7b73dffe1ed9bde2336af4cf428db18857431ba9c25ee1336b000cdd5d453"
+  },
+  "available_checks_pass": true
+}

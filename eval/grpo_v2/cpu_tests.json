@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "tests": 527,
+  "matched_old_tests": 501,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "cuda_visible_devices": "",
+  "junit_sha256": "5e880b7aa44d9351973219e3b3c40d84d8f829ec3a968e31c9511c8acd48c8ac",
+  "baseline": "eval/sft_run_v2/final_tests_v2.xml",
+  "baseline_sha256": "9347251ed121be3a74960dd16fc70c697cc5fe29e60e1f4d79c19bf0f1bceede"
+}

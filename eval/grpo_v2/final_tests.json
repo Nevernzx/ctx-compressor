@@ -1,0 +1,47 @@
+{
+  "task": "08",
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/grpo_v2/tmp/final_all_tests.u7_l03y3/cases",
+    "--junitxml",
+    "eval/grpo_v2/final_tests.xml",
+    "tests"
+  ],
+  "working_directory": "/root/workplace/ctx-compressor",
+  "pytest_exit_code": 0,
+  "cuda_visible_devices": "",
+  "pytest_cache_enabled": false,
+  "python_bytecode_write_enabled": false,
+  "started_utc": "2026-11-21T01:04:49.177791+00:00",
+  "finished_utc": "2026-11-21T01:05:03.104033+00:00",
+  "wall_seconds": 13.926242,
+  "tests": 533,
+  "passed": 533,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "prior_coverage": [
+    {
+      "source": "eval/sft_run_v2/final_tests_v2.xml",
+      "previous_tests": 501,
+      "matched": 501,
+      "missing": []
+    },
+    {
+      "source": "eval/grpo_v2/resume_c_tests.xml",
+      "previous_tests": 533,
+      "matched": 533,
+      "missing": []
+    }
+  ],
+  "junit_xml": "eval/grpo_v2/final_tests.xml",
+  "junit_sha256": "3e994bceb518524b5307d491b748efcb9fb4459647f1a7b7fe8fa94ece01abb3",
+  "log": "/root/userfolder/ctx-compressor/grpo_v2/tmp/final_all_tests.u7_l03y3/pytest.log"
+}

@@ -1,0 +1,68 @@
+{
+  "verified_utc": "2026-11-20T15:47:28.679168+00:00",
+  "status": "running",
+  "stage": "C",
+  "processes": [
+    {
+      "pid": 1710643,
+      "ppid": 1,
+      "sid": 1710643,
+      "state": "S"
+    },
+    {
+      "pid": 1710671,
+      "ppid": 1710643,
+      "sid": 1710643,
+      "state": "S"
+    }
+  ],
+  "monitor": {
+    "utc": "2026-11-20T15:47:04.358622+00:00",
+    "stage": "C",
+    "pid": 1710671,
+    "alive": true,
+    "nonfinite": false,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 34901,
+    "utilization_pct": 65
+  },
+  "resumed": {
+    "from_stage": "C",
+    "rechecked_utc": "2026-11-20T15:46:04.214926+00:00",
+    "prior_status": "/root/userfolder/ctx-compressor/grpo_v2/pipeline_status.json.failed_C_topk",
+    "prior_pid": 1665710,
+    "prior_first_error": "C exit 1: ValueError: Unexpected vLLM top_k default",
+    "prior_started_utc": "2026-11-20T14:09:55.671508+00:00",
+    "reused_stages": [
+      "F0",
+      "B"
+    ],
+    "verified_state_file": {
+      "path": "/root/userfolder/ctx-compressor/grpo_v2/states/states.jsonl",
+      "bytes": 893987528,
+      "sha256": "33fdea6942278c99a815fc931f1be7354c1ace3ecb78a486e58baafc716e4eb8"
+    },
+    "n_states": 22158,
+    "verified_f0_file": {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_v2/merged_sft_v2/steps.jsonl",
+      "bytes": 229851571,
+      "sha256": "3dcc5f96c9124c9a593e8a58ba5a0152f60047adb1fce39c6b37f7f84c41e468"
+    },
+    "f0_trajectories": 1494,
+    "f0_steps": 13956,
+    "archived_paths": {
+      "/root/userfolder/ctx-compressor/grpo_v2/pipeline.pid": "/root/userfolder/ctx-compressor/grpo_v2/pipeline.pid.failed_C_topk",
+      "/root/userfolder/ctx-compressor/grpo_v2/pipeline_monitor.jsonl": "/root/userfolder/ctx-compressor/grpo_v2/pipeline_monitor.jsonl.failed_C_topk",
+      "/root/userfolder/ctx-compressor/grpo_v2/logs/C.log": "/root/userfolder/ctx-compressor/grpo_v2/logs/C.log.failed_C_topk",
+      "/root/userfolder/ctx-compressor/grpo_v2/pipeline_status.json": "/root/userfolder/ctx-compressor/grpo_v2/pipeline_status.json.failed_C_topk"
+    }
+  },
+  "runtime_default_top_k": 0,
+  "registered_top_k": -1,
+  "evidence_vllm_source": "/root/userfolder/ctx-compressor/envs/grpo/lib/python3.11/site-packages/vllm/sampling_params.py",
+  "completed_groups_inspected": 16,
+  "completions_inspected": 128,
+  "source_at_verification": "/root/userfolder/ctx-compressor/grpo_v2/filter/append_loose/probe_outputs.partial.jsonl"
+}

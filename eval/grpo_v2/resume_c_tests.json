@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "tests": 533,
+  "prior_suite_tests": 527,
+  "prior_unchanged_node_ids": 526,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "cuda_visible_devices": "",
+  "junit_sha256": "25d4e71b9a3e1c14e765a2273361bb1b9d092fc7aaf058f1574de48a1ad82739",
+  "cpu_only": true
+}

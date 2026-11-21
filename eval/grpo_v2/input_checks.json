@@ -1,0 +1,30 @@
+{
+  "n_train_tasks": 4735,
+  "n_train_steps": 44281,
+  "n_heldout_tasks": 249,
+  "n_train_question_ids": 18940,
+  "n_heldout_question_ids": 996,
+  "overlapping_question_ids": 0,
+  "compared_fields": [
+    "budget",
+    "example_ids",
+    "noise_seed",
+    "questions",
+    "retrieval_seed",
+    "schema_version",
+    "split",
+    "steps",
+    "task",
+    "tier"
+  ],
+  "excluded_fields": [
+    "rollouts"
+  ],
+  "mismatches": 0,
+  "old_projection_sha256": "423415ec44a6805590f81c758e7dac2459474720b97ebaba8af5f08354f579a7",
+  "v2_projection_sha256": "423415ec44a6805590f81c758e7dac2459474720b97ebaba8af5f08354f579a7",
+  "fixture": "/root/userfolder/ctx-compressor/grpo_prep/step0_fixture/prompts.jsonl",
+  "fixture_sha256": "fbb0a60900c2c4ced3b593ab74d9f74f1238caf2b1d8137371bd7c3a80a8c14f",
+  "fixture_n": 30,
+  "source_adapter_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c"
+}

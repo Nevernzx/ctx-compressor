@@ -1,0 +1,17 @@
+{
+ "task_owned_root_bytes": 146394,
+ "task_owned_root_files": 29,
+ "limit_bytes": 300000000,
+ "other_root_files_newer_than_marker_bytes": 395,
+ "other_root_files_note": "files under / changed by other processes (other users, Task 06 is on /root/userfolder); listed for transparency, not task-owned",
+ "df_root_start": "overlay        1005867986944 935850876928 18846339072  99% /",
+ "df_root_end": "overlay 1005867986944 935889395712 18807820288 99% /",
+ "gpu_end": [
+  "0, 18 MiB, 0 %",
+  "1, 7527 MiB, 100 %"
+ ],
+ "compute_apps_end": [
+  "GPU-4318dc90-4126-038a-9402-1323533db94f, 1404749, 7146 MiB"
+ ],
+ "gpu1_policy": "no Task 07 process ever set CUDA_VISIBLE_DEVICES=1; GPU 1 runs only the Task 06 pipeline"
+}

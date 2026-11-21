@@ -1,0 +1,589 @@
+{
+  "n": 30,
+  "rows": [
+    {
+      "task": 3632,
+      "mode": "reselect",
+      "budget_tier": "loose",
+      "prompt_sha256": "9bca76ac59d153f31d5b415f7e95a932944fa8d5cfebc15404dd6aab8179ef86",
+      "raw_output": "{\"add\":[7],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        22,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 4252,
+      "mode": "append",
+      "budget_tier": "mid",
+      "prompt_sha256": "af8f2f98febaf43a7e5a80d2d3a5aaeb100aefc34b50fc1915c90cc57f3e347c",
+      "raw_output": "{\"add\":[1],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3166,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "prompt_sha256": "746161bb757c6b3ffe81039085498fa38417a58a987934c1545073c673219663",
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 2405,
+      "mode": "append",
+      "budget_tier": "loose",
+      "prompt_sha256": "31a68779d23971845c3551c3a4643267c6778c3181fc595e5773c45c3240addd",
+      "raw_output": "{\"add\":[7],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        22,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 1744,
+      "mode": "reselect",
+      "budget_tier": "loose",
+      "prompt_sha256": "8b6dc91a309e475141bc9b42145da8d464f1d62721b825ab405b0c4e798dfeb6",
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 1139,
+      "mode": "append",
+      "budget_tier": "tight",
+      "prompt_sha256": "48703b2e9e4155ba5a56d3ddbe7000d3ff87d984921506860fb821408d46ce6f",
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3420,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "prompt_sha256": "ce1c949c0d13dff3f320fde33a752df2a256ccdffd1505e4808a7574abf39774",
+      "raw_output": "{\"add\":[14],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 869,
+      "mode": "append",
+      "budget_tier": "mid",
+      "prompt_sha256": "a9200b9f6efc6f8dbbaa28be58d1b35ba5a51ddeb071763d4f9c4fcc12d7e591",
+      "raw_output": "{\"add\":[12],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        17,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3476,
+      "mode": "reselect",
+      "budget_tier": "mid",
+      "prompt_sha256": "4bf6f8128d7bdab9199b423ea5856614dd3c877e781b14cb2be0792e3d882fbf",
+      "raw_output": "{\"add\":[7],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        22,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 1097,
+      "mode": "append",
+      "budget_tier": "loose",
+      "prompt_sha256": "53ca532941c7e4043a646056c545f0f617f6d89358e30969bd3a24a62c6134e6",
+      "raw_output": "{\"add\":[17],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        22,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 1034,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "prompt_sha256": "ef619654c6effe217c85549d59068149a503af276e94b3fd82018d3d811a705f",
+      "raw_output": "{\"add\":[6],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        21,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 2529,
+      "mode": "append",
+      "budget_tier": "tight",
+      "prompt_sha256": "d4544a5bf77461ebbb48852ca4ffff269038861c1eea62da1514f1259cb5c863",
+      "raw_output": "{\"add\":[8],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        23,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 1782,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "prompt_sha256": "c85c038a9cfc8095774eae14ecd87df2162227a5bf8eb46d6492ae322d97b361",
+      "raw_output": "{\"add\":[10],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        15,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3825,
+      "mode": "append",
+      "budget_tier": "tight",
+      "prompt_sha256": "b15b9d6ab5f10049fb8e0949dcc8147db8c69887a33e98141c8debf3a2e9c624",
+      "raw_output": "{\"add\":[13],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        18,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3009,
+      "mode": "reselect",
+      "budget_tier": "mid",
+      "prompt_sha256": "c9459b2cba755557c2d6e2cf55a9701d6be1871afc510d0f1eb41c8888c6b641",
+      "raw_output": "{\"add\":[10],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        15,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 2708,
+      "mode": "append",
+      "budget_tier": "mid",
+      "prompt_sha256": "35f654425c6114e3e01f8088651a82709488fe8739b64a9285eec9e2227e23a5",
+      "raw_output": "{\"add\":[18],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        23,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 1283,
+      "mode": "reselect",
+      "budget_tier": "mid",
+      "prompt_sha256": "1e3b5a2de6ceeac8c238ee9b3cdedcfc3b107abcb0632cdb38e587ab57886c3b",
+      "raw_output": "{\"add\":[18],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        23,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 4481,
+      "mode": "append",
+      "budget_tier": "loose",
+      "prompt_sha256": "8c31a6a80cba6785cd0b1e8a71b4ef588b913d8174854e077a810f8ceccad10e",
+      "raw_output": "{\"add\":[8],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        23,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 2448,
+      "mode": "reselect",
+      "budget_tier": "mid",
+      "prompt_sha256": "6639f4954514226f30f443340a48cf4fa190083ca958c920c19f95a623f7c7a4",
+      "raw_output": "{\"add\":[10],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        15,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 723,
+      "mode": "append",
+      "budget_tier": "tight",
+      "prompt_sha256": "154b21c0fd968427d0d711f599ca9c5127777741dd8715c3bd7101d1b14456b8",
+      "raw_output": "{\"add\":[8],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        23,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 2449,
+      "mode": "reselect",
+      "budget_tier": "loose",
+      "prompt_sha256": "b99ddb0300424736c592670033a2970f5d228e40b7d9c7ea6627554b38bea43e",
+      "raw_output": "{\"add\":[1],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 438,
+      "mode": "append",
+      "budget_tier": "loose",
+      "prompt_sha256": "8f0bf420e8379c61d0b02889b25994e5ce05f9aead2c1e7fb4fc58cd4551d6dc",
+      "raw_output": "{\"add\":[11],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        16,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 952,
+      "mode": "reselect",
+      "budget_tier": "loose",
+      "prompt_sha256": "b46adbd867fc3504c51d95af3d86fd8c87de018b7160cba9acd686aebcb8cc6f",
+      "raw_output": "{\"add\":[13],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        18,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 2833,
+      "mode": "append",
+      "budget_tier": "mid",
+      "prompt_sha256": "7fa5137b2d7dbc96ae52e95f83cced0853cc3ec8004bb9d67adbc00760e92201",
+      "raw_output": "{\"add\":[13],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        18,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 4723,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "prompt_sha256": "0fd2ccef068bfb98c86e8a4affcf080e5e8e39a12a45fa25c397c97bdca03a10",
+      "raw_output": "{\"add\":[7],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        22,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3288,
+      "mode": "append",
+      "budget_tier": "tight",
+      "prompt_sha256": "501e6ead8ca90f2108d298a5d35faa70086be2001eb464239b533541a6535479",
+      "raw_output": "{\"add\":[4],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        19,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3018,
+      "mode": "reselect",
+      "budget_tier": "mid",
+      "prompt_sha256": "c6e8a5df3f79bf710325dc5c5533b0df94e74a9f652dd04fb3122ba4366f3505",
+      "raw_output": "{\"add\":[16],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        21,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 2578,
+      "mode": "append",
+      "budget_tier": "mid",
+      "prompt_sha256": "69dbcee3bcf6cf768c6d2dd495851954c5d5f8f15deb29713e4f2682b629040f",
+      "raw_output": "{\"add\":[8],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        23,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3101,
+      "mode": "reselect",
+      "budget_tier": "loose",
+      "prompt_sha256": "7256c75fab6b0a701572b6cbf8bf25925333a3e2636dd12eb9d487236da06143",
+      "raw_output": "{\"add\":[11],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        16,
+        16,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    },
+    {
+      "task": 3006,
+      "mode": "append",
+      "budget_tier": "mid",
+      "prompt_sha256": "41429cc3ef71f5b95b1a2c36e903534218a7a2079c936df95b86c24fc267df0f",
+      "raw_output": "{\"add\":[6],\"drop\":[]}",
+      "output_token_ids": [
+        4913,
+        718,
+        8899,
+        21,
+        28503,
+        6719,
+        788,
+        66277,
+        151645
+      ]
+    }
+  ],
+  "engine": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "base_model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+  "inference_adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+  "source_adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+  "source_adapter_sha256": "10352edbc5f65e916f7aa9746036e12f29345614740d7aa617294c8e81c63850",
+  "model_output_label": "替身 v1 checkpoint-2000，非正式结果",
+  "environment": "/root/userfolder/ctx-compressor/envs/reader",
+  "prompt_file": {
+    "path": "/root/userfolder/ctx-compressor/grpo_prep/step0_fixture/prompts.jsonl",
+    "bytes": 581364,
+    "sha256": "fbb0a60900c2c4ced3b593ab74d9f74f1238caf2b1d8137371bd7c3a80a8c14f"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "csv_byte_identical_to_reconstructed_log_table": true,
+  "verified_steps": 500,
+  "verified_columns": [
+    "step",
+    "loss",
+    "reward",
+    "reward_std",
+    "frac_reward_zero_std",
+    "kl",
+    "grad_norm",
+    "learning_rate",
+    "completions/mean_length",
+    "completions/clipped_ratio",
+    "memory(GiB)",
+    "step_seconds",
+    "torch_peak_allocated_bytes",
+    "torch_peak_reserved_bytes"
+  ],
+  "plotted_columns": [
+    "reward",
+    "reward_std",
+    "frac_reward_zero_std",
+    "kl"
+  ],
+  "n_prompts": 2000,
+  "rewards_checked": 16032,
+  "reward_mismatches": 0,
+  "unmatched_prompts": 0,
+  "training_completions": 16000,
+  "terminal_repeated_completions": 32,
+  "terminal_table_byte_identical": true,
+  "source_sha256": {
+    "/root/userfolder/ctx-compressor/grpo_v2/train/logging.jsonl": "e0720b24d8986e3695f8b718ef5b1b6fbef9f4502bc7d5a9a06030c4763b1142",
+    "/root/userfolder/ctx-compressor/grpo_v2/train/optimizer_steps.jsonl": "3676dec084f6dd1ce0b56645cf3e3058213b294740209d3e36651aa2a591e078",
+    "/root/userfolder/ctx-compressor/grpo_v2/train/completions.jsonl": "6344326cda09c4ec8d68c57fc5255c42b5ed316fb5e7047fdf279c81cba04d67",
+    "/root/workplace/ctx-compressor/eval/grpo_v2/training_curve.csv": "78aa6813014a2da51d0f7d9ffde9b9845d516c566a23abb9afe81e78cffa1180"
+  },
+  "svg_sha256": "f622b15dff6ac060a9635809774e8c053995485e1417c0e8af2124fe626ee8ac"
+}

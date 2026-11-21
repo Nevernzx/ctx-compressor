@@ -1,0 +1,241 @@
+{
+  "n_tasks": 2,
+  "n_trajectories": 12,
+  "n_states": 120,
+  "scope": "train",
+  "step0_sft": {
+    "budget_substituted_n": 8,
+    "budget_substituted_mismatches": 0,
+    "direct_n": 4,
+    "direct_mismatches": 0,
+    "trajectories": 12,
+    "tasks_with_same_sft_tier_in_both_modes": 2,
+    "literal_check_unavailable_n": 8,
+    "definition": "Only the native tier has an SFT row. For other tiers replace exactly the unique budget header in its original SFT text; all other UTF-8 bytes are compared."
+  },
+  "gold_recompute_n": 120,
+  "gold_mismatches": 0,
+  "prompt_reencode_n": 120,
+  "reencode_mismatches": 0,
+  "rerender_mismatches": 0,
+  "prompt_lengths": {
+    "n": 120,
+    "mean": 3003.275,
+    "p50": 3030.5,
+    "p90": 3780.8000000000006,
+    "p99": 4549.35,
+    "max": 4584,
+    "min": 1764,
+    "max_length": 8392,
+    "exceeds_8392": 0,
+    "prompt_plus_256_exceeds_8392": 0
+  },
+  "cells": {
+    "reselect|tight": {
+      "n": 20,
+      "invalid": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 2,
+        "n": 20,
+        "rate": 0.1
+      },
+      "lost_gold": {
+        "count": 15,
+        "n": 20,
+        "rate": 0.75
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 15,
+        "n": 20,
+        "rate": 0.75
+      }
+    },
+    "reselect|mid": {
+      "n": 20,
+      "invalid": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 2,
+        "n": 20,
+        "rate": 0.1
+      },
+      "lost_gold": {
+        "count": 15,
+        "n": 20,
+        "rate": 0.75
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 15,
+        "n": 20,
+        "rate": 0.75
+      }
+    },
+    "reselect|loose": {
+      "n": 20,
+      "invalid": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 2,
+        "n": 20,
+        "rate": 0.1
+      },
+      "lost_gold": {
+        "count": 15,
+        "n": 20,
+        "rate": 0.75
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 15,
+        "n": 20,
+        "rate": 0.75
+      }
+    },
+    "append|tight": {
+      "n": 20,
+      "invalid": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      },
+      "lost_gold": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      }
+    },
+    "append|mid": {
+      "n": 20,
+      "invalid": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      },
+      "lost_gold": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      }
+    },
+    "append|loose": {
+      "n": 20,
+      "invalid": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "kept_non_gold": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      },
+      "lost_gold": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      },
+      "prior_gold_missing_from_kept": {
+        "count": 6,
+        "n": 20,
+        "rate": 0.3
+      }
+    }
+  },
+  "pooled": {
+    "n": 120,
+    "invalid": {
+      "count": 0,
+      "n": 120,
+      "rate": 0.0
+    },
+    "kept_non_gold": {
+      "count": 24,
+      "n": 120,
+      "rate": 0.2
+    },
+    "lost_gold": {
+      "count": 63,
+      "n": 120,
+      "rate": 0.525
+    },
+    "prior_gold_missing_from_kept": {
+      "count": 63,
+      "n": 120,
+      "rate": 0.525
+    }
+  },
+  "metric_definitions": {
+    "kept_non_gold": "any retained paragraph outside step-wise seen gold, before action",
+    "lost_gold": "any gold seen through current step unavailable from kept plus new before action",
+    "prior_gold_missing_from_kept": "any gold seen before this step absent from retained area, even if retrieved again now"
+  },
+  "base_model": "/root/userfolder/ctx-compressor/grpo_prep/merged_v1_ckpt2000",
+  "inference_adapter": "/root/userfolder/ctx-compressor/grpo_prep/smoke_train/checkpoint-25",
+  "source_adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000",
+  "source_adapter_sha256": "10352edbc5f65e916f7aa9746036e12f29345614740d7aa617294c8e81c63850",
+  "model_output_label": "GRPO 冒烟 LoRA（25 步，替身起点），只验证加载链路",
+  "task_ids": [
+    3632,
+    4252
+  ],
+  "engine": {
+    "model": "/root/userfolder/ctx-compressor/grpo_prep/merged_v1_ckpt2000",
+    "tokenizer": "/root/userfolder/ctx-compressor/grpo_prep/merged_v1_ckpt2000",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "seed": 20261120,
+  "cuda_visible_devices": "0",
+  "engine_and_data_startup_seconds": 28.833604380022734,
+  "rollout_seconds": 19.101826019817963,
+  "vllm_generate_seconds": 17.960767346434295,
+  "wall_including_checks_seconds": 53.49415405699983,
+  "state_file": {
+    "path": "/root/userfolder/ctx-compressor/grpo_prep/states/smoke_lora_plumbing/states.jsonl",
+    "bytes": 3265377,
+    "sha256": "a37571ef26eaa7c49d7ff3f3d6c3bc2f06c501fcd5a4544acb689c9c92bcf7a8"
+  },
+  "available_checks_pass": true
+}

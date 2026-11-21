@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "n_reference": 30,
+  "text_mismatches": 0,
+  "token_id_mismatches": 0,
+  "gpu": 1,
+  "adapter_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+  "merge_record": {
+    "base": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000",
+    "adapter_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+    "merge": "peft merge_and_unload in float32 on CPU, saved as bfloat16 safetensors",
+    "tokenizer_files_copied_from_base": [
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json",
+      "merges.txt",
+      "generation_config.json"
+    ],
+    "weights": {
+      "model.safetensors": "ff280f054159490b08711cb37a53fa5cb2f8daed03e86fb4c9211bef9b51d09a"
+    },
+    "seconds": 15.075757026672363
+  },
+  "n_train_tasks": 4735,
+  "overlapping_question_ids": 0,
+  "reference_records": {
+    "/root/userfolder/ctx-compressor/grpo_v2/ref_adapter/greedy_reference.json": "d705535815d55c66c3fe95a7ec5d8b7545e18723c3f73992178e41631e7ca46c",
+    "/root/userfolder/ctx-compressor/grpo_v2/ref_merged/greedy_reference.json": "bd3ca6b11347b9532a9216aa4e49c0dc424e058eec4059fee48fb7c3721bf510"
+  },
+  "gpu_observations_before_after_each_job": [
+    "2026/11/20 22:03:48.053, 1, GPU-4318dc90-4126-038a-9402-1323533db94f, 375 MiB, 0 %",
+    "2026/11/20 22:04:59.986, 1, GPU-4318dc90-4126-038a-9402-1323533db94f, 375 MiB, 0 %",
+    "2026/11/20 22:05:00.026, 1, GPU-4318dc90-4126-038a-9402-1323533db94f, 375 MiB, 0 %",
+    "2026/11/20 22:05:39.050, 1, GPU-4318dc90-4126-038a-9402-1323533db94f, 375 MiB, 0 %"
+  ],
+  "root_df_at_start": "Filesystem         1B-blocks         Used   Available Use% Mounted on\noverlay        1005867986944 936528379904 18168836096  99% /\n"
+}

@@ -283,3 +283,36 @@ A/B/C及全量闭环审计已结束，现有模型和结果可直接使用。最
 当前未满足的任务条件是根盘最终增量≤300MB。若外部存储状态改变，可复用本次结果执行严格资源核验、重新build报告并更新选择指针/校验清单；无需重新训练或生成。CPU命令在正式项目目录先source scripts/train_environment.sh、export CUDA_VISIBLE_DEVICES=""；严格资源核验为 `.conda/envs/ctxc/bin/python -B scripts/finalize_sft_artifacts.py all`。现有失败资源证据、pre_resource报告快照和完整模型审计都应保留。
 
 任务01–04文件与README/NOTES/HANDOFF历史前缀继续保护，后续校验使用 `scripts/checksums_task05.py check --slow`。最终SHA256SUMS与mirror包含代码、文档、小结果与外置文件路径/SHA；大权重、数据、原始rollout保持在userfolder。
+
+
+## 任务06　CPU 数据完成，训练正在等卡
+
+5880 上等卡脚本 PID/SID 均为 1141340，PPID 为 1。请先读取 `/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation_status.json` 确认当前阶段。运行目录为其父目录，其中的 card_polls.jsonl 记录每十分钟的显存观测，resources.jsonl 记录训练/评测期间每 30 秒的资源和进度。若 status=failed，读取该状态及 training.log / evaluating.log 的首个异常。脚本每个阶段只执行一次。
+
+状态进入 evaluation_complete 后，检查 worker_result.json、resolved_args_diff.json、eval/sft_run_v2/model_rollout_run.json、diagnostics_v2.json 以及 GPU 释放情况。用现有 ctxc Python、CUDA_VISIBLE_DEVICES 置空运行 `scripts/sft_v2_report.py build`，用现有 train Python 以 CPU 运行 `scripts/sft_v2_report.py plot`。报告使用五个 v2 checkpoint 的真实合并丢失率、末召回和训练步数排序，并引用已核对 SHA 的 v1 结果。最后执行 `scripts/checksums_task06.py resources` 记录任务归属文件与原始 df，`external` 记录外置大文件的路径与 SHA，更新文档后执行 `write` 和 `check --verify-old-external`。用 rsync -a 按文件列表同步 mirror/，排除 .git。当前等待阶段的报告与资源记录是启动时快照。
+
+
+## 任务06　留出集闭环评测完成
+
+5880 的流水线已于北京时间 2026-11-20 20:51 正常退出。v2 选中的 LoRA 位于 `/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000`，基础模型位于 `/root/userfolder/ctx-compressor/models/Qwen3-1.7B`。adapter_model.safetensors 的 SHA-256 为 `7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c`。选点按 n=5 个完整 checkpoint、每个 n=1,494 条轨迹计算。
+
+五个 checkpoint 的动作原文与逐步状态位于 `/root/userfolder/ctx-compressor/eval_rollouts_v2/<checkpoint>/steps.jsonl`。固定数据、训练输出和原始闭环文件的路径、大小及 SHA-256 见[外置清单](eval/sft_run_v2/external_manifest_v2.json)。[机器可读结果](eval/sft_run_v2/sft_v2_results.json)和[中文报告](eval/sft_run_v2/sft_v2_report.md)包含中档基线及全部 checkpoint 诊断。[测试记录](eval/sft_run_v2/final_tests_v2.json)及[资源记录](eval/sft_run_v2/final_resource_v2.json)保留了本次收尾的核验依据。
+
+
+## 任务07　GRPO 准备　已完成，正式 GRPO 待定
+
+- 任务07 的环境、状态构建、奖励插件、采样探针和冒烟训练均已在 0 号卡核验，结束时 0 号卡已释放。之后 0 号卡又被外部进程占用（2026-11-20 21:00 约 19.5 GB），1 号卡在任务06 收尾后空闲。
+- 下一步：在 v1 checkpoint-2000 与任务06 选出的 v2 checkpoint-2000 中定 GRPO 起点；在起点上合并 LoRA、重建训练任务闭环状态、重跑采样探针（30 个任务约 10 分钟）；按 `eval/grpo_prep/projection.json` 定正式规模，写任务08。
+- 外置产物在 `/root/userfolder/ctx-compressor/grpo_prep/`，路径与 SHA-256 见 `eval/grpo_prep/TASK07_SHA256SUMS`。
+
+
+## 任务08　正式 GRPO 已启动
+
+5880 的独立会话 PID/SID 为 1665710，启动核验时 F0 子进程 PID 为 1665731。实时状态在 `/root/userfolder/ctx-compressor/grpo_v2/pipeline_status.json`，包括阶段、子 PID 与每 30 秒更新的监控。每阶段命令及日志位于 `/root/userfolder/ctx-compressor/grpo_v2/logs/`；小结果在 `eval/grpo_v2/`，闭环原始记录在 `/root/userfolder/ctx-compressor/eval_rollouts_grpo_v2/`。流水线记录首次错误并停止，自动重试次数为 0。完整结果到齐后按任务书第 4 节收尾。
+
+
+## 任务08　正式 GRPO 训练与留出评测完成
+
+流水线于北京时间 2026-11-21 08:55:52 结束，状态为 `evaluation_complete`。选中的 LoRA 在 5880 的 `/root/userfolder/ctx-compressor/grpo_v2/train/checkpoint-500`，加载时使用合并后的基座 `/root/userfolder/ctx-compressor/grpo_v2/merged_v2_ckpt2000`。适配器权重 SHA-256 为 `e1f77a2077a14eb85ae03edd71f3800d42986faeaafbbcd3b038f33fad14c33c`。[选点记录](eval/grpo_v2/selected_checkpoint.json)
+
+四个 GRPO checkpoint 和 F0 各完成 1,494 条留出轨迹、13,956 个决策步；逐步输出在 `/root/userfolder/ctx-compressor/eval_rollouts_grpo_v2/<策略>/steps.jsonl`。训练与采样的原始文件在 `/root/userfolder/ctx-compressor/grpo_v2/`。[完整清单](eval/grpo_v2/TASK08_SHA256SUMS)记录外置路径和哈希。[优化日志 CSV](eval/grpo_v2/training_curve.csv)与[训练核验](eval/grpo_v2/training_checks.json)保留每步数值和奖励复算结果。

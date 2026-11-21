@@ -1,0 +1,92 @@
+{
+  "strategy": "checkpoint-500",
+  "path": "/root/userfolder/ctx-compressor/grpo_v2/train/checkpoint-500",
+  "n_candidates": 4,
+  "checkpoint_step": 500,
+  "evidence_loss": {
+    "n": 1494,
+    "count": 947,
+    "rate": 0.6338688085676037,
+    "by_hop": {
+      "1": {
+        "n": 1494,
+        "count": 436,
+        "evidence_n": 5976,
+        "lost_evidence_count": 476,
+        "rate": 0.2918340026773762
+      },
+      "2": {
+        "n": 1494,
+        "count": 631,
+        "evidence_n": 5976,
+        "lost_evidence_count": 746,
+        "rate": 0.4223560910307898
+      },
+      "3": {
+        "n": 1044,
+        "count": 235,
+        "evidence_n": 1632,
+        "lost_evidence_count": 252,
+        "rate": 0.22509578544061304
+      },
+      "4": {
+        "n": 354,
+        "count": 47,
+        "evidence_n": 372,
+        "lost_evidence_count": 47,
+        "rate": 0.1327683615819209
+      }
+    },
+    "by_question_position": {
+      "1": {
+        "n": 1494,
+        "count": 344,
+        "evidence_n": 3504,
+        "lost_evidence_count": 362,
+        "rate": 0.23025435073627845
+      },
+      "2": {
+        "n": 1494,
+        "count": 344,
+        "evidence_n": 3468,
+        "lost_evidence_count": 391,
+        "rate": 0.23025435073627845
+      },
+      "3": {
+        "n": 1494,
+        "count": 343,
+        "evidence_n": 3504,
+        "lost_evidence_count": 411,
+        "rate": 0.22958500669344042
+      },
+      "4": {
+        "n": 1494,
+        "count": 316,
+        "evidence_n": 3480,
+        "lost_evidence_count": 357,
+        "rate": 0.21151271753681392
+      }
+    },
+    "by_mechanism": {
+      "never_kept": {
+        "n": 1494,
+        "count": 944,
+        "evidence_n": 13956,
+        "lost_evidence_count": 1489,
+        "rate": 0.6318607764390897
+      },
+      "dropped": {
+        "n": 1494,
+        "count": 29,
+        "evidence_n": 13956,
+        "lost_evidence_count": 32,
+        "rate": 0.019410977242302542
+      }
+    }
+  },
+  "final_recall": {
+    "n": 1494,
+    "mean": 0.8929699112430091
+  },
+  "rule": "pooled loss ascending, pooled recall descending, earliest optimizer step"
+}

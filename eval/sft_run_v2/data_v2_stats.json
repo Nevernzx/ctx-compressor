@@ -1,0 +1,840 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-11-18T14:50:50.599124+00:00",
+  "finished_utc": "2026-11-18T14:55:33.497927+00:00",
+  "seconds": 282.89882164192386,
+  "cpu_only": true,
+  "workers": 4,
+  "noise_range_v1": [
+    1,
+    3
+  ],
+  "noise_range_v2": [
+    0,
+    2
+  ],
+  "noise_seed": "split-local task index",
+  "files": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v2/train.jsonl",
+      "bytes": 1151049084,
+      "lines": 88562,
+      "sha256": "8a40e66fd1f39e573f72b93fb9c8783f5c90d5d2a43bb1db3cd35a1dc99cd1a1"
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v2/heldout.jsonl",
+      "bytes": 60588959,
+      "lines": 4652,
+      "sha256": "53b76a4d26ed68b898aeb0bff8f11fd4ee3e5147b17fc71030fb93e8aebc99c9"
+    }
+  },
+  "trajectory_files": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train_v2/train_tasks.jsonl",
+      "bytes": 1164969302,
+      "lines": 4735,
+      "sha256": "06e2a6783c0d4d670d9931c24414d0f3c3a1f05f5cedcdf9afe27dd293c46d49"
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train_v2/heldout_tasks.jsonl",
+      "bytes": 61318859,
+      "lines": 249,
+      "sha256": "faefaeaa56be1374c5851ecf0a5b98a1fb0fce1d1364ff336cc7aaae9ff00492"
+    }
+  },
+  "inputs": {
+    "sft": {
+      "train": {
+        "path": "/root/userfolder/ctx-compressor/data/sft/train.jsonl",
+        "lines": 88562,
+        "bytes": 1169658306,
+        "sha256": "34c2179e3b9d42d67ae8e129dc72f414712e92fb13411dd9652936db42837004"
+      },
+      "heldout": {
+        "path": "/root/userfolder/ctx-compressor/data/sft/heldout.jsonl",
+        "lines": 4652,
+        "bytes": 61561401,
+        "sha256": "7cb660ddb328f932cca4932613caf620cbbd113f67bd29be5d11eea784e20613"
+      }
+    },
+    "trajectories": {
+      "train": {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/train_tasks.jsonl",
+        "bytes": 1184195307,
+        "lines": 4735,
+        "sha256": "ae96199b83b264bd926312e1e91e3b2af753b20117a6cb88161c8f3b23033e56"
+      },
+      "heldout": {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+        "bytes": 62323855,
+        "lines": 249,
+        "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+      }
+    },
+    "corpus": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+      "bytes": 83690752,
+      "lines": 84559,
+      "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+    },
+    "task05_eval_inputs": [
+      {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+        "bytes": 62323855,
+        "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+        "bytes": 83690752,
+        "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+      }
+    ]
+  },
+  "statistics": {
+    "train": {
+      "v1": {
+        "reselect|loose": {
+          "target_drop_nonempty": {
+            "count": 13357,
+            "n": 13362,
+            "rate": 0.9996258045202814
+          },
+          "target_drop_count": {
+            "sum": 26609,
+            "n": 13362,
+            "mean": 1.991393503966472
+          },
+          "kept_fragments": {
+            "sum": 90230,
+            "n": 13362,
+            "mean": 6.752731627001946
+          },
+          "kept_entirely_gold": {
+            "count": 5,
+            "n": 13362,
+            "rate": 0.000374195479718605
+          }
+        },
+        "append|loose": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 13362,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 13362,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 63595,
+            "n": 13362,
+            "mean": 4.759392306540937
+          },
+          "kept_entirely_gold": {
+            "count": 13362,
+            "n": 13362,
+            "rate": 1.0
+          }
+        },
+        "reselect|mid": {
+          "target_drop_nonempty": {
+            "count": 12915,
+            "n": 12917,
+            "rate": 0.9998451652860572
+          },
+          "target_drop_count": {
+            "sum": 25823,
+            "n": 12917,
+            "mean": 1.9991484090733143
+          },
+          "kept_fragments": {
+            "sum": 87036,
+            "n": 12917,
+            "mean": 6.738097081365642
+          },
+          "kept_entirely_gold": {
+            "count": 2,
+            "n": 12917,
+            "rate": 0.000154834713942866
+          }
+        },
+        "append|mid": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 12917,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 12917,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 61197,
+            "n": 12917,
+            "mean": 4.7377099945807855
+          },
+          "kept_entirely_gold": {
+            "count": 12917,
+            "n": 12917,
+            "rate": 1.0
+          }
+        },
+        "reselect|tight": {
+          "target_drop_nonempty": {
+            "count": 13264,
+            "n": 13267,
+            "rate": 0.9997738750282656
+          },
+          "target_drop_count": {
+            "sum": 26557,
+            "n": 13267,
+            "mean": 2.001733624783297
+          },
+          "kept_fragments": {
+            "sum": 89793,
+            "n": 13267,
+            "mean": 6.768146528981684
+          },
+          "kept_entirely_gold": {
+            "count": 14,
+            "n": 13267,
+            "rate": 0.0010552498680937664
+          }
+        },
+        "append|tight": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 13267,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 13267,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 63240,
+            "n": 13267,
+            "mean": 4.7667144041607
+          },
+          "kept_entirely_gold": {
+            "count": 13267,
+            "n": 13267,
+            "rate": 1.0
+          }
+        },
+        "reselect|all": {
+          "target_drop_nonempty": {
+            "count": 39536,
+            "n": 39546,
+            "rate": 0.9997471299246448
+          },
+          "target_drop_count": {
+            "sum": 78989,
+            "n": 39546,
+            "mean": 1.9973954382238406
+          },
+          "kept_fragments": {
+            "sum": 267059,
+            "n": 39546,
+            "mean": 6.753122945430638
+          },
+          "kept_entirely_gold": {
+            "count": 21,
+            "n": 39546,
+            "rate": 0.0005310271582460932
+          }
+        },
+        "append|all": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 39546,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 39546,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 188032,
+            "n": 39546,
+            "mean": 4.754766600920447
+          },
+          "kept_entirely_gold": {
+            "count": 39546,
+            "n": 39546,
+            "rate": 1.0
+          }
+        }
+      },
+      "v2": {
+        "reselect|loose": {
+          "target_drop_nonempty": {
+            "count": 8800,
+            "n": 13362,
+            "rate": 0.6585840443047448
+          },
+          "target_drop_count": {
+            "sum": 13243,
+            "n": 13362,
+            "mean": 0.9910941475826972
+          },
+          "kept_fragments": {
+            "sum": 76850,
+            "n": 13362,
+            "mean": 5.751384523274959
+          },
+          "kept_entirely_gold": {
+            "count": 4562,
+            "n": 13362,
+            "rate": 0.3414159556952552
+          }
+        },
+        "append|loose": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 13362,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 13362,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 63595,
+            "n": 13362,
+            "mean": 4.759392306540937
+          },
+          "kept_entirely_gold": {
+            "count": 13362,
+            "n": 13362,
+            "rate": 1.0
+          }
+        },
+        "reselect|mid": {
+          "target_drop_nonempty": {
+            "count": 8636,
+            "n": 12917,
+            "rate": 0.6685762948052953
+          },
+          "target_drop_count": {
+            "sum": 12940,
+            "n": 12917,
+            "mean": 1.001780599210343
+          },
+          "kept_fragments": {
+            "sum": 74144,
+            "n": 12917,
+            "mean": 5.740032515289928
+          },
+          "kept_entirely_gold": {
+            "count": 4281,
+            "n": 12917,
+            "rate": 0.33142370519470465
+          }
+        },
+        "append|mid": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 12917,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 12917,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 61197,
+            "n": 12917,
+            "mean": 4.7377099945807855
+          },
+          "kept_entirely_gold": {
+            "count": 12917,
+            "n": 12917,
+            "rate": 1.0
+          }
+        },
+        "reselect|tight": {
+          "target_drop_nonempty": {
+            "count": 8864,
+            "n": 13267,
+            "rate": 0.6681239164845104
+          },
+          "target_drop_count": {
+            "sum": 13354,
+            "n": 13267,
+            "mean": 1.006557624180297
+          },
+          "kept_fragments": {
+            "sum": 76574,
+            "n": 13267,
+            "mean": 5.771764528529434
+          },
+          "kept_entirely_gold": {
+            "count": 4423,
+            "n": 13267,
+            "rate": 0.3333835833270521
+          }
+        },
+        "append|tight": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 13267,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 13267,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 63240,
+            "n": 13267,
+            "mean": 4.7667144041607
+          },
+          "kept_entirely_gold": {
+            "count": 13267,
+            "n": 13267,
+            "rate": 1.0
+          }
+        },
+        "reselect|all": {
+          "target_drop_nonempty": {
+            "count": 26300,
+            "n": 39546,
+            "rate": 0.6650482981843928
+          },
+          "target_drop_count": {
+            "sum": 39537,
+            "n": 39546,
+            "mean": 0.9997724169321802
+          },
+          "kept_fragments": {
+            "sum": 227568,
+            "n": 39546,
+            "mean": 5.754513730845092
+          },
+          "kept_entirely_gold": {
+            "count": 13266,
+            "n": 39546,
+            "rate": 0.3354574419663177
+          }
+        },
+        "append|all": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 39546,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 39546,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 188032,
+            "n": 39546,
+            "mean": 4.754766600920447
+          },
+          "kept_entirely_gold": {
+            "count": 39546,
+            "n": 39546,
+            "rate": 1.0
+          }
+        }
+      }
+    },
+    "heldout": {
+      "v1": {
+        "reselect|loose": {
+          "target_drop_nonempty": {
+            "count": 840,
+            "n": 840,
+            "rate": 1.0
+          },
+          "target_drop_count": {
+            "sum": 1666,
+            "n": 840,
+            "mean": 1.9833333333333334
+          },
+          "kept_fragments": {
+            "sum": 5605,
+            "n": 840,
+            "mean": 6.6726190476190474
+          },
+          "kept_entirely_gold": {
+            "count": 0,
+            "n": 840,
+            "rate": 0.0
+          }
+        },
+        "append|loose": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 840,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 840,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 3938,
+            "n": 840,
+            "mean": 4.688095238095238
+          },
+          "kept_entirely_gold": {
+            "count": 840,
+            "n": 840,
+            "rate": 1.0
+          }
+        },
+        "reselect|mid": {
+          "target_drop_nonempty": {
+            "count": 632,
+            "n": 633,
+            "rate": 0.9984202211690363
+          },
+          "target_drop_count": {
+            "sum": 1297,
+            "n": 633,
+            "mean": 2.0489731437598735
+          },
+          "kept_fragments": {
+            "sum": 4307,
+            "n": 633,
+            "mean": 6.804107424960505
+          },
+          "kept_entirely_gold": {
+            "count": 1,
+            "n": 633,
+            "rate": 0.001579778830963665
+          }
+        },
+        "append|mid": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 633,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 633,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 3008,
+            "n": 633,
+            "mean": 4.751974723538704
+          },
+          "kept_entirely_gold": {
+            "count": 633,
+            "n": 633,
+            "rate": 1.0
+          }
+        },
+        "reselect|tight": {
+          "target_drop_nonempty": {
+            "count": 604,
+            "n": 604,
+            "rate": 1.0
+          },
+          "target_drop_count": {
+            "sum": 1186,
+            "n": 604,
+            "mean": 1.9635761589403973
+          },
+          "kept_fragments": {
+            "sum": 4114,
+            "n": 604,
+            "mean": 6.811258278145695
+          },
+          "kept_entirely_gold": {
+            "count": 1,
+            "n": 604,
+            "rate": 0.0016556291390728477
+          }
+        },
+        "append|tight": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 604,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 604,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 2930,
+            "n": 604,
+            "mean": 4.8509933774834435
+          },
+          "kept_entirely_gold": {
+            "count": 604,
+            "n": 604,
+            "rate": 1.0
+          }
+        },
+        "reselect|all": {
+          "target_drop_nonempty": {
+            "count": 2076,
+            "n": 2077,
+            "rate": 0.9995185363505056
+          },
+          "target_drop_count": {
+            "sum": 4149,
+            "n": 2077,
+            "mean": 1.9975926817525276
+          },
+          "kept_fragments": {
+            "sum": 14026,
+            "n": 2077,
+            "mean": 6.75300914780934
+          },
+          "kept_entirely_gold": {
+            "count": 2,
+            "n": 2077,
+            "rate": 0.0009629272989889263
+          }
+        },
+        "append|all": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 2077,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 2077,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 9876,
+            "n": 2077,
+            "mean": 4.7549350024073185
+          },
+          "kept_entirely_gold": {
+            "count": 2077,
+            "n": 2077,
+            "rate": 1.0
+          }
+        }
+      },
+      "v2": {
+        "reselect|loose": {
+          "target_drop_nonempty": {
+            "count": 550,
+            "n": 840,
+            "rate": 0.6547619047619048
+          },
+          "target_drop_count": {
+            "sum": 825,
+            "n": 840,
+            "mean": 0.9821428571428571
+          },
+          "kept_fragments": {
+            "sum": 4764,
+            "n": 840,
+            "mean": 5.671428571428572
+          },
+          "kept_entirely_gold": {
+            "count": 290,
+            "n": 840,
+            "rate": 0.34523809523809523
+          }
+        },
+        "append|loose": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 840,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 840,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 3938,
+            "n": 840,
+            "mean": 4.688095238095238
+          },
+          "kept_entirely_gold": {
+            "count": 840,
+            "n": 840,
+            "rate": 1.0
+          }
+        },
+        "reselect|mid": {
+          "target_drop_nonempty": {
+            "count": 440,
+            "n": 633,
+            "rate": 0.6951026856240127
+          },
+          "target_drop_count": {
+            "sum": 665,
+            "n": 633,
+            "mean": 1.0505529225908372
+          },
+          "kept_fragments": {
+            "sum": 3674,
+            "n": 633,
+            "mean": 5.804107424960505
+          },
+          "kept_entirely_gold": {
+            "count": 193,
+            "n": 633,
+            "rate": 0.3048973143759874
+          }
+        },
+        "append|mid": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 633,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 633,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 3008,
+            "n": 633,
+            "mean": 4.751974723538704
+          },
+          "kept_entirely_gold": {
+            "count": 633,
+            "n": 633,
+            "rate": 1.0
+          }
+        },
+        "reselect|tight": {
+          "target_drop_nonempty": {
+            "count": 389,
+            "n": 604,
+            "rate": 0.6440397350993378
+          },
+          "target_drop_count": {
+            "sum": 582,
+            "n": 604,
+            "mean": 0.9635761589403974
+          },
+          "kept_fragments": {
+            "sum": 3510,
+            "n": 604,
+            "mean": 5.811258278145695
+          },
+          "kept_entirely_gold": {
+            "count": 217,
+            "n": 604,
+            "rate": 0.35927152317880795
+          }
+        },
+        "append|tight": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 604,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 604,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 2930,
+            "n": 604,
+            "mean": 4.8509933774834435
+          },
+          "kept_entirely_gold": {
+            "count": 604,
+            "n": 604,
+            "rate": 1.0
+          }
+        },
+        "reselect|all": {
+          "target_drop_nonempty": {
+            "count": 1379,
+            "n": 2077,
+            "rate": 0.6639383726528647
+          },
+          "target_drop_count": {
+            "sum": 2072,
+            "n": 2077,
+            "mean": 0.9975926817525277
+          },
+          "kept_fragments": {
+            "sum": 11948,
+            "n": 2077,
+            "mean": 5.752527684159846
+          },
+          "kept_entirely_gold": {
+            "count": 700,
+            "n": 2077,
+            "rate": 0.33702455464612424
+          }
+        },
+        "append|all": {
+          "target_drop_nonempty": {
+            "count": 0,
+            "n": 2077,
+            "rate": 0.0
+          },
+          "target_drop_count": {
+            "sum": 0,
+            "n": 2077,
+            "mean": 0.0
+          },
+          "kept_fragments": {
+            "sum": 9876,
+            "n": 2077,
+            "mean": 4.7549350024073185
+          },
+          "kept_entirely_gold": {
+            "count": 2077,
+            "n": 2077,
+            "rate": 1.0
+          }
+        }
+      }
+    }
+  },
+  "checks": {
+    "train": {
+      "default_replay_tasks_byte_identical": 4735,
+      "step0_states_identical": 9470,
+      "reselect_step0_rows_byte_identical": 4735,
+      "append_rows_byte_identical": 44281,
+      "sft_rows_v1": 88562,
+      "sft_rows_v2": 88562
+    },
+    "heldout": {
+      "default_replay_tasks_byte_identical": 249,
+      "step0_states_identical": 498,
+      "reselect_step0_rows_byte_identical": 249,
+      "append_rows_byte_identical": 2326,
+      "sft_rows_v1": 4652,
+      "sft_rows_v2": 4652
+    }
+  },
+  "all_checks_passed": true,
+  "step_scope": "steps >= 1; kept before action; empty kept is a subset of gold",
+  "shared_retrieval_steps_sha256": {
+    "train": "2f8dd585f26ad53949ef2b39a4ab0cbafdd54096ed7f9ec5375645c423bf665f",
+    "heldout": "f7336422fac1409907ef15dd522a00e6e41231495cadf0db7733f05e35363e71"
+  },
+  "retrieval_hash_encoding": "one compact JSON array of saved steps plus LF per task, in source order; v1 and v2 compared",
+  "max_total_tokens": {
+    "train": 8349,
+    "heldout": 7780
+  }
+}

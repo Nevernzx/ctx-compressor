@@ -1,0 +1,56 @@
+{
+  "verified_utc": "2026-11-20T14:11:29.605966+00:00",
+  "status_at_reconnect": "running",
+  "stage_at_reconnect": "F0",
+  "processes": [
+    {
+      "pid": 1665710,
+      "ppid": 1,
+      "sid": 1665710,
+      "state": "S"
+    },
+    {
+      "pid": 1665731,
+      "ppid": 1665710,
+      "sid": 1665710,
+      "state": "S"
+    }
+  ],
+  "status_path": "/root/userfolder/ctx-compressor/grpo_v2/pipeline_status.json",
+  "last_monitor": {
+    "utc": "2026-11-20T14:11:25.860429+00:00",
+    "stage": "F0",
+    "pid": 1665731,
+    "alive": true,
+    "nonfinite": false,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 35077,
+    "utilization_pct": 94
+  },
+  "gpu1_readonly": "1, GPU-4318dc90-4126-038a-9402-1323533db94f, 35077 MiB, 96 %",
+  "F0_engine_step0": {
+    "n": 1494,
+    "user_byte_mismatches": 0,
+    "token_id_mismatches": 0,
+    "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+  },
+  "F0_raw_steps_path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_v2/merged_sft_v2/steps.jsonl",
+  "document_prefixes": {
+    "README.md": {
+      "bytes": 35780,
+      "sha256": "08ed32d37ca25f980252143bb30bc7ce26b0f453eaf299f3e86ab3bc416a236c"
+    },
+    "NOTES.md": {
+      "bytes": 36995,
+      "sha256": "b92722eb8de6377d7f4fbcb708172317026e3a2c243ccac07d49952b927ace95"
+    },
+    "HANDOFF.md": {
+      "bytes": 29955,
+      "sha256": "e2eb9a4f11f8c52e9556743d254fd154cda8f3146caf3683f307b4e0c0eddff5"
+    }
+  },
+  "historical_sha256sums": "0d97a77af0d5be0bbf50323934a8782aeb8d3fee6b0e6ec35cc3db8bdd23e7f3",
+  "task07_sha256sums": "d6f84b9030994ad4c7481a8607a48a40dbea11ba415ec012c1e5907db156c381"
+}

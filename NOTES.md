@@ -193,3 +193,59 @@ A8曾在初始化阶段因缺length字段退出，0 optimizer step；原日志�
 根盘计数采用原始基线931440451584 bytes和终态df，不以“可能为其他进程”扣减。此前仅将确认为本任务所有的pytest-7/8临时树迁至userfolder，逐文件/链接验证保留；没有清理未知或他人文件。C期间曾观测非本任务GPU进程共享占用，仅留元数据证据，未管理其他进程。详细时间线、来源边界与收据索引见[执行日志](notes_task05_execution.md)。
 
 严格finalizer的300MB门槛保持不变。独立失败导出器仅在其余完成/PID/GPU门禁全部通过且根盘仍超限时，导出failed资源收据与稳定完整外置清单，返回码仍为1。最终报告无缺项，整体failed；这与模型计算完整、文件清单完整及审计通过分别记录。
+
+
+## 任务06　reselect 噪声与资源计量
+
+- **`/` disk-space rule (Claude's change; reason below)**:
+  - Task 05 established that `/` is an overlay sharing the same host NVMe as `/etc/hosts`, so raw `df` growth includes writes from other users.
+  - The criterion therefore becomes: **the total size of files this task creates or modifies under `/` (overlay) ≤ 300 MB**, measured with `find -xdev -newer <start marker file>` and similar.
+  - Still record raw `df /` at start and end, side by side, but it is no longer pass/fail.
+
+- **Policy (Claude's interpretation)**: add a parameter to `make_oracle_noise_policy`, `noise_range=(1, 3)`.
+  - The default keeps the old behaviour (RNG call order unchanged).
+  - v2 uses `noise_range=(0, 2)`, i.e. `want = rng.randint(0, 2)`.
+  - Everything else stays the same: seed = task index; `sft_target` is always the pure oracle; append still uses the pure oracle.
+
+v2 使用 src/oracle_noise_v2.py 中的同名策略工厂。旧模块与历史 SHA 保留。默认参数在 4,984 个已保存任务上复演出逐字节相同的 v1 reselect 轨迹。v2 只将范围改为含端点的 0–2，每个 split 的 task index 作为随机种子。append 和全部 SFT 标签沿用纯 oracle。
+
+SFT 数据统计使用 step ≥ 1 动作前的保留区，空集按 gold 的子集计数。训练 reselect 的非空 drop 为 v1 39,536/39,546 和 v2 26,300/39,546。留出为 2,076/2,077 和 1,379/2,077。闭环诊断中的旧 gold 则按当前检索前已揭示的证据定义，冻结的 v1 对照可复现任务书所列全 gold 保留区 5,111/6,197。每项的分子与分母见 eval/sft_run_v2/。
+
+等卡脚本按十进制 2 GB 换算 nvidia-smi 的 MiB 值，最多 1,907 MiB 才算一次空闲，两次相邻观测间隔 600 秒。每个训练样本 ID 和顺序、留出 loss 的 1,000 个 ID 及顺序均与任务05一致。配置比较记录设置、输入输出路径，以及旧运行的输入哈希和实测字段。正式启动后另比较 Swift 实际解析的参数。
+
+
+## 任务06　留出集闭环评测完成
+
+每条轨迹在最后一步少保留任何一段已揭示的证据，即计一次证据丢失；任务末召回则先按轨迹计算再取平均。选择顺序沿用任务05，依次看合并丢失率最低、合并末召回最高和 checkpoint 步数最早。评测使用同一批 249 个训练留出任务、2,326 个检索步骤。两版保存的教师轨迹不同，剥离教师动作后，任务身份、题目和检索步骤的序列哈希一致；首步提示逐字节和 token ID 均相同（n=1,494）。[输入核验](eval/sft_run_v2/heldout_v2_preflight.json)
+
+中档重选模式下，已保留旧证据的逐步存活率为 v1 的 2,247/3,681 与 v2 的 8,742/8,764。第 1 步起、输出有效且保留区全为已知证据时，仍有删除动作的步数分别为 1,313/1,699 与 10/1,328。两项统计对应的模型分别为各版本选中的 checkpoint-2000。只追加模式按协议不能删除。完整分母和首错分类见[留出集报告](eval/sft_run_v2/sft_v2_report.md)。
+
+后台等卡 130,812.48 秒，优化循环 24,081.22 秒，含启动、保存和退出的训练阶段墙钟为 24,365.28 秒（各 n=1）。训练记录覆盖 2,500 个优化步、40,000 次样本使用和 5 次固定子集验证。训练与评测共记录 1,140 次资源观测，最大相邻间隔 30.61 秒。
+
+
+## 任务07　GRPO 准备
+
+- Claude 的解释：奖励前置评测解析器，奖励为 −1 当且仅当评测判为非法输出；插件从生成的 token id 解码，因为 swift 给的补全文本末尾带 `<|im_end|>`。
+- Claude 的解释：GRPO 在合并后的 SFT 模型上训练新 LoRA，这样 swift 关掉 adapter 得到的参照模型是 SFT 模型，而不是基座。
+- Claude 的改动：`train_grpo.sh` 的采样温度变量改名为 `GEN_TEMP`，种子改为 `GRPO_SEED`。原名 `TEMP` 和临时目录环境变量冲突，导致第一次启动时 argparse 报错，失败目录已改名保留为 `smoke_train_failed_argparse_TEMP_collision`。
+- 发现：替身模型下 77.6%（149/192）的 8 样本组奖励全相同（只追加 84–91%，重选 66–69%），只有 7.3% 的组里有采样结果超过 greedy。正式 GRPO 需要先定动态采样或状态筛选。
+- 任务07 的哈希单独记在 `eval/grpo_prep/TASK07_SHA256SUMS`（含外置大文件路径），相对路径条目已并入顶层 SHA256SUMS。
+
+
+## 任务08　正式 GRPO 已启动
+
+任务08沿用任务07的评测、状态构造、采样和奖励实现，用独立入口绑定 GPU 1 与正式输出目录，保留历史脚本的内容和校验和。两版训练文件共有 4,735 个任务、44,281 个检索步骤。去除教师轨迹字段后其余内容逐条一致；训练与留出题目 ID 交集为 0（18,940 个训练题目 ID，996 个留出题目 ID）。
+
+有效训练状态按每个提示 8 次采样的总体奖励标准差大于 1e-9 筛选；预定选择至多 2,000 个提示。正式评测首看紧预算下分模式的证据丢失率，再看六格合并丢失率与任务末召回率。
+
+
+任务08阶段 C 续跑。vLLM 0.11.0 的默认 `top_k=0` 和登记值 `-1` 均关闭 top-k 截断。采样汇总保留登记值，并在 `generation.top_k_actual` 记录实际值。续跑入口为 `scripts/run_formal_grpo_pipeline.py --resume-from C`；启动前重新验证 F0 的 13,956 条原始动作及 B 的 22,158 条状态，分母与 SHA-256 均与原回执相符。首次失败的状态和 C 日志以 `.failed_C_topk` 后缀保存在外置运行目录。
+
+
+## 任务08　正式 GRPO 训练与留出评测完成
+
+A 的 30 条固定提示在权重合并前后，生成文本和 token ID 的差异均为 0/30。F0 留出闭环按完全相同输入状态对齐后，原始输出不同的有 98/13,601 步。F0 的六格合并证据丢失为 966/1,494，任务06选中模型为 956/1,494。两项结果分别列入报告。
+
+新增片段数按有效动作步统计。任务06的 SFT v2 每步新增 1.000000 段（13,926 段 / 13,926 步），选中的 GRPO 每步新增 0.999785 段（13,931 段 / 13,934 步）。正式训练的 16,000 次采样对应 16,032 条奖励日志，其中末批 32 条重复记录；逐条复算共 0/16,032 差异。
+
+Claude 只读失败分析（3080）：`claude_checks/grpo_failure_analysis.py`、`claude_checks/grpo_failure_out_20261121.txt`。

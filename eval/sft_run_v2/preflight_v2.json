@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-18T14:47:48.771971+00:00",
+  "root_baseline_used_bytes": 932843393024,
+  "marker": "/root/workplace/ctx-compressor/eval/sft_run_v2/start.marker",
+  "marker_mtime_ns": 1795013268771399270,
+  "root_dev": 93,
+  "project_dev": 93,
+  "userfolder_dev": 2049,
+  "task05_document_baselines": {
+    "README.md": {
+      "bytes": 33234,
+      "sha256": "b446c3c18af134d5e888304075f98b58294e8b66ea1a20f52acabd561a101c68"
+    },
+    "NOTES.md": {
+      "bytes": 32569,
+      "sha256": "9879ca7ee945775d9c8607fb8cdb46af143fea1659adc90568ad2af82e608589"
+    },
+    "HANDOFF.md": {
+      "bytes": 26844,
+      "sha256": "6a5fc0c56414401890e7088f65821ee936381d84682c0cca5a30a3009b92813a"
+    },
+    "SHA256SUMS": {
+      "bytes": 29974,
+      "sha256": "cb1501ddf5dba4a91a68c5f19149dce1edbf2676f149a40029f7e5203c0cc5b0"
+    }
+  },
+  "gpu1_readonly": "1, GPU-4318dc90-4126-038a-9402-1323533db94f, 40404 MiB, 49140 MiB, 100 %"
+}

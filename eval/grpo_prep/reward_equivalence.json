@@ -1,0 +1,27 @@
+{
+  "model_output_label": "替身 v1 checkpoint-2000，非正式结果",
+  "source": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-2000/steps.jsonl",
+  "sha256": "f794336249c1b02c8285d9d3f93e39c76006e38e59b8d88719911e32c699b4d5",
+  "matches_task05_audited_artifact": true,
+  "n": 13956,
+  "n_valid": 13912,
+  "invalid_categories": {
+    "invalid_json": 0,
+    "invalid_candidate_id": 37,
+    "append_drop": 0,
+    "over_budget": 7
+  },
+  "lambda": 0.3,
+  "mismatches": 0,
+  "mismatches_by_check": {},
+  "examples": [],
+  "status": "ok",
+  "core_parser_differences": [
+    "The eval parser rejects duplicate JSON keys anywhere; the old reward's json.loads keeps the last.",
+    "The eval parser rejects NaN, Infinity and -Infinity anywhere; the old reward can accept them in ignored metadata.",
+    "Eval requires str. The old reward also accepts bytes or bytearray containing a valid JSON object.",
+    "Eval catches RecursionError for excessive JSON nesting. The old reward can propagate it."
+  ],
+  "protocol": "Task 05 uses generated text only. The ORM reconstructs this from generated token IDs using the same fast DecodeStream and prompt suffix. The renderer-added think block is outside raw text. No whitespace stripping, EOS-string replacement or trailing-text repair is performed.",
+  "recall_reference": "Map saved available-gold lids to corpus pids; intersect with recorded keep_after pids."
+}

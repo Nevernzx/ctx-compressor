@@ -1,0 +1,32 @@
+{
+  "task05_files": 299,
+  "protected_prefixes": [
+    "HANDOFF.md",
+    "NOTES.md",
+    "README.md"
+  ],
+  "historical_tasks": [
+    "TASK_01",
+    "TASK_02",
+    "TASK_03",
+    "TASK_04",
+    "TASK_05"
+  ],
+  "task05_external_files": 151,
+  "task04_external_files": 24,
+  "pre_closeout_document_prefixes": {
+    "HANDOFF.md": {
+      "bytes": 28175,
+      "sha256": "59d0674a31c00690b0e0e63d737aa41fbf13ed0fae7441d68bc371b46f7e69e6"
+    },
+    "NOTES.md": {
+      "bytes": 34592,
+      "sha256": "2af69cf21d420e7b151f0448056fd0013ef6f65a8f3e16318f9a2cfc1eeb6be2"
+    },
+    "README.md": {
+      "bytes": 34181,
+      "sha256": "9ecbcef94f460411e29dbaf9de99b6ead5053a617895444c3c0706dbe008b2e0"
+    }
+  },
+  "verified_utc": "2026-11-20T12:59:12.192105+00:00"
+}

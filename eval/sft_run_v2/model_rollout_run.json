@@ -1,0 +1,774 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "started_at_utc": "2026-11-20T10:05:41.613461+00:00",
+  "pid": 1549650,
+  "cuda_visible_devices": "1",
+  "gpu_before": {
+    "index": 1,
+    "memory_used_mib": 375,
+    "memory_total_mib": 49140,
+    "utilization_gpu": 0
+  },
+  "root_before": {
+    "used_bytes": 936338018304,
+    "available_bytes": 18359197696,
+    "df_raw": "        Used       Avail\n936338018304 18359197696\n"
+  },
+  "vllm_worker_multiproc_method": "spawn",
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 256,
+    "n": 1,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "input_truncation": false
+  },
+  "lora_loading": "native vLLM LoRA; base loaded once; sequential adapters, rank16",
+  "strategies": {
+    "checkpoint-500": {
+      "status": "complete",
+      "checkpoint_step": 500,
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "max_prompt_tokens": 7602,
+      "output_limit_hits": 0,
+      "invalid_counts": {
+        "over_budget": 21,
+        "invalid_candidate_id": 3
+      },
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 148.12404247000813,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14198
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 170.82894067605957,
+          "prompt_tokens": 4090351,
+          "generated_tokens": 14910
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 173.74431588384323,
+          "prompt_tokens": 4146939,
+          "generated_tokens": 14987
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 186.2333891999442,
+          "prompt_tokens": 4427108,
+          "generated_tokens": 15052
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 196.46334686712362,
+          "prompt_tokens": 4657335,
+          "generated_tokens": 15126
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 204.235659227008,
+          "prompt_tokens": 4766618,
+          "generated_tokens": 16413
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 214.42851325985976,
+          "prompt_tokens": 5024249,
+          "generated_tokens": 16646
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 227.6040229368955,
+          "prompt_tokens": 5297336,
+          "generated_tokens": 16760
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 169.90111806592904,
+          "prompt_tokens": 3943062,
+          "generated_tokens": 11770
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 103.10508866305463,
+          "prompt_tokens": 2377183,
+          "generated_tokens": 7071
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 48.49798694788478,
+          "prompt_tokens": 1129484,
+          "generated_tokens": 3111
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 13.173974414821714,
+          "prompt_tokens": 296850,
+          "generated_tokens": 780
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.415940395090729,
+          "prompt_tokens": 49510,
+          "generated_tokens": 147
+        }
+      ],
+      "matched_task05_step0_inputs": 1494,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-500/metrics.json",
+        "bytes": 32481,
+        "sha256": "0a9fdbc2b5aab72ca284ee568320e6121f1ec3b4b7f3ba133dd54837b814ddce"
+      }
+    },
+    "checkpoint-1000": {
+      "status": "complete",
+      "checkpoint_step": 1000,
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "max_prompt_tokens": 7394,
+      "output_limit_hits": 0,
+      "invalid_counts": {
+        "append_drop": 11,
+        "over_budget": 17
+      },
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 150.9779637248721,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14177
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 172.47373724286444,
+          "prompt_tokens": 4084597,
+          "generated_tokens": 14902
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 174.85857501393184,
+          "prompt_tokens": 4141201,
+          "generated_tokens": 15024
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 187.38608866883442,
+          "prompt_tokens": 4424022,
+          "generated_tokens": 14986
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 196.6709699688945,
+          "prompt_tokens": 4660532,
+          "generated_tokens": 15131
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 202.53143663611263,
+          "prompt_tokens": 4771395,
+          "generated_tokens": 16436
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 213.51308346400037,
+          "prompt_tokens": 5021506,
+          "generated_tokens": 16649
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 224.28643678990193,
+          "prompt_tokens": 5279005,
+          "generated_tokens": 16653
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 166.97690194891766,
+          "prompt_tokens": 3921608,
+          "generated_tokens": 11820
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 100.85183563805185,
+          "prompt_tokens": 2356040,
+          "generated_tokens": 6882
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 47.58790208003484,
+          "prompt_tokens": 1120497,
+          "generated_tokens": 3057
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 13.01027341419831,
+          "prompt_tokens": 298091,
+          "generated_tokens": 751
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.4041938290465623,
+          "prompt_tokens": 49263,
+          "generated_tokens": 141
+        }
+      ],
+      "matched_task05_step0_inputs": 1494,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-1000/metrics.json",
+        "bytes": 32460,
+        "sha256": "4e81590ff0bc678d0fbe28fd24de54d919149a2a69cc337e5d4be812ad59f9ca"
+      }
+    },
+    "checkpoint-1500": {
+      "status": "complete",
+      "checkpoint_step": 1500,
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "max_prompt_tokens": 7640,
+      "output_limit_hits": 0,
+      "invalid_counts": {
+        "over_budget": 23
+      },
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 148.63704375899397,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14183
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 169.56701218895614,
+          "prompt_tokens": 4084778,
+          "generated_tokens": 14913
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 173.32107063103467,
+          "prompt_tokens": 4143754,
+          "generated_tokens": 14950
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 185.46775766997598,
+          "prompt_tokens": 4433738,
+          "generated_tokens": 14944
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 196.0491227901075,
+          "prompt_tokens": 4673805,
+          "generated_tokens": 14956
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 202.39703840995207,
+          "prompt_tokens": 4792901,
+          "generated_tokens": 16315
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 214.8036853899248,
+          "prompt_tokens": 5055583,
+          "generated_tokens": 16452
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 228.02911343006417,
+          "prompt_tokens": 5333927,
+          "generated_tokens": 16455
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 170.14659111993387,
+          "prompt_tokens": 3968930,
+          "generated_tokens": 11595
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 103.08951952215284,
+          "prompt_tokens": 2395508,
+          "generated_tokens": 6816
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 48.82694829418324,
+          "prompt_tokens": 1145234,
+          "generated_tokens": 2997
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 13.430845869006589,
+          "prompt_tokens": 306277,
+          "generated_tokens": 726
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.464820658089593,
+          "prompt_tokens": 50370,
+          "generated_tokens": 132
+        }
+      ],
+      "matched_task05_step0_inputs": 1494,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-1500/metrics.json",
+        "bytes": 32334,
+        "sha256": "291a0b7787248bc82b2d5e15f1856756b9f43d53abfe7eee1c7e79fa43fcdd22"
+      }
+    },
+    "checkpoint-2000": {
+      "status": "complete",
+      "checkpoint_step": 2000,
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "max_prompt_tokens": 7664,
+      "output_limit_hits": 0,
+      "invalid_counts": {
+        "over_budget": 30
+      },
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 150.3347743949853,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14173
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 171.46592386998236,
+          "prompt_tokens": 4082826,
+          "generated_tokens": 14916
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 174.5621508199256,
+          "prompt_tokens": 4139970,
+          "generated_tokens": 14951
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 187.63394513190724,
+          "prompt_tokens": 4426767,
+          "generated_tokens": 14946
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 197.73814407200553,
+          "prompt_tokens": 4664541,
+          "generated_tokens": 14974
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 204.66390778496861,
+          "prompt_tokens": 4779957,
+          "generated_tokens": 16332
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 216.289968512021,
+          "prompt_tokens": 5037045,
+          "generated_tokens": 16452
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 227.602538903011,
+          "prompt_tokens": 5309445,
+          "generated_tokens": 16470
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 170.85744026396424,
+          "prompt_tokens": 3951485,
+          "generated_tokens": 11580
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 103.2842609800864,
+          "prompt_tokens": 2388368,
+          "generated_tokens": 6795
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 48.95196154713631,
+          "prompt_tokens": 1142240,
+          "generated_tokens": 2991
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 13.421118908096105,
+          "prompt_tokens": 305427,
+          "generated_tokens": 726
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.4536239721346647,
+          "prompt_tokens": 49932,
+          "generated_tokens": 132
+        }
+      ],
+      "matched_task05_step0_inputs": 1494,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-2000/metrics.json",
+        "bytes": 32420,
+        "sha256": "131d73ef6bf0e1ca6d9a4f651f3b6ddd850d0c90e6d458d0d1f617d7e54c674b"
+      }
+    },
+    "checkpoint-2500": {
+      "status": "complete",
+      "checkpoint_step": 2500,
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "max_prompt_tokens": 7664,
+      "output_limit_hits": 0,
+      "invalid_counts": {
+        "over_budget": 27
+      },
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 149.71829918585718,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14167
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 171.21660758112557,
+          "prompt_tokens": 4084714,
+          "generated_tokens": 14916
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 173.34078120114282,
+          "prompt_tokens": 4141432,
+          "generated_tokens": 14952
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 185.22685850504786,
+          "prompt_tokens": 4426831,
+          "generated_tokens": 14942
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 195.81738995597698,
+          "prompt_tokens": 4664790,
+          "generated_tokens": 14984
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 201.84646749077365,
+          "prompt_tokens": 4779483,
+          "generated_tokens": 16323
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 213.69063290185295,
+          "prompt_tokens": 5035030,
+          "generated_tokens": 16458
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 225.50416807387955,
+          "prompt_tokens": 5307365,
+          "generated_tokens": 16469
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 168.19596082018688,
+          "prompt_tokens": 3950021,
+          "generated_tokens": 11571
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 101.59572922880761,
+          "prompt_tokens": 2385642,
+          "generated_tokens": 6804
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 48.074288396164775,
+          "prompt_tokens": 1137430,
+          "generated_tokens": 3000
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 13.31572975590825,
+          "prompt_tokens": 304650,
+          "generated_tokens": 741
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.423080136999488,
+          "prompt_tokens": 49932,
+          "generated_tokens": 132
+        }
+      ],
+      "matched_task05_step0_inputs": 1494,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_v2/checkpoint-2500/metrics.json",
+        "bytes": 32404,
+        "sha256": "620101d57cc38177740468cdd709a8b99f761b23c65fc62d2aec1f8b50f46ea6"
+      }
+    }
+  },
+  "checkpoint_inputs": [
+    {
+      "strategy": "checkpoint-500",
+      "step": 500,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-500/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "9e7f65a58a51738c933041783bc45b7d512f1743adef3889d5846936db2bd1a7"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-1000",
+      "step": 1000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1000/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "9df1667837e99db7bcfdbe9890b1f4c3c0b3b282919c82ab4f6229ed5b09ee22"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-1500",
+      "step": 1500,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-1500/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "70147fcf43820391be5b9409aaf8c9fa192711d208d28ecb5c61e3c2be829479"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-2000",
+      "step": 2000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c"
+        }
+      ]
+    },
+    {
+      "strategy": "checkpoint-2500",
+      "step": 2500,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/adapter_config.json",
+          "bytes": 1078,
+          "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2500/adapter_model.safetensors",
+          "bytes": 69782384,
+          "sha256": "41e952fc6dedf18374f1d007ae32ef696bbeffed7709052dd84e9fbcacbccf1b"
+        }
+      ]
+    }
+  ],
+  "input_files": {
+    "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+      "bytes": 62323855,
+      "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+    },
+    "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+      "bytes": 83690752,
+      "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json",
+      "bytes": 9732,
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json",
+      "bytes": 726,
+      "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+    }
+  },
+  "preflight": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/heldout_v2_preflight.json",
+    "bytes": 3886,
+    "sha256": "9ccfa939d4bc9efa963b59b6d06794f18547cf32257d925c366b56ad842fe9ff"
+  },
+  "no_compress_baseline": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run/no_compress_results.json",
+    "bytes": 30050,
+    "sha256": "73bbf3061c1396d02a5871f66f4548e14cf9db219e18e9338779618a3860fe96"
+  },
+  "engine_initialization_seconds": 18.204213721212,
+  "engine_tokenizer_check": {
+    "reference": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+      "bytes": 40731,
+      "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "prompt_tokens": 1814,
+    "masked_input_tokens": 1810,
+    "empty_think_tokens": 4,
+    "exact_token_ids_match": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+  },
+  "active_strategy": "checkpoint-2500",
+  "monitor_thread_stopped": true,
+  "root_disk_diagnostics_complete": true,
+  "engine_shutdown": {
+    "required": true,
+    "completed": true
+  },
+  "root_after": {
+    "used_bytes": 936470929408,
+    "available_bytes": 18226286592,
+    "df_raw": "        Used       Avail\n936470929408 18226286592\n"
+  },
+  "root_shutdown_diagnostics": {
+    "utc": "2026-11-20T12:50:35.048051+00:00",
+    "phase": "shutdown",
+    "root_df": {
+      "used_bytes": 936470929408,
+      "available_bytes": 18226286592,
+      "df_raw": "        Used       Avail\n936470929408 18226286592\n"
+    }
+  },
+  "root_disk_diagnostics": {
+    "policy": "raw df only; Task 06 accounts for task-written overlay files separately",
+    "n_disk_samples": 489
+  },
+  "completed_at_utc": "2026-11-20T12:50:36.527571+00:00",
+  "elapsed_seconds": 9894.914161066059,
+  "peak_gpu_memory_used_mib": 35259
+}

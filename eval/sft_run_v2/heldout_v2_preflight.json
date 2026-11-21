@@ -1,0 +1,105 @@
+{
+  "input_files": {
+    "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+      "bytes": 62323855,
+      "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+    },
+    "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+      "bytes": 83690752,
+      "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/tokenizer_config.json",
+      "bytes": 9732,
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json": {
+      "path": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B/config.json",
+      "bytes": 726,
+      "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+    }
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "v2_heldout_file": {
+    "path": "/root/userfolder/ctx-compressor/data/traj_train_v2/heldout_tasks.jsonl",
+    "bytes": 61318859,
+    "sha256": "faefaeaa56be1374c5851ecf0a5b98a1fb0fce1d1364ff336cc7aaae9ff00492"
+  },
+  "shared_task_questions_retrieval_sha256": "07fa05e04b1ea89b0e352d607e76eb9045bba2459b6b7e8316575de2eb7f2512",
+  "projection_fields": [
+    "task",
+    "split",
+    "example_ids",
+    "questions",
+    "steps"
+  ],
+  "n_tasks": 249,
+  "n_saved_steps": 2326,
+  "training_template_reference": {
+    "reference": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+      "bytes": 40731,
+      "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "prompt_tokens": 1814,
+    "masked_input_tokens": 1810,
+    "empty_think_tokens": 4,
+    "exact_token_ids_match": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+  },
+  "status": "ok",
+  "created_utc": "2026-11-18T14:55:41.294492+00:00",
+  "task05_run_sha256": "a9e82afc0107bc88a78ecda14b543e51e2fe1942fd6338188cdaaa4452e55efa",
+  "task05_rollout_reference": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts/checkpoint-2000/steps.jsonl",
+    "sha256": "f794336249c1b02c8285d9d3f93e39c76006e38e59b8d88719911e32c699b4d5"
+  },
+  "step0": {
+    "n": 1494,
+    "user_utf8_byte_identical": true,
+    "all_token_ids_identical": true,
+    "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+  },
+  "cuda_initialized": false,
+  "expected_outputs_per_strategy": 13956,
+  "expected_strategies": [
+    "checkpoint-500",
+    "checkpoint-1000",
+    "checkpoint-1500",
+    "checkpoint-2000",
+    "checkpoint-2500"
+  ]
+}

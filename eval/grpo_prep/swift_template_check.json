@@ -1,0 +1,21 @@
+{
+ "n": 300,
+ "template_options": {
+  "template_type": "qwen3",
+  "truncation_strategy": "raise",
+  "loss_scale": "last_round",
+  "enable_thinking": false,
+  "add_non_thinking_prefix": true,
+  "template_backend": "swift"
+ },
+ "modes": {
+  "vllm": {
+   "mismatches": 0,
+   "examples": []
+  },
+  "pt": {
+   "mismatches": 0,
+   "examples": []
+  }
+ }
+}

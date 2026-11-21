@@ -1,0 +1,185 @@
+{
+  "task": "TASK_06",
+  "protocol": {
+    "rng": "random.Random",
+    "seed": 20261118,
+    "training_rng_instances": 1,
+    "mode_order": [
+      "reselect",
+      "append"
+    ],
+    "task_order": "ascending numeric task ID",
+    "within_task_order": "ascending (step, source_line_1based)",
+    "minimum_per_task": 2,
+    "training_samples_per_mode": 10000,
+    "task_draw": "random.sample(group, min(2, len(group))), including groups with <= 2 rows",
+    "fill_draw": "uniform random.sample from unselected rows in ascending source line order",
+    "output_order": "ascending source line; source bytes unchanged",
+    "eval_loss": {
+      "seed": 20261118,
+      "separate_rng": true,
+      "samples": 1000,
+      "draw": "uniform random.sample from all heldout rows in ascending source line order",
+      "used_for_checkpoint_selection": false,
+      "purpose": "fixed diagnostic loss curve only"
+    }
+  },
+  "sources": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v2/train.jsonl",
+      "bytes": 1151049084,
+      "lines": 88562,
+      "sha256": "8a40e66fd1f39e573f72b93fb9c8783f5c90d5d2a43bb1db3cd35a1dc99cd1a1",
+      "full_sha256_verified_twice": true,
+      "task_count": 4735
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v2/heldout.jsonl",
+      "bytes": 60588959,
+      "lines": 4652,
+      "sha256": "53b76a4d26ed68b898aeb0bff8f11fd4ee3e5147b17fc71030fb93e8aebc99c9",
+      "full_sha256_verified_twice": true,
+      "task_count": 249
+    }
+  },
+  "files": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/train_20k.jsonl",
+      "bytes": 258839400,
+      "lines": 20000,
+      "sha256": "952127caaeb6ed35f871caf4b93b12cba51b2e2f31030d86a0f30e1c230ed6cf"
+    },
+    "eval_loss": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/heldout_eval_loss_1k.jsonl",
+      "bytes": 12829257,
+      "lines": 1000,
+      "sha256": "8536500669e12550d2dd1f87b2313dc17475503da6d2415e8c17ffcbbc615277"
+    },
+    "sample_ids": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/sample_ids.json",
+      "bytes": 8731138,
+      "sha256": "572b94df94d436d2ac8af74b550daa55b255aed9271429ed097a026169ab17e4"
+    }
+  },
+  "statistics": {
+    "train": {
+      "samples": 20000,
+      "unique_tasks": 4735,
+      "by_tier": {
+        "tight": 6669,
+        "mid": 6556,
+        "loose": 6775
+      },
+      "by_mode": {
+        "reselect": {
+          "samples": 10000,
+          "tasks": 4735,
+          "min_samples_per_task": 2,
+          "max_samples_per_task": 5,
+          "by_tier": {
+            "tight": 3326,
+            "mid": 3284,
+            "loose": 3390
+          }
+        },
+        "append": {
+          "samples": 10000,
+          "tasks": 4735,
+          "min_samples_per_task": 2,
+          "max_samples_per_task": 5,
+          "by_tier": {
+            "tight": 3343,
+            "mid": 3272,
+            "loose": 3385
+          }
+        }
+      },
+      "tokens": {
+        "n_input_tokens": {
+          "sum": 63456324,
+          "max": 7936
+        },
+        "n_target_tokens": {
+          "sum": 331415,
+          "max": 27
+        },
+        "total_tokens": {
+          "sum": 63787739,
+          "max": 7952
+        },
+        "loss_tokens": {
+          "sum": 331415,
+          "max": 27
+        }
+      }
+    },
+    "eval_loss": {
+      "samples": 1000,
+      "unique_tasks": 246,
+      "by_tier": {
+        "tight": 287,
+        "mid": 296,
+        "loose": 417
+      },
+      "by_mode": {
+        "reselect": {
+          "samples": 500,
+          "tasks": 222,
+          "min_samples_per_task": 1,
+          "max_samples_per_task": 6,
+          "by_tier": {
+            "tight": 147,
+            "mid": 136,
+            "loose": 217
+          }
+        },
+        "append": {
+          "samples": 500,
+          "tasks": 223,
+          "min_samples_per_task": 1,
+          "max_samples_per_task": 5,
+          "by_tier": {
+            "tight": 140,
+            "mid": 160,
+            "loose": 200
+          }
+        }
+      },
+      "tokens": {
+        "n_input_tokens": {
+          "sum": 3145120,
+          "max": 6913
+        },
+        "n_target_tokens": {
+          "sum": 16598,
+          "max": 23
+        },
+        "total_tokens": {
+          "sum": 3161718,
+          "max": 6930
+        },
+        "loss_tokens": {
+          "sum": 16598,
+          "max": 23
+        }
+      }
+    }
+  },
+  "validation": {
+    "train": {
+      "rows": 20000,
+      "append": 10000,
+      "reselect_step0": 1085
+    },
+    "eval_loss": {
+      "rows": 1000,
+      "append": 500,
+      "reselect_step0": 57
+    }
+  },
+  "source_stats_sha256": "d90d74a5e0c024a4a6ca86e3fbb5a9b65102d9b6269aa36230757e11473251d8",
+  "task05_sample_ids_sha256": "b3fad1a224831bf52ce55c98aaf9cd264e2065fdf8ab19ad332afa9434617451",
+  "ordered_id_lists_and_source_lines_identical": true,
+  "selection_code_sha256": "5f10ffd72ecd7cb816b62c10798f3d830e898fb65effe6583ac71dbe411e269e",
+  "seed": 20261118
+}

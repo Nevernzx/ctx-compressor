@@ -1,0 +1,183 @@
+{
+  "task05_config": "/root/workplace/ctx-compressor/eval/sft_run/train_run_config.json",
+  "task05_config_sha256": "7cf35de5bcca08aa3fe726f299e0f2939a915bcbb7180943ea59f7bdae92f546",
+  "compared_config_fields": [
+    "add_non_thinking_prefix",
+    "attention",
+    "batch_size",
+    "bf16",
+    "checkpoint_selection_uses_eval_loss",
+    "cuda_visible_devices",
+    "driver_version",
+    "effective_batch",
+    "enable_thinking",
+    "environment_lock_sha256",
+    "epochs_planned",
+    "eval_input",
+    "eval_steps",
+    "gpu_uuid",
+    "gradient_accumulation_steps",
+    "gradient_checkpointing",
+    "gradient_checkpointing_use_reentrant",
+    "group_by_length",
+    "learning_rate",
+    "lora_alpha",
+    "lora_dropout",
+    "lora_rank",
+    "loss_scale",
+    "lr_scheduler_type",
+    "max_grad_norm",
+    "max_length",
+    "model",
+    "monitor_interval_seconds",
+    "optim",
+    "optimizer_steps_planned",
+    "output_dir",
+    "packing",
+    "run_dir",
+    "save_steps",
+    "seed",
+    "stage",
+    "target_modules",
+    "template",
+    "train_input",
+    "train_type",
+    "truncation_strategy",
+    "versions",
+    "warmup_ratio",
+    "weight_decay"
+  ],
+  "differences": {
+    "eval_input": {
+      "task05": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_eval_loss_1k.jsonl",
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/heldout_eval_loss_1k.jsonl"
+    },
+    "output_dir": {
+      "task05": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints",
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints"
+    },
+    "run_dir": {
+      "task05": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117",
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118"
+    },
+    "train_input": {
+      "task05": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train_20k.jsonl",
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/train_20k.jsonl"
+    }
+  },
+  "explicit_swift_fields": [
+    "add_non_thinking_prefix",
+    "add_version",
+    "attn_impl",
+    "bf16",
+    "check_model",
+    "data_seed",
+    "dataloader_num_workers",
+    "dataset",
+    "dataset_num_proc",
+    "dataset_shuffle",
+    "disable_tqdm",
+    "enable_thinking",
+    "eval_steps",
+    "eval_strategy",
+    "fp16",
+    "gradient_accumulation_steps",
+    "gradient_checkpointing",
+    "gradient_checkpointing_kwargs",
+    "group_by_length",
+    "learning_rate",
+    "load_best_model_at_end",
+    "load_from_cache_file",
+    "logging_first_step",
+    "logging_nan_inf_filter",
+    "logging_steps",
+    "lora_alpha",
+    "lora_dropout",
+    "lora_rank",
+    "loss_scale",
+    "lr_scheduler_type",
+    "max_grad_norm",
+    "max_length",
+    "max_steps",
+    "model",
+    "model_type",
+    "num_train_epochs",
+    "optim",
+    "output_dir",
+    "packing",
+    "padding_free",
+    "per_device_eval_batch_size",
+    "per_device_train_batch_size",
+    "prediction_loss_only",
+    "report_to",
+    "save_only_model",
+    "save_steps",
+    "save_strategy",
+    "save_total_limit",
+    "seed",
+    "split_dataset_ratio",
+    "strict",
+    "target_modules",
+    "template",
+    "torch_dtype",
+    "train_type",
+    "truncation_strategy",
+    "use_hf",
+    "val_dataset",
+    "warmup_ratio",
+    "weight_decay"
+  ],
+  "explicit_swift_argument_differences": {
+    "dataset": {
+      "task05": [
+        "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train_20k.jsonl"
+      ],
+      "task06": [
+        "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/train_20k.jsonl"
+      ]
+    },
+    "output_dir": {
+      "task05": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints",
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints"
+    },
+    "val_dataset": {
+      "task05": [
+        "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_eval_loss_1k.jsonl"
+      ],
+      "task06": [
+        "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/heldout_eval_loss_1k.jsonl"
+      ]
+    }
+  },
+  "nonpath_hyperparameter_differences": [],
+  "runtime_fields_separate_from_configuration": [
+    "final_gpu_before_process_exit",
+    "initial_gpu",
+    "pid",
+    "runtime",
+    "status",
+    "worker_source_sha256"
+  ],
+  "input_receipt_fields_separate_from_configuration": [
+    "bytes",
+    "lines",
+    "sha256"
+  ],
+  "task05_input_receipt": {
+    "train_input": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/train_20k.jsonl",
+      "bytes": 263034720,
+      "lines": 20000,
+      "sha256": "4ac15328d12398fe9dc26ef90bff603e7b338d2ab4992eb26da3ed67c87152b0"
+    },
+    "eval_input": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_20261117/heldout_eval_loss_1k.jsonl",
+      "bytes": 13034765,
+      "lines": 1000,
+      "sha256": "f4a738129e7bece5a288d7105187ca08f9a512a652d9e57334c6f0ac5585d7bb"
+    }
+  },
+  "v2_input_receipt": "/root/workplace/ctx-compressor/eval/sft_run_v2/sample_manifest.json",
+  "actual_runtime": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/worker_result.json",
+  "actual_resolved_swift_comparison": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/resolved_args_diff.json"
+}

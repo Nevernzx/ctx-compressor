@@ -1,0 +1,107 @@
+{
+  "strategy": "checkpoint-2000",
+  "checkpoint_step": 2000,
+  "evidence_loss": {
+    "n": 1494,
+    "count": 956,
+    "rate": 0.6398929049531459,
+    "by_hop": {
+      "1": {
+        "n": 1494,
+        "count": 443,
+        "evidence_n": 5976,
+        "lost_evidence_count": 495,
+        "rate": 0.2965194109772423
+      },
+      "2": {
+        "n": 1494,
+        "count": 640,
+        "evidence_n": 5976,
+        "lost_evidence_count": 764,
+        "rate": 0.428380187416332
+      },
+      "3": {
+        "n": 1044,
+        "count": 242,
+        "evidence_n": 1632,
+        "lost_evidence_count": 256,
+        "rate": 0.23180076628352492
+      },
+      "4": {
+        "n": 354,
+        "count": 48,
+        "evidence_n": 372,
+        "lost_evidence_count": 48,
+        "rate": 0.13559322033898305
+      }
+    },
+    "by_question_position": {
+      "1": {
+        "n": 1494,
+        "count": 354,
+        "evidence_n": 3504,
+        "lost_evidence_count": 375,
+        "rate": 0.23694779116465864
+      },
+      "2": {
+        "n": 1494,
+        "count": 339,
+        "evidence_n": 3468,
+        "lost_evidence_count": 383,
+        "rate": 0.22690763052208834
+      },
+      "3": {
+        "n": 1494,
+        "count": 354,
+        "evidence_n": 3504,
+        "lost_evidence_count": 423,
+        "rate": 0.23694779116465864
+      },
+      "4": {
+        "n": 1494,
+        "count": 333,
+        "evidence_n": 3480,
+        "lost_evidence_count": 382,
+        "rate": 0.22289156626506024
+      }
+    },
+    "by_mechanism": {
+      "never_kept": {
+        "n": 1494,
+        "count": 937,
+        "evidence_n": 13956,
+        "lost_evidence_count": 1495,
+        "rate": 0.6271753681392236
+      },
+      "dropped": {
+        "n": 1494,
+        "count": 64,
+        "evidence_n": 13956,
+        "lost_evidence_count": 68,
+        "rate": 0.0428380187416332
+      }
+    }
+  },
+  "final_recall": {
+    "n": 1494,
+    "mean": 0.8900648826853693
+  },
+  "n_checkpoints": 5,
+  "n_cells": 6,
+  "n_trajectories_per_checkpoint": 1494,
+  "rule": "pooled evidence-loss count ascending, pooled final recall descending, checkpoint step ascending",
+  "eval_loss_used": false,
+  "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000",
+  "files": [
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/adapter_config.json",
+      "bytes": 1078,
+      "sha256": "aef542d3c4950b9e01d3e569da0be2e98b0298ae78c16486e05b60f1a2c57678"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/adapter_model.safetensors",
+      "bytes": 69782384,
+      "sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c"
+    }
+  ]
+}

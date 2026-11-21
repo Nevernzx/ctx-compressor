@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-21T01:00:23.633488+00:00",
+  "document_prefixes": {
+    "through_task07": {
+      "README.md": {
+        "bytes": 35780,
+        "sha256": "08ed32d37ca25f980252143bb30bc7ce26b0f453eaf299f3e86ab3bc416a236c"
+      },
+      "NOTES.md": {
+        "bytes": 36995,
+        "sha256": "b92722eb8de6377d7f4fbcb708172317026e3a2c243ccac07d49952b927ace95"
+      },
+      "HANDOFF.md": {
+        "bytes": 29955,
+        "sha256": "e2eb9a4f11f8c52e9556743d254fd154cda8f3146caf3683f307b4e0c0eddff5"
+      }
+    },
+    "before_task08_closeout": {
+      "README.md": {
+        "bytes": 36276,
+        "sha256": "93131c835fdf2149586898f280dd45540dbe43bcd0a87d26b025325bae260007"
+      },
+      "NOTES.md": {
+        "bytes": 38128,
+        "sha256": "69dbc2498ad73b2b65cb1e185ef71825a648ee2ad54d6076d215bdb032f5bff1"
+      },
+      "HANDOFF.md": {
+        "bytes": 30529,
+        "sha256": "cfdbf1c8ce90d78e4ca02bae9724ba989fc0430ad2439c7d9c253219c5473492"
+      }
+    }
+  },
+  "tasks01_06_legacy": {
+    "task05_files": 299,
+    "protected_prefixes": [
+      "HANDOFF.md",
+      "NOTES.md",
+      "README.md"
+    ],
+    "historical_tasks": [
+      "TASK_01",
+      "TASK_02",
+      "TASK_03",
+      "TASK_04",
+      "TASK_05"
+    ],
+    "task05_external_files": 151,
+    "task04_external_files": 24
+  },
+  "task07": {
+    "path": "eval/grpo_prep/TASK07_SHA256SUMS",
+    "sha256": "d6f84b9030994ad4c7481a8607a48a40dbea11ba415ec012c1e5907db156c381",
+    "verified_entries": 41
+  },
+  "manifest_hash_at_task08_start": "0d97a77af0d5be0bbf50323934a8782aeb8d3fee6b0e6ec35cc3db8bdd23e7f3"
+}

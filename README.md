@@ -625,3 +625,38 @@ C 完成原始模型与5个checkpoint，共 **6×13956=83736** 个动作、**6×
 - [失败资源验收](eval/sft_run/final_resource_check.json)、[151项外置文件清单](eval/sft_run/external_artifact_manifest.json)、[额外工具链完整清单](eval/sft_run/toolchain_full_artifact_manifest.json)。外置清单complete只表示文件覆盖完整，任务验收仍失败。
 
 原264项及新增测试共462项通过；历史82个Python源码仍与测试收据一致。新增纯审计工具的真实全树验证单独留证。数据仅使用train及其249个留出任务；未在dev测试任务评测，未运行GRPO或阅读模型F1。报告只列实测数值与checkpoint选择。
+
+
+## 任务06　CPU 数据完成，训练正在等卡
+
+v2 将 reselect 的每步噪声改为随机 0–2 个片段。训练数据 88,562 行、留出数据 4,652 行。step ≥ 1 的训练 reselect 目标中，非空 drop 从 39,536/39,546 变为 26,300/39,546。抽中的 20,000 个训练样本与 1,000 个验证样本的 ID 和顺序均与任务05一致。472 项 CPU 测试通过。每个拆分、模式和预算的统计见[当前报告](eval/sft_run_v2/sft_v2_report.md)。
+
+5880 的后台脚本 PID 1141340 每 600 秒检查一次物理 GPU 1。首次观测为 42088 MiB，连续两次低于 2 GB 后启动训练。训练计划为 2 个 epoch、2,500 个 optimizer step，随后对五个 v2 checkpoint 评测。实时状态文件为 `/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation_status.json`。[启动验证](eval/sft_run_v2/waiting_launch.json)记录了 SSH 重连后读取的 PID、独立会话和日志文件。
+
+
+## 任务06　留出集闭环评测完成
+
+五个 v2 checkpoint 各完成 1,494 条留出轨迹、13,956 个动作。按六个模式与预算组合的合并证据丢失率，选中 **checkpoint-2000**，丢失 956/1,494（63.989%），任务末平均证据召回为 89.006%（n=1,494）。中档预算为 2,814 token，重选模式的任务末召回为 88.506%，只追加模式为 89.586%（各 n=249）。
+
+[完整中文报告](eval/sft_run_v2/sft_v2_report.md) · [结构化结果](eval/sft_run_v2/sft_v2_results.json) · [选中的 LoRA](eval/sft_run_v2/selected_checkpoint.json) · [损失曲线](eval/sft_run_v2/loss_curve.svg)
+
+
+## 任务07　GRPO 准备（2026-11-20，5880 GPU 0，Claude 完成）
+
+- 环境：`/root/userfolder/ctx-compressor/envs/grpo`（ms-swift 3.12.6 + vLLM 0.11.0），入口 `scripts/grpo_environment.sh`。
+- 流程：`build_grpo_states.py`（训练任务上的闭环状态）→ `make_grpo_dataset.py` → `merge_sft_lora.py`（SFT LoRA 合并进基座）→ `train_grpo.sh`（在合并模型上训新 LoRA，KL 参照 = SFT 模型）→ 评测链路复用 `build_grpo_states.py --adapter`。
+- 所有模型输出数字来自替身 v1 checkpoint-2000，不是正式结果。关键数：奖励与评测解析器在 13,956 条输出上 0 处不一致；冒烟训练 25 步，每步约 40.4 秒（4 个 prompt × 8 个补全）；替身模型下 77.6%（149/192）的 8 样本组奖励全相同。
+
+[GRPO 准备报告](eval/grpo_prep/grpo_prep_report.md) · [规模推算](eval/grpo_prep/projection.json) · [任务07 校验清单](eval/grpo_prep/TASK07_SHA256SUMS)
+
+
+## 任务08　正式 GRPO 已启动
+
+从任务06选中的 v2 checkpoint-2000 启动正式 GRPO。CPU 合并后，GPU 1 上的固定训练提示中，贪心文本和生成 token ID 均为 0/30 不一致。完整 CPU 测试通过 527/527。后台阶段依次运行合并模型留出评测、训练状态生成、八次采样过滤、均衡抽样、优化与各 checkpoint 的留出评测。[起点核验](eval/grpo_v2/a_checks.json) · [后台启动记录](eval/grpo_v2/launch_verification.json)
+
+
+## 任务08　正式 GRPO 训练与留出评测完成
+
+从 SFT v2 checkpoint-2000 构建的 22,158 个训练状态中，有 4,002 个状态的八次采样奖励存在差异。分层抽取 2,000 个提示后完成 500 个优化步。按六格合并证据丢失率，从四个 GRPO checkpoint 中选中 **checkpoint-500**，丢失 947/1,494 条轨迹，任务末平均召回 89.30%（n=1,494）。同一留出集上，SFT v2 为 956/1,494 和 89.01%（n=1,494）。
+
+紧预算下，重选模式的证据丢失为 SFT 164/249、GRPO 161/249，只追加模式为 SFT 155/249、GRPO 159/249。[中文报告](eval/grpo_v2/grpo_v2_report.md) · [结构化结果](eval/grpo_v2/grpo_v2_results.json) · [训练曲线](eval/grpo_v2/training_curve.svg)

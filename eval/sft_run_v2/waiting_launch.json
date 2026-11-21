@@ -1,0 +1,49 @@
+{
+  "utc": "2026-11-18T14:59:22.116506+00:00",
+  "checked_via_new_ssh_connection": true,
+  "process": {
+    "pid": 1141340,
+    "ppid": 1,
+    "sid": 1141340,
+    "pgid": 1141340,
+    "fds": {
+      "0": "/dev/null",
+      "1": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation.log",
+      "2": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation.log"
+    },
+    "cmdline": [
+      "/root/userfolder/ctx-compressor/envs/train/bin/python",
+      "-u",
+      "-B",
+      "/root/workplace/ctx-compressor/scripts/wait_sft_v2.py",
+      "run"
+    ]
+  },
+  "status_path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation_status.json",
+  "status_snapshot": {
+    "status": "waiting_for_gpu",
+    "waiter_pid": 1141340,
+    "session_id": 1141340,
+    "started_utc": "2026-11-18T14:59:05.497999+00:00",
+    "child_pid": null,
+    "training_pid": null,
+    "evaluating_pid": null,
+    "wait_seconds": 0.04549068305641413,
+    "poll_interval_seconds": 600,
+    "free_if_used_bytes_strictly_less_than": 2000000000,
+    "checks_required": 2,
+    "monitor_interval_seconds": 30,
+    "automatic_retry": false,
+    "updated_utc": "2026-11-18T14:59:05.543817+00:00",
+    "last_gpu": {
+      "index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "memory_used_mib": 42088,
+      "utilization_percent": 100,
+      "root_used_bytes": 932853035008,
+      "utc": "2026-11-18T14:59:05.543443+00:00"
+    },
+    "consecutive_free_polls": 0,
+    "poll_count": 1
+  }
+}

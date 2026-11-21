@@ -1,0 +1,507 @@
+{
+  "configs": {
+    "reselect|tight": {
+      "n_steps": 2326,
+      "n_valid": 2315,
+      "mean_added_per_valid": {
+        "sum": 2315,
+        "n": 2315,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2315,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2315,
+          "n": 2315,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2315,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2315,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 408,
+          "n": 530,
+          "rate": 0.769811320754717
+        },
+        "different": {
+          "count": 1657,
+          "n": 1836,
+          "rate": 0.9025054466230937
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 406,
+          "n": 514,
+          "rate": 0.7898832684824902
+        },
+        "different": {
+          "count": 1646,
+          "n": 1798,
+          "rate": 0.9154616240266963
+        }
+      }
+    },
+    "reselect|mid": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 2326,
+        "n": 2326,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 414,
+          "n": 530,
+          "rate": 0.7811320754716982
+        },
+        "different": {
+          "count": 1662,
+          "n": 1836,
+          "rate": 0.9052287581699346
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 412,
+          "n": 518,
+          "rate": 0.7953667953667953
+        },
+        "different": {
+          "count": 1651,
+          "n": 1805,
+          "rate": 0.9146814404432133
+        }
+      }
+    },
+    "reselect|loose": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 2326,
+        "n": 2326,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 412,
+          "n": 530,
+          "rate": 0.7773584905660378
+        },
+        "different": {
+          "count": 1667,
+          "n": 1836,
+          "rate": 0.9079520697167756
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 410,
+          "n": 518,
+          "rate": 0.7915057915057915
+        },
+        "different": {
+          "count": 1654,
+          "n": 1805,
+          "rate": 0.9163434903047092
+        }
+      }
+    },
+    "append|tight": {
+      "n_steps": 2326,
+      "n_valid": 2315,
+      "mean_added_per_valid": {
+        "sum": 2314,
+        "n": 2315,
+        "mean": 0.9995680345572354
+      },
+      "add_counts": {
+        "0": {
+          "count": 1,
+          "n": 2315,
+          "rate": 0.00043196544276457883
+        },
+        "1": {
+          "count": 2314,
+          "n": 2315,
+          "rate": 0.9995680345572354
+        },
+        "2": {
+          "count": 0,
+          "n": 2315,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2315,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 410,
+          "n": 531,
+          "rate": 0.7721280602636534
+        },
+        "different": {
+          "count": 1658,
+          "n": 1837,
+          "rate": 0.9025585193249864
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 408,
+          "n": 514,
+          "rate": 0.7937743190661478
+        },
+        "different": {
+          "count": 1647,
+          "n": 1798,
+          "rate": 0.9160177975528365
+        }
+      }
+    },
+    "append|mid": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 2325,
+        "n": 2326,
+        "mean": 0.9995700773860705
+      },
+      "add_counts": {
+        "0": {
+          "count": 1,
+          "n": 2326,
+          "rate": 0.0004299226139294927
+        },
+        "1": {
+          "count": 2325,
+          "n": 2326,
+          "rate": 0.9995700773860705
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 415,
+          "n": 531,
+          "rate": 0.7815442561205274
+        },
+        "different": {
+          "count": 1665,
+          "n": 1836,
+          "rate": 0.9068627450980392
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 413,
+          "n": 518,
+          "rate": 0.7972972972972973
+        },
+        "different": {
+          "count": 1655,
+          "n": 1805,
+          "rate": 0.9168975069252078
+        }
+      }
+    },
+    "append|loose": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 2325,
+        "n": 2326,
+        "mean": 0.9995700773860705
+      },
+      "add_counts": {
+        "0": {
+          "count": 1,
+          "n": 2326,
+          "rate": 0.0004299226139294927
+        },
+        "1": {
+          "count": 2325,
+          "n": 2326,
+          "rate": 0.9995700773860705
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 414,
+          "n": 531,
+          "rate": 0.7796610169491526
+        },
+        "different": {
+          "count": 1667,
+          "n": 1836,
+          "rate": 0.9079520697167756
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 412,
+          "n": 518,
+          "rate": 0.7953667953667953
+        },
+        "different": {
+          "count": 1657,
+          "n": 1805,
+          "rate": 0.918005540166205
+        }
+      }
+    }
+  },
+  "modes": {
+    "reselect": {
+      "n_steps": 6978,
+      "n_valid": 6967,
+      "mean_added_per_valid": {
+        "sum": 6967,
+        "n": 6967,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 6967,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 6967,
+          "n": 6967,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 6967,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 6967,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1234,
+          "n": 1590,
+          "rate": 0.7761006289308177
+        },
+        "different": {
+          "count": 4986,
+          "n": 5508,
+          "rate": 0.9052287581699346
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1228,
+          "n": 1550,
+          "rate": 0.792258064516129
+        },
+        "different": {
+          "count": 4951,
+          "n": 5408,
+          "rate": 0.9154955621301775
+        }
+      }
+    },
+    "append": {
+      "n_steps": 6978,
+      "n_valid": 6967,
+      "mean_added_per_valid": {
+        "sum": 6964,
+        "n": 6967,
+        "mean": 0.9995693985933687
+      },
+      "add_counts": {
+        "0": {
+          "count": 3,
+          "n": 6967,
+          "rate": 0.00043060140663126167
+        },
+        "1": {
+          "count": 6964,
+          "n": 6967,
+          "rate": 0.9995693985933687
+        },
+        "2": {
+          "count": 0,
+          "n": 6967,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 6967,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1239,
+          "n": 1593,
+          "rate": 0.7777777777777778
+        },
+        "different": {
+          "count": 4990,
+          "n": 5509,
+          "rate": 0.9057905245961154
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1233,
+          "n": 1550,
+          "rate": 0.795483870967742
+        },
+        "different": {
+          "count": 4959,
+          "n": 5408,
+          "rate": 0.9169748520710059
+        }
+      }
+    }
+  },
+  "combined": {
+    "n_steps": 13956,
+    "n_valid": 13934,
+    "mean_added_per_valid": {
+      "sum": 13931,
+      "n": 13934,
+      "mean": 0.9997846992966843
+    },
+    "add_counts": {
+      "0": {
+        "count": 3,
+        "n": 13934,
+        "rate": 0.00021530070331563083
+      },
+      "1": {
+        "count": 13931,
+        "n": 13934,
+        "rate": 0.9997846992966843
+      },
+      "2": {
+        "count": 0,
+        "n": 13934,
+        "rate": 0.0
+      },
+      "3+": {
+        "count": 0,
+        "n": 13934,
+        "rate": 0.0
+      }
+    },
+    "new_gold_by_title": {
+      "same": {
+        "count": 2473,
+        "n": 3183,
+        "rate": 0.7769399937166196
+      },
+      "different": {
+        "count": 9976,
+        "n": 11017,
+        "rate": 0.9055096668784606
+      }
+    },
+    "current_gold_valid_new_by_title": {
+      "same": {
+        "count": 2461,
+        "n": 3100,
+        "rate": 0.7938709677419354
+      },
+      "different": {
+        "count": 9910,
+        "n": 10816,
+        "rate": 0.9162352071005917
+      }
+    }
+  },
+  "definitions": {
+    "add_counts": "Distinct newly retained PIDs per valid step, including zero additions.",
+    "new_gold_by_title": "Task06 eligible gold (gold through this step, newly returned and not previously kept); same = another distinct PID in the original retrieval has exactly its title. Invalid steps included.",
+    "current_gold_valid_new_by_title": "Task06 failure analysis comparator: current gold not previously kept, valid action; compare against other visible new PIDs with exactly its title.",
+    "raw_diff_identical_state": "Aligned task/mode/tier/step, model-visible user text hash and actual prompt IDs equal, and all input fields (including available gold and candidate PID map) equal."
+  }
+}

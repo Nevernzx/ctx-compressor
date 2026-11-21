@@ -1,0 +1,236 @@
+{
+  "utc": "2026-11-20T13:00:06.946701+00:00",
+  "marker": "/root/workplace/ctx-compressor/eval/sft_run_v2/start.marker",
+  "method": "find / -xdev -type f -newer marker; Task 06 delivery paths, shared documents, task-named paths; distinct other-task output excluded",
+  "overlay_files": [
+    {
+      "path": "/root/workplace/ctx-compressor/HANDOFF.md",
+      "bytes": 29236
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/NOTES.md",
+      "bytes": 35955
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/README.md",
+      "bytes": 34817
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/SHA256SUMS",
+      "bytes": 34615
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/TASK05_SHA256SUMS",
+      "bytes": 29974
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/checkpoint-1000_results.json",
+      "bytes": 32460
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/checkpoint-1500_results.json",
+      "bytes": 32334
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/checkpoint-2000_results.json",
+      "bytes": 32420
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/checkpoint-2500_results.json",
+      "bytes": 32404
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/checkpoint-500_results.json",
+      "bytes": 32481
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/config_diff_vs_task05.json",
+      "bytes": 5238
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/data_v2_stats.json",
+      "bytes": 21716
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/diagnostics_v1.json",
+      "bytes": 529163
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/diagnostics_v2.json",
+      "bytes": 278134
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/external_manifest_v2.json",
+      "bytes": 19100
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/final_history_v2.json",
+      "bytes": 762
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/final_resource_v2.json",
+      "bytes": 7185
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/final_rollout_audit_v2.json",
+      "bytes": 40569
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/final_tests_v2.json",
+      "bytes": 2333
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/final_tests_v2.xml",
+      "bytes": 66507
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/heldout_v2_preflight.json",
+      "bytes": 3886
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/loss_curve.csv",
+      "bytes": 138132
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/loss_curve.svg",
+      "bytes": 62930
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/model_rollout_run.json",
+      "bytes": 22666
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/preflight_v2.json",
+      "bytes": 931
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/sample_manifest.json",
+      "bytes": 5048
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/selected_checkpoint.json",
+      "bytes": 2765
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/sft_v2_report.md",
+      "bytes": 16260
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/sft_v2_results.json",
+      "bytes": 2858951
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/start.marker",
+      "bytes": 0
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/tests.xml",
+      "bytes": 62613
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/train_run_config.json",
+      "bytes": 1767
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/waiting_launch.json",
+      "bytes": 1525
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/audit_final_rollout_v2.py",
+      "bytes": 13555
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/checksums_task06.py",
+      "bytes": 11777
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/heldout_diagnostics_v2.py",
+      "bytes": 10277
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/heldout_model_v2.py",
+      "bytes": 13852
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/make_sft_v2_data.py",
+      "bytes": 10936
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/run_heldout_model_v2.sh",
+      "bytes": 577
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/sample_sft_v2_subset.py",
+      "bytes": 4195
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/sft_v2_report.py",
+      "bytes": 20723
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/sft_v2_train_config.py",
+      "bytes": 6514
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/train_sft_v2.sh",
+      "bytes": 204
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/train_sft_v2_worker.py",
+      "bytes": 11267
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/wait_sft_v2.py",
+      "bytes": 7097
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/specs/TASK_06_sft_v2_reselect_noise_fix_20261118.md",
+      "bytes": 10281
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/src/oracle_noise_v2.py",
+      "bytes": 1245
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_heldout_v2.py",
+      "bytes": 4124
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_oracle_noise_v2.py",
+      "bytes": 1230
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_sft_v2_training.py",
+      "bytes": 3484
+    }
+  ],
+  "task_overlay_bytes": 4606215,
+  "limit_bytes": 300000000,
+  "task_overlay_within_limit": true,
+  "raw_df_start_bytes": 932843393024,
+  "raw_df_current_bytes": 936481120256,
+  "raw_df_delta_bytes": 3637727232,
+  "raw_df_used_for_acceptance": false,
+  "other_recent_regular_paths_n": 21,
+  "raw_df_end_text": "Filesystem         1B-blocks         Used   Available Use% Mounted on\noverlay        1005867986944 936481120256 18216095744  99% /",
+  "raw_df_start_source": "/root/workplace/ctx-compressor/eval/sft_run_v2/preflight_v2.json",
+  "gpu": {
+    "physical_index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "post_run_readonly_query": "1, GPU-4318dc90-4126-038a-9402-1323533db94f, 375 MiB, 0 %",
+    "observed_compute_pids": [],
+    "task_compute_pids_present": [],
+    "pipeline_exit_code": 0,
+    "engine_shutdown": {
+      "required": true,
+      "completed": true
+    },
+    "monitor_sample_count": 1140,
+    "waiter_poll_count": 219,
+    "max_monitor_gap_seconds": 30.606655,
+    "cpu_closeout": true,
+    "torch_peak_allocated_bytes": 6370137088,
+    "torch_peak_reserved_bytes": 7730102272,
+    "eval_peak_card_used_mib": 35259
+  }
+}

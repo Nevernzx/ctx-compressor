@@ -1,0 +1,26 @@
+{
+ "basis": {
+  "state_rollout_seconds_per_trajectory": 1.3811274048665332,
+  "state_engine_startup_seconds": 30.247183992993087,
+  "grpo_seconds_per_optimizer_step": 40.391304347826086,
+  "grpo_seconds_per_prompt_x8": 10.097826086956522,
+  "heldout_eval_seconds_per_checkpoint_task05": 1882,
+  "note": "linear extrapolation from the smoke measurements on one RTX 5880 (GPU 0 shared with a ~1.7 GB external process at ~97% util); estimates, not measurements"
+ },
+ "state_generation_hours": {
+  "200": 0.47,
+  "400": 0.93,
+  "800": 1.85
+ },
+ "state_generation_states_estimate": {
+  "200": 10960,
+  "400": 21920,
+  "800": 43840
+ },
+ "grpo_epoch_hours": {
+  "1000": 2.8,
+  "2000": 5.61,
+  "4000": 11.22
+ },
+ "heldout_eval_hours_per_checkpoint": 0.52
+}
