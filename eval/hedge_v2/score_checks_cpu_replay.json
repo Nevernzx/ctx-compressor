@@ -1,0 +1,8 @@
+{
+  "n": 300,
+  "argmax_matches": 297,
+  "max_abs_logprob_error_nats": 7.023533967753792e-07,
+  "full_token_round_trips": 300,
+  "recomputed_candidate_scores": 5966,
+  "details_sha256": "12a6222bc0d5e1611b3d0bbf5e445090f61017a7c25a18a0a0d26327e2605f4b"
+}

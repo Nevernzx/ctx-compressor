@@ -316,3 +316,9 @@ A/B/C及全量闭环审计已结束，现有模型和结果可直接使用。最
 流水线于北京时间 2026-11-21 08:55:52 结束，状态为 `evaluation_complete`。选中的 LoRA 在 5880 的 `/root/userfolder/ctx-compressor/grpo_v2/train/checkpoint-500`，加载时使用合并后的基座 `/root/userfolder/ctx-compressor/grpo_v2/merged_v2_ckpt2000`。适配器权重 SHA-256 为 `e1f77a2077a14eb85ae03edd71f3800d42986faeaafbbcd3b038f33fad14c33c`。[选点记录](eval/grpo_v2/selected_checkpoint.json)
 
 四个 GRPO checkpoint 和 F0 各完成 1,494 条留出轨迹、13,956 个决策步；逐步输出在 `/root/userfolder/ctx-compressor/eval_rollouts_grpo_v2/<策略>/steps.jsonl`。训练与采样的原始文件在 `/root/userfolder/ctx-compressor/grpo_v2/`。[完整清单](eval/grpo_v2/TASK08_SHA256SUMS)记录外置路径和哈希。[优化日志 CSV](eval/grpo_v2/training_curve.csv)与[训练核验](eval/grpo_v2/training_checks.json)保留每步数值和奖励复算结果。
+
+## 任务09　阈值选取与留出集回执
+
+5880 流水线于北京时间 2026-11-21 22:02:42 完成，训练状态打分与 H0、H1、H2 共 4/4 个阶段退出码为 0。输入为原始 Qwen3-1.7B 加任务06的 SFT v2 checkpoint-2000。τ=0.99 由训练状态的最高平均单步奖励选定（1.204460，n=22,158），三个留出运行均引用同一份[选点回执](eval/hedge_v2/train_selection.json)。
+
+逐状态候选分数和九档开放环动作在 5880 的 `/root/userfolder/ctx-compressor/hedge_v2/train/state_scores.jsonl`。三个策略的逐步贪心原文、实际动作及加段记录在 `/root/userfolder/ctx-compressor/eval_rollouts_hedge_v2/{nohedge,tau_star,always}/steps.jsonl`，每个文件 n=13,956 步。[报告](eval/hedge_v2/hedge_v2_report.md) · [独立复算](eval/hedge_v2/final_audit.json) · [任务09校验清单](eval/hedge_v2/TASK09_SHA256SUMS)

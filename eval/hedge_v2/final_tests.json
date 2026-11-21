@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "tests": 568,
+  "passed": 568,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "legacy_tests_matched": 533,
+  "pipeline_tests_matched": 566,
+  "coverage": {
+    "eval/grpo_v2/final_tests.xml": 533,
+    "eval/hedge_v2/pipeline_tests.xml": 566
+  },
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/hedge_v2/tmp/closeout_full_tests_zhksasvk/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/hedge_v2/tmp/closeout_full_tests_zhksasvk/tests.xml",
+    "tests"
+  ],
+  "cuda_visible_devices": "",
+  "exit_code": 0,
+  "junit_xml": "eval/hedge_v2/final_tests.xml",
+  "xml_sha256": "4ae6ab844e92e852a542a52b7d3b58fbdd281b6aec35433c3040114cf4c3333f",
+  "started_utc": "2026-11-21T14:09:37.772672+00:00",
+  "finished_utc": "2026-11-21T14:09:51.817188+00:00",
+  "wall_seconds": 14.044503078097478,
+  "log": "/root/userfolder/ctx-compressor/hedge_v2/tmp/closeout_full_tests_zhksasvk/pytest.log"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "tests": 566,
+  "passed": 566,
+  "legacy_tests_matched": 533,
+  "skipped": 0,
+  "errors": 0,
+  "failures": 0,
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/hedge_v2/tmp/test_suite_bjjizhl8/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/hedge_v2/tmp/test_suite_bjjizhl8/tests.xml",
+    "tests"
+  ],
+  "cuda_visible_devices": "",
+  "exit_code": 0,
+  "xml_sha256": "67684de75b4c7b72291e30502ae52f8caa06b9062623ddfe4c8250a5910aeb19",
+  "wall_seconds": 14.372134126955643,
+  "utc": "2026-11-21T01:50:36.387958+00:00",
+  "log": "/root/userfolder/ctx-compressor/hedge_v2/tmp/test_suite_bjjizhl8/pytest.log"
+}

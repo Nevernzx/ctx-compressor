@@ -1,0 +1,889 @@
+{
+  "configs": {
+    "reselect|tight": {
+      "n_steps": 2326,
+      "n_valid": 2315,
+      "mean_added_per_valid": {
+        "sum": 4615,
+        "n": 2315,
+        "mean": 1.9935205183585314
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2315,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 15,
+          "n": 2315,
+          "rate": 0.0064794816414686825
+        },
+        "2": {
+          "count": 2300,
+          "n": 2315,
+          "rate": 0.9935205183585313
+        },
+        "3+": {
+          "count": 0,
+          "n": 2315,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 469,
+          "n": 522,
+          "rate": 0.8984674329501916
+        },
+        "different": {
+          "count": 1724,
+          "n": 1806,
+          "rate": 0.9545957918050941
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 465,
+          "n": 512,
+          "rate": 0.908203125
+        },
+        "different": {
+          "count": 1716,
+          "n": 1787,
+          "rate": 0.9602686066032456
+        }
+      },
+      "hedge_rate": {
+        "count": 2300,
+        "n": 2326,
+        "rate": 0.9888220120378332
+      },
+      "hedge_hit_rate": {
+        "count": 140,
+        "n": 2300,
+        "rate": 0.06086956521739131
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1859871,
+        "n": 2326,
+        "mean": 799.6006018916595
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 273417,
+        "n": 2326,
+        "mean": 117.5481513327601
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 11,
+          "n": 2326,
+          "rate": 0.004729148753224419
+        },
+        "1": {
+          "count": 15,
+          "n": 2326,
+          "rate": 0.006448839208942391
+        },
+        "2": {
+          "count": 2300,
+          "n": 2326,
+          "rate": 0.9888220120378332
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "reselect|mid": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 4652,
+        "n": 2326,
+        "mean": 2.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "2": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 473,
+          "n": 522,
+          "rate": 0.9061302681992337
+        },
+        "different": {
+          "count": 1729,
+          "n": 1805,
+          "rate": 0.9578947368421052
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 471,
+          "n": 517,
+          "rate": 0.9110251450676983
+        },
+        "different": {
+          "count": 1720,
+          "n": 1792,
+          "rate": 0.9598214285714286
+        }
+      },
+      "hedge_rate": {
+        "count": 2326,
+        "n": 2326,
+        "rate": 1.0
+      },
+      "hedge_hit_rate": {
+        "count": 140,
+        "n": 2326,
+        "rate": 0.06018916595012898
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1866373,
+        "n": 2326,
+        "mean": 802.395958727429
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 278360,
+        "n": 2326,
+        "mean": 119.67325881341358
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "2": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "reselect|loose": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 4652,
+        "n": 2326,
+        "mean": 2.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "2": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 473,
+          "n": 521,
+          "rate": 0.9078694817658349
+        },
+        "different": {
+          "count": 1728,
+          "n": 1806,
+          "rate": 0.9568106312292359
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 470,
+          "n": 517,
+          "rate": 0.9090909090909091
+        },
+        "different": {
+          "count": 1718,
+          "n": 1792,
+          "rate": 0.9587053571428571
+        }
+      },
+      "hedge_rate": {
+        "count": 2326,
+        "n": 2326,
+        "rate": 1.0
+      },
+      "hedge_hit_rate": {
+        "count": 138,
+        "n": 2326,
+        "rate": 0.05932932072226999
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1868064,
+        "n": 2326,
+        "mean": 803.1229578675839
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 278935,
+        "n": 2326,
+        "mean": 119.92046431642305
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "2": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "append|tight": {
+      "n_steps": 2326,
+      "n_valid": 1940,
+      "mean_added_per_valid": {
+        "sum": 3712,
+        "n": 1940,
+        "mean": 1.9134020618556702
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 1940,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 168,
+          "n": 1940,
+          "rate": 0.0865979381443299
+        },
+        "2": {
+          "count": 1772,
+          "n": 1940,
+          "rate": 0.9134020618556701
+        },
+        "3+": {
+          "count": 0,
+          "n": 1940,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 360,
+          "n": 526,
+          "rate": 0.6844106463878327
+        },
+        "different": {
+          "count": 1477,
+          "n": 1839,
+          "rate": 0.8031538879825992
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 357,
+          "n": 392,
+          "rate": 0.9107142857142857
+        },
+        "different": {
+          "count": 1471,
+          "n": 1539,
+          "rate": 0.9558154645873944
+        }
+      },
+      "hedge_rate": {
+        "count": 1775,
+        "n": 2326,
+        "rate": 0.7631126397248496
+      },
+      "hedge_hit_rate": {
+        "count": 105,
+        "n": 1775,
+        "rate": 0.059154929577464786
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 2719467,
+        "n": 2326,
+        "mean": 1169.1603611349958
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 200998,
+        "n": 2326,
+        "mean": 86.41358555460017
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 386,
+          "n": 2326,
+          "rate": 0.16595012897678418
+        },
+        "1": {
+          "count": 168,
+          "n": 2326,
+          "rate": 0.07222699914015478
+        },
+        "2": {
+          "count": 1772,
+          "n": 2326,
+          "rate": 0.7618228718830611
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "append|mid": {
+      "n_steps": 2326,
+      "n_valid": 2289,
+      "mean_added_per_valid": {
+        "sum": 4538,
+        "n": 2289,
+        "mean": 1.982525120139799
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2289,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 40,
+          "n": 2289,
+          "rate": 0.01747487986020096
+        },
+        "2": {
+          "count": 2249,
+          "n": 2289,
+          "rate": 0.9825251201397991
+        },
+        "3+": {
+          "count": 0,
+          "n": 2289,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 460,
+          "n": 522,
+          "rate": 0.8812260536398467
+        },
+        "different": {
+          "count": 1704,
+          "n": 1812,
+          "rate": 0.9403973509933775
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 457,
+          "n": 504,
+          "rate": 0.9067460317460317
+        },
+        "different": {
+          "count": 1695,
+          "n": 1773,
+          "rate": 0.9560067681895094
+        }
+      },
+      "hedge_rate": {
+        "count": 2251,
+        "n": 2326,
+        "rate": 0.967755803955288
+      },
+      "hedge_hit_rate": {
+        "count": 127,
+        "n": 2251,
+        "rate": 0.056419369169258105
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 3000269,
+        "n": 2326,
+        "mean": 1289.8834909716252
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 263182,
+        "n": 2326,
+        "mean": 113.14789337919174
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 37,
+          "n": 2326,
+          "rate": 0.01590713671539123
+        },
+        "1": {
+          "count": 40,
+          "n": 2326,
+          "rate": 0.017196904557179708
+        },
+        "2": {
+          "count": 2249,
+          "n": 2326,
+          "rate": 0.9668959587274291
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "append|loose": {
+      "n_steps": 2326,
+      "n_valid": 2325,
+      "mean_added_per_valid": {
+        "sum": 4648,
+        "n": 2325,
+        "mean": 1.9991397849462365
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2,
+          "n": 2325,
+          "rate": 0.0008602150537634409
+        },
+        "2": {
+          "count": 2323,
+          "n": 2325,
+          "rate": 0.9991397849462366
+        },
+        "3+": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 471,
+          "n": 521,
+          "rate": 0.9040307101727447
+        },
+        "different": {
+          "count": 1731,
+          "n": 1809,
+          "rate": 0.956882255389718
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 468,
+          "n": 516,
+          "rate": 0.9069767441860465
+        },
+        "different": {
+          "count": 1724,
+          "n": 1798,
+          "rate": 0.9588431590656284
+        }
+      },
+      "hedge_rate": {
+        "count": 2325,
+        "n": 2326,
+        "rate": 0.9995700773860705
+      },
+      "hedge_hit_rate": {
+        "count": 137,
+        "n": 2325,
+        "rate": 0.058924731182795696
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 3033274,
+        "n": 2326,
+        "mean": 1304.073086844368
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 276876,
+        "n": 2326,
+        "mean": 119.03525365434221
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 1,
+          "n": 2326,
+          "rate": 0.0004299226139294927
+        },
+        "1": {
+          "count": 2,
+          "n": 2326,
+          "rate": 0.0008598452278589854
+        },
+        "2": {
+          "count": 2323,
+          "n": 2326,
+          "rate": 0.9987102321582115
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    }
+  },
+  "modes": {
+    "reselect": {
+      "n_steps": 6978,
+      "n_valid": 6967,
+      "mean_added_per_valid": {
+        "sum": 13919,
+        "n": 6967,
+        "mean": 1.9978469929668436
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 6967,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 15,
+          "n": 6967,
+          "rate": 0.002153007033156308
+        },
+        "2": {
+          "count": 6952,
+          "n": 6967,
+          "rate": 0.9978469929668436
+        },
+        "3+": {
+          "count": 0,
+          "n": 6967,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1415,
+          "n": 1565,
+          "rate": 0.9041533546325878
+        },
+        "different": {
+          "count": 5181,
+          "n": 5417,
+          "rate": 0.9564334502492154
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1406,
+          "n": 1546,
+          "rate": 0.9094437257438551
+        },
+        "different": {
+          "count": 5154,
+          "n": 5371,
+          "rate": 0.9595978402532117
+        }
+      },
+      "hedge_rate": {
+        "count": 6952,
+        "n": 6978,
+        "rate": 0.996274004012611
+      },
+      "hedge_hit_rate": {
+        "count": 418,
+        "n": 6952,
+        "rate": 0.060126582278481014
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 5594308,
+        "n": 6978,
+        "mean": 801.7065061622242
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 830712,
+        "n": 6978,
+        "mean": 119.04729148753225
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 11,
+          "n": 6978,
+          "rate": 0.0015763829177414732
+        },
+        "1": {
+          "count": 15,
+          "n": 6978,
+          "rate": 0.0021496130696474634
+        },
+        "2": {
+          "count": 6952,
+          "n": 6978,
+          "rate": 0.996274004012611
+        },
+        "3+": {
+          "count": 0,
+          "n": 6978,
+          "rate": 0.0
+        }
+      }
+    },
+    "append": {
+      "n_steps": 6978,
+      "n_valid": 6554,
+      "mean_added_per_valid": {
+        "sum": 12898,
+        "n": 6554,
+        "mean": 1.9679584986267928
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 6554,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 210,
+          "n": 6554,
+          "rate": 0.0320415013732072
+        },
+        "2": {
+          "count": 6344,
+          "n": 6554,
+          "rate": 0.9679584986267928
+        },
+        "3+": {
+          "count": 0,
+          "n": 6554,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1291,
+          "n": 1569,
+          "rate": 0.822817080943276
+        },
+        "different": {
+          "count": 4912,
+          "n": 5460,
+          "rate": 0.8996336996336997
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1282,
+          "n": 1412,
+          "rate": 0.9079320113314447
+        },
+        "different": {
+          "count": 4890,
+          "n": 5110,
+          "rate": 0.9569471624266145
+        }
+      },
+      "hedge_rate": {
+        "count": 6351,
+        "n": 6978,
+        "rate": 0.9101461736887361
+      },
+      "hedge_hit_rate": {
+        "count": 369,
+        "n": 6351,
+        "rate": 0.05810108644307983
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 8753010,
+        "n": 6978,
+        "mean": 1254.372312983663
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 741056,
+        "n": 6978,
+        "mean": 106.19891086271137
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 424,
+          "n": 6978,
+          "rate": 0.06076239610203497
+        },
+        "1": {
+          "count": 210,
+          "n": 6978,
+          "rate": 0.03009458297506449
+        },
+        "2": {
+          "count": 6344,
+          "n": 6978,
+          "rate": 0.9091430209229006
+        },
+        "3+": {
+          "count": 0,
+          "n": 6978,
+          "rate": 0.0
+        }
+      }
+    }
+  },
+  "combined": {
+    "n_steps": 13956,
+    "n_valid": 13521,
+    "mean_added_per_valid": {
+      "sum": 26817,
+      "n": 13521,
+      "mean": 1.983359218992678
+    },
+    "add_counts": {
+      "0": {
+        "count": 0,
+        "n": 13521,
+        "rate": 0.0
+      },
+      "1": {
+        "count": 225,
+        "n": 13521,
+        "rate": 0.016640781007321942
+      },
+      "2": {
+        "count": 13296,
+        "n": 13521,
+        "rate": 0.9833592189926781
+      },
+      "3+": {
+        "count": 0,
+        "n": 13521,
+        "rate": 0.0
+      }
+    },
+    "new_gold_by_title": {
+      "same": {
+        "count": 2706,
+        "n": 3134,
+        "rate": 0.8634333120612636
+      },
+      "different": {
+        "count": 10093,
+        "n": 10877,
+        "rate": 0.9279213018295486
+      }
+    },
+    "current_gold_valid_new_by_title": {
+      "same": {
+        "count": 2688,
+        "n": 2958,
+        "rate": 0.9087221095334685
+      },
+      "different": {
+        "count": 10044,
+        "n": 10481,
+        "rate": 0.9583055051998856
+      }
+    },
+    "hedge_rate": {
+      "count": 13303,
+      "n": 13956,
+      "rate": 0.9532100888506736
+    },
+    "hedge_hit_rate": {
+      "count": 787,
+      "n": 13303,
+      "rate": 0.059159588062842966
+    },
+    "mean_kept_tokens_per_step": {
+      "sum": 14347318,
+      "n": 13956,
+      "mean": 1028.0394095729434
+    },
+    "mean_extra_tokens_per_step": {
+      "sum": 1571768,
+      "n": 13956,
+      "mean": 112.62310117512182
+    },
+    "executed_add_counts_all_steps": {
+      "0": {
+        "count": 435,
+        "n": 13956,
+        "rate": 0.03116938950988822
+      },
+      "1": {
+        "count": 225,
+        "n": 13956,
+        "rate": 0.016122098022355976
+      },
+      "2": {
+        "count": 13296,
+        "n": 13956,
+        "rate": 0.9527085124677558
+      },
+      "3+": {
+        "count": 0,
+        "n": 13956,
+        "rate": 0.0
+      }
+    }
+  },
+  "definitions": {
+    "add_counts": "Distinct newly retained PIDs per valid step, including zero additions.",
+    "new_gold_by_title": "Task06 eligible gold (gold through this step, newly returned and not previously kept); same = another distinct PID in the original retrieval has exactly its title. Invalid steps included.",
+    "current_gold_valid_new_by_title": "Task06 failure analysis comparator: current gold not previously kept, valid action; compare against other visible new PIDs with exactly its title.",
+    "raw_diff_identical_state": "Aligned task/mode/tier/step, model-visible user text hash and actual prompt IDs equal, and all input fields (including available gold and candidate PID map) equal.",
+    "hedge_rate": "Executed hedges / all steps, including invalid greedy outputs.",
+    "hedge_hit_rate": "Executed extras in the state's available gold / executed hedges.",
+    "mean_kept_tokens_per_step": "Total retained tokens after all steps / all steps.",
+    "executed_add_counts_all_steps": "Newly retained distinct PIDs over all steps, including invalid no-ops."
+  }
+}

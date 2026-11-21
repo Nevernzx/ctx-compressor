@@ -1,0 +1,35 @@
+{
+  "through_task08": {
+    "README.md": {
+      "bytes": 37020,
+      "sha256": "37fe9f8687d9188378f80f5cb26d2557bd125c7f4177b56cd8ead2a41040b8de",
+      "appended_bytes": 723
+    },
+    "NOTES.md": {
+      "bytes": 38947,
+      "sha256": "16f44cacc9fd25de90f9d8fb23e47b36fe8b5659e533d9074682c77de3d0ea5b",
+      "appended_bytes": 991
+    },
+    "HANDOFF.md": {
+      "bytes": 31498,
+      "sha256": "f57a367adc1ba5641dc4aa0d3b5e3ca641c08a4330b5c1f180e840760cb04a5f",
+      "appended_bytes": 889
+    }
+  },
+  "task07": {
+    "entries": 41,
+    "sha256": "d6f84b9030994ad4c7481a8607a48a40dbea11ba415ec012c1e5907db156c381"
+  },
+  "task08": {
+    "entries": 183,
+    "sha256": "5f519e44919dd5f4a48f98906ebe0f6c3accff75d983ff6418a92500dfc3a74d",
+    "verifier_working_directory": "/root/userfolder/ctx-compressor/hedge_v2/tmp/task08_manifest_view",
+    "historical_documents": [
+      "README.md",
+      "NOTES.md",
+      "HANDOFF.md"
+    ],
+    "previous_document_directory": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start",
+    "other_entries_checked_against_live_files": 180
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "status": "failed",
+  "sample_n": 300,
+  "sample_seed": 20261121,
+  "valid_population": 13926,
+  "source_steps_sha256": "d1b0de03f70b8ffc3dbc5535c9b5166c50f31c01c766a0981854439483aa0751",
+  "sample_sha256": "f5479e3f8985be80e1cae3bf7bd20d395a868d16542e2a9d6005abbd69ae5b9a",
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "adapter_model_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+  "argmax": {
+    "n": 300,
+    "matched": 298,
+    "rate": 0.9933333333333333,
+    "required_rate": 0.99
+  },
+  "logprob": {
+    "n": 300,
+    "within_tolerance": 294,
+    "max_abs_error": 0.05237802871121744,
+    "tolerance": 0.02,
+    "units": "nats"
+  },
+  "reencode": {
+    "n": 300,
+    "text_token_matches": 300,
+    "strict_full_id_matches": 0,
+    "terminal_eos_count": 300,
+    "full_with_terminal_matches": 300,
+    "returned_raw_full_id_matches": 300,
+    "task06_raw_skip_special_tokens": true,
+    "diagnostic_skip_special_tokens": false,
+    "diagnostic_include_stop_str_in_output": true,
+    "terminal_eos_id": 151645,
+    "terminal_eos_text": "<|im_end|>"
+  },
+  "reference": "Independent unconstrained vLLM greedy requests limited to the target prefix length, at the original production queue position and batch shape. Compared with scores from unmodified score_candidates.",
+  "full_generation_other_batch_shape_logprob": {
+    "n": 300,
+    "within_tolerance": 281,
+    "max_abs_error": 0.05977058513053635,
+    "tolerance": 0.02,
+    "units": "nats"
+  },
+  "regenerated_raw_matches_task06": 300,
+  "regenerated_full_ids_match_task06": 300,
+  "details_path": "/root/userfolder/ctx-compressor/hedge_v2/implementation/production_scores.jsonl",
+  "details_sha256": "fc25ec05c8a205c5510b380d7119b33c40c5cf637527eb4bcc9148ef1c144b7b",
+  "wall_seconds": 336.95431551593356,
+  "initial_check": {
+    "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_checks_initial.json",
+    "sha256": "a7f8c7402a7062ca1c9b473572a243f319bfcc1a2ad8b95af09ce005338f53b3",
+    "status": "failed",
+    "logprob": {
+      "n": 300,
+      "within_tolerance": 296,
+      "max_abs_error": 0.03874911414447979,
+      "tolerance": 0.02,
+      "units": "nats"
+    },
+    "reencode": {
+      "n": 300,
+      "text_token_matches": 300,
+      "strict_full_id_matches": 0,
+      "terminal_eos_count": 300,
+      "full_with_terminal_matches": 300,
+      "returned_raw_full_id_matches": 0,
+      "diagnostic_raw_skip_special_tokens": false,
+      "task06_raw_skip_special_tokens": true,
+      "terminal_eos_id": 151645,
+      "terminal_eos_text": "<|im_end|>"
+    },
+    "note": "Initial request placed the forced and natural sequences next to one another with different maximum lengths; default stop-token exclusion hides terminal EOS even when skip_special_tokens=False."
+  }
+}

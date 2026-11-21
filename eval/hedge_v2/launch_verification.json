@@ -1,0 +1,90 @@
+{
+  "verified_utc": "2026-11-21T01:54:39.648673+00:00",
+  "pipeline_status": "/root/userfolder/ctx-compressor/hedge_v2/pipeline_status.json",
+  "status": "running",
+  "stage": "train_scores",
+  "processes": [
+    {
+      "pid": 2003220,
+      "state": "S",
+      "ppid": 1,
+      "sid": 2003220,
+      "cmdline": [
+        "/root/userfolder/ctx-compressor/envs/grpo/bin/python",
+        "-B",
+        "-u",
+        "scripts/run_hedge_pipeline.py"
+      ],
+      "visible": "1",
+      "order": "PCI_BUS_ID"
+    },
+    {
+      "pid": 2003242,
+      "state": "S",
+      "ppid": 2003220,
+      "sid": 2003220,
+      "cmdline": [
+        "/root/userfolder/ctx-compressor/envs/grpo/bin/python",
+        "-B",
+        "-u",
+        "/root/workplace/ctx-compressor/scripts/score_hedge_train.py"
+      ],
+      "visible": "1",
+      "order": "PCI_BUS_ID"
+    }
+  ],
+  "monitor": {
+    "utc": "2026-11-21T01:54:39.257089+00:00",
+    "stage": "train_scores",
+    "pid": 2003242,
+    "alive": true,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 35093,
+    "utilization_pct": 100
+  },
+  "verified_output_rows": 16,
+  "active_output_bytes": 67090,
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_pct": 0
+  },
+  "n_thresholds": 9,
+  "plan": [
+    "train_scores",
+    "H0",
+    "H1",
+    "H2"
+  ],
+  "preflight": {
+    "score_checks": {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_checks.json",
+      "bytes": 7783,
+      "sha256": "8b49b1d5fd31e36b3d5eff1d5111a55fe61be0c0f62d290a4a755a77f0089202"
+    },
+    "production_checks": {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_production_checks.json",
+      "bytes": 7583,
+      "sha256": "bc9a83395ee9bc97748d4451bac595409b11b76d18a29d41765b9f5a38794f8e"
+    },
+    "sample": {
+      "path": "/root/userfolder/ctx-compressor/hedge_v2/implementation/sample.json",
+      "bytes": 32804,
+      "sha256": "f5479e3f8985be80e1cae3bf7bd20d395a868d16542e2a9d6005abbd69ae5b9a"
+    },
+    "tests": {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/pipeline_tests.json",
+      "bytes": 812,
+      "sha256": "4acb01c82920158fc3ffb150f0a014aac8cc967b3f089a742713312d336460c6"
+    },
+    "train_states": {
+      "path": "/root/userfolder/ctx-compressor/grpo_v2/states/states.jsonl",
+      "bytes": 893987528,
+      "sha256": "33fdea6942278c99a815fc931f1be7354c1ace3ecb78a486e58baafc716e4eb8"
+    },
+    "adapter_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c"
+  }
+}

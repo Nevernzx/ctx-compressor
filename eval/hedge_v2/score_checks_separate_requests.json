@@ -1,0 +1,169 @@
+{
+  "status": "failed",
+  "sample_n": 300,
+  "sample_seed": 20261121,
+  "valid_population": 13926,
+  "source_steps_sha256": "d1b0de03f70b8ffc3dbc5535c9b5166c50f31c01c766a0981854439483aa0751",
+  "sample_sha256": "f5479e3f8985be80e1cae3bf7bd20d395a868d16542e2a9d6005abbd69ae5b9a",
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "adapter_model_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+  "argmax": {
+    "n": 300,
+    "matched": 298,
+    "rate": 0.9933333333333333,
+    "required_rate": 0.99
+  },
+  "logprob": {
+    "n": 300,
+    "within_tolerance": 280,
+    "max_abs_error": 0.06489580915132365,
+    "tolerance": 0.02,
+    "units": "nats"
+  },
+  "reencode": {
+    "n": 300,
+    "text_token_matches": 300,
+    "strict_full_id_matches": 0,
+    "terminal_eos_count": 300,
+    "full_with_terminal_matches": 300,
+    "returned_raw_full_id_matches": 300,
+    "diagnostic_skip_special_tokens": false,
+    "diagnostic_include_stop_str_in_output": true,
+    "task06_skip_special_tokens": true,
+    "terminal_eos_id": 151645,
+    "terminal_eos_text": "<|im_end|>"
+  },
+  "regenerated_raw_matches_task06": 300,
+  "regenerated_full_ids_match_task06": 300,
+  "n_candidate_scores_reconstructed": 5966,
+  "independent_request_ids": 600,
+  "verifier_path": "/root/workplace/ctx-compressor/scripts/check_hedge_paired_paths.py",
+  "method": "Production submits two independent, unconstrained, identical greedy requests together. Only the first contributes shared-prefix raw log probabilities to candidate scores; each divergent suffix is teacher forced. The second supplies separate raw log probabilities, generated token IDs and terminal-inclusive text for the check. The ordinary Task 06 full greedy run and separately scheduled checks are preserved in the prior diagnostics.",
+  "details_path": "/root/userfolder/ctx-compressor/hedge_v2/implementation/paired_shared_prefix_scores.jsonl",
+  "details_sha256": "2eb147a46934a1a050cfcaec01ef11e6c35808bc43b6bce914801d893b60dcef",
+  "wall_seconds": 350.72692026617005,
+  "prior_diagnostics": [
+    {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_checks_initial.json",
+      "sha256": "a7f8c7402a7062ca1c9b473572a243f319bfcc1a2ad8b95af09ce005338f53b3",
+      "status": "failed",
+      "argmax": {
+        "n": 300,
+        "matched": 298,
+        "rate": 0.9933333333333333,
+        "required_rate": 0.99
+      },
+      "logprob": {
+        "n": 300,
+        "within_tolerance": 296,
+        "max_abs_error": 0.03874911414447979,
+        "tolerance": 0.02,
+        "units": "nats"
+      },
+      "reencode": {
+        "n": 300,
+        "text_token_matches": 300,
+        "strict_full_id_matches": 0,
+        "terminal_eos_count": 300,
+        "full_with_terminal_matches": 300,
+        "returned_raw_full_id_matches": 0,
+        "diagnostic_raw_skip_special_tokens": false,
+        "task06_raw_skip_special_tokens": true,
+        "terminal_eos_id": 151645,
+        "terminal_eos_text": "<|im_end|>"
+      }
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_production_checks_separate_paths.json",
+      "sha256": "9396363272354d071640a26f5d5ec2012f7e5c227f15a2d56caeabf9d91e1b46",
+      "status": "failed",
+      "argmax": {
+        "n": 300,
+        "matched": 298,
+        "rate": 0.9933333333333333,
+        "required_rate": 0.99
+      },
+      "logprob": {
+        "n": 300,
+        "within_tolerance": 294,
+        "max_abs_error": 0.05237802871121744,
+        "tolerance": 0.02,
+        "units": "nats"
+      },
+      "reencode": {
+        "n": 300,
+        "text_token_matches": 300,
+        "strict_full_id_matches": 0,
+        "terminal_eos_count": 300,
+        "full_with_terminal_matches": 300,
+        "returned_raw_full_id_matches": 300,
+        "task06_raw_skip_special_tokens": true,
+        "diagnostic_skip_special_tokens": false,
+        "diagnostic_include_stop_str_in_output": true,
+        "terminal_eos_id": 151645,
+        "terminal_eos_text": "<|im_end|>"
+      }
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_production_checks_shared_prefix_crossforward.json",
+      "sha256": "ed181d3b17a3ad2f92847cad38e949f9d95bff4c948762a867e669c0e871e2d3",
+      "status": "failed",
+      "argmax": {
+        "n": 300,
+        "matched": 298,
+        "rate": 0.9933333333333333,
+        "required_rate": 0.99
+      },
+      "logprob": {
+        "n": 300,
+        "within_tolerance": 297,
+        "max_abs_error": 0.06442478298999532,
+        "tolerance": 0.02,
+        "units": "nats"
+      },
+      "reencode": {
+        "n": 300,
+        "text_token_matches": 300,
+        "strict_full_id_matches": 0,
+        "terminal_eos_count": 300,
+        "full_with_terminal_matches": 300,
+        "returned_raw_full_id_matches": 300,
+        "diagnostic_skip_special_tokens": false,
+        "diagnostic_include_stop_str_in_output": true,
+        "task06_skip_special_tokens": true,
+        "terminal_eos_id": 151645,
+        "terminal_eos_text": "<|im_end|>"
+      }
+    }
+  ],
+  "source_sha256": {
+    "scorer": "41be622eec4c1e10dfc5f152668d41e2b8fcb8b643580c16a59fda771caaab57",
+    "check": "e57c1f2c0922cf69606ed076f2dfc8f7e9a8ffaab8964138ac0a9a4ac3332af5",
+    "processor": "36edebc83cf1f8f8d3bfac8f20e2da0524ed037a0b3c45d1f8d18c4215a7dbd2"
+  },
+  "production_receipt": "/root/workplace/ctx-compressor/eval/hedge_v2/score_production_checks.json",
+  "production_receipt_sha256": "89138de188f5ef73815a8a8a16363efffd78ae8bb4e4cc7d731db5e75d6d33ac"
+}

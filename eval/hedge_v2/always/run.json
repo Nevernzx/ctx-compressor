@@ -1,0 +1,213 @@
+{
+  "status": "complete",
+  "name": "always",
+  "tau": 1.01,
+  "pid": 2260171,
+  "gpu": 1,
+  "started_at_utc": "2026-11-21T11:07:18.853106+00:00",
+  "selection": {
+    "path": "/root/workplace/ctx-compressor/eval/hedge_v2/train_selection.json",
+    "bytes": 51726,
+    "sha256": "a0f38184b25d9b29064ed5d61976ad3de1a5e3f184e675b4afc64e0861ca33ae"
+  },
+  "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+  "adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000",
+  "schema_version": 1,
+  "score_checks": {
+    "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_checks.json",
+    "bytes": 7783,
+    "sha256": "8b49b1d5fd31e36b3d5eff1d5111a55fe61be0c0f62d290a4a755a77f0089202"
+  },
+  "score_implementation": [
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/hedge_action.py",
+      "bytes": 2512,
+      "sha256": "a5f3665a6d68756f20313b177c918de98544ab92603feef375fbccb5352225f3"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/hedge_scorer.py",
+      "bytes": 12656,
+      "sha256": "41be622eec4c1e10dfc5f152668d41e2b8fcb8b643580c16a59fda771caaab57"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/hedge_forced_tokens.py",
+      "bytes": 1694,
+      "sha256": "36edebc83cf1f8f8d3bfac8f20e2da0524ed037a0b3c45d1f8d18c4215a7dbd2"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/hedge_raw_logits.py",
+      "bytes": 2884,
+      "sha256": "3aa6bd3e0262329a50dbfd6994e5626d881dc5467f824e9419bde0bd76be47ee"
+    }
+  ],
+  "heldout_input": {
+    "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+    "bytes": 62323855,
+    "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+  },
+  "step0": {
+    "n": 1494,
+    "user_byte_mismatches": 0,
+    "token_id_mismatches": 0,
+    "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+  },
+  "adapter_weight": {
+    "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000/adapter_model.safetensors",
+    "bytes": 69782384,
+    "sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c"
+  },
+  "seed": 20261118,
+  "temperature": 0,
+  "max_tokens": 256,
+  "gpu_before": {
+    "index": 1,
+    "memory_used_mib": 375,
+    "memory_total_mib": 49140,
+    "utilization_gpu": 0
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "engine_tokenizer_check": {
+    "reference": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+      "bytes": 40731,
+      "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "prompt_tokens": 1814,
+    "masked_input_tokens": 1810,
+    "empty_think_tokens": 4,
+    "exact_token_ids_match": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+  },
+  "n_steps": 13956,
+  "batches": [
+    {
+      "step": 0,
+      "n": 1494,
+      "seconds": 875.5372641428839
+    },
+    {
+      "step": 1,
+      "n": 1494,
+      "seconds": 976.3073087071534
+    },
+    {
+      "step": 2,
+      "n": 1494,
+      "seconds": 996.9910387878772
+    },
+    {
+      "step": 3,
+      "n": 1494,
+      "seconds": 1033.0629519829527
+    },
+    {
+      "step": 4,
+      "n": 1494,
+      "seconds": 1064.946344631957
+    },
+    {
+      "step": 5,
+      "n": 1494,
+      "seconds": 1169.3740983649623
+    },
+    {
+      "step": 6,
+      "n": 1494,
+      "seconds": 1211.9862735338975
+    },
+    {
+      "step": 7,
+      "n": 1494,
+      "seconds": 1251.5494642900303
+    },
+    {
+      "step": 8,
+      "n": 1044,
+      "seconds": 903.7359736377839
+    },
+    {
+      "step": 9,
+      "n": 612,
+      "seconds": 538.249860326061
+    },
+    {
+      "step": 10,
+      "n": 270,
+      "seconds": 245.1292154029943
+    },
+    {
+      "step": 11,
+      "n": 66,
+      "seconds": 63.11897796206176
+    },
+    {
+      "step": 12,
+      "n": 12,
+      "seconds": 9.562854844145477
+    }
+  ],
+  "checks": {
+    "n_steps": 13956,
+    "n_trajectories": 1494,
+    "n_cells": 6,
+    "step0_matched": 1494
+  },
+  "metrics": {
+    "path": "/root/workplace/ctx-compressor/eval/hedge_v2/always/metrics.json",
+    "bytes": 32087,
+    "sha256": "b67b10e2625f028bcc8db19aefd7b186f0c95e498a7bfba6f841eeb8cb218d4e"
+  },
+  "monitor_thread_stopped": true,
+  "root_disk_diagnostics_complete": true,
+  "engine_shutdown": {
+    "required": true,
+    "completed": true
+  },
+  "root_after": {
+    "used_bytes": 937817444352,
+    "available_bytes": 16879771648,
+    "df_raw": "        Used       Avail\n937817444352 16879771648\n"
+  },
+  "root_shutdown_diagnostics": {
+    "utc": "2026-11-21T14:02:39.092427+00:00",
+    "phase": "shutdown",
+    "root_df": {
+      "used_bytes": 937817444352,
+      "available_bytes": 16879771648,
+      "df_raw": "        Used       Avail\n937817444352 16879771648\n"
+    }
+  },
+  "root_disk_diagnostics": {
+    "policy": "raw df only; Task 06 accounts for task-written overlay files separately",
+    "n_disk_samples": 526
+  },
+  "completed_at_utc": "2026-11-21T14:02:40.493566+00:00",
+  "elapsed_seconds": 10521.640493975952,
+  "peak_gpu_memory_used_mib": 35083
+}

@@ -1,0 +1,65 @@
+{
+  "status": "failed",
+  "sample_n": 300,
+  "sample_seed": 20261121,
+  "valid_population": 13926,
+  "sample_sha256": "f5479e3f8985be80e1cae3bf7bd20d395a868d16542e2a9d6005abbd69ae5b9a",
+  "source_steps_sha256": "d1b0de03f70b8ffc3dbc5535c9b5166c50f31c01c766a0981854439483aa0751",
+  "adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000",
+  "adapter_model_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "method": "vLLM raw log-softmax before request-local teacher forcing, exact frozen prompt IDs",
+  "argmax": {
+    "n": 300,
+    "matched": 298,
+    "rate": 0.9933333333333333,
+    "required_rate": 0.99
+  },
+  "logprob": {
+    "n": 300,
+    "within_tolerance": 296,
+    "max_abs_error": 0.03874911414447979,
+    "tolerance": 0.02,
+    "units": "nats"
+  },
+  "reencode": {
+    "n": 300,
+    "text_token_matches": 300,
+    "strict_full_id_matches": 0,
+    "terminal_eos_count": 300,
+    "full_with_terminal_matches": 300,
+    "returned_raw_full_id_matches": 0,
+    "diagnostic_raw_skip_special_tokens": false,
+    "task06_raw_skip_special_tokens": true,
+    "terminal_eos_id": 151645,
+    "terminal_eos_text": "<|im_end|>"
+  },
+  "regenerated_raw_matches_task06": 300,
+  "regenerated_full_ids_match_task06": 300,
+  "details_path": "/root/userfolder/ctx-compressor/hedge_v2/implementation/scores.jsonl",
+  "details_sha256": "13fa40ecfe280a2f4b04fe435defb91d8b589d6d95c7d762b558014732b22a0a",
+  "wall_seconds": 241.42960563208908
+}

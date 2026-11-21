@@ -1,0 +1,205 @@
+{
+  "status": "ok",
+  "sample_n": 300,
+  "sample_seed": 20261121,
+  "valid_population": 13926,
+  "source_steps_sha256": "d1b0de03f70b8ffc3dbc5535c9b5166c50f31c01c766a0981854439483aa0751",
+  "sample_sha256": "f5479e3f8985be80e1cae3bf7bd20d395a868d16542e2a9d6005abbd69ae5b9a",
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375
+  },
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "adapter_model_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+  "argmax": {
+    "n": 300,
+    "matched": 297,
+    "rate": 0.99,
+    "required_rate": 0.99
+  },
+  "logprob": {
+    "n": 300,
+    "within_tolerance": 300,
+    "max_abs_error": 7.023533967753792e-07,
+    "tolerance": 0.02,
+    "units": "nats"
+  },
+  "reencode": {
+    "n": 300,
+    "text_token_matches": 300,
+    "strict_full_id_matches": 0,
+    "terminal_eos_count": 300,
+    "full_with_terminal_matches": 300,
+    "returned_raw_full_id_matches": 300,
+    "diagnostic_skip_special_tokens": false,
+    "diagnostic_include_stop_str_in_output": true,
+    "task06_skip_special_tokens": true,
+    "terminal_eos_id": 151645,
+    "terminal_eos_text": "<|im_end|>"
+  },
+  "regenerated_raw_matches_task06": 300,
+  "regenerated_full_ids_match_task06": 300,
+  "n_candidate_scores_reconstructed": 5966,
+  "native_greedy_requests": 300,
+  "all_generated_token_max_abs_error": 3.960383629930675e-07,
+  "n_independently_normalized_tokens": 3134,
+  "raw_worker_capture": {
+    "path": "/root/userfolder/ctx-compressor/hedge_v2/score_logits/3aa4930e76c64c9a9e280d81bdf72815.jsonl",
+    "sha256": "60e5d53a80956e5f3977521b584d32887c71913f559fcdec73946d6d1a0385d1"
+  },
+  "verifier_path": "/root/workplace/ctx-compressor/scripts/check_hedge_raw_logits.py",
+  "method": "On each actual native vLLM greedy forward pass, a worker observer reads the pre-constraint logits and computes the selected logit minus float64 logsumexp. The production scorer uses these independently computed probabilities throughout the common token prefix of every candidate and teacher forces each divergent branch. vLLM sampler generation.logprobs independently supplies the reference (float32 log_softmax). No native generation logprobs are read to score the shared prefix. Every entire candidate is reconstructed from its raw prefix and branch observations. Previously attempted independently scheduled BF16 forwards remain in the prior receipts.",
+  "details_path": "/root/userfolder/ctx-compressor/hedge_v2/implementation/raw_logit_scores.jsonl",
+  "details_sha256": "12a6222bc0d5e1611b3d0bbf5e445090f61017a7c25a18a0a0d26327e2605f4b",
+  "wall_seconds": 212.21498452313244,
+  "prior_diagnostics": [
+    {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_checks_initial.json",
+      "sha256": "a7f8c7402a7062ca1c9b473572a243f319bfcc1a2ad8b95af09ce005338f53b3",
+      "status": "failed",
+      "argmax": {
+        "n": 300,
+        "matched": 298,
+        "rate": 0.9933333333333333,
+        "required_rate": 0.99
+      },
+      "logprob": {
+        "n": 300,
+        "within_tolerance": 296,
+        "max_abs_error": 0.03874911414447979,
+        "tolerance": 0.02,
+        "units": "nats"
+      },
+      "reencode": {
+        "n": 300,
+        "text_token_matches": 300,
+        "strict_full_id_matches": 0,
+        "terminal_eos_count": 300,
+        "full_with_terminal_matches": 300,
+        "returned_raw_full_id_matches": 0,
+        "diagnostic_raw_skip_special_tokens": false,
+        "task06_raw_skip_special_tokens": true,
+        "terminal_eos_id": 151645,
+        "terminal_eos_text": "<|im_end|>"
+      }
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_production_checks_separate_paths.json",
+      "sha256": "9396363272354d071640a26f5d5ec2012f7e5c227f15a2d56caeabf9d91e1b46",
+      "status": "failed",
+      "argmax": {
+        "n": 300,
+        "matched": 298,
+        "rate": 0.9933333333333333,
+        "required_rate": 0.99
+      },
+      "logprob": {
+        "n": 300,
+        "within_tolerance": 294,
+        "max_abs_error": 0.05237802871121744,
+        "tolerance": 0.02,
+        "units": "nats"
+      },
+      "reencode": {
+        "n": 300,
+        "text_token_matches": 300,
+        "strict_full_id_matches": 0,
+        "terminal_eos_count": 300,
+        "full_with_terminal_matches": 300,
+        "returned_raw_full_id_matches": 300,
+        "task06_raw_skip_special_tokens": true,
+        "diagnostic_skip_special_tokens": false,
+        "diagnostic_include_stop_str_in_output": true,
+        "terminal_eos_id": 151645,
+        "terminal_eos_text": "<|im_end|>"
+      }
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_production_checks_shared_prefix_crossforward.json",
+      "sha256": "ed181d3b17a3ad2f92847cad38e949f9d95bff4c948762a867e669c0e871e2d3",
+      "status": "failed",
+      "argmax": {
+        "n": 300,
+        "matched": 298,
+        "rate": 0.9933333333333333,
+        "required_rate": 0.99
+      },
+      "logprob": {
+        "n": 300,
+        "within_tolerance": 297,
+        "max_abs_error": 0.06442478298999532,
+        "tolerance": 0.02,
+        "units": "nats"
+      },
+      "reencode": {
+        "n": 300,
+        "text_token_matches": 300,
+        "strict_full_id_matches": 0,
+        "terminal_eos_count": 300,
+        "full_with_terminal_matches": 300,
+        "returned_raw_full_id_matches": 300,
+        "diagnostic_skip_special_tokens": false,
+        "diagnostic_include_stop_str_in_output": true,
+        "task06_skip_special_tokens": true,
+        "terminal_eos_id": 151645,
+        "terminal_eos_text": "<|im_end|>"
+      }
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/score_production_checks_separate_requests.json",
+      "sha256": "89138de188f5ef73815a8a8a16363efffd78ae8bb4e4cc7d731db5e75d6d33ac",
+      "status": "failed",
+      "argmax": {
+        "n": 300,
+        "matched": 298,
+        "rate": 0.9933333333333333,
+        "required_rate": 0.99
+      },
+      "logprob": {
+        "n": 300,
+        "within_tolerance": 280,
+        "max_abs_error": 0.06489580915132365,
+        "tolerance": 0.02,
+        "units": "nats"
+      },
+      "reencode": {
+        "n": 300,
+        "text_token_matches": 300,
+        "strict_full_id_matches": 0,
+        "terminal_eos_count": 300,
+        "full_with_terminal_matches": 300,
+        "returned_raw_full_id_matches": 300,
+        "diagnostic_skip_special_tokens": false,
+        "diagnostic_include_stop_str_in_output": true,
+        "task06_skip_special_tokens": true,
+        "terminal_eos_id": 151645,
+        "terminal_eos_text": "<|im_end|>"
+      }
+    }
+  ],
+  "source_sha256": {
+    "scorer": "41be622eec4c1e10dfc5f152668d41e2b8fcb8b643580c16a59fda771caaab57",
+    "check": "6ae49578aedb7528c42d8d24eb2708aee96dcfe8dcf384459433a2496386fad2",
+    "processor": "36edebc83cf1f8f8d3bfac8f20e2da0524ed037a0b3c45d1f8d18c4215a7dbd2",
+    "raw_processor": "3aa6bd3e0262329a50dbfd6994e5626d881dc5467f824e9419bde0bd76be47ee"
+  }
+}

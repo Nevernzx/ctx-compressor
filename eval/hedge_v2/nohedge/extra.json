@@ -1,0 +1,1918 @@
+{
+  "configs": {
+    "reselect|tight": {
+      "n_steps": 2326,
+      "n_valid": 2313,
+      "mean_added_per_valid": {
+        "sum": 2313,
+        "n": 2313,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2313,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2313,
+          "n": 2313,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2313,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2313,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 405,
+          "n": 532,
+          "rate": 0.7612781954887218
+        },
+        "different": {
+          "count": 1659,
+          "n": 1834,
+          "rate": 0.9045801526717557
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 403,
+          "n": 514,
+          "rate": 0.7840466926070039
+        },
+        "different": {
+          "count": 1651,
+          "n": 1796,
+          "rate": 0.9192650334075724
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 19,
+        "n": 2264,
+        "rate": 0.008392226148409895
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 19,
+        "n": 2264,
+        "rate": 0.008392226148409895
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 2326,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1578435,
+        "n": 2326,
+        "mean": 678.6049011177988
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 2326,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 13,
+          "n": 2326,
+          "rate": 0.005588993981083405
+        },
+        "1": {
+          "count": 2313,
+          "n": 2326,
+          "rate": 0.9944110060189166
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "reselect|mid": {
+      "n_steps": 2326,
+      "n_valid": 2325,
+      "mean_added_per_valid": {
+        "sum": 2325,
+        "n": 2325,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2325,
+          "n": 2325,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 407,
+          "n": 531,
+          "rate": 0.7664783427495292
+        },
+        "different": {
+          "count": 1667,
+          "n": 1832,
+          "rate": 0.9099344978165939
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 406,
+          "n": 517,
+          "rate": 0.7852998065764023
+        },
+        "different": {
+          "count": 1659,
+          "n": 1805,
+          "rate": 0.9191135734072022
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 19,
+        "n": 2263,
+        "rate": 0.008395934600088379
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 19,
+        "n": 2263,
+        "rate": 0.008395934600088379
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 2326,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1588181,
+        "n": 2326,
+        "mean": 682.7949269131557
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 2326,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 1,
+          "n": 2326,
+          "rate": 0.0004299226139294927
+        },
+        "1": {
+          "count": 2325,
+          "n": 2326,
+          "rate": 0.9995700773860705
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "reselect|loose": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 2326,
+        "n": 2326,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 409,
+          "n": 532,
+          "rate": 0.768796992481203
+        },
+        "different": {
+          "count": 1664,
+          "n": 1833,
+          "rate": 0.9078014184397163
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 407,
+          "n": 518,
+          "rate": 0.7857142857142857
+        },
+        "different": {
+          "count": 1656,
+          "n": 1805,
+          "rate": 0.9174515235457064
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 18,
+        "n": 2268,
+        "rate": 0.007936507936507936
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 18,
+        "n": 2268,
+        "rate": 0.007936507936507936
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 2326,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1586652,
+        "n": 2326,
+        "mean": 682.1375752364575
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 2326,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "append|tight": {
+      "n_steps": 2326,
+      "n_valid": 2312,
+      "mean_added_per_valid": {
+        "sum": 2312,
+        "n": 2312,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2312,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2312,
+          "n": 2312,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2312,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2312,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 413,
+          "n": 532,
+          "rate": 0.7763157894736842
+        },
+        "different": {
+          "count": 1657,
+          "n": 1834,
+          "rate": 0.9034896401308615
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 411,
+          "n": 513,
+          "rate": 0.8011695906432749
+        },
+        "different": {
+          "count": 1650,
+          "n": 1796,
+          "rate": 0.9187082405345212
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 15,
+        "n": 2265,
+        "rate": 0.006622516556291391
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 15,
+        "n": 2265,
+        "rate": 0.006622516556291391
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 2326,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1595168,
+        "n": 2326,
+        "mean": 685.798796216681
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 2326,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 14,
+          "n": 2326,
+          "rate": 0.0060189165950128975
+        },
+        "1": {
+          "count": 2312,
+          "n": 2326,
+          "rate": 0.9939810834049871
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "append|mid": {
+      "n_steps": 2326,
+      "n_valid": 2325,
+      "mean_added_per_valid": {
+        "sum": 2325,
+        "n": 2325,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2325,
+          "n": 2325,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2325,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 412,
+          "n": 532,
+          "rate": 0.7744360902255639
+        },
+        "different": {
+          "count": 1668,
+          "n": 1833,
+          "rate": 0.9099836333878887
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 410,
+          "n": 517,
+          "rate": 0.793036750483559
+        },
+        "different": {
+          "count": 1660,
+          "n": 1805,
+          "rate": 0.9196675900277008
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 16,
+        "n": 2263,
+        "rate": 0.007070260715863898
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 16,
+        "n": 2263,
+        "rate": 0.007070260715863898
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 2326,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1601088,
+        "n": 2326,
+        "mean": 688.3439380911436
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 2326,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 1,
+          "n": 2326,
+          "rate": 0.0004299226139294927
+        },
+        "1": {
+          "count": 2325,
+          "n": 2326,
+          "rate": 0.9995700773860705
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    },
+    "append|loose": {
+      "n_steps": 2326,
+      "n_valid": 2326,
+      "mean_added_per_valid": {
+        "sum": 2326,
+        "n": 2326,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 414,
+          "n": 533,
+          "rate": 0.776735459662289
+        },
+        "different": {
+          "count": 1665,
+          "n": 1832,
+          "rate": 0.9088427947598253
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 412,
+          "n": 518,
+          "rate": 0.7953667953667953
+        },
+        "different": {
+          "count": 1657,
+          "n": 1805,
+          "rate": 0.918005540166205
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 9,
+        "n": 2295,
+        "rate": 0.00392156862745098
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 9,
+        "n": 2295,
+        "rate": 0.00392156862745098
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 2326,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 1600659,
+        "n": 2326,
+        "mean": 688.1595012897678
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 2326,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2326,
+          "n": 2326,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        }
+      }
+    }
+  },
+  "modes": {
+    "reselect": {
+      "n_steps": 6978,
+      "n_valid": 6964,
+      "mean_added_per_valid": {
+        "sum": 6964,
+        "n": 6964,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 6964,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 6964,
+          "n": 6964,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 6964,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 6964,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1221,
+          "n": 1595,
+          "rate": 0.7655172413793103
+        },
+        "different": {
+          "count": 4990,
+          "n": 5499,
+          "rate": 0.9074377159483542
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1216,
+          "n": 1549,
+          "rate": 0.7850225952227243
+        },
+        "different": {
+          "count": 4966,
+          "n": 5406,
+          "rate": 0.9186089530151683
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 56,
+        "n": 6795,
+        "rate": 0.008241353936718175
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 56,
+        "n": 6795,
+        "rate": 0.008241353936718175
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 6978,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 4753268,
+        "n": 6978,
+        "mean": 681.1791344224706
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 6978,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 14,
+          "n": 6978,
+          "rate": 0.002006305531670966
+        },
+        "1": {
+          "count": 6964,
+          "n": 6978,
+          "rate": 0.9979936944683291
+        },
+        "2": {
+          "count": 0,
+          "n": 6978,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 6978,
+          "rate": 0.0
+        }
+      }
+    },
+    "append": {
+      "n_steps": 6978,
+      "n_valid": 6963,
+      "mean_added_per_valid": {
+        "sum": 6963,
+        "n": 6963,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 6963,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 6963,
+          "n": 6963,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 6963,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 6963,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1239,
+          "n": 1597,
+          "rate": 0.775829680651221
+        },
+        "different": {
+          "count": 4990,
+          "n": 5499,
+          "rate": 0.9074377159483542
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1233,
+          "n": 1548,
+          "rate": 0.7965116279069767
+        },
+        "different": {
+          "count": 4967,
+          "n": 5406,
+          "rate": 0.9187939326674066
+        }
+      },
+      "raw_diff_identical_state": {
+        "count": 40,
+        "n": 6823,
+        "rate": 0.005862523816503005
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 40,
+        "n": 6823,
+        "rate": 0.005862523816503005
+      },
+      "hedge_rate": {
+        "count": 0,
+        "n": 6978,
+        "rate": 0.0
+      },
+      "hedge_hit_rate": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "mean_kept_tokens_per_step": {
+        "sum": 4796915,
+        "n": 6978,
+        "mean": 687.4340785325309
+      },
+      "mean_extra_tokens_per_step": {
+        "sum": 0,
+        "n": 6978,
+        "mean": 0.0
+      },
+      "executed_add_counts_all_steps": {
+        "0": {
+          "count": 15,
+          "n": 6978,
+          "rate": 0.0021496130696474634
+        },
+        "1": {
+          "count": 6963,
+          "n": 6978,
+          "rate": 0.9978503869303526
+        },
+        "2": {
+          "count": 0,
+          "n": 6978,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 6978,
+          "rate": 0.0
+        }
+      }
+    }
+  },
+  "combined": {
+    "n_steps": 13956,
+    "n_valid": 13927,
+    "mean_added_per_valid": {
+      "sum": 13927,
+      "n": 13927,
+      "mean": 1.0
+    },
+    "add_counts": {
+      "0": {
+        "count": 0,
+        "n": 13927,
+        "rate": 0.0
+      },
+      "1": {
+        "count": 13927,
+        "n": 13927,
+        "rate": 1.0
+      },
+      "2": {
+        "count": 0,
+        "n": 13927,
+        "rate": 0.0
+      },
+      "3+": {
+        "count": 0,
+        "n": 13927,
+        "rate": 0.0
+      }
+    },
+    "new_gold_by_title": {
+      "same": {
+        "count": 2460,
+        "n": 3192,
+        "rate": 0.7706766917293233
+      },
+      "different": {
+        "count": 9980,
+        "n": 10998,
+        "rate": 0.9074377159483542
+      }
+    },
+    "current_gold_valid_new_by_title": {
+      "same": {
+        "count": 2449,
+        "n": 3097,
+        "rate": 0.7907652567000323
+      },
+      "different": {
+        "count": 9933,
+        "n": 10812,
+        "rate": 0.9187014428412874
+      }
+    },
+    "raw_diff_identical_state": {
+      "count": 96,
+      "n": 13618,
+      "rate": 0.007049493317667793
+    },
+    "raw_diff_identical_model_prompt": {
+      "count": 96,
+      "n": 13618,
+      "rate": 0.007049493317667793
+    },
+    "hedge_rate": {
+      "count": 0,
+      "n": 13956,
+      "rate": 0.0
+    },
+    "hedge_hit_rate": {
+      "count": 0,
+      "n": 0,
+      "rate": null
+    },
+    "mean_kept_tokens_per_step": {
+      "sum": 9550183,
+      "n": 13956,
+      "mean": 684.3066064775007
+    },
+    "mean_extra_tokens_per_step": {
+      "sum": 0,
+      "n": 13956,
+      "mean": 0.0
+    },
+    "executed_add_counts_all_steps": {
+      "0": {
+        "count": 29,
+        "n": 13956,
+        "rate": 0.002077959300659215
+      },
+      "1": {
+        "count": 13927,
+        "n": 13956,
+        "rate": 0.9979220406993408
+      },
+      "2": {
+        "count": 0,
+        "n": 13956,
+        "rate": 0.0
+      },
+      "3+": {
+        "count": 0,
+        "n": 13956,
+        "rate": 0.0
+      }
+    }
+  },
+  "definitions": {
+    "add_counts": "Distinct newly retained PIDs per valid step, including zero additions.",
+    "new_gold_by_title": "Task06 eligible gold (gold through this step, newly returned and not previously kept); same = another distinct PID in the original retrieval has exactly its title. Invalid steps included.",
+    "current_gold_valid_new_by_title": "Task06 failure analysis comparator: current gold not previously kept, valid action; compare against other visible new PIDs with exactly its title.",
+    "raw_diff_identical_state": "Aligned task/mode/tier/step, model-visible user text hash and actual prompt IDs equal, and all input fields (including available gold and candidate PID map) equal.",
+    "hedge_rate": "Executed hedges / all steps, including invalid greedy outputs.",
+    "hedge_hit_rate": "Executed extras in the state's available gold / executed hedges.",
+    "mean_kept_tokens_per_step": "Total retained tokens after all steps / all steps.",
+    "executed_add_counts_all_steps": "Newly retained distinct PIDs over all steps, including invalid no-ops."
+  },
+  "sft_v2_baseline": {
+    "configs": {
+      "reselect|tight": {
+        "n_steps": 2326,
+        "n_valid": 2312,
+        "mean_added_per_valid": {
+          "sum": 2312,
+          "n": 2312,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 2312,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 2312,
+            "n": 2312,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 2312,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 2312,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 405,
+            "n": 532,
+            "rate": 0.7612781954887218
+          },
+          "different": {
+            "count": 1659,
+            "n": 1834,
+            "rate": 0.9045801526717557
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 403,
+            "n": 513,
+            "rate": 0.7855750487329435
+          },
+          "different": {
+            "count": 1651,
+            "n": 1796,
+            "rate": 0.9192650334075724
+          }
+        }
+      },
+      "reselect|mid": {
+        "n_steps": 2326,
+        "n_valid": 2325,
+        "mean_added_per_valid": {
+          "sum": 2325,
+          "n": 2325,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 2325,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 2325,
+            "n": 2325,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 2325,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 2325,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 405,
+            "n": 532,
+            "rate": 0.7612781954887218
+          },
+          "different": {
+            "count": 1668,
+            "n": 1833,
+            "rate": 0.9099836333878887
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 404,
+            "n": 517,
+            "rate": 0.781431334622824
+          },
+          "different": {
+            "count": 1660,
+            "n": 1805,
+            "rate": 0.9196675900277008
+          }
+        }
+      },
+      "reselect|loose": {
+        "n_steps": 2326,
+        "n_valid": 2326,
+        "mean_added_per_valid": {
+          "sum": 2326,
+          "n": 2326,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 2326,
+            "n": 2326,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 407,
+            "n": 532,
+            "rate": 0.7650375939849624
+          },
+          "different": {
+            "count": 1667,
+            "n": 1832,
+            "rate": 0.9099344978165939
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 405,
+            "n": 518,
+            "rate": 0.7818532818532818
+          },
+          "different": {
+            "count": 1659,
+            "n": 1805,
+            "rate": 0.9191135734072022
+          }
+        }
+      },
+      "append|tight": {
+        "n_steps": 2326,
+        "n_valid": 2312,
+        "mean_added_per_valid": {
+          "sum": 2312,
+          "n": 2312,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 2312,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 2312,
+            "n": 2312,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 2312,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 2312,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 412,
+            "n": 532,
+            "rate": 0.7744360902255639
+          },
+          "different": {
+            "count": 1660,
+            "n": 1833,
+            "rate": 0.9056192034915439
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 410,
+            "n": 513,
+            "rate": 0.7992202729044834
+          },
+          "different": {
+            "count": 1653,
+            "n": 1796,
+            "rate": 0.9203786191536748
+          }
+        }
+      },
+      "append|mid": {
+        "n_steps": 2326,
+        "n_valid": 2325,
+        "mean_added_per_valid": {
+          "sum": 2325,
+          "n": 2325,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 2325,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 2325,
+            "n": 2325,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 2325,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 2325,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 411,
+            "n": 533,
+            "rate": 0.7711069418386491
+          },
+          "different": {
+            "count": 1666,
+            "n": 1833,
+            "rate": 0.9088925259138025
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 409,
+            "n": 517,
+            "rate": 0.7911025145067698
+          },
+          "different": {
+            "count": 1658,
+            "n": 1805,
+            "rate": 0.9185595567867036
+          }
+        }
+      },
+      "append|loose": {
+        "n_steps": 2326,
+        "n_valid": 2326,
+        "mean_added_per_valid": {
+          "sum": 2326,
+          "n": 2326,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 2326,
+            "n": 2326,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 415,
+            "n": 532,
+            "rate": 0.7800751879699248
+          },
+          "different": {
+            "count": 1668,
+            "n": 1832,
+            "rate": 0.9104803493449781
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 413,
+            "n": 518,
+            "rate": 0.7972972972972973
+          },
+          "different": {
+            "count": 1660,
+            "n": 1805,
+            "rate": 0.9196675900277008
+          }
+        }
+      }
+    },
+    "modes": {
+      "reselect": {
+        "n_steps": 6978,
+        "n_valid": 6963,
+        "mean_added_per_valid": {
+          "sum": 6963,
+          "n": 6963,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 6963,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 6963,
+            "n": 6963,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 6963,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 6963,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 1217,
+            "n": 1596,
+            "rate": 0.7625313283208021
+          },
+          "different": {
+            "count": 4994,
+            "n": 5499,
+            "rate": 0.9081651209310784
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 1212,
+            "n": 1548,
+            "rate": 0.7829457364341085
+          },
+          "different": {
+            "count": 4970,
+            "n": 5406,
+            "rate": 0.9193488716241214
+          }
+        }
+      },
+      "append": {
+        "n_steps": 6978,
+        "n_valid": 6963,
+        "mean_added_per_valid": {
+          "sum": 6963,
+          "n": 6963,
+          "mean": 1.0
+        },
+        "add_counts": {
+          "0": {
+            "count": 0,
+            "n": 6963,
+            "rate": 0.0
+          },
+          "1": {
+            "count": 6963,
+            "n": 6963,
+            "rate": 1.0
+          },
+          "2": {
+            "count": 0,
+            "n": 6963,
+            "rate": 0.0
+          },
+          "3+": {
+            "count": 0,
+            "n": 6963,
+            "rate": 0.0
+          }
+        },
+        "new_gold_by_title": {
+          "same": {
+            "count": 1238,
+            "n": 1597,
+            "rate": 0.7752035065748278
+          },
+          "different": {
+            "count": 4994,
+            "n": 5498,
+            "rate": 0.9083303019279738
+          }
+        },
+        "current_gold_valid_new_by_title": {
+          "same": {
+            "count": 1232,
+            "n": 1548,
+            "rate": 0.7958656330749354
+          },
+          "different": {
+            "count": 4971,
+            "n": 5406,
+            "rate": 0.9195338512763596
+          }
+        }
+      }
+    },
+    "combined": {
+      "n_steps": 13956,
+      "n_valid": 13926,
+      "mean_added_per_valid": {
+        "sum": 13926,
+        "n": 13926,
+        "mean": 1.0
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 13926,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 13926,
+          "n": 13926,
+          "rate": 1.0
+        },
+        "2": {
+          "count": 0,
+          "n": 13926,
+          "rate": 0.0
+        },
+        "3+": {
+          "count": 0,
+          "n": 13926,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 2455,
+          "n": 3193,
+          "rate": 0.7688694018164736
+        },
+        "different": {
+          "count": 9988,
+          "n": 10997,
+          "rate": 0.9082477039192507
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 2444,
+          "n": 3096,
+          "rate": 0.789405684754522
+        },
+        "different": {
+          "count": 9941,
+          "n": 10812,
+          "rate": 0.9194413614502405
+        }
+      }
+    }
+  },
+  "metric_deltas_vs_sft_v2": {
+    "combined": {
+      "final_recall.mean": {
+        "n": 1494,
+        "value": 0.8899213793792154,
+        "sft_v2": 0.8900648826853693,
+        "delta": -0.0001435033061538693
+      },
+      "evidence_loss.rate": {
+        "n": 1494,
+        "value": 0.6405622489959839,
+        "sft_v2": 0.6398929049531459,
+        "delta": 0.0006693440428380271
+      },
+      "step_recall.micro.mean": {
+        "n": 13956,
+        "value": 0.9616507167238022,
+        "sft_v2": 0.9617825084774767,
+        "delta": -0.0001317917536745039
+      },
+      "step_recall.task_macro.mean": {
+        "n": 1494,
+        "value": 0.9619395425812018,
+        "sft_v2": 0.9620444324388527,
+        "delta": -0.00010488985765089165
+      },
+      "occupancy.mean": {
+        "n": 1494,
+        "value": 0.4332014149942573,
+        "sft_v2": 0.43358651378791574,
+        "delta": -0.0003850987936584449
+      },
+      "cost.cached.mean": {
+        "n": 1494,
+        "value": 1800.302242302544,
+        "sft_v2": 1802.5673025435078,
+        "delta": -2.2650602409637486
+      },
+      "invalid_outputs.invalid_json.rate": {
+        "n": 13956,
+        "value": 0.0,
+        "sft_v2": 0.0,
+        "delta": 0.0
+      },
+      "invalid_outputs.invalid_candidate_id.rate": {
+        "n": 13956,
+        "value": 0.0,
+        "sft_v2": 0.0,
+        "delta": 0.0
+      },
+      "invalid_outputs.append_drop.rate": {
+        "n": 13956,
+        "value": 0.0,
+        "sft_v2": 0.0,
+        "delta": 0.0
+      },
+      "invalid_outputs.over_budget.rate": {
+        "n": 13956,
+        "value": 0.002077959300659215,
+        "sft_v2": 0.0021496130696474634,
+        "delta": -7.16537689882486e-05
+      }
+    },
+    "configs": {
+      "reselect|tight": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.8808017618258577,
+          "sft_v2": 0.8821455206997372,
+          "delta": -0.001343758873879497
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.6626506024096386,
+          "sft_v2": 0.6586345381526104,
+          "delta": 0.004016064257028162
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9599164783816554,
+          "sft_v2": 0.9596919632388251,
+          "delta": 0.00022451514283028384
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9601984583321289,
+          "sft_v2": 0.9599013101434145,
+          "delta": 0.0002971481887144023
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.6418103116089093,
+          "sft_v2": 0.6437091650182823,
+          "delta": -0.0018988534093730136
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 1791.909036144578,
+          "sft_v2": 1796.8678714859432,
+          "delta": -4.958835341365102
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.005588993981083405,
+          "sft_v2": 0.0060189165950128975,
+          "delta": -0.00042992261392949243
+        }
+      },
+      "reselect|mid": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.886635196574955,
+          "sft_v2": 0.8850622380742859,
+          "delta": 0.001572958500669186
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.6506024096385542,
+          "sft_v2": 0.6546184738955824,
+          "delta": -0.004016064257028162
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.960745800965062,
+          "sft_v2": 0.9607756567021406,
+          "delta": -2.9855737078587907e-05
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9611040237263307,
+          "sft_v2": 0.9610259335879996,
+          "delta": 7.809013833115497e-05
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.43318975974973095,
+          "sft_v2": 0.4336807071926655,
+          "delta": -0.0004909474429345417
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 1810.372088353413,
+          "sft_v2": 1817.2489959839359,
+          "delta": -6.876907630522965
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0004299226139294927,
+          "sft_v2": 0.0004299226139294927,
+          "delta": 0.0
+        }
+      },
+      "reselect|loose": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.884987190408877,
+          "sft_v2": 0.8843908657161665,
+          "delta": 0.000596324692710426
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.6465863453815262,
+          "sft_v2": 0.6546184738955824,
+          "delta": -0.008032128514056214
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9606652757770564,
+          "sft_v2": 0.9607853811422175,
+          "delta": -0.00012010536516104953
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9609905165470604,
+          "sft_v2": 0.9610657453120482,
+          "delta": -7.522876498788911e-05
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.21613533023351397,
+          "sft_v2": 0.21607967049434412,
+          "delta": 5.56597391698499e-05
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 1811.8433734939756,
+          "sft_v2": 1814.1795180722888,
+          "delta": -2.336144578313224
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        }
+      },
+      "append|tight": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.8933860539282223,
+          "sft_v2": 0.8942724277061624,
+          "delta": -0.0008863737779400971
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.6305220883534136,
+          "sft_v2": 0.6224899598393574,
+          "delta": 0.008032128514056214
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9624264230562601,
+          "sft_v2": 0.9625891794743906,
+          "delta": -0.00016275641813046082
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.962718801479982,
+          "sft_v2": 0.9628930514701624,
+          "delta": -0.00017424999018034182
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.6506537878593268,
+          "sft_v2": 0.6512917341005819,
+          "delta": -0.0006379462412551273
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 1785.0666666666662,
+          "sft_v2": 1786.6620481927707,
+          "delta": -1.5953815261045747
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0060189165950128975,
+          "sft_v2": 0.0060189165950128975,
+          "delta": 0.0
+        }
+      },
+      "append|mid": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.8971029416812546,
+          "sft_v2": 0.8958646552020041,
+          "delta": 0.0012382864792505055
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.6265060240963856,
+          "sft_v2": 0.6265060240963856,
+          "delta": 0.0
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9628570435965111,
+          "sft_v2": 0.9631144853522331,
+          "delta": -0.0002574417557219544
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9630979828387636,
+          "sft_v2": 0.963352594760879,
+          "delta": -0.00025461192211539974
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.43835755245573627,
+          "sft_v2": 0.43767536385770534,
+          "delta": 0.0006821885980309306
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 1801.7493975903606,
+          "sft_v2": 1799.4052208835335,
+          "delta": 2.3441767068270565
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0004299226139294927,
+          "sft_v2": 0.0004299226139294927,
+          "delta": 0.0
+        }
+      },
+      "append|loose": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.8966151318560954,
+          "sft_v2": 0.8986535887138294,
+          "delta": -0.0020384568577339612
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.6265060240963856,
+          "sft_v2": 0.6224899598393574,
+          "delta": 0.004016064257028162
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.96329327856628,
+          "sft_v2": 0.9637383849550665,
+          "delta": -0.0004451063887864759
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9635274725629319,
+          "sft_v2": 0.9640279593585995,
+          "delta": -0.0005004867956676096
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.21906174805833137,
+          "sft_v2": 0.21908244206392025,
+          "delta": -2.069400558887824e-05
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 1800.8728915662646,
+          "sft_v2": 1801.0401606425698,
+          "delta": -0.1672690763052742
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "sft_v2": 0.0,
+          "delta": 0.0
+        }
+      }
+    }
+  }
+}
