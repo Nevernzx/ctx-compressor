@@ -1,0 +1,288 @@
+{
+  "status": "evaluation_complete",
+  "stage": "G",
+  "selected_checkpoint": "checkpoint-250",
+  "automatic_retry": false,
+  "receipt_source": "手动授权的 G 第二次尝试；原流水线状态记录首次 G 失败。",
+  "prior_stages": [
+    {
+      "stage": "F0",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r3/merged_start/run.json",
+        "bytes": 7133,
+        "sha256": "42f5dde9c4c5c5efa906e83153df13dedbe48f25215df13f298e087855c1855f"
+      }
+    },
+    {
+      "stage": "B",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r3/states/state_checks.json",
+        "bytes": 16741,
+        "sha256": "41df476e4271c083f2f93e966b58ce6255c8744c853ae0eebc0df90875355161"
+      }
+    },
+    {
+      "stage": "C",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r3/filter/sampling_probe.json",
+        "bytes": 67512,
+        "sha256": "a695969c825ae7ab671b327263f4a4d01504c87545d48ccc9eef39518443b712"
+      }
+    },
+    {
+      "stage": "D",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r3/data/dataset_stats.json",
+        "bytes": 2466,
+        "sha256": "101f2dc6797f762a40618cca1fcd5c8aeb9cd2b951e7ece998984a96b8a21e1e"
+      }
+    },
+    {
+      "stage": "E",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r3/train/training_runtime.json",
+        "bytes": 214,
+        "sha256": "7d05e4efb9d51d10fd912544784cc34f91c3e01a090017ba8405187492baf631"
+      }
+    },
+    {
+      "stage": "E_check",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r3/training_checks.json",
+        "bytes": 14922,
+        "sha256": "162fc4dbd754a430e12dc1e82e5bd89ad1376c4ac092aa637a445c4d6998b521"
+      }
+    },
+    {
+      "stage": "F_checkpoint-125",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r3/checkpoint-125/run.json",
+        "bytes": 7416,
+        "sha256": "4a1084635b3e01b1bb38304313f7f812378705688dafe2b0b3f07a0f0df02311"
+      }
+    },
+    {
+      "stage": "F_checkpoint-250",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r3/checkpoint-250/run.json",
+        "bytes": 7416,
+        "sha256": "b035db16494bde1f1726a6851dbebbf0edbbaf5a48160a926cf1fadaff32eb26"
+      }
+    },
+    {
+      "stage": "F_checkpoint-375",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r3/checkpoint-375/run.json",
+        "bytes": 7418,
+        "sha256": "5d3b971655b18051da707cf808994db9b5ce4825509844fcf41224b4b1d6ee67"
+      }
+    },
+    {
+      "stage": "F_checkpoint-500",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r3/checkpoint-500/run.json",
+        "bytes": 7415,
+        "sha256": "3d991a4607aaef4bd3cbc68d37d40e59e83e6e306a868bd8487d70fadd6a3432"
+      }
+    }
+  ],
+  "first_attempt": {
+    "directory": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250",
+    "status": {
+      "utc": "2026-11-24T00:11:22.334721+00:00",
+      "pid": 3263111,
+      "status": "failed",
+      "error": "ZMQError('ipc path \"/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250/runtime_cache/tmp/4e509900-9b4a-4a0e-a38d-af20b4b92bff\" is longer than 107 characters (sizeof(sockaddr_un.sun_path)). zmq.IPC_PATH_MAX_LEN constant can be used to check addr length (if it is defined). (addr='ipc:///root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250/runtime_cache/tmp/4e509900-9b4a-4a0e-a38d-af20b4b92bff')')"
+    },
+    "pipeline_status": {
+      "path": "/root/userfolder/ctx-compressor/grpo_r3/pipeline_status.json",
+      "sha256": "d8eb934fe450fa65166855fbfebb21c8c2d34e812a77b4a13b8ace12460f33fd",
+      "bytes": 24241
+    },
+    "preservation_snapshot": {
+      "path": "/root/userfolder/ctx-compressor/grpo_r3/wrap13/failed_tree.json",
+      "sha256": "019c56ca3dcf83bc3e95c83ffa2aca01351afd7dbdeaf09d1450b21dd112e157",
+      "bytes": 3680
+    },
+    "entries_verified": 39
+  },
+  "retry": {
+    "directory": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2",
+    "pid": 3265032,
+    "status": {
+      "utc": "2026-11-24T00:32:07.221688+00:00",
+      "pid": 3265032,
+      "stage": "finished",
+      "status": "complete"
+    },
+    "ipc": {
+      "sample": "/root/userfolder/ctx-compressor/rt/g13/00000000-0000-0000-0000-000000000000",
+      "path_bytes": 75,
+      "uri_bytes": 81,
+      "environment": {
+        "TMPDIR": "/root/userfolder/ctx-compressor/rt/g13",
+        "TMP": "/root/userfolder/ctx-compressor/rt/g13",
+        "TEMP": "/root/userfolder/ctx-compressor/rt/g13",
+        "RAY_TMPDIR": "/root/userfolder/ctx-compressor/rt/g13"
+      },
+      "limit_exclusive": 100
+    },
+    "gate_samples": [
+      {
+        "utc": "2026-11-24T00:16:38.991468+00:00",
+        "pid": 3265032,
+        "stage": "G",
+        "status": "waiting_gpu",
+        "gpu": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 375,
+          "utilization_pct": 0
+        },
+        "consecutive_free": 1,
+        "required_free": 3,
+        "limit_mib": 2048,
+        "poll_seconds": 300,
+        "elapsed_seconds": 0.04604001482948661,
+        "timeout_seconds": 129600
+      },
+      {
+        "utc": "2026-11-24T00:21:39.164518+00:00",
+        "pid": 3265032,
+        "stage": "G",
+        "status": "waiting_gpu",
+        "gpu": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 375,
+          "utilization_pct": 0
+        },
+        "consecutive_free": 2,
+        "required_free": 3,
+        "limit_mib": 2048,
+        "poll_seconds": 300,
+        "elapsed_seconds": 300.21909068664536,
+        "timeout_seconds": 129600
+      },
+      {
+        "utc": "2026-11-24T00:26:39.202994+00:00",
+        "pid": 3265032,
+        "stage": "G",
+        "status": "waiting_gpu",
+        "gpu": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 375,
+          "utilization_pct": 0
+        },
+        "consecutive_free": 3,
+        "required_free": 3,
+        "limit_mib": 2048,
+        "poll_seconds": 300,
+        "elapsed_seconds": 600.2575642745942,
+        "timeout_seconds": 129600
+      }
+    ],
+    "inputs": {
+      "path": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/input_preflight/preflight.json",
+      "sha256": "5f584e73b5bcb48d6670da18951d02447d52f8064778f59d98fce11a35a88b32",
+      "bytes": 3441
+    },
+    "spool_sha256": "01d7bf55f7b66348e105a940e59310c18070441179146b8e10df67f0bab1c262",
+    "predictions": {
+      "path": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/predictions.jsonl",
+      "sha256": "39fd4470f14fc8980ac81f28895d3417c5c62c29f3ab087a31765d692713bba3",
+      "bytes": 3740519
+    },
+    "config": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r3/reader_run_config.json",
+      "sha256": "e9e5f11ce0e50bc4ff8b5070ed09ec8e22cb298970ee740aecdd3b54b1696244",
+      "bytes": 2224
+    },
+    "reader_results": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r3/reader_f1_results.json",
+      "sha256": "b59db17d2c739c37e8c7f6adbd0800b52229a68e7162790e4ce8e2da72f194b6",
+      "bytes": 17245
+    },
+    "receipts": {
+      "inputs": {
+        "path": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/receipt_inputs.json",
+        "sha256": "ff43a3f816c471d74ca5024887051d1401be0a98642fb1590b3ad4c86b191d98",
+        "bytes": 162
+      },
+      "gate": {
+        "path": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/receipt_gate.json",
+        "sha256": "ad309b792584dd6204f49f6786375eb26641b87321e7cc11a1078d2ad90f31d2",
+        "bytes": 208
+      },
+      "inference": {
+        "path": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/receipt_inference.json",
+        "sha256": "524ee2bcd1447ad251e894b45c0439b07ac75c46f5019038f5673f09d8074308",
+        "bytes": 268
+      },
+      "report": {
+        "path": "/root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/receipt_report.json",
+        "sha256": "f1de67aad9bd0af7789c08853fa38fc9e904cfec70b367ec75dca79438ce56ea",
+        "bytes": 157
+      }
+    }
+  },
+  "independent_reader_check": {
+    "paired_keys": 5976,
+    "reparsed_predictions": 5976,
+    "cells": 6,
+    "scores_differ": 0,
+    "input_truncations": 0,
+    "f1_counts": {
+      "left_higher": 278,
+      "equal": 4983,
+      "right_higher": 715
+    },
+    "em_matrix": [
+      [
+        2202,
+        128
+      ],
+      [
+        549,
+        3097
+      ]
+    ]
+  },
+  "coverage": {
+    "n_tasks": 249,
+    "n_trajectories": 1494,
+    "n_steps": 13956,
+    "n_reader_pairs": 5976
+  },
+  "cpu_tests": {
+    "path": "/root/workplace/ctx-compressor/eval/grpo_r3/closeout_tests.json",
+    "sha256": "3ed57e5b9dace91ac320ec67e78b73fb582a23cd8ed2356814ba1f97679c17b8",
+    "bytes": 3058
+  },
+  "history": {
+    "path": "/root/workplace/ctx-compressor/eval/grpo_r3/final_history.json",
+    "sha256": "14fd3d2bef0efdcdec51a4e62dc82b8d05a7bb1459da359d9adc9ae0aae73d25",
+    "bytes": 1204
+  }
+}

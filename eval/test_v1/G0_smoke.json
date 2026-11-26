@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "wall_seconds": 82.17803423991427,
+  "n_tasks": 3,
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_pct": 0
+  },
+  "engine_shutdown": true,
+  "engine": {
+    "model": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "tokenizer": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "sampling": {
+    "temperature": 0,
+    "max_tokens": 256,
+    "seed": 20261118
+  },
+  "metrics": {
+    "path": "/root/userfolder/ctx-compressor/test_v1/g0/metrics.json",
+    "size": 29243,
+    "sha256": "59abfa83a1c8e069d89718b71211a5f37d07a2a66299951d48efa6ab436fc0bf"
+  },
+  "adapter": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_config.json",
+        "sha256": "f57a859baa4d8bd8bf8f5cb67c9bd8061d4e25635ae158fff929814d1d7fcdb1",
+        "bytes": 1081
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_model.safetensors",
+        "sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf",
+        "bytes": 69782384
+      }
+    ]
+  },
+  "strategy": "r4",
+  "comparison": {
+    "status": "passed",
+    "n": 168,
+    "executed_action_different": 0,
+    "parsed_action_different": 0,
+    "keep_after_different": 0,
+    "same_state_prompt_checks": 168,
+    "rate": 0.0,
+    "threshold": 0.05
+  },
+  "reference": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r4/checkpoint-500/steps.jsonl",
+    "sha256": "fc6bcbcc69d1291dc913faa3cf41e5cd896f34918bd7681d51326d96457aca2d",
+    "bytes": 230950440
+  }
+}

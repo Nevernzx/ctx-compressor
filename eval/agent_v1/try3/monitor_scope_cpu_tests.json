@@ -1,0 +1,317 @@
+{
+  "status": "passed",
+  "tests": 897,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "matched_previous_cpu_tests": 889,
+  "cpu_guard_events": [],
+  "elapsed_tests_seconds": 16.17708026105538,
+  "utc": "2026-11-25T12:24:00.811255+00:00",
+  "xml": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/monitor_path_recovery/full_cpu_ut7s0qqk/tests.xml",
+    "size": 116568,
+    "sha256": "61d18731346573a0805b8afb62bb296c10ad20b01a13327dc5be6282929d5bfc"
+  },
+  "log": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/monitor_path_recovery/full_cpu_ut7s0qqk/pytest.log",
+    "size": 1061,
+    "sha256": "c4021e439df5c2d8715d01a4f532b5f73249c3a6a7971289d4e81f2eefe6b04f"
+  },
+  "controller_sources": {
+    "scripts/agent_v1_smoke.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_smoke.py",
+      "size": 22654,
+      "sha256": "37f29a0ada640f59ae832d524672fec019a15680de0e365f2f287a42f15b4115"
+    },
+    "scripts/agent_v1_queue.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_queue.py",
+      "size": 6132,
+      "sha256": "5a6ad2483d2e376019304e717a608de6b1c492737dfe26851cdcbb0c614cdaa6"
+    },
+    "scripts/agent_v1_disk.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_disk.py",
+      "size": 11413,
+      "sha256": "7a032961be0cd8627016c65e79360a68ec85186b2cf1b2ed0d9c9598c8e3a642"
+    },
+    "scripts/agent_v1_engines.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_engines.py",
+      "size": 13335,
+      "sha256": "7434c995098b671d771153e13c216e1ef19c5ed051b5477fb3fd6bf60ea3e559"
+    },
+    "src/agent_v1.py": {
+      "path": "/root/workplace/ctx-compressor/src/agent_v1.py",
+      "size": 15610,
+      "sha256": "ca1940a9ef1a75ecf44797c27a63a9885590a6625826cd8fdfc7a4478c22d718"
+    },
+    "tests/test_agent_v1.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1.py",
+      "size": 13910,
+      "sha256": "5a63c9ce122143e3bb786e24d1c6ec082f3918101cfba24f705ea65fdf6514bb"
+    },
+    "tests/test_agent_v1_monitor_paths.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_monitor_paths.py",
+      "size": 6546,
+      "sha256": "04c01728058a9bc7c6a46ee27278f75627819e6d006561c861b6382a32872df6"
+    },
+    "tests/test_agent_v1_disk.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_disk.py",
+      "size": 6046,
+      "sha256": "908aed6c3083f2f203d919b66f4856e8759edcc4e59134cd8d1e8d4c93bf57ff"
+    }
+  },
+  "controller_path_tests": [
+    "test_task19_controller_routes_gate_and_samples_to_its_stage",
+    "test_task20_controller_gate_and_monitor_stay_in_agent_v1"
+  ],
+  "root_storage_tests": [
+    "test_attributed_bytes_deduplicate_inodes_and_overlapping_paths",
+    "test_attributed_growth_in_any_directory_is_a_stop_sample[cache]",
+    "test_attributed_growth_in_any_directory_is_a_stop_sample[tmp]",
+    "test_attributed_growth_in_any_directory_is_a_stop_sample[workplace]",
+    "test_available_root_bytes_threshold_is_strict",
+    "test_retry_leaves_original_output_directories_in_place",
+    "test_root_trace_captures_engine_boundaries_and_transient_peak",
+    "test_root_usage_baseline_and_engine_sample_agree",
+    "test_sustained_root_growth_is_checked_when_finishing"
+  ],
+  "response_format_tests": [
+    "test_prefill_covers_invalid_observation_and_forced_finish",
+    "test_prefill_preserves_append_tokens_when_encoding_would_merge"
+  ],
+  "signed_history_unchanged": true,
+  "signed_history": {
+    "manifest_records": {
+      "eval/deepseek_api/TASK14_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/deepseek_api/TASK14_SHA256SUMS",
+        "size": 17781,
+        "sha256": "8f92bfe4ac3013c0fd0918525dbfc2abb883a33743fd04aabe79679464ec4193"
+      },
+      "eval/grpo_prep/TASK07_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_prep/TASK07_SHA256SUMS",
+        "size": 4410,
+        "sha256": "d6f84b9030994ad4c7481a8607a48a40dbea11ba415ec012c1e5907db156c381"
+      },
+      "eval/grpo_r2/TASK11_PHASE_A_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/TASK11_PHASE_A_SHA256SUMS",
+        "size": 9845,
+        "sha256": "779d66802e54e8527b023440612a4293045e28d91b51def50741c65f4043aa51"
+      },
+      "eval/grpo_r2/TASK11_PHASE_P_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/TASK11_PHASE_P_SHA256SUMS",
+        "size": 2027,
+        "sha256": "312648d762a06fbbf03d535f4ef877c41034e304793236618775526fba34a6f6"
+      },
+      "eval/grpo_r2/TASK11_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/TASK11_SHA256SUMS",
+        "size": 28699,
+        "sha256": "de9a401c02fc12ba4441fdb18ebb6e5c9cb40def56ef5da2b70ac05d62c1989e"
+      },
+      "eval/grpo_r3/TASK13_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r3/TASK13_SHA256SUMS",
+        "size": 29069,
+        "sha256": "45aebbf0daa4bee61037da433c0c7c7534bd2d48488a82d9984bea4d76694206"
+      },
+      "eval/grpo_r4/TASK18_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/TASK18_SHA256SUMS",
+        "size": 21726,
+        "sha256": "017bb1bf47c3179caf7862cbae3bb384f91d3baa2e51e0e7a222a0c940903ea4"
+      },
+      "eval/grpo_v2/TASK08_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_v2/TASK08_SHA256SUMS",
+        "size": 23023,
+        "sha256": "5f519e44919dd5f4a48f98906ebe0f6c3accff75d983ff6418a92500dfc3a74d"
+      },
+      "eval/hedge_v2/TASK09_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/hedge_v2/TASK09_SHA256SUMS",
+        "size": 13605,
+        "sha256": "affea9be6a469be03c4f122294e3b9027601aac5479552341906fe2847994051"
+      },
+      "eval/reader_diag/TASK15_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/reader_diag/TASK15_SHA256SUMS",
+        "size": 6653,
+        "sha256": "f04a85cd13f95c031801d6b1f59862f29d534816906692b619de8e9fb5135404"
+      },
+      "eval/reader_heldout/TASK12_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/reader_heldout/TASK12_SHA256SUMS",
+        "size": 6921,
+        "sha256": "a0b093d2cd8d777995fb51dffd1ec569491a24bd3007a24e00a0138b28d2515e"
+      },
+      "eval/reader_heldout_v2/TASK16_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/reader_heldout_v2/TASK16_SHA256SUMS",
+        "size": 11720,
+        "sha256": "b596175dd648f2ffb774c05ad836b19f02bfb0d80106fa6c789057d20de71665"
+      },
+      "eval/reranker_v1/TASK17_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/reranker_v1/TASK17_SHA256SUMS",
+        "size": 37471,
+        "sha256": "7380a932fbbbc2fb6a1a7b8941b03e53698e83f541568e89d61c666ed670a29c"
+      },
+      "eval/sft_run_v3/TASK10_LAUNCH_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_LAUNCH_SHA256SUMS",
+        "size": 5552,
+        "sha256": "b580658fd9dcaf2e796e4c4b78ad76f3ff814de542ee77c858cd26964def452a"
+      },
+      "eval/sft_run_v3/TASK10_RESUME1_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_RESUME1_SHA256SUMS",
+        "size": 2185,
+        "sha256": "c5940405188ca3af266182b186eba65a371aad4f9461a58e092d2b36170a84df"
+      },
+      "eval/sft_run_v3/TASK10_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_SHA256SUMS",
+        "size": 32912,
+        "sha256": "ef8e1ecbbc17fcf9263c3dd27d29fb16e6bc5ce7eebd37c657345be8f03a54e3"
+      },
+      "eval/test_v1/TASK19_SHA256SUMS": {
+        "path": "/root/workplace/ctx-compressor/eval/test_v1/TASK19_SHA256SUMS",
+        "size": 16628,
+        "sha256": "1ac0b0816a8396b8ec85e56590fa64c1c02536adf3c2c430a6a6be4e16db5201"
+      }
+    },
+    "proof": {
+      "status": "passed",
+      "historical": {
+        "07": {
+          "total": 41,
+          "rehashed": 41,
+          "sealed_locked": 0
+        },
+        "08": {
+          "total": 183,
+          "rehashed": 183,
+          "sealed_locked": 0
+        },
+        "09": {
+          "total": 115,
+          "rehashed": 115,
+          "sealed_locked": 0
+        },
+        "10_launch": {
+          "total": 51,
+          "rehashed": 45,
+          "sealed_locked": 6
+        },
+        "10_resume1": {
+          "total": 19,
+          "rehashed": 19,
+          "sealed_locked": 0
+        },
+        "10": {
+          "total": 243,
+          "rehashed": 234,
+          "sealed_locked": 9
+        },
+        "11_phase_a": {
+          "total": 76,
+          "rehashed": 76,
+          "sealed_locked": 0
+        },
+        "11_phase_p": {
+          "total": 21,
+          "rehashed": 21,
+          "sealed_locked": 0
+        },
+        "11": {
+          "total": 223,
+          "rehashed": 223,
+          "sealed_locked": 0
+        },
+        "12": {
+          "total": 57,
+          "rehashed": 57,
+          "sealed_locked": 0
+        },
+        "13": {
+          "total": 219,
+          "rehashed": 219,
+          "sealed_locked": 0
+        },
+        "06": {
+          "task05_files": 299,
+          "protected_prefixes": [
+            "HANDOFF.md",
+            "NOTES.md",
+            "README.md"
+          ],
+          "historical_tasks": [
+            "TASK_01",
+            "TASK_02",
+            "TASK_03",
+            "TASK_04",
+            "TASK_05"
+          ],
+          "project_files": 348,
+          "other_manifest_entries_preserved": 540
+        },
+        "15": {
+          "total": 52,
+          "rehashed": 52,
+          "sealed_locked": 0
+        },
+        "14": {
+          "total": 134,
+          "rehashed": 134,
+          "sealed_locked": 0
+        },
+        "16": {
+          "total": 88,
+          "rehashed": 88,
+          "sealed_locked": 0
+        },
+        "17": {
+          "total": 276,
+          "rehashed": 276,
+          "sealed_locked": 0
+        },
+        "18": {
+          "total": 169,
+          "rehashed": 169,
+          "sealed_locked": 0
+        }
+      },
+      "entries": 135,
+      "global_index": {
+        "path": "/root/workplace/ctx-compressor/SHA256SUMS",
+        "size": 89850,
+        "sha256": "aab473f800313e233bfa2f3ca6a876ad6b722f6cdbd85d1896636192cfc515d8"
+      },
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/test_v1/TASK19_SHA256SUMS",
+        "size": 16628,
+        "sha256": "1ac0b0816a8396b8ec85e56590fa64c1c02536adf3c2c430a6a6be4e16db5201"
+      },
+      "append_only": [
+        "README.md",
+        "NOTES.md",
+        "HANDOFF.md"
+      ]
+    },
+    "locked": {
+      "/root/userfolder/ctx-compressor/data/test_dev_v1/test_tasks.jsonl": {
+        "sha256": "f2e1856acb54991badddab06ebea99bba942e1c51aaa429d69756751d0ffc71a",
+        "size": 2348597
+      },
+      "/root/userfolder/ctx-compressor/data/test_dev_v1/steps.jsonl": {
+        "sha256": "e285d284d4baed60b09bfc7cae73b469b4b1e0e0d966468116faa2315f41293b",
+        "size": 1924496
+      },
+      "/root/userfolder/ctx-compressor/data/test_dev_v1/excluded_ids.json": {
+        "sha256": "1d0e27ddb8f88c4d53374f3a1257fb265836fe79135c21629afeccdaa9915ad9",
+        "size": 17498
+      },
+      "/root/workplace/ctx-compressor/eval/test_dev_v1/exclusion_audit.json": {
+        "sha256": "aa114c1e677293bc9e30a4947b4c2ea3efb9c4074e6865bf473228a578edcc19",
+        "size": 4606
+      },
+      "/root/workplace/ctx-compressor/eval/test_dev_v1/structural_stats.json": {
+        "sha256": "70d0d86e2dd3412334248e1f456fee2f45f59ce1ac163da500fd2704463fc80a",
+        "size": 2271
+      }
+    },
+    "lock_document": {
+      "path": "/root/workplace/ctx-compressor/eval/test_dev_v1/LOCK.md",
+      "size": 1531,
+      "sha256": "a85aff80adb8c35bd6988dfefb3674f8e5f94fa0fcbd4dcc036ca872c037b77e"
+    }
+  }
+}

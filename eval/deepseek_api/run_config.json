@@ -1,0 +1,223 @@
+{
+  "requested": {
+    "model": "deepseek-flash",
+    "thinking": {
+      "type": "disabled"
+    },
+    "temperature": 0,
+    "stream": false,
+    "max_tokens_reader": 48,
+    "max_tokens_compressor": 256,
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "direct": true,
+    "concurrent_trajectory_limit": 8,
+    "currency": "CNY",
+    "spend_cap_with_smoke": "8.00",
+    "peak_beijing": "周一至周五 09:00–12:00、14:00–18:00，含工作日假日",
+    "off_peak_yuan_per_million": {
+      "input_hit": "0.02",
+      "input_miss": "1",
+      "output": "4"
+    }
+  },
+  "periods": {
+    "off_peak": 2588
+  },
+  "first_request_utc": "2026-11-24T04:00:17.835681+00:00",
+  "last_response_utc": "2026-11-24T04:04:19.719878+00:00",
+  "pause_windows_until_beijing": [
+    "2026-11-24T12:00:00+08:00"
+  ],
+  "chat_http_attempts": 2588,
+  "balance_http_attempts": 2,
+  "attempt_http_status": {
+    "200": 2588
+  },
+  "model_responses": {
+    "deepseek-flash": 2588
+  },
+  "system_fingerprints": {
+    "bc19ba97cbe016479903222bb1578db6": 2588
+  },
+  "full_usage": {
+    "all": {
+      "n": 2588,
+      "input_tokens": 6094045,
+      "cache_hit_tokens": 3261887,
+      "cache_miss_tokens": 2832158,
+      "cache_hit_fraction": 0.5352581085305409,
+      "output_tokens": 16918,
+      "latency_seconds": {
+        "p50": 0.6764915,
+        "p90": 1.0818592
+      },
+      "paid_yuan": "2.96506774"
+    },
+    "A_compressed": {
+      "n": 1440,
+      "input_tokens": 1832944,
+      "cache_hit_tokens": 1276351,
+      "cache_miss_tokens": 556593,
+      "cache_hit_fraction": 0.6963393316980769,
+      "output_tokens": 5245,
+      "latency_seconds": {
+        "p50": 0.708685,
+        "p90": 1.0979634
+      },
+      "paid_yuan": "0.60310002"
+    },
+    "A_no_compress": {
+      "n": 120,
+      "input_tokens": 2232305,
+      "cache_hit_tokens": 1670272,
+      "cache_miss_tokens": 562033,
+      "cache_hit_fraction": 0.7482275047540546,
+      "output_tokens": 482,
+      "latency_seconds": {
+        "p50": 0.954655,
+        "p90": 1.315079
+      },
+      "paid_yuan": "0.59736644"
+    },
+    "A_no_context": {
+      "n": 240,
+      "input_tokens": 13018,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 13018,
+      "cache_hit_fraction": 0.0,
+      "output_tokens": 761,
+      "latency_seconds": {
+        "p50": 0.663791,
+        "p90": 1.0532333
+      },
+      "paid_yuan": "0.016062"
+    },
+    "B_compressor": {
+      "n": 548,
+      "input_tokens": 1740976,
+      "cache_hit_tokens": 139008,
+      "cache_miss_tokens": 1601968,
+      "cache_hit_fraction": 0.0798448686254147,
+      "output_tokens": 9481,
+      "latency_seconds": {
+        "p50": 0.6303715,
+        "p90": 0.9782787
+      },
+      "paid_yuan": "1.64267216"
+    },
+    "B_reader": {
+      "n": 240,
+      "input_tokens": 274802,
+      "cache_hit_tokens": 176256,
+      "cache_miss_tokens": 98546,
+      "cache_hit_fraction": 0.6413927118434364,
+      "output_tokens": 949,
+      "latency_seconds": {
+        "p50": 0.525033,
+        "p90": 0.9203449999999999
+      },
+      "paid_yuan": "0.10586712"
+    }
+  },
+  "smoke_paid_yuan": "0.06567332",
+  "full_paid_yuan": "2.96506774",
+  "smoke_plus_full_paid_yuan": "3.03074106",
+  "ledger": {
+    "spent_yuan": "3.03074106",
+    "reserved_yuan": "0",
+    "calls": 2624,
+    "attempts": 2624,
+    "input_cache_hit_tokens": 3319103,
+    "input_cache_miss_tokens": 2895659,
+    "completion_tokens": 17175,
+    "stage_totals": {
+      "spent_yuan": "2.96506774",
+      "reserved_yuan": "0",
+      "calls": 2588,
+      "attempts": 2588,
+      "input_cache_hit_tokens": 3261887,
+      "input_cache_miss_tokens": 2832158,
+      "completion_tokens": 16918
+    }
+  },
+  "full_balances": {
+    "start": {
+      "currency": "CNY",
+      "total_balance": "9.33",
+      "response": {
+        "is_available": true,
+        "balance_infos": [
+          {
+            "currency": "CNY",
+            "total_balance": "9.33",
+            "granted_balance": "0.00",
+            "topped_up_balance": "9.33"
+          }
+        ]
+      },
+      "started_utc": "2026-11-24T04:00:17.730706+00:00",
+      "ended_utc": "2026-11-24T04:00:17.828995+00:00",
+      "attempts": 1
+    },
+    "end": {
+      "currency": "CNY",
+      "total_balance": "9.01",
+      "response": {
+        "is_available": true,
+        "balance_infos": [
+          {
+            "currency": "CNY",
+            "total_balance": "9.01",
+            "granted_balance": "0.00",
+            "topped_up_balance": "9.01"
+          }
+        ]
+      },
+      "started_utc": "2026-11-24T04:04:19.829476+00:00",
+      "ended_utc": "2026-11-24T04:04:19.911128+00:00",
+      "attempts": 1
+    }
+  },
+  "smoke_balances": {
+    "before": {
+      "currency": "CNY",
+      "total_balance": "9.40",
+      "response": {
+        "is_available": true,
+        "balance_infos": [
+          {
+            "currency": "CNY",
+            "total_balance": "9.40",
+            "granted_balance": "0.00",
+            "topped_up_balance": "9.40"
+          }
+        ]
+      },
+      "started_utc": "2026-11-23T14:18:35.912865+00:00",
+      "ended_utc": "2026-11-23T14:18:36.038187+00:00",
+      "attempts": 1
+    },
+    "after": {
+      "currency": "CNY",
+      "total_balance": "9.40",
+      "response": {
+        "is_available": true,
+        "balance_infos": [
+          {
+            "currency": "CNY",
+            "total_balance": "9.40",
+            "granted_balance": "0.00",
+            "topped_up_balance": "9.40"
+          }
+        ]
+      },
+      "started_utc": "2026-11-23T14:19:20.647213+00:00",
+      "ended_utc": "2026-11-23T14:19:20.761114+00:00",
+      "attempts": 1
+    }
+  },
+  "full_account_drop_yuan": "0.32",
+  "full_account_drop_minus_ledger_yuan": "-2.64506774",
+  "overall_account_drop_yuan": "0.39",
+  "overall_account_drop_minus_ledger_yuan": "-2.64074106"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "v3",
+  "strategy": "checkpoint-3000",
+  "path": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints/checkpoint-3000",
+  "adapter_sha256": "97c85137ad8531ef79c26cdb049630ac10ef88650c937f98ae8cf013a08820a5",
+  "metrics_path": "/root/workplace/ctx-compressor/eval/sft_run_v3/checkpoint-3000/checkpoint-3000_results.json",
+  "metrics_sha256": "1f62d14418e2721df6953a1cf78e7cd67779468519bc69989521ca72b0254f70",
+  "steps_path": "/root/userfolder/ctx-compressor/eval_rollouts_v3/checkpoint-3000/steps.jsonl",
+  "steps_sha256": "51b9c94fb33756fc03f5efb9d909a6ffcbe9335f36489501e40c1dc5d725efbe",
+  "sft_v3_selected": "checkpoint-3000",
+  "sft_v3_loss_count": 886,
+  "threshold_loss_count": 956,
+  "n_trajectories": 1494,
+  "rule": "Use SFT v3 for at most 956 lost trajectories out of 1494; otherwise use SFT v2 checkpoint-2000."
+}

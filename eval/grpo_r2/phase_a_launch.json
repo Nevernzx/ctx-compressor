@@ -1,0 +1,121 @@
+{
+  "status": "running",
+  "stage": "F0",
+  "utc": "2026-11-22T18:10:41.059860+00:00",
+  "pipeline": {
+    "pid": 3036932,
+    "ppid": 1,
+    "pgrp": 3036932,
+    "sid": 3036932,
+    "tty_nr": 0,
+    "state": "S",
+    "cmdline": [
+      "/root/userfolder/ctx-compressor/envs/grpo/bin/python",
+      "-B",
+      "-u",
+      "/root/workplace/ctx-compressor/scripts/run_grpo_r2_pipeline.py"
+    ]
+  },
+  "stage_process": {
+    "pid": 3037979,
+    "ppid": 3036932,
+    "pgrp": 3036932,
+    "sid": 3036932,
+    "tty_nr": 0,
+    "state": "S",
+    "cmdline": [
+      "/root/userfolder/ctx-compressor/envs/reader/bin/python",
+      "-B",
+      "-u",
+      "/root/workplace/ctx-compressor/scripts/eval_grpo_r2.py",
+      "--name",
+      "merged_start"
+    ]
+  },
+  "status_path": "/root/userfolder/ctx-compressor/grpo_r2/pipeline_status.json",
+  "log": "/root/userfolder/ctx-compressor/grpo_r2/logs/F0.log",
+  "startup_admission": {
+    "stage": "F0",
+    "status": "waiting_gpu",
+    "utc": "2026-11-22T18:06:28.731165+00:00",
+    "gpu": {
+      "index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "memory_used_mib": 375,
+      "utilization_pct": 0
+    },
+    "consecutive_free": 3,
+    "required_free": 3,
+    "limit_mib": 2048,
+    "poll_seconds": 300,
+    "elapsed_seconds": 600.1211794840638,
+    "timeout_seconds": 129600
+  },
+  "stage_pidfile": "/root/userfolder/ctx-compressor/grpo_r2/pipeline.pid",
+  "last_active_monitor": {
+    "utc": "2026-11-22T18:10:29.083159+00:00",
+    "stage": "F0",
+    "pid": 3037979,
+    "alive": true,
+    "nonfinite": false,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 35273,
+    "utilization_pct": 100,
+    "external_free_bytes": 690746036224,
+    "overlay_free_bytes": 15644610560
+  },
+  "n_active_samples": 9,
+  "F0_preflight": {
+    "n": 1494,
+    "user_byte_mismatches": 0,
+    "token_id_mismatches": 0,
+    "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+  },
+  "F0_raw_file": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/merged_start/steps.jsonl",
+  "raw_bytes_seen": 19437275,
+  "first_step": 0,
+  "interactive_preflight": {
+    "n_reference": 30,
+    "text_mismatches": 1,
+    "token_id_mismatches": 1,
+    "smoke_training": {
+      "path": "/root/userfolder/ctx-compressor/grpo_r2/smoke_train/smoke_checks.json",
+      "bytes": 12944,
+      "sha256": "160bb62fe386d58942aa6049183a7551595d1a97f7a8a5c6fb2c2930bb638d9d"
+    },
+    "start_model": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r2/start_model.json",
+      "bytes": 854,
+      "sha256": "5fb8be8070cdc1dc915f6259498481f5276125d7ebb1d46fc26af6d359c7258f"
+    },
+    "merge": {
+      "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/merge_record.json",
+      "bytes": 620,
+      "sha256": "01cb8e27693fb113e662f90f60b7747a7159cc02eb9d665e03cafab60c496eb4"
+    },
+    "references": [
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/ref_adapter/greedy_reference.json",
+        "bytes": 13172,
+        "sha256": "3bd63bcf4cfaf9a09383fc99e2f4a9c43272cdc5b8f0e5dbadf4a141db2b6add"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/ref_merged/greedy_reference.json",
+        "bytes": 13391,
+        "sha256": "e981fca4c862cdaafa602146f38651401862de87933a3caaa8750a92fc4b93b7"
+      }
+    ],
+    "cpu_tests": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r2/phase_a_tests.json",
+      "bytes": 846,
+      "sha256": "3f543f1f99c27d733bf61885d4a5c579e440b1e4d96673e45c34f58805d03864"
+    }
+  },
+  "phase_a_receipt": {
+    "path": "/root/workplace/ctx-compressor/eval/grpo_r2/a_checks.json",
+    "bytes": 9052,
+    "sha256": "35755f3f0d9b2846b4726a843ef8d6d4b3440ce0775e1739cd72fd93c9d0c843"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "n_tasks": 451,
+  "n_questions": 1804,
+  "n_steps": 4771,
+  "n_paragraphs": 21100,
+  "budgets": {
+    "tight": 1876,
+    "mid": 2814,
+    "loose": 5628
+  },
+  "gold_audits": [
+    {
+      "task": 0,
+      "steps": 11,
+      "gold_mismatches": 0
+    },
+    {
+      "task": 225,
+      "steps": 11,
+      "gold_mismatches": 0
+    },
+    {
+      "task": 450,
+      "steps": 10,
+      "gold_mismatches": 0
+    }
+  ],
+  "source": {
+    "raw": {
+      "path": "/root/workplace/ctx-compressor/data/raw/musique/musique_ans_v1.0_dev.jsonl",
+      "size": 30439728,
+      "sha256": "15fa63794d18a94ce12411aca6e2327e65b6e83b0b1490efab3f1962e48abf3b"
+    },
+    "tokenizer": {
+      "path": "/root/workplace/ctx-compressor/data/raw/qwen3_tokenizer/tokenizer.json",
+      "size": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    }
+  },
+  "corp": {
+    "path": "/root/userfolder/ctx-compressor/test_v1/data/corpus_dev.jsonl",
+    "size": 22305143,
+    "sha256": "e319aa9fccfcecb08da8a8058a9c40ed421181cb7de0ced10206330c1bb4e281"
+  },
+  "tasks": {
+    "path": "/root/userfolder/ctx-compressor/test_v1/data/tasks.jsonl",
+    "size": 2593452,
+    "sha256": "55e30d5f3456a6c834c0e1d75edd940b3fd803673f840d38eec11dc8657380e9"
+  },
+  "reader_context_limit": {
+    "path": "/root/workplace/ctx-compressor/eval/test_v1/context_limit_preflight.json",
+    "size": 198,
+    "sha256": "bd2dee57f5ae0252b09e90a912a44b3a371f370d493f028f36386352962159f7"
+  },
+  "bm25_index": [
+    {
+      "path": "/root/userfolder/ctx-compressor/test_v1/data/bm25/data.csc.index.npy",
+      "size": 3675736,
+      "sha256": "28a9721a9164b4636050e15aaf362173b96e2639fa4b503c0be3e33d03a57750"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/test_v1/data/bm25/indices.csc.index.npy",
+      "size": 3675736,
+      "sha256": "357e1838829efb8559938725b6bed2dbe78ebe4671742ab4195e4e6518ae0fdf"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/test_v1/data/bm25/indptr.csc.index.npy",
+      "size": 636528,
+      "sha256": "1f32bb47c1e71a9c3356a2f9a2061b87afbfd7b62dd17cfbe06d124a77d62001"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/test_v1/data/bm25/params.index.json",
+      "size": 224,
+      "sha256": "673e85bc37424707f7bf34e49587a951af99a2baa27525afa9478ea9265efb5d"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/test_v1/data/bm25/vocab.index.json",
+      "size": 1439515,
+      "sha256": "539897267ec198f03ac70073e23b6ee91dd996b2a6f35e741f6b9514bde0af7c"
+    }
+  ]
+}

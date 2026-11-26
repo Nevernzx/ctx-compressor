@@ -1,0 +1,14 @@
+{
+  "tests": 844,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "matched_task16_tests": 820,
+  "elapsed_seconds": 14.374472416937351,
+  "xml_sha256": "5c75d23d1c3a32d6d7bbfa788bc2f9987846b7bccc26147486fe3c343eefd20a",
+  "xml": "/root/userfolder/ctx-compressor/reranker_v1/cpu_suite_xsm0duuv/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/reranker_v1/cpu_suite_xsm0duuv/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-24T10:24:53.997384+00:00"
+}

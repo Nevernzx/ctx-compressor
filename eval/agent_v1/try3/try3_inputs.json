@@ -1,0 +1,212 @@
+{
+  "status": "frozen",
+  "same_smoke_tasks_as": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try2/phase_p.json",
+    "size": 7831,
+    "sha256": "7d1af463943a1f3482653308d3a1630b123fb634d25ee2c2cedc49f604d21df0"
+  },
+  "data": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/data_preflight.json",
+    "size": 50658,
+    "sha256": "590d56d00e6834dc4dc7a748b7faa15f0d73ae2d74d611ba80f2be450d48c3c0"
+  },
+  "smoke_tasks": {
+    "musique": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/data/musique/smoke.jsonl",
+      "size": 8814,
+      "sha256": "a33188082268330e4a32597fc637b873724d0d9d8fe84cb9ebc339c7f3498c28"
+    },
+    "hotpotqa": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/data/hotpotqa/smoke.jsonl",
+      "size": 7690,
+      "sha256": "dc9a4adafdcf97da56dc5080d13e38201f12b052de587a049391e09fc9f1f310"
+    },
+    "2wiki": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/data/2wiki/smoke.jsonl",
+      "size": 7400,
+      "sha256": "3e1c979640441bf595046cf707b3f7c0ec0c5670d241d9b2031c6da6f68ffbfb"
+    }
+  },
+  "old_artifacts": {
+    "status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/status.json",
+      "size": 3503,
+      "sha256": "e24883cf17b307e51f44f20236e30e837c2cf6ca397a54938ea67a40737862ac"
+    },
+    "pipeline.pid": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/pipeline.pid",
+      "size": 8,
+      "sha256": "f244eeb70f58ee79e2dd9700fba242b149bffed31450f947ce7a06d4bd49dc46"
+    },
+    "logs/smoke.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/logs/smoke.log",
+      "size": 183698,
+      "sha256": "395fe5c0c495d9c4f3127b11ec18b54598bfa58a83147e33dcf81912d0d759da"
+    },
+    "launcher.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/launcher.log",
+      "size": 1087,
+      "sha256": "84825e0800edeade88dae615597ae6afc36f0b25e48f3dd10f38d3ce4b31ddb5"
+    },
+    "resource_monitor.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/resource_monitor.jsonl",
+      "size": 12791,
+      "sha256": "4b08335e27bc25a234c5436c0c888183706c6e3ba97568ab47e9bd0a115cbec9"
+    },
+    "pipeline_monitor.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/pipeline_monitor.jsonl",
+      "size": 9065,
+      "sha256": "e25d254d91a567a4936fa005e12e3e39175c29a76d71e873c8fb8af1cb7129ec"
+    },
+    "smoke/episodes.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/smoke/episodes.jsonl",
+      "size": 6485424,
+      "sha256": "5860481ee8753ba4962adb1fc08a3417bd43c66bc0bc6a3f41d64bfc0dcdabb4"
+    },
+    "smoke/gpu_snapshots.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/smoke/gpu_snapshots.jsonl",
+      "size": 9265,
+      "sha256": "4a4c9892b59b3f24704250c2cd08b9ee2408d4842dfe92e12ef20d14bfd11fea"
+    },
+    "smoke_queue/status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/smoke_queue/status.json",
+      "size": 547,
+      "sha256": "9b601f33722a54c7c4a0e5ddefcc340c9b3f6c7748c22bb3c08a53d1a2bbaf28"
+    },
+    "phase_p.json": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/phase_p.json",
+      "size": 7166,
+      "sha256": "e34ab7ca06c6839caf0aadec5066a0af9ac5e4512355ab88b6636da4dcda0fe1"
+    },
+    "original_prompt": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/prompts.json",
+      "size": 1352,
+      "sha256": "48718c8041b318ba18f162cce27a758415f4becf94f9c1e9fd2d2979871346f6"
+    },
+    "try2_phase_p": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/try2/phase_p.json",
+      "size": 7831,
+      "sha256": "7d1af463943a1f3482653308d3a1630b123fb634d25ee2c2cedc49f604d21df0"
+    },
+    "try2_cpu_tests": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/try2/monitor_scope_cpu_tests.json",
+      "size": 10719,
+      "sha256": "b15c7f7c186331df22640ee8f718a98d91cd0947a541e1bd1f25c97075399c0d"
+    },
+    "try2/status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/status.json",
+      "size": 3518,
+      "sha256": "ddc1c092dba9316d5c1a80bd08d7b2d997e9cbddebaec1d4a2b3a9c8d41eec03"
+    },
+    "try2/logs/smoke.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/logs/smoke.log",
+      "size": 183721,
+      "sha256": "1cc9a5a93b234d60ada88608f026182faf2794ffddcf7e2d89ab4dcd6820b059"
+    },
+    "try2/resource_monitor.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/resource_monitor.jsonl",
+      "size": 13412,
+      "sha256": "8c855aae9b63f6f22aef47769d0cc38d1b4fd5c3a67f1b3c48d0a48b9e7c6a7b"
+    },
+    "try2/pipeline_monitor.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/pipeline_monitor.jsonl",
+      "size": 9542,
+      "sha256": "be8165c709ba35b029ac66a6b0615d0b7509beac11e5d171bbca22e64d934b58"
+    },
+    "try2/smoke/episodes.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/smoke/episodes.jsonl",
+      "size": 6450996,
+      "sha256": "48ead7df730112fb6c40039dcb678d44c979acd0175e6bed5ae709285451bbc8"
+    },
+    "try2/smoke/root_usage_check.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/smoke/root_usage_check.json",
+      "size": 1702,
+      "sha256": "4876f63eefeee34b3c688c16c5f617cff40efcef183f3f8a749dac1e88e80c3e"
+    },
+    "try2/smoke/gpu_snapshots.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/smoke/gpu_snapshots.jsonl",
+      "size": 9266,
+      "sha256": "903c8d069f4faf420bf6076cea472d8a84714e46ef42550699091102f5fc8ec6"
+    },
+    "try2/smoke/root_telemetry.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/smoke/root_telemetry.jsonl",
+      "size": 510724,
+      "sha256": "2c9713fe57bcbc75cacea1a66e5e5ab1e869ca7ac51b3209ad63b6853516d45d"
+    },
+    "try2/smoke/workplace_telemetry.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/smoke/workplace_telemetry.jsonl",
+      "size": 27280,
+      "sha256": "59621ac9c3f7074c0d31562b3af71ad4e65d37a0510d67871f40b313ae8e34dc"
+    },
+    "try2/ipc_check.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/try2/ipc_check.json",
+      "size": 973,
+      "sha256": "058ba1806c603b05eaf7cce889c9072340d3f7fb500c8922900c1aaa076b949e"
+    }
+  },
+  "historical_root_peaks": [
+    {
+      "rule": "d",
+      "attempt": "original",
+      "engine": "agent (Qwen3-8B)",
+      "source_stage": "agent_loaded",
+      "utc": "2026-11-25T11:11:03.721894+00:00",
+      "growth_bytes": 402345984,
+      "basis": "relative to the adjacent prior worker sample",
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/agent_v1/smoke_storage_failure.json",
+        "size": 4152,
+        "sha256": "78a08448b1cafc8fdd9af4da172bb5b1e1e6cad81f8e1cc79c77bbb3c237b418"
+      }
+    },
+    {
+      "rule": "d",
+      "attempt": "try2",
+      "engine": "r4 compressor",
+      "source_stage": "periodic",
+      "utc": "2026-11-25T12:04:11.814104+00:00",
+      "growth_bytes": 400879616,
+      "basis": "relative to the worker opening baseline",
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/agent_v1/try2/root_storage_attribution.json",
+        "size": 10161,
+        "sha256": "6c9fb4df9225f72318fb67dffc89df42126069672ca635ff291b7646c868bdd7"
+      }
+    }
+  ],
+  "pre_format_fix": {
+    "no_compress": {
+      "format_invalid": 0,
+      "rounds": 145
+    },
+    "latest": {
+      "format_invalid": 0,
+      "rounds": 168
+    },
+    "oracle": {
+      "format_invalid": 5,
+      "rounds": 137
+    },
+    "RR-τ reselect": {
+      "format_invalid": 5,
+      "rounds": 144
+    },
+    "RR-τ append": {
+      "format_invalid": 6,
+      "rounds": 149
+    },
+    "LLMLingua-2": {
+      "format_invalid": 0,
+      "rounds": 136
+    },
+    "r4 reselect": {
+      "format_invalid": 19,
+      "rounds": 163
+    },
+    "r4 append": {
+      "format_invalid": 20,
+      "rounds": 158
+    }
+  },
+  "prefill": "Thought:"
+}

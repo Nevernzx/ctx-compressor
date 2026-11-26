@@ -1,0 +1,76 @@
+{
+  "kind": "reranker",
+  "status": "complete",
+  "n_states": 300,
+  "warmup_n": 20,
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.57.6"
+  },
+  "dtype": "BF16",
+  "checkpoint": {
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/model.safetensors",
+    "size": 2383141336,
+    "sha256": "c3b41d67662ed0dd9a46a39c696b2060b323895dec844254b1d34ca604de73c3"
+  },
+  "candidate_batch": "all candidates for a single step together",
+  "payloads_pretokenized": true,
+  "load_wall_seconds": 1.7859710408374667,
+  "sequential_seconds": {
+    "n": 300,
+    "min": 0.06972692720592022,
+    "max": 0.34261751966550946,
+    "mean": 0.14925295362093796,
+    "p50": 0.1462675053626299,
+    "p90": 0.199921985436231
+  },
+  "prompt_tokens": {
+    "n": 300,
+    "min": 3935,
+    "max": 9552,
+    "mean": 5963.733333333334,
+    "p50": 5750.0,
+    "p90": 7695.600000000001
+  },
+  "pair_prompt_tokens": {
+    "n": 6620,
+    "min": 164,
+    "max": 512,
+    "mean": 270.25981873111783,
+    "p50": 253.0,
+    "p90": 357.0
+  },
+  "n_truncated_pairs": 71,
+  "output_tokens": {
+    "n": 300,
+    "min": 0,
+    "max": 0,
+    "mean": 0.0,
+    "p50": 0.0,
+    "p90": 0.0
+  },
+  "submitted_together": {
+    "n_states": 300,
+    "wall_seconds": 46.301348221022636,
+    "steps_per_second": 6.479292969352201
+  },
+  "candidates_per_second": 142.9763981903719,
+  "per_state": {
+    "n": 300,
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/latency/reranker/per_state.jsonl",
+    "size": 109634,
+    "sha256": "0898a0a45378ac7d9632aa38fe900acd8572b6623f98610a39d671e64cca31c0"
+  },
+  "state_selection": {
+    "n": 300,
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/data/latency_states.jsonl",
+    "size": 4467567,
+    "sha256": "def775be771a2cc318bc20bcae52f293343c58cbe36f58bf831d64beda59423e"
+  },
+  "gpu0_background": {
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/latency/reranker/gpu0_background.jsonl",
+    "size": 392,
+    "sha256": "31af2678e0e1958c19ecd51a85e45275e884387ab6d57a78a2ba5e4f155ec812"
+  },
+  "gpu0_role": "read-only context for latency; separate job on same machine"
+}

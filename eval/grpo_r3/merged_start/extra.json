@@ -1,0 +1,1890 @@
+{
+  "configs": {
+    "reselect|tight": {
+      "n_steps": 2326,
+      "n_valid": 2299,
+      "mean_added_per_valid": {
+        "sum": 2766,
+        "n": 2299,
+        "mean": 1.2031317964332318
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2299,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 1832,
+          "n": 2299,
+          "rate": 0.7968682035667681
+        },
+        "2": {
+          "count": 467,
+          "n": 2299,
+          "rate": 0.20313179643323184
+        },
+        "3+": {
+          "count": 0,
+          "n": 2299,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 466,
+          "n": 525,
+          "rate": 0.8876190476190476
+        },
+        "different": {
+          "count": 1710,
+          "n": 1819,
+          "rate": 0.9400769653655855
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 464,
+          "n": 509,
+          "rate": 0.9115913555992141
+        },
+        "different": {
+          "count": 1704,
+          "n": 1784,
+          "rate": 0.9551569506726457
+        }
+      },
+      "multiadd_contains_current_gold": {
+        "count": 384,
+        "n": 467,
+        "rate": 0.8222698072805139
+      },
+      "multiadd_fragment_gold": {
+        "count": 391,
+        "n": 934,
+        "rate": 0.41862955032119914
+      },
+      "drop_precision": {
+        "count": 291,
+        "n": 378,
+        "rate": 0.7698412698412699
+      },
+      "claude_nongold_kept_drop_old_gold": {
+        "count": 79,
+        "n": 920,
+        "rate": 0.08586956521739131
+      },
+      "claude_allgold_kept_drop_old_gold": {
+        "count": 4,
+        "n": 1130,
+        "rate": 0.0035398230088495575
+      },
+      "kept_gold_survival": {
+        "count": 8948,
+        "n": 9035,
+        "rate": 0.9903707802988378
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 9,
+          "n": 249,
+          "rate": 0.03614457831325301
+        },
+        "new_gold_not_added": {
+          "count": 78,
+          "n": 249,
+          "rate": 0.3132530120481928
+        },
+        "old_gold_dropped": {
+          "count": 49,
+          "n": 249,
+          "rate": 0.19678714859437751
+        },
+        "both": {
+          "count": 8,
+          "n": 249,
+          "rate": 0.0321285140562249
+        },
+        "none": {
+          "count": 105,
+          "n": 249,
+          "rate": 0.42168674698795183
+        }
+      },
+      "occupancy": {
+        "n": 249,
+        "mean": 0.6838740891069608,
+        "max": 0.9994669509594882
+      },
+      "cached_cost": {
+        "n": 249,
+        "mean": 2283.554618473894,
+        "relative_to_no_compress": 0.07807406493037407
+      },
+      "heldout_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1134.163,
+          "n": 2326,
+          "mean": -0.48760232158211525
+        },
+        "n_lost": {
+          "sum": 255,
+          "n": 2326,
+          "mean": 0.10963026655202064
+        },
+        "used_per_1000": {
+          "sum": 1704.326,
+          "n": 2326,
+          "mean": 0.7327282889079966
+        },
+        "invalid": {
+          "count": 27,
+          "n": 2326,
+          "rate": 0.011607910576096303
+        }
+      },
+      "start_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1171.2465,
+          "n": 2326,
+          "mean": -0.5035453568357695
+        },
+        "n_lost": {
+          "sum": 255,
+          "n": 2326,
+          "mean": 0.10963026655202064
+        },
+        "used_per_1000": {
+          "sum": 1742.493,
+          "n": 2326,
+          "mean": 0.7491371453138435
+        },
+        "invalid": {
+          "count": 45,
+          "n": 2326,
+          "rate": 0.01934651762682717
+        }
+      },
+      "objective_deltas_vs_start": {
+        "n_steps": 2326,
+        "reward": 0.01594303525365426,
+        "n_lost": 0.0,
+        "used_per_1000": -0.016408856405846883,
+        "invalid_rate": -0.007738607050730867
+      },
+      "raw_diff_identical_state": {
+        "count": 89,
+        "n": 2092,
+        "rate": 0.04254302103250478
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 89,
+        "n": 2092,
+        "rate": 0.04254302103250478
+      }
+    },
+    "reselect|mid": {
+      "n_steps": 2326,
+      "n_valid": 2324,
+      "mean_added_per_valid": {
+        "sum": 2817,
+        "n": 2324,
+        "mean": 1.2121342512908777
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2324,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 1831,
+          "n": 2324,
+          "rate": 0.7878657487091222
+        },
+        "2": {
+          "count": 493,
+          "n": 2324,
+          "rate": 0.2121342512908778
+        },
+        "3+": {
+          "count": 0,
+          "n": 2324,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 473,
+          "n": 525,
+          "rate": 0.900952380952381
+        },
+        "different": {
+          "count": 1731,
+          "n": 1818,
+          "rate": 0.9521452145214522
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 472,
+          "n": 518,
+          "rate": 0.9111969111969112
+        },
+        "different": {
+          "count": 1723,
+          "n": 1800,
+          "rate": 0.9572222222222222
+        }
+      },
+      "multiadd_contains_current_gold": {
+        "count": 409,
+        "n": 493,
+        "rate": 0.8296146044624746
+      },
+      "multiadd_fragment_gold": {
+        "count": 418,
+        "n": 986,
+        "rate": 0.4239350912778905
+      },
+      "drop_precision": {
+        "count": 304,
+        "n": 385,
+        "rate": 0.7896103896103897
+      },
+      "claude_nongold_kept_drop_old_gold": {
+        "count": 73,
+        "n": 942,
+        "rate": 0.07749469214437367
+      },
+      "claude_allgold_kept_drop_old_gold": {
+        "count": 3,
+        "n": 1133,
+        "rate": 0.00264783759929391
+      },
+      "kept_gold_survival": {
+        "count": 8993,
+        "n": 9074,
+        "rate": 0.9910733965175226
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 2,
+          "n": 249,
+          "rate": 0.008032128514056224
+        },
+        "new_gold_not_added": {
+          "count": 83,
+          "n": 249,
+          "rate": 0.3333333333333333
+        },
+        "old_gold_dropped": {
+          "count": 47,
+          "n": 249,
+          "rate": 0.18875502008032127
+        },
+        "both": {
+          "count": 5,
+          "n": 249,
+          "rate": 0.020080321285140562
+        },
+        "none": {
+          "count": 112,
+          "n": 249,
+          "rate": 0.4497991967871486
+        }
+      },
+      "occupancy": {
+        "n": 249,
+        "mean": 0.46900466114636247,
+        "max": 0.9875621890547264
+      },
+      "cached_cost": {
+        "n": 249,
+        "mean": 2337.8295180722876,
+        "relative_to_no_compress": 0.07992970788327458
+      },
+      "heldout_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1082.5515,
+          "n": 2326,
+          "mean": -0.46541337059329324
+        },
+        "n_lost": {
+          "sum": 220,
+          "n": 2326,
+          "mean": 0.09458297506448839
+        },
+        "used_per_1000": {
+          "sum": 1721.103,
+          "n": 2326,
+          "mean": 0.7399411006018917
+        },
+        "invalid": {
+          "count": 2,
+          "n": 2326,
+          "rate": 0.0008598452278589854
+        }
+      },
+      "start_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1098.1885,
+          "n": 2326,
+          "mean": -0.47213607050730866
+        },
+        "n_lost": {
+          "sum": 217,
+          "n": 2326,
+          "mean": 0.09329320722269992
+        },
+        "used_per_1000": {
+          "sum": 1758.377,
+          "n": 2326,
+          "mean": 0.7559660361134996
+        },
+        "invalid": {
+          "count": 2,
+          "n": 2326,
+          "rate": 0.0008598452278589854
+        }
+      },
+      "objective_deltas_vs_start": {
+        "n_steps": 2326,
+        "reward": 0.0067226999140154176,
+        "n_lost": 0.0012897678417884695,
+        "used_per_1000": -0.016024935511607885,
+        "invalid_rate": 0.0
+      },
+      "raw_diff_identical_state": {
+        "count": 90,
+        "n": 2103,
+        "rate": 0.042796005706134094
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 90,
+        "n": 2103,
+        "rate": 0.042796005706134094
+      }
+    },
+    "reselect|loose": {
+      "n_steps": 2326,
+      "n_valid": 2324,
+      "mean_added_per_valid": {
+        "sum": 2811,
+        "n": 2324,
+        "mean": 1.209552495697074
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2324,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 1837,
+          "n": 2324,
+          "rate": 0.790447504302926
+        },
+        "2": {
+          "count": 487,
+          "n": 2324,
+          "rate": 0.20955249569707401
+        },
+        "3+": {
+          "count": 0,
+          "n": 2324,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 476,
+          "n": 523,
+          "rate": 0.9101338432122371
+        },
+        "different": {
+          "count": 1725,
+          "n": 1818,
+          "rate": 0.9488448844884488
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 475,
+          "n": 518,
+          "rate": 0.916988416988417
+        },
+        "different": {
+          "count": 1718,
+          "n": 1800,
+          "rate": 0.9544444444444444
+        }
+      },
+      "multiadd_contains_current_gold": {
+        "count": 406,
+        "n": 487,
+        "rate": 0.8336755646817249
+      },
+      "multiadd_fragment_gold": {
+        "count": 413,
+        "n": 974,
+        "rate": 0.4240246406570842
+      },
+      "drop_precision": {
+        "count": 302,
+        "n": 389,
+        "rate": 0.7763496143958869
+      },
+      "claude_nongold_kept_drop_old_gold": {
+        "count": 78,
+        "n": 944,
+        "rate": 0.0826271186440678
+      },
+      "claude_allgold_kept_drop_old_gold": {
+        "count": 4,
+        "n": 1131,
+        "rate": 0.0035366931918656055
+      },
+      "kept_gold_survival": {
+        "count": 8969,
+        "n": 9056,
+        "rate": 0.9903931095406361
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 2,
+          "n": 249,
+          "rate": 0.008032128514056224
+        },
+        "new_gold_not_added": {
+          "count": 84,
+          "n": 249,
+          "rate": 0.3373493975903614
+        },
+        "old_gold_dropped": {
+          "count": 48,
+          "n": 249,
+          "rate": 0.1927710843373494
+        },
+        "both": {
+          "count": 6,
+          "n": 249,
+          "rate": 0.024096385542168676
+        },
+        "none": {
+          "count": 109,
+          "n": 249,
+          "rate": 0.43775100401606426
+        }
+      },
+      "occupancy": {
+        "n": 249,
+        "mean": 0.23346977105293956,
+        "max": 0.4937810945273632
+      },
+      "cached_cost": {
+        "n": 249,
+        "mean": 2335.8319277108417,
+        "relative_to_no_compress": 0.07986141085270562
+      },
+      "heldout_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1086.8455,
+          "n": 2326,
+          "mean": -0.4672594582975064
+        },
+        "n_lost": {
+          "sum": 227,
+          "n": 2326,
+          "mean": 0.09759243336199484
+        },
+        "used_per_1000": {
+          "sum": 1715.691,
+          "n": 2326,
+          "mean": 0.7376143594153053
+        },
+        "invalid": {
+          "count": 2,
+          "n": 2326,
+          "rate": 0.0008598452278589854
+        }
+      },
+      "start_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1091.537,
+          "n": 2326,
+          "mean": -0.46927644024075665
+        },
+        "n_lost": {
+          "sum": 210,
+          "n": 2326,
+          "mean": 0.09028374892519346
+        },
+        "used_per_1000": {
+          "sum": 1759.074,
+          "n": 2326,
+          "mean": 0.7562656921754085
+        },
+        "invalid": {
+          "count": 2,
+          "n": 2326,
+          "rate": 0.0008598452278589854
+        }
+      },
+      "objective_deltas_vs_start": {
+        "n_steps": 2326,
+        "reward": 0.002016981943250229,
+        "n_lost": 0.007308684436801383,
+        "used_per_1000": -0.018651332760103223,
+        "invalid_rate": 0.0
+      },
+      "raw_diff_identical_state": {
+        "count": 92,
+        "n": 2072,
+        "rate": 0.0444015444015444
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 92,
+        "n": 2072,
+        "rate": 0.0444015444015444
+      }
+    },
+    "append|tight": {
+      "n_steps": 2326,
+      "n_valid": 2226,
+      "mean_added_per_valid": {
+        "sum": 2619,
+        "n": 2226,
+        "mean": 1.1765498652291104
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2226,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 1833,
+          "n": 2226,
+          "rate": 0.8234501347708895
+        },
+        "2": {
+          "count": 393,
+          "n": 2226,
+          "rate": 0.1765498652291105
+        },
+        "3+": {
+          "count": 0,
+          "n": 2226,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 443,
+          "n": 525,
+          "rate": 0.8438095238095238
+        },
+        "different": {
+          "count": 1671,
+          "n": 1821,
+          "rate": 0.9176276771004942
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 442,
+          "n": 482,
+          "rate": 0.91701244813278
+        },
+        "different": {
+          "count": 1666,
+          "n": 1738,
+          "rate": 0.9585730724971231
+        }
+      },
+      "multiadd_contains_current_gold": {
+        "count": 327,
+        "n": 393,
+        "rate": 0.8320610687022901
+      },
+      "multiadd_fragment_gold": {
+        "count": 333,
+        "n": 786,
+        "rate": 0.42366412213740456
+      },
+      "drop_precision": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "claude_nongold_kept_drop_old_gold": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "claude_allgold_kept_drop_old_gold": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "kept_gold_survival": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 38,
+          "n": 249,
+          "rate": 0.15261044176706828
+        },
+        "new_gold_not_added": {
+          "count": 86,
+          "n": 249,
+          "rate": 0.3453815261044177
+        },
+        "old_gold_dropped": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "both": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "none": {
+          "count": 125,
+          "n": 249,
+          "rate": 0.5020080321285141
+        }
+      },
+      "occupancy": {
+        "n": 249,
+        "mean": 0.7475552529949218,
+        "max": 0.9994669509594882
+      },
+      "cached_cost": {
+        "n": 249,
+        "mean": 2062.7508032128503,
+        "relative_to_no_compress": 0.07052484702680321
+      },
+      "heldout_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1277.8375,
+          "n": 2326,
+          "mean": -0.5493712381771282
+        },
+        "n_lost": {
+          "sum": 232,
+          "n": 2326,
+          "mean": 0.0997420464316423
+        },
+        "used_per_1000": {
+          "sum": 1891.675,
+          "n": 2326,
+          "mean": 0.813273860705073
+        },
+        "invalid": {
+          "count": 100,
+          "n": 2326,
+          "rate": 0.04299226139294927
+        }
+      },
+      "start_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1291.0155,
+          "n": 2326,
+          "mean": -0.555036758383491
+        },
+        "n_lost": {
+          "sum": 232,
+          "n": 2326,
+          "mean": 0.0997420464316423
+        },
+        "used_per_1000": {
+          "sum": 1906.031,
+          "n": 2326,
+          "mean": 0.8194458297506448
+        },
+        "invalid": {
+          "count": 106,
+          "n": 2326,
+          "rate": 0.04557179707652623
+        }
+      },
+      "objective_deltas_vs_start": {
+        "n_steps": 2326,
+        "reward": 0.005665520206362795,
+        "n_lost": 0.0,
+        "used_per_1000": -0.0061719690455718235,
+        "invalid_rate": -0.0025795356835769598
+      },
+      "raw_diff_identical_state": {
+        "count": 51,
+        "n": 2148,
+        "rate": 0.023743016759776536
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 51,
+        "n": 2148,
+        "rate": 0.023743016759776536
+      }
+    },
+    "append|mid": {
+      "n_steps": 2326,
+      "n_valid": 2318,
+      "mean_added_per_valid": {
+        "sum": 2757,
+        "n": 2318,
+        "mean": 1.1893874029335634
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2318,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 1879,
+          "n": 2318,
+          "rate": 0.8106125970664366
+        },
+        "2": {
+          "count": 439,
+          "n": 2318,
+          "rate": 0.1893874029335634
+        },
+        "3+": {
+          "count": 0,
+          "n": 2318,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 474,
+          "n": 526,
+          "rate": 0.9011406844106464
+        },
+        "different": {
+          "count": 1725,
+          "n": 1814,
+          "rate": 0.9509371554575524
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 473,
+          "n": 515,
+          "rate": 0.9184466019417475
+        },
+        "different": {
+          "count": 1720,
+          "n": 1797,
+          "rate": 0.9571508069003896
+        }
+      },
+      "multiadd_contains_current_gold": {
+        "count": 367,
+        "n": 439,
+        "rate": 0.835990888382688
+      },
+      "multiadd_fragment_gold": {
+        "count": 373,
+        "n": 878,
+        "rate": 0.42482915717539865
+      },
+      "drop_precision": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "claude_nongold_kept_drop_old_gold": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "claude_allgold_kept_drop_old_gold": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "kept_gold_survival": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 5,
+          "n": 249,
+          "rate": 0.020080321285140562
+        },
+        "new_gold_not_added": {
+          "count": 94,
+          "n": 249,
+          "rate": 0.37751004016064255
+        },
+        "old_gold_dropped": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "both": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "none": {
+          "count": 150,
+          "n": 249,
+          "rate": 0.6024096385542169
+        }
+      },
+      "occupancy": {
+        "n": 249,
+        "mean": 0.5367725343449136,
+        "max": 0.9761904761904762
+      },
+      "cached_cost": {
+        "n": 249,
+        "mean": 2204.3162650602403,
+        "relative_to_no_compress": 0.07536492878826245
+      },
+      "heldout_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1124.4395,
+          "n": 2326,
+          "mean": -0.4834219690455718
+        },
+        "n_lost": {
+          "sum": 141,
+          "n": 2326,
+          "mean": 0.06061908856405847
+        },
+        "used_per_1000": {
+          "sum": 1950.879,
+          "n": 2326,
+          "mean": 0.8387269991401547
+        },
+        "invalid": {
+          "count": 8,
+          "n": 2326,
+          "rate": 0.0034393809114359416
+        }
+      },
+      "start_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1131.366,
+          "n": 2326,
+          "mean": -0.48639982803095444
+        },
+        "n_lost": {
+          "sum": 138,
+          "n": 2326,
+          "mean": 0.05932932072226999
+        },
+        "used_per_1000": {
+          "sum": 1968.732,
+          "n": 2326,
+          "mean": 0.846402407566638
+        },
+        "invalid": {
+          "count": 9,
+          "n": 2326,
+          "rate": 0.003869303525365434
+        }
+      },
+      "objective_deltas_vs_start": {
+        "n_steps": 2326,
+        "reward": 0.0029778589853826642,
+        "n_lost": 0.0012897678417884764,
+        "used_per_1000": -0.007675408426483288,
+        "invalid_rate": -0.00042992261392949243
+      },
+      "raw_diff_identical_state": {
+        "count": 57,
+        "n": 2133,
+        "rate": 0.026722925457102673
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 57,
+        "n": 2133,
+        "rate": 0.026722925457102673
+      }
+    },
+    "append|loose": {
+      "n_steps": 2326,
+      "n_valid": 2324,
+      "mean_added_per_valid": {
+        "sum": 2766,
+        "n": 2324,
+        "mean": 1.1901893287435457
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 2324,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 1882,
+          "n": 2324,
+          "rate": 0.8098106712564543
+        },
+        "2": {
+          "count": 442,
+          "n": 2324,
+          "rate": 0.1901893287435456
+        },
+        "3+": {
+          "count": 0,
+          "n": 2324,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 474,
+          "n": 527,
+          "rate": 0.8994307400379506
+        },
+        "different": {
+          "count": 1730,
+          "n": 1814,
+          "rate": 0.9536934950385888
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 473,
+          "n": 518,
+          "rate": 0.9131274131274131
+        },
+        "different": {
+          "count": 1725,
+          "n": 1800,
+          "rate": 0.9583333333333334
+        }
+      },
+      "multiadd_contains_current_gold": {
+        "count": 373,
+        "n": 442,
+        "rate": 0.8438914027149321
+      },
+      "multiadd_fragment_gold": {
+        "count": 379,
+        "n": 884,
+        "rate": 0.4287330316742081
+      },
+      "drop_precision": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "claude_nongold_kept_drop_old_gold": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "claude_allgold_kept_drop_old_gold": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "kept_gold_survival": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 2,
+          "n": 249,
+          "rate": 0.008032128514056224
+        },
+        "new_gold_not_added": {
+          "count": 96,
+          "n": 249,
+          "rate": 0.3855421686746988
+        },
+        "old_gold_dropped": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "both": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "none": {
+          "count": 151,
+          "n": 249,
+          "rate": 0.606425702811245
+        }
+      },
+      "occupancy": {
+        "n": 249,
+        "mean": 0.2703286493522063,
+        "max": 0.6382373845060412
+      },
+      "cached_cost": {
+        "n": 249,
+        "mean": 2219.455622489959,
+        "relative_to_no_compress": 0.07588253899360184
+      },
+      "heldout_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1119.4725,
+          "n": 2326,
+          "mean": -0.481286543422184
+        },
+        "n_lost": {
+          "sum": 137,
+          "n": 2326,
+          "mean": 0.0588993981083405
+        },
+        "used_per_1000": {
+          "sum": 1960.945,
+          "n": 2326,
+          "mean": 0.843054600171969
+        },
+        "invalid": {
+          "count": 2,
+          "n": 2326,
+          "rate": 0.0008598452278589854
+        }
+      },
+      "start_reward_v2": {
+        "mu": 0.5,
+        "n_steps": 2326,
+        "reward": {
+          "sum": -1118.145,
+          "n": 2326,
+          "mean": -0.4807158211521926
+        },
+        "n_lost": {
+          "sum": 129,
+          "n": 2326,
+          "mean": 0.055460017196904556
+        },
+        "used_per_1000": {
+          "sum": 1972.29,
+          "n": 2326,
+          "mean": 0.8479320722269992
+        },
+        "invalid": {
+          "count": 3,
+          "n": 2326,
+          "rate": 0.0012897678417884782
+        }
+      },
+      "objective_deltas_vs_start": {
+        "n_steps": 2326,
+        "reward": -0.0005707222699914416,
+        "n_lost": 0.0034393809114359464,
+        "used_per_1000": -0.004877472055030196,
+        "invalid_rate": -0.00042992261392949275
+      },
+      "raw_diff_identical_state": {
+        "count": 67,
+        "n": 2086,
+        "rate": 0.03211888782358581
+      },
+      "raw_diff_identical_model_prompt": {
+        "count": 67,
+        "n": 2086,
+        "rate": 0.03211888782358581
+      }
+    }
+  },
+  "modes": {
+    "reselect": {
+      "n_steps": 6978,
+      "n_valid": 6947,
+      "mean_added_per_valid": {
+        "sum": 8394,
+        "n": 6947,
+        "mean": 1.2082913487836475
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 6947,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 5500,
+          "n": 6947,
+          "rate": 0.7917086512163524
+        },
+        "2": {
+          "count": 1447,
+          "n": 6947,
+          "rate": 0.2082913487836476
+        },
+        "3+": {
+          "count": 0,
+          "n": 6947,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1415,
+          "n": 1573,
+          "rate": 0.8995549904640814
+        },
+        "different": {
+          "count": 5166,
+          "n": 5455,
+          "rate": 0.9470210815765353
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1411,
+          "n": 1545,
+          "rate": 0.9132686084142395
+        },
+        "different": {
+          "count": 5145,
+          "n": 5384,
+          "rate": 0.9556092124814265
+        }
+      }
+    },
+    "append": {
+      "n_steps": 6978,
+      "n_valid": 6868,
+      "mean_added_per_valid": {
+        "sum": 8142,
+        "n": 6868,
+        "mean": 1.185497961560862
+      },
+      "add_counts": {
+        "0": {
+          "count": 0,
+          "n": 6868,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 5594,
+          "n": 6868,
+          "rate": 0.814502038439138
+        },
+        "2": {
+          "count": 1274,
+          "n": 6868,
+          "rate": 0.18549796156086196
+        },
+        "3+": {
+          "count": 0,
+          "n": 6868,
+          "rate": 0.0
+        }
+      },
+      "new_gold_by_title": {
+        "same": {
+          "count": 1391,
+          "n": 1578,
+          "rate": 0.8814955640050697
+        },
+        "different": {
+          "count": 5126,
+          "n": 5449,
+          "rate": 0.9407230684529272
+        }
+      },
+      "current_gold_valid_new_by_title": {
+        "same": {
+          "count": 1388,
+          "n": 1515,
+          "rate": 0.9161716171617161
+        },
+        "different": {
+          "count": 5111,
+          "n": 5335,
+          "rate": 0.9580131208997188
+        }
+      }
+    }
+  },
+  "combined": {
+    "n_steps": 13956,
+    "n_valid": 13815,
+    "mean_added_per_valid": {
+      "sum": 16536,
+      "n": 13815,
+      "mean": 1.1969598262757872
+    },
+    "add_counts": {
+      "0": {
+        "count": 0,
+        "n": 13815,
+        "rate": 0.0
+      },
+      "1": {
+        "count": 11094,
+        "n": 13815,
+        "rate": 0.8030401737242128
+      },
+      "2": {
+        "count": 2721,
+        "n": 13815,
+        "rate": 0.19695982627578718
+      },
+      "3+": {
+        "count": 0,
+        "n": 13815,
+        "rate": 0.0
+      }
+    },
+    "new_gold_by_title": {
+      "same": {
+        "count": 2806,
+        "n": 3151,
+        "rate": 0.8905109489051095
+      },
+      "different": {
+        "count": 10292,
+        "n": 10904,
+        "rate": 0.9438738077769626
+      }
+    },
+    "current_gold_valid_new_by_title": {
+      "same": {
+        "count": 2799,
+        "n": 3060,
+        "rate": 0.9147058823529411
+      },
+      "different": {
+        "count": 10256,
+        "n": 10719,
+        "rate": 0.9568056721709115
+      }
+    },
+    "multiadd_contains_current_gold": {
+      "count": 2266,
+      "n": 2721,
+      "rate": 0.8327820654171261
+    },
+    "multiadd_fragment_gold": {
+      "count": 2307,
+      "n": 5442,
+      "rate": 0.4239250275633958
+    },
+    "drop_precision": {
+      "count": 897,
+      "n": 1152,
+      "rate": 0.7786458333333334
+    },
+    "claude_nongold_kept_drop_old_gold": {
+      "count": 230,
+      "n": 2806,
+      "rate": 0.08196721311475409
+    },
+    "claude_allgold_kept_drop_old_gold": {
+      "count": 11,
+      "n": 3394,
+      "rate": 0.003241013553329405
+    },
+    "kept_gold_survival": {
+      "count": 26910,
+      "n": 27165,
+      "rate": 0.9906129210381005
+    },
+    "first_error": {
+      "invalid_output": {
+        "count": 58,
+        "n": 1494,
+        "rate": 0.038821954484605084
+      },
+      "new_gold_not_added": {
+        "count": 521,
+        "n": 1494,
+        "rate": 0.34872824631860777
+      },
+      "old_gold_dropped": {
+        "count": 144,
+        "n": 1494,
+        "rate": 0.0963855421686747
+      },
+      "both": {
+        "count": 19,
+        "n": 1494,
+        "rate": 0.012717536813922356
+      },
+      "none": {
+        "count": 752,
+        "n": 1494,
+        "rate": 0.5033467202141901
+      }
+    },
+    "occupancy": {
+      "n": 1494,
+      "mean": 0.4901674929997175,
+      "max": 0.9994669509594882
+    },
+    "cached_cost": {
+      "n": 1494,
+      "mean": 2240.623125836679,
+      "relative_to_no_compress": 0.07660624974583699
+    },
+    "heldout_reward_v2": {
+      "mu": 0.5,
+      "n_steps": 13956,
+      "reward": {
+        "sum": -6825.3095,
+        "n": 13956,
+        "mean": -0.4890591501862998
+      },
+      "n_lost": {
+        "sum": 1212,
+        "n": 13956,
+        "mean": 0.08684436801375753
+      },
+      "used_per_1000": {
+        "sum": 10944.619,
+        "n": 13956,
+        "mean": 0.7842232014903985
+      },
+      "invalid": {
+        "count": 141,
+        "n": 13956,
+        "rate": 0.010103181427343079
+      }
+    },
+    "start_reward_v2": {
+      "mu": 0.5,
+      "n_steps": 13956,
+      "reward": {
+        "sum": -6901.4985,
+        "n": 13956,
+        "mean": -0.49451837919174546
+      },
+      "n_lost": {
+        "sum": 1181,
+        "n": 13956,
+        "mean": 0.08462310117512181
+      },
+      "used_per_1000": {
+        "sum": 11106.997,
+        "n": 13956,
+        "mean": 0.7958581971911722
+      },
+      "invalid": {
+        "count": 167,
+        "n": 13956,
+        "rate": 0.011966179421037547
+      }
+    },
+    "objective_deltas_vs_start": {
+      "n_steps": 13956,
+      "reward": 0.005459229005445654,
+      "n_lost": 0.002221266838635716,
+      "used_per_1000": -0.011634995700773754,
+      "invalid_rate": -0.0018629979936944686
+    },
+    "raw_diff_identical_state": {
+      "count": 446,
+      "n": 12634,
+      "rate": 0.03530156719962007
+    },
+    "raw_diff_identical_model_prompt": {
+      "count": 446,
+      "n": 12634,
+      "rate": 0.03530156719962007
+    }
+  },
+  "definitions": {
+    "add_counts": "Distinct newly retained PIDs per valid step, including zero additions.",
+    "new_gold_by_title": "Task06 eligible gold (gold through this step, newly returned and not previously kept); same = another distinct PID in the original retrieval has exactly its title. Invalid steps included.",
+    "current_gold_valid_new_by_title": "Task06 failure analysis comparator: current gold not previously kept, valid action; compare against other visible new PIDs with exactly its title.",
+    "raw_diff_identical_state": "Aligned task/mode/tier/step, model-visible user text hash and actual prompt IDs equal, and all input fields (including available gold and candidate PID map) equal.",
+    "multiadd_contains_current_gold": "Valid steps with >=2 distinct added PIDs: fraction whose additions contain this step's supporting PID.",
+    "multiadd_fragment_gold": "Among all distinct fragments added on eligible >=2-add steps, fraction revealed as gold by the current step.",
+    "drop_precision": "Fragment-weighted across valid actions: drops not known as gold through the current step / all drops.",
+    "claude_nongold_kept_drop_old_gold": "Valid reselect at step>=1; kept_before includes >=1 PID outside previously revealed gold. Count steps dropping any previously revealed and kept gold.",
+    "claude_allgold_kept_drop_old_gold": "Same valid reselect population, with kept_before entirely contained in previously revealed gold (including empty).",
+    "kept_gold_survival": "Reselect only. Among kept fragments already revealed as gold BEFORE this return, count how many remain in keep_after. Includes invalid steps.",
+    "first_error": "Earliest step with an invalid output, an eligible new gold missing after the action, or a previously revealed kept gold dropped. Invalid output takes precedence. Both means a miss and a drop on the same valid step. The denominator for each cause (including none) is all trajectories."
+  },
+  "metric_deltas_vs_start": {
+    "combined": {
+      "final_recall.mean": {
+        "n": 1494,
+        "value": 0.9249672869150825,
+        "delta": -0.0016022000459753327,
+        "start": 0.9265694869610578
+      },
+      "evidence_loss.rate": {
+        "n": 1494,
+        "value": 0.48058902275769744,
+        "delta": 0.0026773761713520527,
+        "start": 0.4779116465863454
+      },
+      "step_recall.micro.mean": {
+        "n": 13956,
+        "value": 0.9766557544395019,
+        "delta": -0.0004281622886523895,
+        "start": 0.9770839167281543
+      },
+      "step_recall.task_macro.mean": {
+        "n": 1494,
+        "value": 0.9766268153270452,
+        "delta": -0.00042843260873193234,
+        "start": 0.9770552479357771
+      },
+      "occupancy.mean": {
+        "n": 1494,
+        "value": 0.4901674929997175,
+        "delta": -0.007941503041305031,
+        "start": 0.49810899604102254
+      },
+      "cost.cached.mean": {
+        "n": 1494,
+        "value": 2240.623125836679,
+        "delta": -12.533935742972972,
+        "start": 2253.157061579652
+      },
+      "invalid_outputs.invalid_json.rate": {
+        "n": 13956,
+        "value": 0.0,
+        "delta": 0.0,
+        "start": 0.0
+      },
+      "invalid_outputs.invalid_candidate_id.rate": {
+        "n": 13956,
+        "value": 0.001003152765835483,
+        "delta": -0.00028661507595299524,
+        "start": 0.0012897678417884782
+      },
+      "invalid_outputs.append_drop.rate": {
+        "n": 13956,
+        "value": 0.0,
+        "delta": 0.0,
+        "start": 0.0
+      },
+      "invalid_outputs.over_budget.rate": {
+        "n": 13956,
+        "value": 0.009100028661507595,
+        "delta": -0.0015763829177414743,
+        "start": 0.010676411579249069
+      }
+    },
+    "configs": {
+      "reselect|tight": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.9032034899504776,
+          "delta": 0.0002474544643220611,
+          "start": 0.9029560354861556
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.5742971887550201,
+          "delta": -0.004016064257028051,
+          "start": 0.5783132530120482
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9716762529531233,
+          "delta": -0.00027670452219052954,
+          "start": 0.9719529574753139
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9716217665356589,
+          "delta": -0.00029855121654120964,
+          "start": 0.9719203177522001
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.6838740891069608,
+          "delta": -0.012598367885186423,
+          "start": 0.6964724569921472
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 2283.554618473894,
+          "delta": 4.157630522088766,
+          "start": 2279.3969879518054
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0008598452278589854,
+          "delta": -0.00042992261392949275,
+          "start": 0.0012897678417884782
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.010748065348237317,
+          "delta": -0.007308684436801377,
+          "start": 0.018056749785038694
+        }
+      },
+      "reselect|mid": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.9163871492184742,
+          "delta": -0.0006368909983365256,
+          "start": 0.9170240402168107
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.5381526104417671,
+          "delta": -0.02008032128514048,
+          "start": 0.5582329317269076
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9734960773438852,
+          "delta": -0.0003355784847616228,
+          "start": 0.9738316558286468
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9733230921394943,
+          "delta": -0.0003607738122310966,
+          "start": 0.9736838659517254
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.46900466114636247,
+          "delta": -0.013104300642513222,
+          "start": 0.4821089617888757
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 2337.8295180722876,
+          "delta": -8.072690763051469,
+          "start": 2345.902208835339
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0008598452278589854,
+          "delta": 0.0,
+          "start": 0.0008598452278589854
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        }
+      },
+      "reselect|loose": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.9126367942632998,
+          "delta": -0.00734250131840497,
+          "start": 0.9199792955817048
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.5542168674698795,
+          "delta": 0.012048192771084376,
+          "start": 0.5421686746987951
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9732922053106923,
+          "delta": -0.0009681944118745678,
+          "start": 0.9742603997225668
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9731232885963174,
+          "delta": -0.0009206414402195273,
+          "start": 0.9740439300365369
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.23346977105293956,
+          "delta": -0.007237906851285808,
+          "start": 0.24070767790422537
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 2335.8319277108417,
+          "delta": -9.439156626505792,
+          "start": 2345.2710843373475
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0008598452278589854,
+          "delta": 0.0,
+          "start": 0.0008598452278589854
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        }
+      },
+      "append|tight": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.9165106424142568,
+          "delta": 0.0003103322380432205,
+          "start": 0.9162003101762136
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.4738955823293173,
+          "delta": 0.01204819277108432,
+          "start": 0.46184738955823296
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9772344964197934,
+          "delta": 0.0007279526626042809,
+          "start": 0.9765065437571891
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9776103163172655,
+          "delta": 0.0007231789109298781,
+          "start": 0.9768871374063356
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.7475552529949218,
+          "delta": -0.005578818472183222,
+          "start": 0.753134071467105
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 2062.7508032128503,
+          "delta": -15.441767068273748,
+          "start": 2078.192570281124
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0012897678417884782,
+          "delta": -0.00042992261392949265,
+          "start": 0.0017196904557179708
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.04170249355116079,
+          "delta": -0.002149613069647463,
+          "start": 0.043852106620808254
+        }
+      },
+      "append|mid": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.9496728171426964,
+          "delta": -0.0003650967506388936,
+          "start": 0.9500379138933353
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.37751004016064255,
+          "delta": 0.008032128514056214,
+          "start": 0.36947791164658633
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9822120914339316,
+          "delta": -0.0004256575086324377,
+          "start": 0.9826377489425641
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9821853911833532,
+          "delta": -0.00036942865256128776,
+          "start": 0.9825548198359145
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.5367725343449136,
+          "delta": -0.006252444033418403,
+          "start": 0.543024978378332
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 2204.3162650602403,
+          "delta": -24.69819277108445,
+          "start": 2229.0144578313248
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0012897678417884782,
+          "delta": -0.00042992261392949265,
+          "start": 0.0017196904557179708
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0021496130696474634,
+          "delta": 0.0,
+          "start": 0.0021496130696474634
+        }
+      },
+      "append|loose": {
+        "final_recall.mean": {
+          "n": 249,
+          "value": 0.9513928285012621,
+          "delta": -0.001826497910835223,
+          "start": 0.9532193264120973
+        },
+        "evidence_loss.rate": {
+          "n": 249,
+          "value": 0.3654618473895582,
+          "delta": 0.008032128514056214,
+          "start": 0.357429718875502
+        },
+        "step_recall.micro.mean": {
+          "n": 2326,
+          "value": 0.9820234031755959,
+          "delta": -0.001290791467059571,
+          "start": 0.9833141946426555
+        },
+        "step_recall.task_macro.mean": {
+          "n": 249,
+          "value": 0.9818970371901798,
+          "delta": -0.001344379441768906,
+          "start": 0.9832414166319488
+        },
+        "occupancy.mean": {
+          "n": 249,
+          "value": 0.2703286493522063,
+          "delta": -0.002877180363244025,
+          "start": 0.2732058297154503
+        },
+        "cost.cached.mean": {
+          "n": 249,
+          "value": 2219.455622489959,
+          "delta": -21.70943775100386,
+          "start": 2241.1650602409627
+        },
+        "invalid_outputs.invalid_json.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.invalid_candidate_id.rate": {
+          "n": 2326,
+          "value": 0.0008598452278589854,
+          "delta": -0.00042992261392949275,
+          "start": 0.0012897678417884782
+        },
+        "invalid_outputs.append_drop.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        },
+        "invalid_outputs.over_budget.rate": {
+          "n": 2326,
+          "value": 0.0,
+          "delta": 0.0,
+          "start": 0.0
+        }
+      }
+    }
+  },
+  "start_reference": {
+    "version": "r2",
+    "strategy": "checkpoint-125",
+    "metrics": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-125/checkpoint-125_results.json",
+      "bytes": 32516,
+      "sha256": "e98a810821e6b4e7f20ac43c511ef09a6ee54783d944631004c195fb728f64b0"
+    },
+    "steps": {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/checkpoint-125/steps.jsonl",
+      "bytes": 236195097,
+      "sha256": "057746aca748d0bf3809a81c48d863c0cffb168d934face3b0e379d031f16274"
+    }
+  }
+}

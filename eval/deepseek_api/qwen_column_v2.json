@@ -1,0 +1,1966 @@
+{
+  "status": "complete",
+  "input": "Task14 F A, same 1,800 prompts",
+  "matched_prompt_sha1": 1800,
+  "mismatches": 0,
+  "F_sources": {
+    "/root/workplace/ctx-compressor/eval/deepseek_api/TASK14_SHA256SUMS": "8f92bfe4ac3013c0fd0918525dbfc2abb883a33743fd04aabe79679464ec4193",
+    "/root/userfolder/ctx-compressor/deepseek_api/full/status.json": "343f0bc88e8fd8744b6f58bfc4e4a1b65ed2575022ae7ae98b6383f15c815341",
+    "/root/userfolder/ctx-compressor/deepseek_api/full/predictions.jsonl": "d6073589cb6424b05679f6777440e7492d0badf46963006bce76889e8ac00b61",
+    "/root/workplace/ctx-compressor/eval/deepseek_api/deepseek_api_results.json": "9aee1e19c80ee79f59c8d7143cab75b16cc9c5a8bf691a44156c6ebd8757784d",
+    "/root/userfolder/ctx-compressor/deepseek_api/full/api_calls.jsonl": "90d5dd0ffab75055b3b3f747caf7803a9add528dbea79e87ce4033d992015b21"
+  },
+  "Qwen_main": {
+    "predictions_sha256": "f18938579aa6c0fe19a60ffeb5fbdd23542a7bb8453276e4362edf7232146fb6",
+    "run_config_sha256": "93455bf70b5f06d8ea36ac03d53892df8ea9e4b49a4c9ee4766228c386fab555",
+    "effective_disable_cascade_attn": true,
+    "effective_value_source": "llm_engine.vllm_config.model_config.disable_cascade_attn",
+    "path": "/root/userfolder/ctx-compressor/reader_heldout_v2/predictions.jsonl",
+    "n": 55776
+  },
+  "historical": {
+    "strategies": {
+      "oracle": {
+        "scores": {
+          "DeepSeek": {
+            "n": 480,
+            "f1": 0.693518981018981,
+            "em": 0.6
+          },
+          "Qwen3-8B": {
+            "n": 480,
+            "f1": 0.5771820057307674,
+            "em": 0.46875
+          }
+        },
+        "paired_readers": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.693518981018981,
+            "em": 0.6
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5771820057307674,
+            "em": 0.46875
+          },
+          "f1_counts": {
+            "left_higher": 113,
+            "equal": 339,
+            "right_higher": 28
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              206,
+              82
+            ],
+            [
+              19,
+              173
+            ]
+          ],
+          "f1_difference_pp": 11.633697528821363,
+          "em_difference_pp": 13.124999999999998
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 478,
+              "f1": 0.6943286838684328,
+              "em": 0.600418410041841
+            },
+            "Qwen3-8B": {
+              "n": 478,
+              "f1": 0.5754128927840342,
+              "em": 0.4665271966527197
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 2,
+              "f1": 0.5,
+              "em": 0.5
+            },
+            "Qwen3-8B": {
+              "n": 2,
+              "f1": 1.0,
+              "em": 1.0
+            }
+          }
+        },
+        "output_shape": {
+          "n": 480,
+          "finish_reasons": {
+            "stop": 480
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "grpo_r2:checkpoint-125": {
+        "scores": {
+          "DeepSeek": {
+            "n": 480,
+            "f1": 0.6758073408073407,
+            "em": 0.5729166666666666
+          },
+          "Qwen3-8B": {
+            "n": 480,
+            "f1": 0.5406116289755996,
+            "em": 0.4375
+          }
+        },
+        "paired_readers": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.6758073408073407,
+            "em": 0.5729166666666666
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5406116289755996,
+            "em": 0.4375
+          },
+          "f1_counts": {
+            "left_higher": 126,
+            "equal": 326,
+            "right_higher": 28
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              189,
+              86
+            ],
+            [
+              21,
+              184
+            ]
+          ],
+          "f1_difference_pp": 13.519571183174117,
+          "em_difference_pp": 13.541666666666663
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 412,
+              "f1": 0.7002220675764365,
+              "em": 0.6019417475728155
+            },
+            "Qwen3-8B": {
+              "n": 412,
+              "f1": 0.5655761927963527,
+              "em": 0.46359223300970875
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 68,
+              "f1": 0.5278828197945845,
+              "em": 0.39705882352941174
+            },
+            "Qwen3-8B": {
+              "n": 68,
+              "f1": 0.3893557422969187,
+              "em": 0.27941176470588236
+            }
+          }
+        },
+        "output_shape": {
+          "n": 480,
+          "finish_reasons": {
+            "stop": 480
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "sft_v3:checkpoint-3000": {
+        "scores": {
+          "DeepSeek": {
+            "n": 480,
+            "f1": 0.6778849622599623,
+            "em": 0.5833333333333334
+          },
+          "Qwen3-8B": {
+            "n": 480,
+            "f1": 0.5454795864773045,
+            "em": 0.44375
+          }
+        },
+        "paired_readers": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.6778849622599623,
+            "em": 0.5833333333333334
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5454795864773045,
+            "em": 0.44375
+          },
+          "f1_counts": {
+            "left_higher": 118,
+            "equal": 330,
+            "right_higher": 32
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              193,
+              87
+            ],
+            [
+              20,
+              180
+            ]
+          ],
+          "f1_difference_pp": 13.240537578265776,
+          "em_difference_pp": 13.95833333333334
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 390,
+              "f1": 0.7177998070305763,
+              "em": 0.6256410256410256
+            },
+            "Qwen3-8B": {
+              "n": 390,
+              "f1": 0.5842159449399268,
+              "em": 0.4897435897435897
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 90,
+              "f1": 0.5049206349206349,
+              "em": 0.4
+            },
+            "Qwen3-8B": {
+              "n": 90,
+              "f1": 0.3776220331392745,
+              "em": 0.24444444444444444
+            }
+          }
+        },
+        "output_shape": {
+          "n": 480,
+          "finish_reasons": {
+            "stop": 480
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "no_compress": {
+        "scores": {
+          "DeepSeek": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "Qwen3-8B": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          }
+        },
+        "paired_readers": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 47,
+            "equal": 67,
+            "right_higher": 6
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              25,
+              39
+            ],
+            [
+              4,
+              52
+            ]
+          ],
+          "f1_difference_pp": 26.650704799772857,
+          "em_difference_pp": 29.166666666666664
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 120,
+              "f1": 0.609243295274417,
+              "em": 0.5333333333333333
+            },
+            "Qwen3-8B": {
+              "n": 120,
+              "f1": 0.34273624727668844,
+              "em": 0.24166666666666667
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            },
+            "Qwen3-8B": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            }
+          }
+        },
+        "output_shape": {
+          "n": 120,
+          "finish_reasons": {
+            "stop": 120
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "no_context": {
+        "scores": {
+          "DeepSeek": {
+            "n": 240,
+            "f1": 0.19301843173166705,
+            "em": 0.1125
+          },
+          "Qwen3-8B": {
+            "n": 240,
+            "f1": 0.16364808802308803,
+            "em": 0.09583333333333334
+          }
+        },
+        "paired_readers": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.19301843173166705,
+            "em": 0.1125
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.16364808802308803,
+            "em": 0.09583333333333334
+          },
+          "f1_counts": {
+            "left_higher": 36,
+            "equal": 181,
+            "right_higher": 23
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              13,
+              14
+            ],
+            [
+              10,
+              203
+            ]
+          ],
+          "f1_difference_pp": 2.9370343708579023,
+          "em_difference_pp": 1.6666666666666663
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            },
+            "Qwen3-8B": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 240,
+              "f1": 0.19301843173166705,
+              "em": 0.1125
+            },
+            "Qwen3-8B": {
+              "n": 240,
+              "f1": 0.16364808802308803,
+              "em": 0.09583333333333334
+            }
+          }
+        },
+        "output_shape": {
+          "n": 240,
+          "finish_reasons": {
+            "stop": 240
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      }
+    },
+    "r2_minus_v3": {
+      "combined": {
+        "n_unique_questions": 240,
+        "DeepSeek": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.6758073408073407,
+            "em": 0.5729166666666666
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.6778849622599623,
+            "em": 0.5833333333333334
+          },
+          "f1_counts": {
+            "left_higher": 18,
+            "equal": 443,
+            "right_higher": 19
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              264,
+              11
+            ],
+            [
+              16,
+              189
+            ]
+          ],
+          "f1_difference_pp": -0.20776214526215808,
+          "em_difference_pp": -1.041666666666674
+        },
+        "Qwen3-8B": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.5406116289755996,
+            "em": 0.4375
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5454795864773045,
+            "em": 0.44375
+          },
+          "f1_counts": {
+            "left_higher": 15,
+            "equal": 443,
+            "right_higher": 22
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              201,
+              9
+            ],
+            [
+              12,
+              258
+            ]
+          ],
+          "f1_difference_pp": -0.4867957501704989,
+          "em_difference_pp": -0.6249999999999978
+        }
+      },
+      "reselect": {
+        "n_unique_questions": 240,
+        "DeepSeek": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.6680527111777113,
+            "em": 0.5708333333333333
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.6765745365745366,
+            "em": 0.5916666666666667
+          },
+          "f1_counts": {
+            "left_higher": 10,
+            "equal": 219,
+            "right_higher": 11
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              132,
+              5
+            ],
+            [
+              10,
+              93
+            ]
+          ],
+          "f1_difference_pp": -0.8521825396825333,
+          "em_difference_pp": -2.083333333333337
+        },
+        "Qwen3-8B": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.5370604926119632,
+            "em": 0.43333333333333335
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.543378557716793,
+            "em": 0.44583333333333336
+          },
+          "f1_counts": {
+            "left_higher": 7,
+            "equal": 222,
+            "right_higher": 11
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              100,
+              4
+            ],
+            [
+              7,
+              129
+            ]
+          ],
+          "f1_difference_pp": -0.6318065104829795,
+          "em_difference_pp": -1.250000000000001
+        }
+      },
+      "append": {
+        "n_unique_questions": 240,
+        "DeepSeek": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.6835619704369704,
+            "em": 0.575
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.6791953879453879,
+            "em": 0.575
+          },
+          "f1_counts": {
+            "left_higher": 8,
+            "equal": 224,
+            "right_higher": 8
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              132,
+              6
+            ],
+            [
+              6,
+              96
+            ]
+          ],
+          "f1_difference_pp": 0.43665824915825047,
+          "em_difference_pp": 0.0
+        },
+        "Qwen3-8B": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.5441627653392359,
+            "em": 0.44166666666666665
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.5475806152378161,
+            "em": 0.44166666666666665
+          },
+          "f1_counts": {
+            "left_higher": 8,
+            "equal": 221,
+            "right_higher": 11
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              101,
+              5
+            ],
+            [
+              5,
+              129
+            ]
+          ],
+          "f1_difference_pp": -0.3417849898580183,
+          "em_difference_pp": 0.0
+        }
+      }
+    },
+    "oracle_minus_no_compress_s30": {
+      "combined": {
+        "n_unique_questions": 120,
+        "DeepSeek": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.7157482794982796,
+            "em": 0.6333333333333333
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "f1_counts": {
+            "left_higher": 40,
+            "equal": 192,
+            "right_higher": 8
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              120,
+              32
+            ],
+            [
+              8,
+              80
+            ]
+          ],
+          "f1_difference_pp": 10.650498422386256,
+          "em_difference_pp": 9.999999999999998
+        },
+        "Qwen3-8B": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.5897608368583601,
+            "em": 0.48333333333333334
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 88,
+            "equal": 134,
+            "right_higher": 18
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              46,
+              70
+            ],
+            [
+              12,
+              112
+            ]
+          ],
+          "f1_difference_pp": 24.702458958167167,
+          "em_difference_pp": 24.166666666666668
+        }
+      },
+      "reselect": {
+        "n_unique_questions": 120,
+        "DeepSeek": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.7157482794982796,
+            "em": 0.6333333333333333
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "f1_counts": {
+            "left_higher": 20,
+            "equal": 96,
+            "right_higher": 4
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              60,
+              16
+            ],
+            [
+              4,
+              40
+            ]
+          ],
+          "f1_difference_pp": 10.650498422386256,
+          "em_difference_pp": 9.999999999999998
+        },
+        "Qwen3-8B": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.5897608368583601,
+            "em": 0.48333333333333334
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 44,
+            "equal": 67,
+            "right_higher": 9
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              23,
+              35
+            ],
+            [
+              6,
+              56
+            ]
+          ],
+          "f1_difference_pp": 24.702458958167167,
+          "em_difference_pp": 24.166666666666668
+        }
+      },
+      "append": {
+        "n_unique_questions": 120,
+        "DeepSeek": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.7157482794982796,
+            "em": 0.6333333333333333
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "f1_counts": {
+            "left_higher": 20,
+            "equal": 96,
+            "right_higher": 4
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              60,
+              16
+            ],
+            [
+              4,
+              40
+            ]
+          ],
+          "f1_difference_pp": 10.650498422386256,
+          "em_difference_pp": 9.999999999999998
+        },
+        "Qwen3-8B": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.5897608368583601,
+            "em": 0.48333333333333334
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 44,
+            "equal": 67,
+            "right_higher": 9
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              23,
+              35
+            ],
+            [
+              6,
+              56
+            ]
+          ],
+          "f1_difference_pp": 24.702458958167167,
+          "em_difference_pp": 24.166666666666668
+        }
+      }
+    },
+    "r2_minus_v3_non_gold_conditioned": {
+      "<=0": {
+        "DeepSeek": {
+          "n": 169,
+          "left_scores": {
+            "n": 169,
+            "f1": 0.7036040882194728,
+            "em": 0.6035502958579881
+          },
+          "right_scores": {
+            "n": 169,
+            "f1": 0.7154384077461,
+            "em": 0.6153846153846154
+          },
+          "f1_counts": {
+            "left_higher": 1,
+            "equal": 165,
+            "right_higher": 3
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              101,
+              1
+            ],
+            [
+              3,
+              64
+            ]
+          ],
+          "f1_difference_pp": -1.1834319526627168,
+          "em_difference_pp": -1.183431952662728
+        },
+        "Qwen3-8B": {
+          "n": 169,
+          "left_scores": {
+            "n": 169,
+            "f1": 0.6234499228582069,
+            "em": 0.5325443786982249
+          },
+          "right_scores": {
+            "n": 169,
+            "f1": 0.6193079110238874,
+            "em": 0.5266272189349113
+          },
+          "f1_counts": {
+            "left_higher": 4,
+            "equal": 163,
+            "right_higher": 2
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              87,
+              3
+            ],
+            [
+              2,
+              77
+            ]
+          ],
+          "f1_difference_pp": 0.41420118343195034,
+          "em_difference_pp": 0.591715976331364
+        }
+      },
+      "1": {
+        "DeepSeek": {
+          "n": 134,
+          "left_scores": {
+            "n": 134,
+            "f1": 0.7255247240321867,
+            "em": 0.6417910447761194
+          },
+          "right_scores": {
+            "n": 134,
+            "f1": 0.7286907122728019,
+            "em": 0.6567164179104478
+          },
+          "f1_counts": {
+            "left_higher": 5,
+            "equal": 122,
+            "right_higher": 7
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              83,
+              3
+            ],
+            [
+              5,
+              43
+            ]
+          ],
+          "f1_difference_pp": -0.3165988240615203,
+          "em_difference_pp": -1.4925373134328401
+        },
+        "Qwen3-8B": {
+          "n": 134,
+          "left_scores": {
+            "n": 134,
+            "f1": 0.5529924860038995,
+            "em": 0.4626865671641791
+          },
+          "right_scores": {
+            "n": 134,
+            "f1": 0.5581751289389569,
+            "em": 0.4701492537313433
+          },
+          "f1_counts": {
+            "left_higher": 4,
+            "equal": 127,
+            "right_higher": 3
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              60,
+              2
+            ],
+            [
+              3,
+              69
+            ]
+          ],
+          "f1_difference_pp": -0.5182642935057435,
+          "em_difference_pp": -0.7462686567164201
+        }
+      },
+      ">=2": {
+        "DeepSeek": {
+          "n": 80,
+          "left_scores": {
+            "n": 80,
+            "f1": 0.6874130036630037,
+            "em": 0.5625
+          },
+          "right_scores": {
+            "n": 80,
+            "f1": 0.7073534798534798,
+            "em": 0.6
+          },
+          "f1_counts": {
+            "left_higher": 2,
+            "equal": 75,
+            "right_higher": 3
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              45,
+              0
+            ],
+            [
+              3,
+              32
+            ]
+          ],
+          "f1_difference_pp": -1.994047619047612,
+          "em_difference_pp": -3.749999999999998
+        },
+        "Qwen3-8B": {
+          "n": 80,
+          "left_scores": {
+            "n": 80,
+            "f1": 0.5273039215686275,
+            "em": 0.4
+          },
+          "right_scores": {
+            "n": 80,
+            "f1": 0.5554166666666667,
+            "em": 0.45
+          },
+          "f1_counts": {
+            "left_higher": 2,
+            "equal": 70,
+            "right_higher": 8
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              31,
+              1
+            ],
+            [
+              5,
+              43
+            ]
+          ],
+          "f1_difference_pp": -2.8112745098039182,
+          "em_difference_pp": -4.999999999999999
+        }
+      }
+    },
+    "output_shape": {
+      "n": 1800,
+      "finish_reasons": {
+        "stop": 1800
+      },
+      "at_token_limit": 0,
+      "empty_parsed_answers": 0
+    }
+  },
+  "cascade_disabled": {
+    "strategies": {
+      "oracle": {
+        "scores": {
+          "DeepSeek": {
+            "n": 480,
+            "f1": 0.693518981018981,
+            "em": 0.6
+          },
+          "Qwen3-8B": {
+            "n": 480,
+            "f1": 0.5773713996701613,
+            "em": 0.4708333333333333
+          }
+        },
+        "paired_readers": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.693518981018981,
+            "em": 0.6
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5773713996701613,
+            "em": 0.4708333333333333
+          },
+          "f1_counts": {
+            "left_higher": 112,
+            "equal": 340,
+            "right_higher": 28
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              207,
+              81
+            ],
+            [
+              19,
+              173
+            ]
+          ],
+          "f1_difference_pp": 11.614758134881974,
+          "em_difference_pp": 12.916666666666664
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 478,
+              "f1": 0.6943286838684328,
+              "em": 0.600418410041841
+            },
+            "Qwen3-8B": {
+              "n": 478,
+              "f1": 0.5756030791666892,
+              "em": 0.4686192468619247
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 2,
+              "f1": 0.5,
+              "em": 0.5
+            },
+            "Qwen3-8B": {
+              "n": 2,
+              "f1": 1.0,
+              "em": 1.0
+            }
+          }
+        },
+        "output_shape": {
+          "n": 480,
+          "finish_reasons": {
+            "stop": 480
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "grpo_r2:checkpoint-125": {
+        "scores": {
+          "DeepSeek": {
+            "n": 480,
+            "f1": 0.6758073408073407,
+            "em": 0.5729166666666666
+          },
+          "Qwen3-8B": {
+            "n": 480,
+            "f1": 0.5430632283021989,
+            "em": 0.4375
+          }
+        },
+        "paired_readers": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.6758073408073407,
+            "em": 0.5729166666666666
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5430632283021989,
+            "em": 0.4375
+          },
+          "f1_counts": {
+            "left_higher": 126,
+            "equal": 325,
+            "right_higher": 29
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              189,
+              86
+            ],
+            [
+              21,
+              184
+            ]
+          ],
+          "f1_difference_pp": 13.274411250514184,
+          "em_difference_pp": 13.541666666666663
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 412,
+              "f1": 0.7002220675764365,
+              "em": 0.6019417475728155
+            },
+            "Qwen3-8B": {
+              "n": 412,
+              "f1": 0.568432425021517,
+              "em": 0.46359223300970875
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 68,
+              "f1": 0.5278828197945845,
+              "em": 0.39705882352941174
+            },
+            "Qwen3-8B": {
+              "n": 68,
+              "f1": 0.3893557422969187,
+              "em": 0.27941176470588236
+            }
+          }
+        },
+        "output_shape": {
+          "n": 480,
+          "finish_reasons": {
+            "stop": 480
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "sft_v3:checkpoint-3000": {
+        "scores": {
+          "DeepSeek": {
+            "n": 480,
+            "f1": 0.6778849622599623,
+            "em": 0.5833333333333334
+          },
+          "Qwen3-8B": {
+            "n": 480,
+            "f1": 0.5490584673917117,
+            "em": 0.4479166666666667
+          }
+        },
+        "paired_readers": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.6778849622599623,
+            "em": 0.5833333333333334
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5490584673917117,
+            "em": 0.4479166666666667
+          },
+          "f1_counts": {
+            "left_higher": 117,
+            "equal": 330,
+            "right_higher": 33
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              195,
+              85
+            ],
+            [
+              20,
+              180
+            ]
+          ],
+          "f1_difference_pp": 12.88264948682506,
+          "em_difference_pp": 13.541666666666668
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 390,
+              "f1": 0.7177998070305763,
+              "em": 0.6256410256410256
+            },
+            "Qwen3-8B": {
+              "n": 390,
+              "f1": 0.5928942257234708,
+              "em": 0.49743589743589745
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 90,
+              "f1": 0.5049206349206349,
+              "em": 0.4
+            },
+            "Qwen3-8B": {
+              "n": 90,
+              "f1": 0.35910351462075596,
+              "em": 0.23333333333333334
+            }
+          }
+        },
+        "output_shape": {
+          "n": 480,
+          "finish_reasons": {
+            "stop": 480
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "no_compress": {
+        "scores": {
+          "DeepSeek": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "Qwen3-8B": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          }
+        },
+        "paired_readers": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 47,
+            "equal": 67,
+            "right_higher": 6
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              25,
+              39
+            ],
+            [
+              4,
+              52
+            ]
+          ],
+          "f1_difference_pp": 26.650704799772857,
+          "em_difference_pp": 29.166666666666664
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 120,
+              "f1": 0.609243295274417,
+              "em": 0.5333333333333333
+            },
+            "Qwen3-8B": {
+              "n": 120,
+              "f1": 0.34273624727668844,
+              "em": 0.24166666666666667
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            },
+            "Qwen3-8B": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            }
+          }
+        },
+        "output_shape": {
+          "n": 120,
+          "finish_reasons": {
+            "stop": 120
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      },
+      "no_context": {
+        "scores": {
+          "DeepSeek": {
+            "n": 240,
+            "f1": 0.19301843173166705,
+            "em": 0.1125
+          },
+          "Qwen3-8B": {
+            "n": 240,
+            "f1": 0.1667036435786436,
+            "em": 0.09583333333333334
+          }
+        },
+        "paired_readers": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.19301843173166705,
+            "em": 0.1125
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.1667036435786436,
+            "em": 0.09583333333333334
+          },
+          "f1_counts": {
+            "left_higher": 36,
+            "equal": 180,
+            "right_higher": 24
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              13,
+              14
+            ],
+            [
+              10,
+              203
+            ]
+          ],
+          "f1_difference_pp": 2.631478815302346,
+          "em_difference_pp": 1.6666666666666663
+        },
+        "by_evidence_complete": {
+          "true": {
+            "DeepSeek": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            },
+            "Qwen3-8B": {
+              "n": 0,
+              "f1": null,
+              "em": null
+            }
+          },
+          "false": {
+            "DeepSeek": {
+              "n": 240,
+              "f1": 0.19301843173166705,
+              "em": 0.1125
+            },
+            "Qwen3-8B": {
+              "n": 240,
+              "f1": 0.1667036435786436,
+              "em": 0.09583333333333334
+            }
+          }
+        },
+        "output_shape": {
+          "n": 240,
+          "finish_reasons": {
+            "stop": 240
+          },
+          "at_token_limit": 0,
+          "empty_parsed_answers": 0
+        }
+      }
+    },
+    "r2_minus_v3": {
+      "combined": {
+        "n_unique_questions": 240,
+        "DeepSeek": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.6758073408073407,
+            "em": 0.5729166666666666
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.6778849622599623,
+            "em": 0.5833333333333334
+          },
+          "f1_counts": {
+            "left_higher": 18,
+            "equal": 443,
+            "right_higher": 19
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              264,
+              11
+            ],
+            [
+              16,
+              189
+            ]
+          ],
+          "f1_difference_pp": -0.20776214526215808,
+          "em_difference_pp": -1.041666666666674
+        },
+        "Qwen3-8B": {
+          "n": 480,
+          "left_scores": {
+            "n": 480,
+            "f1": 0.5430632283021989,
+            "em": 0.4375
+          },
+          "right_scores": {
+            "n": 480,
+            "f1": 0.5490584673917117,
+            "em": 0.4479166666666667
+          },
+          "f1_counts": {
+            "left_higher": 13,
+            "equal": 443,
+            "right_higher": 24
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              202,
+              8
+            ],
+            [
+              13,
+              257
+            ]
+          ],
+          "f1_difference_pp": -0.5995239089512827,
+          "em_difference_pp": -1.0416666666666685
+        }
+      },
+      "reselect": {
+        "n_unique_questions": 240,
+        "DeepSeek": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.6680527111777113,
+            "em": 0.5708333333333333
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.6765745365745366,
+            "em": 0.5916666666666667
+          },
+          "f1_counts": {
+            "left_higher": 10,
+            "equal": 219,
+            "right_higher": 11
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              132,
+              5
+            ],
+            [
+              10,
+              93
+            ]
+          ],
+          "f1_difference_pp": -0.8521825396825333,
+          "em_difference_pp": -2.083333333333337
+        },
+        "Qwen3-8B": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.5375655431170137,
+            "em": 0.43333333333333335
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.5430874891362508,
+            "em": 0.44583333333333336
+          },
+          "f1_counts": {
+            "left_higher": 7,
+            "equal": 220,
+            "right_higher": 13
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              99,
+              5
+            ],
+            [
+              8,
+              128
+            ]
+          ],
+          "f1_difference_pp": -0.5521946019237167,
+          "em_difference_pp": -1.250000000000001
+        }
+      },
+      "append": {
+        "n_unique_questions": 240,
+        "DeepSeek": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.6835619704369704,
+            "em": 0.575
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.6791953879453879,
+            "em": 0.575
+          },
+          "f1_counts": {
+            "left_higher": 8,
+            "equal": 224,
+            "right_higher": 8
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              132,
+              6
+            ],
+            [
+              6,
+              96
+            ]
+          ],
+          "f1_difference_pp": 0.43665824915825047,
+          "em_difference_pp": 0.0
+        },
+        "Qwen3-8B": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.548560913487384,
+            "em": 0.44166666666666665
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.5550294456471728,
+            "em": 0.45
+          },
+          "f1_counts": {
+            "left_higher": 6,
+            "equal": 223,
+            "right_higher": 11
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              103,
+              3
+            ],
+            [
+              5,
+              129
+            ]
+          ],
+          "f1_difference_pp": -0.646853215978882,
+          "em_difference_pp": -0.8333333333333359
+        }
+      }
+    },
+    "oracle_minus_no_compress_s30": {
+      "combined": {
+        "n_unique_questions": 120,
+        "DeepSeek": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.7157482794982796,
+            "em": 0.6333333333333333
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "f1_counts": {
+            "left_higher": 40,
+            "equal": 192,
+            "right_higher": 8
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              120,
+              32
+            ],
+            [
+              8,
+              80
+            ]
+          ],
+          "f1_difference_pp": 10.650498422386256,
+          "em_difference_pp": 9.999999999999998
+        },
+        "Qwen3-8B": {
+          "n": 240,
+          "left_scores": {
+            "n": 240,
+            "f1": 0.5897608368583601,
+            "em": 0.48333333333333334
+          },
+          "right_scores": {
+            "n": 240,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 88,
+            "equal": 134,
+            "right_higher": 18
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              46,
+              70
+            ],
+            [
+              12,
+              112
+            ]
+          ],
+          "f1_difference_pp": 24.702458958167167,
+          "em_difference_pp": 24.166666666666668
+        }
+      },
+      "reselect": {
+        "n_unique_questions": 120,
+        "DeepSeek": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.7157482794982796,
+            "em": 0.6333333333333333
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "f1_counts": {
+            "left_higher": 20,
+            "equal": 96,
+            "right_higher": 4
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              60,
+              16
+            ],
+            [
+              4,
+              40
+            ]
+          ],
+          "f1_difference_pp": 10.650498422386256,
+          "em_difference_pp": 9.999999999999998
+        },
+        "Qwen3-8B": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.5897608368583601,
+            "em": 0.48333333333333334
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 44,
+            "equal": 67,
+            "right_higher": 9
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              23,
+              35
+            ],
+            [
+              6,
+              56
+            ]
+          ],
+          "f1_difference_pp": 24.702458958167167,
+          "em_difference_pp": 24.166666666666668
+        }
+      },
+      "append": {
+        "n_unique_questions": 120,
+        "DeepSeek": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.7157482794982796,
+            "em": 0.6333333333333333
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.609243295274417,
+            "em": 0.5333333333333333
+          },
+          "f1_counts": {
+            "left_higher": 20,
+            "equal": 96,
+            "right_higher": 4
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              60,
+              16
+            ],
+            [
+              4,
+              40
+            ]
+          ],
+          "f1_difference_pp": 10.650498422386256,
+          "em_difference_pp": 9.999999999999998
+        },
+        "Qwen3-8B": {
+          "n": 120,
+          "left_scores": {
+            "n": 120,
+            "f1": 0.5897608368583601,
+            "em": 0.48333333333333334
+          },
+          "right_scores": {
+            "n": 120,
+            "f1": 0.34273624727668844,
+            "em": 0.24166666666666667
+          },
+          "f1_counts": {
+            "left_higher": 44,
+            "equal": 67,
+            "right_higher": 9
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              23,
+              35
+            ],
+            [
+              6,
+              56
+            ]
+          ],
+          "f1_difference_pp": 24.702458958167167,
+          "em_difference_pp": 24.166666666666668
+        }
+      }
+    },
+    "r2_minus_v3_non_gold_conditioned": {
+      "<=0": {
+        "DeepSeek": {
+          "n": 169,
+          "left_scores": {
+            "n": 169,
+            "f1": 0.7036040882194728,
+            "em": 0.6035502958579881
+          },
+          "right_scores": {
+            "n": 169,
+            "f1": 0.7154384077461,
+            "em": 0.6153846153846154
+          },
+          "f1_counts": {
+            "left_higher": 1,
+            "equal": 165,
+            "right_higher": 3
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              101,
+              1
+            ],
+            [
+              3,
+              64
+            ]
+          ],
+          "f1_difference_pp": -1.1834319526627168,
+          "em_difference_pp": -1.183431952662728
+        },
+        "Qwen3-8B": {
+          "n": 169,
+          "left_scores": {
+            "n": 169,
+            "f1": 0.6293670826215205,
+            "em": 0.5384615384615384
+          },
+          "right_scores": {
+            "n": 169,
+            "f1": 0.6228582068818755,
+            "em": 0.5325443786982249
+          },
+          "f1_counts": {
+            "left_higher": 3,
+            "equal": 165,
+            "right_higher": 1
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              89,
+              2
+            ],
+            [
+              1,
+              77
+            ]
+          ],
+          "f1_difference_pp": 0.6508875739644981,
+          "em_difference_pp": 0.5917159763313529
+        }
+      },
+      "1": {
+        "DeepSeek": {
+          "n": 134,
+          "left_scores": {
+            "n": 134,
+            "f1": 0.7255247240321867,
+            "em": 0.6417910447761194
+          },
+          "right_scores": {
+            "n": 134,
+            "f1": 0.7286907122728019,
+            "em": 0.6567164179104478
+          },
+          "f1_counts": {
+            "left_higher": 5,
+            "equal": 122,
+            "right_higher": 7
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              83,
+              3
+            ],
+            [
+              5,
+              43
+            ]
+          ],
+          "f1_difference_pp": -0.3165988240615203,
+          "em_difference_pp": -1.4925373134328401
+        },
+        "Qwen3-8B": {
+          "n": 134,
+          "left_scores": {
+            "n": 134,
+            "f1": 0.5543116477708225,
+            "em": 0.4552238805970149
+          },
+          "right_scores": {
+            "n": 134,
+            "f1": 0.5631264488942045,
+            "em": 0.4701492537313433
+          },
+          "f1_counts": {
+            "left_higher": 3,
+            "equal": 125,
+            "right_higher": 6
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              59,
+              2
+            ],
+            [
+              4,
+              69
+            ]
+          ],
+          "f1_difference_pp": -0.8814801123381955,
+          "em_difference_pp": -1.4925373134328401
+        }
+      },
+      ">=2": {
+        "DeepSeek": {
+          "n": 80,
+          "left_scores": {
+            "n": 80,
+            "f1": 0.6874130036630037,
+            "em": 0.5625
+          },
+          "right_scores": {
+            "n": 80,
+            "f1": 0.7073534798534798,
+            "em": 0.6
+          },
+          "f1_counts": {
+            "left_higher": 2,
+            "equal": 75,
+            "right_higher": 3
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              45,
+              0
+            ],
+            [
+              3,
+              32
+            ]
+          ],
+          "f1_difference_pp": -1.994047619047612,
+          "em_difference_pp": -3.749999999999998
+        },
+        "Qwen3-8B": {
+          "n": 80,
+          "left_scores": {
+            "n": 80,
+            "f1": 0.5273039215686275,
+            "em": 0.4
+          },
+          "right_scores": {
+            "n": 80,
+            "f1": 0.5694298245614035,
+            "em": 0.4625
+          },
+          "f1_counts": {
+            "left_higher": 1,
+            "equal": 71,
+            "right_higher": 8
+          },
+          "em_matrix_correct_then_incorrect": [
+            [
+              32,
+              0
+            ],
+            [
+              5,
+              43
+            ]
+          ],
+          "f1_difference_pp": -4.212590299277597,
+          "em_difference_pp": -6.25
+        }
+      }
+    },
+    "output_shape": {
+      "n": 1800,
+      "finish_reasons": {
+        "stop": 1800
+      },
+      "at_token_limit": 0,
+      "empty_parsed_answers": 0
+    }
+  },
+  "no_new_api_calls": true
+}

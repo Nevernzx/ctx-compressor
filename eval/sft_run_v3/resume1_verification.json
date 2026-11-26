@@ -1,0 +1,63 @@
+{
+  "status": "waiting_gpu",
+  "stage": "D_train",
+  "stage_pid": null,
+  "verified_utc": "2026-11-21T20:50:11.650692+00:00",
+  "supervisor_pid": 2541782,
+  "ppid": 1,
+  "session_id": 2541782,
+  "tty_nr": 0,
+  "gpu_wait": {
+    "stage": "D_train",
+    "status": "waiting_gpu",
+    "utc": "2026-11-21T20:49:37.648524+00:00",
+    "gpu": {
+      "index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "memory_used_mib": 7140,
+      "utilization_pct": 93
+    },
+    "consecutive_free": 0,
+    "required_free": 3,
+    "limit_mib": 2048,
+    "poll_seconds": 300,
+    "elapsed_seconds": 0.03949170792475343,
+    "timeout_seconds": 129600
+  },
+  "source_status": {
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/pipeline_status.json",
+    "bytes": 4789,
+    "sha256": "179ff46938f36daeab68cf7882be3ef8c934b509cc18cae39fb9058996082abf"
+  },
+  "live_status_path": "/root/userfolder/ctx-compressor/dagger_v3/pipeline_status_resume1.json",
+  "reused": [
+    {
+      "stage": "C",
+      "status": "reused",
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/dagger_rollouts.json",
+        "bytes": 5601,
+        "sha256": "5651795a83c1d5e7f2aebe73a584d18c5f1f914ecccdcd49d530dab15010f1be"
+      }
+    },
+    {
+      "stage": "D_data",
+      "status": "reused",
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/sample_manifest.json",
+        "bytes": 7030,
+        "sha256": "1c44274e623626fbfd0bff4fd310c64ff10b5bfdc6c5bd2ac1aa4d7c9b91a543"
+      }
+    }
+  ],
+  "protected_original_files": 13,
+  "protected_inventory": "/root/userfolder/ctx-compressor/dagger_v3/history_before_resume1/protected.json",
+  "historical_launch_files_verified": 51,
+  "historical_bindings": {
+    "scripts/run_sft_v3_pipeline.py": "/root/userfolder/ctx-compressor/dagger_v3/history_before_resume1/run_sft_v3_pipeline.py",
+    "README.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/README.md",
+    "NOTES.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/NOTES.md",
+    "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/HANDOFF.md"
+  },
+  "cpu_tests": 644
+}

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "gpu_initialized": false,
+  "datasets": {
+    "musique": {
+      "n_tasks": 10,
+      "n_documents": 21100,
+      "bm25_results": 20,
+      "initial_prompt_tokens": 205,
+      "after_observation_tokens": 279,
+      "r4_prompt_tokens": 2842,
+      "append_prefix_identical": true
+    },
+    "hotpotqa": {
+      "n_tasks": 10,
+      "n_documents": 66635,
+      "bm25_results": 20,
+      "initial_prompt_tokens": 209,
+      "after_observation_tokens": 312,
+      "r4_prompt_tokens": 3316,
+      "append_prefix_identical": true
+    },
+    "2wiki": {
+      "n_tasks": 10,
+      "n_documents": 56687,
+      "bm25_results": 20,
+      "initial_prompt_tokens": 215,
+      "after_observation_tokens": 460,
+      "r4_prompt_tokens": 1440,
+      "append_prefix_identical": true
+    }
+  },
+  "data": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/data_preflight.json",
+    "size": 50658,
+    "sha256": "590d56d00e6834dc4dc7a748b7faa15f0d73ae2d74d611ba80f2be450d48c3c0"
+  },
+  "prompt": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/prompts.json",
+    "size": 1352,
+    "sha256": "48718c8041b318ba18f162cce27a758415f4becf94f9c1e9fd2d2979871346f6"
+  }
+}

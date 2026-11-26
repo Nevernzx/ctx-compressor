@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "task_ids": [
+    3,
+    24,
+    29,
+    99,
+    100,
+    117,
+    163,
+    187,
+    199,
+    226
+  ],
+  "n_tasks": 10,
+  "n_steps": 540,
+  "n_different": 0,
+  "by_cell": {
+    "reselect|tight": 90,
+    "reselect|mid": 90,
+    "reselect|loose": 90,
+    "append|tight": 90,
+    "append|mid": 90,
+    "append|loose": 90
+  },
+  "source": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts/bm25/steps.jsonl",
+    "sha256": "d543140a7e9e2fb20ec54e08766137004df33c99fab46d75ff62313b0f2f1ef9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "blocked",
+  "phase": "P",
+  "required": {
+    "dependency": "cl100k_base.tiktoken",
+    "expected_sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+    "source": "https://openaipublic.blob.core.windows.net/encodings/cl100k_base.tiktoken",
+    "stage": "PromptCompressor.__init__",
+    "python_env": "/root/userfolder/ctx-compressor/envs/grpo",
+    "llmlingua": "0.2.2",
+    "tiktoken_cache_key": "9b5ad71b2ce5302211f9c61530b329a4922fc6a4"
+  },
+  "optional_open_provence": {
+    "status": "unavailable_with_installed_nltk",
+    "details": {
+      "tokenizers/punkt/english.pickle": null,
+      "tokenizers/punkt_tab/english/": null
+    }
+  },
+  "verified_utc": "2026-11-25T02:58:51.965439+00:00",
+  "authorize_extra_download_required": true,
+  "stopped_pids": [],
+  "download": {
+    "status": "complete",
+    "receipt": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/acquisition/llmlingua2.json",
+      "size": 2134,
+      "sha256": "5f7c3af3d5efedee817fb121366bb48e6a3fd921128f204d770ca710edbc539f"
+    }
+  },
+  "task19_corpus_preflight": {
+    "path": "/root/workplace/ctx-compressor/eval/test_v1/data_preflight.json",
+    "size": 2549,
+    "sha256": "26d620e71b7979dd4a5471d00d793d708df6224c6be8a6a5eddb42991897add5"
+  },
+  "gpu_started": false
+}

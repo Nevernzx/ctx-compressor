@@ -1,0 +1,14 @@
+{
+  "tests": 791,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "previous_test_ids_matched": 763,
+  "elapsed_seconds": 15.394621964078397,
+  "xml_sha256": "79f28da18be213abe670174a13a3eb2c8f1226d9e099574fab074a85ccba808e",
+  "xml": "/root/userfolder/ctx-compressor/reader_diag/cpu_suite_9u6oqjrm/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/reader_diag/cpu_suite_9u6oqjrm/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-24T02:31:50.587398+00:00"
+}

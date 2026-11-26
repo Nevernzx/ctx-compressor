@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "tests": 877,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "python": "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+  "cuda_visible_devices": "",
+  "utc": "2026-11-25T03:19:29.172344+00:00",
+  "log": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/cpu_suite/pytest.log",
+    "size": 1061,
+    "sha256": "94305d8c632b36f88de927c18e22d27f7ec8559758ce96b68b1859f709e9adc8"
+  },
+  "junit": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/cpu_suite/junit.xml",
+    "size": 113943,
+    "sha256": "a40a0b49246682faa066c7a47dcf8b79811ef7175cdd0601630b29eeb0d5ed5e"
+  }
+}

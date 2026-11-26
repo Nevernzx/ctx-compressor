@@ -1,0 +1,743 @@
+{
+  "status": "passed",
+  "split": "train-held-out",
+  "seed": 20261127,
+  "s60": [
+    9,
+    151,
+    66,
+    209,
+    77,
+    138,
+    214,
+    37,
+    42,
+    72,
+    100,
+    60,
+    68,
+    22,
+    203,
+    41,
+    118,
+    8,
+    233,
+    190,
+    52,
+    10,
+    149,
+    189,
+    166,
+    125,
+    38,
+    183,
+    182,
+    204,
+    217,
+    7,
+    13,
+    114,
+    132,
+    147,
+    188,
+    165,
+    173,
+    139,
+    191,
+    70,
+    121,
+    178,
+    231,
+    134,
+    219,
+    206,
+    61,
+    130,
+    43,
+    98,
+    64,
+    39,
+    207,
+    221,
+    104,
+    199,
+    35,
+    117
+  ],
+  "s30": [
+    9,
+    151,
+    66,
+    209,
+    77,
+    138,
+    214,
+    37,
+    42,
+    72,
+    100,
+    60,
+    68,
+    22,
+    203,
+    41,
+    118,
+    8,
+    233,
+    190,
+    52,
+    10,
+    149,
+    189,
+    166,
+    125,
+    38,
+    183,
+    182,
+    204
+  ],
+  "A": {
+    "status": "passed",
+    "subset_seed": 20261127,
+    "s60": [
+      9,
+      151,
+      66,
+      209,
+      77,
+      138,
+      214,
+      37,
+      42,
+      72,
+      100,
+      60,
+      68,
+      22,
+      203,
+      41,
+      118,
+      8,
+      233,
+      190,
+      52,
+      10,
+      149,
+      189,
+      166,
+      125,
+      38,
+      183,
+      182,
+      204,
+      217,
+      7,
+      13,
+      114,
+      132,
+      147,
+      188,
+      165,
+      173,
+      139,
+      191,
+      70,
+      121,
+      178,
+      231,
+      134,
+      219,
+      206,
+      61,
+      130,
+      43,
+      98,
+      64,
+      39,
+      207,
+      221,
+      104,
+      199,
+      35,
+      117
+    ],
+    "s30": [
+      9,
+      151,
+      66,
+      209,
+      77,
+      138,
+      214,
+      37,
+      42,
+      72,
+      100,
+      60,
+      68,
+      22,
+      203,
+      41,
+      118,
+      8,
+      233,
+      190,
+      52,
+      10,
+      149,
+      189,
+      166,
+      125,
+      38,
+      183,
+      182,
+      204
+    ],
+    "n_prompts_verified": 1800,
+    "prompt_sha1_mismatches": 0,
+    "n_prompts_by_strategy": {
+      "oracle": 480,
+      "grpo_r2:checkpoint-125": 480,
+      "sft_v3:checkpoint-3000": 480,
+      "no_compress": 120,
+      "no_context": 240
+    },
+    "task12_manifest_sha256": "a0b093d2cd8d777995fb51dffd1ec569491a24bd3007a24e00a0138b28d2515e",
+    "task12_preflight_sha256": "9112aadf0a154b3ad3f7c879e8d982ec5d042c0f299aeca68c0c82d76bc9d255",
+    "task12_predictions_sha256": "fb484cef2620f886aaf0930cccfd8ac18eab17bf220a50263040e4e57a34fe48",
+    "input_sha256": {
+      "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9",
+      "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac",
+      "/root/workplace/ctx-compressor/data/raw/musique/musique_ans_v1.0_train.jsonl": "83a75b1e11e4e9bb8f8308e72ac40ca617ae4431b3a0d955b61cab259248490a"
+    },
+    "signed_rollouts": {
+      "no_compress": {
+        "steps": "/root/userfolder/ctx-compressor/eval_rollouts/no_compress/steps.jsonl",
+        "steps_sha256": "efab1373c1b520a5646ef3be3d89fe9264fe6158f0339cf6cedada9406385356",
+        "metrics": "/root/workplace/ctx-compressor/eval/sft_run/no_compress_results.json",
+        "metrics_sha256": "73bbf3061c1396d02a5871f66f4548e14cf9db219e18e9338779618a3860fe96",
+        "signature": "eval/sft_run_v2/TASK05_SHA256SUMS -> /root/workplace/ctx-compressor/eval/sft_run/external_artifact_manifest.json",
+        "n_trajectories": 1494
+      },
+      "oracle": {
+        "steps": "/root/userfolder/ctx-compressor/eval_rollouts/oracle/steps.jsonl",
+        "steps_sha256": "1eef089c2bcf9d120e0d2b64480854f5571dbdf81a4a971a80de9c1287d37a5b",
+        "metrics": "/root/workplace/ctx-compressor/eval/sft_run/oracle_results.json",
+        "metrics_sha256": "0d690a2c882865752545d668012ac84b02488097319bc932457e10af8c6d5a86",
+        "signature": "eval/sft_run_v2/TASK05_SHA256SUMS -> /root/workplace/ctx-compressor/eval/sft_run/external_artifact_manifest.json",
+        "n_trajectories": 1494
+      },
+      "sft_v3:checkpoint-3000": {
+        "steps": "/root/userfolder/ctx-compressor/eval_rollouts_v3/checkpoint-3000/steps.jsonl",
+        "steps_sha256": "51b9c94fb33756fc03f5efb9d909a6ffcbe9335f36489501e40c1dc5d725efbe",
+        "metrics": "/root/workplace/ctx-compressor/eval/sft_run_v3/checkpoint-3000/checkpoint-3000_results.json",
+        "metrics_sha256": "1f62d14418e2721df6953a1cf78e7cd67779468519bc69989521ca72b0254f70",
+        "signature": "eval/sft_run_v3/TASK10_SHA256SUMS",
+        "n_trajectories": 1494
+      },
+      "grpo_r2:checkpoint-125": {
+        "steps": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/checkpoint-125/steps.jsonl",
+        "steps_sha256": "057746aca748d0bf3809a81c48d863c0cffb168d934face3b0e379d031f16274",
+        "metrics": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-125/checkpoint-125_results.json",
+        "metrics_sha256": "e98a810821e6b4e7f20ac43c511ef09a6ee54783d944631004c195fb728f64b0",
+        "signature": "eval/grpo_r2/TASK11_SHA256SUMS",
+        "n_trajectories": 1494
+      }
+    },
+    "no_compress": {
+      "reference_cell": "reselect|tight",
+      "tasks": 249,
+      "differing_tasks": 0,
+      "differing_cells": 0,
+      "by_cell": {
+        "reselect|tight": 0,
+        "reselect|mid": 0,
+        "reselect|loose": 0,
+        "append|tight": 0,
+        "append|mid": 0,
+        "append|loose": 0
+      },
+      "all_identical": true
+    }
+  },
+  "B": {
+    "n_trajectories": 60,
+    "n_steps": 548,
+    "rows": [
+      {
+        "task": 9,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "fdcb5bb5352ee77241e0c602e35bfdfb5a084efa8bd20f63b8b44c056b64cf8e"
+      },
+      {
+        "task": 151,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "5673d2f24f77cb668ac7f411f60f6d8375c3b68a1a5d8afbbe76e06899a71446"
+      },
+      {
+        "task": 66,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 11,
+        "user_text_sha256": "70f98b4e2e4cc340e470eff74e13100ed1643318be0d3630df322698c83d89b9"
+      },
+      {
+        "task": 209,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "a963671181e2dae0f96ac8de1f868f1d325e0e47182916a49f6a564df2bfc3cd"
+      },
+      {
+        "task": 77,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "7001ef440030b8d4ae1a7fa1b651c8989c26fed002c1f7b256e78bebfe1b3152"
+      },
+      {
+        "task": 138,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 12,
+        "user_text_sha256": "df309742741392b809c6b149a02bb6c85054ab1326234ae6519607ec5dbc7f35"
+      },
+      {
+        "task": 214,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "aa54ef8c5b3a737457bab98073e9fd06d5f0df5f581e34df57ac1b1c721bd351"
+      },
+      {
+        "task": 37,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "302f3c06a50bc97218f88ec005ebcd88d6e1063b3962a778638a8e17af7634cf"
+      },
+      {
+        "task": 42,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "118027f79b389523bde4b2f2db4d51958cf485486117d6ce7ee15904e575c9d8"
+      },
+      {
+        "task": 72,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "a1b029b75619a0ce5ce7b50112bb57c735db5f3f7dfeddef46001f947c0692ef"
+      },
+      {
+        "task": 100,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "eb5c06636ebf8af88b7f818a59a82eed12c97c0944e960e15dc9cbe125896be1"
+      },
+      {
+        "task": 60,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "b63053b894dbfa921dedd8899d8db634ca02b14f2b669041d6b06687400708d6"
+      },
+      {
+        "task": 68,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "109667bc4a616cb8ff6c31ecfa6e9d1fe8d3de5dc22ed0e846189f05f9f5555e"
+      },
+      {
+        "task": 22,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "2c433cfa4e847532b3adcdf17789f7b4797fd925d3c525d91fdcc29af99926d7"
+      },
+      {
+        "task": 203,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "1692d3e2bc437485b81d2f8e611b10ea931ad82799bcee5e53a1b72990a49aa0"
+      },
+      {
+        "task": 41,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "e4185a02fe924401a8c44f97c3951dbcc9dc7bd87b5b7a4dbfa2a5746502a8d1"
+      },
+      {
+        "task": 118,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "190e61bd3881d85a953cde6c9c3181edc1b97d9c3af66504a6f3a73c2c792df4"
+      },
+      {
+        "task": 8,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "3ea57bb6427616047757accbdca3f1af02d6b985c481c0eea2e8190bd19238c3"
+      },
+      {
+        "task": 233,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 13,
+        "user_text_sha256": "197cfb47ed4037f7537ba4dadf27e2876d79cd35103b5b13d3a5b209ce8a3d48"
+      },
+      {
+        "task": 190,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 11,
+        "user_text_sha256": "ca7b3682dd1814bc57ea6055b5a4d061452029a89d568ee18976fe262a179053"
+      },
+      {
+        "task": 52,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "dce144f54d0db615a3c0dbfc794fba3f49bdc2f67d9763f1e60389d46374afd3"
+      },
+      {
+        "task": 10,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "34e5b6d805d2fe13ef551005e7a652e67eeadc5cfb6a32c7db73cb3564134c5b"
+      },
+      {
+        "task": 149,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "4789f00c9e98cb8c2509364a537dc5c8c31a9aded5359ebe4f2d5ad66d0357cc"
+      },
+      {
+        "task": 189,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "abced9f36865797f73185c60badc51a4b6ef4d7585593a8d3233efd7415f12ec"
+      },
+      {
+        "task": 166,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "a7ea7a658d9dee5fee2787ac3baa5f1249465c44a5ac15a40a7df20ac2154886"
+      },
+      {
+        "task": 125,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "000090a98bfd108cbf5002d02afe76c8c766c9ef460272650ac385a61eb89548"
+      },
+      {
+        "task": 38,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "9e4e867cda27a34259d56539118418a02399b14f43adee47eb6c1f3161ff0341"
+      },
+      {
+        "task": 183,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "6c095dfe784ad2554cfbfd56502b2a124ca9961c1aa1e868af7ff749de23dd09"
+      },
+      {
+        "task": 182,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "0cd7a8de7a20e1e0c8b7caa182495fcdd95c7720fda5aff1e1a911d55db8275c"
+      },
+      {
+        "task": 204,
+        "mode": "reselect",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "7405d23d20ab623a2c90e580d96a695e26379b7f6bc581d2d6bb17ec12c651fc"
+      },
+      {
+        "task": 9,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "eb8d34460702d6337cac3d89f884fb9bc0c9cca3823fd771c4c5a4d2b1e6ef1d"
+      },
+      {
+        "task": 151,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "6361f376c57323ad9361c5853bed31064cf810dadf121426ffb52947383e7991"
+      },
+      {
+        "task": 66,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 11,
+        "user_text_sha256": "f07b8f33225918eff496c42b233de738a63a3c1e35fb9572ca8d2ccd8b8661f2"
+      },
+      {
+        "task": 209,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "765f7a0dfbf54dcd0d1d52a132f933bbdbf6996d31c7f606737ce10ec7378e2e"
+      },
+      {
+        "task": 77,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "3ff80f3e9f3c0d8617b36e774d30d368df44188390f8b15840187fc8d5cb1f40"
+      },
+      {
+        "task": 138,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 12,
+        "user_text_sha256": "a6c0dc67ac22530ecdd295145080f1fc80695744f0a899df4ce4b5740379c391"
+      },
+      {
+        "task": 214,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "4b5eb7187639efdc4727ffba847b95de7bc220d54fd8a0ce8b303f843ad7e60d"
+      },
+      {
+        "task": 37,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "e6f0b651b3be482dd73831d666583871348d60fffc1086f2ce2336b9600ca8ef"
+      },
+      {
+        "task": 42,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "a6566306d7a8ed5401d846be1553bc584ab4528df4a4f0e2e757c3f373e2b695"
+      },
+      {
+        "task": 72,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "c0386af525bab00f3a69e4975f49569df8fd5f8a690011c949c7e490d4878c05"
+      },
+      {
+        "task": 100,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "437286474a18c286906abc1c2a97bc7ab8add5b419cbfdd84ef6d93ba868bf88"
+      },
+      {
+        "task": 60,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "de8528137ea6050733f5c5d2addf868a1e504766ab0e686251f5f47dd4086719"
+      },
+      {
+        "task": 68,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "741b6d67a8dde1883acb68dfffda6c73c89089bcc68ee4a6a990c38ca54a3e66"
+      },
+      {
+        "task": 22,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "2b8f9708aae644c7cf78de5d8347d53f740e3b038fc35fad089b9e67ef2998ea"
+      },
+      {
+        "task": 203,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "899b4807b6fa2772bd0f3040b24caa50a149c22f7037d9eb9ca567ac6c1174d0"
+      },
+      {
+        "task": 41,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "067ea4ab3b8d12f89a177c765a6f669924598f00278d5529800af00db6ef7524"
+      },
+      {
+        "task": 118,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "7cccd950c0f3f0925aeb82a9b0380b1902f18454b75e2e1d99395e1d290dfd0b"
+      },
+      {
+        "task": 8,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "11948abc56e401d3dfae4f626ffb0cd814489f00ed8c6864d90faca7c357562e"
+      },
+      {
+        "task": 233,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 13,
+        "user_text_sha256": "414c39ac94f1ae45fb7661f071a99a7ab1fb70cd523576bd09318197fea70bcb"
+      },
+      {
+        "task": 190,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 11,
+        "user_text_sha256": "3b56aa937243bb6cbe0af25291bc4ea6b24fb03eabd0b7ae0cff2db571818cec"
+      },
+      {
+        "task": 52,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "0cf81afc5fbc009d58e37f8b40864b07fb09aaa900405cc94e77d6fbae31e522"
+      },
+      {
+        "task": 10,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "c94f5273560164d1e67393843f9842dacec8bb28068d45d4b08e2dea0c376b04"
+      },
+      {
+        "task": 149,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "b704f7e9ce7928ca7ee8f5f47554c3a72ae7fc810a59dc3f7447a490a28d3369"
+      },
+      {
+        "task": 189,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "050c42f05051cc08403e73c2ab2f059813088633fdfa11570270a2a611b5715f"
+      },
+      {
+        "task": 166,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "1f6c2156e200d6e039df0ea1a2524db21da38e2fc1914ef2106f47055cb12545"
+      },
+      {
+        "task": 125,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 10,
+        "user_text_sha256": "34d402477f39dc2872f562b25c96cdd47b6e3e1b599027158849fbb2a6867d03"
+      },
+      {
+        "task": 38,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 9,
+        "user_text_sha256": "346dfd6429b470fa0c3b20aff7ce18f05e77f63f689cc82aa35cd5e304a08a05"
+      },
+      {
+        "task": 183,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "0532531ae89c20f9e17b6a6fb93ce4a3d6992d61adbb499dbb0fa19d141e2f7f"
+      },
+      {
+        "task": 182,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "cc31bebd27c651f42d57aaf55cc92b5f11ae1c21dc6776412ff5ea8afd9572e0"
+      },
+      {
+        "task": 204,
+        "mode": "append",
+        "tier": "mid",
+        "n_steps": 8,
+        "user_text_sha256": "03301acb8fe584fc47b42bab01ea3214f593737c0e6fc4735c069e4f0bcac16e"
+      }
+    ],
+    "step0_mismatches": 0,
+    "system_sha256": "caef58ecd918771e5a83d071a0e03bf2dcf3d593b059da1c17a3c96786457a85",
+    "reference_path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/checkpoint-125/steps.jsonl",
+    "reference_sha256": "057746aca748d0bf3809a81c48d863c0cffb168d934face3b0e379d031f16274",
+    "s30": [
+      9,
+      151,
+      66,
+      209,
+      77,
+      138,
+      214,
+      37,
+      42,
+      72,
+      100,
+      60,
+      68,
+      22,
+      203,
+      41,
+      118,
+      8,
+      233,
+      190,
+      52,
+      10,
+      149,
+      189,
+      166,
+      125,
+      38,
+      183,
+      182,
+      204
+    ],
+    "budget": 2814
+  },
+  "A_full_n": 1800,
+  "A_smoke_n": 12,
+  "A_full_counts": {
+    "oracle": 480,
+    "grpo_r2:checkpoint-125": 480,
+    "sft_v3:checkpoint-3000": 480,
+    "no_compress": 120,
+    "no_context": 240
+  },
+  "A_full_qwen_tokens": {
+    "oracle": 619362,
+    "grpo_r2:checkpoint-125": 705042,
+    "sft_v3:checkpoint-3000": 634494,
+    "no_compress": 2362577,
+    "no_context": 14993
+  },
+  "A_identities_sha256": "647cfd10e2681ca9216b2f29b1f53faf016a331cb0b4e24ba4e134da4d4713c9"
+}

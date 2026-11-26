@@ -1,0 +1,14 @@
+{
+  "tests": 844,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "matched_task16_tests": 820,
+  "elapsed_seconds": 14.456391575746238,
+  "xml_sha256": "694805884e7810563f14782dbcc5cfdea830442c0628d601b82ae341f3a2083c",
+  "xml": "/root/userfolder/ctx-compressor/reranker_v1/cpu_suite_eiclfj7m/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/reranker_v1/cpu_suite_eiclfj7m/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-24T09:46:26.559128+00:00"
+}

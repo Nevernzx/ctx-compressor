@@ -1,0 +1,36 @@
+{
+ "status": "stopped_content_risk_main_approved",
+ "halt": "stopped_http_4xx at round 4 of smoke2|2wiki|t2|llml2 (HTTP 400)",
+ "cause": "DeepSeek moderation: resending the rebuilt request returned 400 Content Exists Risk; the context held a Free China / Falun Gong passage",
+ "chat_calls_ok": 253,
+ "unparseable_outputs": 0,
+ "spent_yuan": "0.40203904",
+ "completed_episodes": 11,
+ "decision_before_main": [
+  "a moderation refusal ends that episode with empty answers; no retry, no corpus change",
+  "a task refused in any row leaves every paired comparison; refusals per row reported; refused-as-zero sensitivity reported",
+  "main launched without another smoke: user 2026-11-26 \"小样跑完直接跑全量吧\", total cap 20 CNY (\"调整上限到20\")"
+ ],
+ "artifacts": [
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke2/attempts.jsonl",
+   "size": 261539,
+   "sha256": "8a9eaf7749a8d4ec053af698ca951c871eec3e75057e2c1e12f07c67b9b7a09e"
+  },
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke2/episodes.jsonl",
+   "size": 282186,
+   "sha256": "bfe556502ab2b78917764961d00cf942c14e5cd0e25ef10cdcdbd60346a4d801"
+  },
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke2/status.json",
+   "size": 2411,
+   "sha256": "a357b14da0c858e1806f1fe9ea161499bf9028f3c2ca6766f77dcee92b466927"
+  },
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke2/worker.log",
+   "size": 10014,
+   "sha256": "fdc41b4ed958d41bbdf4be96d5cdf51861d3852ce876c96521d301b7727d7350"
+  }
+ ]
+}

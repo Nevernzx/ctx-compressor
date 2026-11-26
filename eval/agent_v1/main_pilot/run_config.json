@@ -1,0 +1,765 @@
+{
+  "status": "evaluation_complete",
+  "scope": "pilot",
+  "n_tasks": 2,
+  "pilot": null,
+  "task": 20,
+  "gpu_index": 1,
+  "rpc_repair": {
+    "method": "Named methods on the installed vLLM worker extension",
+    "previous_launch": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/main_try2/previous_launch.json",
+      "size": 736,
+      "sha256": "fffb3e02175e41c211081d48ad33bfb379358187d37a868afecf1ec4dc33262a"
+    },
+    "original_preflight": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/main/preflight.json",
+      "size": 9120,
+      "sha256": "aefbb8c3e25de6896ccf0ca7ceb3c16b74531f7939b870d9463f6cfc9644f958"
+    },
+    "source_sha256": {
+      "scripts/agent_v1_main.py": {
+        "old": "86c37c091319ca9960bae130e52c060441141ccbdba94bc746d5f261a4ebcd35",
+        "new": "38ac0668a4f038af1b0d2e0a7f869dbae6dc722e56fe4c9a44bd232d6a54cdf6"
+      },
+      "scripts/agent_v1_residency.py": {
+        "old": "dca7a69359e2394db2bc8af1ed576d8db3d804e152ecc07cda1a8ac47df4df33",
+        "new": "6b259b6e60f848b632a630c8673fc6fa01b64ae8ea4fc131a653abc79ab858dd"
+      },
+      "tests/test_agent_v1_main.py": {
+        "old": "e61115c729bd65d8ef78d92a10070812e203dce3970fd4bdd913eb63c4cf05e7",
+        "new": "93cd941706517a4d31f34abbd946eee0d57ba9dbdee5077c679e01cdb4fe8675"
+      }
+    }
+  },
+  "offload": "Agent weights temporarily in host RAM. Agent engine and KV blocks stay resident on GPU 1.",
+  "agent_worker_extension": "scripts.agent_v1_residency.AgentWeightExtension",
+  "r4_cohort": 64,
+  "schedule": "R4 reverses the episode order between compressor handoffs within a cohort.",
+  "task19": {
+    "path": "/root/workplace/ctx-compressor/eval/test_v1/run_config.json",
+    "size": 9632,
+    "sha256": "0407edd148081f71767047f84d15ead9f5307199db01825bb8ad3ec89bbb196a"
+  },
+  "shared_lock": "/root/userfolder/ctx-compressor/rt/gpu1_t19_t20.lock",
+  "ipc_check": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/ipc_check.json",
+    "size": 1033,
+    "sha256": "4ec4fb7bd254a413259cee4d8abadf5ab4e6dcddfa086ede62ec233af09503da"
+  },
+  "runtime": {
+    "status": "passed",
+    "episodes": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/episodes.jsonl",
+      "size": 408482,
+      "sha256": "baeb6dfc091c93b28db76dc4dd6e7a5e61aa855e2ea3d1cedc8f1be6bfa55036"
+    },
+    "n_episodes": 16,
+    "wall_seconds": 1237.729502538219,
+    "engine_loads": [
+      {
+        "engine": "agent",
+        "startup_seconds": 44.54272289900109,
+        "effective_disable_cascade_attn": true,
+        "source": "llm_engine.vllm_config.model_config.disable_cascade_attn",
+        "log_evidence": null,
+        "shutdown_seconds": 1.546407449990511
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 27.855927317868918,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 8669,
+          "free_mib": 39841
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586746": 34170
+        },
+        "shutdown_seconds": 0.67147346585989
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 27.907434202264994,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3587542": 34170
+        },
+        "shutdown_seconds": 0.8162891231477261
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.840071575250477,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3587946": 34170
+        },
+        "shutdown_seconds": 0.5954630495980382
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.339001100044698,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3588200": 34170
+        },
+        "shutdown_seconds": 0.6414811951108277
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 24.941501564811915,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3588434": 34170
+        },
+        "shutdown_seconds": 0.6521152961067855
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.247847536113113,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3588672": 34170
+        },
+        "shutdown_seconds": 0.6060559712350368
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 21.96767094032839,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3588946": 34170
+        },
+        "shutdown_seconds": 0.6218840647488832
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.075530017260462,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3589161": 34170
+        },
+        "shutdown_seconds": 0.6367280990816653
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.432075024116784,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3589390": 34170
+        },
+        "shutdown_seconds": 0.6294058403000236
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 23.462705634068698,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3589646": 34170
+        },
+        "shutdown_seconds": 0.6621413580141962
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 21.96994356997311,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3589881": 34170
+        },
+        "shutdown_seconds": 0.6756445369683206
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.67925540683791,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3590098": 34170
+        },
+        "shutdown_seconds": 0.6617723749950528
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.188357011880726,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3590351": 34170
+        },
+        "shutdown_seconds": 0.6208673007786274
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 21.99708858318627,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3590605": 34170
+        },
+        "shutdown_seconds": 0.6244087889790535
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.547129552811384,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3590840": 34170
+        },
+        "shutdown_seconds": 0.6456702873110771
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.291381142102182,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3591092": 34170
+        },
+        "shutdown_seconds": 0.6234507630579174
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 23.434725780040026,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3591309": 34170
+        },
+        "shutdown_seconds": 0.6781983389519155
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.563640227075666,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3591544": 34170
+        },
+        "shutdown_seconds": 0.636244046036154
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.317748988047242,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3591795": 34170
+        },
+        "shutdown_seconds": 0.8422884969040751
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.627998775802553,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3592030": 34170
+        },
+        "shutdown_seconds": 0.6345222052186728
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.317792757879943,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3592265": 34170
+        },
+        "shutdown_seconds": 0.6303455331362784
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.495120806153864,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3592501": 34170
+        },
+        "shutdown_seconds": 0.6658799527212977
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.384830817114562,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3592740": 34170
+        },
+        "shutdown_seconds": 1.0457963650114834
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.640347150154412,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3592972": 34170
+        },
+        "shutdown_seconds": 0.6311443392187357
+      },
+      {
+        "engine": "r4",
+        "startup_seconds": 22.20268872519955,
+        "admission": {
+          "total_mib": 49140,
+          "used_mib": 9100,
+          "free_mib": 39410
+        },
+        "compute_apps_mib": {
+          "3586510": 8288,
+          "3586352": 426,
+          "3593227": 34170
+        },
+        "shutdown_seconds": 1.0077097536996007
+      }
+    ],
+    "versions": {
+      "vllm": "0.11.0",
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "numpy": "2.2.6",
+      "bm25s": "0.3.16",
+      "scipy": "1.17.1",
+      "llmlingua": "0.2.2",
+      "tiktoken": "0.14.0",
+      "nltk": "3.10.4",
+      "accelerate": "1.12.0"
+    },
+    "peak_observed_gpu1_mib": 43659,
+    "gpu_snapshots": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/gpu_snapshots.jsonl",
+      "size": 26601,
+      "sha256": "2e4b2d55c48e1c7e27e7fcf7f3d5ea880bdc9f8613b1ba8f9c82cacf988e1c31"
+    },
+    "root_usage_check": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/root_usage_check.json",
+      "size": 1682,
+      "sha256": "530cefe68e86b978c8758c72dbd6755f9a8fd25a39ba1d46746c0c3138ae8fb3"
+    },
+    "weight_transfers": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/weight_transfers.jsonl",
+      "size": 9544,
+      "sha256": "f4987206db3dbe1f30f042c61aeb1ec69a96bc525f70c4705041c1e31e20c328"
+    },
+    "residency_check": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/main_pilot/residency_check.json",
+      "size": 712,
+      "sha256": "5535351d9ecf254e9cdce2ed22029f5280e2c271917d4682a66297489efb75ff"
+    }
+  },
+  "gpu_ownership": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/gpu_ownership.jsonl",
+    "size": 5599,
+    "sha256": "268c396ff44e2d3c2cf90ba9360256ba8fc1f39449ee9486b60bb296d8ebab67"
+  },
+  "preflight": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/main_pilot/preflight.json",
+    "size": 9179,
+    "sha256": "c31ff37d3ded1f683c540e7824a288141474e5dfb4ef87b1500878575ab0a8c2"
+  },
+  "data_preflight": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/data_preflight.json",
+    "size": 50658,
+    "sha256": "590d56d00e6834dc4dc7a748b7faa15f0d73ae2d74d611ba80f2be450d48c3c0"
+  },
+  "assets": {
+    "agent": {
+      "params": {
+        "model": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+        "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+        "trust_remote_code": false,
+        "dtype": "bfloat16",
+        "max_model_len": 40960,
+        "gpu_memory_utilization": 0.5,
+        "tensor_parallel_size": 1,
+        "enable_prefix_caching": true,
+        "enable_chunked_prefill": true,
+        "max_num_seqs": 32,
+        "max_num_batched_tokens": 8192,
+        "enforce_eager": true,
+        "seed": 20261117,
+        "disable_cascade_attn": true
+      },
+      "package_versions": {
+        "vllm": "0.11.0",
+        "torch": "2.8.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "numpy": "2.2.6",
+        "bm25s": "0.3.16",
+        "scipy": "1.17.1"
+      },
+      "reader_config_sha256": "a77c26c6c34b73dee47a2e0a8c48bdf8f506721158d17f54370523723089e6da",
+      "model_manifest_sha256": "e4d78679a6b360e59592d3afb87ddde6aa34fb31dd8fbb6f064fc66cf0519a2e",
+      "generation": {
+        "temperature": 0,
+        "seed": 20261117,
+        "max_tokens": 256,
+        "stop": [
+          "\nObservation"
+        ],
+        "enable_thinking": false
+      }
+    },
+    "r4": {
+      "params": {
+        "model": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+        "tokenizer": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+        "trust_remote_code": false,
+        "dtype": "bfloat16",
+        "max_model_len": 40960,
+        "gpu_memory_utilization": 0.7,
+        "tensor_parallel_size": 1,
+        "enable_prefix_caching": true,
+        "enable_chunked_prefill": true,
+        "max_num_seqs": 16,
+        "max_num_batched_tokens": 8192,
+        "enforce_eager": true,
+        "enable_lora": true,
+        "max_lora_rank": 16,
+        "max_loras": 1,
+        "max_cpu_loras": 5,
+        "seed": 20261118
+      },
+      "adapter": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+      "adapter_weight": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_model.safetensors",
+        "bytes": 69782384,
+        "sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf"
+      },
+      "sampling": {
+        "temperature": 0,
+        "seed": 20261118,
+        "max_tokens": 256
+      },
+      "source_run": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-500/run.json",
+        "bytes": 7421,
+        "sha256": "d30788440e0cf1d0ff2b60bbeefe231806dae1cd3fcd73d4891907b0be5b1417"
+      }
+    },
+    "reranker": {
+      "checkpoint": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300",
+      "weights": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/model.safetensors",
+        "size": 2383141336,
+        "sha256": "c3b41d67662ed0dd9a46a39c696b2060b323895dec844254b1d34ca604de73c3"
+      },
+      "template": {
+        "source": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B#using-transformers",
+        "prefix": "<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n",
+        "body": "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {document}",
+        "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "instruction": "Given the four questions of a multi-hop QA task, judge whether the passage is a supporting fact needed to answer any of them.",
+        "yes_token_id": 9693,
+        "no_token_id": 2152,
+        "pad_token_id": 151643,
+        "padding_side": "left",
+        "max_pair_tokens": 512,
+        "truncation": "right end of document only",
+        "score": "last_position_logit_yes_minus_no",
+        "probability": "sigmoid"
+      },
+      "tau": 0.5,
+      "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B"
+    },
+    "llmlingua2": {
+      "model": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank",
+      "wheel": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2",
+      "config": {
+        "use_llmlingua2": true,
+        "rate": 0.33,
+        "force_tokens": [
+          "\n",
+          "?"
+        ]
+      }
+    },
+    "model_cards": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/model_cards.json",
+      "size": 8565,
+      "sha256": "e23f6cc5e01022a391c75ee11ebad301fc18ca62d931c5899b8e4e8f8807f0af"
+    }
+  },
+  "prompt": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/prompts.json",
+    "size": 1622,
+    "sha256": "94fc288b8e9be1736178c131a0d96cc0c89716f887f04fa1000530b8bc4de986"
+  },
+  "try3": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/smoke_run_config.json",
+    "size": 74272,
+    "sha256": "5c3df2563e62ee44f71b8def11ed1e355e30c9e1152cc7e8d1ad71c4a8f469c1"
+  },
+  "frozen_code": {
+    "src/agent_v1.py": {
+      "path": "/root/workplace/ctx-compressor/src/agent_v1.py",
+      "size": 15610,
+      "sha256": "ca1940a9ef1a75ecf44797c27a63a9885590a6625826cd8fdfc7a4478c22d718"
+    },
+    "src/agent_v1_metrics.py": {
+      "path": "/root/workplace/ctx-compressor/src/agent_v1_metrics.py",
+      "size": 7392,
+      "sha256": "d2c34697b713bae08c87168648bdbe537a95666586fe8e6dab28d944775740b5"
+    },
+    "scripts/agent_v1_data.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_data.py",
+      "size": 10693,
+      "sha256": "843d88cd5b52d28343da60bf75ebeff7be3f3fc1517de24c1a3d2db858b5be32"
+    },
+    "scripts/agent_v1_engines.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_engines.py",
+      "size": 13335,
+      "sha256": "7434c995098b671d771153e13c216e1ef19c5ed051b5477fb3fd6bf60ea3e559"
+    },
+    "scripts/agent_v1_smoke.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_smoke.py",
+      "size": 22654,
+      "sha256": "37f29a0ada640f59ae832d524672fec019a15680de0e365f2f287a42f15b4115"
+    },
+    "scripts/agent_v1_queue.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_queue.py",
+      "size": 6132,
+      "sha256": "5a6ad2483d2e376019304e717a608de6b1c492737dfe26851cdcbb0c614cdaa6"
+    },
+    "scripts/agent_v1_disk.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_disk.py",
+      "size": 11413,
+      "sha256": "7a032961be0cd8627016c65e79360a68ec85186b2cf1b2ed0d9c9598c8e3a642"
+    },
+    "tests/test_agent_v1.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1.py",
+      "size": 13910,
+      "sha256": "5a63c9ce122143e3bb786e24d1c6ec082f3918101cfba24f705ea65fdf6514bb"
+    },
+    "tests/test_agent_v1_monitor_paths.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_monitor_paths.py",
+      "size": 6546,
+      "sha256": "04c01728058a9bc7c6a46ee27278f75627819e6d006561c861b6382a32872df6"
+    },
+    "tests/test_agent_v1_disk.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_disk.py",
+      "size": 6046,
+      "sha256": "908aed6c3083f2f203d919b66f4856e8759edcc4e59134cd8d1e8d4c93bf57ff"
+    },
+    "tests/fixtures/agent_v1_rr5.json": {
+      "path": "/root/workplace/ctx-compressor/tests/fixtures/agent_v1_rr5.json",
+      "size": 14829,
+      "sha256": "eb107e5bd037752d7f4ccb96adb35bea56c87c7a96702a23ae63e7d7a2a23de8"
+    }
+  },
+  "main_code": {
+    "scripts/agent_v1_main.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_main.py",
+      "size": 21855,
+      "sha256": "38ac0668a4f038af1b0d2e0a7f869dbae6dc722e56fe4c9a44bd232d6a54cdf6"
+    },
+    "scripts/agent_v1_residency.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_residency.py",
+      "size": 10028,
+      "sha256": "6b259b6e60f848b632a630c8673fc6fa01b64ae8ea4fc131a653abc79ab858dd"
+    },
+    "tests/test_agent_v1_main.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_main.py",
+      "size": 3586,
+      "sha256": "93cd941706517a4d31f34abbd946eee0d57ba9dbdee5077c679e01cdb4fe8675"
+    }
+  },
+  "peak_observed_gpu1_mib": 43659,
+  "storage_policy": {
+    "a_sustained_growth_limit_bytes": 300000000,
+    "b_attributed_growth_limit_bytes": 300000000,
+    "c_minimum_available_bytes": 5000000000,
+    "d_unattributed_transient_global_highs": "record time, bytes, and engine"
+  },
+  "rows": [
+    "no_compress",
+    "latest",
+    "oracle",
+    "RR-τ reselect",
+    "RR-τ append",
+    "LLMLingua-2",
+    "r4 reselect",
+    "r4 append"
+  ],
+  "open_provence": {
+    "status": "not_run",
+    "model": "hotchpotch/open-provence-reranker-v1-gte-modernbert-base",
+    "revision": "539126c60a0f858d5329d7ccfce5966075f874ee",
+    "license": "MIT",
+    "repository_api": "https://modelscope.cn/api/v1/models/hotchpotch/open-provence-reranker-v1-gte-modernbert-base/repo/files?Revision=539126c60a0f858d5329d7ccfce5966075f874ee&Recursive=true",
+    "directory": "/root/userfolder/ctx-compressor/models/open-provence-en-gte",
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/README.md",
+        "bytes": 14808,
+        "sha256": "731069888e62b6223d9cc50e4048f6096a2211ea5606710b0bfce9ac70a6f410"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/config.json",
+        "bytes": 5579,
+        "sha256": "db9bc75bbae0d9eeae90b1e42ea5bcf297f1235a5eb19faa698f2460e234499f"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/configuration.json",
+        "bytes": 70,
+        "sha256": "6e463b41acd3dfefdf6102d14d57dd9f0d7e9f8d38e99cee019d78b2cbbe9c5f"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/modeling_open_provence_standalone.py",
+        "bytes": 154122,
+        "sha256": "21dfe928190fcb551dfd5c46b46c0d42ca9498a542a3743f7dca48ac180409e6"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/tokenizer_config.json",
+        "bytes": 21031,
+        "sha256": "626c86908d7c711f93b0feffd8657b782cc2727b391f9be190240e8cafb626d5"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/special_tokens_map.json",
+        "bytes": 694,
+        "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/tokenizer.json",
+        "bytes": 3583499,
+        "sha256": "2aea6ff4701d063e7e029b6be695a1659f2caaa2ae4fb0e8b18285818271becd"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/model.safetensors",
+        "bytes": 598444940,
+        "sha256": "5eaba6f11f47c1d595b837d617effcbfe72b6a4adc9ce8fce58d1b59baabe4e6"
+      }
+    ],
+    "description": "third-party open-source Provence reproduction",
+    "reason": "The third-party open-source reproduction requires NLTK punkt (and punkt_tab) resources absent from the installed environment."
+  }
+}

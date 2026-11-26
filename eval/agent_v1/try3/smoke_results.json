@@ -1,0 +1,5186 @@
+{
+  "status": "smoke_complete",
+  "episodes": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/try3/smoke/episodes.jsonl",
+    "size": 6648282,
+    "sha256": "8732fb5a43f510e618f0c5ae2eb8f383004e872cdadf3dc6bda399cc2c53deed"
+  },
+  "results": {
+    "musique": {
+      "rows": {
+        "no_compress": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.2807765194200285,
+          "em": 0.16666666666666666,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 2,
+              "max": 12,
+              "mean": 3.8,
+              "p50": 3.0,
+              "p90": 3.899999999999997,
+              "histogram": {
+                "2": 1,
+                "3": 8,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 48,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 11,
+              "n": 38,
+              "rate": 0.2894736842105263
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 39,
+              "n": 79,
+              "rate": 0.4936708860759494
+            },
+            "retained": {
+              "count": 39,
+              "n": 79,
+              "rate": 0.4936708860759494
+            },
+            "retrieval_complete": {
+              "count": 7,
+              "n": 30,
+              "rate": 0.23333333333333334
+            },
+            "evidence_complete": {
+              "count": 7,
+              "n": 30,
+              "rate": 0.23333333333333334
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 39,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 20,
+                "n": 30,
+                "rate": 0.6666666666666666
+              },
+              "1": {
+                "count": 10,
+                "n": 30,
+                "rate": 0.3333333333333333
+              },
+              "2": {
+                "count": 9,
+                "n": 15,
+                "rate": 0.6
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 20,
+              "max": 60,
+              "mean": 54.0,
+              "p50": 60.0,
+              "p90": 60.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 19,
+              "max": 58,
+              "mean": 50.1,
+              "p50": 55.5,
+              "p90": 56.2
+            },
+            "calls_with_new": 27
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 8772,
+              "max": 37767,
+              "mean": 17241.9,
+              "p50": 15427.5,
+              "p90": 21046.799999999992
+            },
+            "cached": {
+              "n": 10,
+              "min": 5974.35,
+              "max": 11281.85,
+              "mean": 9447.975,
+              "p50": 9638.9,
+              "p90": 10911.41
+            },
+            "output": {
+              "n": 10,
+              "min": 160,
+              "max": 518,
+              "mean": 235.0,
+              "p50": 200.5,
+              "p90": 302.8999999999999
+            }
+          }
+        },
+        "latest": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.15642390289449112,
+          "em": 0.06666666666666667,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 2,
+              "max": 12,
+              "mean": 5.3,
+              "p50": 3.0,
+              "p90": 12.0,
+              "histogram": {
+                "2": 1,
+                "3": 5,
+                "5": 1,
+                "7": 1,
+                "12": 2
+              }
+            },
+            "self_finished": {
+              "count": 8,
+              "n": 10,
+              "rate": 0.8
+            },
+            "forced_finish": {
+              "count": 2,
+              "n": 10,
+              "rate": 0.2
+            },
+            "force_reasons": {
+              "search_limit": 2
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 63,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 24,
+              "n": 53,
+              "rate": 0.4528301886792453
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 37,
+              "n": 79,
+              "rate": 0.46835443037974683
+            },
+            "retained": {
+              "count": 9,
+              "n": 79,
+              "rate": 0.11392405063291139
+            },
+            "retrieval_complete": {
+              "count": 7,
+              "n": 30,
+              "rate": 0.23333333333333334
+            },
+            "evidence_complete": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "lost_given_retrieved": {
+              "count": 28,
+              "n": 37,
+              "rate": 0.7567567567567568
+            },
+            "questions_lost_any_retrieved": {
+              "count": 19,
+              "n": 30,
+              "rate": 0.6333333333333333
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 4,
+                "n": 30,
+                "rate": 0.13333333333333333
+              },
+              "1": {
+                "count": 2,
+                "n": 30,
+                "rate": 0.06666666666666667
+              },
+              "2": {
+                "count": 3,
+                "n": 15,
+                "rate": 0.2
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 13,
+              "max": 24,
+              "mean": 18.5,
+              "p50": 19.5,
+              "p90": 21.299999999999997
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 13,
+              "max": 23,
+              "mean": 17.6,
+              "p50": 18.0,
+              "p90": 19.4
+            },
+            "calls_with_new": 53
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 5298,
+              "max": 33165,
+              "mean": 14147.2,
+              "p50": 7804.5,
+              "p90": 32501.7
+            },
+            "cached": {
+              "n": 10,
+              "min": 5987.7,
+              "max": 37685.85,
+              "mean": 15945.2,
+              "p50": 8851.425,
+              "p90": 36764.924999999996
+            },
+            "output": {
+              "n": 10,
+              "min": 139,
+              "max": 617,
+              "mean": 302.2,
+              "p50": 198.5,
+              "p90": 540.5
+            }
+          }
+        },
+        "oracle": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.3630313486835226,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 2,
+              "max": 12,
+              "mean": 3.9,
+              "p50": 3.0,
+              "p90": 4.799999999999997,
+              "histogram": {
+                "2": 1,
+                "3": 7,
+                "4": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 49,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 1,
+              "n": 39,
+              "rate": 0.02564102564102564
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 42,
+              "n": 79,
+              "rate": 0.5316455696202531
+            },
+            "retained": {
+              "count": 42,
+              "n": 79,
+              "rate": 0.5316455696202531
+            },
+            "retrieval_complete": {
+              "count": 8,
+              "n": 30,
+              "rate": 0.26666666666666666
+            },
+            "evidence_complete": {
+              "count": 8,
+              "n": 30,
+              "rate": 0.26666666666666666
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 42,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 22,
+                "n": 30,
+                "rate": 0.7333333333333333
+              },
+              "1": {
+                "count": 12,
+                "n": 30,
+                "rate": 0.4
+              },
+              "2": {
+                "count": 8,
+                "n": 15,
+                "rate": 0.5333333333333333
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 2,
+              "max": 6,
+              "mean": 4.2,
+              "p50": 4.5,
+              "p90": 5.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 0,
+              "mean": 0.0,
+              "p50": 0.0,
+              "p90": 0.0
+            },
+            "calls_with_new": 39
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1342,
+              "max": 8932,
+              "mean": 3102.4,
+              "p50": 2519.0,
+              "p90": 4427.499999999998
+            },
+            "cached": {
+              "n": 10,
+              "min": 854.3,
+              "max": 2175.15,
+              "mean": 1367.0,
+              "p50": 1419.5,
+              "p90": 1691.8949999999998
+            },
+            "output": {
+              "n": 10,
+              "min": 147,
+              "max": 505,
+              "mean": 215.5,
+              "p50": 186.0,
+              "p90": 266.4999999999999
+            }
+          }
+        },
+        "RR-τ reselect": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.22272331986813668,
+          "em": 0.13333333333333333,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 2,
+              "max": 12,
+              "mean": 4.9,
+              "p50": 3.0,
+              "p90": 12.0,
+              "histogram": {
+                "2": 1,
+                "3": 6,
+                "5": 1,
+                "12": 2
+              }
+            },
+            "self_finished": {
+              "count": 8,
+              "n": 10,
+              "rate": 0.8
+            },
+            "forced_finish": {
+              "count": 2,
+              "n": 10,
+              "rate": 0.2
+            },
+            "force_reasons": {
+              "search_limit": 2
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 59,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 17,
+              "n": 49,
+              "rate": 0.3469387755102041
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 43,
+              "n": 79,
+              "rate": 0.5443037974683544
+            },
+            "retained": {
+              "count": 30,
+              "n": 79,
+              "rate": 0.379746835443038
+            },
+            "retrieval_complete": {
+              "count": 8,
+              "n": 30,
+              "rate": 0.26666666666666666
+            },
+            "evidence_complete": {
+              "count": 3,
+              "n": 30,
+              "rate": 0.1
+            },
+            "lost_given_retrieved": {
+              "count": 13,
+              "n": 43,
+              "rate": 0.3023255813953488
+            },
+            "questions_lost_any_retrieved": {
+              "count": 13,
+              "n": 30,
+              "rate": 0.43333333333333335
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 19,
+                "n": 30,
+                "rate": 0.6333333333333333
+              },
+              "1": {
+                "count": 7,
+                "n": 30,
+                "rate": 0.23333333333333334
+              },
+              "2": {
+                "count": 4,
+                "n": 15,
+                "rate": 0.26666666666666666
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 2,
+              "max": 7,
+              "mean": 4.6,
+              "p50": 5.0,
+              "p90": 6.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 6,
+              "mean": 1.6,
+              "p50": 1.0,
+              "p90": 3.299999999999999
+            },
+            "calls_with_new": 49,
+            "seconds_per_call": {
+              "n": 49,
+              "min": 0.10456996876746416,
+              "max": 0.8565479870885611,
+              "mean": 0.18247046084048188,
+              "p50": 0.1728532137349248,
+              "p90": 0.1994661387987435
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1640,
+              "max": 14847,
+              "mean": 4437.7,
+              "p50": 2361.0,
+              "p90": 10388.399999999998
+            },
+            "cached": {
+              "n": 10,
+              "min": 1006.5,
+              "max": 2545.9500000000003,
+              "mean": 1569.365,
+              "p50": 1501.65,
+              "p90": 1936.3799999999999
+            },
+            "output": {
+              "n": 10,
+              "min": 148,
+              "max": 616,
+              "mean": 282.0,
+              "p50": 193.5,
+              "p90": 498.09999999999997
+            }
+          }
+        },
+        "RR-τ append": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.2317423320450436,
+          "em": 0.13333333333333333,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 2,
+              "max": 12,
+              "mean": 3.9,
+              "p50": 3.0,
+              "p90": 4.799999999999997,
+              "histogram": {
+                "2": 1,
+                "3": 7,
+                "4": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 49,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 9,
+              "n": 39,
+              "rate": 0.23076923076923078
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 42,
+              "n": 79,
+              "rate": 0.5316455696202531
+            },
+            "retained": {
+              "count": 30,
+              "n": 79,
+              "rate": 0.379746835443038
+            },
+            "retrieval_complete": {
+              "count": 8,
+              "n": 30,
+              "rate": 0.26666666666666666
+            },
+            "evidence_complete": {
+              "count": 3,
+              "n": 30,
+              "rate": 0.1
+            },
+            "lost_given_retrieved": {
+              "count": 12,
+              "n": 42,
+              "rate": 0.2857142857142857
+            },
+            "questions_lost_any_retrieved": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 20,
+                "n": 30,
+                "rate": 0.6666666666666666
+              },
+              "1": {
+                "count": 6,
+                "n": 30,
+                "rate": 0.2
+              },
+              "2": {
+                "count": 4,
+                "n": 15,
+                "rate": 0.26666666666666666
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 7,
+              "mean": 4.6,
+              "p50": 4.5,
+              "p90": 6.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 6,
+              "mean": 1.6,
+              "p50": 1.0,
+              "p90": 3.299999999999999
+            },
+            "calls_with_new": 39,
+            "seconds_per_call": {
+              "n": 39,
+              "min": 0.10172036895528436,
+              "max": 0.19043412106111646,
+              "mean": 0.1395998446103663,
+              "p50": 0.13677778793498874,
+              "p90": 0.17767767934128642
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1640,
+              "max": 14856,
+              "mean": 3547.9,
+              "p50": 2215.5,
+              "p90": 4244.999999999996
+            },
+            "cached": {
+              "n": 10,
+              "min": 1006.5,
+              "max": 2547.6,
+              "mean": 1438.955,
+              "p50": 1284.65,
+              "p90": 1877.3249999999996
+            },
+            "output": {
+              "n": 10,
+              "min": 148,
+              "max": 486,
+              "mean": 225.5,
+              "p50": 194.5,
+              "p90": 260.9999999999999
+            }
+          }
+        },
+        "LLMLingua-2": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.21365888577653283,
+          "em": 0.1,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 2,
+              "max": 12,
+              "mean": 3.8,
+              "p50": 3.0,
+              "p90": 3.899999999999997,
+              "histogram": {
+                "2": 1,
+                "3": 8,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 48,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 11,
+              "n": 38,
+              "rate": 0.2894736842105263
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 39,
+              "n": 79,
+              "rate": 0.4936708860759494
+            },
+            "retained": {
+              "count": 30,
+              "n": 79,
+              "rate": 0.379746835443038
+            },
+            "retrieval_complete": {
+              "count": 7,
+              "n": 30,
+              "rate": 0.23333333333333334
+            },
+            "evidence_complete": {
+              "count": 4,
+              "n": 30,
+              "rate": 0.13333333333333333
+            },
+            "lost_given_retrieved": {
+              "count": 9,
+              "n": 39,
+              "rate": 0.23076923076923078
+            },
+            "questions_lost_any_retrieved": {
+              "count": 6,
+              "n": 30,
+              "rate": 0.2
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 15,
+                "n": 30,
+                "rate": 0.5
+              },
+              "1": {
+                "count": 8,
+                "n": 30,
+                "rate": 0.26666666666666666
+              },
+              "2": {
+                "count": 7,
+                "n": 15,
+                "rate": 0.4666666666666667
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            },
+            "compressed_context_contains_verbatim_canonical_answer": {
+              "count": 4,
+              "n": 30,
+              "rate": 0.13333333333333333
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 20,
+              "max": 53,
+              "mean": 43.3,
+              "p50": 47.0,
+              "p90": 53.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 19,
+              "max": 51,
+              "mean": 40.3,
+              "p50": 43.0,
+              "p90": 50.1
+            },
+            "calls_with_new": 27,
+            "seconds_per_call": {
+              "n": 27,
+              "min": 0.386223706882447,
+              "max": 0.632409340236336,
+              "mean": 0.4097893073533972,
+              "p50": 0.4009174001403153,
+              "p90": 0.4133716764859855
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 4036,
+              "max": 19317,
+              "mean": 7485.0,
+              "p50": 6380.0,
+              "p90": 8390.099999999995
+            },
+            "cached": {
+              "n": 10,
+              "min": 3144.2,
+              "max": 8062.799999999999,
+              "mean": 5586.69,
+              "p50": 5913.45,
+              "p90": 6211.454999999999
+            },
+            "output": {
+              "n": 10,
+              "min": 150,
+              "max": 528,
+              "mean": 215.4,
+              "p50": 178.5,
+              "p90": 260.6999999999999
+            }
+          }
+        },
+        "r4 reselect": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.1873603530125269,
+          "em": 0.06666666666666667,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 4.8,
+              "p50": 3.0,
+              "p90": 12.0,
+              "histogram": {
+                "3": 8,
+                "12": 2
+              }
+            },
+            "self_finished": {
+              "count": 8,
+              "n": 10,
+              "rate": 0.8
+            },
+            "forced_finish": {
+              "count": 2,
+              "n": 10,
+              "rate": 0.2
+            },
+            "force_reasons": {
+              "search_limit": 2
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 58,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 18,
+              "n": 48,
+              "rate": 0.375
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 41,
+              "n": 79,
+              "rate": 0.5189873417721519
+            },
+            "retained": {
+              "count": 21,
+              "n": 79,
+              "rate": 0.26582278481012656
+            },
+            "retrieval_complete": {
+              "count": 8,
+              "n": 30,
+              "rate": 0.26666666666666666
+            },
+            "evidence_complete": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "lost_given_retrieved": {
+              "count": 20,
+              "n": 41,
+              "rate": 0.4878048780487805
+            },
+            "questions_lost_any_retrieved": {
+              "count": 18,
+              "n": 30,
+              "rate": 0.6
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 12,
+                "n": 30,
+                "rate": 0.4
+              },
+              "1": {
+                "count": 5,
+                "n": 30,
+                "rate": 0.16666666666666666
+              },
+              "2": {
+                "count": 4,
+                "n": 15,
+                "rate": 0.26666666666666666
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 5,
+              "mean": 3.4,
+              "p50": 3.0,
+              "p90": 4.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 4,
+              "mean": 1.3,
+              "p50": 1.0,
+              "p90": 2.1999999999999993
+            },
+            "calls_with_new": 48,
+            "invalid": {
+              "count": 0,
+              "n": 48,
+              "rate": 0.0
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 48,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 48,
+              "min": 1.307778486981988,
+              "max": 5.76246685674414,
+              "mean": 2.9645212394340583,
+              "p50": 2.590367534197867,
+              "p90": 5.76246685674414
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1777,
+              "max": 13885,
+              "mean": 4068.3,
+              "p50": 2008.5,
+              "p90": 11076.099999999999
+            },
+            "cached": {
+              "n": 10,
+              "min": 961.0,
+              "max": 8639.4,
+              "mean": 2301.1349999999998,
+              "p50": 1158.225,
+              "p90": 5839.004999999999
+            },
+            "output": {
+              "n": 10,
+              "min": 150,
+              "max": 729,
+              "mean": 266.7,
+              "p50": 184.5,
+              "p90": 512.9999999999999
+            }
+          }
+        },
+        "r4 append": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.12361071027737694,
+          "em": 0.03333333333333333,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 5.8,
+              "p50": 3.0,
+              "p90": 12.0,
+              "histogram": {
+                "3": 6,
+                "4": 1,
+                "12": 3
+              }
+            },
+            "self_finished": {
+              "count": 7,
+              "n": 10,
+              "rate": 0.7
+            },
+            "forced_finish": {
+              "count": 3,
+              "n": 10,
+              "rate": 0.3
+            },
+            "force_reasons": {
+              "search_limit": 3
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 68,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 27,
+              "n": 58,
+              "rate": 0.46551724137931033
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 43,
+              "n": 79,
+              "rate": 0.5443037974683544
+            },
+            "retained": {
+              "count": 22,
+              "n": 79,
+              "rate": 0.27848101265822783
+            },
+            "retrieval_complete": {
+              "count": 7,
+              "n": 30,
+              "rate": 0.23333333333333334
+            },
+            "evidence_complete": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "lost_given_retrieved": {
+              "count": 21,
+              "n": 43,
+              "rate": 0.4883720930232558
+            },
+            "questions_lost_any_retrieved": {
+              "count": 17,
+              "n": 30,
+              "rate": 0.5666666666666667
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 15,
+                "n": 30,
+                "rate": 0.5
+              },
+              "1": {
+                "count": 5,
+                "n": 30,
+                "rate": 0.16666666666666666
+              },
+              "2": {
+                "count": 2,
+                "n": 15,
+                "rate": 0.13333333333333333
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 5.4,
+              "p50": 3.5,
+              "p90": 12.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 9,
+              "mean": 3.2,
+              "p50": 1.0,
+              "p90": 9.0
+            },
+            "calls_with_new": 58,
+            "invalid": {
+              "count": 5,
+              "n": 58,
+              "rate": 0.08620689655172414
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 58,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 58,
+              "min": 1.307778486981988,
+              "max": 5.903942876961082,
+              "mean": 2.1807223395364166,
+              "p50": 2.1491746397223324,
+              "p90": 2.5812097507063307
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1584,
+              "max": 18405,
+              "mean": 6653.2,
+              "p50": 2388.5,
+              "p90": 18090.9
+            },
+            "cached": {
+              "n": 10,
+              "min": 774.0,
+              "max": 4040.25,
+              "mean": 1872.02,
+              "p50": 1257.625,
+              "p90": 3977.025
+            },
+            "output": {
+              "n": 10,
+              "min": 151,
+              "max": 739,
+              "mean": 331.3,
+              "p50": 224.5,
+              "p90": 593.1999999999999
+            }
+          }
+        }
+      },
+      "paired": {
+        "r4 reselect − RR-τ reselect": {
+          "n": 30,
+          "delta_f1": -0.03536296685560975,
+          "delta_em": -0.06666666666666667,
+          "f1_higher": 8,
+          "f1_equal": 17,
+          "f1_lower": 5,
+          "em_2x2_left_rows_right_columns": [
+            [
+              25,
+              3
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "r4 append − RR-τ append": {
+          "n": 30,
+          "delta_f1": -0.10813162176766665,
+          "delta_em": -0.1,
+          "f1_higher": 4,
+          "f1_equal": 17,
+          "f1_lower": 9,
+          "em_2x2_left_rows_right_columns": [
+            [
+              25,
+              4
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        "r4 reselect − no_compress": {
+          "n": 30,
+          "delta_f1": -0.09341616640750162,
+          "delta_em": -0.1,
+          "f1_higher": 6,
+          "f1_equal": 17,
+          "f1_lower": 7,
+          "em_2x2_left_rows_right_columns": [
+            [
+              25,
+              3
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        "r4 append − no_compress": {
+          "n": 30,
+          "delta_f1": -0.1571658091426516,
+          "delta_em": -0.13333333333333333,
+          "f1_higher": 4,
+          "f1_equal": 16,
+          "f1_lower": 10,
+          "em_2x2_left_rows_right_columns": [
+            [
+              25,
+              4
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "r4 reselect − LLMLingua-2": {
+          "n": 30,
+          "delta_f1": -0.026298532764005907,
+          "delta_em": -0.03333333333333333,
+          "f1_higher": 5,
+          "f1_equal": 19,
+          "f1_lower": 6,
+          "em_2x2_left_rows_right_columns": [
+            [
+              26,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "r4 reselect − latest": {
+          "n": 30,
+          "delta_f1": 0.030936450118035797,
+          "delta_em": 0.0,
+          "f1_higher": 7,
+          "f1_equal": 18,
+          "f1_lower": 5,
+          "em_2x2_left_rows_right_columns": [
+            [
+              26,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        "oracle − r4 reselect": {
+          "n": 30,
+          "delta_f1": 0.17567099567099567,
+          "delta_em": 0.13333333333333333,
+          "f1_higher": 10,
+          "f1_equal": 15,
+          "f1_lower": 5,
+          "em_2x2_left_rows_right_columns": [
+            [
+              24,
+              0
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    "hotpotqa": {
+      "rows": {
+        "no_compress": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.4711111111111111,
+          "em": 0.36666666666666664,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 3,
+              "mean": 3.0,
+              "p50": 3.0,
+              "p90": 3.0,
+              "histogram": {
+                "3": 10
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 40,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 47,
+              "n": 60,
+              "rate": 0.7833333333333333
+            },
+            "retained": {
+              "count": 47,
+              "n": 60,
+              "rate": 0.7833333333333333
+            },
+            "retrieval_complete": {
+              "count": 17,
+              "n": 30,
+              "rate": 0.5666666666666667
+            },
+            "evidence_complete": {
+              "count": 17,
+              "n": 30,
+              "rate": 0.5666666666666667
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 47,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 60,
+              "max": 60,
+              "mean": 60.0,
+              "p50": 60.0,
+              "p90": 60.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 54,
+              "max": 56,
+              "mean": 55.3,
+              "p50": 55.0,
+              "p90": 56.0
+            },
+            "calls_with_new": 30
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 14481,
+              "max": 21348,
+              "mean": 16816.5,
+              "p50": 16357.5,
+              "p90": 18482.399999999998
+            },
+            "cached": {
+              "n": 10,
+              "min": 9361.65,
+              "max": 12839.4,
+              "mean": 10776.945,
+              "p50": 10647.075,
+              "p90": 11981.16
+            },
+            "output": {
+              "n": 10,
+              "min": 145,
+              "max": 233,
+              "mean": 168.7,
+              "p50": 164.5,
+              "p90": 198.79999999999998
+            }
+          }
+        },
+        "latest": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.17333333333333334,
+          "em": 0.1,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 6,
+              "mean": 3.6,
+              "p50": 3.0,
+              "p90": 6.0,
+              "histogram": {
+                "3": 8,
+                "6": 2
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 46,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 4,
+              "n": 36,
+              "rate": 0.1111111111111111
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 45,
+              "n": 60,
+              "rate": 0.75
+            },
+            "retained": {
+              "count": 1,
+              "n": 60,
+              "rate": 0.016666666666666666
+            },
+            "retrieval_complete": {
+              "count": 15,
+              "n": 30,
+              "rate": 0.5
+            },
+            "evidence_complete": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "lost_given_retrieved": {
+              "count": 44,
+              "n": 45,
+              "rate": 0.9777777777777777
+            },
+            "questions_lost_any_retrieved": {
+              "count": 30,
+              "n": 30,
+              "rate": 1.0
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 8,
+              "max": 11,
+              "mean": 9.5,
+              "p50": 9.5,
+              "p90": 11.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 8,
+              "max": 11,
+              "mean": 9.4,
+              "p50": 9.5,
+              "p90": 11.0
+            },
+            "calls_with_new": 36
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 4920,
+              "max": 10297,
+              "mean": 6090.8,
+              "p50": 5087.0,
+              "p90": 10198.0
+            },
+            "cached": {
+              "n": 10,
+              "min": 5222.4,
+              "max": 10955.35,
+              "mean": 6463.66,
+              "p50": 5360.65,
+              "p90": 10919.26
+            },
+            "output": {
+              "n": 10,
+              "min": 144,
+              "max": 367,
+              "mean": 201.8,
+              "p50": 167.0,
+              "p90": 312.09999999999997
+            }
+          }
+        },
+        "oracle": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.4922222222222222,
+          "em": 0.36666666666666664,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 3,
+              "mean": 3.0,
+              "p50": 3.0,
+              "p90": 3.0,
+              "histogram": {
+                "3": 10
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 40,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 48,
+              "n": 60,
+              "rate": 0.8
+            },
+            "retained": {
+              "count": 48,
+              "n": 60,
+              "rate": 0.8
+            },
+            "retrieval_complete": {
+              "count": 18,
+              "n": 30,
+              "rate": 0.6
+            },
+            "evidence_complete": {
+              "count": 18,
+              "n": 30,
+              "rate": 0.6
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 48,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 4,
+              "max": 6,
+              "mean": 4.8,
+              "p50": 5.0,
+              "p90": 5.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 0,
+              "mean": 0.0,
+              "p50": 0.0,
+              "p90": 0.0
+            },
+            "calls_with_new": 30
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1948,
+              "max": 3082,
+              "mean": 2257.4,
+              "p50": 2181.0,
+              "p90": 2624.7999999999997
+            },
+            "cached": {
+              "n": 10,
+              "min": 1063.95,
+              "max": 1756.1,
+              "mean": 1224.55,
+              "p50": 1155.075,
+              "p90": 1394.12
+            },
+            "output": {
+              "n": 10,
+              "min": 143,
+              "max": 231,
+              "mean": 170.3,
+              "p50": 165.5,
+              "p90": 196.79999999999998
+            }
+          }
+        },
+        "RR-τ reselect": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.35,
+          "em": 0.3,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 3,
+              "mean": 3.0,
+              "p50": 3.0,
+              "p90": 3.0,
+              "histogram": {
+                "3": 10
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 40,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 46,
+              "n": 60,
+              "rate": 0.7666666666666667
+            },
+            "retained": {
+              "count": 39,
+              "n": 60,
+              "rate": 0.65
+            },
+            "retrieval_complete": {
+              "count": 16,
+              "n": 30,
+              "rate": 0.5333333333333333
+            },
+            "evidence_complete": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            },
+            "lost_given_retrieved": {
+              "count": 7,
+              "n": 46,
+              "rate": 0.15217391304347827
+            },
+            "questions_lost_any_retrieved": {
+              "count": 5,
+              "n": 30,
+              "rate": 0.16666666666666666
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 8,
+              "mean": 5.7,
+              "p50": 5.5,
+              "p90": 8.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 1,
+              "max": 5,
+              "mean": 1.8,
+              "p50": 1.0,
+              "p90": 3.1999999999999993
+            },
+            "calls_with_new": 30,
+            "seconds_per_call": {
+              "n": 30,
+              "min": 0.0952014159411192,
+              "max": 0.30981402192264795,
+              "mean": 0.16396526394722363,
+              "p50": 0.15780354663729668,
+              "p90": 0.19250431922264402
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1763,
+              "max": 3309,
+              "mean": 2425.6,
+              "p50": 2400.0,
+              "p90": 2806.7999999999997
+            },
+            "cached": {
+              "n": 10,
+              "min": 898.1500000000001,
+              "max": 1716.75,
+              "mean": 1336.8799999999999,
+              "p50": 1320.4,
+              "p90": 1614.4199999999998
+            },
+            "output": {
+              "n": 10,
+              "min": 143,
+              "max": 218,
+              "mean": 166.4,
+              "p50": 165.0,
+              "p90": 191.89999999999998
+            }
+          }
+        },
+        "RR-τ append": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.35,
+          "em": 0.3,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 3,
+              "mean": 3.0,
+              "p50": 3.0,
+              "p90": 3.0,
+              "histogram": {
+                "3": 10
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 40,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 46,
+              "n": 60,
+              "rate": 0.7666666666666667
+            },
+            "retained": {
+              "count": 39,
+              "n": 60,
+              "rate": 0.65
+            },
+            "retrieval_complete": {
+              "count": 16,
+              "n": 30,
+              "rate": 0.5333333333333333
+            },
+            "evidence_complete": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            },
+            "lost_given_retrieved": {
+              "count": 7,
+              "n": 46,
+              "rate": 0.15217391304347827
+            },
+            "questions_lost_any_retrieved": {
+              "count": 5,
+              "n": 30,
+              "rate": 0.16666666666666666
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 8,
+              "mean": 5.7,
+              "p50": 5.5,
+              "p90": 8.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 1,
+              "max": 5,
+              "mean": 1.8,
+              "p50": 1.0,
+              "p90": 3.1999999999999993
+            },
+            "calls_with_new": 30,
+            "seconds_per_call": {
+              "n": 30,
+              "min": 0.09824481373652816,
+              "max": 0.18577018985524774,
+              "mean": 0.14463756868305305,
+              "p50": 0.15042100637219846,
+              "p90": 0.17779321470297874
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1763,
+              "max": 3309,
+              "mean": 2425.6,
+              "p50": 2400.0,
+              "p90": 2806.7999999999997
+            },
+            "cached": {
+              "n": 10,
+              "min": 898.1500000000001,
+              "max": 1716.75,
+              "mean": 1336.8799999999999,
+              "p50": 1320.4,
+              "p90": 1614.4199999999998
+            },
+            "output": {
+              "n": 10,
+              "min": 143,
+              "max": 218,
+              "mean": 168.0,
+              "p50": 168.0,
+              "p90": 191.89999999999998
+            }
+          }
+        },
+        "LLMLingua-2": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.23,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 1,
+              "max": 3,
+              "mean": 2.8,
+              "p50": 3.0,
+              "p90": 3.0,
+              "histogram": {
+                "1": 1,
+                "3": 9
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 38,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 28,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 43,
+              "n": 60,
+              "rate": 0.7166666666666667
+            },
+            "retained": {
+              "count": 19,
+              "n": 60,
+              "rate": 0.31666666666666665
+            },
+            "retrieval_complete": {
+              "count": 15,
+              "n": 30,
+              "rate": 0.5
+            },
+            "evidence_complete": {
+              "count": 9,
+              "n": 30,
+              "rate": 0.3
+            },
+            "lost_given_retrieved": {
+              "count": 24,
+              "n": 43,
+              "rate": 0.5581395348837209
+            },
+            "questions_lost_any_retrieved": {
+              "count": 18,
+              "n": 30,
+              "rate": 0.6
+            },
+            "compressed_context_contains_verbatim_canonical_answer": {
+              "count": 9,
+              "n": 30,
+              "rate": 0.3
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 20,
+              "max": 33,
+              "mean": 25.0,
+              "p50": 23.5,
+              "p90": 29.4
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 18,
+              "max": 32,
+              "mean": 23.1,
+              "p50": 21.5,
+              "p90": 27.5
+            },
+            "calls_with_new": 28,
+            "seconds_per_call": {
+              "n": 28,
+              "min": 0.39005349203944206,
+              "max": 0.4099549753591418,
+              "mean": 0.39922395300319685,
+              "p50": 0.39831694890744984,
+              "p90": 0.407449940033257
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1266,
+              "max": 5267,
+              "mean": 4616.0,
+              "p50": 4913.5,
+              "p90": 5241.8
+            },
+            "cached": {
+              "n": 10,
+              "min": 1334.1,
+              "max": 5628.55,
+              "mean": 4914.04,
+              "p50": 5232.875,
+              "p90": 5562.49
+            },
+            "output": {
+              "n": 10,
+              "min": 69,
+              "max": 219,
+              "mean": 155.8,
+              "p50": 153.0,
+              "p90": 199.2
+            }
+          }
+        },
+        "r4 reselect": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.3733333333333333,
+          "em": 0.3,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 4,
+              "mean": 3.3,
+              "p50": 3.0,
+              "p90": 4.0,
+              "histogram": {
+                "3": 7,
+                "4": 3
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 43,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 33,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 49,
+              "n": 60,
+              "rate": 0.8166666666666667
+            },
+            "retained": {
+              "count": 30,
+              "n": 60,
+              "rate": 0.5
+            },
+            "retrieval_complete": {
+              "count": 19,
+              "n": 30,
+              "rate": 0.6333333333333333
+            },
+            "evidence_complete": {
+              "count": 2,
+              "n": 30,
+              "rate": 0.06666666666666667
+            },
+            "lost_given_retrieved": {
+              "count": 19,
+              "n": 49,
+              "rate": 0.3877551020408163
+            },
+            "questions_lost_any_retrieved": {
+              "count": 17,
+              "n": 30,
+              "rate": 0.5666666666666667
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 5,
+              "mean": 3.4,
+              "p50": 3.0,
+              "p90": 4.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 3,
+              "mean": 0.4,
+              "p50": 0.0,
+              "p90": 1.1999999999999993
+            },
+            "calls_with_new": 33,
+            "invalid": {
+              "count": 0,
+              "n": 33,
+              "rate": 0.0
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 33,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 33,
+              "min": 2.313245273195207,
+              "max": 5.903942876961082,
+              "mean": 3.527821944701965,
+              "p50": 2.6670766468159854,
+              "p90": 5.875647672917694
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1684,
+              "max": 2707,
+              "mean": 2091.9,
+              "p50": 1883.0,
+              "p90": 2580.1
+            },
+            "cached": {
+              "n": 10,
+              "min": 795.45,
+              "max": 1293.5,
+              "mean": 1016.3549999999999,
+              "p50": 984.525,
+              "p90": 1206.47
+            },
+            "output": {
+              "n": 10,
+              "min": 143,
+              "max": 228,
+              "mean": 179.4,
+              "p50": 173.0,
+              "p90": 222.6
+            }
+          }
+        },
+        "r4 append": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.4122222222222222,
+          "em": 0.3,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 4,
+              "mean": 3.2,
+              "p50": 3.0,
+              "p90": 4.0,
+              "histogram": {
+                "3": 8,
+                "4": 2
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 42,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 32,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 49,
+              "n": 60,
+              "rate": 0.8166666666666667
+            },
+            "retained": {
+              "count": 30,
+              "n": 60,
+              "rate": 0.5
+            },
+            "retrieval_complete": {
+              "count": 19,
+              "n": 30,
+              "rate": 0.6333333333333333
+            },
+            "evidence_complete": {
+              "count": 1,
+              "n": 30,
+              "rate": 0.03333333333333333
+            },
+            "lost_given_retrieved": {
+              "count": 19,
+              "n": 49,
+              "rate": 0.3877551020408163
+            },
+            "questions_lost_any_retrieved": {
+              "count": 18,
+              "n": 30,
+              "rate": 0.6
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 4,
+              "mean": 3.2,
+              "p50": 3.0,
+              "p90": 4.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 1,
+              "mean": 0.2,
+              "p50": 0.0,
+              "p90": 1.0
+            },
+            "calls_with_new": 32,
+            "invalid": {
+              "count": 0,
+              "n": 32,
+              "rate": 0.0
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 32,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 32,
+              "min": 1.4455713778734207,
+              "max": 2.7237970321439207,
+              "mean": 2.180815707106376,
+              "p50": 2.2340296721085906,
+              "p90": 2.5201009158045053
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1684,
+              "max": 2797,
+              "mean": 2048.8,
+              "p50": 1841.5,
+              "p90": 2589.1
+            },
+            "cached": {
+              "n": 10,
+              "min": 795.45,
+              "max": 1293.5,
+              "mean": 997.28,
+              "p50": 946.475,
+              "p90": 1197.47
+            },
+            "output": {
+              "n": 10,
+              "min": 144,
+              "max": 228,
+              "mean": 176.9,
+              "p50": 173.0,
+              "p90": 206.39999999999998
+            }
+          }
+        }
+      },
+      "paired": {
+        "r4 reselect − RR-τ reselect": {
+          "n": 30,
+          "delta_f1": 0.023333333333333334,
+          "delta_em": 0.0,
+          "f1_higher": 4,
+          "f1_equal": 24,
+          "f1_lower": 2,
+          "em_2x2_left_rows_right_columns": [
+            [
+              19,
+              2
+            ],
+            [
+              2,
+              7
+            ]
+          ]
+        },
+        "r4 append − RR-τ append": {
+          "n": 30,
+          "delta_f1": 0.06222222222222222,
+          "delta_em": 0.0,
+          "f1_higher": 6,
+          "f1_equal": 22,
+          "f1_lower": 2,
+          "em_2x2_left_rows_right_columns": [
+            [
+              19,
+              2
+            ],
+            [
+              2,
+              7
+            ]
+          ]
+        },
+        "r4 reselect − no_compress": {
+          "n": 30,
+          "delta_f1": -0.09777777777777777,
+          "delta_em": -0.06666666666666667,
+          "f1_higher": 3,
+          "f1_equal": 21,
+          "f1_lower": 6,
+          "em_2x2_left_rows_right_columns": [
+            [
+              17,
+              4
+            ],
+            [
+              2,
+              7
+            ]
+          ]
+        },
+        "r4 append − no_compress": {
+          "n": 30,
+          "delta_f1": -0.058888888888888886,
+          "delta_em": -0.06666666666666667,
+          "f1_higher": 4,
+          "f1_equal": 21,
+          "f1_lower": 5,
+          "em_2x2_left_rows_right_columns": [
+            [
+              17,
+              4
+            ],
+            [
+              2,
+              7
+            ]
+          ]
+        },
+        "r4 reselect − LLMLingua-2": {
+          "n": 30,
+          "delta_f1": 0.14333333333333334,
+          "delta_em": 0.1,
+          "f1_higher": 8,
+          "f1_equal": 19,
+          "f1_lower": 3,
+          "em_2x2_left_rows_right_columns": [
+            [
+              19,
+              2
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        },
+        "r4 reselect − latest": {
+          "n": 30,
+          "delta_f1": 0.2,
+          "delta_em": 0.2,
+          "f1_higher": 9,
+          "f1_equal": 19,
+          "f1_lower": 2,
+          "em_2x2_left_rows_right_columns": [
+            [
+              20,
+              1
+            ],
+            [
+              7,
+              2
+            ]
+          ]
+        },
+        "oracle − r4 reselect": {
+          "n": 30,
+          "delta_f1": 0.11888888888888888,
+          "delta_em": 0.06666666666666667,
+          "f1_higher": 6,
+          "f1_equal": 23,
+          "f1_lower": 1,
+          "em_2x2_left_rows_right_columns": [
+            [
+              18,
+              1
+            ],
+            [
+              3,
+              8
+            ]
+          ]
+        }
+      }
+    },
+    "2wiki": {
+      "rows": {
+        "no_compress": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.2977513227513227,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 4.8,
+              "p50": 3.0,
+              "p90": 12.0,
+              "histogram": {
+                "3": 8,
+                "12": 2
+              }
+            },
+            "self_finished": {
+              "count": 8,
+              "n": 10,
+              "rate": 0.8
+            },
+            "forced_finish": {
+              "count": 2,
+              "n": 10,
+              "rate": 0.2
+            },
+            "force_reasons": {
+              "search_limit": 2
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 58,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 20,
+              "n": 48,
+              "rate": 0.4166666666666667
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 45,
+              "n": 76,
+              "rate": 0.5921052631578947
+            },
+            "retained": {
+              "count": 45,
+              "n": 76,
+              "rate": 0.5921052631578947
+            },
+            "retrieval_complete": {
+              "count": 10,
+              "n": 30,
+              "rate": 0.3333333333333333
+            },
+            "evidence_complete": {
+              "count": 10,
+              "n": 30,
+              "rate": 0.3333333333333333
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 20,
+              "max": 60,
+              "mean": 55.4,
+              "p50": 60.0,
+              "p90": 60.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 19,
+              "max": 57,
+              "mean": 50.9,
+              "p50": 55.0,
+              "p90": 56.1
+            },
+            "calls_with_new": 28
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 9778,
+              "max": 65912,
+              "mean": 22290.1,
+              "p50": 14083.0,
+              "p90": 47758.09999999999
+            },
+            "cached": {
+              "n": 10,
+              "min": 6624.5,
+              "max": 12489.800000000001,
+              "mean": 9115.625,
+              "p50": 8469.225,
+              "p90": 11112.710000000001
+            },
+            "output": {
+              "n": 10,
+              "min": 154,
+              "max": 673,
+              "mean": 264.3,
+              "p50": 189.0,
+              "p90": 540.6999999999999
+            }
+          }
+        },
+        "latest": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.2361111111111111,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 4.2,
+              "p50": 3.0,
+              "p90": 5.6999999999999975,
+              "histogram": {
+                "3": 7,
+                "4": 1,
+                "5": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 52,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 13,
+              "n": 42,
+              "rate": 0.30952380952380953
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 46,
+              "n": 76,
+              "rate": 0.6052631578947368
+            },
+            "retained": {
+              "count": 18,
+              "n": 76,
+              "rate": 0.23684210526315788
+            },
+            "retrieval_complete": {
+              "count": 9,
+              "n": 30,
+              "rate": 0.3
+            },
+            "evidence_complete": {
+              "count": 1,
+              "n": 30,
+              "rate": 0.03333333333333333
+            },
+            "lost_given_retrieved": {
+              "count": 28,
+              "n": 46,
+              "rate": 0.6086956521739131
+            },
+            "questions_lost_any_retrieved": {
+              "count": 20,
+              "n": 30,
+              "rate": 0.6666666666666666
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 11,
+              "max": 37,
+              "mean": 25.6,
+              "p50": 27.0,
+              "p90": 36.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 10,
+              "max": 35,
+              "mean": 23.8,
+              "p50": 24.5,
+              "p90": 32.3
+            },
+            "calls_with_new": 40
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 7412,
+              "max": 37008,
+              "mean": 11987.3,
+              "p50": 8186.0,
+              "p90": 17447.399999999994
+            },
+            "cached": {
+              "n": 10,
+              "min": 8451.4,
+              "max": 33331.2,
+              "mean": 12835.285,
+              "p50": 9387.7,
+              "p90": 19157.729999999996
+            },
+            "output": {
+              "n": 10,
+              "min": 150,
+              "max": 572,
+              "mean": 229.6,
+              "p50": 188.0,
+              "p90": 332.5999999999999
+            }
+          }
+        },
+        "oracle": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.32182539682539685,
+          "em": 0.23333333333333334,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 10,
+              "mean": 3.7,
+              "p50": 3.0,
+              "p90": 3.6999999999999975,
+              "histogram": {
+                "3": 9,
+                "10": 1
+              }
+            },
+            "self_finished": {
+              "count": 10,
+              "n": 10,
+              "rate": 1.0
+            },
+            "forced_finish": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "force_reasons": {},
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 47,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 1,
+              "n": 37,
+              "rate": 0.02702702702702703
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 51,
+              "n": 76,
+              "rate": 0.6710526315789473
+            },
+            "retained": {
+              "count": 51,
+              "n": 76,
+              "rate": 0.6710526315789473
+            },
+            "retrieval_complete": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            },
+            "evidence_complete": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 51,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 7,
+              "mean": 5.1,
+              "p50": 5.0,
+              "p90": 6.1
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 0,
+              "mean": 0.0,
+              "p50": 0.0,
+              "p90": 0.0
+            },
+            "calls_with_new": 37
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1583,
+              "max": 9421,
+              "mean": 3423.7,
+              "p50": 2944.0,
+              "p90": 4441.299999999998
+            },
+            "cached": {
+              "n": 10,
+              "min": 779.95,
+              "max": 3156.65,
+              "mean": 1799.4650000000001,
+              "p50": 1812.6999999999998,
+              "p90": 2388.095
+            },
+            "output": {
+              "n": 10,
+              "min": 152,
+              "max": 524,
+              "mean": 213.4,
+              "p50": 171.5,
+              "p90": 261.1999999999999
+            }
+          }
+        },
+        "RR-τ reselect": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.19722222222222224,
+          "em": 0.16666666666666666,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 4.5,
+              "p50": 3.0,
+              "p90": 9.299999999999999,
+              "histogram": {
+                "3": 8,
+                "9": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 55,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 54,
+              "n": 76,
+              "rate": 0.7105263157894737
+            },
+            "retained": {
+              "count": 42,
+              "n": 76,
+              "rate": 0.5526315789473685
+            },
+            "retrieval_complete": {
+              "count": 13,
+              "n": 30,
+              "rate": 0.43333333333333335
+            },
+            "evidence_complete": {
+              "count": 5,
+              "n": 30,
+              "rate": 0.16666666666666666
+            },
+            "lost_given_retrieved": {
+              "count": 12,
+              "n": 54,
+              "rate": 0.2222222222222222
+            },
+            "questions_lost_any_retrieved": {
+              "count": 10,
+              "n": 30,
+              "rate": 0.3333333333333333
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 6.8,
+              "p50": 6.5,
+              "p90": 10.2
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 7,
+              "mean": 2.6,
+              "p50": 2.5,
+              "p90": 6.1
+            },
+            "calls_with_new": 45,
+            "seconds_per_call": {
+              "n": 45,
+              "min": 0.07178416103124619,
+              "max": 0.5959397717379034,
+              "mean": 0.174354834564858,
+              "p50": 0.17481502098962665,
+              "p90": 0.2409640452824533
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1444,
+              "max": 19596,
+              "mean": 5258.2,
+              "p50": 2917.5,
+              "p90": 8514.299999999996
+            },
+            "cached": {
+              "n": 10,
+              "min": 719.0,
+              "max": 3818.9500000000003,
+              "mean": 2188.79,
+              "p50": 2160.5249999999996,
+              "p90": 3449.6349999999998
+            },
+            "output": {
+              "n": 10,
+              "min": 155,
+              "max": 480,
+              "mean": 237.3,
+              "p50": 182.5,
+              "p90": 461.09999999999997
+            }
+          }
+        },
+        "RR-τ append": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.23055555555555557,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 4.9,
+              "p50": 3.0,
+              "p90": 10.2,
+              "histogram": {
+                "3": 7,
+                "6": 1,
+                "10": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 59,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 1,
+              "n": 49,
+              "rate": 0.02040816326530612
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 55,
+              "n": 76,
+              "rate": 0.7236842105263158
+            },
+            "retained": {
+              "count": 42,
+              "n": 76,
+              "rate": 0.5526315789473685
+            },
+            "retrieval_complete": {
+              "count": 14,
+              "n": 30,
+              "rate": 0.4666666666666667
+            },
+            "evidence_complete": {
+              "count": 5,
+              "n": 30,
+              "rate": 0.16666666666666666
+            },
+            "lost_given_retrieved": {
+              "count": 13,
+              "n": 55,
+              "rate": 0.23636363636363636
+            },
+            "questions_lost_any_retrieved": {
+              "count": 11,
+              "n": 30,
+              "rate": 0.36666666666666664
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 6.8,
+              "p50": 6.5,
+              "p90": 10.2
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 7,
+              "mean": 2.6,
+              "p50": 2.5,
+              "p90": 6.1
+            },
+            "calls_with_new": 49,
+            "seconds_per_call": {
+              "n": 49,
+              "min": 0.0729743093252182,
+              "max": 0.19683897495269775,
+              "mean": 0.13061657001511479,
+              "p50": 0.12276520114392042,
+              "p90": 0.18014374235644937
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1444,
+              "max": 19596,
+              "mean": 5557.9,
+              "p50": 3924.0,
+              "p90": 9399.899999999996
+            },
+            "cached": {
+              "n": 10,
+              "min": 719.0,
+              "max": 3818.9500000000003,
+              "mean": 2227.175,
+              "p50": 2324.4,
+              "p90": 3449.6349999999998
+            },
+            "output": {
+              "n": 10,
+              "min": 155,
+              "max": 521,
+              "mean": 254.3,
+              "p50": 194.5,
+              "p90": 483.2
+            }
+          }
+        },
+        "LLMLingua-2": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.24656084656084656,
+          "em": 0.16666666666666666,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 2,
+              "max": 12,
+              "mean": 4.1,
+              "p50": 3.0,
+              "p90": 6.599999999999998,
+              "histogram": {
+                "2": 1,
+                "3": 7,
+                "6": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 51,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 14,
+              "n": 41,
+              "rate": 0.34146341463414637
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 42,
+              "n": 76,
+              "rate": 0.5526315789473685
+            },
+            "retained": {
+              "count": 38,
+              "n": 76,
+              "rate": 0.5
+            },
+            "retrieval_complete": {
+              "count": 9,
+              "n": 30,
+              "rate": 0.3
+            },
+            "evidence_complete": {
+              "count": 8,
+              "n": 30,
+              "rate": 0.26666666666666666
+            },
+            "lost_given_retrieved": {
+              "count": 4,
+              "n": 42,
+              "rate": 0.09523809523809523
+            },
+            "questions_lost_any_retrieved": {
+              "count": 3,
+              "n": 30,
+              "rate": 0.1
+            },
+            "compressed_context_contains_verbatim_canonical_answer": {
+              "count": 7,
+              "n": 30,
+              "rate": 0.23333333333333334
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 20,
+              "max": 60,
+              "mean": 49.1,
+              "p50": 53.0,
+              "p90": 60.0
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 19,
+              "max": 57,
+              "mean": 45.3,
+              "p50": 48.5,
+              "p90": 56.1
+            },
+            "calls_with_new": 27,
+            "seconds_per_call": {
+              "n": 27,
+              "min": 0.31295923236757517,
+              "max": 0.4826048072427511,
+              "mean": 0.39383081703757244,
+              "p50": 0.3881986988708377,
+              "p90": 0.42833488751202825
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 2458,
+              "max": 23145,
+              "mean": 8455.6,
+              "p50": 6363.0,
+              "p90": 14678.699999999997
+            },
+            "cached": {
+              "n": 10,
+              "min": 1852.1,
+              "max": 8115.9,
+              "mean": 4544.9,
+              "p50": 3906.375,
+              "p90": 7014.704999999999
+            },
+            "output": {
+              "n": 10,
+              "min": 116,
+              "max": 671,
+              "mean": 227.0,
+              "p50": 171.0,
+              "p90": 312.79999999999984
+            }
+          }
+        },
+        "r4 reselect": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.2824786324786325,
+          "em": 0.23333333333333334,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 5.3,
+              "p50": 3.5,
+              "p90": 9.299999999999999,
+              "histogram": {
+                "3": 5,
+                "4": 1,
+                "6": 1,
+                "7": 1,
+                "9": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 63,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 9,
+              "n": 53,
+              "rate": 0.16981132075471697
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 53,
+              "n": 76,
+              "rate": 0.6973684210526315
+            },
+            "retained": {
+              "count": 37,
+              "n": 76,
+              "rate": 0.4868421052631579
+            },
+            "retrieval_complete": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            },
+            "evidence_complete": {
+              "count": 4,
+              "n": 30,
+              "rate": 0.13333333333333333
+            },
+            "lost_given_retrieved": {
+              "count": 16,
+              "n": 53,
+              "rate": 0.3018867924528302
+            },
+            "questions_lost_any_retrieved": {
+              "count": 14,
+              "n": 30,
+              "rate": 0.4666666666666667
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 8,
+              "mean": 4.3,
+              "p50": 3.5,
+              "p90": 6.199999999999999
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 2,
+              "mean": 0.6,
+              "p50": 0.5,
+              "p90": 1.0999999999999996
+            },
+            "calls_with_new": 53,
+            "invalid": {
+              "count": 0,
+              "n": 53,
+              "rate": 0.0
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 53,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 53,
+              "min": 1.307778486981988,
+              "max": 5.903942876961082,
+              "mean": 2.86172680960933,
+              "p50": 2.314628562889993,
+              "p90": 5.903942876961082
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1444,
+              "max": 13396,
+              "mean": 4629.8,
+              "p50": 2642.5,
+              "p90": 9888.699999999999
+            },
+            "cached": {
+              "n": 10,
+              "min": 719.0,
+              "max": 4387.400000000001,
+              "mean": 1997.89,
+              "p50": 1516.225,
+              "p90": 4315.715
+            },
+            "output": {
+              "n": 10,
+              "min": 156,
+              "max": 522,
+              "mean": 272.2,
+              "p50": 239.5,
+              "p90": 476.09999999999997
+            }
+          }
+        },
+        "r4 append": {
+          "n_tasks": 10,
+          "n_questions": 30,
+          "f1": 0.24914529914529915,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 10,
+              "min": 3,
+              "max": 12,
+              "mean": 5.3,
+              "p50": 3.5,
+              "p90": 8.399999999999999,
+              "histogram": {
+                "3": 5,
+                "4": 1,
+                "7": 2,
+                "8": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 9,
+              "n": 10,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 10,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 10,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 63,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 10,
+              "n": 53,
+              "rate": 0.18867924528301888
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 52,
+              "n": 76,
+              "rate": 0.6842105263157895
+            },
+            "retained": {
+              "count": 37,
+              "n": 76,
+              "rate": 0.4868421052631579
+            },
+            "retrieval_complete": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            },
+            "evidence_complete": {
+              "count": 5,
+              "n": 30,
+              "rate": 0.16666666666666666
+            },
+            "lost_given_retrieved": {
+              "count": 15,
+              "n": 52,
+              "rate": 0.28846153846153844
+            },
+            "questions_lost_any_retrieved": {
+              "count": 12,
+              "n": 30,
+              "rate": 0.4
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 10,
+              "min": 3,
+              "max": 11,
+              "mean": 5.3,
+              "p50": 4.0,
+              "p90": 9.2
+            },
+            "nongold_passages": {
+              "n": 10,
+              "min": 0,
+              "max": 8,
+              "mean": 1.6,
+              "p50": 0.5,
+              "p90": 4.399999999999999
+            },
+            "calls_with_new": 53,
+            "invalid": {
+              "count": 2,
+              "n": 53,
+              "rate": 0.03773584905660377
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 53,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 53,
+              "min": 1.0005438239313662,
+              "max": 2.407959823962301,
+              "mean": 1.6522984075500577,
+              "p50": 1.6629394916817546,
+              "p90": 1.9556278311647475
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 10,
+              "min": 1444,
+              "max": 14693,
+              "mean": 4699.1,
+              "p50": 2644.0,
+              "p90": 8373.199999999997
+            },
+            "cached": {
+              "n": 10,
+              "min": 719.0,
+              "max": 2870.65,
+              "mean": 1683.955,
+              "p50": 1569.5500000000002,
+              "p90": 2573.5599999999995
+            },
+            "output": {
+              "n": 10,
+              "min": 156,
+              "max": 512,
+              "mean": 270.1,
+              "p50": 234.5,
+              "p90": 397.69999999999993
+            }
+          }
+        }
+      },
+      "paired": {
+        "r4 reselect − RR-τ reselect": {
+          "n": 30,
+          "delta_f1": 0.08525641025641024,
+          "delta_em": 0.06666666666666667,
+          "f1_higher": 4,
+          "f1_equal": 25,
+          "f1_lower": 1,
+          "em_2x2_left_rows_right_columns": [
+            [
+              23,
+              0
+            ],
+            [
+              2,
+              5
+            ]
+          ]
+        },
+        "r4 append − RR-τ append": {
+          "n": 30,
+          "delta_f1": 0.01858974358974359,
+          "delta_em": 0.0,
+          "f1_higher": 3,
+          "f1_equal": 25,
+          "f1_lower": 2,
+          "em_2x2_left_rows_right_columns": [
+            [
+              23,
+              1
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        "r4 reselect − no_compress": {
+          "n": 30,
+          "delta_f1": -0.015272690272690275,
+          "delta_em": 0.03333333333333333,
+          "f1_higher": 3,
+          "f1_equal": 22,
+          "f1_lower": 5,
+          "em_2x2_left_rows_right_columns": [
+            [
+              23,
+              0
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        "r4 append − no_compress": {
+          "n": 30,
+          "delta_f1": -0.04860602360602361,
+          "delta_em": 0.0,
+          "f1_higher": 2,
+          "f1_equal": 23,
+          "f1_lower": 5,
+          "em_2x2_left_rows_right_columns": [
+            [
+              24,
+              0
+            ],
+            [
+              0,
+              6
+            ]
+          ]
+        },
+        "r4 reselect − LLMLingua-2": {
+          "n": 30,
+          "delta_f1": 0.03591778591778592,
+          "delta_em": 0.06666666666666667,
+          "f1_higher": 5,
+          "f1_equal": 21,
+          "f1_lower": 4,
+          "em_2x2_left_rows_right_columns": [
+            [
+              22,
+              1
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "r4 reselect − latest": {
+          "n": 30,
+          "delta_f1": 0.04636752136752136,
+          "delta_em": 0.03333333333333333,
+          "f1_higher": 3,
+          "f1_equal": 24,
+          "f1_lower": 3,
+          "em_2x2_left_rows_right_columns": [
+            [
+              22,
+              1
+            ],
+            [
+              2,
+              5
+            ]
+          ]
+        },
+        "oracle − r4 reselect": {
+          "n": 30,
+          "delta_f1": 0.039346764346764346,
+          "delta_em": 0.0,
+          "f1_higher": 5,
+          "f1_equal": 23,
+          "f1_lower": 2,
+          "em_2x2_left_rows_right_columns": [
+            [
+              22,
+              1
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        }
+      }
+    },
+    "pooled": {
+      "rows": {
+        "no_compress": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.34987965109415414,
+          "em": 0.24444444444444444,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 2,
+              "max": 12,
+              "mean": 3.8666666666666667,
+              "p50": 3.0,
+              "p90": 3.900000000000013,
+              "histogram": {
+                "2": 1,
+                "3": 26,
+                "12": 3
+              }
+            },
+            "self_finished": {
+              "count": 27,
+              "n": 30,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 3,
+              "n": 30,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 3
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 146,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 31,
+              "n": 116,
+              "rate": 0.2672413793103448
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 131,
+              "n": 215,
+              "rate": 0.6093023255813953
+            },
+            "retained": {
+              "count": 131,
+              "n": 215,
+              "rate": 0.6093023255813953
+            },
+            "retrieval_complete": {
+              "count": 34,
+              "n": 90,
+              "rate": 0.37777777777777777
+            },
+            "evidence_complete": {
+              "count": 34,
+              "n": 90,
+              "rate": 0.37777777777777777
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 131,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 90,
+              "rate": 0.0
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 20,
+                "n": 30,
+                "rate": 0.6666666666666666
+              },
+              "1": {
+                "count": 10,
+                "n": 30,
+                "rate": 0.3333333333333333
+              },
+              "2": {
+                "count": 9,
+                "n": 15,
+                "rate": 0.6
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 20,
+              "max": 60,
+              "mean": 56.46666666666667,
+              "p50": 60.0,
+              "p90": 60.0
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 19,
+              "max": 58,
+              "mean": 52.1,
+              "p50": 55.0,
+              "p90": 56.0
+            },
+            "calls_with_new": 85
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 8772,
+              "max": 65912,
+              "mean": 18782.833333333332,
+              "p50": 15565.0,
+              "p90": 22989.900000000023
+            },
+            "cached": {
+              "n": 30,
+              "min": 5974.35,
+              "max": 12839.4,
+              "mean": 9780.181666666667,
+              "p50": 9928.025000000001,
+              "p90": 11873.605
+            },
+            "output": {
+              "n": 30,
+              "min": 145,
+              "max": 673,
+              "mean": 222.66666666666666,
+              "p50": 177.5,
+              "p90": 302.9000000000003
+            }
+          }
+        },
+        "latest": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.18862278244631187,
+          "em": 0.12222222222222222,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 2,
+              "max": 12,
+              "mean": 4.366666666666666,
+              "p50": 3.0,
+              "p90": 7.500000000000007,
+              "histogram": {
+                "2": 1,
+                "3": 20,
+                "4": 1,
+                "5": 2,
+                "6": 2,
+                "7": 1,
+                "12": 3
+              }
+            },
+            "self_finished": {
+              "count": 27,
+              "n": 30,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 3,
+              "n": 30,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 3
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 161,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 41,
+              "n": 131,
+              "rate": 0.31297709923664124
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 128,
+              "n": 215,
+              "rate": 0.5953488372093023
+            },
+            "retained": {
+              "count": 28,
+              "n": 215,
+              "rate": 0.13023255813953488
+            },
+            "retrieval_complete": {
+              "count": 31,
+              "n": 90,
+              "rate": 0.34444444444444444
+            },
+            "evidence_complete": {
+              "count": 1,
+              "n": 90,
+              "rate": 0.011111111111111112
+            },
+            "lost_given_retrieved": {
+              "count": 100,
+              "n": 128,
+              "rate": 0.78125
+            },
+            "questions_lost_any_retrieved": {
+              "count": 69,
+              "n": 90,
+              "rate": 0.7666666666666667
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 4,
+                "n": 30,
+                "rate": 0.13333333333333333
+              },
+              "1": {
+                "count": 2,
+                "n": 30,
+                "rate": 0.06666666666666667
+              },
+              "2": {
+                "count": 3,
+                "n": 15,
+                "rate": 0.2
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 8,
+              "max": 37,
+              "mean": 17.866666666666667,
+              "p50": 17.0,
+              "p90": 28.300000000000004
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 8,
+              "max": 35,
+              "mean": 16.933333333333334,
+              "p50": 16.5,
+              "p90": 27.300000000000004
+            },
+            "calls_with_new": 129
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 4920,
+              "max": 37008,
+              "mean": 10741.766666666666,
+              "p50": 7722.0,
+              "p90": 20226.70000000002
+            },
+            "cached": {
+              "n": 30,
+              "min": 5222.4,
+              "max": 37685.85,
+              "mean": 11748.048333333334,
+              "p50": 8785.825,
+              "p90": 22330.635000000017
+            },
+            "output": {
+              "n": 30,
+              "min": 139,
+              "max": 617,
+              "mean": 244.53333333333333,
+              "p50": 188.0,
+              "p90": 446.5000000000001
+            }
+          }
+        },
+        "oracle": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.3923596559103805,
+          "em": 0.26666666666666666,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 2,
+              "max": 12,
+              "mean": 3.533333333333333,
+              "p50": 3.0,
+              "p90": 3.1000000000000014,
+              "histogram": {
+                "2": 1,
+                "3": 26,
+                "4": 1,
+                "10": 1,
+                "12": 1
+              }
+            },
+            "self_finished": {
+              "count": 29,
+              "n": 30,
+              "rate": 0.9666666666666667
+            },
+            "forced_finish": {
+              "count": 1,
+              "n": 30,
+              "rate": 0.03333333333333333
+            },
+            "force_reasons": {
+              "search_limit": 1
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 136,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 2,
+              "n": 106,
+              "rate": 0.018867924528301886
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 141,
+              "n": 215,
+              "rate": 0.6558139534883721
+            },
+            "retained": {
+              "count": 141,
+              "n": 215,
+              "rate": 0.6558139534883721
+            },
+            "retrieval_complete": {
+              "count": 38,
+              "n": 90,
+              "rate": 0.4222222222222222
+            },
+            "evidence_complete": {
+              "count": 38,
+              "n": 90,
+              "rate": 0.4222222222222222
+            },
+            "lost_given_retrieved": {
+              "count": 0,
+              "n": 141,
+              "rate": 0.0
+            },
+            "questions_lost_any_retrieved": {
+              "count": 0,
+              "n": 90,
+              "rate": 0.0
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 22,
+                "n": 30,
+                "rate": 0.7333333333333333
+              },
+              "1": {
+                "count": 12,
+                "n": 30,
+                "rate": 0.4
+              },
+              "2": {
+                "count": 8,
+                "n": 15,
+                "rate": 0.5333333333333333
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 2,
+              "max": 7,
+              "mean": 4.7,
+              "p50": 5.0,
+              "p90": 6.0
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 0,
+              "max": 0,
+              "mean": 0.0,
+              "p50": 0.0,
+              "p90": 0.0
+            },
+            "calls_with_new": 106
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 1342,
+              "max": 9421,
+              "mean": 2927.8333333333335,
+              "p50": 2462.0,
+              "p90": 3891.9
+            },
+            "cached": {
+              "n": 30,
+              "min": 779.95,
+              "max": 3156.65,
+              "mean": 1463.6716666666666,
+              "p50": 1342.3,
+              "p90": 2159.805
+            },
+            "output": {
+              "n": 30,
+              "min": 143,
+              "max": 524,
+              "mean": 199.73333333333332,
+              "p50": 172.0,
+              "p90": 232.8
+            }
+          }
+        },
+        "RR-τ reselect": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.2566485140301196,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 2,
+              "max": 12,
+              "mean": 4.133333333333334,
+              "p50": 3.0,
+              "p90": 9.300000000000004,
+              "histogram": {
+                "2": 1,
+                "3": 24,
+                "5": 1,
+                "9": 1,
+                "12": 3
+              }
+            },
+            "self_finished": {
+              "count": 27,
+              "n": 30,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 3,
+              "n": 30,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 3
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 154,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 17,
+              "n": 124,
+              "rate": 0.13709677419354838
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 143,
+              "n": 215,
+              "rate": 0.6651162790697674
+            },
+            "retained": {
+              "count": 111,
+              "n": 215,
+              "rate": 0.5162790697674419
+            },
+            "retrieval_complete": {
+              "count": 37,
+              "n": 90,
+              "rate": 0.4111111111111111
+            },
+            "evidence_complete": {
+              "count": 20,
+              "n": 90,
+              "rate": 0.2222222222222222
+            },
+            "lost_given_retrieved": {
+              "count": 32,
+              "n": 143,
+              "rate": 0.22377622377622378
+            },
+            "questions_lost_any_retrieved": {
+              "count": 28,
+              "n": 90,
+              "rate": 0.3111111111111111
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 19,
+                "n": 30,
+                "rate": 0.6333333333333333
+              },
+              "1": {
+                "count": 7,
+                "n": 30,
+                "rate": 0.23333333333333334
+              },
+              "2": {
+                "count": 4,
+                "n": 15,
+                "rate": 0.26666666666666666
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 2,
+              "max": 12,
+              "mean": 5.7,
+              "p50": 5.0,
+              "p90": 8.0
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 0,
+              "max": 7,
+              "mean": 2.0,
+              "p50": 1.0,
+              "p90": 5.100000000000001
+            },
+            "calls_with_new": 124,
+            "seconds_per_call": {
+              "n": 124,
+              "min": 0.07178416103124619,
+              "max": 0.8565479870885611,
+              "mean": 0.17504821012112043,
+              "p50": 0.17117740702815354,
+              "p90": 0.2170872340910137
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 1444,
+              "max": 19596,
+              "mean": 4040.5,
+              "p50": 2563.0,
+              "p90": 7544.000000000004
+            },
+            "cached": {
+              "n": 30,
+              "min": 719.0,
+              "max": 3818.9500000000003,
+              "mean": 1698.345,
+              "p50": 1495.65,
+              "p90": 2637.1950000000006
+            },
+            "output": {
+              "n": 30,
+              "min": 143,
+              "max": 616,
+              "mean": 228.56666666666666,
+              "p50": 183.5,
+              "p90": 461.1
+            }
+          }
+        },
+        "RR-τ append": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.270765962533533,
+          "em": 0.2111111111111111,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 2,
+              "max": 12,
+              "mean": 3.933333333333333,
+              "p50": 3.0,
+              "p90": 6.400000000000006,
+              "histogram": {
+                "2": 1,
+                "3": 24,
+                "4": 1,
+                "6": 1,
+                "10": 1,
+                "12": 2
+              }
+            },
+            "self_finished": {
+              "count": 28,
+              "n": 30,
+              "rate": 0.9333333333333333
+            },
+            "forced_finish": {
+              "count": 2,
+              "n": 30,
+              "rate": 0.06666666666666667
+            },
+            "force_reasons": {
+              "search_limit": 2
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 148,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 10,
+              "n": 118,
+              "rate": 0.0847457627118644
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 143,
+              "n": 215,
+              "rate": 0.6651162790697674
+            },
+            "retained": {
+              "count": 111,
+              "n": 215,
+              "rate": 0.5162790697674419
+            },
+            "retrieval_complete": {
+              "count": 38,
+              "n": 90,
+              "rate": 0.4222222222222222
+            },
+            "evidence_complete": {
+              "count": 20,
+              "n": 90,
+              "rate": 0.2222222222222222
+            },
+            "lost_given_retrieved": {
+              "count": 32,
+              "n": 143,
+              "rate": 0.22377622377622378
+            },
+            "questions_lost_any_retrieved": {
+              "count": 28,
+              "n": 90,
+              "rate": 0.3111111111111111
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 20,
+                "n": 30,
+                "rate": 0.6666666666666666
+              },
+              "1": {
+                "count": 6,
+                "n": 30,
+                "rate": 0.2
+              },
+              "2": {
+                "count": 4,
+                "n": 15,
+                "rate": 0.26666666666666666
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 3,
+              "max": 12,
+              "mean": 5.7,
+              "p50": 5.0,
+              "p90": 8.0
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 0,
+              "max": 7,
+              "mean": 2.0,
+              "p50": 1.0,
+              "p90": 5.100000000000001
+            },
+            "calls_with_new": 118,
+            "seconds_per_call": {
+              "n": 118,
+              "min": 0.0729743093252182,
+              "max": 0.19683897495269775,
+              "mean": 0.13715027907658053,
+              "p50": 0.13313516462221742,
+              "p90": 0.17829041746445
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 1444,
+              "max": 19596,
+              "mean": 3843.8,
+              "p50": 2484.5,
+              "p90": 6366.200000000003
+            },
+            "cached": {
+              "n": 30,
+              "min": 719.0,
+              "max": 3818.9500000000003,
+              "mean": 1667.6699999999998,
+              "p50": 1425.45,
+              "p90": 2687.6850000000004
+            },
+            "output": {
+              "n": 30,
+              "min": 143,
+              "max": 521,
+              "mean": 215.93333333333334,
+              "p50": 188.0,
+              "p90": 280.1000000000003
+            }
+          }
+        },
+        "LLMLingua-2": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.23007324411245977,
+          "em": 0.15555555555555556,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 1,
+              "max": 12,
+              "mean": 3.566666666666667,
+              "p50": 3.0,
+              "p90": 3.3000000000000043,
+              "histogram": {
+                "1": 1,
+                "2": 2,
+                "3": 24,
+                "6": 1,
+                "12": 2
+              }
+            },
+            "self_finished": {
+              "count": 28,
+              "n": 30,
+              "rate": 0.9333333333333333
+            },
+            "forced_finish": {
+              "count": 2,
+              "n": 30,
+              "rate": 0.06666666666666667
+            },
+            "force_reasons": {
+              "search_limit": 2
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 137,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 25,
+              "n": 107,
+              "rate": 0.2336448598130841
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 124,
+              "n": 215,
+              "rate": 0.5767441860465117
+            },
+            "retained": {
+              "count": 87,
+              "n": 215,
+              "rate": 0.4046511627906977
+            },
+            "retrieval_complete": {
+              "count": 31,
+              "n": 90,
+              "rate": 0.34444444444444444
+            },
+            "evidence_complete": {
+              "count": 21,
+              "n": 90,
+              "rate": 0.23333333333333334
+            },
+            "lost_given_retrieved": {
+              "count": 37,
+              "n": 124,
+              "rate": 0.29838709677419356
+            },
+            "questions_lost_any_retrieved": {
+              "count": 27,
+              "n": 90,
+              "rate": 0.3
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 15,
+                "n": 30,
+                "rate": 0.5
+              },
+              "1": {
+                "count": 8,
+                "n": 30,
+                "rate": 0.26666666666666666
+              },
+              "2": {
+                "count": 7,
+                "n": 15,
+                "rate": 0.4666666666666667
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            },
+            "compressed_context_contains_verbatim_canonical_answer": {
+              "count": 20,
+              "n": 90,
+              "rate": 0.2222222222222222
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 20,
+              "max": 60,
+              "mean": 39.13333333333333,
+              "p50": 40.0,
+              "p90": 60.0
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 18,
+              "max": 57,
+              "mean": 36.233333333333334,
+              "p50": 36.0,
+              "p90": 54.0
+            },
+            "calls_with_new": 82,
+            "seconds_per_call": {
+              "n": 82,
+              "min": 0.31295923236757517,
+              "max": 0.632409340236336,
+              "mean": 0.4009270005200694,
+              "p50": 0.39656426501460373,
+              "p90": 0.4146370623726398
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 1266,
+              "max": 23145,
+              "mean": 6852.2,
+              "p50": 6128.5,
+              "p90": 8342.50000000001
+            },
+            "cached": {
+              "n": 30,
+              "min": 1334.1,
+              "max": 8115.9,
+              "mean": 5015.21,
+              "p50": 5243.200000000001,
+              "p90": 6094.410000000001
+            },
+            "output": {
+              "n": 30,
+              "min": 69,
+              "max": 671,
+              "mean": 199.4,
+              "p50": 166.5,
+              "p90": 235.20000000000005
+            }
+          }
+        },
+        "r4 reselect": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.28105743960816426,
+          "em": 0.2,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 3,
+              "max": 12,
+              "mean": 4.466666666666667,
+              "p50": 3.0,
+              "p90": 9.300000000000004,
+              "histogram": {
+                "3": 20,
+                "4": 4,
+                "6": 1,
+                "7": 1,
+                "9": 1,
+                "12": 3
+              }
+            },
+            "self_finished": {
+              "count": 27,
+              "n": 30,
+              "rate": 0.9
+            },
+            "forced_finish": {
+              "count": 3,
+              "n": 30,
+              "rate": 0.1
+            },
+            "force_reasons": {
+              "search_limit": 3
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 164,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 27,
+              "n": 134,
+              "rate": 0.20149253731343283
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 143,
+              "n": 215,
+              "rate": 0.6651162790697674
+            },
+            "retained": {
+              "count": 88,
+              "n": 215,
+              "rate": 0.40930232558139534
+            },
+            "retrieval_complete": {
+              "count": 39,
+              "n": 90,
+              "rate": 0.43333333333333335
+            },
+            "evidence_complete": {
+              "count": 6,
+              "n": 90,
+              "rate": 0.06666666666666667
+            },
+            "lost_given_retrieved": {
+              "count": 55,
+              "n": 143,
+              "rate": 0.38461538461538464
+            },
+            "questions_lost_any_retrieved": {
+              "count": 49,
+              "n": 90,
+              "rate": 0.5444444444444444
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 12,
+                "n": 30,
+                "rate": 0.4
+              },
+              "1": {
+                "count": 5,
+                "n": 30,
+                "rate": 0.16666666666666666
+              },
+              "2": {
+                "count": 4,
+                "n": 15,
+                "rate": 0.26666666666666666
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 3,
+              "max": 8,
+              "mean": 3.7,
+              "p50": 3.0,
+              "p90": 5.100000000000001
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 0,
+              "max": 4,
+              "mean": 0.7666666666666667,
+              "p50": 1.0,
+              "p90": 2.0
+            },
+            "calls_with_new": 134,
+            "invalid": {
+              "count": 0,
+              "n": 134,
+              "rate": 0.0
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 134,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 134,
+              "min": 1.307778486981988,
+              "max": 5.903942876961082,
+              "mean": 3.062587049084285,
+              "p50": 2.590367534197867,
+              "p90": 5.861500070896
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 1444,
+              "max": 13885,
+              "mean": 3596.6666666666665,
+              "p50": 2121.5,
+              "p90": 9625.500000000002
+            },
+            "cached": {
+              "n": 30,
+              "min": 719.0,
+              "max": 8639.4,
+              "mean": 1771.7933333333335,
+              "p50": 1132.775,
+              "p90": 4315.715
+            },
+            "output": {
+              "n": 30,
+              "min": 143,
+              "max": 729,
+              "mean": 239.43333333333334,
+              "p50": 184.5,
+              "p90": 472.8
+            }
+          }
+        },
+        "r4 append": {
+          "n_tasks": 30,
+          "n_questions": 90,
+          "f1": 0.26165941054829944,
+          "em": 0.17777777777777778,
+          "process": {
+            "searches": {
+              "n": 30,
+              "min": 3,
+              "max": 12,
+              "mean": 4.766666666666667,
+              "p50": 3.0,
+              "p90": 12.0,
+              "histogram": {
+                "3": 19,
+                "4": 4,
+                "7": 2,
+                "8": 1,
+                "12": 4
+              }
+            },
+            "self_finished": {
+              "count": 26,
+              "n": 30,
+              "rate": 0.8666666666666667
+            },
+            "forced_finish": {
+              "count": 4,
+              "n": 30,
+              "rate": 0.13333333333333333
+            },
+            "force_reasons": {
+              "search_limit": 4
+            },
+            "overlength": {
+              "count": 0,
+              "n": 30,
+              "rate": 0.0
+            },
+            "invalid_format": {
+              "count": 0,
+              "n": 173,
+              "rate": 0.0
+            },
+            "duplicate_queries": {
+              "count": 37,
+              "n": 143,
+              "rate": 0.25874125874125875
+            }
+          },
+          "evidence": {
+            "retrieved": {
+              "count": 144,
+              "n": 215,
+              "rate": 0.6697674418604651
+            },
+            "retained": {
+              "count": 89,
+              "n": 215,
+              "rate": 0.413953488372093
+            },
+            "retrieval_complete": {
+              "count": 38,
+              "n": 90,
+              "rate": 0.4222222222222222
+            },
+            "evidence_complete": {
+              "count": 6,
+              "n": 90,
+              "rate": 0.06666666666666667
+            },
+            "lost_given_retrieved": {
+              "count": 55,
+              "n": 144,
+              "rate": 0.3819444444444444
+            },
+            "questions_lost_any_retrieved": {
+              "count": 47,
+              "n": 90,
+              "rate": 0.5222222222222223
+            },
+            "musique_by_hop_index": {
+              "0": {
+                "count": 15,
+                "n": 30,
+                "rate": 0.5
+              },
+              "1": {
+                "count": 5,
+                "n": 30,
+                "rate": 0.16666666666666666
+              },
+              "2": {
+                "count": 2,
+                "n": 15,
+                "rate": 0.13333333333333333
+              },
+              "3": {
+                "count": 0,
+                "n": 4,
+                "rate": 0.0
+              }
+            }
+          },
+          "compression": {
+            "retained_passages": {
+              "n": 30,
+              "min": 3,
+              "max": 12,
+              "mean": 4.633333333333334,
+              "p50": 3.0,
+              "p90": 9.200000000000003
+            },
+            "nongold_passages": {
+              "n": 30,
+              "min": 0,
+              "max": 9,
+              "mean": 1.6666666666666667,
+              "p50": 1.0,
+              "p90": 7.100000000000001
+            },
+            "calls_with_new": 143,
+            "invalid": {
+              "count": 7,
+              "n": 143,
+              "rate": 0.04895104895104895
+            },
+            "over_budget": {
+              "count": 0,
+              "n": 143,
+              "rate": 0.0
+            },
+            "seconds_per_call": {
+              "n": 143,
+              "min": 1.0005438239313662,
+              "max": 5.903942876961082,
+              "mean": 1.9848938036410437,
+              "p50": 1.9556278311647475,
+              "p90": 2.5201009158045053
+            }
+          },
+          "cost": {
+            "uncached": {
+              "n": 30,
+              "min": 1444,
+              "max": 18405,
+              "mean": 4467.033333333334,
+              "p50": 2215.0,
+              "p90": 14731.0
+            },
+            "cached": {
+              "n": 30,
+              "min": 719.0,
+              "max": 4040.25,
+              "mean": 1517.7516666666668,
+              "p50": 1184.725,
+              "p90": 2876.3900000000003
+            },
+            "output": {
+              "n": 30,
+              "min": 144,
+              "max": 739,
+              "mean": 259.43333333333334,
+              "p50": 201.0,
+              "p90": 487.70000000000005
+            }
+          }
+        }
+      },
+      "paired": {
+        "r4 reselect − RR-τ reselect": {
+          "n": 90,
+          "delta_f1": 0.024408925578044614,
+          "delta_em": 0.0,
+          "f1_higher": 16,
+          "f1_equal": 66,
+          "f1_lower": 8,
+          "em_2x2_left_rows_right_columns": [
+            [
+              67,
+              5
+            ],
+            [
+              5,
+              13
+            ]
+          ]
+        },
+        "r4 append − RR-τ append": {
+          "n": 90,
+          "delta_f1": -0.009106551985233611,
+          "delta_em": -0.03333333333333333,
+          "f1_higher": 13,
+          "f1_equal": 64,
+          "f1_lower": 13,
+          "em_2x2_left_rows_right_columns": [
+            [
+              67,
+              7
+            ],
+            [
+              4,
+              12
+            ]
+          ]
+        },
+        "r4 reselect − no_compress": {
+          "n": 90,
+          "delta_f1": -0.0688222114859899,
+          "delta_em": -0.044444444444444446,
+          "f1_higher": 12,
+          "f1_equal": 60,
+          "f1_lower": 18,
+          "em_2x2_left_rows_right_columns": [
+            [
+              65,
+              7
+            ],
+            [
+              3,
+              15
+            ]
+          ]
+        },
+        "r4 append − no_compress": {
+          "n": 90,
+          "delta_f1": -0.0882202405458547,
+          "delta_em": -0.06666666666666667,
+          "f1_higher": 10,
+          "f1_equal": 60,
+          "f1_lower": 20,
+          "em_2x2_left_rows_right_columns": [
+            [
+              66,
+              8
+            ],
+            [
+              2,
+              14
+            ]
+          ]
+        },
+        "r4 reselect − LLMLingua-2": {
+          "n": 90,
+          "delta_f1": 0.050984195495704446,
+          "delta_em": 0.044444444444444446,
+          "f1_higher": 18,
+          "f1_equal": 59,
+          "f1_lower": 13,
+          "em_2x2_left_rows_right_columns": [
+            [
+              67,
+              5
+            ],
+            [
+              9,
+              9
+            ]
+          ]
+        },
+        "r4 reselect − latest": {
+          "n": 90,
+          "delta_f1": 0.09243465716185238,
+          "delta_em": 0.07777777777777778,
+          "f1_higher": 19,
+          "f1_equal": 61,
+          "f1_lower": 10,
+          "em_2x2_left_rows_right_columns": [
+            [
+              68,
+              4
+            ],
+            [
+              11,
+              7
+            ]
+          ]
+        },
+        "oracle − r4 reselect": {
+          "n": 90,
+          "delta_f1": 0.11130221630221629,
+          "delta_em": 0.06666666666666667,
+          "f1_higher": 21,
+          "f1_equal": 61,
+          "f1_lower": 8,
+          "em_2x2_left_rows_right_columns": [
+            [
+              64,
+              2
+            ],
+            [
+              8,
+              16
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "wall_seconds": 1094.7986693200655,
+  "model_start_and_shutdown_seconds": 644.191285720095,
+  "main_eta_seconds_extrapolated": 5150.2651217198,
+  "n_smoke_episodes": 240,
+  "eta_caveat": "Estimate scales smoke work by 10, holds measured model startup/shutdown overhead fixed, and excludes time waiting for GPU admission. The main runtime may differ.",
+  "awaiting_main_approval": true
+}

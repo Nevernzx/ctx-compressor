@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "unique_test_gold": {
+    "count": 0,
+    "n": 2155,
+    "rate": 0.0
+  },
+  "gold_hop_occurrences": {
+    "count": 0,
+    "n": 4771,
+    "rate": 0.0
+  },
+  "question_all_seen": {
+    "count": 0,
+    "n": 1804,
+    "rate": 0.0
+  },
+  "all_seen_questions": [],
+  "source_files": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/train_tasks.jsonl",
+      "bytes": 1184195307,
+      "lines": 4735,
+      "sha256": "ae96199b83b264bd926312e1e91e3b2af753b20117a6cb88161c8f3b23033e56"
+    },
+    "heldout": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+      "bytes": 62323855,
+      "lines": 249,
+      "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+    },
+    "corpus": {
+      "path": "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl",
+      "bytes": 83690752,
+      "lines": 84559,
+      "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+    }
+  },
+  "source_task_counts": {
+    "train": 4735,
+    "heldout": 249
+  },
+  "source_gold_pid_count": 13671,
+  "identity": "Exact UTF-8 title and paragraph_text in any train trajectory or held-out trajectory."
+}

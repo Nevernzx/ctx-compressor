@@ -1,0 +1,70 @@
+{
+  "parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "seed": 20261117
+  },
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 48,
+    "seed": 20261117,
+    "enable_thinking": false,
+    "n": 1,
+    "system_messages": 0
+  },
+  "source_sha256": "a77c26c6c34b73dee47a2e0a8c48bdf8f506721158d17f54370523723089e6da",
+  "before": {
+    "at_utc": "2026-11-23T09:14:37.575253+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 939756601344,
+    "available_bytes": 14940614656
+  },
+  "preflight_sha256": "9112aadf0a154b3ad3f7c879e8d982ec5d042c0f299aeca68c0c82d76bc9d255",
+  "preflight_max_prompt_tokens": 31297,
+  "package_versions": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "bm25s": "0.3.16",
+    "scipy": "1.17.1"
+  },
+  "started_utc": "2026-11-23T09:14:37.649686+00:00",
+  "cuda_visible_devices": "1",
+  "sampling_params_repr": "SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0, top_p=1.0, top_k=0, min_p=0.0, seed=20261117, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=False, max_tokens=48, min_tokens=0, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, structured_outputs=None, extra_args=None)",
+  "smoke": {
+    "n": 40,
+    "raw_output_mismatches": 1
+  },
+  "status": "complete",
+  "predictions": 49800,
+  "engine_shutdown": true,
+  "elapsed_seconds": 3204.3322382220067,
+  "peak_gpu1_mib": 42423,
+  "n_resource_samples": 1515,
+  "df_after_reader": {
+    "at_utc": "2026-11-23T10:08:01.985746+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 939794853888,
+    "available_bytes": 14902362112
+  },
+  "predictions_sha256": "fb484cef2620f886aaf0930cccfd8ac18eab17bf220a50263040e4e57a34fe48",
+  "df_opening": {
+    "at_utc": "2026-11-23T08:48:24.394612+00:00",
+    "df": "Filesystem          1B-blocks           Used    Available Use% Mounted on\noverlay         1005867986944   939735203840  14962012160  99% /\n/dev/sda1      15873098706944 14385651171328 687412674560  96% /root/userfolder\n",
+    "first_observed_root_used_bytes": 939730915328,
+    "first_observed_root_available_bytes": 14966300672
+  },
+  "peak_observed_root_delta_bytes": 294739968
+}

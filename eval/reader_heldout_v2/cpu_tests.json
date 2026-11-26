@@ -1,0 +1,14 @@
+{
+  "tests": 811,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "previous_test_ids_matched": 791,
+  "elapsed_seconds": 14.641856709029526,
+  "xml_sha256": "a0f0a6996e6269d4792b9fdb17dfb76060b61e43dbfb7baa6c0144583b54c81e",
+  "xml": "/root/userfolder/ctx-compressor/reader_heldout_v2/cpu_suite_465gqw7d/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/reader_heldout_v2/cpu_suite_465gqw7d/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-24T03:15:51.230969+00:00"
+}

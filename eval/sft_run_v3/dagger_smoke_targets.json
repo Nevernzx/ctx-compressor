@@ -1,0 +1,254 @@
+{
+  "status": "complete",
+  "n_states": 120,
+  "n_eligible": 120,
+  "overlength": {
+    "count": 0,
+    "n": 120,
+    "rate": 0.0
+  },
+  "max_length": 8392,
+  "cells": {
+    "append|loose": {
+      "n_states": 20,
+      "two_adds": {
+        "count": 9,
+        "n": 20,
+        "rate": 0.45
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "nonempty_drop": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "mean_drops": {
+        "sum": 0,
+        "n": 20,
+        "mean": 0.0
+      },
+      "full_training_token_length": {
+        "n": 20,
+        "mean": 3340.35,
+        "p50": 3445.0,
+        "p90": 4185.5,
+        "p99": 4778.689999999999,
+        "max": 4902
+      },
+      "overlength": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "user_text_checked": 20,
+      "prompt_ids_checked": 20
+    },
+    "append|mid": {
+      "n_states": 20,
+      "two_adds": {
+        "count": 9,
+        "n": 20,
+        "rate": 0.45
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "nonempty_drop": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "mean_drops": {
+        "sum": 0,
+        "n": 20,
+        "mean": 0.0
+      },
+      "full_training_token_length": {
+        "n": 20,
+        "mean": 3340.35,
+        "p50": 3445.0,
+        "p90": 4185.5,
+        "p99": 4778.689999999999,
+        "max": 4902
+      },
+      "overlength": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "user_text_checked": 20,
+      "prompt_ids_checked": 20
+    },
+    "append|tight": {
+      "n_states": 20,
+      "two_adds": {
+        "count": 8,
+        "n": 20,
+        "rate": 0.4
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "nonempty_drop": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "mean_drops": {
+        "sum": 0,
+        "n": 20,
+        "mean": 0.0
+      },
+      "full_training_token_length": {
+        "n": 20,
+        "mean": 3339.15,
+        "p50": 3445.0,
+        "p90": 4185.5,
+        "p99": 4762.489999999999,
+        "max": 4882
+      },
+      "overlength": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "user_text_checked": 20,
+      "prompt_ids_checked": 20
+    },
+    "reselect|loose": {
+      "n_states": 20,
+      "two_adds": {
+        "count": 10,
+        "n": 20,
+        "rate": 0.5
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 8,
+        "n": 18,
+        "rate": 0.4444444444444444
+      },
+      "nonempty_drop": {
+        "count": 8,
+        "n": 20,
+        "rate": 0.4
+      },
+      "mean_drops": {
+        "sum": 8,
+        "n": 20,
+        "mean": 0.4
+      },
+      "full_training_token_length": {
+        "n": 20,
+        "mean": 3171.8,
+        "p50": 3199.5,
+        "p90": 3930.0000000000005,
+        "p99": 4375.7699999999995,
+        "max": 4436
+      },
+      "overlength": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "user_text_checked": 20,
+      "prompt_ids_checked": 20
+    },
+    "reselect|mid": {
+      "n_states": 20,
+      "two_adds": {
+        "count": 10,
+        "n": 20,
+        "rate": 0.5
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 12,
+        "n": 18,
+        "rate": 0.6666666666666666
+      },
+      "nonempty_drop": {
+        "count": 12,
+        "n": 20,
+        "rate": 0.6
+      },
+      "mean_drops": {
+        "sum": 15,
+        "n": 20,
+        "mean": 0.75
+      },
+      "full_training_token_length": {
+        "n": 20,
+        "mean": 3168.8,
+        "p50": 3195.0,
+        "p90": 3921.9,
+        "p99": 4369.29,
+        "max": 4428
+      },
+      "overlength": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "user_text_checked": 20,
+      "prompt_ids_checked": 20
+    },
+    "reselect|tight": {
+      "n_states": 20,
+      "two_adds": {
+        "count": 10,
+        "n": 20,
+        "rate": 0.5
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 11,
+        "n": 18,
+        "rate": 0.6111111111111112
+      },
+      "nonempty_drop": {
+        "count": 11,
+        "n": 20,
+        "rate": 0.55
+      },
+      "mean_drops": {
+        "sum": 13,
+        "n": 20,
+        "mean": 0.65
+      },
+      "full_training_token_length": {
+        "n": 20,
+        "mean": 3169.4,
+        "p50": 3199.5,
+        "p90": 3929.1000000000004,
+        "p99": 4374.0599999999995,
+        "max": 4436
+      },
+      "overlength": {
+        "count": 0,
+        "n": 20,
+        "rate": 0.0
+      },
+      "user_text_checked": 20,
+      "prompt_ids_checked": 20
+    }
+  },
+  "c_receipt": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/dagger_smoke.json",
+    "bytes": 1681,
+    "sha256": "57c9f5528f90aee29e60acf8ab9295b9ed82b95438174152e8b2f58a7c81ea40"
+  },
+  "user_text_checked": 120,
+  "prompt_ids_checked": 120,
+  "eligible_file": {
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/smoke_targets/dagger_eligible.jsonl",
+    "bytes": 1595521,
+    "sha256": "45905ee81a79ccf24516c030f034dfc56b774d5538674f62bbac318699fcf467",
+    "lines": 120
+  }
+}

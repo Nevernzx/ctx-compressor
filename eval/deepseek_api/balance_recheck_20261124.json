@@ -1,0 +1,48 @@
+{
+  "request": {
+    "host": "api.deepseek.com",
+    "method": "GET",
+    "path": "/user/balance",
+    "attempts": 1,
+    "paid_requests": 0,
+    "started_utc": "2026-11-24T04:39:31.296526+00:00",
+    "started_beijing": "2026-11-24T12:39:31.296526+08:00",
+    "http_status": 200,
+    "ended_utc": "2026-11-24T04:39:31.383760+00:00"
+  },
+  "currency": "CNY",
+  "references": {
+    "balance_before_smoke": {
+      "total_balance_yuan": "9.40",
+      "ended_utc": "2026-11-23T14:18:36.038187+00:00"
+    },
+    "balance_at_full_end": {
+      "total_balance_yuan": "9.01",
+      "ended_utc": "2026-11-24T04:04:19.911128+00:00"
+    },
+    "run_config_sha256": "28523e31d4f83205bd29c9f6091e98452e65809fc6a3b325dcf4ee753438ddd9",
+    "ledger_sha256": "98e4e05e985e4f28dbeb8ca9a6e09cdeeffc9e3ee4e9ea53f336d7cc7d577822",
+    "ledger_calls": {
+      "smoke": 36,
+      "full": 2588
+    },
+    "ledger_total_yuan": "3.03074106"
+  },
+  "status": "complete",
+  "balance": {
+    "available": true,
+    "total_balance_yuan": "6.37",
+    "granted_balance_yuan": "0.00",
+    "topped_up_balance_yuan": "6.37"
+  },
+  "reconciliation": {
+    "balance_if_only_task14_ledger_was_debited_yuan": "6.36925894",
+    "observed_drop_since_before_smoke_yuan": "3.03",
+    "observed_drop_since_full_end_yuan": "2.64",
+    "observed_drop_minus_ledger_yuan": "-0.00074106",
+    "previous_observed_drop_minus_ledger_yuan": "-2.64074106",
+    "matches_at_cent_precision": true,
+    "finding": "matches_ledger_at_cent_precision",
+    "attribution": "The balance is shared. A single recheck cannot establish what caused the timing or amount of a balance change."
+  }
+}

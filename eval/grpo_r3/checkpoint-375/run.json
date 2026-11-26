@@ -1,0 +1,248 @@
+{
+  "status": "complete",
+  "name": "checkpoint-375",
+  "checkpoint_step": 375,
+  "started_at_utc": "2026-11-23T22:40:57.638269+00:00",
+  "pid": 3253913,
+  "model": "/root/userfolder/ctx-compressor/grpo_r3/merged_start",
+  "adapter": "/root/userfolder/ctx-compressor/grpo_r3/train/checkpoint-375",
+  "adapter_weight": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r3/train/checkpoint-375/adapter_model.safetensors",
+    "bytes": 69782384,
+    "sha256": "aa70ff55b4298acf26674aa47c52c29d3fd59885dde682ecb5eae3f273a9cc26"
+  },
+  "start_version": "r2",
+  "start_strategy": "checkpoint-125",
+  "start_adapter_sha256": "84612222c59733d2652dba101c526f448f3f9ea525ce80696489f4a2ebf05886",
+  "merge_record": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r3/merged_start/merge_record.json",
+    "bytes": 603,
+    "sha256": "587bd289982ab02f72803ccb81f73fc65c2c77ee0e20bf192efdfee08e02cfb1"
+  },
+  "heldout_input": {
+    "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+    "bytes": 62323855,
+    "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+  },
+  "gpu": 1,
+  "seed": 20261118,
+  "temperature": 0,
+  "max_tokens": 256,
+  "step0": {
+    "n": 1494,
+    "user_byte_mismatches": 0,
+    "token_id_mismatches": 0,
+    "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+  },
+  "greedy": true,
+  "hedge": false,
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/grpo_r3/merged_start",
+    "tokenizer": "/root/userfolder/ctx-compressor/grpo_r3/merged_start",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "strategies": {
+    "checkpoint-375": {
+      "status": "complete",
+      "checkpoint_step": 375,
+      "n_steps": 13956,
+      "n_trajectories": 1494,
+      "max_prompt_tokens": 8195,
+      "output_limit_hits": 0,
+      "invalid_counts": {
+        "over_budget": 168,
+        "invalid_candidate_id": 15
+      },
+      "batches": [
+        {
+          "step": 0,
+          "n": 1494,
+          "seconds": 142.5892632380128,
+          "prompt_tokens": 3592749,
+          "generated_tokens": 14895
+        },
+        {
+          "step": 1,
+          "n": 1494,
+          "seconds": 171.08941220259294,
+          "prompt_tokens": 4117289,
+          "generated_tokens": 16191
+        },
+        {
+          "step": 2,
+          "n": 1494,
+          "seconds": 176.51932165399194,
+          "prompt_tokens": 4240825,
+          "generated_tokens": 16214
+        },
+        {
+          "step": 3,
+          "n": 1494,
+          "seconds": 190.03935340698808,
+          "prompt_tokens": 4550669,
+          "generated_tokens": 16120
+        },
+        {
+          "step": 4,
+          "n": 1494,
+          "seconds": 202.09280332084745,
+          "prompt_tokens": 4833832,
+          "generated_tokens": 16186
+        },
+        {
+          "step": 5,
+          "n": 1494,
+          "seconds": 211.3808436281979,
+          "prompt_tokens": 4983591,
+          "generated_tokens": 18009
+        },
+        {
+          "step": 6,
+          "n": 1494,
+          "seconds": 223.99343602498993,
+          "prompt_tokens": 5301638,
+          "generated_tokens": 17939
+        },
+        {
+          "step": 7,
+          "n": 1494,
+          "seconds": 238.6303420769982,
+          "prompt_tokens": 5608677,
+          "generated_tokens": 17919
+        },
+        {
+          "step": 8,
+          "n": 1044,
+          "seconds": 178.39837852213532,
+          "prompt_tokens": 4187573,
+          "generated_tokens": 12895
+        },
+        {
+          "step": 9,
+          "n": 612,
+          "seconds": 108.89265419496223,
+          "prompt_tokens": 2545649,
+          "generated_tokens": 7360
+        },
+        {
+          "step": 10,
+          "n": 270,
+          "seconds": 52.301573124714196,
+          "prompt_tokens": 1224445,
+          "generated_tokens": 3416
+        },
+        {
+          "step": 11,
+          "n": 66,
+          "seconds": 14.229273953009397,
+          "prompt_tokens": 323460,
+          "generated_tokens": 819
+        },
+        {
+          "step": 12,
+          "n": 12,
+          "seconds": 2.6562638483010232,
+          "prompt_tokens": 52746,
+          "generated_tokens": 146
+        }
+      ],
+      "matched_task05_step0_inputs": 1494,
+      "metrics": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r3/checkpoint-375/metrics.json",
+        "bytes": 32540,
+        "sha256": "0025a02ebad03b4f151c418d69fecc29647222d9a794e68250c7980ac2ae984e"
+      }
+    }
+  },
+  "gpu_before": {
+    "index": 1,
+    "memory_used_mib": 375,
+    "memory_total_mib": 49140,
+    "utilization_gpu": 0
+  },
+  "engine_tokenizer_check": {
+    "reference": {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run/model_template_reference.json",
+      "bytes": 40731,
+      "sha256": "dd2ca0ecb0309fdb29f569ecbb949367b74bc7875da5a4011c74d7d0eb8ad601"
+    },
+    "identity": {
+      "task": 0,
+      "step": 0,
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "split": "heldout"
+    },
+    "prompt_tokens": 1814,
+    "masked_input_tokens": 1810,
+    "empty_think_tokens": 4,
+    "exact_token_ids_match": true,
+    "prompt_sha256": "6c8e2f9ea4d7883f4f725792345ba1bc21e7194287debf6863a8ee8b5e316b20"
+  },
+  "active_strategy": "checkpoint-375",
+  "artifacts": {
+    "checkpoint-375_results.json": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r3/checkpoint-375/checkpoint-375_results.json",
+      "bytes": 32540,
+      "sha256": "0025a02ebad03b4f151c418d69fecc29647222d9a794e68250c7980ac2ae984e"
+    },
+    "extra.json": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r3/checkpoint-375/extra.json",
+      "bytes": 26976,
+      "sha256": "606c6a527b93e3bea179ba45fac15f00620b1c3e042244c829a54c162ce1f2f7"
+    },
+    "diagnostics.json": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r3/checkpoint-375/diagnostics.json",
+      "bytes": 122309,
+      "sha256": "98343b984d3e0a4399b5b26fbaf64c4ef1e55bf4a90f4eeb24e1861a9d8e41b4"
+    }
+  },
+  "checks": {
+    "n_steps": 13956,
+    "n_trajectories": 1494,
+    "n_cells": 6,
+    "step0_matched": 1494
+  },
+  "monitor_thread_stopped": true,
+  "root_disk_diagnostics_complete": true,
+  "engine_shutdown": {
+    "required": true,
+    "completed": true
+  },
+  "root_after": {
+    "used_bytes": 940394651648,
+    "available_bytes": 14302564352,
+    "df_raw": "        Used       Avail\n940394651648 14302564352\n"
+  },
+  "root_shutdown_diagnostics": {
+    "utc": "2026-11-23T23:15:27.786044+00:00",
+    "phase": "shutdown",
+    "root_df": {
+      "used_bytes": 940394651648,
+      "available_bytes": 14302564352,
+      "df_raw": "        Used       Avail\n940394651648 14302564352\n"
+    }
+  },
+  "root_disk_diagnostics": {
+    "policy": "raw df only; Task 06 accounts for task-written overlay files separately",
+    "n_disk_samples": 105
+  },
+  "completed_at_utc": "2026-11-23T23:15:29.760188+00:00",
+  "elapsed_seconds": 2072.1221267860383,
+  "peak_gpu_memory_used_mib": 35081
+}

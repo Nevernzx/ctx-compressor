@@ -1,0 +1,169 @@
+{
+  "compared_config_fields": [
+    "add_non_thinking_prefix",
+    "attention",
+    "batch_size",
+    "bf16",
+    "checkpoint_selection_uses_eval_loss",
+    "cuda_visible_devices",
+    "driver_version",
+    "effective_batch",
+    "enable_thinking",
+    "environment_lock_sha256",
+    "epochs_planned",
+    "eval_input",
+    "eval_steps",
+    "gpu_uuid",
+    "gradient_accumulation_steps",
+    "gradient_checkpointing",
+    "gradient_checkpointing_use_reentrant",
+    "group_by_length",
+    "learning_rate",
+    "lora_alpha",
+    "lora_dropout",
+    "lora_rank",
+    "loss_scale",
+    "lr_scheduler_type",
+    "max_grad_norm",
+    "max_length",
+    "model",
+    "monitor_interval_seconds",
+    "optim",
+    "optimizer_steps_planned",
+    "output_dir",
+    "packing",
+    "run_dir",
+    "save_steps",
+    "seed",
+    "stage",
+    "target_modules",
+    "template",
+    "train_input",
+    "train_type",
+    "truncation_strategy",
+    "versions",
+    "warmup_ratio",
+    "weight_decay"
+  ],
+  "differences": {
+    "optimizer_steps_planned": {
+      "task06": 2500,
+      "task10": 3750
+    },
+    "output_dir": {
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints",
+      "task10": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints"
+    },
+    "run_dir": {
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118",
+      "task10": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121"
+    },
+    "train_input": {
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/train_20k.jsonl",
+      "task10": "/root/userfolder/ctx-compressor/data/sft_v3/train_30k.jsonl"
+    }
+  },
+  "explicit_swift_fields": [
+    "add_non_thinking_prefix",
+    "add_version",
+    "attn_impl",
+    "bf16",
+    "check_model",
+    "data_seed",
+    "dataloader_num_workers",
+    "dataset",
+    "dataset_num_proc",
+    "dataset_shuffle",
+    "disable_tqdm",
+    "enable_thinking",
+    "eval_steps",
+    "eval_strategy",
+    "fp16",
+    "gradient_accumulation_steps",
+    "gradient_checkpointing",
+    "gradient_checkpointing_kwargs",
+    "group_by_length",
+    "learning_rate",
+    "load_best_model_at_end",
+    "load_from_cache_file",
+    "logging_first_step",
+    "logging_nan_inf_filter",
+    "logging_steps",
+    "lora_alpha",
+    "lora_dropout",
+    "lora_rank",
+    "loss_scale",
+    "lr_scheduler_type",
+    "max_grad_norm",
+    "max_length",
+    "max_steps",
+    "model",
+    "model_type",
+    "num_train_epochs",
+    "optim",
+    "output_dir",
+    "packing",
+    "padding_free",
+    "per_device_eval_batch_size",
+    "per_device_train_batch_size",
+    "prediction_loss_only",
+    "report_to",
+    "save_only_model",
+    "save_steps",
+    "save_strategy",
+    "save_total_limit",
+    "seed",
+    "split_dataset_ratio",
+    "strict",
+    "target_modules",
+    "template",
+    "torch_dtype",
+    "train_type",
+    "truncation_strategy",
+    "use_hf",
+    "val_dataset",
+    "warmup_ratio",
+    "weight_decay"
+  ],
+  "explicit_swift_argument_differences": {
+    "dataset": {
+      "task06": [
+        "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/train_20k.jsonl"
+      ],
+      "task10": [
+        "/root/userfolder/ctx-compressor/data/sft_v3/train_30k.jsonl"
+      ]
+    },
+    "max_steps": {
+      "task06": 2500,
+      "task10": 3750
+    },
+    "output_dir": {
+      "task06": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints",
+      "task10": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints"
+    }
+  },
+  "rows": {
+    "task06": 20000,
+    "task10": 30000
+  },
+  "task06_config_sha256": "803dcaf228846c1e68d387244e8a0f3e98c95f6fdc656a6f124e9a7e50ec2838",
+  "task06_resolved_sha256": "0cbd9071f9a1da113d5d99c105702c2c81f50caf647c046372a7209b9a26d2ef",
+  "saved_steps": [
+    500,
+    1000,
+    1500,
+    2000,
+    2500,
+    3000,
+    3500,
+    3750
+  ],
+  "eval_checkpoints": [
+    1000,
+    2000,
+    3000,
+    3750
+  ],
+  "runtime_comparison": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/resolved_args_diff.json"
+}

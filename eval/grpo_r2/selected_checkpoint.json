@@ -1,0 +1,93 @@
+{
+  "strategy": "checkpoint-125",
+  "path": "/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125",
+  "checkpoint_step": 125,
+  "n_candidates": 4,
+  "evidence_loss": {
+    "n": 1494,
+    "count": 714,
+    "rate": 0.4779116465863454,
+    "by_hop": {
+      "1": {
+        "n": 1494,
+        "count": 346,
+        "evidence_n": 5976,
+        "lost_evidence_count": 377,
+        "rate": 0.23159303882195448
+      },
+      "2": {
+        "n": 1494,
+        "count": 421,
+        "evidence_n": 5976,
+        "lost_evidence_count": 482,
+        "rate": 0.2817938420348059
+      },
+      "3": {
+        "n": 1044,
+        "count": 142,
+        "evidence_n": 1632,
+        "lost_evidence_count": 146,
+        "rate": 0.1360153256704981
+      },
+      "4": {
+        "n": 354,
+        "count": 45,
+        "evidence_n": 372,
+        "lost_evidence_count": 45,
+        "rate": 0.1271186440677966
+      }
+    },
+    "by_question_position": {
+      "1": {
+        "n": 1494,
+        "count": 218,
+        "evidence_n": 3504,
+        "lost_evidence_count": 236,
+        "rate": 0.1459170013386881
+      },
+      "2": {
+        "n": 1494,
+        "count": 246,
+        "evidence_n": 3468,
+        "lost_evidence_count": 265,
+        "rate": 0.1646586345381526
+      },
+      "3": {
+        "n": 1494,
+        "count": 245,
+        "evidence_n": 3504,
+        "lost_evidence_count": 265,
+        "rate": 0.1639892904953146
+      },
+      "4": {
+        "n": 1494,
+        "count": 228,
+        "evidence_n": 3480,
+        "lost_evidence_count": 284,
+        "rate": 0.15261044176706828
+      }
+    },
+    "by_mechanism": {
+      "never_kept": {
+        "n": 1494,
+        "count": 582,
+        "evidence_n": 13956,
+        "lost_evidence_count": 814,
+        "rate": 0.3895582329317269
+      },
+      "dropped": {
+        "n": 1494,
+        "count": 201,
+        "evidence_n": 13956,
+        "lost_evidence_count": 236,
+        "rate": 0.13453815261044177
+      }
+    }
+  },
+  "final_recall": {
+    "n": 1494,
+    "mean": 0.9265694869610578
+  },
+  "adapter_sha256": "84612222c59733d2652dba101c526f448f3f9ea525ce80696489f4a2ebf05886",
+  "rule": "Lowest pooled loss, highest pooled final recall, earliest optimizer step (GRPO only)."
+}

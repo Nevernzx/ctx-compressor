@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "tests": 691,
+  "passed": 691,
+  "resume_tests_matched": 644,
+  "original_spec_tests_matched": 568,
+  "skipped": 0,
+  "errors": 0,
+  "failures": 0,
+  "gpu_cli_invocations": 0,
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/dagger_v3/tmp/wrap10_suite_5zc4irki/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/dagger_v3/tmp/wrap10_suite_5zc4irki/tests.xml",
+    "tests"
+  ],
+  "cuda_visible_devices": "",
+  "exit_code": 0,
+  "xml_sha256": "5f514ef58eabad6b32506f6d685e060a5912bec99d0339f0ee4fca19cead0cdb",
+  "wall_seconds": 13.91380468616262,
+  "utc": "2026-11-22T17:11:24.297768+00:00",
+  "log": "/root/userfolder/ctx-compressor/dagger_v3/tmp/wrap10_suite_5zc4irki/pytest.log"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "n_tasks": 451,
+  "n_pairs": 89751,
+  "n_truncated": 1263,
+  "file": {
+    "path": "/root/userfolder/ctx-compressor/test_v1/scores/selected_test.jsonl",
+    "size": 6203036,
+    "sha256": "900dbdbd109eb67ebf4c77e28134ec8d40a578400eb23cdedd86dd1995d5bd15"
+  },
+  "checkpoint": 5300,
+  "template": {
+    "source": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B#using-transformers",
+    "prefix": "<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n",
+    "body": "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {document}",
+    "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "instruction": "Given the four questions of a multi-hop QA task, judge whether the passage is a supporting fact needed to answer any of them.",
+    "yes_token_id": 9693,
+    "no_token_id": 2152,
+    "pad_token_id": 151643,
+    "padding_side": "left",
+    "max_pair_tokens": 512,
+    "truncation": "right end of document only",
+    "score": "last_position_logit_yes_minus_no",
+    "probability": "sigmoid"
+  },
+  "wall_seconds": 853.523841928225,
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_pct": 0
+  },
+  "peak_bytes_allocated": 2123624960
+}

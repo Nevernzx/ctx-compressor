@@ -1,0 +1,14 @@
+{
+  "tests": 763,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "previous_test_ids_matched": 729,
+  "elapsed_seconds": 14.445737831760198,
+  "xml_sha256": "88e38d6749b76761c3a9c0fe69cf7d5adafacf7670f5f02434ef44e8a6f32209",
+  "xml": "/root/userfolder/ctx-compressor/deepseek_api/cpu_suite_97hkf497/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/deepseek_api/cpu_suite_97hkf497/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-23T14:18:13.571078+00:00"
+}

@@ -1,0 +1,218 @@
+{
+  "shared_document_prefixes": {
+    "README.md": {
+      "old": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/wrap11/before_wrap/README.md",
+        "bytes": 39179,
+        "sha256": "03aed44fbe2e0372023f5ea238bf1f19bfd286b2d3aa9be878ec9a894ca7a6c7"
+      },
+      "current": {
+        "path": "/root/workplace/ctx-compressor/README.md",
+        "bytes": 39885,
+        "sha256": "e17d9ef7757be44ac066507ff2f019b07165676249a2d0cf737bb86e200f4cf7"
+      },
+      "appended_bytes": 706,
+      "prefix_verified": true
+    },
+    "NOTES.md": {
+      "old": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/wrap11/before_wrap/NOTES.md",
+        "bytes": 43070,
+        "sha256": "aa54e6e5b04c2296de037b2752a40571122e8019e28bf540c1d2de7a0abc1d1b"
+      },
+      "current": {
+        "path": "/root/workplace/ctx-compressor/NOTES.md",
+        "bytes": 44134,
+        "sha256": "ea2849cabe2c1ba3c65b407716becdfbbc549f500aab43e138433d8427b8d441"
+      },
+      "appended_bytes": 1064,
+      "prefix_verified": true
+    },
+    "HANDOFF.md": {
+      "old": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/wrap11/before_wrap/HANDOFF.md",
+        "bytes": 35021,
+        "sha256": "0a34a4c98d5024786a91ea724faa540fd1d6caa0773d9d1a4b3a9a17e4cfdd99"
+      },
+      "current": {
+        "path": "/root/workplace/ctx-compressor/HANDOFF.md",
+        "bytes": 36061,
+        "sha256": "0f573f4eb0ecbde9c72d11ac60dfebe34b256d4cb63c2b247bf2cef88cb2b71d"
+      },
+      "appended_bytes": 1040,
+      "prefix_verified": true
+    }
+  },
+  "task06_before_append": {
+    "task05_files": 299,
+    "protected_prefixes": [
+      "HANDOFF.md",
+      "NOTES.md",
+      "README.md"
+    ],
+    "historical_tasks": [
+      "TASK_01",
+      "TASK_02",
+      "TASK_03",
+      "TASK_04",
+      "TASK_05"
+    ],
+    "project_files": 345,
+    "other_manifest_entries_preserved": 231
+  },
+  "tasks": {
+    "07": {
+      "entries": 41,
+      "direct": 41,
+      "previously_verified_sha256": 0,
+      "sealed_entries": {},
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_prep/TASK07_SHA256SUMS",
+        "bytes": 4410,
+        "sha256": "d6f84b9030994ad4c7481a8607a48a40dbea11ba415ec012c1e5907db156c381"
+      },
+      "working_directory": "/root/workplace/ctx-compressor",
+      "bindings": {}
+    },
+    "08": {
+      "entries": 183,
+      "direct": 183,
+      "previously_verified_sha256": 0,
+      "sealed_entries": {},
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_v2/TASK08_SHA256SUMS",
+        "bytes": 23023,
+        "sha256": "5f519e44919dd5f4a48f98906ebe0f6c3accff75d983ff6418a92500dfc3a74d"
+      },
+      "working_directory": "/root/userfolder/ctx-compressor/hedge_v2/tmp/task08_manifest_view",
+      "bindings": {
+        "README.md": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start/README.md",
+        "NOTES.md": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start/NOTES.md",
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start/HANDOFF.md"
+      }
+    },
+    "09": {
+      "entries": 115,
+      "direct": 115,
+      "previously_verified_sha256": 0,
+      "sealed_entries": {},
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/hedge_v2/TASK09_SHA256SUMS",
+        "bytes": 13605,
+        "sha256": "affea9be6a469be03c4f122294e3b9027601aac5479552341906fe2847994051"
+      },
+      "working_directory": "/root/userfolder/ctx-compressor/dagger_v3/tmp/verify_task09_at_launch",
+      "bindings": {
+        "README.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_task09/README.md",
+        "NOTES.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_task09/NOTES.md",
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_task09/HANDOFF.md"
+      }
+    },
+    "10_launch": {
+      "entries": 51,
+      "direct": 45,
+      "previously_verified_sha256": 6,
+      "sealed_entries": {
+        "/root/userfolder/ctx-compressor/data/test_dev_v1/excluded_ids.json": "1d0e27ddb8f88c4d53374f3a1257fb265836fe79135c21629afeccdaa9915ad9",
+        "/root/userfolder/ctx-compressor/data/test_dev_v1/steps.jsonl": "e285d284d4baed60b09bfc7cae73b469b4b1e0e0d966468116faa2315f41293b",
+        "/root/userfolder/ctx-compressor/data/test_dev_v1/test_tasks.jsonl": "f2e1856acb54991badddab06ebea99bba942e1c51aaa429d69756751d0ffc71a",
+        "eval/test_dev_v1/LOCK.md": "a85aff80adb8c35bd6988dfefb3674f8e5f94fa0fcbd4dcc036ca872c037b77e",
+        "eval/test_dev_v1/exclusion_audit.json": "aa114c1e677293bc9e30a4947b4c2ea3efb9c4074e6865bf473228a578edcc19",
+        "eval/test_dev_v1/structural_stats.json": "70d0d86e2dd3412334248e1f456fee2f45f59ce1ac163da500fd2704463fc80a"
+      },
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_LAUNCH_SHA256SUMS",
+        "bytes": 5552,
+        "sha256": "b580658fd9dcaf2e796e4c4b78ad76f3ff814de542ee77c858cd26964def452a"
+      },
+      "working_directory": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/verify_10_launch",
+      "bindings": {
+        "scripts/run_sft_v3_pipeline.py": "/root/userfolder/ctx-compressor/dagger_v3/history_before_resume1/run_sft_v3_pipeline.py",
+        "README.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/README.md",
+        "NOTES.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/NOTES.md",
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/HANDOFF.md"
+      }
+    },
+    "10_resume1": {
+      "entries": 19,
+      "direct": 19,
+      "previously_verified_sha256": 0,
+      "sealed_entries": {},
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_RESUME1_SHA256SUMS",
+        "bytes": 2185,
+        "sha256": "c5940405188ca3af266182b186eba65a371aad4f9461a58e092d2b36170a84df"
+      },
+      "working_directory": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/verify_10_resume1",
+      "bindings": {
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/before_wrap/HANDOFF.md"
+      }
+    },
+    "10": {
+      "entries": 243,
+      "direct": 234,
+      "previously_verified_sha256": 9,
+      "sealed_entries": {
+        "/root/userfolder/ctx-compressor/data/test_dev_v1/excluded_ids.json": "1d0e27ddb8f88c4d53374f3a1257fb265836fe79135c21629afeccdaa9915ad9",
+        "/root/userfolder/ctx-compressor/data/test_dev_v1/steps.jsonl": "e285d284d4baed60b09bfc7cae73b469b4b1e0e0d966468116faa2315f41293b",
+        "/root/userfolder/ctx-compressor/data/test_dev_v1/test_tasks.jsonl": "f2e1856acb54991badddab06ebea99bba942e1c51aaa429d69756751d0ffc71a",
+        "data/test_dev_v1/excluded_ids.json": "1d0e27ddb8f88c4d53374f3a1257fb265836fe79135c21629afeccdaa9915ad9",
+        "data/test_dev_v1/steps.jsonl": "e285d284d4baed60b09bfc7cae73b469b4b1e0e0d966468116faa2315f41293b",
+        "data/test_dev_v1/test_tasks.jsonl": "f2e1856acb54991badddab06ebea99bba942e1c51aaa429d69756751d0ffc71a",
+        "eval/test_dev_v1/LOCK.md": "a85aff80adb8c35bd6988dfefb3674f8e5f94fa0fcbd4dcc036ca872c037b77e",
+        "eval/test_dev_v1/exclusion_audit.json": "aa114c1e677293bc9e30a4947b4c2ea3efb9c4074e6865bf473228a578edcc19",
+        "eval/test_dev_v1/structural_stats.json": "70d0d86e2dd3412334248e1f456fee2f45f59ce1ac163da500fd2704463fc80a"
+      },
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_SHA256SUMS",
+        "bytes": 32912,
+        "sha256": "ef8e1ecbbc17fcf9263c3dd27d29fb16e6bc5ce7eebd37c657345be8f03a54e3"
+      },
+      "working_directory": "/root/workplace/ctx-compressor",
+      "bindings": {
+        "README.md": "/root/userfolder/ctx-compressor/grpo_r2/wrap11/before_wrap/README.md",
+        "NOTES.md": "/root/userfolder/ctx-compressor/grpo_r2/wrap11/before_wrap/NOTES.md",
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/grpo_r2/wrap11/before_wrap/HANDOFF.md"
+      }
+    },
+    "11_phase_a": {
+      "entries": 76,
+      "direct": 76,
+      "previously_verified_sha256": 0,
+      "sealed_entries": {},
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/TASK11_PHASE_A_SHA256SUMS",
+        "bytes": 9845,
+        "sha256": "779d66802e54e8527b023440612a4293045e28d91b51def50741c65f4043aa51"
+      },
+      "working_directory": "/root/workplace/ctx-compressor",
+      "bindings": {}
+    },
+    "11_phase_p": {
+      "entries": 21,
+      "direct": 21,
+      "previously_verified_sha256": 0,
+      "sealed_entries": {},
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/TASK11_PHASE_P_SHA256SUMS",
+        "bytes": 2027,
+        "sha256": "312648d762a06fbbf03d535f4ef877c41034e304793236618775526fba34a6f6"
+      },
+      "working_directory": "/root/workplace/ctx-compressor",
+      "bindings": {
+        "scripts/check_grpo_r2_training.py": "/root/userfolder/ctx-compressor/grpo_r2/phase_a/history_original/scripts/check_grpo_r2_training.py",
+        "scripts/grpo_r2_environment.sh": "/root/userfolder/ctx-compressor/grpo_r2/phase_a/history_original/scripts/grpo_r2_environment.sh",
+        "scripts/grpo_r2_start.py": "/root/userfolder/ctx-compressor/grpo_r2/phase_a/history_original/scripts/grpo_r2_start.py",
+        "scripts/run_grpo_r2_pipeline.py": "/root/userfolder/ctx-compressor/grpo_r2/phase_a/history_original/scripts/run_grpo_r2_pipeline.py",
+        "scripts/run_grpo_r2_training.py": "/root/userfolder/ctx-compressor/grpo_r2/phase_a/history_original/scripts/run_grpo_r2_training.py"
+      }
+    }
+  },
+  "locked_proof": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/sft_v3_results.json",
+    "bytes": 419933,
+    "sha256": "5b8221e0ec61d4c025e49282dc46f84a74e367c71f3e955f1538c27e60a8d480"
+  },
+  "task10_signature_at_closeout": "ef8e1ecbbc17fcf9263c3dd27d29fb16e6bc5ce7eebd37c657345be8f03a54e3",
+  "policy": "上轮冻结的 README、NOTES、HANDOFF 用历史字节核验，同时检查当前文档的对应前缀。含 test_dev_v1 的清单条目只与任务10收尾已验字节的签名核对，本轮未打开其目录或文件。任务10最终清单为现场实算234条、锁定历史签名9条。"
+}

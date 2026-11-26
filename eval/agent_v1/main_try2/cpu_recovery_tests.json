@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "tests": 907,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 16.298518968280405,
+  "previous_tests": 902,
+  "recovery_tests": [
+    "test_archive_recovery_is_limited_to_rule_a[b]",
+    "test_archive_recovery_is_limited_to_rule_a[c]",
+    "test_gold_retention_counting_is_disjoint",
+    "test_original_attempt_must_release_gpu_lock",
+    "test_recovery_reads_logged_engine_flags"
+  ],
+  "failed_artifacts": {
+    "/root/userfolder/ctx-compressor/agent_v1/main_try2/status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/status.json",
+      "size": 3683,
+      "sha256": "20d32f7ebe9da93b762108eb3b77fb98c08c7ae4900fa7ba4bccd3dc5d03f207"
+    },
+    "/root/userfolder/ctx-compressor/agent_v1/main_try2/episodes.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/episodes.jsonl",
+      "size": 64562418,
+      "sha256": "afab714755ee84c9380f9daa8078354ad490a3bdb954cc5ceb7f33221753d2a2"
+    },
+    "/root/userfolder/ctx-compressor/agent_v1/main_try2/root_usage_check.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/root_usage_check.json",
+      "size": 2754,
+      "sha256": "ef5bb3b778e8f58fb1455cc06260889027b6e4d155c04588d0838cbc71d8aee6"
+    },
+    "/root/userfolder/ctx-compressor/agent_v1/main_try2/logs/main.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/logs/main.log",
+      "size": 888866,
+      "sha256": "d9d4e0e5e945597acb3ee66a5239a9cc7236be2dd68ba371799e4210aba37c92"
+    },
+    "/root/userfolder/ctx-compressor/agent_v1/main_try2/launcher.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/launcher.log",
+      "size": 955,
+      "sha256": "ce60cc5e5055d5768f374589ba5035fa17917ee945ce967512b97113380843b6"
+    },
+    "/root/userfolder/ctx-compressor/agent_v1/main_try2/closeout/cpu_status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/closeout/cpu_status.json",
+      "size": 287,
+      "sha256": "012ca29de33e69ee6ab0d2b94da047d8ed3c3220d40e53dd19a6e099429251b0"
+    },
+    "/root/userfolder/ctx-compressor/agent_v1/main/status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main/status.json",
+      "size": 3652,
+      "sha256": "18815a673593e2f3ad1dead60e6ae7aea5d0099cb5a4bf61f16a2f8c8355f56a"
+    },
+    "/root/userfolder/ctx-compressor/agent_v1/main/logs/main.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main/logs/main.log",
+      "size": 10029,
+      "sha256": "05aa6872502fa7085ac40e529354d7914b8b04ea41fdfb9a617d7a41f3a4015b"
+    }
+  },
+  "sources": {
+    "scripts/agent_v1_recover_main.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_recover_main.py",
+      "size": 15910,
+      "sha256": "84c4881246235d166f40b08751098316a0679c15483f028d9ee620db3da8db6c"
+    },
+    "scripts/agent_v1_report.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_report.py",
+      "size": 26745,
+      "sha256": "9f37bb73553cb98d739aeca4ebfc407b8ca2abec91deb4c561b80271fab9fb12"
+    },
+    "scripts/agent_v1_seal.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_seal.py",
+      "size": 11510,
+      "sha256": "1400c9574856ea63524b86d57187bf99c3b914fc73b7d59f9679182c2714acd0"
+    },
+    "tests/test_agent_v1_recovery.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_recovery.py",
+      "size": 3293,
+      "sha256": "8ec09e8c9efadef5e25b0cb6d7578b2a07e6384e786fb8d5b367258eb886bbf8"
+    }
+  },
+  "cuda_hidden": true,
+  "cpu_guard_events": 0,
+  "xml": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/closeout/recovery_suite_ay35icsf/tests.xml",
+    "size": 117809,
+    "sha256": "ac051319fedcaa3366a4048e495363af3995cbb2f7a124cc62a4e2d4adafd337"
+  },
+  "log": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/closeout/recovery_suite_ay35icsf/pytest.log",
+    "size": 1061,
+    "sha256": "28ec5d9463d41424d906803f02424799ef6ebb22b78273a34ef60269b90c8566"
+  },
+  "history_checks_unchanged": true,
+  "verified_utc": "2026-11-25T16:52:47.557327+00:00"
+}

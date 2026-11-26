@@ -1,0 +1,118 @@
+{
+  "status": "failed_root_storage_limit",
+  "n_raw_episodes": 240,
+  "root_limit_bytes": 300000000,
+  "root_usage_method": "Both worker measurements already used shutil.disk_usage('/').used",
+  "worker_samples": 43,
+  "controller_samples": 41,
+  "worker_previous": {
+    "stage": "r4_requests_done",
+    "utc": "2026-11-25T11:10:37.697844+00:00",
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 35518,
+    "utilization_pct": 68,
+    "root_used_bytes": 940653891584
+  },
+  "worker_peak": {
+    "stage": "agent_loaded",
+    "utc": "2026-11-25T11:11:03.721894+00:00",
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 32240,
+    "utilization_pct": 0,
+    "root_used_bytes": 941056237568
+  },
+  "worker_next": {
+    "stage": "r4_loaded",
+    "utc": "2026-11-25T11:11:38.474074+00:00",
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 34982,
+    "utilization_pct": 0,
+    "root_used_bytes": 940653891584
+  },
+  "root_growth_from_adjacent_sample_bytes": 402345984,
+  "attribution": "unresolved",
+  "controller_first_worker_sample": {
+    "utc": "2026-11-25T11:01:13.339923+00:00",
+    "stage": "smoke",
+    "pid": 3553295,
+    "alive": true,
+    "nonfinite": false,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_pct": 0,
+    "external_free_bytes": 650742042624,
+    "overlay_free_bytes": 14043340800
+  },
+  "controller_last_sample": {
+    "utc": "2026-11-25T11:19:33.489031+00:00",
+    "stage": "smoke",
+    "pid": 3553295,
+    "alive": false,
+    "nonfinite": false,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_pct": 0,
+    "external_free_bytes": 650727202816,
+    "overlay_free_bytes": 14043160576
+  },
+  "preserved_artifacts": {
+    "status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/status.json",
+      "size": 3503,
+      "sha256": "e24883cf17b307e51f44f20236e30e837c2cf6ca397a54938ea67a40737862ac"
+    },
+    "pipeline.pid": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/pipeline.pid",
+      "size": 8,
+      "sha256": "f244eeb70f58ee79e2dd9700fba242b149bffed31450f947ce7a06d4bd49dc46"
+    },
+    "logs/smoke.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/logs/smoke.log",
+      "size": 183698,
+      "sha256": "395fe5c0c495d9c4f3127b11ec18b54598bfa58a83147e33dcf81912d0d759da"
+    },
+    "launcher.log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/launcher.log",
+      "size": 1087,
+      "sha256": "84825e0800edeade88dae615597ae6afc36f0b25e48f3dd10f38d3ce4b31ddb5"
+    },
+    "resource_monitor.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/resource_monitor.jsonl",
+      "size": 12791,
+      "sha256": "4b08335e27bc25a234c5436c0c888183706c6e3ba97568ab47e9bd0a115cbec9"
+    },
+    "pipeline_monitor.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/pipeline_monitor.jsonl",
+      "size": 9065,
+      "sha256": "e25d254d91a567a4936fa005e12e3e39175c29a76d71e873c8fb8af1cb7129ec"
+    },
+    "smoke/episodes.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/smoke/episodes.jsonl",
+      "size": 6485424,
+      "sha256": "5860481ee8753ba4962adb1fc08a3417bd43c66bc0bc6a3f41d64bfc0dcdabb4"
+    },
+    "smoke/gpu_snapshots.jsonl": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/smoke/gpu_snapshots.jsonl",
+      "size": 9265,
+      "sha256": "4a4c9892b59b3f24704250c2cd08b9ee2408d4842dfe92e12ef20d14bfd11fea"
+    },
+    "smoke_queue/status.json": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/smoke_queue/status.json",
+      "size": 547,
+      "sha256": "9b601f33722a54c7c4a0e5ddefcc340c9b3f6c7748c22bb3c08a53d1a2bbaf28"
+    },
+    "phase_p.json": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/phase_p.json",
+      "size": 7166,
+      "sha256": "e34ab7ca06c6839caf0aadec5066a0af9ac5e4512355ab88b6636da4dcda0fe1"
+    }
+  },
+  "retry": "/root/userfolder/ctx-compressor/agent_v1/try2"
+}

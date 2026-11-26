@@ -1,0 +1,45 @@
+{
+  "status": "restored_and_controller_scoped",
+  "task20_original_controller_pid": 3546976,
+  "appended_rows": 1,
+  "task20_first_monitor_utc": "2026-11-25T10:27:26.544131+00:00",
+  "task10_restoration": {
+    "status": "restored",
+    "restored_utc": "2026-11-25T10:38:07.898210+00:00",
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/resource_monitor.jsonl",
+    "bytes": 202009,
+    "rows": 655,
+    "sha256": "cb325756d7d206d519b877652f7f7531ee66ce5312a0ff69599713c1559113a3",
+    "manifest": "eval/sft_run_v3/TASK10_SHA256SUMS",
+    "incident": "/root/userfolder/ctx-compressor/test_v1/closeout/historical_log_incident/incident.json"
+  },
+  "preserved_as_found": {
+    "path": "/root/userfolder/ctx-compressor/test_v1/closeout/historical_log_incident/resource_monitor_as_found.jsonl",
+    "size": 202339,
+    "sha256": "a7d67cf54c836e6e7bdaed3dca605c029d937f4da03c63668caf4ac8b97736cb"
+  },
+  "preserved_appended_record": {
+    "path": "/root/userfolder/ctx-compressor/test_v1/closeout/historical_log_incident/task20_appended_record.jsonl",
+    "size": 330,
+    "sha256": "3c0795b70f5f96101a02e1db3df1adeaf2eee9c302b46d5aed6b5363b58093d6"
+  },
+  "task19_monitor": {
+    "stages": [
+      "G0",
+      "G1",
+      "G2-v3",
+      "G2-r2",
+      "G2-r4",
+      "G3"
+    ],
+    "scope": "/root/userfolder/ctx-compressor/test_v1",
+    "legacy_write_in_cpu_regression": false
+  },
+  "task20_monitor": {
+    "log": "/root/userfolder/ctx-compressor/agent_v1/resource_monitor.jsonl",
+    "cause": "Inherited Task 10 monitor_dir default was used in Task 20.",
+    "fix": "Pass monitor_dir=WORK to the controller.",
+    "legacy_write_in_cpu_regression": false
+  },
+  "regression": "tests/test_agent_v1_monitor_paths.py"
+}

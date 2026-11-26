@@ -1,0 +1,194 @@
+{
+  "status": "complete",
+  "n": 2000,
+  "n_informative": 12185,
+  "target_n": 2000,
+  "per_cell_counts": {
+    "append|loose": 334,
+    "append|mid": 334,
+    "append|tight": 333,
+    "reselect|loose": 333,
+    "reselect|mid": 333,
+    "reselect|tight": 333
+  },
+  "per_cell_available": {
+    "append|loose": 1976,
+    "append|mid": 1990,
+    "append|tight": 1963,
+    "reselect|loose": 2086,
+    "reselect|mid": 2091,
+    "reselect|tight": 2079
+  },
+  "composition": {
+    "gold_varying": {
+      "count": 556,
+      "n": 2000,
+      "rate": 0.278
+    },
+    "nongold_only_varying": {
+      "count": 1429,
+      "n": 2000,
+      "rate": 0.7145
+    },
+    "token_only_varying": {
+      "count": 15,
+      "n": 2000,
+      "rate": 0.0075
+    }
+  },
+  "per_cell_composition": {
+    "append|loose": {
+      "gold_varying": {
+        "count": 62,
+        "n": 334,
+        "rate": 0.18562874251497005
+      },
+      "nongold_only_varying": {
+        "count": 268,
+        "n": 334,
+        "rate": 0.8023952095808383
+      },
+      "token_only_varying": {
+        "count": 4,
+        "n": 334,
+        "rate": 0.011976047904191617
+      }
+    },
+    "append|mid": {
+      "gold_varying": {
+        "count": 72,
+        "n": 334,
+        "rate": 0.2155688622754491
+      },
+      "nongold_only_varying": {
+        "count": 260,
+        "n": 334,
+        "rate": 0.7784431137724551
+      },
+      "token_only_varying": {
+        "count": 2,
+        "n": 334,
+        "rate": 0.005988023952095809
+      }
+    },
+    "append|tight": {
+      "gold_varying": {
+        "count": 81,
+        "n": 333,
+        "rate": 0.24324324324324326
+      },
+      "nongold_only_varying": {
+        "count": 251,
+        "n": 333,
+        "rate": 0.7537537537537538
+      },
+      "token_only_varying": {
+        "count": 1,
+        "n": 333,
+        "rate": 0.003003003003003003
+      }
+    },
+    "reselect|loose": {
+      "gold_varying": {
+        "count": 114,
+        "n": 333,
+        "rate": 0.34234234234234234
+      },
+      "nongold_only_varying": {
+        "count": 214,
+        "n": 333,
+        "rate": 0.6426426426426426
+      },
+      "token_only_varying": {
+        "count": 5,
+        "n": 333,
+        "rate": 0.015015015015015015
+      }
+    },
+    "reselect|mid": {
+      "gold_varying": {
+        "count": 120,
+        "n": 333,
+        "rate": 0.36036036036036034
+      },
+      "nongold_only_varying": {
+        "count": 210,
+        "n": 333,
+        "rate": 0.6306306306306306
+      },
+      "token_only_varying": {
+        "count": 3,
+        "n": 333,
+        "rate": 0.009009009009009009
+      }
+    },
+    "reselect|tight": {
+      "gold_varying": {
+        "count": 107,
+        "n": 333,
+        "rate": 0.3213213213213213
+      },
+      "nongold_only_varying": {
+        "count": 226,
+        "n": 333,
+        "rate": 0.6786786786786787
+      },
+      "token_only_varying": {
+        "count": 0,
+        "n": 333,
+        "rate": 0.0
+      }
+    }
+  },
+  "seed": 20261124,
+  "heldout_rows": 0,
+  "user_text_mismatches": 0,
+  "plugin_greedy_mismatches": 0,
+  "rows_checked": 2000,
+  "plugin_greedy_checked": 2000,
+  "same_state_id_as_task11_D": {
+    "count": 2000,
+    "n": 2000,
+    "rate": 1.0
+  },
+  "source_task11_dataset": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r2/data/train.jsonl",
+    "bytes": 28624335,
+    "sha256": "fa2250427c42eb524e899a23dd15c0b6249823359a8f7088ab0422638053a733"
+  },
+  "source_states": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r2/states/states.jsonl",
+    "bytes": 925178410,
+    "sha256": "2d4806dc9e7efa23cc70996f33ab27097b6b1c64a3ab1249179cac883536c374"
+  },
+  "source_groups": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r4/filter/groups.jsonl",
+    "bytes": 29512626,
+    "sha256": "3ec19fe3cb6054bcdf6a851c39ec1627fec914f96b5b1eab6a03e001cabf4b8f"
+  },
+  "source_informative": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r4/filter/informative.jsonl",
+    "bytes": 16142450,
+    "sha256": "94dac9002671db2fc16cd1fdc87ced9a94121fa86bd12f97295960247b6a35ae"
+  },
+  "output": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r4/data/train.jsonl",
+    "bytes": 29443605,
+    "sha256": "1d89d758ec367af643023dff608bccdfd103db0a55fb835659d9321f0f076246"
+  },
+  "smoke_data": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r4/smoke_train/train.jsonl",
+    "bytes": 116031,
+    "sha256": "9354e36bcc13ebab26ce448d721f3bc007645c420b164c81a55023163d376965"
+  },
+  "smoke_state_ids": [
+    "checkpoint-3000|reselect|loose|458:0",
+    "checkpoint-3000|reselect|tight|54:4",
+    "checkpoint-3000|append|mid|4378:5",
+    "checkpoint-3000|append|tight|2120:7",
+    "checkpoint-3000|reselect|loose|4639:4",
+    "checkpoint-3000|append|loose|1241:7",
+    "checkpoint-3000|reselect|mid|2491:5",
+    "checkpoint-3000|reselect|loose|2515:7"
+  ]
+}

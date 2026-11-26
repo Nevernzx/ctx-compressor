@@ -1,0 +1,121 @@
+{
+  "documents": {
+    "README.md": {
+      "before": {
+        "path": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/before_wrap/README.md",
+        "bytes": 38493,
+        "sha256": "453a956068eccb6570d70aaa4ffd1d6a78c15893e3778378f42c116f90aaee78"
+      },
+      "appended_bytes": 686,
+      "after": {
+        "path": "/root/workplace/ctx-compressor/README.md",
+        "bytes": 39179,
+        "sha256": "03aed44fbe2e0372023f5ea238bf1f19bfd286b2d3aa9be878ec9a894ca7a6c7"
+      },
+      "original_prefix_matches": true
+    },
+    "NOTES.md": {
+      "before": {
+        "path": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/before_wrap/NOTES.md",
+        "bytes": 41997,
+        "sha256": "feb4c48d76da7e6ad26377c826513ef1d80a6f2014566bb79706795248455c3e"
+      },
+      "appended_bytes": 1073,
+      "after": {
+        "path": "/root/workplace/ctx-compressor/NOTES.md",
+        "bytes": 43070,
+        "sha256": "aa54e6e5b04c2296de037b2752a40571122e8019e28bf540c1d2de7a0abc1d1b"
+      },
+      "original_prefix_matches": true
+    },
+    "HANDOFF.md": {
+      "before": {
+        "path": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/before_wrap/HANDOFF.md",
+        "bytes": 33941,
+        "sha256": "88b1ef06d7bfa729c78b6f4e8ad4c7fa7f30f32bc05ba2d66312718bb1c255fe"
+      },
+      "appended_bytes": 1080,
+      "after": {
+        "path": "/root/workplace/ctx-compressor/HANDOFF.md",
+        "bytes": 35021,
+        "sha256": "0a34a4c98d5024786a91ea724faa540fd1d6caa0773d9d1a4b3a9a17e4cfdd99"
+      },
+      "original_prefix_matches": true
+    }
+  },
+  "historical_checks": {
+    "07": {
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_prep/TASK07_SHA256SUMS",
+        "bytes": 4410,
+        "sha256": "d6f84b9030994ad4c7481a8607a48a40dbea11ba415ec012c1e5907db156c381"
+      },
+      "entries": 41,
+      "matched": 41,
+      "working_directory": "/root/workplace/ctx-compressor",
+      "historical_bindings": {}
+    },
+    "08": {
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_v2/TASK08_SHA256SUMS",
+        "bytes": 23023,
+        "sha256": "5f519e44919dd5f4a48f98906ebe0f6c3accff75d983ff6418a92500dfc3a74d"
+      },
+      "entries": 183,
+      "matched": 183,
+      "working_directory": "/root/userfolder/ctx-compressor/hedge_v2/tmp/task08_manifest_view",
+      "historical_bindings": {
+        "README.md": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start/README.md",
+        "NOTES.md": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start/NOTES.md",
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start/HANDOFF.md"
+      }
+    },
+    "09": {
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/hedge_v2/TASK09_SHA256SUMS",
+        "bytes": 13605,
+        "sha256": "affea9be6a469be03c4f122294e3b9027601aac5479552341906fe2847994051"
+      },
+      "entries": 115,
+      "matched": 115,
+      "working_directory": "/root/userfolder/ctx-compressor/dagger_v3/tmp/verify_task09_at_launch",
+      "historical_bindings": {
+        "README.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_task09/README.md",
+        "NOTES.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_task09/NOTES.md",
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_task09/HANDOFF.md"
+      }
+    },
+    "10_launch": {
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_LAUNCH_SHA256SUMS",
+        "bytes": 5552,
+        "sha256": "b580658fd9dcaf2e796e4c4b78ad76f3ff814de542ee77c858cd26964def452a"
+      },
+      "entries": 51,
+      "matched": 51,
+      "working_directory": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/verify_10_launch",
+      "historical_bindings": {
+        "scripts/run_sft_v3_pipeline.py": "/root/userfolder/ctx-compressor/dagger_v3/history_before_resume1/run_sft_v3_pipeline.py",
+        "README.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/README.md",
+        "NOTES.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/NOTES.md",
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/HANDOFF.md"
+      }
+    },
+    "10_resume1": {
+      "manifest": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/TASK10_RESUME1_SHA256SUMS",
+        "bytes": 2185,
+        "sha256": "c5940405188ca3af266182b186eba65a371aad4f9461a58e092d2b36170a84df"
+      },
+      "entries": 19,
+      "matched": 19,
+      "working_directory": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/verify_10_resume1",
+      "historical_bindings": {
+        "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/wrap10/before_wrap/HANDOFF.md"
+      }
+    }
+  },
+  "task06_checker": "scripts/checksums_task06.py check",
+  "task06_baseline_entries": 345,
+  "notes": "任务08、09及任务10两份早期清单用各自冻结的文档校验。任务10初次启动的主脚本用续跑前归档校验，其余条目直接对应正式产物。总清单沿用项目相对路径格式，并通过任务10清单的哈希覆盖外盘文件。"
+}

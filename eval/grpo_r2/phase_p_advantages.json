@@ -1,0 +1,38 @@
+{
+  "cpu_only": true,
+  "n_groups": 3,
+  "generations_per_group": 8,
+  "n_rewards": 24,
+  "mu": 0.5,
+  "implementation": [
+    {
+      "distribution": "ms-swift",
+      "version": "3.12.6",
+      "file": "/root/userfolder/ctx-compressor/envs/grpo/lib/python3.11/site-packages/swift/trainers/rlhf_trainer/grpo_trainer.py",
+      "sha256": "c595321be6342de1e54244d2305514a8d410b837c47c325d4289f5f6b8caf7da",
+      "definition": "_compute_advantages"
+    },
+    {
+      "distribution": "trl",
+      "version": "0.24.0",
+      "file": "/root/userfolder/ctx-compressor/envs/grpo/lib/python3.11/site-packages/trl/trainer/utils.py",
+      "sha256": "7096881df3fd78411be857e79b82f7c0eb8f3b5d9b0771de06275bacc9af98e3",
+      "definition": "nanstd"
+    }
+  ],
+  "mechanism": "Installed method bodies executed on CPU tensors with a stand-in trainer state. No model or engine initialized.",
+  "results": {
+    "none": {
+      "max_absolute_error": 0.0,
+      "token_only_max_abs_advantage": 0.025000005960464478,
+      "one_gold_difference_max_abs_advantage": 0.5000000596046448,
+      "constant_group_max_abs_advantage": 0.0
+    },
+    "group": {
+      "max_absolute_error": 0.0,
+      "token_only_max_abs_advantage": 0.9319276809692383,
+      "one_gold_difference_max_abs_advantage": 0.9352393746376038,
+      "constant_group_max_abs_advantage": 0.0
+    }
+  }
+}

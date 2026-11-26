@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "n_tasks": 451,
+  "rollout_metrics": {
+    "no_compress": {
+      "path": "/root/userfolder/ctx-compressor/test_v1/rollouts/no_compress/metrics.json",
+      "size": 30054,
+      "sha256": "12654bda2ce4bdffce78f6346b74a8f3705e8a9551062e6a157c9f98a89dfb25"
+    },
+    "latest": {
+      "path": "/root/userfolder/ctx-compressor/test_v1/rollouts/latest/metrics.json",
+      "size": 31103,
+      "sha256": "2d96bc23471890bafbd1c89c8d952d48ded6e04ac0e330d695b9be4ebca1f2af"
+    },
+    "bm25": {
+      "path": "/root/userfolder/ctx-compressor/test_v1/rollouts/bm25/metrics.json",
+      "size": 31321,
+      "sha256": "5a00c987bd07e56cedfa645dfe327ea74b08ffa5d1c934ff788fbef264a6b5b0"
+    },
+    "oracle": {
+      "path": "/root/userfolder/ctx-compressor/test_v1/rollouts/oracle/metrics.json",
+      "size": 31175,
+      "sha256": "6d1ef7e00b696c8111fee1ec9df09ced3fc4f3c8192a675ec5dcad024f4c18f8"
+    }
+  }
+}

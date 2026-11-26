@@ -1,0 +1,57 @@
+{
+  "status": "complete",
+  "n_tasks": 2,
+  "n_trajectories": 12,
+  "n_steps": 120,
+  "cells": {
+    "reselect|tight": 20,
+    "reselect|mid": 20,
+    "reselect|loose": 20,
+    "append|tight": 20,
+    "append|mid": 20,
+    "append|loose": 20
+  },
+  "n_hedged": 56,
+  "task_ids": [
+    3632,
+    4252
+  ],
+  "tau": 0.99,
+  "adapter_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+  "engine_parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375
+  },
+  "precheck": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/dagger_precheck.json",
+    "bytes": 4982,
+    "sha256": "37751a2cb50c9ef8b5fa36865f2722dbbcf175021551b93862e3f1d2a47bd7f1"
+  },
+  "elapsed_seconds": 89.21702504181303,
+  "steps_file": {
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/smoke/steps.jsonl",
+    "bytes": 5143089,
+    "sha256": "5944d3b3d16eb1c7a7a353f6d7f65e6b524e9c3d844e53b9bc766f4c2bea3b44"
+  },
+  "capture_path": "/root/userfolder/ctx-compressor/dagger_v3/score_logits/e38b9a6f0a33497b9d43bb98eb5a4a09.jsonl"
+}

@@ -1,0 +1,14 @@
+{
+  "tests": 835,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "matched_task16_tests": 820,
+  "elapsed_seconds": 14.715279480908066,
+  "xml_sha256": "0f6b5e21d0b02873f507ce70d1da16ea7279307b36da7e8892d2a9f7d2c0528c",
+  "xml": "/root/userfolder/ctx-compressor/grpo_r4/cpu_suite_eq489i2j/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/grpo_r4/cpu_suite_eq489i2j/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-24T09:35:39.218782+00:00"
+}

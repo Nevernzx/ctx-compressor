@@ -1,0 +1,172 @@
+{
+  "files": [
+    {
+      "path": "/root/userfolder/ctx-compressor/data/test_dev_v1/excluded_ids.json",
+      "bytes": 17498,
+      "sha256": "1d0e27ddb8f88c4d53374f3a1257fb265836fe79135c21629afeccdaa9915ad9"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/data/test_dev_v1/steps.jsonl",
+      "bytes": 1924496,
+      "sha256": "e285d284d4baed60b09bfc7cae73b469b4b1e0e0d966468116faa2315f41293b"
+    },
+    {
+      "path": "/root/userfolder/ctx-compressor/data/test_dev_v1/test_tasks.jsonl",
+      "bytes": 2348597,
+      "sha256": "f2e1856acb54991badddab06ebea99bba942e1c51aaa429d69756751d0ffc71a"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/reward_v2/offline_tau_table.json",
+      "bytes": 156661,
+      "sha256": "6e70cc078a7cf6fe57ea18890e228829160415612bff260f68c6e4ffe69317c9"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/reward_v2/offline_tau_table.md",
+      "bytes": 7117,
+      "sha256": "0431adfc40f3b54b416b0743c621b5007686f0eac88d99fe91aded9b688d4579"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/config_diff_vs_task06.json",
+      "bytes": 4044,
+      "sha256": "f03037ddd19b17c629d72f78fefb4fc9971149b6d27cb34b650d970e662ffdd9"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/cpu_tests.json",
+      "bytes": 815,
+      "sha256": "58f7e32edbc937604bc8beaa37f6059da3f340fd62a6714c3c0d83dfcdfc6d0c"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/cpu_tests.xml",
+      "bytes": 80429,
+      "sha256": "b34e330079023768409ffe5da84b2b08b0b1493007df63521412ca00249a466c"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/dagger_precheck.json",
+      "bytes": 4982,
+      "sha256": "37751a2cb50c9ef8b5fa36865f2722dbbcf175021551b93862e3f1d2a47bd7f1"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/dagger_smoke.json",
+      "bytes": 1681,
+      "sha256": "57c9f5528f90aee29e60acf8ab9295b9ed82b95438174152e8b2f58a7c81ea40"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/dagger_smoke_targets.json",
+      "bytes": 5338,
+      "sha256": "96bab3b89da23a638fb26639986ab3d61b93eaccf56e490f3208e729dd2940b9"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/train_run_config.json",
+      "bytes": 1746,
+      "sha256": "dd808babfedaf05f173a8bc9a2f243e8d3fc6cb71f5ea8803b7e9d3cd2c58f23"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/test_dev_v1/LOCK.md",
+      "bytes": 1531,
+      "sha256": "a85aff80adb8c35bd6988dfefb3674f8e5f94fa0fcbd4dcc036ca872c037b77e"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/test_dev_v1/exclusion_audit.json",
+      "bytes": 4606,
+      "sha256": "aa114c1e677293bc9e30a4947b4c2ea3efb9c4074e6865bf473228a578edcc19"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/eval/test_dev_v1/structural_stats.json",
+      "bytes": 2271,
+      "sha256": "70d0d86e2dd3412334248e1f456fee2f45f59ce1ac163da500fd2704463fc80a"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/build_task10_locked_dev.py",
+      "bytes": 15672,
+      "sha256": "14b3d079d968f058a46611c8aea6eb4ed5a6ebaf076370eb94031c3e93620c0e"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/dagger_v3_environment.sh",
+      "bytes": 3090,
+      "sha256": "a9430e3261f1eab3cc9161c251f1fe539ef42dad20408d0e98c2486b436e85a4"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/dagger_v3_logits.py",
+      "bytes": 474,
+      "sha256": "10b1777cb570f69d47522272ffdb3b04cf672fd5485cbe30b459e731e68d405d"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/eval_sft_v3.py",
+      "bytes": 12926,
+      "sha256": "eedcd6e6be2d337452a394336c1d95c8d8ceb9ac0c38b615fde6746376c5ccbe"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/make_sft_v3_data.py",
+      "bytes": 12468,
+      "sha256": "2692ac4e2299b8d9c7ffd8aa5eeaf85429ef90b2eb0e3ea04b6ba2a0c2f5f08d"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/offline_reward_v2.py",
+      "bytes": 7708,
+      "sha256": "f6f4b251b6b2a90e5d3bc1db2d8ada1b5cda80171ad3e936998cfb0cb2d7ba6b"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/probe_sft_v3.py",
+      "bytes": 12919,
+      "sha256": "647ded9372c52b5a65b7ef0d74bd68f0c69f6b541c048325ba110cd6dff715a2"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/rollout_dagger_v3.py",
+      "bytes": 10102,
+      "sha256": "83298827bb33341c8735c99df17e478fd168306bd31639c25a7cbd5643aaca12"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/run_sft_v3_pipeline.py",
+      "bytes": 9989,
+      "sha256": "41144ddced13862f7e5383537c38576b2fbafc13e7da06ae73eecac660a54bfb"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/sft_v3_config.py",
+      "bytes": 4955,
+      "sha256": "c96021e87261e01178b77641a9978ca097f63ae69fd4f5f9fcbdfe42341432a3"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/scripts/train_sft_v3_worker.py",
+      "bytes": 11864,
+      "sha256": "e43899374d69caff56f6b58317dfa4acbf4b9ed21e8dee9582d6a61ba720f629"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/src/grpo_reward_v2.py",
+      "bytes": 1055,
+      "sha256": "69baf7ed5ccb0f0cfe0a90761f1b9c022eae4e4488a81e5aa38b4b06e2a5d066"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_dagger_v3_data.py",
+      "bytes": 5027,
+      "sha256": "ea33272fa5303880743001a83985270da719e0650aac6192f96693cc7d1c5a84"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_grpo_reward_v2.py",
+      "bytes": 1970,
+      "sha256": "413cc524f9601f1d22164bec89b4180b71efbe24261d4102f43757f3de98d096"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_probe_sft_v3.py",
+      "bytes": 6072,
+      "sha256": "2bd2ae1ec85483d84f0f94f2d26ea4e500e05c158a10775027f3ebca5317bada"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_sft_v3_training.py",
+      "bytes": 3145,
+      "sha256": "0d76c29fa051b72f954855af4977fc7f76bf5511d2ae0597b8b36ce686ba93c0"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_task10_heldout_eval.py",
+      "bytes": 4170,
+      "sha256": "85ee7b7502deccd82bacbd3819bc8f2db17cc964921fe56a5f21ea2d14ad7745"
+    },
+    {
+      "path": "/root/workplace/ctx-compressor/tests/test_task10_locked_dev.py",
+      "bytes": 2064,
+      "sha256": "f891c59adddb03faef1152880e56bf6bea90072ea4f77bd8ed66343d81404a06"
+    }
+  ],
+  "locked_test_strategy_runs": 0,
+  "test_file_access_in_pipeline": "SHA-256 integrity checks only",
+  "n_test_tasks": 451
+}

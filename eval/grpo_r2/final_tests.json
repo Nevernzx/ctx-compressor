@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "tests": 705,
+  "passed": 705,
+  "legacy_tests_matched": 705,
+  "skipped": 0,
+  "errors": 0,
+  "failures": 0,
+  "locked_dev_open_attempts": 0,
+  "gpu_cli_invocations": 0,
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/grpo_r2/tmp/wrap11_suite_6qwv32rh/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/grpo_r2/tmp/wrap11_suite_6qwv32rh/tests.xml",
+    "tests"
+  ],
+  "cuda_visible_devices": "",
+  "exit_code": 0,
+  "xml_sha256": "1cb98b6170037fe68b34e41c5fb2b1ec5aa0743f1a6c5f6183a48d62f0fad8f7",
+  "wall_seconds": 14.000583076151088,
+  "utc": "2026-11-23T06:46:29.884839+00:00",
+  "log": "/root/userfolder/ctx-compressor/grpo_r2/tmp/wrap11_suite_6qwv32rh/pytest.log"
+}

@@ -1,0 +1,307 @@
+{
+  "status": "evaluation_complete",
+  "task": 19,
+  "locked_first_use": true,
+  "automatic_retry": false,
+  "gpu": 1,
+  "shared_lock": "/root/userfolder/ctx-compressor/rt/gpu1_t19_t20.lock",
+  "priority": "task19_before_task20",
+  "settings_frozen": {
+    "path": "/root/workplace/ctx-compressor/eval/test_v1/model_preflight.json",
+    "size": 11717,
+    "sha256": "880826f75071f8d2f185aa849df385d39b59776e78fba6dcebc8f56fc6728457"
+  },
+  "budgets": {
+    "tight": 1876,
+    "mid": 2814,
+    "loose": 5628
+  },
+  "strategy_order": [
+    "no_compress",
+    "no_context",
+    "latest",
+    "bm25",
+    "oracle",
+    "RR-fill",
+    "RR-τ",
+    "v3",
+    "r2",
+    "r4"
+  ],
+  "reader_batch_size": 200,
+  "phase_p": {
+    "path": "/root/workplace/ctx-compressor/eval/test_v1/phase_p.json",
+    "size": 2686,
+    "sha256": "2a582a15e062a179c61416b0f06495663fe60a6c14b54373b6d50f76819b84c3"
+  },
+  "stages": {
+    "G0": {
+      "stage": "complete",
+      "utc": "2026-11-25T03:21:26.797741+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3483268,
+      "outputs": {
+        "G0_smoke.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/G0_smoke.json",
+          "size": 2173,
+          "sha256": "bbceb69643166be167a667464611ba009f4b29eb7b3be0d7040529fe9bd933b7"
+        }
+      },
+      "wall_seconds": 100.56216312618926,
+      "root_before": {
+        "at_utc": "2026-11-25T03:19:46.231982+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645093376,
+        "available_bytes": 14052122624
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T03:21:26.797684+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645126144,
+        "available_bytes": 14052089856
+      }
+    },
+    "G1": {
+      "stage": "complete",
+      "utc": "2026-11-25T03:45:50.171767+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3485477,
+      "outputs": {
+        "G1_scores.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/G1_scores.json",
+          "size": 1421,
+          "sha256": "266bf97a851ddc1bb3db4396aa9c87b24590a0b950829c317864c8ba00d076c0"
+        }
+      },
+      "wall_seconds": 863.2127703847364,
+      "root_before": {
+        "at_utc": "2026-11-25T03:31:26.955292+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645146624,
+        "available_bytes": 14052069376
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T03:45:50.171692+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645175296,
+        "available_bytes": 14052040704
+      }
+    },
+    "RR": {
+      "stage": "complete",
+      "utc": "2026-11-25T03:46:01.469919+00:00",
+      "gpu": false,
+      "exit_code": 0,
+      "child_pid": 3487191,
+      "outputs": {
+        "rr_rollouts.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/rr_rollouts.json",
+          "size": 504,
+          "sha256": "0345712fc282407258ba2246b925a800ee484150dd439e32a2b3bdb7cfc280a6"
+        }
+      },
+      "wall_seconds": 11.284225203096867,
+      "root_before": {
+        "at_utc": "2026-11-25T03:45:50.182635+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645175296,
+        "available_bytes": 14052040704
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T03:46:01.469834+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645179392,
+        "available_bytes": 14052036608
+      }
+    },
+    "G2-v3": {
+      "stage": "complete",
+      "utc": "2026-11-25T05:04:19.297780+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3488350,
+      "outputs": {
+        "G2_v3.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/G2_v3.json",
+          "size": 1168,
+          "sha256": "08e837513c2256229f3bface75cb357480c99776b4127672cf5ca756d912f372"
+        }
+      },
+      "wall_seconds": 4097.6881308690645,
+      "root_before": {
+        "at_utc": "2026-11-25T03:56:01.606264+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645203968,
+        "available_bytes": 14052012032
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T05:04:19.297652+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645384192,
+        "available_bytes": 14051831808
+      }
+    },
+    "G2-r2": {
+      "stage": "complete",
+      "utc": "2026-11-25T06:32:18.019831+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3498196,
+      "outputs": {
+        "G2_r2.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/G2_r2.json",
+          "size": 1725,
+          "sha256": "7fb3d9cccd697588fb2b2d70ed32ed2209dab7b8cb63eebc65c46655c63b8aad"
+        }
+      },
+      "wall_seconds": 4678.578476702329,
+      "root_before": {
+        "at_utc": "2026-11-25T05:14:19.438154+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645416960,
+        "available_bytes": 14051799040
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T06:32:18.019705+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645605376,
+        "available_bytes": 14051610624
+      }
+    },
+    "G2-r4": {
+      "stage": "complete",
+      "utc": "2026-11-25T07:56:06.635270+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3509139,
+      "outputs": {
+        "G2_r4.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/G2_r4.json",
+          "size": 1725,
+          "sha256": "7e07c54f415cc73c7c97972e0a38b081173dfe18e6f8310c7958ec9f06bfd735"
+        }
+      },
+      "wall_seconds": 4428.330383203924,
+      "root_before": {
+        "at_utc": "2026-11-25T06:42:18.301664+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940645634048,
+        "available_bytes": 14051581952
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T07:56:06.635134+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940646010880,
+        "available_bytes": 14051205120
+      }
+    },
+    "G3_prepare": {
+      "stage": "complete",
+      "utc": "2026-11-25T08:04:53.334709+00:00",
+      "gpu": false,
+      "exit_code": 0,
+      "child_pid": 3518281,
+      "outputs": {
+        "input_preflight.json": {
+          "path": "/root/userfolder/ctx-compressor/test_v1/reader/input_preflight.json",
+          "size": 24093,
+          "sha256": "24f609836155cf886006af4197c9bbe2182ead661aae1e68534aa3e6103dfea4"
+        }
+      },
+      "wall_seconds": 526.6856542709284,
+      "root_before": {
+        "at_utc": "2026-11-25T07:56:06.645187+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940646010880,
+        "available_bytes": 14051205120
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T08:04:53.334617+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940646166528,
+        "available_bytes": 14051049472
+      }
+    },
+    "G3": {
+      "stage": "complete",
+      "utc": "2026-11-25T10:26:40.240785+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "original_g3_exit_code": 1,
+      "exit_code_scope": "CPU verification acceptance",
+      "child_pid": 3520408,
+      "wall_seconds": 7299.097051,
+      "original_gpu_gate": {
+        "stage": "gate",
+        "utc": "2026-11-25T08:14:53.690919+00:00",
+        "gpu": {
+          "index": 1,
+          "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+          "memory_used_mib": 375,
+          "utilization_pct": 0
+        }
+      },
+      "outputs": {
+        "reader_run_config.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/reader_run_config.json",
+          "size": 8286,
+          "sha256": "c1c53c2646212883cadcd22ab630647808197823deb3ac9a79c7ce9df34691c7"
+        },
+        "G3_recovery.json": {
+          "path": "/root/workplace/ctx-compressor/eval/test_v1/G3_recovery.json",
+          "size": 4685,
+          "sha256": "d4b2faa4e192330060b62feafe84cf01f5a5cbec2e726f7c7e45674d6b0f0720"
+        }
+      },
+      "root_before": {
+        "at_utc": "2026-11-25T08:14:56.112105+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940646268928,
+        "available_bytes": 14050947072
+      },
+      "root_after": {
+        "at_utc": "2026-11-25T10:16:30.381742+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940652904448,
+        "available_bytes": 14044311552
+      },
+      "recovery_cpu_only": true,
+      "inference_reused": true
+    }
+  },
+  "reader_run_config": {
+    "path": "/root/workplace/ctx-compressor/eval/test_v1/reader_run_config.json",
+    "size": 8286,
+    "sha256": "c1c53c2646212883cadcd22ab630647808197823deb3ac9a79c7ce9df34691c7"
+  },
+  "effective_disable_cascade_attn": true,
+  "effective_disable_cascade_attn_source": {
+    "log": {
+      "path": "/root/userfolder/ctx-compressor/test_v1/reader/launcher.log",
+      "size": 7950,
+      "sha256": "7c0b325ed909052d265e8e5180be44d2ce35d65481394f0f3655dad8e2a4f6e8"
+    },
+    "line_number": 6,
+    "kind": "vLLM startup non-default arguments in launcher.log"
+  },
+  "G3_recovery": {
+    "path": "/root/workplace/ctx-compressor/eval/test_v1/G3_recovery.json",
+    "size": 4685,
+    "sha256": "d4b2faa4e192330060b62feafe84cf01f5a5cbec2e726f7c7e45674d6b0f0720"
+  },
+  "root_before": {
+    "at_utc": "2026-11-25T03:19:46.231982+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940645093376,
+    "available_bytes": 14052122624
+  },
+  "root_after": {
+    "at_utc": "2026-11-25T10:16:30.381742+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940652904448,
+    "available_bytes": 14044311552
+  },
+  "small_artifact_bytes": 43981
+}

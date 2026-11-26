@@ -1,0 +1,195 @@
+{
+  "status": "ready",
+  "llmlingua2": {
+    "status": "ready",
+    "model": "microsoft/llmlingua-2-xlm-roberta-large-meetingbank",
+    "revision": "50f9b93891f8e7d4e578d89a821325f93f4b89bd",
+    "license": "MIT",
+    "repository_api": "https://modelscope.cn/api/v1/models/microsoft/llmlingua-2-xlm-roberta-large-meetingbank/repo/files?Revision=50f9b93891f8e7d4e578d89a821325f93f4b89bd&Recursive=true",
+    "directory": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank",
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank/README.md",
+        "bytes": 3267,
+        "sha256": "7c6765b0f7c43cd79dfdec165666d46b31bf72398e07332fb8aa999fcb06423a"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank/configuration.json",
+        "bytes": 78,
+        "sha256": "832b73097260f40c376eee8c34cd0ca6ecbe188a290b1b51619812da747319e6"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank/config.json",
+        "bytes": 752,
+        "sha256": "a3fdcf4e63057797101ecc84412bc654f9adb4e8d4ed3c91c5afb28eda327706"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank/tokenizer_config.json",
+        "bytes": 1147,
+        "sha256": "f90024142df07163e5e6c5b9a6ad7c8c68b22a9112af11e3db4559a9ff90f737"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank/special_tokens_map.json",
+        "bytes": 280,
+        "sha256": "06e405a36dfe4b9604f484f6a1e619af1a7f7d09e34a8555eb0b77b66318067f"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank/tokenizer.json",
+        "bytes": 17082756,
+        "sha256": "f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank/model.safetensors",
+        "bytes": 2235829648,
+        "sha256": "a33a153b2493bff6be06af6921e69de9c0d0bb6ff06fe5bbb68670ba8d980ae2"
+      }
+    ],
+    "description": "LLMLingua-2"
+  },
+  "llmlingua_wheel": {
+    "status": "ready",
+    "revision": "0.2.2",
+    "license": "MIT",
+    "source": "https://mirrors.aliyun.com/pypi/simple/llmlingua/",
+    "vendor": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2",
+    "wheel": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/acquisition/llmlingua-0.2.2-py3-none-any.whl",
+      "bytes": 30536,
+      "sha256": "da55137efe0db78063b3395396efe8a0dcfe4ae5a09aea0d503c34b7bf1d800c"
+    },
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua/__init__.py",
+        "bytes": 230,
+        "sha256": "68327923b97309c7f8ca1ca4150592b21c7fdadbdc38536ae4e4357de8b90d47"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua/prompt_compressor.py",
+        "bytes": 109840,
+        "sha256": "472fde8f6f55f273fe94eee40c25c73508f1ed3a7f5d61788636c20fc4be5068"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua/utils.py",
+        "bytes": 7685,
+        "sha256": "1ed3eb0734354ea0136a0d98a9366233a872d22ff350fab107e53de45c954e33"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua/version.py",
+        "bytes": 500,
+        "sha256": "3483a54fdd5e324be2a4494fb03afb200ba17ee768036de5e3b6b91fc2679224"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua-0.2.2.dist-info/LICENSE",
+        "bytes": 1141,
+        "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua-0.2.2.dist-info/METADATA",
+        "bytes": 17902,
+        "sha256": "9cfd48f0f2f2334011fa12a0ebe7efdee9551a4477bb18bc7a6580315fbac4cd"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua-0.2.2.dist-info/WHEEL",
+        "bytes": 92,
+        "sha256": "189eedfe4581172c1b6a02b97a8f48a14c0b5baa3239e4ca990fbd8871553714"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua-0.2.2.dist-info/top_level.txt",
+        "bytes": 10,
+        "sha256": "380bc6a80e4f0d3c18706202689bbe5c00066be5c0c5f51dc8e153e0ebf5e80f"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2/llmlingua-0.2.2.dist-info/RECORD",
+        "bytes": 714,
+        "sha256": "4a9aaa89a756b8560c4d8378a34fdd1289c467c231183190585d0847c67d5f15"
+      }
+    ]
+  },
+  "runtime_dependencies": {
+    "cl100k_base": {
+      "status": "ready",
+      "file": {
+        "path": "/root/userfolder/ctx-compressor/vendor/tiktoken_cache/cl100k_base.tiktoken",
+        "size": 1681126,
+        "sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7"
+      },
+      "cache_entry": {
+        "path": "/root/userfolder/ctx-compressor/vendor/tiktoken_cache/9b5ad71b2ce5302211f9c61530b329a4922fc6a4",
+        "size": 1681126,
+        "sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7"
+      },
+      "source": "https://openaipublic.blob.core.windows.net/encodings/cl100k_base.tiktoken",
+      "TIKTOKEN_CACHE_DIR": "/root/userfolder/ctx-compressor/vendor/tiktoken_cache",
+      "purpose": "Runtime cl100k_base encoding dependency for LLMLingua-2",
+      "verified_utc": "2026-11-25T03:02:55.977970+00:00"
+    }
+  },
+  "open_provence": {
+    "status": "not_run",
+    "model": "hotchpotch/open-provence-reranker-v1-gte-modernbert-base",
+    "revision": "539126c60a0f858d5329d7ccfce5966075f874ee",
+    "license": "MIT",
+    "repository_api": "https://modelscope.cn/api/v1/models/hotchpotch/open-provence-reranker-v1-gte-modernbert-base/repo/files?Revision=539126c60a0f858d5329d7ccfce5966075f874ee&Recursive=true",
+    "directory": "/root/userfolder/ctx-compressor/models/open-provence-en-gte",
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/README.md",
+        "bytes": 14808,
+        "sha256": "731069888e62b6223d9cc50e4048f6096a2211ea5606710b0bfce9ac70a6f410"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/config.json",
+        "bytes": 5579,
+        "sha256": "db9bc75bbae0d9eeae90b1e42ea5bcf297f1235a5eb19faa698f2460e234499f"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/configuration.json",
+        "bytes": 70,
+        "sha256": "6e463b41acd3dfefdf6102d14d57dd9f0d7e9f8d38e99cee019d78b2cbbe9c5f"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/modeling_open_provence_standalone.py",
+        "bytes": 154122,
+        "sha256": "21dfe928190fcb551dfd5c46b46c0d42ca9498a542a3743f7dca48ac180409e6"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/tokenizer_config.json",
+        "bytes": 21031,
+        "sha256": "626c86908d7c711f93b0feffd8657b782cc2727b391f9be190240e8cafb626d5"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/special_tokens_map.json",
+        "bytes": 694,
+        "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/tokenizer.json",
+        "bytes": 3583499,
+        "sha256": "2aea6ff4701d063e7e029b6be695a1659f2caaa2ae4fb0e8b18285818271becd"
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/open-provence-en-gte/model.safetensors",
+        "bytes": 598444940,
+        "sha256": "5eaba6f11f47c1d595b837d617effcbfe72b6a4adc9ce8fce58d1b59baabe4e6"
+      }
+    ],
+    "description": "third-party open-source Provence reproduction",
+    "reason": "The third-party open-source reproduction requires NLTK punkt (and punkt_tab) resources absent from the installed environment."
+  },
+  "offline_cpu_preflight": {
+    "status": "passed",
+    "verified_utc": "2026-11-25T03:03:53.471523+00:00",
+    "llmlingua_call": {
+      "rate": 0.33,
+      "force_tokens": [
+        "\n",
+        "?"
+      ],
+      "n_passages": 1
+    },
+    "cl100k_encoding": "cl100k_base",
+    "original_tokens": 19,
+    "compressed_tokens": 6,
+    "cuda_initialized": false
+  }
+}

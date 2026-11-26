@@ -1,0 +1,5848 @@
+{
+  "status": "complete",
+  "scope": "train",
+  "n_states": 22158,
+  "mu_grid": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "tau_grid": [
+    0.0,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.99,
+    1.01
+  ],
+  "inputs": {
+    "states": {
+      "path": "/root/userfolder/ctx-compressor/grpo_v2/states/states.jsonl",
+      "bytes": 893987528,
+      "sha256": "33fdea6942278c99a815fc931f1be7354c1ace3ecb78a486e58baafc716e4eb8"
+    },
+    "scores": {
+      "path": "/root/userfolder/ctx-compressor/hedge_v2/train/state_scores.jsonl",
+      "bytes": 49595615,
+      "sha256": "ad39cd691f79009151aaa320c0c81609f20da04dfa81eebf0cb45ccc1c23b381"
+    },
+    "task09_table": {
+      "path": "/root/workplace/ctx-compressor/eval/hedge_v2/train_selection.json",
+      "bytes": 51726,
+      "sha256": "a0f38184b25d9b29064ed5d61976ad3de1a5e3f184e675b4afc64e0861ca33ae"
+    }
+  },
+  "v1_parity": {
+    "exact": true,
+    "n_state_tau": 199422,
+    "n_table_cells": 63,
+    "tau_star": 0.99,
+    "all_tables": {
+      "pooled": {
+        "0.0": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 0,
+            "n": 22158,
+            "rate": 0.0
+          },
+          "hedge_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "current_gold_miss_rate": {
+            "count": 1529,
+            "n": 22146,
+            "rate": 0.06904181342003071
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "n": 22158,
+            "mean": 0.0
+          },
+          "mean_reward": {
+            "sum": 26306.7815968857,
+            "n": 22158,
+            "mean": 1.1872362847227051
+          }
+        },
+        "0.5": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 700,
+            "n": 22158,
+            "rate": 0.03159129885368715
+          },
+          "hedge_hit_rate": {
+            "count": 222,
+            "n": 700,
+            "rate": 0.3171428571428571
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 216,
+            "n": 700,
+            "rate": 0.30857142857142855
+          },
+          "current_gold_miss_rate": {
+            "count": 1313,
+            "n": 22146,
+            "rate": 0.05928835907161564
+          },
+          "mean_extra_tokens": {
+            "sum": 112517,
+            "n": 22158,
+            "mean": 5.077940247314739
+          },
+          "mean_reward": {
+            "sum": 26407.558450711807,
+            "n": 22158,
+            "mean": 1.1917843871609264
+          }
+        },
+        "0.6": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 1175,
+            "n": 22158,
+            "rate": 0.053028251647260584
+          },
+          "hedge_hit_rate": {
+            "count": 403,
+            "n": 1175,
+            "rate": 0.34297872340425534
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 393,
+            "n": 1175,
+            "rate": 0.334468085106383
+          },
+          "current_gold_miss_rate": {
+            "count": 1136,
+            "n": 22146,
+            "rate": 0.05129594509166441
+          },
+          "mean_extra_tokens": {
+            "sum": 186651,
+            "n": 22158,
+            "mean": 8.423639317627945
+          },
+          "mean_reward": {
+            "sum": 26509.53646540027,
+            "n": 22158,
+            "mean": 1.196386698501682
+          }
+        },
+        "0.7": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 1821,
+            "n": 22158,
+            "rate": 0.08218250744652045
+          },
+          "hedge_hit_rate": {
+            "count": 576,
+            "n": 1821,
+            "rate": 0.3163097199341021
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 562,
+            "n": 1821,
+            "rate": 0.3086216364634816
+          },
+          "current_gold_miss_rate": {
+            "count": 967,
+            "n": 22146,
+            "rate": 0.04366477016165447
+          },
+          "mean_extra_tokens": {
+            "sum": 286553,
+            "n": 22158,
+            "mean": 12.932259229172308
+          },
+          "mean_reward": {
+            "sum": 26587.505715470266,
+            "n": 22158,
+            "mean": 1.1999054840450523
+          }
+        },
+        "0.8": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 2465,
+            "n": 22158,
+            "rate": 0.11124650239191262
+          },
+          "hedge_hit_rate": {
+            "count": 695,
+            "n": 2465,
+            "rate": 0.281947261663286
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 672,
+            "n": 2465,
+            "rate": 0.27261663286004056
+          },
+          "current_gold_miss_rate": {
+            "count": 857,
+            "n": 22146,
+            "rate": 0.03869773322496162
+          },
+          "mean_extra_tokens": {
+            "sum": 379770,
+            "n": 22158,
+            "mean": 17.13918223666396
+          },
+          "mean_reward": {
+            "sum": 26635.014810148394,
+            "n": 22158,
+            "mean": 1.2020495897711163
+          }
+        },
+        "0.9": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 3374,
+            "n": 22158,
+            "rate": 0.1522700604747721
+          },
+          "hedge_hit_rate": {
+            "count": 802,
+            "n": 3374,
+            "rate": 0.23770005927682275
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 779,
+            "n": 3374,
+            "rate": 0.23088322465915828
+          },
+          "current_gold_miss_rate": {
+            "count": 750,
+            "n": 22146,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 511299,
+            "n": 22158,
+            "mean": 23.07514216084484
+          },
+          "mean_reward": {
+            "sum": 26672.55209989016,
+            "n": 22158,
+            "mean": 1.2037436636831014
+          }
+        },
+        "0.95": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 4203,
+            "n": 22158,
+            "rate": 0.18968318440292445
+          },
+          "hedge_hit_rate": {
+            "count": 838,
+            "n": 4203,
+            "rate": 0.19938139424220794
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 815,
+            "n": 4203,
+            "rate": 0.19390911253866286
+          },
+          "current_gold_miss_rate": {
+            "count": 714,
+            "n": 22146,
+            "rate": 0.032240585207260905
+          },
+          "mean_extra_tokens": {
+            "sum": 621833,
+            "n": 22158,
+            "mean": 28.063588771549778
+          },
+          "mean_reward": {
+            "sum": 26682.089537701104,
+            "n": 22158,
+            "mean": 1.2041740923233641
+          }
+        },
+        "0.99": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 6739,
+            "n": 22158,
+            "rate": 0.30413394710713965
+          },
+          "hedge_hit_rate": {
+            "count": 924,
+            "n": 6739,
+            "rate": 0.13711233120641045
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 899,
+            "n": 6739,
+            "rate": 0.1334025819854578
+          },
+          "current_gold_miss_rate": {
+            "count": 630,
+            "n": 22146,
+            "rate": 0.028447575182877268
+          },
+          "mean_extra_tokens": {
+            "sum": 963246,
+            "n": 22158,
+            "mean": 43.471703222312485
+          },
+          "mean_reward": {
+            "sum": 26688.414225409746,
+            "n": 22158,
+            "mean": 1.2044595281798784
+          }
+        },
+        "1.01": {
+          "n": 22158,
+          "hedge_rate": {
+            "count": 22096,
+            "n": 22158,
+            "rate": 0.997201913530102
+          },
+          "hedge_hit_rate": {
+            "count": 957,
+            "n": 22096,
+            "rate": 0.04331100651701666
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 925,
+            "n": 22096,
+            "rate": 0.04186278059377263
+          },
+          "current_gold_miss_rate": {
+            "count": 604,
+            "n": 22146,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 2655916,
+            "n": 22158,
+            "mean": 119.86262298041339
+          },
+          "mean_reward": {
+            "sum": 26522.12979044173,
+            "n": 22158,
+            "mean": 1.1969550406373197
+          }
+        }
+      },
+      "append|loose": {
+        "0.0": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 0,
+            "n": 3693,
+            "rate": 0.0
+          },
+          "hedge_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "current_gold_miss_rate": {
+            "count": 255,
+            "n": 3691,
+            "rate": 0.06908696830127337
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "n": 3693,
+            "mean": 0.0
+          },
+          "mean_reward": {
+            "sum": 4514.444163920656,
+            "n": 3693,
+            "mean": 1.222432754920297
+          }
+        },
+        "0.5": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 123,
+            "n": 3693,
+            "rate": 0.03330625507717303
+          },
+          "hedge_hit_rate": {
+            "count": 47,
+            "n": 123,
+            "rate": 0.3821138211382114
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 45,
+            "n": 123,
+            "rate": 0.36585365853658536
+          },
+          "current_gold_miss_rate": {
+            "count": 210,
+            "n": 3691,
+            "rate": 0.056895150365754536
+          },
+          "mean_extra_tokens": {
+            "sum": 20821,
+            "n": 3693,
+            "mean": 5.637963715136745
+          },
+          "mean_reward": {
+            "sum": 4539.886292563158,
+            "n": 3693,
+            "mean": 1.2293220396867475
+          }
+        },
+        "0.6": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 190,
+            "n": 3693,
+            "rate": 0.051448686704576224
+          },
+          "hedge_hit_rate": {
+            "count": 72,
+            "n": 190,
+            "rate": 0.37894736842105264
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 69,
+            "n": 190,
+            "rate": 0.3631578947368421
+          },
+          "current_gold_miss_rate": {
+            "count": 186,
+            "n": 3691,
+            "rate": 0.050392847466811164
+          },
+          "mean_extra_tokens": {
+            "sum": 30876,
+            "n": 3693,
+            "mean": 8.360682372055239
+          },
+          "mean_reward": {
+            "sum": 4555.828095453468,
+            "n": 3693,
+            "mean": 1.2336388019099562
+          }
+        },
+        "0.7": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 307,
+            "n": 3693,
+            "rate": 0.08313024641213106
+          },
+          "hedge_hit_rate": {
+            "count": 104,
+            "n": 307,
+            "rate": 0.33876221498371334
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 100,
+            "n": 307,
+            "rate": 0.3257328990228013
+          },
+          "current_gold_miss_rate": {
+            "count": 155,
+            "n": 3691,
+            "rate": 0.04199403955567597
+          },
+          "mean_extra_tokens": {
+            "sum": 49283,
+            "n": 3693,
+            "mean": 13.344976983482264
+          },
+          "mean_reward": {
+            "sum": 4572.784800564278,
+            "n": 3693,
+            "mean": 1.2382303819562086
+          }
+        },
+        "0.8": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 417,
+            "n": 3693,
+            "rate": 0.11291632818846466
+          },
+          "hedge_hit_rate": {
+            "count": 122,
+            "n": 417,
+            "rate": 0.29256594724220625
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 117,
+            "n": 417,
+            "rate": 0.2805755395683453
+          },
+          "current_gold_miss_rate": {
+            "count": 138,
+            "n": 3691,
+            "rate": 0.03738824166892441
+          },
+          "mean_extra_tokens": {
+            "sum": 65422,
+            "n": 3693,
+            "mean": 17.71513674519361
+          },
+          "mean_reward": {
+            "sum": 4580.98544076156,
+            "n": 3693,
+            "mean": 1.2404509723156134
+          }
+        },
+        "0.9": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 569,
+            "n": 3693,
+            "rate": 0.15407527755212563
+          },
+          "hedge_hit_rate": {
+            "count": 139,
+            "n": 569,
+            "rate": 0.24428822495606328
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 134,
+            "n": 569,
+            "rate": 0.23550087873462214
+          },
+          "current_gold_miss_rate": {
+            "count": 121,
+            "n": 3691,
+            "rate": 0.032782443782172856
+          },
+          "mean_extra_tokens": {
+            "sum": 86952,
+            "n": 3693,
+            "mean": 23.545085296506905
+          },
+          "mean_reward": {
+            "sum": 4588.255720316168,
+            "n": 3693,
+            "mean": 1.2424196372369802
+          }
+        },
+        "0.95": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 715,
+            "n": 3693,
+            "rate": 0.19360953154616842
+          },
+          "hedge_hit_rate": {
+            "count": 146,
+            "n": 715,
+            "rate": 0.2041958041958042
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 141,
+            "n": 715,
+            "rate": 0.1972027972027972
+          },
+          "current_gold_miss_rate": {
+            "count": 114,
+            "n": 3691,
+            "rate": 0.030885938769981035
+          },
+          "mean_extra_tokens": {
+            "sum": 106357,
+            "n": 3693,
+            "mean": 28.799620904413757
+          },
+          "mean_reward": {
+            "sum": 4592.030477482716,
+            "n": 3693,
+            "mean": 1.2434417756519676
+          }
+        },
+        "0.99": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 1133,
+            "n": 3693,
+            "rate": 0.3067966422962361
+          },
+          "hedge_hit_rate": {
+            "count": 160,
+            "n": 1133,
+            "rate": 0.1412180052956752
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 154,
+            "n": 1133,
+            "rate": 0.13592233009708737
+          },
+          "current_gold_miss_rate": {
+            "count": 101,
+            "n": 3691,
+            "rate": 0.027363858033053374
+          },
+          "mean_extra_tokens": {
+            "sum": 162844,
+            "n": 3693,
+            "mean": 44.095315461684265
+          },
+          "mean_reward": {
+            "sum": 4596.002789084879,
+            "n": 3693,
+            "mean": 1.2445174083630866
+          }
+        },
+        "1.01": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 3693,
+            "n": 3693,
+            "rate": 1.0
+          },
+          "hedge_hit_rate": {
+            "count": 164,
+            "n": 3693,
+            "rate": 0.044408340102897376
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 158,
+            "n": 3693,
+            "rate": 0.042783644733279176
+          },
+          "current_gold_miss_rate": {
+            "count": 97,
+            "n": 3691,
+            "rate": 0.026280140883229476
+          },
+          "mean_extra_tokens": {
+            "sum": 445981,
+            "n": 3693,
+            "mean": 120.76387760628215
+          },
+          "mean_reward": {
+            "sum": 4582.618922702505,
+            "n": 3693,
+            "mean": 1.2408932907399148
+          }
+        }
+      },
+      "append|mid": {
+        "0.0": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 0,
+            "n": 3693,
+            "rate": 0.0
+          },
+          "hedge_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "current_gold_miss_rate": {
+            "count": 257,
+            "n": 3691,
+            "rate": 0.06962882687618531
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "n": 3693,
+            "mean": 0.0
+          },
+          "mean_reward": {
+            "sum": 4393.143512416274,
+            "n": 3693,
+            "mean": 1.1895866537818234
+          }
+        },
+        "0.5": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 115,
+            "n": 3693,
+            "rate": 0.031139994584348768
+          },
+          "hedge_hit_rate": {
+            "count": 40,
+            "n": 115,
+            "rate": 0.34782608695652173
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 39,
+            "n": 115,
+            "rate": 0.3391304347826087
+          },
+          "current_gold_miss_rate": {
+            "count": 218,
+            "n": 3691,
+            "rate": 0.05906258466540233
+          },
+          "mean_extra_tokens": {
+            "sum": 18235,
+            "n": 3693,
+            "mean": 4.937720010831303
+          },
+          "mean_reward": {
+            "sum": 4412.920674226271,
+            "n": 3693,
+            "mean": 1.1949419643179722
+          }
+        },
+        "0.6": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 199,
+            "n": 3693,
+            "rate": 0.05388572975900352
+          },
+          "hedge_hit_rate": {
+            "count": 72,
+            "n": 199,
+            "rate": 0.36180904522613067
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 70,
+            "n": 199,
+            "rate": 0.35175879396984927
+          },
+          "current_gold_miss_rate": {
+            "count": 187,
+            "n": 3691,
+            "rate": 0.050663776754267136
+          },
+          "mean_extra_tokens": {
+            "sum": 31531,
+            "n": 3693,
+            "mean": 8.538044949905226
+          },
+          "mean_reward": {
+            "sum": 4429.012103982253,
+            "n": 3693,
+            "mean": 1.1992992428871523
+          }
+        },
+        "0.7": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 310,
+            "n": 3693,
+            "rate": 0.08394259409694016
+          },
+          "hedge_hit_rate": {
+            "count": 102,
+            "n": 310,
+            "rate": 0.32903225806451614
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 99,
+            "n": 310,
+            "rate": 0.3193548387096774
+          },
+          "current_gold_miss_rate": {
+            "count": 158,
+            "n": 3691,
+            "rate": 0.04280682741804389
+          },
+          "mean_extra_tokens": {
+            "sum": 49426,
+            "n": 3693,
+            "mean": 13.383698889791498
+          },
+          "mean_reward": {
+            "sum": 4442.983752234499,
+            "n": 3693,
+            "mean": 1.2030825215907117
+          }
+        },
+        "0.8": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 415,
+            "n": 3693,
+            "rate": 0.11237476306525859
+          },
+          "hedge_hit_rate": {
+            "count": 120,
+            "n": 415,
+            "rate": 0.2891566265060241
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 116,
+            "n": 415,
+            "rate": 0.27951807228915665
+          },
+          "current_gold_miss_rate": {
+            "count": 141,
+            "n": 3691,
+            "rate": 0.038201029531292334
+          },
+          "mean_extra_tokens": {
+            "sum": 64178,
+            "n": 3693,
+            "mean": 17.378283238559437
+          },
+          "mean_reward": {
+            "sum": 4449.943631948483,
+            "n": 3693,
+            "mean": 1.2049671356481135
+          }
+        },
+        "0.9": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 567,
+            "n": 3693,
+            "rate": 0.15353371242891958
+          },
+          "hedge_hit_rate": {
+            "count": 138,
+            "n": 567,
+            "rate": 0.24338624338624337
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 134,
+            "n": 567,
+            "rate": 0.23633156966490299
+          },
+          "current_gold_miss_rate": {
+            "count": 123,
+            "n": 3691,
+            "rate": 0.0333243023570848
+          },
+          "mean_extra_tokens": {
+            "sum": 86458,
+            "n": 3693,
+            "mean": 23.41131871107501
+          },
+          "mean_reward": {
+            "sum": 4455.728605888307,
+            "n": 3693,
+            "mean": 1.206533605710346
+          }
+        },
+        "0.95": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 712,
+            "n": 3693,
+            "rate": 0.19279718386135933
+          },
+          "hedge_hit_rate": {
+            "count": 144,
+            "n": 712,
+            "rate": 0.20224719101123595
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 140,
+            "n": 712,
+            "rate": 0.19662921348314608
+          },
+          "current_gold_miss_rate": {
+            "count": 117,
+            "n": 3691,
+            "rate": 0.031698726632348954
+          },
+          "mean_extra_tokens": {
+            "sum": 105931,
+            "n": 3693,
+            "mean": 28.684267533170864
+          },
+          "mean_reward": {
+            "sum": 4457.018395037798,
+            "n": 3693,
+            "mean": 1.2068828581201727
+          }
+        },
+        "0.99": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 1134,
+            "n": 3693,
+            "rate": 0.30706742485783917
+          },
+          "hedge_hit_rate": {
+            "count": 159,
+            "n": 1134,
+            "rate": 0.1402116402116402
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 154,
+            "n": 1134,
+            "rate": 0.13580246913580246
+          },
+          "current_gold_miss_rate": {
+            "count": 103,
+            "n": 3691,
+            "rate": 0.02790571660796532
+          },
+          "mean_extra_tokens": {
+            "sum": 162930,
+            "n": 3693,
+            "mean": 44.11860276198213
+          },
+          "mean_reward": {
+            "sum": 4458.641192306864,
+            "n": 3693,
+            "mean": 1.2073222833216528
+          }
+        },
+        "1.01": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 3692,
+            "n": 3693,
+            "rate": 0.9997292174383969
+          },
+          "hedge_hit_rate": {
+            "count": 164,
+            "n": 3692,
+            "rate": 0.044420368364030335
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 158,
+            "n": 3692,
+            "rate": 0.04279523293607801
+          },
+          "current_gold_miss_rate": {
+            "count": 99,
+            "n": 3691,
+            "rate": 0.026821999458141427
+          },
+          "mean_extra_tokens": {
+            "sum": 445617,
+            "n": 3693,
+            "mean": 120.66531275385866
+          },
+          "mean_reward": {
+            "sum": 4430.407965583338,
+            "n": 3693,
+            "mean": 1.1996772178671373
+          }
+        }
+      },
+      "append|tight": {
+        "0.0": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 0,
+            "n": 3693,
+            "rate": 0.0
+          },
+          "hedge_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "current_gold_miss_rate": {
+            "count": 257,
+            "n": 3691,
+            "rate": 0.06962882687618531
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "n": 3693,
+            "mean": 0.0
+          },
+          "mean_reward": {
+            "sum": 4262.076697680429,
+            "n": 3693,
+            "mean": 1.1540960459465013
+          }
+        },
+        "0.5": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 117,
+            "n": 3693,
+            "rate": 0.03168155970755483
+          },
+          "hedge_hit_rate": {
+            "count": 39,
+            "n": 117,
+            "rate": 0.3333333333333333
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 37,
+            "n": 117,
+            "rate": 0.3162393162393162
+          },
+          "current_gold_miss_rate": {
+            "count": 220,
+            "n": 3691,
+            "rate": 0.059604443240314275
+          },
+          "mean_extra_tokens": {
+            "sum": 18862,
+            "n": 3693,
+            "mean": 5.107500676956404
+          },
+          "mean_reward": {
+            "sum": 4277.841534212057,
+            "n": 3693,
+            "mean": 1.1583648887657885
+          }
+        },
+        "0.6": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 197,
+            "n": 3693,
+            "rate": 0.053344164635797456
+          },
+          "hedge_hit_rate": {
+            "count": 68,
+            "n": 197,
+            "rate": 0.34517766497461927
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 65,
+            "n": 197,
+            "rate": 0.3299492385786802
+          },
+          "current_gold_miss_rate": {
+            "count": 192,
+            "n": 3691,
+            "rate": 0.05201842319154701
+          },
+          "mean_extra_tokens": {
+            "sum": 31584,
+            "n": 3693,
+            "mean": 8.552396425670187
+          },
+          "mean_reward": {
+            "sum": 4292.83460457453,
+            "n": 3693,
+            "mean": 1.1624247507648335
+          }
+        },
+        "0.7": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 306,
+            "n": 3693,
+            "rate": 0.08285946385052803
+          },
+          "hedge_hit_rate": {
+            "count": 93,
+            "n": 306,
+            "rate": 0.30392156862745096
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 89,
+            "n": 306,
+            "rate": 0.2908496732026144
+          },
+          "current_gold_miss_rate": {
+            "count": 168,
+            "n": 3691,
+            "rate": 0.04551612029260363
+          },
+          "mean_extra_tokens": {
+            "sum": 48075,
+            "n": 3693,
+            "mean": 13.0178716490658
+          },
+          "mean_reward": {
+            "sum": 4301.930245417932,
+            "n": 3693,
+            "mean": 1.1648876916918312
+          }
+        },
+        "0.8": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 415,
+            "n": 3693,
+            "rate": 0.11237476306525859
+          },
+          "hedge_hit_rate": {
+            "count": 117,
+            "n": 415,
+            "rate": 0.2819277108433735
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 112,
+            "n": 415,
+            "rate": 0.26987951807228916
+          },
+          "current_gold_miss_rate": {
+            "count": 145,
+            "n": 3691,
+            "rate": 0.03928474668111623
+          },
+          "mean_extra_tokens": {
+            "sum": 63495,
+            "n": 3693,
+            "mean": 17.193338748984566
+          },
+          "mean_reward": {
+            "sum": 4309.409587344662,
+            "n": 3693,
+            "mean": 1.166912967057856
+          }
+        },
+        "0.9": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 562,
+            "n": 3693,
+            "rate": 0.15217979962090442
+          },
+          "hedge_hit_rate": {
+            "count": 131,
+            "n": 562,
+            "rate": 0.23309608540925267
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 126,
+            "n": 562,
+            "rate": 0.22419928825622776
+          },
+          "current_gold_miss_rate": {
+            "count": 131,
+            "n": 3691,
+            "rate": 0.035491736656732595
+          },
+          "mean_extra_tokens": {
+            "sum": 85185,
+            "n": 3693,
+            "mean": 23.066612510154346
+          },
+          "mean_reward": {
+            "sum": 4311.964349249424,
+            "n": 3693,
+            "mean": 1.1676047520307133
+          }
+        },
+        "0.95": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 700,
+            "n": 3693,
+            "rate": 0.18954779312212294
+          },
+          "hedge_hit_rate": {
+            "count": 138,
+            "n": 700,
+            "rate": 0.19714285714285715
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 133,
+            "n": 700,
+            "rate": 0.19
+          },
+          "current_gold_miss_rate": {
+            "count": 124,
+            "n": 3691,
+            "rate": 0.03359523164454078
+          },
+          "mean_extra_tokens": {
+            "sum": 103663,
+            "n": 3693,
+            "mean": 28.070132683455185
+          },
+          "mean_reward": {
+            "sum": 4312.405311106803,
+            "n": 3693,
+            "mean": 1.1677241568120236
+          }
+        },
+        "0.99": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 1119,
+            "n": 3693,
+            "rate": 0.30300568643379366
+          },
+          "hedge_hit_rate": {
+            "count": 152,
+            "n": 1119,
+            "rate": 0.1358355674709562
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 147,
+            "n": 1119,
+            "rate": 0.13136729222520108
+          },
+          "current_gold_miss_rate": {
+            "count": 110,
+            "n": 3691,
+            "rate": 0.029802221620157138
+          },
+          "mean_extra_tokens": {
+            "sum": 160379,
+            "n": 3693,
+            "mean": 43.427836447332794
+          },
+          "mean_reward": {
+            "sum": 4310.116736663005,
+            "n": 3693,
+            "mean": 1.1671044507617128
+          }
+        },
+        "1.01": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 3659,
+            "n": 3693,
+            "rate": 0.9907933929054968
+          },
+          "hedge_hit_rate": {
+            "count": 158,
+            "n": 3659,
+            "rate": 0.04318119704837387
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 151,
+            "n": 3659,
+            "rate": 0.041268106039901616
+          },
+          "current_gold_miss_rate": {
+            "count": 106,
+            "n": 3691,
+            "rate": 0.028718504470333243
+          },
+          "mean_extra_tokens": {
+            "sum": 439387,
+            "n": 3693,
+            "mean": 118.97833739507176
+          },
+          "mean_reward": {
+            "sum": 4267.671356421356,
+            "n": 3693,
+            "mean": 1.1556109819716642
+          }
+        }
+      },
+      "reselect|loose": {
+        "0.0": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 0,
+            "n": 3693,
+            "rate": 0.0
+          },
+          "hedge_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "current_gold_miss_rate": {
+            "count": 253,
+            "n": 3691,
+            "rate": 0.06854510972636142
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "n": 3693,
+            "mean": 0.0
+          },
+          "mean_reward": {
+            "sum": 4500.745958519093,
+            "n": 3693,
+            "mean": 1.218723519772297
+          }
+        },
+        "0.5": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 115,
+            "n": 3693,
+            "rate": 0.031139994584348768
+          },
+          "hedge_hit_rate": {
+            "count": 31,
+            "n": 115,
+            "rate": 0.26956521739130435
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 31,
+            "n": 115,
+            "rate": 0.26956521739130435
+          },
+          "current_gold_miss_rate": {
+            "count": 222,
+            "n": 3691,
+            "rate": 0.060146301815226226
+          },
+          "mean_extra_tokens": {
+            "sum": 18502,
+            "n": 3693,
+            "mean": 5.010018954779312
+          },
+          "mean_reward": {
+            "sum": 4515.863051624992,
+            "n": 3693,
+            "mean": 1.222816964967504
+          }
+        },
+        "0.6": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 200,
+            "n": 3693,
+            "rate": 0.05415651232060655
+          },
+          "hedge_hit_rate": {
+            "count": 66,
+            "n": 200,
+            "rate": 0.33
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 66,
+            "n": 200,
+            "rate": 0.33
+          },
+          "current_gold_miss_rate": {
+            "count": 187,
+            "n": 3691,
+            "rate": 0.050663776754267136
+          },
+          "mean_extra_tokens": {
+            "sum": 31704,
+            "n": 3693,
+            "mean": 8.584890333062551
+          },
+          "mean_reward": {
+            "sum": 4537.113519523594,
+            "n": 3693,
+            "mean": 1.2285712211003503
+          }
+        },
+        "0.7": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 299,
+            "n": 3693,
+            "rate": 0.0809639859193068
+          },
+          "hedge_hit_rate": {
+            "count": 91,
+            "n": 299,
+            "rate": 0.30434782608695654
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 91,
+            "n": 299,
+            "rate": 0.30434782608695654
+          },
+          "current_gold_miss_rate": {
+            "count": 162,
+            "n": 3691,
+            "rate": 0.043890544567867784
+          },
+          "mean_extra_tokens": {
+            "sum": 47395,
+            "n": 3693,
+            "mean": 12.833739507175737
+          },
+          "mean_reward": {
+            "sum": 4549.452171501798,
+            "n": 3693,
+            "mean": 1.231912312889737
+          }
+        },
+        "0.8": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 404,
+            "n": 3693,
+            "rate": 0.10939615488762523
+          },
+          "hedge_hit_rate": {
+            "count": 111,
+            "n": 404,
+            "rate": 0.2747524752475248
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 109,
+            "n": 404,
+            "rate": 0.2698019801980198
+          },
+          "current_gold_miss_rate": {
+            "count": 144,
+            "n": 3691,
+            "rate": 0.039013817393660256
+          },
+          "mean_extra_tokens": {
+            "sum": 62471,
+            "n": 3693,
+            "mean": 16.91605740590306
+          },
+          "mean_reward": {
+            "sum": 4559.64052788008,
+            "n": 3693,
+            "mean": 1.2346711421283727
+          }
+        },
+        "0.9": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 561,
+            "n": 3693,
+            "rate": 0.15190901705930138
+          },
+          "hedge_hit_rate": {
+            "count": 131,
+            "n": 561,
+            "rate": 0.23351158645276293
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 129,
+            "n": 561,
+            "rate": 0.22994652406417113
+          },
+          "current_gold_miss_rate": {
+            "count": 124,
+            "n": 3691,
+            "rate": 0.03359523164454078
+          },
+          "mean_extra_tokens": {
+            "sum": 85161,
+            "n": 3693,
+            "mean": 23.060113728675873
+          },
+          "mean_reward": {
+            "sum": 4569.046130817773,
+            "n": 3693,
+            "mean": 1.237218015385262
+          }
+        },
+        "0.95": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 696,
+            "n": 3693,
+            "rate": 0.18846466287571081
+          },
+          "hedge_hit_rate": {
+            "count": 137,
+            "n": 696,
+            "rate": 0.1968390804597701
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 135,
+            "n": 696,
+            "rate": 0.1939655172413793
+          },
+          "current_gold_miss_rate": {
+            "count": 118,
+            "n": 3691,
+            "rate": 0.03196965591980493
+          },
+          "mean_extra_tokens": {
+            "sum": 103373,
+            "n": 3693,
+            "mean": 27.991605740590305
+          },
+          "mean_reward": {
+            "sum": 4572.342559389202,
+            "n": 3693,
+            "mean": 1.238110630757975
+          }
+        },
+        "0.99": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 1123,
+            "n": 3693,
+            "rate": 0.3040888166802058
+          },
+          "hedge_hit_rate": {
+            "count": 150,
+            "n": 1123,
+            "rate": 0.13357079252003562
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 148,
+            "n": 1123,
+            "rate": 0.13178984861976847
+          },
+          "current_gold_miss_rate": {
+            "count": 105,
+            "n": 3691,
+            "rate": 0.028447575182877268
+          },
+          "mean_extra_tokens": {
+            "sum": 160670,
+            "n": 3693,
+            "mean": 43.50663417275928
+          },
+          "mean_reward": {
+            "sum": 4575.444318451035,
+            "n": 3693,
+            "mean": 1.2389505330222135
+          }
+        },
+        "1.01": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 3693,
+            "n": 3693,
+            "rate": 1.0
+          },
+          "hedge_hit_rate": {
+            "count": 157,
+            "n": 3693,
+            "rate": 0.042512862171676144
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 153,
+            "n": 3693,
+            "rate": 0.041429731925264016
+          },
+          "current_gold_miss_rate": {
+            "count": 100,
+            "n": 3691,
+            "rate": 0.0270929287455974
+          },
+          "mean_extra_tokens": {
+            "sum": 442295,
+            "n": 3693,
+            "mean": 119.76577308421338
+          },
+          "mean_reward": {
+            "sum": 4563.594727121966,
+            "n": 3693,
+            "mean": 1.235741870328179
+          }
+        }
+      },
+      "reselect|mid": {
+        "0.0": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 0,
+            "n": 3693,
+            "rate": 0.0
+          },
+          "hedge_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "current_gold_miss_rate": {
+            "count": 255,
+            "n": 3691,
+            "rate": 0.06908696830127337
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "n": 3693,
+            "mean": 0.0
+          },
+          "mean_reward": {
+            "sum": 4380.047137149749,
+            "n": 3693,
+            "mean": 1.186040383739439
+          }
+        },
+        "0.5": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 116,
+            "n": 3693,
+            "rate": 0.0314107771459518
+          },
+          "hedge_hit_rate": {
+            "count": 34,
+            "n": 116,
+            "rate": 0.29310344827586204
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 34,
+            "n": 116,
+            "rate": 0.29310344827586204
+          },
+          "current_gold_miss_rate": {
+            "count": 221,
+            "n": 3691,
+            "rate": 0.059875372527770254
+          },
+          "mean_extra_tokens": {
+            "sum": 18460,
+            "n": 3693,
+            "mean": 4.998646087191985
+          },
+          "mean_reward": {
+            "sum": 4393.62250436131,
+            "n": 3693,
+            "mean": 1.1897163564476876
+          }
+        },
+        "0.6": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 197,
+            "n": 3693,
+            "rate": 0.053344164635797456
+          },
+          "hedge_hit_rate": {
+            "count": 64,
+            "n": 197,
+            "rate": 0.3248730964467005
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 64,
+            "n": 197,
+            "rate": 0.3248730964467005
+          },
+          "current_gold_miss_rate": {
+            "count": 191,
+            "n": 3691,
+            "rate": 0.05174749390409103
+          },
+          "mean_extra_tokens": {
+            "sum": 31133,
+            "n": 3693,
+            "mean": 8.430273490387219
+          },
+          "mean_reward": {
+            "sum": 4412.208313411298,
+            "n": 3693,
+            "mean": 1.1947490694317082
+          }
+        },
+        "0.7": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 304,
+            "n": 3693,
+            "rate": 0.08231789872732197
+          },
+          "hedge_hit_rate": {
+            "count": 96,
+            "n": 304,
+            "rate": 0.3157894736842105
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 96,
+            "n": 304,
+            "rate": 0.3157894736842105
+          },
+          "current_gold_miss_rate": {
+            "count": 159,
+            "n": 3691,
+            "rate": 0.04307775670549986
+          },
+          "mean_extra_tokens": {
+            "sum": 47194,
+            "n": 3693,
+            "mean": 12.779312212293528
+          },
+          "mean_reward": {
+            "sum": 4426.3952004049015,
+            "n": 3693,
+            "mean": 1.1985906310330088
+          }
+        },
+        "0.8": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 409,
+            "n": 3693,
+            "rate": 0.1107500676956404
+          },
+          "hedge_hit_rate": {
+            "count": 114,
+            "n": 409,
+            "rate": 0.2787286063569682
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 112,
+            "n": 409,
+            "rate": 0.27383863080684595
+          },
+          "current_gold_miss_rate": {
+            "count": 143,
+            "n": 3691,
+            "rate": 0.03874288810620428
+          },
+          "mean_extra_tokens": {
+            "sum": 62258,
+            "n": 3693,
+            "mean": 16.858380720281612
+          },
+          "mean_reward": {
+            "sum": 4434.108308026965,
+            "n": 3693,
+            "mean": 1.2006792060728309
+          }
+        },
+        "0.9": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 561,
+            "n": 3693,
+            "rate": 0.15190901705930138
+          },
+          "hedge_hit_rate": {
+            "count": 134,
+            "n": 561,
+            "rate": 0.23885918003565063
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 132,
+            "n": 561,
+            "rate": 0.23529411764705882
+          },
+          "current_gold_miss_rate": {
+            "count": 123,
+            "n": 3691,
+            "rate": 0.0333243023570848
+          },
+          "mean_extra_tokens": {
+            "sum": 84695,
+            "n": 3693,
+            "mean": 22.93392905496886
+          },
+          "mean_reward": {
+            "sum": 4441.339248562383,
+            "n": 3693,
+            "mean": 1.2026372186738106
+          }
+        },
+        "0.95": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 697,
+            "n": 3693,
+            "rate": 0.18873544543731383
+          },
+          "hedge_hit_rate": {
+            "count": 139,
+            "n": 697,
+            "rate": 0.1994261119081779
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 137,
+            "n": 697,
+            "rate": 0.19655667144906744
+          },
+          "current_gold_miss_rate": {
+            "count": 118,
+            "n": 3691,
+            "rate": 0.03196965591980493
+          },
+          "mean_extra_tokens": {
+            "sum": 102227,
+            "n": 3693,
+            "mean": 27.68128892499323
+          },
+          "mean_reward": {
+            "sum": 4442.236263487756,
+            "n": 3693,
+            "mean": 1.2028801146730994
+          }
+        },
+        "0.99": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 1123,
+            "n": 3693,
+            "rate": 0.3040888166802058
+          },
+          "hedge_hit_rate": {
+            "count": 154,
+            "n": 1123,
+            "rate": 0.1371326803205699
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 152,
+            "n": 1123,
+            "rate": 0.13535173642030277
+          },
+          "current_gold_miss_rate": {
+            "count": 103,
+            "n": 3691,
+            "rate": 0.02790571660796532
+          },
+          "mean_extra_tokens": {
+            "sum": 159856,
+            "n": 3693,
+            "mean": 43.2862171676144
+          },
+          "mean_reward": {
+            "sum": 4443.837305894768,
+            "n": 3693,
+            "mean": 1.2033136490373053
+          }
+        },
+        "1.01": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 3692,
+            "n": 3693,
+            "rate": 0.9997292174383969
+          },
+          "hedge_hit_rate": {
+            "count": 160,
+            "n": 3692,
+            "rate": 0.04333694474539545
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 157,
+            "n": 3692,
+            "rate": 0.042524377031419286
+          },
+          "current_gold_miss_rate": {
+            "count": 98,
+            "n": 3691,
+            "rate": 0.02655107017068545
+          },
+          "mean_extra_tokens": {
+            "sum": 443952,
+            "n": 3693,
+            "mean": 120.2144597887896
+          },
+          "mean_reward": {
+            "sum": 4416.253599427107,
+            "n": 3693,
+            "mean": 1.1958444623414857
+          }
+        }
+      },
+      "reselect|tight": {
+        "0.0": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 0,
+            "n": 3693,
+            "rate": 0.0
+          },
+          "hedge_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "current_gold_miss_rate": {
+            "count": 252,
+            "n": 3691,
+            "rate": 0.06827418043890544
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "n": 3693,
+            "mean": 0.0
+          },
+          "mean_reward": {
+            "sum": 4256.3241271995,
+            "n": 3693,
+            "mean": 1.1525383501758732
+          }
+        },
+        "0.5": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 114,
+            "n": 3693,
+            "rate": 0.030869212022745736
+          },
+          "hedge_hit_rate": {
+            "count": 31,
+            "n": 114,
+            "rate": 0.2719298245614035
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 30,
+            "n": 114,
+            "rate": 0.2631578947368421
+          },
+          "current_gold_miss_rate": {
+            "count": 222,
+            "n": 3691,
+            "rate": 0.060146301815226226
+          },
+          "mean_extra_tokens": {
+            "sum": 17637,
+            "n": 3693,
+            "mean": 4.775792038992689
+          },
+          "mean_reward": {
+            "sum": 4267.424393724021,
+            "n": 3693,
+            "mean": 1.1555441087798595
+          }
+        },
+        "0.6": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 192,
+            "n": 3693,
+            "rate": 0.05199025182778229
+          },
+          "hedge_hit_rate": {
+            "count": 61,
+            "n": 192,
+            "rate": 0.3177083333333333
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 59,
+            "n": 192,
+            "rate": 0.3072916666666667
+          },
+          "current_gold_miss_rate": {
+            "count": 193,
+            "n": 3691,
+            "rate": 0.05228935247900298
+          },
+          "mean_extra_tokens": {
+            "sum": 29823,
+            "n": 3693,
+            "mean": 8.075548334687246
+          },
+          "mean_reward": {
+            "sum": 4282.539828455127,
+            "n": 3693,
+            "mean": 1.1596371049160916
+          }
+        },
+        "0.7": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 295,
+            "n": 3693,
+            "rate": 0.07988085567289467
+          },
+          "hedge_hit_rate": {
+            "count": 90,
+            "n": 295,
+            "rate": 0.3050847457627119
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 87,
+            "n": 295,
+            "rate": 0.29491525423728815
+          },
+          "current_gold_miss_rate": {
+            "count": 165,
+            "n": 3691,
+            "rate": 0.04470333243023571
+          },
+          "mean_extra_tokens": {
+            "sum": 45180,
+            "n": 3693,
+            "mean": 12.23395613322502
+          },
+          "mean_reward": {
+            "sum": 4293.959545346859,
+            "n": 3693,
+            "mean": 1.1627293651088164
+          }
+        },
+        "0.8": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 405,
+            "n": 3693,
+            "rate": 0.10966693744922827
+          },
+          "hedge_hit_rate": {
+            "count": 111,
+            "n": 405,
+            "rate": 0.2740740740740741
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 106,
+            "n": 405,
+            "rate": 0.2617283950617284
+          },
+          "current_gold_miss_rate": {
+            "count": 146,
+            "n": 3691,
+            "rate": 0.0395556759685722
+          },
+          "mean_extra_tokens": {
+            "sum": 61946,
+            "n": 3693,
+            "mean": 16.773896561061466
+          },
+          "mean_reward": {
+            "sum": 4300.927314186642,
+            "n": 3693,
+            "mean": 1.1646161154039107
+          }
+        },
+        "0.9": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 554,
+            "n": 3693,
+            "rate": 0.15001353912808016
+          },
+          "hedge_hit_rate": {
+            "count": 129,
+            "n": 554,
+            "rate": 0.2328519855595668
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 124,
+            "n": 554,
+            "rate": 0.22382671480144403
+          },
+          "current_gold_miss_rate": {
+            "count": 128,
+            "n": 3691,
+            "rate": 0.03467894879436467
+          },
+          "mean_extra_tokens": {
+            "sum": 82848,
+            "n": 3693,
+            "mean": 22.433793663688057
+          },
+          "mean_reward": {
+            "sum": 4306.2180450561045,
+            "n": 3693,
+            "mean": 1.166048753061496
+          }
+        },
+        "0.95": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 683,
+            "n": 3693,
+            "rate": 0.1849444895748714
+          },
+          "hedge_hit_rate": {
+            "count": 134,
+            "n": 683,
+            "rate": 0.19619326500732065
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 129,
+            "n": 683,
+            "rate": 0.18887262079062958
+          },
+          "current_gold_miss_rate": {
+            "count": 123,
+            "n": 3691,
+            "rate": 0.0333243023570848
+          },
+          "mean_extra_tokens": {
+            "sum": 100282,
+            "n": 3693,
+            "mean": 27.15461684267533
+          },
+          "mean_reward": {
+            "sum": 4306.056531196829,
+            "n": 3693,
+            "mean": 1.166005017924947
+          }
+        },
+        "0.99": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 1107,
+            "n": 3693,
+            "rate": 0.29975629569455725
+          },
+          "hedge_hit_rate": {
+            "count": 149,
+            "n": 1107,
+            "rate": 0.13459801264679314
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 144,
+            "n": 1107,
+            "rate": 0.13008130081300814
+          },
+          "current_gold_miss_rate": {
+            "count": 108,
+            "n": 3691,
+            "rate": 0.02926036304524519
+          },
+          "mean_extra_tokens": {
+            "sum": 156567,
+            "n": 3693,
+            "mean": 42.39561332250203
+          },
+          "mean_reward": {
+            "sum": 4304.371883009197,
+            "n": 3693,
+            "mean": 1.1655488445733
+          }
+        },
+        "1.01": {
+          "n": 3693,
+          "hedge_rate": {
+            "count": 3667,
+            "n": 3693,
+            "rate": 0.9929596533983212
+          },
+          "hedge_hit_rate": {
+            "count": 154,
+            "n": 3667,
+            "rate": 0.0419961821652577
+          },
+          "hedge_current_gold_hit_rate": {
+            "count": 148,
+            "n": 3667,
+            "rate": 0.04035996727570221
+          },
+          "current_gold_miss_rate": {
+            "count": 104,
+            "n": 3691,
+            "rate": 0.028176645895421296
+          },
+          "mean_extra_tokens": {
+            "sum": 438684,
+            "n": 3693,
+            "mean": 118.78797725426483
+          },
+          "mean_reward": {
+            "sum": 4261.583219185458,
+            "n": 3693,
+            "mean": 1.153962420575537
+          }
+        }
+      }
+    }
+  },
+  "tau_star": {
+    "pooled": {
+      "0": 1.01,
+      "0.1": 0.99,
+      "0.25": 0.99,
+      "0.5": 0.9,
+      "1.0": 0.8
+    },
+    "append": {
+      "0": 1.01,
+      "0.1": 0.99,
+      "0.25": 0.99,
+      "0.5": 0.9,
+      "1.0": 0.8
+    },
+    "reselect": {
+      "0": 1.01,
+      "0.1": 0.99,
+      "0.25": 0.99,
+      "0.5": 0.9,
+      "1.0": 0.8
+    }
+  },
+  "tables": {
+    "pooled": {
+      "0": {
+        "0.0": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.08109937720010832,
+            "sum": -1797.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -179700000
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 22158,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 1529,
+            "n": 22146,
+            "rate": 0.06904181342003071
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 22158
+          },
+          "n_lost_total": 1781,
+          "invalid_total": 16,
+          "used_tokens_total": 14663338
+        },
+        "0.5": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.0710804224207961,
+            "sum": -1575.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -157500000
+          },
+          "hedge_rate": {
+            "count": 700,
+            "n": 22158,
+            "rate": 0.03159129885368715
+          },
+          "current_gold_miss_rate": {
+            "count": 1313,
+            "n": 22146,
+            "rate": 0.05928835907161564
+          },
+          "mean_extra_tokens": {
+            "sum": 112517,
+            "mean": 5.077940247314739,
+            "n": 22158
+          },
+          "n_lost_total": 1559,
+          "invalid_total": 16,
+          "used_tokens_total": 14775855
+        },
+        "0.6": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.06291181514577128,
+            "sum": -1394.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -139400000
+          },
+          "hedge_rate": {
+            "count": 1175,
+            "n": 22158,
+            "rate": 0.053028251647260584
+          },
+          "current_gold_miss_rate": {
+            "count": 1136,
+            "n": 22146,
+            "rate": 0.05129594509166441
+          },
+          "mean_extra_tokens": {
+            "sum": 186651,
+            "mean": 8.423639317627945,
+            "n": 22158
+          },
+          "n_lost_total": 1378,
+          "invalid_total": 16,
+          "used_tokens_total": 14849989
+        },
+        "0.7": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.05510425128621717,
+            "sum": -1221.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -122100000
+          },
+          "hedge_rate": {
+            "count": 1821,
+            "n": 22158,
+            "rate": 0.08218250744652045
+          },
+          "current_gold_miss_rate": {
+            "count": 967,
+            "n": 22146,
+            "rate": 0.04366477016165447
+          },
+          "mean_extra_tokens": {
+            "sum": 286553,
+            "mean": 12.932259229172308,
+            "n": 22158
+          },
+          "n_lost_total": 1205,
+          "invalid_total": 16,
+          "used_tokens_total": 14949891
+        },
+        "0.8": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.04973373048109035,
+            "sum": -1102.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -110200000
+          },
+          "hedge_rate": {
+            "count": 2465,
+            "n": 22158,
+            "rate": 0.11124650239191262
+          },
+          "current_gold_miss_rate": {
+            "count": 857,
+            "n": 22146,
+            "rate": 0.03869773322496162
+          },
+          "mean_extra_tokens": {
+            "sum": 379770,
+            "mean": 17.13918223666396,
+            "n": 22158
+          },
+          "n_lost_total": 1086,
+          "invalid_total": 16,
+          "used_tokens_total": 15043108
+        },
+        "0.9": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.0449047747991696,
+            "sum": -995.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -99500000
+          },
+          "hedge_rate": {
+            "count": 3374,
+            "n": 22158,
+            "rate": 0.1522700604747721
+          },
+          "current_gold_miss_rate": {
+            "count": 750,
+            "n": 22146,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 511299,
+            "mean": 23.07514216084484,
+            "n": 22158
+          },
+          "n_lost_total": 979,
+          "invalid_total": 16,
+          "used_tokens_total": 15174637
+        },
+        "0.95": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.0432800794295514,
+            "sum": -959.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -95900000
+          },
+          "hedge_rate": {
+            "count": 4203,
+            "n": 22158,
+            "rate": 0.18968318440292445
+          },
+          "current_gold_miss_rate": {
+            "count": 714,
+            "n": 22146,
+            "rate": 0.032240585207260905
+          },
+          "mean_extra_tokens": {
+            "sum": 621833,
+            "mean": 28.063588771549778,
+            "n": 22158
+          },
+          "n_lost_total": 943,
+          "invalid_total": 16,
+          "used_tokens_total": 15285171
+        },
+        "0.99": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.039398862713241264,
+            "sum": -873.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -87300000
+          },
+          "hedge_rate": {
+            "count": 6739,
+            "n": 22158,
+            "rate": 0.30413394710713965
+          },
+          "current_gold_miss_rate": {
+            "count": 630,
+            "n": 22146,
+            "rate": 0.028447575182877268
+          },
+          "mean_extra_tokens": {
+            "sum": 963246,
+            "mean": 43.471703222312485,
+            "n": 22158
+          },
+          "n_lost_total": 857,
+          "invalid_total": 16,
+          "used_tokens_total": 15626584
+        },
+        "1.01": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.037909558624424584,
+            "sum": -840.0,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -84000000
+          },
+          "hedge_rate": {
+            "count": 22096,
+            "n": 22158,
+            "rate": 0.997201913530102
+          },
+          "current_gold_miss_rate": {
+            "count": 604,
+            "n": 22146,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 2655916,
+            "mean": 119.86262298041339,
+            "n": 22158
+          },
+          "n_lost_total": 824,
+          "invalid_total": 16,
+          "used_tokens_total": 17319254
+        }
+      },
+      "0.1": {
+        "0.0": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.1472756476216265,
+            "sum": -3263.3338,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -326333380
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 22158,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 1529,
+            "n": 22146,
+            "rate": 0.06904181342003071
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 22158
+          },
+          "n_lost_total": 1781,
+          "invalid_total": 16,
+          "used_tokens_total": 14663338
+        },
+        "0.5": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.13776448686704576,
+            "sum": -3052.5855,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -305258550
+          },
+          "hedge_rate": {
+            "count": 700,
+            "n": 22158,
+            "rate": 0.03159129885368715
+          },
+          "current_gold_miss_rate": {
+            "count": 1313,
+            "n": 22146,
+            "rate": 0.05928835907161564
+          },
+          "mean_extra_tokens": {
+            "sum": 112517,
+            "mean": 5.077940247314739,
+            "n": 22158
+          },
+          "n_lost_total": 1559,
+          "invalid_total": 16,
+          "used_tokens_total": 14775855
+        },
+        "0.6": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.12993044949905225,
+            "sum": -2878.9989,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -287899890
+          },
+          "hedge_rate": {
+            "count": 1175,
+            "n": 22158,
+            "rate": 0.053028251647260584
+          },
+          "current_gold_miss_rate": {
+            "count": 1136,
+            "n": 22146,
+            "rate": 0.05129594509166441
+          },
+          "mean_extra_tokens": {
+            "sum": 186651,
+            "mean": 8.423639317627945,
+            "n": 22158
+          },
+          "n_lost_total": 1378,
+          "invalid_total": 16,
+          "used_tokens_total": 14849989
+        },
+        "0.7": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.12257374763065258,
+            "sum": -2715.9891,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -271598910
+          },
+          "hedge_rate": {
+            "count": 1821,
+            "n": 22158,
+            "rate": 0.08218250744652045
+          },
+          "current_gold_miss_rate": {
+            "count": 967,
+            "n": 22146,
+            "rate": 0.04366477016165447
+          },
+          "mean_extra_tokens": {
+            "sum": 286553,
+            "mean": 12.932259229172308,
+            "n": 22158
+          },
+          "n_lost_total": 1205,
+          "invalid_total": 16,
+          "used_tokens_total": 14949891
+        },
+        "0.8": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.11762391912627493,
+            "sum": -2606.3108,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -260631080
+          },
+          "hedge_rate": {
+            "count": 2465,
+            "n": 22158,
+            "rate": 0.11124650239191262
+          },
+          "current_gold_miss_rate": {
+            "count": 857,
+            "n": 22146,
+            "rate": 0.03869773322496162
+          },
+          "mean_extra_tokens": {
+            "sum": 379770,
+            "mean": 17.13918223666396,
+            "n": 22158
+          },
+          "n_lost_total": 1086,
+          "invalid_total": 16,
+          "used_tokens_total": 15043108
+        },
+        "0.9": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.11338855943677227,
+            "sum": -2512.4637,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -251246370
+          },
+          "hedge_rate": {
+            "count": 3374,
+            "n": 22158,
+            "rate": 0.1522700604747721
+          },
+          "current_gold_miss_rate": {
+            "count": 750,
+            "n": 22146,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 511299,
+            "mean": 23.07514216084484,
+            "n": 22158
+          },
+          "n_lost_total": 979,
+          "invalid_total": 16,
+          "used_tokens_total": 15174637
+        },
+        "0.95": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.11226270872822457,
+            "sum": -2487.5171,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -248751710
+          },
+          "hedge_rate": {
+            "count": 4203,
+            "n": 22158,
+            "rate": 0.18968318440292445
+          },
+          "current_gold_miss_rate": {
+            "count": 714,
+            "n": 22146,
+            "rate": 0.032240585207260905
+          },
+          "mean_extra_tokens": {
+            "sum": 621833,
+            "mean": 28.063588771549778,
+            "n": 22158
+          },
+          "n_lost_total": 943,
+          "invalid_total": 16,
+          "used_tokens_total": 15285171
+        },
+        "0.99": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.10992230345699071,
+            "sum": -2435.6584,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -243565840
+          },
+          "hedge_rate": {
+            "count": 6739,
+            "n": 22158,
+            "rate": 0.30413394710713965
+          },
+          "current_gold_miss_rate": {
+            "count": 630,
+            "n": 22146,
+            "rate": 0.028447575182877268
+          },
+          "mean_extra_tokens": {
+            "sum": 963246,
+            "mean": 43.471703222312485,
+            "n": 22158
+          },
+          "n_lost_total": 857,
+          "invalid_total": 16,
+          "used_tokens_total": 15626584
+        },
+        "1.01": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.11607209134398411,
+            "sum": -2571.9254,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -257192540
+          },
+          "hedge_rate": {
+            "count": 22096,
+            "n": 22158,
+            "rate": 0.997201913530102
+          },
+          "current_gold_miss_rate": {
+            "count": 604,
+            "n": 22146,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 2655916,
+            "mean": 119.86262298041339,
+            "n": 22158
+          },
+          "n_lost_total": 824,
+          "invalid_total": 16,
+          "used_tokens_total": 17319254
+        }
+      },
+      "0.25": {
+        "0.0": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.24654005325390377,
+            "sum": -5462.8345,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -546283450
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 22158,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 1529,
+            "n": 22146,
+            "rate": 0.06904181342003071
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 22158
+          },
+          "n_lost_total": 1781,
+          "invalid_total": 16,
+          "used_tokens_total": 14663338
+        },
+        "0.5": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.23779058353642024,
+            "sum": -5268.96375,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -526896375
+          },
+          "hedge_rate": {
+            "count": 700,
+            "n": 22158,
+            "rate": 0.03159129885368715
+          },
+          "current_gold_miss_rate": {
+            "count": 1313,
+            "n": 22146,
+            "rate": 0.05928835907161564
+          },
+          "mean_extra_tokens": {
+            "sum": 112517,
+            "mean": 5.077940247314739,
+            "n": 22158
+          },
+          "n_lost_total": 1559,
+          "invalid_total": 16,
+          "used_tokens_total": 14775855
+        },
+        "0.6": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.23045840102897375,
+            "sum": -5106.49725,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -510649725
+          },
+          "hedge_rate": {
+            "count": 1175,
+            "n": 22158,
+            "rate": 0.053028251647260584
+          },
+          "current_gold_miss_rate": {
+            "count": 1136,
+            "n": 22146,
+            "rate": 0.05129594509166441
+          },
+          "mean_extra_tokens": {
+            "sum": 186651,
+            "mean": 8.423639317627945,
+            "n": 22158
+          },
+          "n_lost_total": 1378,
+          "invalid_total": 16,
+          "used_tokens_total": 14849989
+        },
+        "0.7": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.2237779921473057,
+            "sum": -4958.47275,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -495847275
+          },
+          "hedge_rate": {
+            "count": 1821,
+            "n": 22158,
+            "rate": 0.08218250744652045
+          },
+          "current_gold_miss_rate": {
+            "count": 967,
+            "n": 22146,
+            "rate": 0.04366477016165447
+          },
+          "mean_extra_tokens": {
+            "sum": 286553,
+            "mean": 12.932259229172308,
+            "n": 22158
+          },
+          "n_lost_total": 1205,
+          "invalid_total": 16,
+          "used_tokens_total": 14949891
+        },
+        "0.8": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.21945920209405181,
+            "sum": -4862.777,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -486277700
+          },
+          "hedge_rate": {
+            "count": 2465,
+            "n": 22158,
+            "rate": 0.11124650239191262
+          },
+          "current_gold_miss_rate": {
+            "count": 857,
+            "n": 22146,
+            "rate": 0.03869773322496162
+          },
+          "mean_extra_tokens": {
+            "sum": 379770,
+            "mean": 17.13918223666396,
+            "n": 22158
+          },
+          "n_lost_total": 1086,
+          "invalid_total": 16,
+          "used_tokens_total": 15043108
+        },
+        "0.9": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.21611423639317628,
+            "sum": -4788.65925,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -478865925
+          },
+          "hedge_rate": {
+            "count": 3374,
+            "n": 22158,
+            "rate": 0.1522700604747721
+          },
+          "current_gold_miss_rate": {
+            "count": 750,
+            "n": 22146,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 511299,
+            "mean": 23.07514216084484,
+            "n": 22158
+          },
+          "n_lost_total": 979,
+          "invalid_total": 16,
+          "used_tokens_total": 15174637
+        },
+        "0.95": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.21573665267623432,
+            "sum": -4780.29275,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -478029275
+          },
+          "hedge_rate": {
+            "count": 4203,
+            "n": 22158,
+            "rate": 0.18968318440292445
+          },
+          "current_gold_miss_rate": {
+            "count": 714,
+            "n": 22146,
+            "rate": 0.032240585207260905
+          },
+          "mean_extra_tokens": {
+            "sum": 621833,
+            "mean": 28.063588771549778,
+            "n": 22158
+          },
+          "n_lost_total": 943,
+          "invalid_total": 16,
+          "used_tokens_total": 15285171
+        },
+        "0.99": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.21570746457261486,
+            "sum": -4779.646,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -477964600
+          },
+          "hedge_rate": {
+            "count": 6739,
+            "n": 22158,
+            "rate": 0.30413394710713965
+          },
+          "current_gold_miss_rate": {
+            "count": 630,
+            "n": 22146,
+            "rate": 0.028447575182877268
+          },
+          "mean_extra_tokens": {
+            "sum": 963246,
+            "mean": 43.471703222312485,
+            "n": 22158
+          },
+          "n_lost_total": 857,
+          "invalid_total": 16,
+          "used_tokens_total": 15626584
+        },
+        "1.01": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.2333158904233234,
+            "sum": -5169.8135,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -516981350
+          },
+          "hedge_rate": {
+            "count": 22096,
+            "n": 22158,
+            "rate": 0.997201913530102
+          },
+          "current_gold_miss_rate": {
+            "count": 604,
+            "n": 22146,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 2655916,
+            "mean": 119.86262298041339,
+            "n": 22158
+          },
+          "n_lost_total": 824,
+          "invalid_total": 16,
+          "used_tokens_total": 17319254
+        }
+      },
+      "0.5": {
+        "0.0": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.41198072930769924,
+            "sum": -9128.669,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -912866900
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 22158,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 1529,
+            "n": 22146,
+            "rate": 0.06904181342003071
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 22158
+          },
+          "n_lost_total": 1781,
+          "invalid_total": 16,
+          "used_tokens_total": 14663338
+        },
+        "0.5": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.4045007446520444,
+            "sum": -8962.9275,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -896292750
+          },
+          "hedge_rate": {
+            "count": 700,
+            "n": 22158,
+            "rate": 0.03159129885368715
+          },
+          "current_gold_miss_rate": {
+            "count": 1313,
+            "n": 22146,
+            "rate": 0.05928835907161564
+          },
+          "mean_extra_tokens": {
+            "sum": 112517,
+            "mean": 5.077940247314739,
+            "n": 22158
+          },
+          "n_lost_total": 1559,
+          "invalid_total": 16,
+          "used_tokens_total": 14775855
+        },
+        "0.6": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.3980049869121762,
+            "sum": -8818.9945,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -881899450
+          },
+          "hedge_rate": {
+            "count": 1175,
+            "n": 22158,
+            "rate": 0.053028251647260584
+          },
+          "current_gold_miss_rate": {
+            "count": 1136,
+            "n": 22146,
+            "rate": 0.05129594509166441
+          },
+          "mean_extra_tokens": {
+            "sum": 186651,
+            "mean": 8.423639317627945,
+            "n": 22158
+          },
+          "n_lost_total": 1378,
+          "invalid_total": 16,
+          "used_tokens_total": 14849989
+        },
+        "0.7": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.39245173300839425,
+            "sum": -8695.9455,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -869594550
+          },
+          "hedge_rate": {
+            "count": 1821,
+            "n": 22158,
+            "rate": 0.08218250744652045
+          },
+          "current_gold_miss_rate": {
+            "count": 967,
+            "n": 22146,
+            "rate": 0.04366477016165447
+          },
+          "mean_extra_tokens": {
+            "sum": 286553,
+            "mean": 12.932259229172308,
+            "n": 22158
+          },
+          "n_lost_total": 1205,
+          "invalid_total": 16,
+          "used_tokens_total": 14949891
+        },
+        "0.8": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.38918467370701326,
+            "sum": -8623.554,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -862355400
+          },
+          "hedge_rate": {
+            "count": 2465,
+            "n": 22158,
+            "rate": 0.11124650239191262
+          },
+          "current_gold_miss_rate": {
+            "count": 857,
+            "n": 22146,
+            "rate": 0.03869773322496162
+          },
+          "mean_extra_tokens": {
+            "sum": 379770,
+            "mean": 17.13918223666396,
+            "n": 22158
+          },
+          "n_lost_total": 1086,
+          "invalid_total": 16,
+          "used_tokens_total": 15043108
+        },
+        "0.9": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.38732369798718297,
+            "sum": -8582.3185,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -858231850
+          },
+          "hedge_rate": {
+            "count": 3374,
+            "n": 22158,
+            "rate": 0.1522700604747721
+          },
+          "current_gold_miss_rate": {
+            "count": 750,
+            "n": 22146,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 511299,
+            "mean": 23.07514216084484,
+            "n": 22158
+          },
+          "n_lost_total": 979,
+          "invalid_total": 16,
+          "used_tokens_total": 15174637
+        },
+        "0.95": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.3881932259229172,
+            "sum": -8601.5855,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -860158550
+          },
+          "hedge_rate": {
+            "count": 4203,
+            "n": 22158,
+            "rate": 0.18968318440292445
+          },
+          "current_gold_miss_rate": {
+            "count": 714,
+            "n": 22146,
+            "rate": 0.032240585207260905
+          },
+          "mean_extra_tokens": {
+            "sum": 621833,
+            "mean": 28.063588771549778,
+            "n": 22158
+          },
+          "n_lost_total": 943,
+          "invalid_total": 16,
+          "used_tokens_total": 15285171
+        },
+        "0.99": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.39201606643198844,
+            "sum": -8686.292,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -868629200
+          },
+          "hedge_rate": {
+            "count": 6739,
+            "n": 22158,
+            "rate": 0.30413394710713965
+          },
+          "current_gold_miss_rate": {
+            "count": 630,
+            "n": 22146,
+            "rate": 0.028447575182877268
+          },
+          "mean_extra_tokens": {
+            "sum": 963246,
+            "mean": 43.471703222312485,
+            "n": 22158
+          },
+          "n_lost_total": 857,
+          "invalid_total": 16,
+          "used_tokens_total": 15626584
+        },
+        "1.01": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.4287222222222222,
+            "sum": -9499.627,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -949962700
+          },
+          "hedge_rate": {
+            "count": 22096,
+            "n": 22158,
+            "rate": 0.997201913530102
+          },
+          "current_gold_miss_rate": {
+            "count": 604,
+            "n": 22146,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 2655916,
+            "mean": 119.86262298041339,
+            "n": 22158
+          },
+          "n_lost_total": 824,
+          "invalid_total": 16,
+          "used_tokens_total": 17319254
+        }
+      },
+      "1.0": {
+        "0.0": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7428620814152902,
+            "sum": -16460.338,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1646033800
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 22158,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 1529,
+            "n": 22146,
+            "rate": 0.06904181342003071
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 22158
+          },
+          "n_lost_total": 1781,
+          "invalid_total": 16,
+          "used_tokens_total": 14663338
+        },
+        "0.5": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7379210668832927,
+            "sum": -16350.855,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1635085500
+          },
+          "hedge_rate": {
+            "count": 700,
+            "n": 22158,
+            "rate": 0.03159129885368715
+          },
+          "current_gold_miss_rate": {
+            "count": 1313,
+            "n": 22146,
+            "rate": 0.05928835907161564
+          },
+          "mean_extra_tokens": {
+            "sum": 112517,
+            "mean": 5.077940247314739,
+            "n": 22158
+          },
+          "n_lost_total": 1559,
+          "invalid_total": 16,
+          "used_tokens_total": 14775855
+        },
+        "0.6": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7330981586785811,
+            "sum": -16243.989,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1624398900
+          },
+          "hedge_rate": {
+            "count": 1175,
+            "n": 22158,
+            "rate": 0.053028251647260584
+          },
+          "current_gold_miss_rate": {
+            "count": 1136,
+            "n": 22146,
+            "rate": 0.05129594509166441
+          },
+          "mean_extra_tokens": {
+            "sum": 186651,
+            "mean": 8.423639317627945,
+            "n": 22158
+          },
+          "n_lost_total": 1378,
+          "invalid_total": 16,
+          "used_tokens_total": 14849989
+        },
+        "0.7": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7297992147305713,
+            "sum": -16170.891,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1617089100
+          },
+          "hedge_rate": {
+            "count": 1821,
+            "n": 22158,
+            "rate": 0.08218250744652045
+          },
+          "current_gold_miss_rate": {
+            "count": 967,
+            "n": 22146,
+            "rate": 0.04366477016165447
+          },
+          "mean_extra_tokens": {
+            "sum": 286553,
+            "mean": 12.932259229172308,
+            "n": 22158
+          },
+          "n_lost_total": 1205,
+          "invalid_total": 16,
+          "used_tokens_total": 14949891
+        },
+        "0.8": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7286356169329362,
+            "sum": -16145.108,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1614510800
+          },
+          "hedge_rate": {
+            "count": 2465,
+            "n": 22158,
+            "rate": 0.11124650239191262
+          },
+          "current_gold_miss_rate": {
+            "count": 857,
+            "n": 22146,
+            "rate": 0.03869773322496162
+          },
+          "mean_extra_tokens": {
+            "sum": 379770,
+            "mean": 17.13918223666396,
+            "n": 22158
+          },
+          "n_lost_total": 1086,
+          "invalid_total": 16,
+          "used_tokens_total": 15043108
+        },
+        "0.9": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7297426211751963,
+            "sum": -16169.637,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1616963700
+          },
+          "hedge_rate": {
+            "count": 3374,
+            "n": 22158,
+            "rate": 0.1522700604747721
+          },
+          "current_gold_miss_rate": {
+            "count": 750,
+            "n": 22146,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 511299,
+            "mean": 23.07514216084484,
+            "n": 22158
+          },
+          "n_lost_total": 979,
+          "invalid_total": 16,
+          "used_tokens_total": 15174637
+        },
+        "0.95": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7331063724162831,
+            "sum": -16244.171,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1624417100
+          },
+          "hedge_rate": {
+            "count": 4203,
+            "n": 22158,
+            "rate": 0.18968318440292445
+          },
+          "current_gold_miss_rate": {
+            "count": 714,
+            "n": 22146,
+            "rate": 0.032240585207260905
+          },
+          "mean_extra_tokens": {
+            "sum": 621833,
+            "mean": 28.063588771549778,
+            "n": 22158
+          },
+          "n_lost_total": 943,
+          "invalid_total": 16,
+          "used_tokens_total": 15285171
+        },
+        "0.99": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.7446332701507357,
+            "sum": -16499.584,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1649958400
+          },
+          "hedge_rate": {
+            "count": 6739,
+            "n": 22158,
+            "rate": 0.30413394710713965
+          },
+          "current_gold_miss_rate": {
+            "count": 630,
+            "n": 22146,
+            "rate": 0.028447575182877268
+          },
+          "mean_extra_tokens": {
+            "sum": 963246,
+            "mean": 43.471703222312485,
+            "n": 22158
+          },
+          "n_lost_total": 857,
+          "invalid_total": 16,
+          "used_tokens_total": 15626584
+        },
+        "1.01": {
+          "n": 22158,
+          "mean_reward": {
+            "mean": -0.8195348858200199,
+            "sum": -18159.254,
+            "n": 22158,
+            "numerator_in_1e5_reward_units": -1815925400
+          },
+          "hedge_rate": {
+            "count": 22096,
+            "n": 22158,
+            "rate": 0.997201913530102
+          },
+          "current_gold_miss_rate": {
+            "count": 604,
+            "n": 22146,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 2655916,
+            "mean": 119.86262298041339,
+            "n": 22158
+          },
+          "n_lost_total": 824,
+          "invalid_total": 16,
+          "used_tokens_total": 17319254
+        }
+      }
+    },
+    "append": {
+      "0": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.07618016066431989,
+            "sum": -844.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -84400000
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 769,
+            "n": 11073,
+            "rate": 0.06944820735121467
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 835,
+          "invalid_total": 9,
+          "used_tokens_total": 7367374
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.06480729307699251,
+            "sum": -718.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -71800000
+          },
+          "hedge_rate": {
+            "count": 355,
+            "n": 11079,
+            "rate": 0.032042603123025544
+          },
+          "current_gold_miss_rate": {
+            "count": 648,
+            "n": 11073,
+            "rate": 0.05852072609049038
+          },
+          "mean_extra_tokens": {
+            "sum": 57918,
+            "mean": 5.22772813430815,
+            "n": 11079
+          },
+          "n_lost_total": 709,
+          "invalid_total": 9,
+          "used_tokens_total": 7425292
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.05704485964437223,
+            "sum": -632.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -63200000
+          },
+          "hedge_rate": {
+            "count": 586,
+            "n": 11079,
+            "rate": 0.052892860366459064
+          },
+          "current_gold_miss_rate": {
+            "count": 565,
+            "n": 11073,
+            "rate": 0.051025015804208436
+          },
+          "mean_extra_tokens": {
+            "sum": 93991,
+            "mean": 8.483707915876884,
+            "n": 11079
+          },
+          "n_lost_total": 623,
+          "invalid_total": 9,
+          "used_tokens_total": 7461365
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.04919216535788429,
+            "sum": -545.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -54500000
+          },
+          "hedge_rate": {
+            "count": 923,
+            "n": 11079,
+            "rate": 0.08331076811986642
+          },
+          "current_gold_miss_rate": {
+            "count": 481,
+            "n": 11073,
+            "rate": 0.04343899575544116
+          },
+          "mean_extra_tokens": {
+            "sum": 146784,
+            "mean": 13.248849174113188,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 9,
+          "used_tokens_total": 7514158
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.04377651412582363,
+            "sum": -485.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -48500000
+          },
+          "hedge_rate": {
+            "count": 1247,
+            "n": 11079,
+            "rate": 0.11255528477299395
+          },
+          "current_gold_miss_rate": {
+            "count": 424,
+            "n": 11073,
+            "rate": 0.038291339293777656
+          },
+          "mean_extra_tokens": {
+            "sum": 193095,
+            "mean": 17.428919577579205,
+            "n": 11079
+          },
+          "n_lost_total": 476,
+          "invalid_total": 9,
+          "used_tokens_total": 7560469
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.03935373228630743,
+            "sum": -436.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -43600000
+          },
+          "hedge_rate": {
+            "count": 1698,
+            "n": 11079,
+            "rate": 0.15326292986731654
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 258595,
+            "mean": 23.341005505912086,
+            "n": 11079
+          },
+          "n_lost_total": 427,
+          "invalid_total": 9,
+          "used_tokens_total": 7625969
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.03754851520895388,
+            "sum": -416.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -41600000
+          },
+          "hedge_rate": {
+            "count": 2127,
+            "n": 11079,
+            "rate": 0.19198483617655024
+          },
+          "current_gold_miss_rate": {
+            "count": 355,
+            "n": 11073,
+            "rate": 0.032059965682290255
+          },
+          "mean_extra_tokens": {
+            "sum": 315951,
+            "mean": 28.518007040346603,
+            "n": 11079
+          },
+          "n_lost_total": 407,
+          "invalid_total": 9,
+          "used_tokens_total": 7683325
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.033667298492643744,
+            "sum": -373.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -37300000
+          },
+          "hedge_rate": {
+            "count": 3386,
+            "n": 11079,
+            "rate": 0.3056232511959563
+          },
+          "current_gold_miss_rate": {
+            "count": 314,
+            "n": 11073,
+            "rate": 0.028357265420391943
+          },
+          "mean_extra_tokens": {
+            "sum": 486153,
+            "mean": 43.88058489033306,
+            "n": 11079
+          },
+          "n_lost_total": 364,
+          "invalid_total": 9,
+          "used_tokens_total": 7853527
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.032313385684628576,
+            "sum": -358.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -35800000
+          },
+          "hedge_rate": {
+            "count": 11044,
+            "n": 11079,
+            "rate": 0.9968408701146313
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1330985,
+            "mean": 120.13584258507086,
+            "n": 11079
+          },
+          "n_lost_total": 349,
+          "invalid_total": 9,
+          "used_tokens_total": 8698359
+        }
+      },
+      "0.1": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.14267870746457262,
+            "sum": -1580.7374,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -158073740
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 769,
+            "n": 11073,
+            "rate": 0.06944820735121467
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 835,
+          "invalid_total": 9,
+          "used_tokens_total": 7367374
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.13182861269067606,
+            "sum": -1460.5292,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -146052920
+          },
+          "hedge_rate": {
+            "count": 355,
+            "n": 11079,
+            "rate": 0.032042603123025544
+          },
+          "current_gold_miss_rate": {
+            "count": 648,
+            "n": 11073,
+            "rate": 0.05852072609049038
+          },
+          "mean_extra_tokens": {
+            "sum": 57918,
+            "mean": 5.22772813430815,
+            "n": 11079
+          },
+          "n_lost_total": 709,
+          "invalid_total": 9,
+          "used_tokens_total": 7425292
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.12439177723621266,
+            "sum": -1378.1365,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -137813650
+          },
+          "hedge_rate": {
+            "count": 586,
+            "n": 11079,
+            "rate": 0.052892860366459064
+          },
+          "current_gold_miss_rate": {
+            "count": 565,
+            "n": 11073,
+            "rate": 0.051025015804208436
+          },
+          "mean_extra_tokens": {
+            "sum": 93991,
+            "mean": 8.483707915876884,
+            "n": 11079
+          },
+          "n_lost_total": 623,
+          "invalid_total": 9,
+          "used_tokens_total": 7461365
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.11701559707554833,
+            "sum": -1296.4158,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -129641580
+          },
+          "hedge_rate": {
+            "count": 923,
+            "n": 11079,
+            "rate": 0.08331076811986642
+          },
+          "current_gold_miss_rate": {
+            "count": 481,
+            "n": 11073,
+            "rate": 0.04343899575544116
+          },
+          "mean_extra_tokens": {
+            "sum": 146784,
+            "mean": 13.248849174113188,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 9,
+          "used_tokens_total": 7514158
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.11201795288383429,
+            "sum": -1241.0469,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -124104690
+          },
+          "hedge_rate": {
+            "count": 1247,
+            "n": 11079,
+            "rate": 0.11255528477299395
+          },
+          "current_gold_miss_rate": {
+            "count": 424,
+            "n": 11073,
+            "rate": 0.038291339293777656
+          },
+          "mean_extra_tokens": {
+            "sum": 193095,
+            "mean": 17.428919577579205,
+            "n": 11079
+          },
+          "n_lost_total": 476,
+          "invalid_total": 9,
+          "used_tokens_total": 7560469
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.10818637963715137,
+            "sum": -1198.5969,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -119859690
+          },
+          "hedge_rate": {
+            "count": 1698,
+            "n": 11079,
+            "rate": 0.15326292986731654
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 258595,
+            "mean": 23.341005505912086,
+            "n": 11079
+          },
+          "n_lost_total": 427,
+          "invalid_total": 9,
+          "used_tokens_total": 7625969
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.10689886271324127,
+            "sum": -1184.3325,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -118433250
+          },
+          "hedge_rate": {
+            "count": 2127,
+            "n": 11079,
+            "rate": 0.19198483617655024
+          },
+          "current_gold_miss_rate": {
+            "count": 355,
+            "n": 11073,
+            "rate": 0.032059965682290255
+          },
+          "mean_extra_tokens": {
+            "sum": 315951,
+            "mean": 28.518007040346603,
+            "n": 11079
+          },
+          "n_lost_total": 407,
+          "invalid_total": 9,
+          "used_tokens_total": 7683325
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.10455390378192977,
+            "sum": -1158.3527,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -115835270
+          },
+          "hedge_rate": {
+            "count": 3386,
+            "n": 11079,
+            "rate": 0.3056232511959563
+          },
+          "current_gold_miss_rate": {
+            "count": 314,
+            "n": 11073,
+            "rate": 0.028357265420391943
+          },
+          "mean_extra_tokens": {
+            "sum": 486153,
+            "mean": 43.88058489033306,
+            "n": 11079
+          },
+          "n_lost_total": 364,
+          "invalid_total": 9,
+          "used_tokens_total": 7853527
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.11082551674338839,
+            "sum": -1227.8359,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -122783590
+          },
+          "hedge_rate": {
+            "count": 11044,
+            "n": 11079,
+            "rate": 0.9968408701146313
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1330985,
+            "mean": 120.13584258507086,
+            "n": 11079
+          },
+          "n_lost_total": 349,
+          "invalid_total": 9,
+          "used_tokens_total": 8698359
+        }
+      },
+      "0.25": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.2424265276649517,
+            "sum": -2685.8435,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -268584350
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 769,
+            "n": 11073,
+            "rate": 0.06944820735121467
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 835,
+          "invalid_total": 9,
+          "used_tokens_total": 7367374
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.23236059211120136,
+            "sum": -2574.323,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -257432300
+          },
+          "hedge_rate": {
+            "count": 355,
+            "n": 11079,
+            "rate": 0.032042603123025544
+          },
+          "current_gold_miss_rate": {
+            "count": 648,
+            "n": 11073,
+            "rate": 0.05852072609049038
+          },
+          "mean_extra_tokens": {
+            "sum": 57918,
+            "mean": 5.22772813430815,
+            "n": 11079
+          },
+          "n_lost_total": 709,
+          "invalid_total": 9,
+          "used_tokens_total": 7425292
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.2254121536239733,
+            "sum": -2497.34125,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -249734125
+          },
+          "hedge_rate": {
+            "count": 586,
+            "n": 11079,
+            "rate": 0.052892860366459064
+          },
+          "current_gold_miss_rate": {
+            "count": 565,
+            "n": 11073,
+            "rate": 0.051025015804208436
+          },
+          "mean_extra_tokens": {
+            "sum": 93991,
+            "mean": 8.483707915876884,
+            "n": 11079
+          },
+          "n_lost_total": 623,
+          "invalid_total": 9,
+          "used_tokens_total": 7461365
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.21875074465204442,
+            "sum": -2423.5395,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -242353950
+          },
+          "hedge_rate": {
+            "count": 923,
+            "n": 11079,
+            "rate": 0.08331076811986642
+          },
+          "current_gold_miss_rate": {
+            "count": 481,
+            "n": 11073,
+            "rate": 0.04343899575544116
+          },
+          "mean_extra_tokens": {
+            "sum": 146784,
+            "mean": 13.248849174113188,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 9,
+          "used_tokens_total": 7514158
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.21438011102085025,
+            "sum": -2375.11725,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -237511725
+          },
+          "hedge_rate": {
+            "count": 1247,
+            "n": 11079,
+            "rate": 0.11255528477299395
+          },
+          "current_gold_miss_rate": {
+            "count": 424,
+            "n": 11073,
+            "rate": 0.038291339293777656
+          },
+          "mean_extra_tokens": {
+            "sum": 193095,
+            "mean": 17.428919577579205,
+            "n": 11079
+          },
+          "n_lost_total": 476,
+          "invalid_total": 9,
+          "used_tokens_total": 7560469
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.2114353506634173,
+            "sum": -2342.49225,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -234249225
+          },
+          "hedge_rate": {
+            "count": 1698,
+            "n": 11079,
+            "rate": 0.15326292986731654
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 258595,
+            "mean": 23.341005505912086,
+            "n": 11079
+          },
+          "n_lost_total": 427,
+          "invalid_total": 9,
+          "used_tokens_total": 7625969
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.21092438396967236,
+            "sum": -2336.83125,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -233683125
+          },
+          "hedge_rate": {
+            "count": 2127,
+            "n": 11079,
+            "rate": 0.19198483617655024
+          },
+          "current_gold_miss_rate": {
+            "count": 355,
+            "n": 11073,
+            "rate": 0.032059965682290255
+          },
+          "mean_extra_tokens": {
+            "sum": 315951,
+            "mean": 28.518007040346603,
+            "n": 11079
+          },
+          "n_lost_total": 407,
+          "invalid_total": 9,
+          "used_tokens_total": 7683325
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.21088381171585882,
+            "sum": -2336.38175,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -233638175
+          },
+          "hedge_rate": {
+            "count": 3386,
+            "n": 11079,
+            "rate": 0.3056232511959563
+          },
+          "current_gold_miss_rate": {
+            "count": 314,
+            "n": 11073,
+            "rate": 0.028357265420391943
+          },
+          "mean_extra_tokens": {
+            "sum": 486153,
+            "mean": 43.88058489033306,
+            "n": 11079
+          },
+          "n_lost_total": 364,
+          "invalid_total": 9,
+          "used_tokens_total": 7853527
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.22859371333152811,
+            "sum": -2532.58975,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -253258975
+          },
+          "hedge_rate": {
+            "count": 11044,
+            "n": 11079,
+            "rate": 0.9968408701146313
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1330985,
+            "mean": 120.13584258507086,
+            "n": 11079
+          },
+          "n_lost_total": 349,
+          "invalid_total": 9,
+          "used_tokens_total": 8698359
+        }
+      },
+      "0.5": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.40867289466558354,
+            "sum": -4527.687,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -452768700
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 769,
+            "n": 11073,
+            "rate": 0.06944820735121467
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 835,
+          "invalid_total": 9,
+          "used_tokens_total": 7367374
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.39991389114541026,
+            "sum": -4430.646,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -443064600
+          },
+          "hedge_rate": {
+            "count": 355,
+            "n": 11079,
+            "rate": 0.032042603123025544
+          },
+          "current_gold_miss_rate": {
+            "count": 648,
+            "n": 11073,
+            "rate": 0.05852072609049038
+          },
+          "mean_extra_tokens": {
+            "sum": 57918,
+            "mean": 5.22772813430815,
+            "n": 11079
+          },
+          "n_lost_total": 709,
+          "invalid_total": 9,
+          "used_tokens_total": 7425292
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.3937794476035743,
+            "sum": -4362.6825,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -436268250
+          },
+          "hedge_rate": {
+            "count": 586,
+            "n": 11079,
+            "rate": 0.052892860366459064
+          },
+          "current_gold_miss_rate": {
+            "count": 565,
+            "n": 11073,
+            "rate": 0.051025015804208436
+          },
+          "mean_extra_tokens": {
+            "sum": 93991,
+            "mean": 8.483707915876884,
+            "n": 11079
+          },
+          "n_lost_total": 623,
+          "invalid_total": 9,
+          "used_tokens_total": 7461365
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.38830932394620454,
+            "sum": -4302.079,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -430207900
+          },
+          "hedge_rate": {
+            "count": 923,
+            "n": 11079,
+            "rate": 0.08331076811986642
+          },
+          "current_gold_miss_rate": {
+            "count": 481,
+            "n": 11073,
+            "rate": 0.04343899575544116
+          },
+          "mean_extra_tokens": {
+            "sum": 146784,
+            "mean": 13.248849174113188,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 9,
+          "used_tokens_total": 7514158
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.3849837079158769,
+            "sum": -4265.2345,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -426523450
+          },
+          "hedge_rate": {
+            "count": 1247,
+            "n": 11079,
+            "rate": 0.11255528477299395
+          },
+          "current_gold_miss_rate": {
+            "count": 424,
+            "n": 11073,
+            "rate": 0.038291339293777656
+          },
+          "mean_extra_tokens": {
+            "sum": 193095,
+            "mean": 17.428919577579205,
+            "n": 11079
+          },
+          "n_lost_total": 476,
+          "invalid_total": 9,
+          "used_tokens_total": 7560469
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.3835169690405271,
+            "sum": -4248.9845,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -424898450
+          },
+          "hedge_rate": {
+            "count": 1698,
+            "n": 11079,
+            "rate": 0.15326292986731654
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 258595,
+            "mean": 23.341005505912086,
+            "n": 11079
+          },
+          "n_lost_total": 427,
+          "invalid_total": 9,
+          "used_tokens_total": 7625969
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.3843002527303908,
+            "sum": -4257.6625,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -425766250
+          },
+          "hedge_rate": {
+            "count": 2127,
+            "n": 11079,
+            "rate": 0.19198483617655024
+          },
+          "current_gold_miss_rate": {
+            "count": 355,
+            "n": 11073,
+            "rate": 0.032059965682290255
+          },
+          "mean_extra_tokens": {
+            "sum": 315951,
+            "mean": 28.518007040346603,
+            "n": 11079
+          },
+          "n_lost_total": 407,
+          "invalid_total": 9,
+          "used_tokens_total": 7683325
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.3881003249390739,
+            "sum": -4299.7635,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -429976350
+          },
+          "hedge_rate": {
+            "count": 3386,
+            "n": 11079,
+            "rate": 0.3056232511959563
+          },
+          "current_gold_miss_rate": {
+            "count": 314,
+            "n": 11073,
+            "rate": 0.028357265420391943
+          },
+          "mean_extra_tokens": {
+            "sum": 486153,
+            "mean": 43.88058489033306,
+            "n": 11079
+          },
+          "n_lost_total": 364,
+          "invalid_total": 9,
+          "used_tokens_total": 7853527
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.4248740409784277,
+            "sum": -4707.1795,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -470717950
+          },
+          "hedge_rate": {
+            "count": 11044,
+            "n": 11079,
+            "rate": 0.9968408701146313
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1330985,
+            "mean": 120.13584258507086,
+            "n": 11079
+          },
+          "n_lost_total": 349,
+          "invalid_total": 9,
+          "used_tokens_total": 8698359
+        }
+      },
+      "1.0": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7411656286668472,
+            "sum": -8211.374,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -821137400
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 769,
+            "n": 11073,
+            "rate": 0.06944820735121467
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 835,
+          "invalid_total": 9,
+          "used_tokens_total": 7367374
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.735020489213828,
+            "sum": -8143.292,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -814329200
+          },
+          "hedge_rate": {
+            "count": 355,
+            "n": 11079,
+            "rate": 0.032042603123025544
+          },
+          "current_gold_miss_rate": {
+            "count": 648,
+            "n": 11073,
+            "rate": 0.05852072609049038
+          },
+          "mean_extra_tokens": {
+            "sum": 57918,
+            "mean": 5.22772813430815,
+            "n": 11079
+          },
+          "n_lost_total": 709,
+          "invalid_total": 9,
+          "used_tokens_total": 7425292
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7305140355627764,
+            "sum": -8093.365,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -809336500
+          },
+          "hedge_rate": {
+            "count": 586,
+            "n": 11079,
+            "rate": 0.052892860366459064
+          },
+          "current_gold_miss_rate": {
+            "count": 565,
+            "n": 11073,
+            "rate": 0.051025015804208436
+          },
+          "mean_extra_tokens": {
+            "sum": 93991,
+            "mean": 8.483707915876884,
+            "n": 11079
+          },
+          "n_lost_total": 623,
+          "invalid_total": 9,
+          "used_tokens_total": 7461365
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7274264825345248,
+            "sum": -8059.158,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -805915800
+          },
+          "hedge_rate": {
+            "count": 923,
+            "n": 11079,
+            "rate": 0.08331076811986642
+          },
+          "current_gold_miss_rate": {
+            "count": 481,
+            "n": 11073,
+            "rate": 0.04343899575544116
+          },
+          "mean_extra_tokens": {
+            "sum": 146784,
+            "mean": 13.248849174113188,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 9,
+          "used_tokens_total": 7514158
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7261909017059301,
+            "sum": -8045.469,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -804546900
+          },
+          "hedge_rate": {
+            "count": 1247,
+            "n": 11079,
+            "rate": 0.11255528477299395
+          },
+          "current_gold_miss_rate": {
+            "count": 424,
+            "n": 11073,
+            "rate": 0.038291339293777656
+          },
+          "mean_extra_tokens": {
+            "sum": 193095,
+            "mean": 17.428919577579205,
+            "n": 11079
+          },
+          "n_lost_total": 476,
+          "invalid_total": 9,
+          "used_tokens_total": 7560469
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7276802057947468,
+            "sum": -8061.969,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -806196900
+          },
+          "hedge_rate": {
+            "count": 1698,
+            "n": 11079,
+            "rate": 0.15326292986731654
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 258595,
+            "mean": 23.341005505912086,
+            "n": 11079
+          },
+          "n_lost_total": 427,
+          "invalid_total": 9,
+          "used_tokens_total": 7625969
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7310519902518278,
+            "sum": -8099.325,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -809932500
+          },
+          "hedge_rate": {
+            "count": 2127,
+            "n": 11079,
+            "rate": 0.19198483617655024
+          },
+          "current_gold_miss_rate": {
+            "count": 355,
+            "n": 11073,
+            "rate": 0.032059965682290255
+          },
+          "mean_extra_tokens": {
+            "sum": 315951,
+            "mean": 28.518007040346603,
+            "n": 11079
+          },
+          "n_lost_total": 407,
+          "invalid_total": 9,
+          "used_tokens_total": 7683325
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7425333513855041,
+            "sum": -8226.527,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -822652700
+          },
+          "hedge_rate": {
+            "count": 3386,
+            "n": 11079,
+            "rate": 0.3056232511959563
+          },
+          "current_gold_miss_rate": {
+            "count": 314,
+            "n": 11073,
+            "rate": 0.028357265420391943
+          },
+          "mean_extra_tokens": {
+            "sum": 486153,
+            "mean": 43.88058489033306,
+            "n": 11079
+          },
+          "n_lost_total": 364,
+          "invalid_total": 9,
+          "used_tokens_total": 7853527
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.8174346962722268,
+            "sum": -9056.359,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -905635900
+          },
+          "hedge_rate": {
+            "count": 11044,
+            "n": 11079,
+            "rate": 0.9968408701146313
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1330985,
+            "mean": 120.13584258507086,
+            "n": 11079
+          },
+          "n_lost_total": 349,
+          "invalid_total": 9,
+          "used_tokens_total": 8698359
+        }
+      }
+    },
+    "reselect": {
+      "0": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.08601859373589674,
+            "sum": -953.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -95300000
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 760,
+            "n": 11073,
+            "rate": 0.06863541948884674
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 946,
+          "invalid_total": 7,
+          "used_tokens_total": 7295964
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.0773535517645997,
+            "sum": -857.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -85700000
+          },
+          "hedge_rate": {
+            "count": 345,
+            "n": 11079,
+            "rate": 0.031139994584348768
+          },
+          "current_gold_miss_rate": {
+            "count": 665,
+            "n": 11073,
+            "rate": 0.060055992052740904
+          },
+          "mean_extra_tokens": {
+            "sum": 54599,
+            "mean": 4.928152360321328,
+            "n": 11079
+          },
+          "n_lost_total": 850,
+          "invalid_total": 7,
+          "used_tokens_total": 7350563
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.06877877064717032,
+            "sum": -762.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -76200000
+          },
+          "hedge_rate": {
+            "count": 589,
+            "n": 11079,
+            "rate": 0.053163642928062096
+          },
+          "current_gold_miss_rate": {
+            "count": 571,
+            "n": 11073,
+            "rate": 0.05156687437912038
+          },
+          "mean_extra_tokens": {
+            "sum": 92660,
+            "mean": 8.363570719379005,
+            "n": 11079
+          },
+          "n_lost_total": 755,
+          "invalid_total": 7,
+          "used_tokens_total": 7388624
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.06101633721455005,
+            "sum": -676.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -67600000
+          },
+          "hedge_rate": {
+            "count": 898,
+            "n": 11079,
+            "rate": 0.08105424677317448
+          },
+          "current_gold_miss_rate": {
+            "count": 486,
+            "n": 11073,
+            "rate": 0.043890544567867784
+          },
+          "mean_extra_tokens": {
+            "sum": 139769,
+            "mean": 12.615669284231428,
+            "n": 11079
+          },
+          "n_lost_total": 669,
+          "invalid_total": 7,
+          "used_tokens_total": 7435733
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.05569094683635707,
+            "sum": -617.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -61700000
+          },
+          "hedge_rate": {
+            "count": 1218,
+            "n": 11079,
+            "rate": 0.1099377200108313
+          },
+          "current_gold_miss_rate": {
+            "count": 433,
+            "n": 11073,
+            "rate": 0.03910412715614558
+          },
+          "mean_extra_tokens": {
+            "sum": 186675,
+            "mean": 16.849444895748714,
+            "n": 11079
+          },
+          "n_lost_total": 610,
+          "invalid_total": 7,
+          "used_tokens_total": 7482639
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.05045581731203177,
+            "sum": -559.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -55900000
+          },
+          "hedge_rate": {
+            "count": 1676,
+            "n": 11079,
+            "rate": 0.15127719108222765
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 252704,
+            "mean": 22.809278815777596,
+            "n": 11079
+          },
+          "n_lost_total": 552,
+          "invalid_total": 7,
+          "used_tokens_total": 7548668
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.04901164365014893,
+            "sum": -543.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -54300000
+          },
+          "hedge_rate": {
+            "count": 2076,
+            "n": 11079,
+            "rate": 0.18738153262929869
+          },
+          "current_gold_miss_rate": {
+            "count": 359,
+            "n": 11073,
+            "rate": 0.032421204732231555
+          },
+          "mean_extra_tokens": {
+            "sum": 305882,
+            "mean": 27.609170502752956,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 7,
+          "used_tokens_total": 7601846
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.04513042693383879,
+            "sum": -500.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -50000000
+          },
+          "hedge_rate": {
+            "count": 3353,
+            "n": 11079,
+            "rate": 0.30264464301832295
+          },
+          "current_gold_miss_rate": {
+            "count": 316,
+            "n": 11073,
+            "rate": 0.028537884945362593
+          },
+          "mean_extra_tokens": {
+            "sum": 477093,
+            "mean": 43.0628215542919,
+            "n": 11079
+          },
+          "n_lost_total": 493,
+          "invalid_total": 7,
+          "used_tokens_total": 7773057
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.0435057315642206,
+            "sum": -482.0,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -48200000
+          },
+          "hedge_rate": {
+            "count": 11052,
+            "n": 11079,
+            "rate": 0.9975629569455727
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1324931,
+            "mean": 119.58940337575594,
+            "n": 11079
+          },
+          "n_lost_total": 475,
+          "invalid_total": 7,
+          "used_tokens_total": 8620895
+        }
+      },
+      "0.1": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.15187258777868037,
+            "sum": -1682.5964,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -168259640
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 760,
+            "n": 11073,
+            "rate": 0.06863541948884674
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 946,
+          "invalid_total": 7,
+          "used_tokens_total": 7295964
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.14370036104341546,
+            "sum": -1592.0563,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -159205630
+          },
+          "hedge_rate": {
+            "count": 345,
+            "n": 11079,
+            "rate": 0.031139994584348768
+          },
+          "current_gold_miss_rate": {
+            "count": 665,
+            "n": 11073,
+            "rate": 0.060055992052740904
+          },
+          "mean_extra_tokens": {
+            "sum": 54599,
+            "mean": 4.928152360321328,
+            "n": 11079
+          },
+          "n_lost_total": 850,
+          "invalid_total": 7,
+          "used_tokens_total": 7350563
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.13546912176189188,
+            "sum": -1500.8624,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -150086240
+          },
+          "hedge_rate": {
+            "count": 589,
+            "n": 11079,
+            "rate": 0.053163642928062096
+          },
+          "current_gold_miss_rate": {
+            "count": 571,
+            "n": 11073,
+            "rate": 0.05156687437912038
+          },
+          "mean_extra_tokens": {
+            "sum": 92660,
+            "mean": 8.363570719379005,
+            "n": 11079
+          },
+          "n_lost_total": 755,
+          "invalid_total": 7,
+          "used_tokens_total": 7388624
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.12813189818575685,
+            "sum": -1419.5733,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -141957330
+          },
+          "hedge_rate": {
+            "count": 898,
+            "n": 11079,
+            "rate": 0.08105424677317448
+          },
+          "current_gold_miss_rate": {
+            "count": 486,
+            "n": 11073,
+            "rate": 0.043890544567867784
+          },
+          "mean_extra_tokens": {
+            "sum": 139769,
+            "mean": 12.615669284231428,
+            "n": 11079
+          },
+          "n_lost_total": 669,
+          "invalid_total": 7,
+          "used_tokens_total": 7435733
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.12322988536871558,
+            "sum": -1365.2639,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -136526390
+          },
+          "hedge_rate": {
+            "count": 1218,
+            "n": 11079,
+            "rate": 0.1099377200108313
+          },
+          "current_gold_miss_rate": {
+            "count": 433,
+            "n": 11073,
+            "rate": 0.03910412715614558
+          },
+          "mean_extra_tokens": {
+            "sum": 186675,
+            "mean": 16.849444895748714,
+            "n": 11079
+          },
+          "n_lost_total": 610,
+          "invalid_total": 7,
+          "used_tokens_total": 7482639
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.11859073923639317,
+            "sum": -1313.8668,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -131386680
+          },
+          "hedge_rate": {
+            "count": 1676,
+            "n": 11079,
+            "rate": 0.15127719108222765
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 252704,
+            "mean": 22.809278815777596,
+            "n": 11079
+          },
+          "n_lost_total": 552,
+          "invalid_total": 7,
+          "used_tokens_total": 7548668
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.11762655474320786,
+            "sum": -1303.1846,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -130318460
+          },
+          "hedge_rate": {
+            "count": 2076,
+            "n": 11079,
+            "rate": 0.18738153262929869
+          },
+          "current_gold_miss_rate": {
+            "count": 359,
+            "n": 11073,
+            "rate": 0.032421204732231555
+          },
+          "mean_extra_tokens": {
+            "sum": 305882,
+            "mean": 27.609170502752956,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 7,
+          "used_tokens_total": 7601846
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.11529070313205163,
+            "sum": -1277.3057,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -127730570
+          },
+          "hedge_rate": {
+            "count": 3353,
+            "n": 11079,
+            "rate": 0.30264464301832295
+          },
+          "current_gold_miss_rate": {
+            "count": 316,
+            "n": 11073,
+            "rate": 0.028537884945362593
+          },
+          "mean_extra_tokens": {
+            "sum": 477093,
+            "mean": 43.0628215542919,
+            "n": 11079
+          },
+          "n_lost_total": 493,
+          "invalid_total": 7,
+          "used_tokens_total": 7773057
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.12131866594457984,
+            "sum": -1344.0895,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -134408950
+          },
+          "hedge_rate": {
+            "count": 11052,
+            "n": 11079,
+            "rate": 0.9975629569455727
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1324931,
+            "mean": 119.58940337575594,
+            "n": 11079
+          },
+          "n_lost_total": 475,
+          "invalid_total": 7,
+          "used_tokens_total": 8620895
+        }
+      },
+      "0.25": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.25065357884285583,
+            "sum": -2776.991,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -277699100
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 760,
+            "n": 11073,
+            "rate": 0.06863541948884674
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 946,
+          "invalid_total": 7,
+          "used_tokens_total": 7295964
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.24322057496163912,
+            "sum": -2694.64075,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -269464075
+          },
+          "hedge_rate": {
+            "count": 345,
+            "n": 11079,
+            "rate": 0.031139994584348768
+          },
+          "current_gold_miss_rate": {
+            "count": 665,
+            "n": 11073,
+            "rate": 0.060055992052740904
+          },
+          "mean_extra_tokens": {
+            "sum": 54599,
+            "mean": 4.928152360321328,
+            "n": 11079
+          },
+          "n_lost_total": 850,
+          "invalid_total": 7,
+          "used_tokens_total": 7350563
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.23550464843397417,
+            "sum": -2609.156,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -260915600
+          },
+          "hedge_rate": {
+            "count": 589,
+            "n": 11079,
+            "rate": 0.053163642928062096
+          },
+          "current_gold_miss_rate": {
+            "count": 571,
+            "n": 11073,
+            "rate": 0.05156687437912038
+          },
+          "mean_extra_tokens": {
+            "sum": 92660,
+            "mean": 8.363570719379005,
+            "n": 11079
+          },
+          "n_lost_total": 755,
+          "invalid_total": 7,
+          "used_tokens_total": 7388624
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.22880523964256702,
+            "sum": -2534.93325,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -253493325
+          },
+          "hedge_rate": {
+            "count": 898,
+            "n": 11079,
+            "rate": 0.08105424677317448
+          },
+          "current_gold_miss_rate": {
+            "count": 486,
+            "n": 11073,
+            "rate": 0.043890544567867784
+          },
+          "mean_extra_tokens": {
+            "sum": 139769,
+            "mean": 12.615669284231428,
+            "n": 11079
+          },
+          "n_lost_total": 669,
+          "invalid_total": 7,
+          "used_tokens_total": 7435733
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.22453829316725335,
+            "sum": -2487.65975,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -248765975
+          },
+          "hedge_rate": {
+            "count": 1218,
+            "n": 11079,
+            "rate": 0.1099377200108313
+          },
+          "current_gold_miss_rate": {
+            "count": 433,
+            "n": 11073,
+            "rate": 0.03910412715614558
+          },
+          "mean_extra_tokens": {
+            "sum": 186675,
+            "mean": 16.849444895748714,
+            "n": 11079
+          },
+          "n_lost_total": 610,
+          "invalid_total": 7,
+          "used_tokens_total": 7482639
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.22079312212293528,
+            "sum": -2446.167,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -244616700
+          },
+          "hedge_rate": {
+            "count": 1676,
+            "n": 11079,
+            "rate": 0.15127719108222765
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 252704,
+            "mean": 22.809278815777596,
+            "n": 11079
+          },
+          "n_lost_total": 552,
+          "invalid_total": 7,
+          "used_tokens_total": 7548668
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.22054892138279628,
+            "sum": -2443.4615,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -244346150
+          },
+          "hedge_rate": {
+            "count": 2076,
+            "n": 11079,
+            "rate": 0.18738153262929869
+          },
+          "current_gold_miss_rate": {
+            "count": 359,
+            "n": 11073,
+            "rate": 0.032421204732231555
+          },
+          "mean_extra_tokens": {
+            "sum": 305882,
+            "mean": 27.609170502752956,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 7,
+          "used_tokens_total": 7601846
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.22053111742937087,
+            "sum": -2443.26425,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -244326425
+          },
+          "hedge_rate": {
+            "count": 3353,
+            "n": 11079,
+            "rate": 0.30264464301832295
+          },
+          "current_gold_miss_rate": {
+            "count": 316,
+            "n": 11073,
+            "rate": 0.028537884945362593
+          },
+          "mean_extra_tokens": {
+            "sum": 477093,
+            "mean": 43.0628215542919,
+            "n": 11079
+          },
+          "n_lost_total": 493,
+          "invalid_total": 7,
+          "used_tokens_total": 7773057
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.2380380675151187,
+            "sum": -2637.22375,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -263722375
+          },
+          "hedge_rate": {
+            "count": 11052,
+            "n": 11079,
+            "rate": 0.9975629569455727
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1324931,
+            "mean": 119.58940337575594,
+            "n": 11079
+          },
+          "n_lost_total": 475,
+          "invalid_total": 7,
+          "used_tokens_total": 8620895
+        }
+      },
+      "0.5": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.41528856394981495,
+            "sum": -4600.982,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -460098200
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 760,
+            "n": 11073,
+            "rate": 0.06863541948884674
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 946,
+          "invalid_total": 7,
+          "used_tokens_total": 7295964
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.40908759815867857,
+            "sum": -4532.2815,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -453228150
+          },
+          "hedge_rate": {
+            "count": 345,
+            "n": 11079,
+            "rate": 0.031139994584348768
+          },
+          "current_gold_miss_rate": {
+            "count": 665,
+            "n": 11073,
+            "rate": 0.060055992052740904
+          },
+          "mean_extra_tokens": {
+            "sum": 54599,
+            "mean": 4.928152360321328,
+            "n": 11079
+          },
+          "n_lost_total": 850,
+          "invalid_total": 7,
+          "used_tokens_total": 7350563
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.40223052622077804,
+            "sum": -4456.312,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -445631200
+          },
+          "hedge_rate": {
+            "count": 589,
+            "n": 11079,
+            "rate": 0.053163642928062096
+          },
+          "current_gold_miss_rate": {
+            "count": 571,
+            "n": 11073,
+            "rate": 0.05156687437912038
+          },
+          "mean_extra_tokens": {
+            "sum": 92660,
+            "mean": 8.363570719379005,
+            "n": 11079
+          },
+          "n_lost_total": 755,
+          "invalid_total": 7,
+          "used_tokens_total": 7388624
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.39659414207058397,
+            "sum": -4393.8665,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -439386650
+          },
+          "hedge_rate": {
+            "count": 898,
+            "n": 11079,
+            "rate": 0.08105424677317448
+          },
+          "current_gold_miss_rate": {
+            "count": 486,
+            "n": 11073,
+            "rate": 0.043890544567867784
+          },
+          "mean_extra_tokens": {
+            "sum": 139769,
+            "mean": 12.615669284231428,
+            "n": 11079
+          },
+          "n_lost_total": 669,
+          "invalid_total": 7,
+          "used_tokens_total": 7435733
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.39338563949814964,
+            "sum": -4358.3195,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -435831950
+          },
+          "hedge_rate": {
+            "count": 1218,
+            "n": 11079,
+            "rate": 0.1099377200108313
+          },
+          "current_gold_miss_rate": {
+            "count": 433,
+            "n": 11073,
+            "rate": 0.03910412715614558
+          },
+          "mean_extra_tokens": {
+            "sum": 186675,
+            "mean": 16.849444895748714,
+            "n": 11079
+          },
+          "n_lost_total": 610,
+          "invalid_total": 7,
+          "used_tokens_total": 7482639
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.3911304269338388,
+            "sum": -4333.334,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -433333400
+          },
+          "hedge_rate": {
+            "count": 1676,
+            "n": 11079,
+            "rate": 0.15127719108222765
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 252704,
+            "mean": 22.809278815777596,
+            "n": 11079
+          },
+          "n_lost_total": 552,
+          "invalid_total": 7,
+          "used_tokens_total": 7548668
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.3920861991154436,
+            "sum": -4343.923,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -434392300
+          },
+          "hedge_rate": {
+            "count": 2076,
+            "n": 11079,
+            "rate": 0.18738153262929869
+          },
+          "current_gold_miss_rate": {
+            "count": 359,
+            "n": 11073,
+            "rate": 0.032421204732231555
+          },
+          "mean_extra_tokens": {
+            "sum": 305882,
+            "mean": 27.609170502752956,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 7,
+          "used_tokens_total": 7601846
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.39593180792490296,
+            "sum": -4386.5285,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -438652850
+          },
+          "hedge_rate": {
+            "count": 3353,
+            "n": 11079,
+            "rate": 0.30264464301832295
+          },
+          "current_gold_miss_rate": {
+            "count": 316,
+            "n": 11073,
+            "rate": 0.028537884945362593
+          },
+          "mean_extra_tokens": {
+            "sum": 477093,
+            "mean": 43.0628215542919,
+            "n": 11079
+          },
+          "n_lost_total": 493,
+          "invalid_total": 7,
+          "used_tokens_total": 7773057
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.4325704034660168,
+            "sum": -4792.4475,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -479244750
+          },
+          "hedge_rate": {
+            "count": 11052,
+            "n": 11079,
+            "rate": 0.9975629569455727
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1324931,
+            "mean": 119.58940337575594,
+            "n": 11079
+          },
+          "n_lost_total": 475,
+          "invalid_total": 7,
+          "used_tokens_total": 8620895
+        }
+      },
+      "1.0": {
+        "0.0": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7445585341637332,
+            "sum": -8248.964,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -824896400
+          },
+          "hedge_rate": {
+            "count": 0,
+            "n": 11079,
+            "rate": 0.0
+          },
+          "current_gold_miss_rate": {
+            "count": 760,
+            "n": 11073,
+            "rate": 0.06863541948884674
+          },
+          "mean_extra_tokens": {
+            "sum": 0,
+            "mean": 0.0,
+            "n": 11079
+          },
+          "n_lost_total": 946,
+          "invalid_total": 7,
+          "used_tokens_total": 7295964
+        },
+        "0.5": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7408216445527575,
+            "sum": -8207.563,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -820756300
+          },
+          "hedge_rate": {
+            "count": 345,
+            "n": 11079,
+            "rate": 0.031139994584348768
+          },
+          "current_gold_miss_rate": {
+            "count": 665,
+            "n": 11073,
+            "rate": 0.060055992052740904
+          },
+          "mean_extra_tokens": {
+            "sum": 54599,
+            "mean": 4.928152360321328,
+            "n": 11079
+          },
+          "n_lost_total": 850,
+          "invalid_total": 7,
+          "used_tokens_total": 7350563
+        },
+        "0.6": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7356822817943858,
+            "sum": -8150.624,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -815062400
+          },
+          "hedge_rate": {
+            "count": 589,
+            "n": 11079,
+            "rate": 0.053163642928062096
+          },
+          "current_gold_miss_rate": {
+            "count": 571,
+            "n": 11073,
+            "rate": 0.05156687437912038
+          },
+          "mean_extra_tokens": {
+            "sum": 92660,
+            "mean": 8.363570719379005,
+            "n": 11079
+          },
+          "n_lost_total": 755,
+          "invalid_total": 7,
+          "used_tokens_total": 7388624
+        },
+        "0.7": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7321719469266179,
+            "sum": -8111.733,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -811173300
+          },
+          "hedge_rate": {
+            "count": 898,
+            "n": 11079,
+            "rate": 0.08105424677317448
+          },
+          "current_gold_miss_rate": {
+            "count": 486,
+            "n": 11073,
+            "rate": 0.043890544567867784
+          },
+          "mean_extra_tokens": {
+            "sum": 139769,
+            "mean": 12.615669284231428,
+            "n": 11079
+          },
+          "n_lost_total": 669,
+          "invalid_total": 7,
+          "used_tokens_total": 7435733
+        },
+        "0.8": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7310803321599423,
+            "sum": -8099.639,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -809963900
+          },
+          "hedge_rate": {
+            "count": 1218,
+            "n": 11079,
+            "rate": 0.1099377200108313
+          },
+          "current_gold_miss_rate": {
+            "count": 433,
+            "n": 11073,
+            "rate": 0.03910412715614558
+          },
+          "mean_extra_tokens": {
+            "sum": 186675,
+            "mean": 16.849444895748714,
+            "n": 11079
+          },
+          "n_lost_total": 610,
+          "invalid_total": 7,
+          "used_tokens_total": 7482639
+        },
+        "0.9": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7318050365556458,
+            "sum": -8107.668,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -810766800
+          },
+          "hedge_rate": {
+            "count": 1676,
+            "n": 11079,
+            "rate": 0.15127719108222765
+          },
+          "current_gold_miss_rate": {
+            "count": 375,
+            "n": 11073,
+            "rate": 0.03386616093199675
+          },
+          "mean_extra_tokens": {
+            "sum": 252704,
+            "mean": 22.809278815777596,
+            "n": 11079
+          },
+          "n_lost_total": 552,
+          "invalid_total": 7,
+          "used_tokens_total": 7548668
+        },
+        "0.95": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7351607545807384,
+            "sum": -8144.846,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -814484600
+          },
+          "hedge_rate": {
+            "count": 2076,
+            "n": 11079,
+            "rate": 0.18738153262929869
+          },
+          "current_gold_miss_rate": {
+            "count": 359,
+            "n": 11073,
+            "rate": 0.032421204732231555
+          },
+          "mean_extra_tokens": {
+            "sum": 305882,
+            "mean": 27.609170502752956,
+            "n": 11079
+          },
+          "n_lost_total": 536,
+          "invalid_total": 7,
+          "used_tokens_total": 7601846
+        },
+        "0.99": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.7467331889159672,
+            "sum": -8273.057,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -827305700
+          },
+          "hedge_rate": {
+            "count": 3353,
+            "n": 11079,
+            "rate": 0.30264464301832295
+          },
+          "current_gold_miss_rate": {
+            "count": 316,
+            "n": 11073,
+            "rate": 0.028537884945362593
+          },
+          "mean_extra_tokens": {
+            "sum": 477093,
+            "mean": 43.0628215542919,
+            "n": 11079
+          },
+          "n_lost_total": 493,
+          "invalid_total": 7,
+          "used_tokens_total": 7773057
+        },
+        "1.01": {
+          "n": 11079,
+          "mean_reward": {
+            "mean": -0.821635075367813,
+            "sum": -9102.895,
+            "n": 11079,
+            "numerator_in_1e5_reward_units": -910289500
+          },
+          "hedge_rate": {
+            "count": 11052,
+            "n": 11079,
+            "rate": 0.9975629569455727
+          },
+          "current_gold_miss_rate": {
+            "count": 302,
+            "n": 11073,
+            "rate": 0.02727354827056805
+          },
+          "mean_extra_tokens": {
+            "sum": 1324931,
+            "mean": 119.58940337575594,
+            "n": 11079
+          },
+          "n_lost_total": 475,
+          "invalid_total": 7,
+          "used_tokens_total": 8620895
+        }
+      }
+    }
+  },
+  "selection": "最高平均奖励，并列时取较小阈值。"
+}

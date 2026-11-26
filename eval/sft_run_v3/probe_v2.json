@@ -1,0 +1,286 @@
+{
+  "status": "complete",
+  "model": "v2",
+  "n_groups": 300,
+  "n_completions": 2400,
+  "adapter": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000",
+  "adapter_sha256": "7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c",
+  "training_overlap": 0,
+  "excluded_train_n": 10000,
+  "per_mode": {
+    "reselect": 150,
+    "append": 150
+  },
+  "selected_ids_sha256": "2decd248757f0d76b56692d3f2d597133d8974a136507880764db1e8c03fcc3e",
+  "n_dagger_states": 22158,
+  "population_file": {
+    "sha256": "78b5e4fa6a8ba1b42270e010981c845015038356eda90f5b3ef88c0fea35a641",
+    "bytes": 940613269,
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/rollouts/steps.jsonl"
+  },
+  "training_ids_file": {
+    "path": "/root/userfolder/ctx-compressor/data/sft_v3/sample_ids.json",
+    "bytes": 591909,
+    "sha256": "3f72ef33156500f87bb3625a8565354308a8a71efc563a433cd18967dc0e6138"
+  },
+  "sampled_state_file": {
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/probe/v2/sampled_states.jsonl",
+    "bytes": 4776427,
+    "sha256": "3f6d714abb4d3f004c0ecf0f3198e1d2b66ec5268daf8f714334b1547b9a4b1b"
+  },
+  "raw_samples": {
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/probe/v2/sampler/probe_outputs.jsonl",
+    "bytes": 1095098,
+    "sha256": "8fc32c1299eedbf43b97e9c7ee3b47a3282cc86734ac9a738b8499c183fe9ad2"
+  },
+  "raw_sampler_receipt": {
+    "path": "/root/userfolder/ctx-compressor/dagger_v3/probe/v2/sampler/sampling_probe.json",
+    "bytes": 9021,
+    "sha256": "be9217d42408deac63165cb43399c5415cb65a69a9afb90897266f5c2fd290e3"
+  },
+  "state_seed": 20261123,
+  "generation": {
+    "n": 8,
+    "temperature": 1,
+    "top_p": 1,
+    "max_tokens": 256,
+    "seed": 20261120,
+    "top_k_requested": -1,
+    "top_k_actual": 0,
+    "top_k_interpretation": "0/-1 均为不截断。"
+  },
+  "lambda": 0.3,
+  "mu_grid": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "engine": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-1.7B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "tables": {
+    "pooled": {
+      "n_groups": 300,
+      "n_completions": 2400,
+      "multi_add_rate": {
+        "count": 0,
+        "n": 2400,
+        "rate": 0.0
+      },
+      "multi_add_rate_among_parsed": {
+        "count": 0,
+        "n": 2400,
+        "rate": 0.0
+      },
+      "executed_multi_add_rate": {
+        "count": 0,
+        "n": 2400,
+        "rate": 0.0
+      },
+      "invalid_rate": {
+        "count": 9,
+        "n": 2400,
+        "rate": 0.00375
+      },
+      "mean_distinct_actions": {
+        "sum": 426,
+        "n": 300,
+        "mean": 1.42
+      },
+      "mean_distinct_executed_actions": {
+        "sum": 426,
+        "n": 300,
+        "mean": 1.42
+      },
+      "zero_std_v1": {
+        "count": 223,
+        "n": 300,
+        "rate": 0.7433333333333333
+      },
+      "zero_std_v2": {
+        "0": {
+          "count": 228,
+          "n": 300,
+          "rate": 0.76
+        },
+        "0.1": {
+          "count": 218,
+          "n": 300,
+          "rate": 0.7266666666666667
+        },
+        "0.25": {
+          "count": 218,
+          "n": 300,
+          "rate": 0.7266666666666667
+        },
+        "0.5": {
+          "count": 218,
+          "n": 300,
+          "rate": 0.7266666666666667
+        },
+        "1.0": {
+          "count": 218,
+          "n": 300,
+          "rate": 0.7266666666666667
+        }
+      }
+    },
+    "reselect": {
+      "n_groups": 150,
+      "n_completions": 1200,
+      "multi_add_rate": {
+        "count": 0,
+        "n": 1200,
+        "rate": 0.0
+      },
+      "multi_add_rate_among_parsed": {
+        "count": 0,
+        "n": 1200,
+        "rate": 0.0
+      },
+      "executed_multi_add_rate": {
+        "count": 0,
+        "n": 1200,
+        "rate": 0.0
+      },
+      "invalid_rate": {
+        "count": 1,
+        "n": 1200,
+        "rate": 0.0008333333333333334
+      },
+      "mean_distinct_actions": {
+        "sum": 239,
+        "n": 150,
+        "mean": 1.5933333333333333
+      },
+      "mean_distinct_executed_actions": {
+        "sum": 239,
+        "n": 150,
+        "mean": 1.5933333333333333
+      },
+      "zero_std_v1": {
+        "count": 97,
+        "n": 150,
+        "rate": 0.6466666666666666
+      },
+      "zero_std_v2": {
+        "0": {
+          "count": 101,
+          "n": 150,
+          "rate": 0.6733333333333333
+        },
+        "0.1": {
+          "count": 94,
+          "n": 150,
+          "rate": 0.6266666666666667
+        },
+        "0.25": {
+          "count": 94,
+          "n": 150,
+          "rate": 0.6266666666666667
+        },
+        "0.5": {
+          "count": 94,
+          "n": 150,
+          "rate": 0.6266666666666667
+        },
+        "1.0": {
+          "count": 94,
+          "n": 150,
+          "rate": 0.6266666666666667
+        }
+      }
+    },
+    "append": {
+      "n_groups": 150,
+      "n_completions": 1200,
+      "multi_add_rate": {
+        "count": 0,
+        "n": 1200,
+        "rate": 0.0
+      },
+      "multi_add_rate_among_parsed": {
+        "count": 0,
+        "n": 1200,
+        "rate": 0.0
+      },
+      "executed_multi_add_rate": {
+        "count": 0,
+        "n": 1200,
+        "rate": 0.0
+      },
+      "invalid_rate": {
+        "count": 8,
+        "n": 1200,
+        "rate": 0.006666666666666667
+      },
+      "mean_distinct_actions": {
+        "sum": 187,
+        "n": 150,
+        "mean": 1.2466666666666666
+      },
+      "mean_distinct_executed_actions": {
+        "sum": 187,
+        "n": 150,
+        "mean": 1.2466666666666666
+      },
+      "zero_std_v1": {
+        "count": 126,
+        "n": 150,
+        "rate": 0.84
+      },
+      "zero_std_v2": {
+        "0": {
+          "count": 127,
+          "n": 150,
+          "rate": 0.8466666666666667
+        },
+        "0.1": {
+          "count": 124,
+          "n": 150,
+          "rate": 0.8266666666666667
+        },
+        "0.25": {
+          "count": 124,
+          "n": 150,
+          "rate": 0.8266666666666667
+        },
+        "0.5": {
+          "count": 124,
+          "n": 150,
+          "rate": 0.8266666666666667
+        },
+        "1.0": {
+          "count": 124,
+          "n": 150,
+          "rate": 0.8266666666666667
+        }
+      }
+    }
+  },
+  "definitions": {
+    "multi_add_rate": "可解析且请求至少两个不同的新增编号，占全部生成样本。",
+    "mean_distinct_actions": "每组不同的请求动作数，新增和丢弃各按编号集合比较；无法解析的动作合为一类。",
+    "mean_distinct_executed_actions": "每组执行后的不同保留集合数，无效动作执行为空操作。",
+    "zero_std": "每组八条生成的总体标准差精确等于零。",
+    "greedy_baseline": "SFT v2 checkpoint-2000 before the Task 09 hedge wrapper"
+  }
+}

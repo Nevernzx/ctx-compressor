@@ -1,0 +1,303 @@
+{
+  "status": "passed",
+  "manifests": {
+    "11": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r2/TASK11_SHA256SUMS",
+      "size": 28699,
+      "sha256": "de9a401c02fc12ba4441fdb18ebb6e5c9cb40def56ef5da2b70ac05d62c1989e"
+    },
+    "17": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/TASK17_SHA256SUMS",
+      "size": 37471,
+      "sha256": "7380a932fbbbc2fb6a1a7b8941b03e53698e83f541568e89d61c666ed670a29c"
+    },
+    "18": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r4/TASK18_SHA256SUMS",
+      "size": 21726,
+      "sha256": "017bb1bf47c3179caf7862cbae3bb384f91d3baa2e51e0e7a222a0c940903ea4"
+    }
+  },
+  "base": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "strategy": "SFT v3 checkpoint-3000",
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/config.json",
+        "sha256": "8765bfdb0d5e7fbc73263401e44a30f9be8f4889cda3536c27d4124c9b3b3d9b",
+        "bytes": 1360
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/generation_config.json",
+        "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+        "bytes": 239
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/merge_record.json",
+        "sha256": "01cb8e27693fb113e662f90f60b7747a7159cc02eb9d665e03cafab60c496eb4",
+        "bytes": 620
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/merges.txt",
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "bytes": 1671853
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/model.safetensors",
+        "sha256": "db8565bd4ea4f03136a51b89a497a0a1b962c9a664ba182fee5e1da4e3457f44",
+        "bytes": 3441185608
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/tokenizer.json",
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "bytes": 11422654
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/tokenizer_config.json",
+        "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "bytes": 9732
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/merged_start/vocab.json",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "bytes": 2776833
+      }
+    ]
+  },
+  "adapters": {
+    "r2": {
+      "path": "/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125/adapter_config.json",
+          "sha256": "e4ca95a1861c60f8ef53bc1ef231f17cbbc6a86117cfa0b6dfe80859c4936de3",
+          "bytes": 1081
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125/adapter_model.safetensors",
+          "sha256": "84612222c59733d2652dba101c526f448f3f9ea525ce80696489f4a2ebf05886",
+          "bytes": 69782384
+        }
+      ]
+    },
+    "r4": {
+      "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+      "files": [
+        {
+          "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_config.json",
+          "sha256": "f57a859baa4d8bd8bf8f5cb67c9bd8061d4e25635ae158fff929814d1d7fcdb1",
+          "bytes": 1081
+        },
+        {
+          "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_model.safetensors",
+          "sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf",
+          "bytes": 69782384
+        }
+      ]
+    }
+  },
+  "reranker": {
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B",
+    "model_files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/config.json",
+        "sha256": "ea7e71d263350d75f8fd0ad710328e96453be8ce2aa9dfe296000ee1366bb869",
+        "bytes": 1359
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/generation_config.json",
+        "sha256": "64d86df2173901c58389974bde21f7d2ab9eb7d79f35a337753329d39cf265c0",
+        "bytes": 214
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/model.safetensors",
+        "sha256": "c3b41d67662ed0dd9a46a39c696b2060b323895dec844254b1d34ca604de73c3",
+        "bytes": 2383141336
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/validation_scores.jsonl",
+        "sha256": "1639ca07ec75858c16d5cb4b19b5639349140f789f981128acf68b62b3ca3cf6",
+        "bytes": 2904609
+      }
+    ],
+    "tokenizer_snapshot": [
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/.gitattributes",
+        "sha256": "088e25d6bceaa8943f4f292006210358292349cc36e7578f80c62fce75535f46",
+        "bytes": 2127
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/1_LogitScore/config.json",
+        "sha256": "73e3156450564d8a98b7e47bcf5aace0f29600828b51937da545571e84db3ff3",
+        "bytes": 57
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/README.md",
+        "sha256": "5bba8c734f6dd3ae48317b4139317e45a7fce48fc55e15670b23a0dd15492ab6",
+        "bytes": 14742
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/chat_template.jinja",
+        "sha256": "6f682162495ec5b39fd9005c01b6aa2a74669379fe967039f1e2cbbe8752369d",
+        "bytes": 741
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/config.json",
+        "sha256": "d479c427a9ca5295218063d4f9aca4f297ab4ac27487cca7af42c84643d51ef0",
+        "bytes": 727
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/config_sentence_transformers.json",
+        "sha256": "6a153d6696f78fd588c1c728967f0b773ea869d3c6028f151ce71ebe49140762",
+        "bytes": 325
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/configuration.json",
+        "sha256": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9",
+        "bytes": 73
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/generation_config.json",
+        "sha256": "81051cd3f6e77013827148d0b8a6ead93f8ac390d5ab805f849199f0af6a08db",
+        "bytes": 214
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/merges.txt",
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "bytes": 1671853
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/model.safetensors",
+        "sha256": "27cd75a405b9c1b46b59abfd88aaa209e6fed2a1972cde9b70e7659537c5e65b",
+        "bytes": 1191588280
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/modules.json",
+        "sha256": "6f13b6b4a89e577b591b2077bca40c67c26541a6740a8809267cb474f90806a9",
+        "bytes": 280
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/sentence_bert_config.json",
+        "sha256": "3234ebd224d492cbe8d55d5ec80a3f408451c4db3005bafb64fe1c51c763e01e",
+        "bytes": 362
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/tokenizer.json",
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "bytes": 11422654
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/tokenizer_config.json",
+        "sha256": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0",
+        "bytes": 9706
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/vocab.json",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "bytes": 2776833
+      }
+    ],
+    "template": {
+      "source": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B#using-transformers",
+      "prefix": "<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n",
+      "body": "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {document}",
+      "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+      "instruction": "Given the four questions of a multi-hop QA task, judge whether the passage is a supporting fact needed to answer any of them.",
+      "yes_token_id": 9693,
+      "no_token_id": 2152,
+      "pad_token_id": 151643,
+      "padding_side": "left",
+      "max_pair_tokens": 512,
+      "truncation": "right end of document only",
+      "score": "last_position_logit_yes_minus_no",
+      "probability": "sigmoid"
+    },
+    "tau": 0.5,
+    "checkpoint": 5300
+  },
+  "compressor": {
+    "engine": {
+      "model": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+      "tokenizer": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+      "trust_remote_code": false,
+      "dtype": "bfloat16",
+      "max_model_len": 40960,
+      "gpu_memory_utilization": 0.7,
+      "tensor_parallel_size": 1,
+      "enable_prefix_caching": true,
+      "enable_chunked_prefill": true,
+      "max_num_seqs": 16,
+      "max_num_batched_tokens": 8192,
+      "enforce_eager": true,
+      "enable_lora": true,
+      "max_lora_rank": 16,
+      "max_loras": 1,
+      "max_cpu_loras": 5,
+      "seed": 20261118
+    },
+    "sampling": {
+      "temperature": 0,
+      "max_tokens": 256,
+      "seed": 20261118
+    },
+    "frozen_source": {
+      "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-500/run.json",
+      "sha256": "d30788440e0cf1d0ff2b60bbeefe231806dae1cd3fcd73d4891907b0be5b1417",
+      "bytes": 7421
+    }
+  },
+  "reader": {
+    "frozen_source": {
+      "path": "/root/workplace/ctx-compressor/eval/reader/run_config.json",
+      "size": 212949,
+      "sha256": "a77c26c6c34b73dee47a2e0a8c48bdf8f506721158d17f54370523723089e6da"
+    },
+    "engine": {
+      "model": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+      "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+      "trust_remote_code": false,
+      "dtype": "bfloat16",
+      "max_model_len": 40960,
+      "gpu_memory_utilization": 0.85,
+      "tensor_parallel_size": 1,
+      "enable_prefix_caching": true,
+      "enable_chunked_prefill": true,
+      "max_num_seqs": 16,
+      "max_num_batched_tokens": 8192,
+      "enforce_eager": true,
+      "seed": 20261117,
+      "disable_cascade_attn": true
+    },
+    "generation": {
+      "temperature": 0,
+      "max_tokens": 48,
+      "seed": 20261117,
+      "enable_thinking": false,
+      "n": 1,
+      "system_messages": 0
+    },
+    "packages": {
+      "vllm": "0.11.0",
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "numpy": "2.2.6",
+      "bm25s": "0.3.16",
+      "scipy": "1.17.1"
+    }
+  },
+  "G0": {
+    "ids": [
+      0,
+      1,
+      2
+    ],
+    "sampling_rule": "The three smallest archived held-out task IDs, fixed before replay.",
+    "threshold": 0.05,
+    "trace": {
+      "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r4/checkpoint-500/steps.jsonl",
+      "sha256": "fc6bcbcc69d1291dc913faa3cf41e5cd896f34918bd7681d51326d96457aca2d",
+      "bytes": 230950440
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "status": "archive_verified_cpu",
+  "source": "Authorized CPU-only reconstruction of main_try2",
+  "original_gpu_status": "failed",
+  "original_failure": {
+    "status": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/status.json",
+      "size": 3683,
+      "sha256": "20d32f7ebe9da93b762108eb3b77fb98c08c7ae4900fa7ba4bccd3dc5d03f207"
+    },
+    "root_usage_check": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/root_usage_check.json",
+      "size": 2754,
+      "sha256": "ef5bb3b778e8f58fb1455cc06260889027b6e4d155c04588d0838cbc71d8aee6"
+    },
+    "main_log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/logs/main.log",
+      "size": 888866,
+      "sha256": "d9d4e0e5e945597acb3ee66a5239a9cc7236be2dd68ba371799e4210aba37c92"
+    },
+    "launcher_log": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/launcher.log",
+      "size": 955,
+      "sha256": "ce60cc5e5055d5768f374589ba5035fa17917ee945ce967512b97113380843b6"
+    },
+    "initial_closeout_status": {
+      "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/closeout/cpu_status.json",
+      "size": 287,
+      "sha256": "012ca29de33e69ee6ab0d2b94da047d8ed3c3220d40e53dd19a6e099429251b0"
+    }
+  },
+  "storage_rule": "a",
+  "trace_audit": {
+    "opening_utc": "2026-11-25T14:13:32.790644+00:00",
+    "closing_utc": "2026-11-25T16:38:32.408667+00:00",
+    "samples": 9400,
+    "fd_samples": 9398,
+    "samples_with_root_writable_fds": 0,
+    "samples_with_global_growth_over_limit": 7247,
+    "closing_attributed_growth_bytes": 4096
+  },
+  "attribution_evidence": {
+    "source": "Claude's read-only inspection, relayed with authorization for CPU closeout",
+    "new_files_since": "2026-11-25T22:00:00+08:00",
+    "new_root_files": 7,
+    "new_root_files_approx_kb": 58,
+    "processes_holding_deleted_files": 0,
+    "attributed_growth_kib": 4,
+    "root_available_gb": 13.31,
+    "hypothesis": "Root df counts the host backing filesystem shared with other workloads. A global before/after measurement in rule (a) can include external writes.",
+    "specific_writer_verified": false
+  },
+  "archive": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/episodes.jsonl",
+    "size": 64562418,
+    "sha256": "afab714755ee84c9380f9daa8078354ad490a3bdb954cc5ceb7f33221753d2a2"
+  },
+  "row_events": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/events.jsonl",
+    "size": 3070,
+    "sha256": "cfc17e92f5c1c2731f1d6310ad1fd756aca1fb90b6980563bf1422592379f481"
+  },
+  "episodes": 2400,
+  "rounds": 11627,
+  "rounded_reference_check": {
+    "r4 reselect F1": {
+      "claude_rounded": 34.52,
+      "cpu_recount": 34.5175759230719,
+      "n": 900
+    },
+    "RR-τ reselect F1": {
+      "claude_rounded": 33.52,
+      "cpu_recount": 33.52474199229946,
+      "n": 900
+    },
+    "r4 reselect − RR-τ reselect": {
+      "claude_rounded": 0.99,
+      "cpu_recount": 0.9928339307724358,
+      "n": 900
+    },
+    "r4 append − RR-τ append": {
+      "claude_rounded": 1.66,
+      "cpu_recount": 1.6624493378166127,
+      "n": 900
+    },
+    "r4 reselect − no_compress": {
+      "claude_rounded": -1.03,
+      "cpu_recount": -1.0270961021338338,
+      "n": 900
+    },
+    "r4 reselect − LLMLingua-2": {
+      "claude_rounded": 10.07,
+      "cpu_recount": 10.07304870896712,
+      "n": 900
+    },
+    "oracle − r4 reselect": {
+      "claude_rounded": 6.87,
+      "cpu_recount": 6.866330312312022,
+      "n": 900
+    }
+  },
+  "cpu_tests": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/main_try2/cpu_recovery_tests.json",
+    "size": 4117,
+    "sha256": "6a9e046542eddd70d5361088151a031bbfe90837f5468eb0a25ca716b31d2d4f"
+  }
+}

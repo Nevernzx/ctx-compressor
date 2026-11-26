@@ -1,0 +1,5030 @@
+{
+  "definitions": {
+    "new_gold_add": "Fragment-weighted: returned, known gold through the current step, not in kept_before; count how many are in keep_after. Includes invalid steps.",
+    "kept_gold_survival": "Reselect only. Among kept fragments already revealed as gold BEFORE this return, count how many remain in keep_after. Includes invalid steps.",
+    "all_gold_among_valid_reselect": "Eligible are valid reselect steps >=1; count those whose kept_before is a subset of previously revealed gold (including an empty set).",
+    "all_gold_valid_drop": "Among those eligible all-gold steps, count actual deletions from kept_before.",
+    "first_error": "Earliest step with an invalid output, an eligible new gold missing after the action, or a previously revealed kept gold dropped. Invalid output takes precedence. Both means a miss and a drop on the same valid step. The denominator for each cause (including none) is all trajectories.",
+    "by_step": "Zero-based retrieval position. First-error counts at a position are divided by trajectories that reached that position. None is counted at termination only.",
+    "rate": "count/n, null if n=0"
+  },
+  "source": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/checkpoint-250/steps.jsonl",
+    "sha256": "91449b49d99f42a6767b4baa613ec1ffe345f325f9848150f3a8ace91af623b5",
+    "bytes": 235539305
+  },
+  "combined": {
+    "n_steps": 13956,
+    "n_trajectories": 1494,
+    "new_gold_add": {
+      "count": 13113,
+      "n": 14044,
+      "rate": 0.9337083452007975
+    },
+    "kept_gold_survival": {
+      "count": 26931,
+      "n": 27187,
+      "rate": 0.990583734873285
+    },
+    "all_gold_valid_drop": {
+      "count": 19,
+      "n": 3489,
+      "rate": 0.005445686443106907
+    },
+    "all_gold_among_valid_reselect": {
+      "count": 3489,
+      "n": 6196,
+      "rate": 0.5631052291801162
+    },
+    "first_error": {
+      "invalid_output": {
+        "count": 63,
+        "n": 1494,
+        "rate": 0.04216867469879518
+      },
+      "new_gold_not_added": {
+        "count": 505,
+        "n": 1494,
+        "rate": 0.33801874163319945
+      },
+      "old_gold_dropped": {
+        "count": 162,
+        "n": 1494,
+        "rate": 0.10843373493975904
+      },
+      "both": {
+        "count": 12,
+        "n": 1494,
+        "rate": 0.008032128514056224
+      },
+      "none": {
+        "count": 752,
+        "n": 1494,
+        "rate": 0.5033467202141901
+      }
+    },
+    "by_step": {
+      "0": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1419,
+          "n": 1494,
+          "rate": 0.9497991967871486
+        },
+        "kept_gold_survival": {
+          "count": 0,
+          "n": 0,
+          "rate": null
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 0,
+          "rate": null
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 0,
+          "n": 0,
+          "rate": null
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "new_gold_not_added": {
+            "count": 75,
+            "n": 1494,
+            "rate": 0.050200803212851405
+          },
+          "old_gold_dropped": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "both": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          }
+        }
+      },
+      "1": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1430,
+          "n": 1528,
+          "rate": 0.9358638743455497
+        },
+        "kept_gold_survival": {
+          "count": 687,
+          "n": 711,
+          "rate": 0.9662447257383966
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 624,
+          "rate": 0.0
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 624,
+          "n": 747,
+          "rate": 0.8353413654618473
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "new_gold_not_added": {
+            "count": 60,
+            "n": 1494,
+            "rate": 0.040160642570281124
+          },
+          "old_gold_dropped": {
+            "count": 24,
+            "n": 1494,
+            "rate": 0.01606425702811245
+          },
+          "both": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          }
+        }
+      },
+      "2": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1418,
+          "n": 1500,
+          "rate": 0.9453333333333334
+        },
+        "kept_gold_survival": {
+          "count": 1374,
+          "n": 1406,
+          "rate": 0.9772403982930299
+        },
+        "all_gold_valid_drop": {
+          "count": 3,
+          "n": 525,
+          "rate": 0.005714285714285714
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 525,
+          "n": 747,
+          "rate": 0.7028112449799196
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "new_gold_not_added": {
+            "count": 79,
+            "n": 1494,
+            "rate": 0.05287817938420348
+          },
+          "old_gold_dropped": {
+            "count": 26,
+            "n": 1494,
+            "rate": 0.01740294511378849
+          },
+          "both": {
+            "count": 3,
+            "n": 1494,
+            "rate": 0.002008032128514056
+          },
+          "none": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          }
+        }
+      },
+      "3": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1417,
+          "n": 1512,
+          "rate": 0.9371693121693122
+        },
+        "kept_gold_survival": {
+          "count": 2048,
+          "n": 2079,
+          "rate": 0.9850889850889851
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 473,
+          "rate": 0.0
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 473,
+          "n": 746,
+          "rate": 0.6340482573726541
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "new_gold_not_added": {
+            "count": 48,
+            "n": 1494,
+            "rate": 0.0321285140562249
+          },
+          "old_gold_dropped": {
+            "count": 22,
+            "n": 1494,
+            "rate": 0.014725568942436412
+          },
+          "both": {
+            "count": 3,
+            "n": 1494,
+            "rate": 0.002008032128514056
+          },
+          "none": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          }
+        }
+      },
+      "4": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1417,
+          "n": 1494,
+          "rate": 0.9484605087014726
+        },
+        "kept_gold_survival": {
+          "count": 2727,
+          "n": 2756,
+          "rate": 0.989477503628447
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 457,
+          "rate": 0.0
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 457,
+          "n": 744,
+          "rate": 0.614247311827957
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 7,
+            "n": 1494,
+            "rate": 0.004685408299866131
+          },
+          "new_gold_not_added": {
+            "count": 43,
+            "n": 1494,
+            "rate": 0.028781793842034806
+          },
+          "old_gold_dropped": {
+            "count": 16,
+            "n": 1494,
+            "rate": 0.0107095046854083
+          },
+          "both": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          }
+        }
+      },
+      "5": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1382,
+          "n": 1504,
+          "rate": 0.9188829787234043
+        },
+        "kept_gold_survival": {
+          "count": 3403,
+          "n": 3440,
+          "rate": 0.9892441860465117
+        },
+        "all_gold_valid_drop": {
+          "count": 9,
+          "n": 401,
+          "rate": 0.022443890274314215
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 401,
+          "n": 743,
+          "rate": 0.5397039030955586
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 7,
+            "n": 1494,
+            "rate": 0.004685408299866131
+          },
+          "new_gold_not_added": {
+            "count": 59,
+            "n": 1494,
+            "rate": 0.039491298527443104
+          },
+          "old_gold_dropped": {
+            "count": 26,
+            "n": 1494,
+            "rate": 0.01740294511378849
+          },
+          "both": {
+            "count": 3,
+            "n": 1494,
+            "rate": 0.002008032128514056
+          },
+          "none": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          }
+        }
+      },
+      "6": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1423,
+          "n": 1515,
+          "rate": 0.9392739273927393
+        },
+        "kept_gold_survival": {
+          "count": 4065,
+          "n": 4096,
+          "rate": 0.992431640625
+        },
+        "all_gold_valid_drop": {
+          "count": 3,
+          "n": 322,
+          "rate": 0.009316770186335404
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 322,
+          "n": 746,
+          "rate": 0.4316353887399464
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 1,
+            "n": 1494,
+            "rate": 0.0006693440428380187
+          },
+          "new_gold_not_added": {
+            "count": 48,
+            "n": 1494,
+            "rate": 0.0321285140562249
+          },
+          "old_gold_dropped": {
+            "count": 25,
+            "n": 1494,
+            "rate": 0.01673360107095047
+          },
+          "both": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          }
+        }
+      },
+      "7": {
+        "n_steps": 1494,
+        "n_trajectories": 1494,
+        "new_gold_add": {
+          "count": 1435,
+          "n": 1488,
+          "rate": 0.9643817204301075
+        },
+        "kept_gold_survival": {
+          "count": 4753,
+          "n": 4779,
+          "rate": 0.9945595312826951
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 322,
+          "rate": 0.0
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 322,
+          "n": 743,
+          "rate": 0.43337819650067294
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 7,
+            "n": 1494,
+            "rate": 0.004685408299866131
+          },
+          "new_gold_not_added": {
+            "count": 15,
+            "n": 1494,
+            "rate": 0.010040160642570281
+          },
+          "old_gold_dropped": {
+            "count": 9,
+            "n": 1494,
+            "rate": 0.006024096385542169
+          },
+          "both": {
+            "count": 0,
+            "n": 1494,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 281,
+            "n": 1494,
+            "rate": 0.18808567603748327
+          }
+        }
+      },
+      "8": {
+        "n_steps": 1044,
+        "n_trajectories": 1044,
+        "new_gold_add": {
+          "count": 949,
+          "n": 1051,
+          "rate": 0.9029495718363464
+        },
+        "kept_gold_survival": {
+          "count": 3806,
+          "n": 3817,
+          "rate": 0.9971181556195965
+        },
+        "all_gold_valid_drop": {
+          "count": 1,
+          "n": 218,
+          "rate": 0.0045871559633027525
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 218,
+          "n": 519,
+          "rate": 0.42003853564547206
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 13,
+            "n": 1044,
+            "rate": 0.012452107279693486
+          },
+          "new_gold_not_added": {
+            "count": 36,
+            "n": 1044,
+            "rate": 0.034482758620689655
+          },
+          "old_gold_dropped": {
+            "count": 1,
+            "n": 1044,
+            "rate": 0.0009578544061302681
+          },
+          "both": {
+            "count": 0,
+            "n": 1044,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 234,
+            "n": 1044,
+            "rate": 0.22413793103448276
+          }
+        }
+      },
+      "9": {
+        "n_steps": 612,
+        "n_trajectories": 612,
+        "new_gold_add": {
+          "count": 531,
+          "n": 604,
+          "rate": 0.8791390728476821
+        },
+        "kept_gold_survival": {
+          "count": 2461,
+          "n": 2489,
+          "rate": 0.9887505022097228
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 100,
+          "rate": 0.0
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 100,
+          "n": 298,
+          "rate": 0.33557046979865773
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 18,
+            "n": 612,
+            "rate": 0.029411764705882353
+          },
+          "new_gold_not_added": {
+            "count": 30,
+            "n": 612,
+            "rate": 0.049019607843137254
+          },
+          "old_gold_dropped": {
+            "count": 10,
+            "n": 612,
+            "rate": 0.016339869281045753
+          },
+          "both": {
+            "count": 3,
+            "n": 612,
+            "rate": 0.004901960784313725
+          },
+          "none": {
+            "count": 138,
+            "n": 612,
+            "rate": 0.22549019607843138
+          }
+        }
+      },
+      "10": {
+        "n_steps": 270,
+        "n_trajectories": 270,
+        "new_gold_add": {
+          "count": 226,
+          "n": 276,
+          "rate": 0.8188405797101449
+        },
+        "kept_gold_survival": {
+          "count": 1208,
+          "n": 1212,
+          "rate": 0.9966996699669967
+        },
+        "all_gold_valid_drop": {
+          "count": 3,
+          "n": 43,
+          "rate": 0.06976744186046512
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 43,
+          "n": 128,
+          "rate": 0.3359375
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 4,
+            "n": 270,
+            "rate": 0.014814814814814815
+          },
+          "new_gold_not_added": {
+            "count": 12,
+            "n": 270,
+            "rate": 0.044444444444444446
+          },
+          "old_gold_dropped": {
+            "count": 3,
+            "n": 270,
+            "rate": 0.011111111111111112
+          },
+          "both": {
+            "count": 0,
+            "n": 270,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 76,
+            "n": 270,
+            "rate": 0.2814814814814815
+          }
+        }
+      },
+      "11": {
+        "n_steps": 66,
+        "n_trajectories": 66,
+        "new_gold_add": {
+          "count": 56,
+          "n": 66,
+          "rate": 0.8484848484848485
+        },
+        "kept_gold_survival": {
+          "count": 330,
+          "n": 333,
+          "rate": 0.990990990990991
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 4,
+          "rate": 0.0
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 4,
+          "n": 30,
+          "rate": 0.13333333333333333
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 5,
+            "n": 66,
+            "rate": 0.07575757575757576
+          },
+          "new_gold_not_added": {
+            "count": 0,
+            "n": 66,
+            "rate": 0.0
+          },
+          "old_gold_dropped": {
+            "count": 0,
+            "n": 66,
+            "rate": 0.0
+          },
+          "both": {
+            "count": 0,
+            "n": 66,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 19,
+            "n": 66,
+            "rate": 0.2878787878787879
+          }
+        }
+      },
+      "12": {
+        "n_steps": 12,
+        "n_trajectories": 12,
+        "new_gold_add": {
+          "count": 10,
+          "n": 12,
+          "rate": 0.8333333333333334
+        },
+        "kept_gold_survival": {
+          "count": 69,
+          "n": 69,
+          "rate": 1.0
+        },
+        "all_gold_valid_drop": {
+          "count": 0,
+          "n": 0,
+          "rate": null
+        },
+        "all_gold_among_valid_reselect": {
+          "count": 0,
+          "n": 5,
+          "rate": 0.0
+        },
+        "first_error": {
+          "invalid_output": {
+            "count": 1,
+            "n": 12,
+            "rate": 0.08333333333333333
+          },
+          "new_gold_not_added": {
+            "count": 0,
+            "n": 12,
+            "rate": 0.0
+          },
+          "old_gold_dropped": {
+            "count": 0,
+            "n": 12,
+            "rate": 0.0
+          },
+          "both": {
+            "count": 0,
+            "n": 12,
+            "rate": 0.0
+          },
+          "none": {
+            "count": 4,
+            "n": 12,
+            "rate": 0.3333333333333333
+          }
+        }
+      }
+    }
+  },
+  "configs": {
+    "append|loose": {
+      "n_steps": 2326,
+      "n_trajectories": 249,
+      "new_gold_add": {
+        "count": 2207,
+        "n": 2339,
+        "rate": 0.943565626336041
+      },
+      "kept_gold_survival": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "all_gold_valid_drop": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "all_gold_among_valid_reselect": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 3,
+          "n": 249,
+          "rate": 0.012048192771084338
+        },
+        "new_gold_not_added": {
+          "count": 92,
+          "n": 249,
+          "rate": 0.36947791164658633
+        },
+        "old_gold_dropped": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "both": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "none": {
+          "count": 154,
+          "n": 249,
+          "rate": 0.6184738955823293
+        }
+      },
+      "by_step": {
+        "0": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 235,
+            "n": 249,
+            "rate": 0.9437751004016064
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 14,
+              "n": 249,
+              "rate": 0.05622489959839357
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "1": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 239,
+            "n": 256,
+            "rate": 0.93359375
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 10,
+              "n": 249,
+              "rate": 0.040160642570281124
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "2": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 250,
+            "rate": 0.948
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 13,
+              "n": 249,
+              "rate": 0.05220883534136546
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "3": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 252,
+            "rate": 0.9404761904761905
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "4": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 236,
+            "n": 249,
+            "rate": 0.9477911646586346
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "5": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 230,
+            "n": 250,
+            "rate": 0.92
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 11,
+              "n": 249,
+              "rate": 0.04417670682730924
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "6": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 239,
+            "n": 252,
+            "rate": 0.9484126984126984
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "7": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 242,
+            "n": 248,
+            "rate": 0.9758064516129032
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 3,
+              "n": 249,
+              "rate": 0.012048192771084338
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 55,
+              "n": 249,
+              "rate": 0.22088353413654618
+            }
+          }
+        },
+        "8": {
+          "n_steps": 174,
+          "n_trajectories": 174,
+          "new_gold_add": {
+            "count": 163,
+            "n": 175,
+            "rate": 0.9314285714285714
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 7,
+              "n": 174,
+              "rate": 0.040229885057471264
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 46,
+              "n": 174,
+              "rate": 0.26436781609195403
+            }
+          }
+        },
+        "9": {
+          "n_steps": 102,
+          "n_trajectories": 102,
+          "new_gold_add": {
+            "count": 94,
+            "n": 100,
+            "rate": 0.94
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 102,
+              "rate": 0.00980392156862745
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 102,
+              "rate": 0.058823529411764705
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 102,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 102,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 29,
+              "n": 102,
+              "rate": 0.28431372549019607
+            }
+          }
+        },
+        "10": {
+          "n_steps": 45,
+          "n_trajectories": 45,
+          "new_gold_add": {
+            "count": 42,
+            "n": 45,
+            "rate": 0.9333333333333333
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 2,
+              "n": 45,
+              "rate": 0.044444444444444446
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 18,
+              "n": 45,
+              "rate": 0.4
+            }
+          }
+        },
+        "11": {
+          "n_steps": 11,
+          "n_trajectories": 11,
+          "new_gold_add": {
+            "count": 11,
+            "n": 11,
+            "rate": 1.0
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 5,
+              "n": 11,
+              "rate": 0.45454545454545453
+            }
+          }
+        },
+        "12": {
+          "n_steps": 2,
+          "n_trajectories": 2,
+          "new_gold_add": {
+            "count": 2,
+            "n": 2,
+            "rate": 1.0
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 1,
+              "n": 2,
+              "rate": 0.5
+            }
+          }
+        }
+      }
+    },
+    "append|mid": {
+      "n_steps": 2326,
+      "n_trajectories": 249,
+      "new_gold_add": {
+        "count": 2203,
+        "n": 2339,
+        "rate": 0.9418554938007696
+      },
+      "kept_gold_survival": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "all_gold_valid_drop": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "all_gold_among_valid_reselect": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 5,
+          "n": 249,
+          "rate": 0.020080321285140562
+        },
+        "new_gold_not_added": {
+          "count": 91,
+          "n": 249,
+          "rate": 0.3654618473895582
+        },
+        "old_gold_dropped": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "both": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "none": {
+          "count": 153,
+          "n": 249,
+          "rate": 0.6144578313253012
+        }
+      },
+      "by_step": {
+        "0": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 236,
+            "n": 249,
+            "rate": 0.9477911646586346
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 13,
+              "n": 249,
+              "rate": 0.05220883534136546
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "1": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 240,
+            "n": 256,
+            "rate": 0.9375
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "2": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 250,
+            "rate": 0.952
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 12,
+              "n": 249,
+              "rate": 0.04819277108433735
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "3": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 236,
+            "n": 252,
+            "rate": 0.9365079365079365
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 10,
+              "n": 249,
+              "rate": 0.040160642570281124
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "4": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 236,
+            "n": 249,
+            "rate": 0.9477911646586346
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "5": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 233,
+            "n": 250,
+            "rate": 0.932
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 10,
+              "n": 249,
+              "rate": 0.040160642570281124
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "6": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 252,
+            "rate": 0.9444444444444444
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 10,
+              "n": 249,
+              "rate": 0.040160642570281124
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "7": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 241,
+            "n": 248,
+            "rate": 0.9717741935483871
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 3,
+              "n": 249,
+              "rate": 0.012048192771084338
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 56,
+              "n": 249,
+              "rate": 0.2248995983935743
+            }
+          }
+        },
+        "8": {
+          "n_steps": 174,
+          "n_trajectories": 174,
+          "new_gold_add": {
+            "count": 162,
+            "n": 175,
+            "rate": 0.9257142857142857
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 7,
+              "n": 174,
+              "rate": 0.040229885057471264
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 46,
+              "n": 174,
+              "rate": 0.26436781609195403
+            }
+          }
+        },
+        "9": {
+          "n_steps": 102,
+          "n_trajectories": 102,
+          "new_gold_add": {
+            "count": 91,
+            "n": 100,
+            "rate": 0.91
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 2,
+              "n": 102,
+              "rate": 0.0196078431372549
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 102,
+              "rate": 0.058823529411764705
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 102,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 102,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 28,
+              "n": 102,
+              "rate": 0.27450980392156865
+            }
+          }
+        },
+        "10": {
+          "n_steps": 45,
+          "n_trajectories": 45,
+          "new_gold_add": {
+            "count": 40,
+            "n": 45,
+            "rate": 0.8888888888888888
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 3,
+              "n": 45,
+              "rate": 0.06666666666666667
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 18,
+              "n": 45,
+              "rate": 0.4
+            }
+          }
+        },
+        "11": {
+          "n_steps": 11,
+          "n_trajectories": 11,
+          "new_gold_add": {
+            "count": 10,
+            "n": 11,
+            "rate": 0.9090909090909091
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 11,
+              "rate": 0.09090909090909091
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 4,
+              "n": 11,
+              "rate": 0.36363636363636365
+            }
+          }
+        },
+        "12": {
+          "n_steps": 2,
+          "n_trajectories": 2,
+          "new_gold_add": {
+            "count": 2,
+            "n": 2,
+            "rate": 1.0
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 1,
+              "n": 2,
+              "rate": 0.5
+            }
+          }
+        }
+      }
+    },
+    "append|tight": {
+      "n_steps": 2326,
+      "n_trajectories": 249,
+      "new_gold_add": {
+        "count": 2110,
+        "n": 2346,
+        "rate": 0.8994032395566922
+      },
+      "kept_gold_survival": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "all_gold_valid_drop": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "all_gold_among_valid_reselect": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 38,
+          "n": 249,
+          "rate": 0.15261044176706828
+        },
+        "new_gold_not_added": {
+          "count": 86,
+          "n": 249,
+          "rate": 0.3453815261044177
+        },
+        "old_gold_dropped": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "both": {
+          "count": 0,
+          "n": 249,
+          "rate": 0.0
+        },
+        "none": {
+          "count": 125,
+          "n": 249,
+          "rate": 0.5020080321285141
+        }
+      },
+      "by_step": {
+        "0": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 249,
+            "rate": 0.9518072289156626
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 12,
+              "n": 249,
+              "rate": 0.04819277108433735
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "1": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 254,
+            "rate": 0.937007874015748
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 10,
+              "n": 249,
+              "rate": 0.040160642570281124
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "2": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 250,
+            "rate": 0.952
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 12,
+              "n": 249,
+              "rate": 0.04819277108433735
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "3": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 236,
+            "n": 252,
+            "rate": 0.9365079365079365
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "4": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 235,
+            "n": 249,
+            "rate": 0.9437751004016064
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 2,
+              "n": 249,
+              "rate": 0.008032128514056224
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "5": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 229,
+            "n": 250,
+            "rate": 0.916
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 2,
+              "n": 249,
+              "rate": 0.008032128514056224
+            },
+            "new_gold_not_added": {
+              "count": 11,
+              "n": 249,
+              "rate": 0.04417670682730924
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "6": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 232,
+            "n": 252,
+            "rate": 0.9206349206349206
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "7": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 227,
+            "n": 248,
+            "rate": 0.9153225806451613
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 6,
+              "n": 249,
+              "rate": 0.024096385542168676
+            },
+            "new_gold_not_added": {
+              "count": 3,
+              "n": 249,
+              "rate": 0.012048192771084338
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 53,
+              "n": 249,
+              "rate": 0.21285140562248997
+            }
+          }
+        },
+        "8": {
+          "n_steps": 174,
+          "n_trajectories": 174,
+          "new_gold_add": {
+            "count": 141,
+            "n": 176,
+            "rate": 0.8011363636363636
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 11,
+              "n": 174,
+              "rate": 0.06321839080459771
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 174,
+              "rate": 0.034482758620689655
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 39,
+              "n": 174,
+              "rate": 0.22413793103448276
+            }
+          }
+        },
+        "9": {
+          "n_steps": 102,
+          "n_trajectories": 102,
+          "new_gold_add": {
+            "count": 67,
+            "n": 103,
+            "rate": 0.6504854368932039
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 10,
+              "n": 102,
+              "rate": 0.09803921568627451
+            },
+            "new_gold_not_added": {
+              "count": 5,
+              "n": 102,
+              "rate": 0.049019607843137254
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 102,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 102,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 19,
+              "n": 102,
+              "rate": 0.18627450980392157
+            }
+          }
+        },
+        "10": {
+          "n_steps": 45,
+          "n_trajectories": 45,
+          "new_gold_add": {
+            "count": 24,
+            "n": 50,
+            "rate": 0.48
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 3,
+              "n": 45,
+              "rate": 0.06666666666666667
+            },
+            "new_gold_not_added": {
+              "count": 1,
+              "n": 45,
+              "rate": 0.022222222222222223
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 12,
+              "n": 45,
+              "rate": 0.26666666666666666
+            }
+          }
+        },
+        "11": {
+          "n_steps": 11,
+          "n_trajectories": 11,
+          "new_gold_add": {
+            "count": 5,
+            "n": 11,
+            "rate": 0.45454545454545453
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 3,
+              "n": 11,
+              "rate": 0.2727272727272727
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 2,
+              "n": 11,
+              "rate": 0.18181818181818182
+            }
+          }
+        },
+        "12": {
+          "n_steps": 2,
+          "n_trajectories": 2,
+          "new_gold_add": {
+            "count": 1,
+            "n": 2,
+            "rate": 0.5
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            }
+          }
+        }
+      }
+    },
+    "reselect|loose": {
+      "n_steps": 2326,
+      "n_trajectories": 249,
+      "new_gold_add": {
+        "count": 2205,
+        "n": 2340,
+        "rate": 0.9423076923076923
+      },
+      "kept_gold_survival": {
+        "count": 8980,
+        "n": 9065,
+        "rate": 0.9906232763375621
+      },
+      "all_gold_valid_drop": {
+        "count": 7,
+        "n": 1159,
+        "rate": 0.0060396893874029335
+      },
+      "all_gold_among_valid_reselect": {
+        "count": 1159,
+        "n": 2074,
+        "rate": 0.5588235294117647
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 3,
+          "n": 249,
+          "rate": 0.012048192771084338
+        },
+        "new_gold_not_added": {
+          "count": 80,
+          "n": 249,
+          "rate": 0.321285140562249
+        },
+        "old_gold_dropped": {
+          "count": 54,
+          "n": 249,
+          "rate": 0.21686746987951808
+        },
+        "both": {
+          "count": 4,
+          "n": 249,
+          "rate": 0.01606425702811245
+        },
+        "none": {
+          "count": 108,
+          "n": 249,
+          "rate": 0.43373493975903615
+        }
+      },
+      "by_step": {
+        "0": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 236,
+            "n": 249,
+            "rate": 0.9477911646586346
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 13,
+              "n": 249,
+              "rate": 0.05220883534136546
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "1": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 254,
+            "rate": 0.9330708661417323
+          },
+          "kept_gold_survival": {
+            "count": 229,
+            "n": 236,
+            "rate": 0.9703389830508474
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 208,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 208,
+            "n": 249,
+            "rate": 0.8353413654618473
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 11,
+              "n": 249,
+              "rate": 0.04417670682730924
+            },
+            "old_gold_dropped": {
+              "count": 7,
+              "n": 249,
+              "rate": 0.028112449799196786
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "2": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 235,
+            "n": 250,
+            "rate": 0.94
+          },
+          "kept_gold_survival": {
+            "count": 458,
+            "n": 468,
+            "rate": 0.9786324786324786
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 175,
+            "rate": 0.005714285714285714
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 175,
+            "n": 249,
+            "rate": 0.7028112449799196
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 14,
+              "n": 249,
+              "rate": 0.05622489959839357
+            },
+            "old_gold_dropped": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "3": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 252,
+            "rate": 0.9404761904761905
+          },
+          "kept_gold_survival": {
+            "count": 682,
+            "n": 693,
+            "rate": 0.9841269841269841
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 157,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 157,
+            "n": 249,
+            "rate": 0.6305220883534136
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 249,
+              "rate": 0.024096385542168676
+            },
+            "old_gold_dropped": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "4": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 236,
+            "n": 249,
+            "rate": 0.9477911646586346
+          },
+          "kept_gold_survival": {
+            "count": 908,
+            "n": 919,
+            "rate": 0.9880304678998912
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 152,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 152,
+            "n": 248,
+            "rate": 0.6129032258064516
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 249,
+              "rate": 0.024096385542168676
+            },
+            "old_gold_dropped": {
+              "count": 6,
+              "n": 249,
+              "rate": 0.024096385542168676
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "5": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 231,
+            "n": 252,
+            "rate": 0.9166666666666666
+          },
+          "kept_gold_survival": {
+            "count": 1133,
+            "n": 1145,
+            "rate": 0.9895196506550218
+          },
+          "all_gold_valid_drop": {
+            "count": 3,
+            "n": 132,
+            "rate": 0.022727272727272728
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 132,
+            "n": 248,
+            "rate": 0.532258064516129
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "6": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 253,
+            "rate": 0.9407114624505929
+          },
+          "kept_gold_survival": {
+            "count": 1355,
+            "n": 1365,
+            "rate": 0.9926739926739927
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 106,
+            "rate": 0.009433962264150943
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 106,
+            "n": 249,
+            "rate": 0.42570281124497994
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 7,
+              "n": 249,
+              "rate": 0.028112449799196786
+            },
+            "old_gold_dropped": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "7": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 243,
+            "n": 248,
+            "rate": 0.9798387096774194
+          },
+          "kept_gold_survival": {
+            "count": 1585,
+            "n": 1593,
+            "rate": 0.9949780288763339
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 107,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 107,
+            "n": 249,
+            "rate": 0.42971887550200805
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 2,
+              "n": 249,
+              "rate": 0.008032128514056224
+            },
+            "old_gold_dropped": {
+              "count": 3,
+              "n": 249,
+              "rate": 0.012048192771084338
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 39,
+              "n": 249,
+              "rate": 0.1566265060240964
+            }
+          }
+        },
+        "8": {
+          "n_steps": 174,
+          "n_trajectories": 174,
+          "new_gold_add": {
+            "count": 162,
+            "n": 175,
+            "rate": 0.9257142857142857
+          },
+          "kept_gold_survival": {
+            "count": 1271,
+            "n": 1275,
+            "rate": 0.9968627450980392
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 74,
+            "rate": 0.013513513513513514
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 74,
+            "n": 174,
+            "rate": 0.42528735632183906
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 174,
+              "rate": 0.034482758620689655
+            },
+            "old_gold_dropped": {
+              "count": 1,
+              "n": 174,
+              "rate": 0.005747126436781609
+            },
+            "both": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 34,
+              "n": 174,
+              "rate": 0.19540229885057472
+            }
+          }
+        },
+        "9": {
+          "n_steps": 102,
+          "n_trajectories": 102,
+          "new_gold_add": {
+            "count": 95,
+            "n": 100,
+            "rate": 0.95
+          },
+          "kept_gold_survival": {
+            "count": 823,
+            "n": 832,
+            "rate": 0.9891826923076923
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 33,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 33,
+            "n": 101,
+            "rate": 0.32673267326732675
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 102,
+              "rate": 0.00980392156862745
+            },
+            "new_gold_not_added": {
+              "count": 4,
+              "n": 102,
+              "rate": 0.0392156862745098
+            },
+            "old_gold_dropped": {
+              "count": 3,
+              "n": 102,
+              "rate": 0.029411764705882353
+            },
+            "both": {
+              "count": 1,
+              "n": 102,
+              "rate": 0.00980392156862745
+            },
+            "none": {
+              "count": 22,
+              "n": 102,
+              "rate": 0.21568627450980393
+            }
+          }
+        },
+        "10": {
+          "n_steps": 45,
+          "n_trajectories": 45,
+          "new_gold_add": {
+            "count": 42,
+            "n": 45,
+            "rate": 0.9333333333333333
+          },
+          "kept_gold_survival": {
+            "count": 403,
+            "n": 405,
+            "rate": 0.9950617283950617
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 14,
+            "rate": 0.07142857142857142
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 14,
+            "n": 45,
+            "rate": 0.3111111111111111
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 2,
+              "n": 45,
+              "rate": 0.044444444444444446
+            },
+            "old_gold_dropped": {
+              "count": 1,
+              "n": 45,
+              "rate": 0.022222222222222223
+            },
+            "both": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 9,
+              "n": 45,
+              "rate": 0.2
+            }
+          }
+        },
+        "11": {
+          "n_steps": 11,
+          "n_trajectories": 11,
+          "new_gold_add": {
+            "count": 11,
+            "n": 11,
+            "rate": 1.0
+          },
+          "kept_gold_survival": {
+            "count": 110,
+            "n": 111,
+            "rate": 0.990990990990991
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 1,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 1,
+            "n": 11,
+            "rate": 0.09090909090909091
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 3,
+              "n": 11,
+              "rate": 0.2727272727272727
+            }
+          }
+        },
+        "12": {
+          "n_steps": 2,
+          "n_trajectories": 2,
+          "new_gold_add": {
+            "count": 2,
+            "n": 2,
+            "rate": 1.0
+          },
+          "kept_gold_survival": {
+            "count": 23,
+            "n": 23,
+            "rate": 1.0
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 2,
+            "rate": 0.0
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 1,
+              "n": 2,
+              "rate": 0.5
+            }
+          }
+        }
+      }
+    },
+    "reselect|mid": {
+      "n_steps": 2326,
+      "n_trajectories": 249,
+      "new_gold_add": {
+        "count": 2208,
+        "n": 2339,
+        "rate": 0.943993159469859
+      },
+      "kept_gold_survival": {
+        "count": 8981,
+        "n": 9069,
+        "rate": 0.9902966148417687
+      },
+      "all_gold_valid_drop": {
+        "count": 6,
+        "n": 1171,
+        "rate": 0.005123825789923143
+      },
+      "all_gold_among_valid_reselect": {
+        "count": 1171,
+        "n": 2074,
+        "rate": 0.5646094503375121
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 3,
+          "n": 249,
+          "rate": 0.012048192771084338
+        },
+        "new_gold_not_added": {
+          "count": 77,
+          "n": 249,
+          "rate": 0.3092369477911647
+        },
+        "old_gold_dropped": {
+          "count": 54,
+          "n": 249,
+          "rate": 0.21686746987951808
+        },
+        "both": {
+          "count": 4,
+          "n": 249,
+          "rate": 0.01606425702811245
+        },
+        "none": {
+          "count": 111,
+          "n": 249,
+          "rate": 0.4457831325301205
+        }
+      },
+      "by_step": {
+        "0": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 249,
+            "rate": 0.9558232931726908
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 11,
+              "n": 249,
+              "rate": 0.04417670682730924
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "1": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 254,
+            "rate": 0.937007874015748
+          },
+          "kept_gold_survival": {
+            "count": 229,
+            "n": 238,
+            "rate": 0.9621848739495799
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 208,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 208,
+            "n": 249,
+            "rate": 0.8353413654618473
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 10,
+              "n": 249,
+              "rate": 0.040160642570281124
+            },
+            "old_gold_dropped": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "2": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 235,
+            "n": 250,
+            "rate": 0.94
+          },
+          "kept_gold_survival": {
+            "count": 458,
+            "n": 469,
+            "rate": 0.976545842217484
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 175,
+            "rate": 0.005714285714285714
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 175,
+            "n": 249,
+            "rate": 0.7028112449799196
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 14,
+              "n": 249,
+              "rate": 0.05622489959839357
+            },
+            "old_gold_dropped": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "3": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 252,
+            "rate": 0.9404761904761905
+          },
+          "kept_gold_survival": {
+            "count": 683,
+            "n": 693,
+            "rate": 0.9855699855699855
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 157,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 157,
+            "n": 249,
+            "rate": 0.6305220883534136
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 249,
+              "rate": 0.024096385542168676
+            },
+            "old_gold_dropped": {
+              "count": 7,
+              "n": 249,
+              "rate": 0.028112449799196786
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "4": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 249,
+            "rate": 0.9518072289156626
+          },
+          "kept_gold_survival": {
+            "count": 910,
+            "n": 920,
+            "rate": 0.9891304347826086
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 152,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 152,
+            "n": 248,
+            "rate": 0.6129032258064516
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 249,
+              "rate": 0.024096385542168676
+            },
+            "old_gold_dropped": {
+              "count": 5,
+              "n": 249,
+              "rate": 0.020080321285140562
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "5": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 230,
+            "n": 251,
+            "rate": 0.9163346613545816
+          },
+          "kept_gold_survival": {
+            "count": 1135,
+            "n": 1148,
+            "rate": 0.9886759581881533
+          },
+          "all_gold_valid_drop": {
+            "count": 3,
+            "n": 135,
+            "rate": 0.022222222222222223
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 135,
+            "n": 248,
+            "rate": 0.5443548387096774
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "6": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 253,
+            "rate": 0.9407114624505929
+          },
+          "kept_gold_survival": {
+            "count": 1356,
+            "n": 1366,
+            "rate": 0.9926793557833089
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 110,
+            "rate": 0.00909090909090909
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 110,
+            "n": 249,
+            "rate": 0.44176706827309237
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 7,
+              "n": 249,
+              "rate": 0.028112449799196786
+            },
+            "old_gold_dropped": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "7": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 243,
+            "n": 248,
+            "rate": 0.9798387096774194
+          },
+          "kept_gold_survival": {
+            "count": 1583,
+            "n": 1594,
+            "rate": 0.993099121706399
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 109,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 109,
+            "n": 249,
+            "rate": 0.43775100401606426
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 2,
+              "n": 249,
+              "rate": 0.008032128514056224
+            },
+            "old_gold_dropped": {
+              "count": 3,
+              "n": 249,
+              "rate": 0.012048192771084338
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 39,
+              "n": 249,
+              "rate": 0.1566265060240964
+            }
+          }
+        },
+        "8": {
+          "n_steps": 174,
+          "n_trajectories": 174,
+          "new_gold_add": {
+            "count": 161,
+            "n": 175,
+            "rate": 0.92
+          },
+          "kept_gold_survival": {
+            "count": 1270,
+            "n": 1273,
+            "rate": 0.997643362136685
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 74,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 74,
+            "n": 174,
+            "rate": 0.42528735632183906
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 174,
+              "rate": 0.034482758620689655
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 35,
+              "n": 174,
+              "rate": 0.20114942528735633
+            }
+          }
+        },
+        "9": {
+          "n_steps": 102,
+          "n_trajectories": 102,
+          "new_gold_add": {
+            "count": 95,
+            "n": 100,
+            "rate": 0.95
+          },
+          "kept_gold_survival": {
+            "count": 820,
+            "n": 829,
+            "rate": 0.9891435464414958
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 34,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 34,
+            "n": 101,
+            "rate": 0.33663366336633666
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 102,
+              "rate": 0.00980392156862745
+            },
+            "new_gold_not_added": {
+              "count": 4,
+              "n": 102,
+              "rate": 0.0392156862745098
+            },
+            "old_gold_dropped": {
+              "count": 3,
+              "n": 102,
+              "rate": 0.029411764705882353
+            },
+            "both": {
+              "count": 1,
+              "n": 102,
+              "rate": 0.00980392156862745
+            },
+            "none": {
+              "count": 22,
+              "n": 102,
+              "rate": 0.21568627450980393
+            }
+          }
+        },
+        "10": {
+          "n_steps": 45,
+          "n_trajectories": 45,
+          "new_gold_add": {
+            "count": 43,
+            "n": 45,
+            "rate": 0.9555555555555556
+          },
+          "kept_gold_survival": {
+            "count": 404,
+            "n": 405,
+            "rate": 0.9975308641975309
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 15,
+            "rate": 0.06666666666666667
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 15,
+            "n": 45,
+            "rate": 0.3333333333333333
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 2,
+              "n": 45,
+              "rate": 0.044444444444444446
+            },
+            "old_gold_dropped": {
+              "count": 1,
+              "n": 45,
+              "rate": 0.022222222222222223
+            },
+            "both": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 11,
+              "n": 45,
+              "rate": 0.24444444444444444
+            }
+          }
+        },
+        "11": {
+          "n_steps": 11,
+          "n_trajectories": 11,
+          "new_gold_add": {
+            "count": 11,
+            "n": 11,
+            "rate": 1.0
+          },
+          "kept_gold_survival": {
+            "count": 110,
+            "n": 111,
+            "rate": 0.990990990990991
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 2,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 2,
+            "n": 11,
+            "rate": 0.18181818181818182
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 3,
+              "n": 11,
+              "rate": 0.2727272727272727
+            }
+          }
+        },
+        "12": {
+          "n_steps": 2,
+          "n_trajectories": 2,
+          "new_gold_add": {
+            "count": 2,
+            "n": 2,
+            "rate": 1.0
+          },
+          "kept_gold_survival": {
+            "count": 23,
+            "n": 23,
+            "rate": 1.0
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 2,
+            "rate": 0.0
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 1,
+              "n": 2,
+              "rate": 0.5
+            }
+          }
+        }
+      }
+    },
+    "reselect|tight": {
+      "n_steps": 2326,
+      "n_trajectories": 249,
+      "new_gold_add": {
+        "count": 2180,
+        "n": 2341,
+        "rate": 0.9312259718069201
+      },
+      "kept_gold_survival": {
+        "count": 8970,
+        "n": 9053,
+        "rate": 0.9908317684745388
+      },
+      "all_gold_valid_drop": {
+        "count": 6,
+        "n": 1159,
+        "rate": 0.005176876617773943
+      },
+      "all_gold_among_valid_reselect": {
+        "count": 1159,
+        "n": 2048,
+        "rate": 0.56591796875
+      },
+      "first_error": {
+        "invalid_output": {
+          "count": 11,
+          "n": 249,
+          "rate": 0.04417670682730924
+        },
+        "new_gold_not_added": {
+          "count": 79,
+          "n": 249,
+          "rate": 0.3172690763052209
+        },
+        "old_gold_dropped": {
+          "count": 54,
+          "n": 249,
+          "rate": 0.21686746987951808
+        },
+        "both": {
+          "count": 4,
+          "n": 249,
+          "rate": 0.01606425702811245
+        },
+        "none": {
+          "count": 101,
+          "n": 249,
+          "rate": 0.40562248995983935
+        }
+      },
+      "by_step": {
+        "0": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 249,
+            "rate": 0.9518072289156626
+          },
+          "kept_gold_survival": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 12,
+              "n": 249,
+              "rate": 0.04819277108433735
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "1": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 254,
+            "rate": 0.937007874015748
+          },
+          "kept_gold_survival": {
+            "count": 229,
+            "n": 237,
+            "rate": 0.9662447257383966
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 208,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 208,
+            "n": 249,
+            "rate": 0.8353413654618473
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 10,
+              "n": 249,
+              "rate": 0.040160642570281124
+            },
+            "old_gold_dropped": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "2": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 235,
+            "n": 250,
+            "rate": 0.94
+          },
+          "kept_gold_survival": {
+            "count": 458,
+            "n": 469,
+            "rate": 0.976545842217484
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 175,
+            "rate": 0.005714285714285714
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 175,
+            "n": 249,
+            "rate": 0.7028112449799196
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 14,
+              "n": 249,
+              "rate": 0.05622489959839357
+            },
+            "old_gold_dropped": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "3": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 234,
+            "n": 252,
+            "rate": 0.9285714285714286
+          },
+          "kept_gold_survival": {
+            "count": 683,
+            "n": 693,
+            "rate": 0.9855699855699855
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 159,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 159,
+            "n": 248,
+            "rate": 0.6411290322580645
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "old_gold_dropped": {
+              "count": 7,
+              "n": 249,
+              "rate": 0.028112449799196786
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "4": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 237,
+            "n": 249,
+            "rate": 0.9518072289156626
+          },
+          "kept_gold_survival": {
+            "count": 909,
+            "n": 917,
+            "rate": 0.9912758996728462
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 153,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 153,
+            "n": 248,
+            "rate": 0.6169354838709677
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 6,
+              "n": 249,
+              "rate": 0.024096385542168676
+            },
+            "old_gold_dropped": {
+              "count": 5,
+              "n": 249,
+              "rate": 0.020080321285140562
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "5": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 229,
+            "n": 251,
+            "rate": 0.9123505976095617
+          },
+          "kept_gold_survival": {
+            "count": 1135,
+            "n": 1147,
+            "rate": 0.9895379250217959
+          },
+          "all_gold_valid_drop": {
+            "count": 3,
+            "n": 134,
+            "rate": 0.022388059701492536
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 134,
+            "n": 247,
+            "rate": 0.5425101214574899
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "old_gold_dropped": {
+              "count": 8,
+              "n": 249,
+              "rate": 0.0321285140562249
+            },
+            "both": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "6": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 238,
+            "n": 253,
+            "rate": 0.9407114624505929
+          },
+          "kept_gold_survival": {
+            "count": 1354,
+            "n": 1365,
+            "rate": 0.991941391941392
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 106,
+            "rate": 0.009433962264150943
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 106,
+            "n": 248,
+            "rate": 0.4274193548387097
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "new_gold_not_added": {
+              "count": 7,
+              "n": 249,
+              "rate": 0.028112449799196786
+            },
+            "old_gold_dropped": {
+              "count": 9,
+              "n": 249,
+              "rate": 0.03614457831325301
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            }
+          }
+        },
+        "7": {
+          "n_steps": 249,
+          "n_trajectories": 249,
+          "new_gold_add": {
+            "count": 239,
+            "n": 248,
+            "rate": 0.9637096774193549
+          },
+          "kept_gold_survival": {
+            "count": 1585,
+            "n": 1592,
+            "rate": 0.9956030150753769
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 106,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 106,
+            "n": 245,
+            "rate": 0.4326530612244898
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 249,
+              "rate": 0.004016064257028112
+            },
+            "new_gold_not_added": {
+              "count": 2,
+              "n": 249,
+              "rate": 0.008032128514056224
+            },
+            "old_gold_dropped": {
+              "count": 3,
+              "n": 249,
+              "rate": 0.012048192771084338
+            },
+            "both": {
+              "count": 0,
+              "n": 249,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 39,
+              "n": 249,
+              "rate": 0.1566265060240964
+            }
+          }
+        },
+        "8": {
+          "n_steps": 174,
+          "n_trajectories": 174,
+          "new_gold_add": {
+            "count": 160,
+            "n": 175,
+            "rate": 0.9142857142857143
+          },
+          "kept_gold_survival": {
+            "count": 1265,
+            "n": 1269,
+            "rate": 0.9968479117415288
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 70,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 70,
+            "n": 171,
+            "rate": 0.4093567251461988
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 2,
+              "n": 174,
+              "rate": 0.011494252873563218
+            },
+            "new_gold_not_added": {
+              "count": 4,
+              "n": 174,
+              "rate": 0.022988505747126436
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 174,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 34,
+              "n": 174,
+              "rate": 0.19540229885057472
+            }
+          }
+        },
+        "9": {
+          "n_steps": 102,
+          "n_trajectories": 102,
+          "new_gold_add": {
+            "count": 89,
+            "n": 101,
+            "rate": 0.8811881188118812
+          },
+          "kept_gold_survival": {
+            "count": 818,
+            "n": 828,
+            "rate": 0.9879227053140096
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 33,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 33,
+            "n": 96,
+            "rate": 0.34375
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 3,
+              "n": 102,
+              "rate": 0.029411764705882353
+            },
+            "new_gold_not_added": {
+              "count": 5,
+              "n": 102,
+              "rate": 0.049019607843137254
+            },
+            "old_gold_dropped": {
+              "count": 4,
+              "n": 102,
+              "rate": 0.0392156862745098
+            },
+            "both": {
+              "count": 1,
+              "n": 102,
+              "rate": 0.00980392156862745
+            },
+            "none": {
+              "count": 18,
+              "n": 102,
+              "rate": 0.17647058823529413
+            }
+          }
+        },
+        "10": {
+          "n_steps": 45,
+          "n_trajectories": 45,
+          "new_gold_add": {
+            "count": 35,
+            "n": 46,
+            "rate": 0.7608695652173914
+          },
+          "kept_gold_survival": {
+            "count": 401,
+            "n": 402,
+            "rate": 0.9975124378109452
+          },
+          "all_gold_valid_drop": {
+            "count": 1,
+            "n": 14,
+            "rate": 0.07142857142857142
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 14,
+            "n": 38,
+            "rate": 0.3684210526315789
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 45,
+              "rate": 0.022222222222222223
+            },
+            "new_gold_not_added": {
+              "count": 2,
+              "n": 45,
+              "rate": 0.044444444444444446
+            },
+            "old_gold_dropped": {
+              "count": 1,
+              "n": 45,
+              "rate": 0.022222222222222223
+            },
+            "both": {
+              "count": 0,
+              "n": 45,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 8,
+              "n": 45,
+              "rate": 0.17777777777777778
+            }
+          }
+        },
+        "11": {
+          "n_steps": 11,
+          "n_trajectories": 11,
+          "new_gold_add": {
+            "count": 8,
+            "n": 11,
+            "rate": 0.7272727272727273
+          },
+          "kept_gold_survival": {
+            "count": 110,
+            "n": 111,
+            "rate": 0.990990990990991
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 1,
+            "rate": 0.0
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 1,
+            "n": 8,
+            "rate": 0.125
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 11,
+              "rate": 0.09090909090909091
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 11,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 2,
+              "n": 11,
+              "rate": 0.18181818181818182
+            }
+          }
+        },
+        "12": {
+          "n_steps": 2,
+          "n_trajectories": 2,
+          "new_gold_add": {
+            "count": 1,
+            "n": 2,
+            "rate": 0.5
+          },
+          "kept_gold_survival": {
+            "count": 23,
+            "n": 23,
+            "rate": 1.0
+          },
+          "all_gold_valid_drop": {
+            "count": 0,
+            "n": 0,
+            "rate": null
+          },
+          "all_gold_among_valid_reselect": {
+            "count": 0,
+            "n": 1,
+            "rate": 0.0
+          },
+          "first_error": {
+            "invalid_output": {
+              "count": 1,
+              "n": 2,
+              "rate": 0.5
+            },
+            "new_gold_not_added": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "old_gold_dropped": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "both": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            },
+            "none": {
+              "count": 0,
+              "n": 2,
+              "rate": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

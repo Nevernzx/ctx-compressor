@@ -1,0 +1,14 @@
+{
+  "n_predictions_reparsed": 55776,
+  "n_smoke": 40,
+  "n_strategies": 11,
+  "n_paired_comparisons_recomputed": 3,
+  "n_task_batches": 249,
+  "actual_disable_cascade_attn": true,
+  "within_recomputed": {
+    "count": 172,
+    "n": 6812,
+    "rate": 0.02524955960070464
+  },
+  "independent_checks": "all source tokens, prompt identities, scored raw outputs, paired deltas and counts, duplicate-token group counts, historical raw comparisons, figures and GPU receipts"
+}

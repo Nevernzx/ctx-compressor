@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-22T12:16:39.365825+00:00",
+  "checks": {
+    "launch_live": {
+      "entries": 51,
+      "exit_code": 1,
+      "stdout": "HANDOFF.md: FAILED\nscripts/run_sft_v3_pipeline.py: FAILED\n",
+      "stderr": "sha256sum: WARNING: 2 computed checksums did NOT match\n"
+    },
+    "launch_historical": {
+      "entries": 51,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "resume1_live": {
+      "entries": 19,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "historical_bindings": {
+    "scripts/run_sft_v3_pipeline.py": "/root/userfolder/ctx-compressor/dagger_v3/history_before_resume1/run_sft_v3_pipeline.py",
+    "README.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/README.md",
+    "NOTES.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/NOTES.md",
+    "HANDOFF.md": "/root/userfolder/ctx-compressor/dagger_v3/history_at_launch/HANDOFF.md"
+  },
+  "n_live_files": 196,
+  "live_baseline": "/root/userfolder/ctx-compressor/grpo_r2/phase_p/protected_live.sha256",
+  "live_baseline_sha256": "3ea60f0c9f7c4f55121bb507d7d68222225ba1ffa2e36c307ee4cdea5f4269f9"
+}

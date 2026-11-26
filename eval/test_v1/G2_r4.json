@@ -1,0 +1,57 @@
+{
+  "status": "complete",
+  "wall_seconds": 4414.580521833617,
+  "n_tasks": 451,
+  "gpu_before": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_pct": 0
+  },
+  "engine_shutdown": true,
+  "engine": {
+    "model": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "tokenizer": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "sampling": {
+    "temperature": 0,
+    "max_tokens": 256,
+    "seed": 20261118
+  },
+  "metrics": {
+    "path": "/root/userfolder/ctx-compressor/test_v1/rollouts/r4/metrics.json",
+    "size": 32264,
+    "sha256": "6477b4b1b5c7488606ff64fb6e2ea06aaef292d3080b5eb87ef6b359f78b20c5"
+  },
+  "adapter": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+    "files": [
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_config.json",
+        "sha256": "f57a859baa4d8bd8bf8f5cb67c9bd8061d4e25635ae158fff929814d1d7fcdb1",
+        "bytes": 1081
+      },
+      {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_model.safetensors",
+        "sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf",
+        "bytes": 69782384
+      }
+    ]
+  },
+  "strategy": "r4"
+}

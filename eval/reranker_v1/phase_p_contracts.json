@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "signed_task12_comparator_groups": 249,
+  "r2_then_v3_order": true,
+  "v2_range_checker": "passes strict 200 and 206 partial fixtures; rejects non-range, wrong offset",
+  "two_real_val_tasks": [
+    3775,
+    938
+  ],
+  "observed_test_rollout_steps": 102,
+  "n_observed_hop_questions": 48,
+  "observed_rollout": {
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/phase_p_contracts/fixture/RR-τ/steps.jsonl",
+    "size": 276864,
+    "sha256": "7f7b1e67876341b2d7f5d837fdd0153c30961097dc73715cb18fa314726efe8b",
+    "lines": 102
+  }
+}

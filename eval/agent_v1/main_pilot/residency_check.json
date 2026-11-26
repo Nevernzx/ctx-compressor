@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "scope": "synthetic warmup, no evaluation tasks",
+  "first_prompt_tokens": 577,
+  "first_cached_tokens": 0,
+  "next_prompt_tokens": 585,
+  "next_cached_tokens": 576,
+  "r4_probe_generated_tokens": 1,
+  "transfer": {
+    "utc": "2026-11-25T13:44:09.849479+00:00",
+    "agent_pid": 3586510,
+    "park_seconds": 13.741262420080602,
+    "restore_seconds": 16.057988261803985,
+    "parked_gpu": {
+      "total_mib": 49140,
+      "used_mib": 8669,
+      "free_mib": 39841
+    },
+    "restored_gpu": {
+      "total_mib": 49140,
+      "used_mib": 24293,
+      "free_mib": 24217
+    },
+    "resident_kv_bytes": 8118337536,
+    "weights_bytes": 16381470720,
+    "fingerprint_checked": true
+  }
+}

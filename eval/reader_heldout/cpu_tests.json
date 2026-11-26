@@ -1,0 +1,30 @@
+{
+  "tests": 729,
+  "skipped": 0,
+  "errors": 0,
+  "failures": 0,
+  "status": "passed",
+  "passed": 729,
+  "legacy_tests_matched": 705,
+  "elapsed_seconds": 13.797385323792696,
+  "utc": "2026-11-23T09:00:35.450410+00:00",
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/reader_heldout/cpu_suite_f7k3w3dj/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/reader_heldout/cpu_suite_f7k3w3dj/tests.xml",
+    "tests"
+  ],
+  "log": "/root/userfolder/ctx-compressor/reader_heldout/cpu_suite_f7k3w3dj/pytest.log",
+  "xml": "/root/userfolder/ctx-compressor/reader_heldout/cpu_suite_f7k3w3dj/tests.xml",
+  "xml_sha256": "a9351a605efc35f024803be323b0267e315032aa7b2081ce628934f10875b5a2",
+  "gpu_cli_invocations": 0,
+  "locked_dev_open_attempts": 0
+}

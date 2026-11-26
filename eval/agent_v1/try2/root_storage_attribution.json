@@ -1,0 +1,317 @@
+{
+  "status": "needs_operator_decision",
+  "operational_classification": "external_root_occupancy",
+  "classification_basis": "At the root spike the sampled paths stayed flat and this process tree had no observed writable root filesystem descriptors; precise writer is unconfirmed.",
+  "root_limit_bytes": 300000000,
+  "root_peak_growth_bytes": 400879616,
+  "peak": {
+    "utc": "2026-11-25T12:04:11.814104+00:00",
+    "root_used_bytes": 941056716800,
+    "engine": "r4",
+    "boundary": "periodic",
+    "directories": {
+      "/tmp": 1722908672,
+      "/root/.cache": 9939808256
+    },
+    "root_writable_fds": [],
+    "fast_scan_ended_utc": "2026-11-25T12:04:11.919598+00:00",
+    "workplace": {
+      "directory": "/root/workplace",
+      "started_utc": "2026-11-25T12:04:02.688636+00:00",
+      "bytes": 51679141888,
+      "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+    }
+  },
+  "root_window_1s": [
+    {
+      "utc": "2026-11-25T12:04:06.814119+00:00",
+      "root_used_bytes": 940656152576,
+      "engine": null,
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:06.925736+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:03:56.216145+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:01.688181+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:07.743030+00:00",
+      "root_used_bytes": 940656443392,
+      "engine": "r4",
+      "boundary": "before_engine",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:07.868699+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:03:56.216145+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:01.688181+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:07.869737+00:00",
+      "root_used_bytes": 940656455680,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:08.721016+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:08.814128+00:00",
+      "root_used_bytes": 940665892864,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:08.922340+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:09.814127+00:00",
+      "root_used_bytes": 940771323904,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:09.932912+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:10.814117+00:00",
+      "root_used_bytes": 940929974272,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:10.928388+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:11.814104+00:00",
+      "root_used_bytes": 941056716800,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:11.919598+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:12.814114+00:00",
+      "root_used_bytes": 940656177152,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:12.918040+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:13.814125+00:00",
+      "root_used_bytes": 940656177152,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:13.929344+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:14.814095+00:00",
+      "root_used_bytes": 940656177152,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:14.916385+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:02.688636+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:15.814101+00:00",
+      "root_used_bytes": 940656177152,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:15.921503+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:09.447386+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:14.925325+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:16.814125+00:00",
+      "root_used_bytes": 940656177152,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:16.916446+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:09.447386+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:14.925325+00:00"
+      }
+    },
+    {
+      "utc": "2026-11-25T12:04:17.814127+00:00",
+      "root_used_bytes": 940656177152,
+      "engine": "r4",
+      "boundary": "periodic",
+      "directories": {
+        "/tmp": 1722908672,
+        "/root/.cache": 9939808256
+      },
+      "root_writable_fds": [],
+      "fast_scan_ended_utc": "2026-11-25T12:04:17.917103+00:00",
+      "workplace": {
+        "directory": "/root/workplace",
+        "started_utc": "2026-11-25T12:04:09.447386+00:00",
+        "bytes": 51679141888,
+        "ended_utc": "2026-11-25T12:04:14.925325+00:00"
+      }
+    }
+  ],
+  "workplace_measurements_near_peak": [
+    {
+      "directory": "/root/workplace",
+      "started_utc": "2026-11-25T12:03:56.216145+00:00",
+      "bytes": 51679141888,
+      "ended_utc": "2026-11-25T12:04:01.688181+00:00"
+    },
+    {
+      "directory": "/root/workplace",
+      "started_utc": "2026-11-25T12:04:02.688636+00:00",
+      "bytes": 51679141888,
+      "ended_utc": "2026-11-25T12:04:08.446150+00:00"
+    },
+    {
+      "directory": "/root/workplace",
+      "started_utc": "2026-11-25T12:04:09.447386+00:00",
+      "bytes": 51679141888,
+      "ended_utc": "2026-11-25T12:04:14.925325+00:00"
+    },
+    {
+      "directory": "/root/workplace",
+      "started_utc": "2026-11-25T12:04:15.925709+00:00",
+      "bytes": 51679141888,
+      "ended_utc": "2026-11-25T12:04:21.441346+00:00"
+    },
+    {
+      "directory": "/root/workplace",
+      "started_utc": "2026-11-25T12:04:22.441667+00:00",
+      "bytes": 51679141888,
+      "ended_utc": "2026-11-25T12:04:27.948739+00:00"
+    }
+  ],
+  "root_check": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/try2/smoke/root_usage_check.json",
+    "size": 1702,
+    "sha256": "4876f63eefeee34b3c688c16c5f617cff40efcef183f3f8a749dac1e88e80c3e"
+  },
+  "ipc_check": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/try2/ipc_check.json",
+    "size": 973,
+    "sha256": "058ba1806c603b05eaf7cce889c9072340d3f7fb500c8922900c1aaa076b949e"
+  },
+  "episodes": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/try2/smoke/episodes.jsonl",
+    "size": 6450996,
+    "sha256": "48ead7df730112fb6c40039dcb678d44c979acd0175e6bed5ae709285451bbc8"
+  },
+  "n_episodes": 240,
+  "terminal_status": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/try2/status.json",
+    "size": 3518,
+    "sha256": "ddc1c092dba9316d5c1a80bd08d7b2d997e9cbddebaec1d4a2b3a9c8d41eec03"
+  },
+  "previous_attempt_preserved": true,
+  "task10_restoration_sha256": "cb325756d7d206d519b877652f7f7531ee66ce5312a0ff69599713c1559113a3",
+  "gpu1_released": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "samples": 927,
+  "opening_root_used_bytes": 939730915328,
+  "root_peak_delta_bytes": 294739968,
+  "root_final_delta_bytes": 64167936,
+  "root_available_bytes": 14902132736,
+  "project_new_bytes_at_report": 309309,
+  "scope": "Whole-root df includes concurrent writers; project files counted separately; task runtime cache and inputs on external mount.",
+  "at_utc": "2026-11-23T10:08:25.433510+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "utc": "2026-11-23T14:19:31.851372+00:00",
+  "scan": {
+    "files": 32,
+    "bytes": 373320,
+    "matches": 0
+  },
+  "scope": "Task 14 source, tests, test result logs/XML, request/usage ledger, scope checks, predictions, run receipts and the smoke report."
+}

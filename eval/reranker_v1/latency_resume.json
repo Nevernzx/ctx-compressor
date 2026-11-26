@@ -1,0 +1,435 @@
+{
+  "status": "passed",
+  "resume_from": "latency-eager",
+  "reused": {
+    "stages": {
+      "S1": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/S1/receipt_complete.json",
+        "size": 744,
+        "sha256": "a7b48e8fa6e550a3987488b18eccbdaa8a527d229cbcede7cee2f7f7ff98715c"
+      },
+      "prepare_val": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/prepare-val/receipt_complete.json",
+        "size": 767,
+        "sha256": "858ece7a66d28f5a3cf45e750b97ca0998ff1364eb5460721672576071b2e903"
+      },
+      "reader_val": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/reader-val/receipt_complete.json",
+        "size": 761,
+        "sha256": "ccaf103c798089e332d5263d475a2546a3e5f2a7013e3265dd354bd1e950c29e"
+      },
+      "tau": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/select-tau/receipt_complete.json",
+        "size": 755,
+        "sha256": "b61dd3c0d4db105fcdc77edd9dff2938e9834cc155b1c8899ac5f908101984a3"
+      },
+      "prepare_heldout": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/prepare-heldout/receipt_complete.json",
+        "size": 771,
+        "sha256": "89f04767e2a0d084a327b7fd14763917c3585ebce3c7aaac2900daa434ca69ca"
+      },
+      "reader_heldout": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/reader-heldout/receipt_complete.json",
+        "size": 770,
+        "sha256": "c875df39d81161d4517885c4c77894eb77db1d05a836450619e357a6d4c6a901"
+      }
+    },
+    "files": {
+      "/root/workplace/ctx-compressor/eval/reranker_v1/training.json": {
+        "sha256": "ff21c119168668dd10b70f6358ce0c8a265f919aec2b7187accce9bbb055a95f",
+        "size": 60413
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/zero_shot_val_200.jsonl": {
+        "sha256": "2d3ad76ba110d5856415338f4d10605c51ada83aa715649b310a25a810da3a2b",
+        "size": 2918616
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-1000/validation_scores.jsonl": {
+        "sha256": "aac83f3e207f8039618e7cfd078fb70212064acfadfef719ccb7561e21f9a471",
+        "size": 2864528
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-1000/model.safetensors": {
+        "sha256": "286d1298d6d2f1b501b547675f24d7afd5926b1dfde37ed536a928d4be3d63bf",
+        "size": 2383141336
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-2000/validation_scores.jsonl": {
+        "sha256": "a87551702000710064f4e4d56468991317e03a01bd63aab4341f7a3afcf28dd3",
+        "size": 2864724
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-2000/model.safetensors": {
+        "sha256": "16cb03dcf9b50f40968381be066258283261af8b8d52d1ca4c68e236e7ac6b1d",
+        "size": 2383141336
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-3000/validation_scores.jsonl": {
+        "sha256": "fb26d8eb3aed83db33023ac37355a20e3b3a03b4d31e7be468f1b88f6fd31a69",
+        "size": 2885927
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-3000/model.safetensors": {
+        "sha256": "46843787071d2836cadd8e530e1cfd1779c6093cda4d82677c0eda5da0e04c40",
+        "size": 2383141336
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-4000/validation_scores.jsonl": {
+        "sha256": "3698da096310e87870ee564a44755ba06afad1107595c3e9f8eea14b51950835",
+        "size": 2913794
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-4000/model.safetensors": {
+        "sha256": "7667df53c28ec69ea83fabad9b52d5ff3e1ab18a25d82a5d34430209a24ef71c",
+        "size": 2383141336
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5000/validation_scores.jsonl": {
+        "sha256": "38703fa8bc940dd96aa670ef9ccd92c9366cdb52fc6c933233a2f35001df2d33",
+        "size": 2903822
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5000/model.safetensors": {
+        "sha256": "cb0507e0bce9c368700489a99182e2be516219ccc01783c566b7dfacc9091a03",
+        "size": 2383141336
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/validation_scores.jsonl": {
+        "sha256": "1639ca07ec75858c16d5cb4b19b5639349140f789f981128acf68b62b3ca3cf6",
+        "size": 2904609
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/model.safetensors": {
+        "sha256": "c3b41d67662ed0dd9a46a39c696b2060b323895dec844254b1d34ca604de73c3",
+        "size": 2383141336
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/scores/selected_val100.jsonl": {
+        "sha256": "8e2f401492d426a061f0ea46671cc50a765dd091adc1e90aa0fa0cf34d75d572",
+        "size": 1458551
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/scores/selected_heldout.jsonl": {
+        "sha256": "ee73a77ad8d5d30c6b1f31b3e5061c39cfce3401218889d37aba89785e0eabd8",
+        "size": 3613625
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/scores/zero_shot_heldout.jsonl": {
+        "sha256": "01c57035f7255f05d7670d23b503a809e7b3611bae299486558305ca6be800f6",
+        "size": 3631404
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/val_reader/input_preflight.json": {
+        "sha256": "ef53a0da8c808588b5fa264e93941f10dfe40eb92db78dad01869872d124c7be",
+        "size": 372828
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/val_reader/requests.jsonl": {
+        "sha256": "6244801db9bc901441c6e549b46eb0d6f5195a4411ecf9daf692a5fed16e3943",
+        "size": 185540685
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0/steps.jsonl": {
+        "sha256": "0b1039cd0ccf6e70f98db96e174ba21d50f5e41a48235257d60c52ac10a7a6aa",
+        "size": 23847843
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0/metrics.json": {
+        "sha256": "986522147bbed5f3a58d18ea852a6b4105ae3f4086714f1f2436cae02d09c93c",
+        "size": 30262
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.02/steps.jsonl": {
+        "sha256": "792da57d8bc7a8d89f4aa747ad908974501393fa0dc54b879fac4a82a19a08c5",
+        "size": 17468804
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.02/metrics.json": {
+        "sha256": "2968417e43180e7d350540962cdcee30257ae2839c66f24bb9a87d6edeb8395e",
+        "size": 30317
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.05/steps.jsonl": {
+        "sha256": "b2864b5f4dccef08815c967acdfbf015ad1e625cd0a0be5f6582e783e930e3ab",
+        "size": 16603951
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.05/metrics.json": {
+        "sha256": "aa123fbbe5de33a61910af8ef3aa4fcb6bcedd3e6ec4ac8a509ef0203d9fd054",
+        "size": 30442
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.1/steps.jsonl": {
+        "sha256": "23774aa2dbc28ccf6ea5ad6e5e25249ac93110dc51223e60e2896f101b8d98fd",
+        "size": 16191149
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.1/metrics.json": {
+        "sha256": "5290a34fd8b833e080312484c8387593e6b7399e5182e28fe5be97371326e56a",
+        "size": 30446
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.2/steps.jsonl": {
+        "sha256": "0e11f80980c2909d2a9f6547dc928daa374ad0dce207000e2f7f5fd0cf1faa87",
+        "size": 15916279
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.2/metrics.json": {
+        "sha256": "db37907da9b41e25c7f2229d554bdc2ec7585ba75039242a5e777d7249bd6d9e",
+        "size": 30525
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.3/steps.jsonl": {
+        "sha256": "bea8e65cede6979bfe2837569a2b0ba1c308e4d2fbd560dc556966c288f2c7f4",
+        "size": 15782388
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.3/metrics.json": {
+        "sha256": "a20de6da2453b66ec6d28171ffa27421d41da1afbfa4288a99da330bd06dc67f",
+        "size": 30557
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.5/steps.jsonl": {
+        "sha256": "f5269f5438fc3fca5f115cfcffe92cd7dc28de3c4736773904e31051b7dad3f1",
+        "size": 15592107
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.5/metrics.json": {
+        "sha256": "ce3201c299e9a08031abb2437df3152fae79d61032ff445ea1095c176d5b37d6",
+        "size": 30562
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.7/steps.jsonl": {
+        "sha256": "47a27064b3eb2f33a8573b9e6a641c36fc95cb354444e486933e2595c28df095",
+        "size": 15456465
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.7/metrics.json": {
+        "sha256": "b169c837516458b1f36460ba5ab66ced97ab1e14cbf3169ab07f2b4a6a6db7f2",
+        "size": 30655
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.9/steps.jsonl": {
+        "sha256": "9854f246718163e2c62203e05daa798316aa70bc39691cccf25b9aba15977cfe",
+        "size": 15247444
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/val/tau-0.9/metrics.json": {
+        "sha256": "e1fd295a628cef6cfc7763f3ba99c086abdf5ea96ceb555aa64e871f996a93d8",
+        "size": 30599
+      },
+      "/root/workplace/ctx-compressor/eval/reranker_v1/val_reader_config.json": {
+        "sha256": "21324d836d3cc3f339f89797784a0d1af21dc1b3a372fe7bae4b54ba3dba9372",
+        "size": 2924
+      },
+      "/root/workplace/ctx-compressor/eval/reranker_v1/tau_selection.json": {
+        "sha256": "b0894fddee602ace289c3d069a6750c70aa0a6fad0a5095d52669bc3d587d132",
+        "size": 21863
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/val_reader/predictions.jsonl": {
+        "sha256": "f80e1891152b817529c32b12be4222b3dfdf23e7de6c1f8bf09379b4835114ae",
+        "size": 12594713
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/heldout_reader/input_preflight.json": {
+        "size": 300176,
+        "sha256": "001626d67364ccb8db179b8dc4345501c79809f54b950e1c63a3f1cc02244786"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/heldout_reader/requests.jsonl": {
+        "size": 315714629,
+        "sha256": "cb21b520f3ec0056a85e6d0318099cec57651e0ed1756ae7da995dece799fdb7"
+      },
+      "/root/userfolder/ctx-compressor/reader_heldout/input_preflight/requests.jsonl": {
+        "size": 524723006,
+        "sha256": "f5124f8a54aa718d3b7329b3554765ea8c8fffc46da75b28094dd5c13e317a96"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-fill/steps.jsonl": {
+        "size": 60479450,
+        "sha256": "24de3f90c626355a442f36241856f6c280e84fc913a4a35e41ca4dbe6b06844a"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-fill/metrics.json": {
+        "size": 31347,
+        "sha256": "7a6e97af87e84c690ab27c78cf8cf77f220f01719641bf259ecc2f7a7a1b48fb"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-τ/steps.jsonl": {
+        "size": 39302183,
+        "sha256": "b10e984b025a64de8aec98b57a9e3ec1418d5c1ce479b35b958e28cec081c9b0"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-τ/metrics.json": {
+        "size": 31829,
+        "sha256": "0e0a1a0cfc7de734b6bdd3a458e506274fa76906563811531803bd87260891d0"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-zs-fill/steps.jsonl": {
+        "size": 61988197,
+        "sha256": "d6c5397ebada4d88165a463725cacb8fed9748b0d25dc562f530093160c78dcb"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-zs-fill/metrics.json": {
+        "size": 31405,
+        "sha256": "c84e53497600626bf6e70cd1e279e7517050f0a98643f3152b0769789b42e616"
+      },
+      "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/checkpoint-125/steps.jsonl": {
+        "size": 236195097,
+        "sha256": "057746aca748d0bf3809a81c48d863c0cffb168d934face3b0e379d031f16274"
+      },
+      "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-125/checkpoint-125_results.json": {
+        "size": 32516,
+        "sha256": "e98a810821e6b4e7f20ac43c511ef09a6ee54783d944631004c195fb728f64b0"
+      },
+      "/root/userfolder/ctx-compressor/eval_rollouts_v3/checkpoint-3000/steps.jsonl": {
+        "size": 231628037,
+        "sha256": "51b9c94fb33756fc03f5efb9d909a6ffcbe9335f36489501e40c1dc5d725efbe"
+      },
+      "/root/workplace/ctx-compressor/eval/sft_run_v3/checkpoint-3000/checkpoint-3000_results.json": {
+        "size": 32497,
+        "sha256": "1f62d14418e2721df6953a1cf78e7cd67779468519bc69989521ca72b0254f70"
+      },
+      "/root/userfolder/ctx-compressor/eval_rollouts/bm25/steps.jsonl": {
+        "size": 58174327,
+        "sha256": "d543140a7e9e2fb20ec54e08766137004df33c99fab46d75ff62313b0f2f1ef9"
+      },
+      "/root/workplace/ctx-compressor/eval/sft_run/bm25_results.json": {
+        "size": 31309,
+        "sha256": "e407ac8005fd0841a64a942f166e6684ed377a41391d87978d6b92bb2f6d117f"
+      },
+      "/root/userfolder/ctx-compressor/eval_rollouts/oracle/steps.jsonl": {
+        "size": 29041475,
+        "sha256": "1eef089c2bcf9d120e0d2b64480854f5571dbdf81a4a971a80de9c1287d37a5b"
+      },
+      "/root/workplace/ctx-compressor/eval/sft_run/oracle_results.json": {
+        "size": 31098,
+        "sha256": "0d690a2c882865752545d668012ac84b02488097319bc932457e10af8c6d5a86"
+      },
+      "/root/workplace/ctx-compressor/eval/reranker_v1/heldout_reader_config.json": {
+        "size": 2993,
+        "sha256": "4dadac14894c070c6f418aca5ce3bea927123d39fa1664bad6fbf004d6b69d12"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/heldout_reader/predictions.jsonl": {
+        "size": 17858513,
+        "sha256": "7ac24103e8f77174d63e7d0851995235abe69100f5638a3cc0eeb94f5242e616"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/heldout_reader/smoke_predictions.jsonl": {
+        "size": 21716,
+        "sha256": "1cc5077b38e4adc5af7fb27e21a77c2e71c2927f23877df9cc1f3f46b0b53f1e"
+      },
+      "/root/userfolder/ctx-compressor/data/traj_train/corpus_train.jsonl": {
+        "size": 83690752,
+        "sha256": "b435d8700a3d41b782dfc70b83249a85f10f352a2ebad0d499a34f741a60eea9"
+      },
+      "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl": {
+        "size": 62323855,
+        "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+      },
+      "/root/workplace/ctx-compressor/data/raw/musique/musique_ans_v1.0_train.jsonl": {
+        "size": 241046755,
+        "sha256": "83a75b1e11e4e9bb8f8308e72ac40ca617ae4431b3a0d955b61cab259248490a"
+      },
+      "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-125/run.json": {
+        "size": 7416,
+        "sha256": "7362b1d802b2219b562d6538efe54ca71acadac7906da561761229925bacd557"
+      },
+      "/root/userfolder/ctx-compressor/reranker_v1/data/latency_states.jsonl": {
+        "size": 4467567,
+        "sha256": "def775be771a2cc318bc20bcae52f293343c58cbe36f58bf831d64beda59423e"
+      }
+    },
+    "tau": 0.5,
+    "val_inference_receipt": {
+      "path": "/root/userfolder/ctx-compressor/reranker_v1/val_reader/receipt_inference.json",
+      "size": 269,
+      "sha256": "d15cbfb8ec0de28e2654b27c2e79a368adbaf696daa8704a8123432e7860a1f3"
+    },
+    "heldout_inference_receipt": {
+      "path": "/root/userfolder/ctx-compressor/reranker_v1/heldout_reader/receipt_inference.json",
+      "size": 269,
+      "sha256": "a49066486b08ca737e84d4947ab32d5dbedda0d3a976c4ee285eb8de7752ec50"
+    },
+    "heldout_smoke_receipt": {
+      "path": "/root/userfolder/ctx-compressor/reranker_v1/heldout_reader/receipt_smoke.json",
+      "size": 201,
+      "sha256": "dbb8fc47ec433278de4ea13be0faafcbd02234f45352cb117081eacec286192e"
+    },
+    "heldout_hop_retention": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/hop_retention.json",
+      "size": 25129,
+      "sha256": "d4fb99be1cbc475b73426bf1543aa3628c88b9fa549aa42856b915d0a24da9b1"
+    }
+  },
+  "phase_p_artifacts": {
+    "download": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/model_card.json",
+      "size": 3832,
+      "sha256": "19bcbd77070e3105931d304cae1a1fbeaaca39e14ea392c9c850357303a8846c"
+    },
+    "split": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/data_preflight.json",
+      "size": 56749,
+      "sha256": "fce57594bf8f7423b8caf0e48d0cccf359f7ab7a85aad2d8045757a5c5eecba6"
+    },
+    "tokens": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/tokenization.json",
+      "size": 4486,
+      "sha256": "50a75a7d0da6069c5c92b7d1259a570924f8d425ec59034ff90293441305a917"
+    },
+    "bm25": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/bm25_action_check.json",
+      "size": 528,
+      "sha256": "b6611531893c6b8d6e95e51e1ddaae8777940afa12ff7aa7cdd5dc715e77c30b"
+    },
+    "latency_inputs": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/latency_input.json",
+      "size": 1045,
+      "sha256": "ff8908ce0e27f79ea73923e5ee17796399b95eca5d916c03e7ce4b22fc30cc7a"
+    },
+    "cpu_tests": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/cpu_tests.json",
+      "size": 486,
+      "sha256": "85d3508a7e5f6188aeb75eb5ac176add452bb9c9d3e9991f69330d6ae4dbd15e"
+    },
+    "weight_cpu_smoke": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/weight_smoke.json",
+      "size": 870,
+      "sha256": "32544e509232fd3f6804225ca5503d171342ae5d87c0b2081baca1a4bf10aae3"
+    }
+  },
+  "automatic_retry": false,
+  "previous_resume": {
+    "path": "/root/workplace/ctx-compressor/eval/reranker_v1/prepare_heldout_resume.json",
+    "size": 12223,
+    "sha256": "9b63527f97a7b38bb35b83e79bd14b6110acc4ddc38a10399fc77775c990f6d1"
+  },
+  "first_failure": {
+    "utc": "2026-11-24T22:07:24.299956+00:00",
+    "beijing": "2026-11-25T06:07:24.299956+08:00",
+    "controller_pid": 3345821,
+    "child_pid": 3439392,
+    "exception": "KeyError: 'task'",
+    "archive": "/root/userfolder/ctx-compressor/reranker_v1/failed_prepare_heldout_3345821",
+    "log": {
+      "path": "/root/userfolder/ctx-compressor/reranker_v1/failed_prepare_heldout_3345821/stages/prepare-heldout/launcher.log",
+      "size": 1508,
+      "sha256": "2bed8dab74dc7c1d2a3342a181f148846fd76d6134379b6c61496982c09a06ab"
+    },
+    "cause": "The held-out loader stores the task ID in the mapping key, while HeldoutReplay expects a task field in each row.",
+    "fix": "Copy the mapping key into the task field at the held-out preparation boundary."
+  },
+  "failure": {
+    "utc": "2026-11-24T23:11:26.190134+00:00",
+    "beijing": "2026-11-25T07:11:26.190134+08:00",
+    "controller_pid": 3441385,
+    "child_pid": 3450462,
+    "exception": "RuntimeError: Failed to find C compiler",
+    "archive": "/root/userfolder/ctx-compressor/reranker_v1/failed_latency_eager_3441385",
+    "log": {
+      "path": "/root/userfolder/ctx-compressor/reranker_v1/failed_latency_eager_3441385/stages/latency-eager/launcher.log",
+      "size": 42243,
+      "sha256": "cd1913a4119909969340e8ebd0602a1383d74f7adccf54efc2115d1ca0a28760"
+    },
+    "cause": "The latency controller did not load the F-stage compiler setup; Triton needed CC for LoRA kernels.",
+    "fix": "Use the recorded F-stage Python and source grpo_r2_environment.sh, isolate Task 17 caches, and check CC before GPU admission."
+  },
+  "cpu_tests": {
+    "path": "/root/workplace/ctx-compressor/eval/reranker_v1/resume_latency_cpu_tests.json",
+    "size": 494,
+    "sha256": "977040eef08a4a7763bc4aa912180fa18b2b562a442df5a8d029bbe7cd4eda92"
+  },
+  "n_cpu_tests": 849,
+  "compiler": {
+    "path": "/root/workplace/ctx-compressor/eval/reranker_v1/latency_compiler_cpu_preflight.json",
+    "size": 1155,
+    "sha256": "58cb73477bbf2a4089f7fa24d2e8b46436dcca256164bd98276fdcfe08f0fd1f"
+  },
+  "historical_F": {
+    "grpo_r2": {
+      "pipeline_status": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/pipeline_status.json",
+        "size": 20423,
+        "sha256": "b140f27f6507623e1ea0725813a68f8f19c6d3dc01ef017373e03c9b97fa5ef5"
+      },
+      "python": "/root/userfolder/ctx-compressor/envs/reader/bin/python",
+      "completed_F": [
+        "F_checkpoint-125",
+        "F_checkpoint-250",
+        "F_checkpoint-375",
+        "F_checkpoint-500"
+      ]
+    },
+    "grpo_r4": {
+      "pipeline_status": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/pipeline_status.json",
+        "size": 21497,
+        "sha256": "780a630a0a9868bba9ab6931dfb0abd8aee4139ef79be133cb584130e1c9d735"
+      },
+      "python": "/root/userfolder/ctx-compressor/envs/reader/bin/python",
+      "completed_F": [
+        "F_checkpoint-125",
+        "F_checkpoint-250",
+        "F_checkpoint-375",
+        "F_checkpoint-500"
+      ]
+    }
+  }
+}

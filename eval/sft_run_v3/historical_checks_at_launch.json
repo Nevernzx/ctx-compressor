@@ -1,0 +1,59 @@
+{
+  "task06_baseline": {
+    "task05_files": 299,
+    "protected_prefixes": [
+      "HANDOFF.md",
+      "NOTES.md",
+      "README.md"
+    ],
+    "historical_tasks": [
+      "TASK_01",
+      "TASK_02",
+      "TASK_03",
+      "TASK_04",
+      "TASK_05"
+    ],
+    "project_files": 345,
+    "other_manifest_entries_preserved": 155
+  },
+  "task07": {
+    "entries": 41,
+    "sha256": "d6f84b9030994ad4c7481a8607a48a40dbea11ba415ec012c1e5907db156c381"
+  },
+  "task08": {
+    "entries": 183,
+    "sha256": "5f519e44919dd5f4a48f98906ebe0f6c3accff75d983ff6418a92500dfc3a74d",
+    "verifier_working_directory": "/root/userfolder/ctx-compressor/hedge_v2/tmp/task08_manifest_view",
+    "historical_documents": [
+      "README.md",
+      "NOTES.md",
+      "HANDOFF.md"
+    ],
+    "previous_document_directory": "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start",
+    "other_entries_checked_against_live_files": 180
+  },
+  "task09": {
+    "entries": 115,
+    "matched": 115,
+    "sha256": "affea9be6a469be03c4f122294e3b9027601aac5479552341906fe2847994051",
+    "historical_document_directory": "/root/userfolder/ctx-compressor/dagger_v3/history_at_task09",
+    "verifier_view": "/root/userfolder/ctx-compressor/dagger_v3/tmp/verify_task09_at_launch"
+  },
+  "shared_documents": {
+    "README.md": {
+      "prior_bytes": 37743,
+      "prior_sha256": "c641a887e802f6f89b10d5a7ec8839ce31c0b39abf2d6156fc6598acf98f03ff",
+      "append_bytes": 750
+    },
+    "NOTES.md": {
+      "prior_bytes": 39938,
+      "prior_sha256": "46faa9e7109a232e230ebaaad8e52a120b15940f374d327f2477ff1b97b8f2f7",
+      "append_bytes": 2059
+    },
+    "HANDOFF.md": {
+      "prior_bytes": 32387,
+      "prior_sha256": "b028badde2fa29f2f48489a6aaf1c9679eabf2e0cd857cbe021a692d9bfa0b3a",
+      "append_bytes": 814
+    }
+  }
+}

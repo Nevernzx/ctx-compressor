@@ -1,0 +1,199 @@
+{
+  "status": "passed",
+  "data": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/data_preflight.json",
+    "size": 50658,
+    "sha256": "590d56d00e6834dc4dc7a748b7faa15f0d73ae2d74d611ba80f2be450d48c3c0"
+  },
+  "cpu_tests": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/cpu_tests.json",
+    "size": 625,
+    "sha256": "d1c66007d9ed2e509b7ffebfa4cbff2429f857d7519116fbcda68e70980752c1"
+  },
+  "prompt": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/prompts.json",
+    "size": 1622,
+    "sha256": "94fc288b8e9be1736178c131a0d96cc0c89716f887f04fa1000530b8bc4de986"
+  },
+  "code": {
+    "src/agent_v1.py": {
+      "path": "/root/workplace/ctx-compressor/src/agent_v1.py",
+      "size": 15610,
+      "sha256": "ca1940a9ef1a75ecf44797c27a63a9885590a6625826cd8fdfc7a4478c22d718"
+    },
+    "src/agent_v1_metrics.py": {
+      "path": "/root/workplace/ctx-compressor/src/agent_v1_metrics.py",
+      "size": 7392,
+      "sha256": "d2c34697b713bae08c87168648bdbe537a95666586fe8e6dab28d944775740b5"
+    },
+    "scripts/agent_v1_data.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_data.py",
+      "size": 10693,
+      "sha256": "843d88cd5b52d28343da60bf75ebeff7be3f3fc1517de24c1a3d2db858b5be32"
+    },
+    "scripts/agent_v1_engines.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_engines.py",
+      "size": 13335,
+      "sha256": "7434c995098b671d771153e13c216e1ef19c5ed051b5477fb3fd6bf60ea3e559"
+    },
+    "scripts/agent_v1_smoke.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_smoke.py",
+      "size": 22654,
+      "sha256": "37f29a0ada640f59ae832d524672fec019a15680de0e365f2f287a42f15b4115"
+    },
+    "scripts/agent_v1_queue.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_queue.py",
+      "size": 6132,
+      "sha256": "5a6ad2483d2e376019304e717a608de6b1c492737dfe26851cdcbb0c614cdaa6"
+    },
+    "scripts/agent_v1_disk.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_v1_disk.py",
+      "size": 11413,
+      "sha256": "7a032961be0cd8627016c65e79360a68ec85186b2cf1b2ed0d9c9598c8e3a642"
+    },
+    "tests/test_agent_v1.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1.py",
+      "size": 13910,
+      "sha256": "5a63c9ce122143e3bb786e24d1c6ec082f3918101cfba24f705ea65fdf6514bb"
+    },
+    "tests/test_agent_v1_monitor_paths.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_monitor_paths.py",
+      "size": 6546,
+      "sha256": "04c01728058a9bc7c6a46ee27278f75627819e6d006561c861b6382a32872df6"
+    },
+    "tests/test_agent_v1_disk.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_v1_disk.py",
+      "size": 6046,
+      "sha256": "908aed6c3083f2f203d919b66f4856e8759edcc4e59134cd8d1e8d4c93bf57ff"
+    },
+    "tests/fixtures/agent_v1_rr5.json": {
+      "path": "/root/workplace/ctx-compressor/tests/fixtures/agent_v1_rr5.json",
+      "size": 14829,
+      "sha256": "eb107e5bd037752d7f4ccb96adb35bea56c87c7a96702a23ae63e7d7a2a23de8"
+    }
+  },
+  "controller_scope_tests": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/monitor_scope_cpu_tests.json",
+    "size": 11700,
+    "sha256": "4ad3fa1f6cc91547f3c513dd010bcdc49a6385851d741307073e053a3c0729e7"
+  },
+  "assets": {
+    "agent": {
+      "params": {
+        "model": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+        "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+        "trust_remote_code": false,
+        "dtype": "bfloat16",
+        "max_model_len": 40960,
+        "gpu_memory_utilization": 0.65,
+        "tensor_parallel_size": 1,
+        "enable_prefix_caching": true,
+        "enable_chunked_prefill": true,
+        "max_num_seqs": 32,
+        "max_num_batched_tokens": 8192,
+        "enforce_eager": true,
+        "seed": 20261117,
+        "disable_cascade_attn": true
+      },
+      "package_versions": {
+        "vllm": "0.11.0",
+        "torch": "2.8.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "numpy": "2.2.6",
+        "bm25s": "0.3.16",
+        "scipy": "1.17.1"
+      },
+      "reader_config_sha256": "a77c26c6c34b73dee47a2e0a8c48bdf8f506721158d17f54370523723089e6da",
+      "model_manifest_sha256": "e4d78679a6b360e59592d3afb87ddde6aa34fb31dd8fbb6f064fc66cf0519a2e",
+      "generation": {
+        "temperature": 0,
+        "seed": 20261117,
+        "max_tokens": 256,
+        "stop": [
+          "\nObservation"
+        ],
+        "enable_thinking": false
+      }
+    },
+    "r4": {
+      "params": {
+        "model": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+        "tokenizer": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+        "trust_remote_code": false,
+        "dtype": "bfloat16",
+        "max_model_len": 40960,
+        "gpu_memory_utilization": 0.7,
+        "tensor_parallel_size": 1,
+        "enable_prefix_caching": true,
+        "enable_chunked_prefill": true,
+        "max_num_seqs": 16,
+        "max_num_batched_tokens": 8192,
+        "enforce_eager": true,
+        "enable_lora": true,
+        "max_lora_rank": 16,
+        "max_loras": 1,
+        "max_cpu_loras": 5,
+        "seed": 20261118
+      },
+      "adapter": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+      "adapter_weight": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_model.safetensors",
+        "bytes": 69782384,
+        "sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf"
+      },
+      "sampling": {
+        "temperature": 0,
+        "seed": 20261118,
+        "max_tokens": 256
+      },
+      "source_run": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-500/run.json",
+        "bytes": 7421,
+        "sha256": "d30788440e0cf1d0ff2b60bbeefe231806dae1cd3fcd73d4891907b0be5b1417"
+      }
+    },
+    "reranker": {
+      "checkpoint": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300",
+      "weights": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/model.safetensors",
+        "size": 2383141336,
+        "sha256": "c3b41d67662ed0dd9a46a39c696b2060b323895dec844254b1d34ca604de73c3"
+      },
+      "template": {
+        "source": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B#using-transformers",
+        "prefix": "<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n",
+        "body": "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {document}",
+        "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "instruction": "Given the four questions of a multi-hop QA task, judge whether the passage is a supporting fact needed to answer any of them.",
+        "yes_token_id": 9693,
+        "no_token_id": 2152,
+        "pad_token_id": 151643,
+        "padding_side": "left",
+        "max_pair_tokens": 512,
+        "truncation": "right end of document only",
+        "score": "last_position_logit_yes_minus_no",
+        "probability": "sigmoid"
+      },
+      "tau": 0.5,
+      "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B"
+    },
+    "llmlingua2": {
+      "model": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank",
+      "wheel": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2",
+      "config": {
+        "use_llmlingua2": true,
+        "rate": 0.33,
+        "force_tokens": [
+          "\n",
+          "?"
+        ]
+      }
+    },
+    "model_cards": {
+      "path": "/root/workplace/ctx-compressor/eval/agent_v1/model_cards.json",
+      "size": 8565,
+      "sha256": "e23f6cc5e01022a391c75ee11ebad301fc18ca62d931c5899b8e4e8f8807f0af"
+    }
+  }
+}

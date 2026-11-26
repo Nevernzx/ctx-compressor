@@ -1,0 +1,14 @@
+{
+  "tests": 882,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "matched_phase_p_tests": 877,
+  "elapsed_seconds": 16.160257196053863,
+  "xml_sha256": "d37300ed417004a1a59cbaeb8d44906a9e100ce58558ebf97242ebf6a447847f",
+  "xml": "/root/userfolder/ctx-compressor/agent_v1/cpu_suite_rkn23lo6/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/agent_v1/cpu_suite_rkn23lo6/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-25T04:23:59.859526+00:00"
+}

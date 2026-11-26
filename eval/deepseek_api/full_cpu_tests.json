@@ -1,0 +1,14 @@
+{
+  "tests": 791,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "previous_test_ids_matched": 763,
+  "elapsed_seconds": 15.020991312805563,
+  "xml_sha256": "cc6a1a5ec794ff84752d98104ffedfd5196e76d6f93e7c86692996ba9307df7f",
+  "xml": "/root/userfolder/ctx-compressor/deepseek_api/cpu_suite_nahg1l9u/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/deepseek_api/cpu_suite_nahg1l9u/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-24T02:32:32.313579+00:00"
+}

@@ -1,0 +1,2343 @@
+{
+  "stage": "main",
+  "episodes": {
+    "path": "/root/userfolder/ctx-compressor/agent_ds/main/episodes.jsonl",
+    "size": 32216740,
+    "sha256": "757bfe2ac28fbb9325e9feb170dec7e7f10b5d8bbec385f6a3b56c772ec03512"
+  },
+  "qwen_episodes": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_try2/episodes.jsonl",
+    "size": 64562418,
+    "sha256": "afab714755ee84c9380f9daa8078354ad490a3bdb954cc5ceb7f33221753d2a2"
+  },
+  "complete_tasks": {
+    "musique": 36,
+    "hotpotqa": 38,
+    "2wiki": 39
+  },
+  "partial_tasks": [],
+  "content_refused_tasks": [
+    [
+      "2wiki",
+      28
+    ],
+    [
+      "hotpotqa",
+      1
+    ],
+    [
+      "hotpotqa",
+      3
+    ],
+    [
+      "musique",
+      9
+    ],
+    [
+      "musique",
+      12
+    ],
+    [
+      "musique",
+      32
+    ],
+    [
+      "musique",
+      34
+    ]
+  ],
+  "content_refusals_by_row": {
+    "no_compress": 3,
+    "oracle": 0,
+    "LLMLingua-2": 5,
+    "RR-τ reselect": 0,
+    "r4 reselect": 0,
+    "r4 append": 0
+  },
+  "sensitivity_refused_as_zero": {
+    "r4 reselect − RR-τ reselect|ALL": {
+      "n": 360,
+      "delta_f1": 0.13377643717555998,
+      "delta_em": 0.10277777777777777,
+      "f1_higher": 104,
+      "f1_equal": 219,
+      "f1_lower": 37,
+      "em_2x2_left_rows_right_columns": [
+        [
+          165,
+          22
+        ],
+        [
+          59,
+          114
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|ALL": {
+      "n": 360,
+      "delta_f1": 0.018097638599122088,
+      "delta_em": -0.005555555555555556,
+      "f1_higher": 66,
+      "f1_equal": 242,
+      "f1_lower": 52,
+      "em_2x2_left_rows_right_columns": [
+        [
+          153,
+          34
+        ],
+        [
+          32,
+          141
+        ]
+      ]
+    },
+    "r4 append − no_compress|ALL": {
+      "n": 360,
+      "delta_f1": 0.013898985298442496,
+      "delta_em": 0.011111111111111112,
+      "f1_higher": 63,
+      "f1_equal": 247,
+      "f1_lower": 50,
+      "em_2x2_left_rows_right_columns": [
+        [
+          149,
+          32
+        ],
+        [
+          36,
+          143
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|ALL": {
+      "n": 360,
+      "delta_f1": 0.09893534617734824,
+      "delta_em": 0.075,
+      "f1_higher": 100,
+      "f1_equal": 215,
+      "f1_lower": 45,
+      "em_2x2_left_rows_right_columns": [
+        [
+          154,
+          33
+        ],
+        [
+          60,
+          113
+        ]
+      ]
+    },
+    "oracle − r4 reselect|ALL": {
+      "n": 360,
+      "delta_f1": 0.05548238620443621,
+      "delta_em": 0.07222222222222222,
+      "f1_higher": 71,
+      "f1_equal": 246,
+      "f1_lower": 43,
+      "em_2x2_left_rows_right_columns": [
+        [
+          137,
+          24
+        ],
+        [
+          50,
+          149
+        ]
+      ]
+    }
+  },
+  "deepseek": {
+    "no_compress|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.3961360013443347,
+      "em": 0.3055555555555556,
+      "searches_per_task": 6.5,
+      "turns_per_task": 7.583333333333333,
+      "self_finish_rate": 0.75,
+      "format_invalid_turns": 3,
+      "retrieval_complete_rate": 0.35185185185185186,
+      "evidence_complete_rate": 0.35185185185185186,
+      "gold_lost": 0,
+      "gold_retrieved": 155,
+      "kept_passages": 93.08333333333333,
+      "uncached_qwen_tokens_per_task": 60364.416666666664,
+      "cached_cost_per_task": 16976.520833333332,
+      "predicted_hit_fraction": 0.8073050762521519,
+      "deepseek_calls": 273,
+      "deepseek_yuan_per_task": 0.02851694,
+      "deepseek_hit_per_task": 45358.22222222222,
+      "deepseek_miss_per_task": 11382.638888888889,
+      "deepseek_output_per_task": 492.1666666666667,
+      "actual_hit_fraction": 0.7993925600353654,
+      "finish_reason_length": 3
+    },
+    "oracle|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.5202866339149075,
+      "em": 0.39814814814814814,
+      "searches_per_task": 7.638888888888889,
+      "turns_per_task": 8.75,
+      "self_finish_rate": 0.6388888888888888,
+      "format_invalid_turns": 4,
+      "retrieval_complete_rate": 0.48148148148148145,
+      "evidence_complete_rate": 0.48148148148148145,
+      "gold_lost": 0,
+      "gold_retrieved": 182,
+      "kept_passages": 5.055555555555555,
+      "uncached_qwen_tokens_per_task": 7717.027777777777,
+      "cached_cost_per_task": 1967.1513888888887,
+      "predicted_hit_fraction": 0.8292412522092198,
+      "deepseek_calls": 315,
+      "deepseek_yuan_per_task": 0.00804113,
+      "deepseek_hit_per_task": 5361.583333333333,
+      "deepseek_miss_per_task": 1986.0,
+      "deepseek_output_per_task": 481.8333333333333,
+      "actual_hit_fraction": 0.7297070465345749,
+      "finish_reason_length": 4
+    },
+    "LLMLingua-2|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.417958892958893,
+      "em": 0.32407407407407407,
+      "searches_per_task": 8.583333333333334,
+      "turns_per_task": 9.75,
+      "self_finish_rate": 0.5277777777777778,
+      "format_invalid_turns": 6,
+      "retrieval_complete_rate": 0.4444444444444444,
+      "evidence_complete_rate": 0.1388888888888889,
+      "gold_lost": 100,
+      "gold_retrieved": 177,
+      "kept_passages": 49.19444444444444,
+      "uncached_qwen_tokens_per_task": 23990.88888888889,
+      "cached_cost_per_task": 22844.977777777778,
+      "predicted_hit_fraction": 0.24813702424068396,
+      "deepseek_calls": 351,
+      "deepseek_yuan_per_task": 0.04015314666666667,
+      "deepseek_hit_per_task": 4600.888888888889,
+      "deepseek_miss_per_task": 17322.555555555555,
+      "deepseek_output_per_task": 665.5,
+      "actual_hit_fraction": 0.20986158906497865,
+      "finish_reason_length": 6
+    },
+    "RR-τ reselect|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.2677221603391194,
+      "em": 0.18518518518518517,
+      "searches_per_task": 9.25,
+      "turns_per_task": 10.277777777777779,
+      "self_finish_rate": 0.3888888888888889,
+      "format_invalid_turns": 1,
+      "retrieval_complete_rate": 0.4074074074074074,
+      "evidence_complete_rate": 0.06481481481481481,
+      "gold_lost": 80,
+      "gold_retrieved": 164,
+      "kept_passages": 4.277777777777778,
+      "uncached_qwen_tokens_per_task": 8397.444444444445,
+      "cached_cost_per_task": 1920.2055555555553,
+      "predicted_hit_fraction": 0.8511121108273682,
+      "deepseek_calls": 370,
+      "deepseek_yuan_per_task": 0.008770736666666668,
+      "deepseek_hit_per_task": 5653.138888888889,
+      "deepseek_miss_per_task": 2337.972222222222,
+      "deepseek_output_per_task": 483.5833333333333,
+      "actual_hit_fraction": 0.7074283926585094,
+      "finish_reason_length": 0
+    },
+    "r4 reselect|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.3827771589467496,
+      "em": 0.25925925925925924,
+      "searches_per_task": 9.333333333333334,
+      "turns_per_task": 10.36111111111111,
+      "self_finish_rate": 0.4722222222222222,
+      "format_invalid_turns": 2,
+      "retrieval_complete_rate": 0.4166666666666667,
+      "evidence_complete_rate": 0.26851851851851855,
+      "gold_lost": 35,
+      "gold_retrieved": 164,
+      "kept_passages": 6.055555555555555,
+      "uncached_qwen_tokens_per_task": 10739.472222222223,
+      "cached_cost_per_task": 3637.140277777778,
+      "predicted_hit_fraction": 0.7594414167880172,
+      "deepseek_calls": 373,
+      "deepseek_yuan_per_task": 0.010421717777777778,
+      "deepseek_hit_per_task": 7224.888888888889,
+      "deepseek_miss_per_task": 2964.9166666666665,
+      "deepseek_output_per_task": 525.3611111111111,
+      "actual_hit_fraction": 0.7090310849896274,
+      "finish_reason_length": 1
+    },
+    "r4 append|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.41081636470525357,
+      "em": 0.3148148148148148,
+      "searches_per_task": 9.38888888888889,
+      "turns_per_task": 10.36111111111111,
+      "self_finish_rate": 0.4722222222222222,
+      "format_invalid_turns": 1,
+      "retrieval_complete_rate": 0.5092592592592593,
+      "evidence_complete_rate": 0.28703703703703703,
+      "gold_lost": 42,
+      "gold_retrieved": 178,
+      "kept_passages": 9.083333333333334,
+      "uncached_qwen_tokens_per_task": 13004.444444444445,
+      "cached_cost_per_task": 3049.855555555556,
+      "predicted_hit_fraction": 0.8462299213943951,
+      "deepseek_calls": 373,
+      "deepseek_yuan_per_task": 0.009877615555555556,
+      "deepseek_hit_per_task": 9752.888888888889,
+      "deepseek_miss_per_task": 2573.0833333333335,
+      "deepseek_output_per_task": 542.6666666666666,
+      "actual_hit_fraction": 0.7912470280685544,
+      "finish_reason_length": 0
+    },
+    "no_compress|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.6647670132780936,
+      "em": 0.5087719298245614,
+      "searches_per_task": 3.9210526315789473,
+      "turns_per_task": 4.973684210526316,
+      "self_finish_rate": 0.9473684210526315,
+      "format_invalid_turns": 2,
+      "retrieval_complete_rate": 0.7192982456140351,
+      "evidence_complete_rate": 0.7192982456140351,
+      "gold_lost": 0,
+      "gold_retrieved": 175,
+      "kept_passages": 64.02631578947368,
+      "uncached_qwen_tokens_per_task": 25733.92105263158,
+      "cached_cost_per_task": 11503.496052631579,
+      "predicted_hit_fraction": 0.6691526338878953,
+      "deepseek_calls": 189,
+      "deepseek_yuan_per_task": 0.019669587368421053,
+      "deepseek_hit_per_task": 16121.263157894737,
+      "deepseek_miss_per_task": 8407.315789473685,
+      "deepseek_output_per_task": 276.2631578947368,
+      "actual_hit_fraction": 0.6572440740446697,
+      "finish_reason_length": 2
+    },
+    "oracle|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.7414884183091037,
+      "em": 0.5964912280701754,
+      "searches_per_task": 4.131578947368421,
+      "turns_per_task": 5.131578947368421,
+      "self_finish_rate": 0.9736842105263158,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.868421052631579,
+      "evidence_complete_rate": 0.868421052631579,
+      "gold_lost": 0,
+      "gold_retrieved": 201,
+      "kept_passages": 5.2894736842105265,
+      "uncached_qwen_tokens_per_task": 3381.157894736842,
+      "cached_cost_per_task": 1424.2894736842106,
+      "predicted_hit_fraction": 0.6906307400143209,
+      "deepseek_calls": 195,
+      "deepseek_yuan_per_task": 0.004677943157894737,
+      "deepseek_hit_per_task": 1876.2105263157894,
+      "deepseek_miss_per_task": 1330.7105263157894,
+      "deepseek_output_per_task": 242.68421052631578,
+      "actual_hit_fraction": 0.5850504254777906,
+      "finish_reason_length": 0
+    },
+    "LLMLingua-2|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.6052531045952099,
+      "em": 0.43859649122807015,
+      "searches_per_task": 7.052631578947368,
+      "turns_per_task": 8.31578947368421,
+      "self_finish_rate": 0.6842105263157895,
+      "format_invalid_turns": 10,
+      "retrieval_complete_rate": 0.6666666666666666,
+      "evidence_complete_rate": 0.19298245614035087,
+      "gold_lost": 100,
+      "gold_retrieved": 158,
+      "kept_passages": 27.0,
+      "uncached_qwen_tokens_per_task": 14209.763157894737,
+      "cached_cost_per_task": 13875.530263157896,
+      "predicted_hit_fraction": 0.22793446314709492,
+      "deepseek_calls": 316,
+      "deepseek_yuan_per_task": 0.02578905052631579,
+      "deepseek_hit_per_task": 2243.3684210526317,
+      "deepseek_miss_per_task": 10837.447368421053,
+      "deepseek_output_per_task": 503.05263157894734,
+      "actual_hit_fraction": 0.17150065081245938,
+      "finish_reason_length": 10
+    },
+    "RR-τ reselect|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.6270343934817618,
+      "em": 0.4824561403508772,
+      "searches_per_task": 7.157894736842105,
+      "turns_per_task": 8.210526315789474,
+      "self_finish_rate": 0.7368421052631579,
+      "format_invalid_turns": 3,
+      "retrieval_complete_rate": 0.7982456140350878,
+      "evidence_complete_rate": 0.3684210526315789,
+      "gold_lost": 58,
+      "gold_retrieved": 192,
+      "kept_passages": 5.5,
+      "uncached_qwen_tokens_per_task": 6485.394736842105,
+      "cached_cost_per_task": 1819.7223684210526,
+      "predicted_hit_fraction": 0.8078435350686766,
+      "deepseek_calls": 312,
+      "deepseek_yuan_per_task": 0.007234797894736842,
+      "deepseek_hit_per_task": 4200.210526315789,
+      "deepseek_miss_per_task": 2001.078947368421,
+      "deepseek_output_per_task": 383.07894736842104,
+      "actual_hit_fraction": 0.6773124435070804,
+      "finish_reason_length": 1
+    },
+    "r4 reselect|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.7316349586086428,
+      "em": 0.5614035087719298,
+      "searches_per_task": 5.184210526315789,
+      "turns_per_task": 6.2105263157894735,
+      "self_finish_rate": 0.9736842105263158,
+      "format_invalid_turns": 1,
+      "retrieval_complete_rate": 0.8421052631578947,
+      "evidence_complete_rate": 0.45614035087719296,
+      "gold_lost": 48,
+      "gold_retrieved": 201,
+      "kept_passages": 4.815789473684211,
+      "uncached_qwen_tokens_per_task": 4327.131578947368,
+      "cached_cost_per_task": 1619.4723684210528,
+      "predicted_hit_fraction": 0.7297833133654846,
+      "deepseek_calls": 236,
+      "deepseek_yuan_per_task": 0.0054446315789473685,
+      "deepseek_hit_per_task": 2610.5263157894738,
+      "deepseek_miss_per_task": 1501.578947368421,
+      "deepseek_output_per_task": 292.13157894736844,
+      "actual_hit_fraction": 0.634839370280302,
+      "finish_reason_length": 1
+    },
+    "r4 append|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.7559573653004587,
+      "em": 0.5964912280701754,
+      "searches_per_task": 5.842105263157895,
+      "turns_per_task": 6.842105263157895,
+      "self_finish_rate": 0.868421052631579,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.8245614035087719,
+      "evidence_complete_rate": 0.5175438596491229,
+      "gold_lost": 36,
+      "gold_retrieved": 197,
+      "kept_passages": 5.657894736842105,
+      "uncached_qwen_tokens_per_task": 5530.973684210527,
+      "cached_cost_per_task": 1707.453947368421,
+      "predicted_hit_fraction": 0.7844102827616724,
+      "deepseek_calls": 260,
+      "deepseek_yuan_per_task": 0.005861467368421053,
+      "deepseek_hit_per_task": 3698.5263157894738,
+      "deepseek_miss_per_task": 1582.0263157894738,
+      "deepseek_output_per_task": 318.6842105263158,
+      "actual_hit_fraction": 0.7004051609430831,
+      "finish_reason_length": 0
+    },
+    "no_compress|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.778827660803528,
+      "em": 0.6752136752136753,
+      "searches_per_task": 6.666666666666667,
+      "turns_per_task": 7.666666666666667,
+      "self_finish_rate": 0.8974358974358975,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.8547008547008547,
+      "evidence_complete_rate": 0.8547008547008547,
+      "gold_lost": 0,
+      "gold_retrieved": 258,
+      "kept_passages": 112.05128205128206,
+      "uncached_qwen_tokens_per_task": 50069.666666666664,
+      "cached_cost_per_task": 16314.744871794874,
+      "predicted_hit_fraction": 0.7701325896174407,
+      "deepseek_calls": 299,
+      "deepseek_yuan_per_task": 0.026905593846153847,
+      "deepseek_hit_per_task": 35751.38461538462,
+      "deepseek_miss_per_task": 11211.102564102564,
+      "deepseek_output_per_task": 381.6666666666667,
+      "actual_hit_fraction": 0.7612753659904222,
+      "finish_reason_length": 0
+    },
+    "oracle|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.7724494119365914,
+      "em": 0.6752136752136753,
+      "searches_per_task": 6.3076923076923075,
+      "turns_per_task": 7.3076923076923075,
+      "self_finish_rate": 0.9230769230769231,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.8376068376068376,
+      "evidence_complete_rate": 0.8376068376068376,
+      "gold_lost": 0,
+      "gold_retrieved": 251,
+      "kept_passages": 6.435897435897436,
+      "uncached_qwen_tokens_per_task": 6404.282051282052,
+      "cached_cost_per_task": 2106.891025641026,
+      "predicted_hit_fraction": 0.767515324282231,
+      "deepseek_calls": 285,
+      "deepseek_yuan_per_task": 0.006645371282051282,
+      "deepseek_hit_per_task": 4089.4102564102564,
+      "deepseek_miss_per_task": 1925.7179487179487,
+      "deepseek_output_per_task": 328.79487179487177,
+      "actual_hit_fraction": 0.6798542137346008,
+      "finish_reason_length": 0
+    },
+    "LLMLingua-2|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.6145686362126784,
+      "em": 0.5128205128205128,
+      "searches_per_task": 8.974358974358974,
+      "turns_per_task": 9.974358974358974,
+      "self_finish_rate": 0.6153846153846154,
+      "format_invalid_turns": 1,
+      "retrieval_complete_rate": 0.6153846153846154,
+      "evidence_complete_rate": 0.3076923076923077,
+      "gold_lost": 97,
+      "gold_retrieved": 214,
+      "kept_passages": 69.48717948717949,
+      "uncached_qwen_tokens_per_task": 24730.102564102563,
+      "cached_cost_per_task": 19983.335897435896,
+      "predicted_hit_fraction": 0.36828571843305263,
+      "deepseek_calls": 389,
+      "deepseek_yuan_per_task": 0.03446660717948718,
+      "deepseek_hit_per_task": 7512.615384615385,
+      "deepseek_miss_per_task": 15003.051282051281,
+      "deepseek_output_per_task": 520.0,
+      "actual_hit_fraction": 0.33366168969526633,
+      "finish_reason_length": 0
+    },
+    "RR-τ reselect|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.5794884128217461,
+      "em": 0.48717948717948717,
+      "searches_per_task": 9.974358974358974,
+      "turns_per_task": 10.974358974358974,
+      "self_finish_rate": 0.46153846153846156,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.7863247863247863,
+      "evidence_complete_rate": 0.28205128205128205,
+      "gold_lost": 81,
+      "gold_retrieved": 250,
+      "kept_passages": 5.846153846153846,
+      "uncached_qwen_tokens_per_task": 9347.589743589744,
+      "cached_cost_per_task": 2271.594871794872,
+      "predicted_hit_fraction": 0.8391550269368766,
+      "deepseek_calls": 428,
+      "deepseek_yuan_per_task": 0.009168606153846154,
+      "deepseek_hit_per_task": 6235.666666666667,
+      "deepseek_miss_per_task": 2611.6923076923076,
+      "deepseek_output_per_task": 461.97435897435895,
+      "actual_hit_fraction": 0.7048054323034253,
+      "finish_reason_length": 0
+    },
+    "r4 reselect|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.7375317939420504,
+      "em": 0.6324786324786325,
+      "searches_per_task": 8.205128205128204,
+      "turns_per_task": 9.205128205128204,
+      "self_finish_rate": 0.7692307692307693,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.8205128205128205,
+      "evidence_complete_rate": 0.5982905982905983,
+      "gold_lost": 28,
+      "gold_retrieved": 248,
+      "kept_passages": 6.923076923076923,
+      "uncached_qwen_tokens_per_task": 9024.435897435897,
+      "cached_cost_per_task": 2967.1602564102564,
+      "predicted_hit_fraction": 0.767673524589931,
+      "deepseek_calls": 359,
+      "deepseek_yuan_per_task": 0.00860948717948718,
+      "deepseek_hit_per_task": 5907.692307692308,
+      "deepseek_miss_per_task": 2578.1794871794873,
+      "deepseek_output_per_task": 402.1025641025641,
+      "actual_hit_fraction": 0.6961797739228703,
+      "finish_reason_length": 0
+    },
+    "r4 append|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.7116053612005029,
+      "em": 0.6153846153846154,
+      "searches_per_task": 8.179487179487179,
+      "turns_per_task": 9.179487179487179,
+      "self_finish_rate": 0.717948717948718,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.8034188034188035,
+      "evidence_complete_rate": 0.6666666666666666,
+      "gold_lost": 17,
+      "gold_retrieved": 239,
+      "kept_passages": 8.35897435897436,
+      "uncached_qwen_tokens_per_task": 9995.76923076923,
+      "cached_cost_per_task": 2664.5884615384616,
+      "predicted_hit_fraction": 0.8195236446188772,
+      "deepseek_calls": 358,
+      "deepseek_yuan_per_task": 0.008089333333333334,
+      "deepseek_hit_per_task": 7056.410256410257,
+      "deepseek_miss_per_task": 2329.1794871794873,
+      "deepseek_output_per_task": 393.5897435897436,
+      "actual_hit_fraction": 0.7518345089854059,
+      "finish_reason_length": 0
+    },
+    "no_compress|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.6185515161442584,
+      "em": 0.5014749262536873,
+      "searches_per_task": 5.6902654867256635,
+      "turns_per_task": 6.734513274336283,
+      "self_finish_rate": 0.8672566371681416,
+      "format_invalid_turns": 5,
+      "retrieval_complete_rate": 0.6489675516224189,
+      "evidence_complete_rate": 0.6489675516224189,
+      "gold_lost": 0,
+      "gold_retrieved": 588,
+      "kept_passages": 89.85840707964601,
+      "uncached_qwen_tokens_per_task": 45165.70796460177,
+      "cached_cost_per_task": 14907.63407079646,
+      "predicted_hit_fraction": 0.766612229303107,
+      "deepseek_calls": 761,
+      "deepseek_yuan_per_task": 0.02498559575221239,
+      "deepseek_hit_per_task": 32210.690265486726,
+      "deepseek_miss_per_task": 10322.884955752212,
+      "deepseek_output_per_task": 381.42477876106193,
+      "actual_hit_fraction": 0.7573003232844266,
+      "finish_reason_length": 5
+    },
+    "oracle|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.6817027060372538,
+      "em": 0.56047197640118,
+      "searches_per_task": 6.0,
+      "turns_per_task": 7.035398230088496,
+      "self_finish_rate": 0.8495575221238938,
+      "format_invalid_turns": 4,
+      "retrieval_complete_rate": 0.7345132743362832,
+      "evidence_complete_rate": 0.7345132743362832,
+      "gold_lost": 0,
+      "gold_retrieved": 634,
+      "kept_passages": 5.610619469026549,
+      "uncached_qwen_tokens_per_task": 5805.876106194691,
+      "cached_cost_per_task": 1832.8247787610621,
+      "predicted_hit_fraction": 0.7785962954833675,
+      "deepseek_calls": 795,
+      "deepseek_yuan_per_task": 0.006428424778761062,
+      "deepseek_hit_per_task": 3750.4424778761063,
+      "deepseek_miss_per_task": 1744.8318584070796,
+      "deepseek_output_per_task": 348.5929203539823,
+      "actual_hit_fraction": 0.6824850313865816,
+      "finish_reason_length": 4
+    },
+    "LLMLingua-2|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.5487992471985184,
+      "em": 0.4277286135693215,
+      "searches_per_task": 8.20353982300885,
+      "turns_per_task": 9.345132743362832,
+      "self_finish_rate": 0.6106194690265486,
+      "format_invalid_turns": 17,
+      "retrieval_complete_rate": 0.5781710914454278,
+      "evidence_complete_rate": 0.2153392330383481,
+      "gold_lost": 297,
+      "gold_retrieved": 549,
+      "kept_passages": 48.73451327433628,
+      "uncached_qwen_tokens_per_task": 20956.78761061947,
+      "cached_cost_per_task": 18841.05707964602,
+      "predicted_hit_fraction": 0.29246401254667737,
+      "deepseek_calls": 1056,
+      "deepseek_yuan_per_task": 0.03336013168141593,
+      "deepseek_hit_per_task": 4813.026548672567,
+      "deepseek_miss_per_task": 14341.185840707965,
+      "deepseek_output_per_task": 560.6548672566372,
+      "actual_hit_fraction": 0.25127770595991733,
+      "finish_reason_length": 16
+    },
+    "RR-τ reselect|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.4961535648191447,
+      "em": 0.3893805309734513,
+      "searches_per_task": 8.79646017699115,
+      "turns_per_task": 9.823008849557523,
+      "self_finish_rate": 0.5309734513274337,
+      "format_invalid_turns": 4,
+      "retrieval_complete_rate": 0.6696165191740413,
+      "evidence_complete_rate": 0.24188790560471976,
+      "gold_lost": 219,
+      "gold_retrieved": 606,
+      "kept_passages": 5.230088495575221,
+      "uncached_qwen_tokens_per_task": 8082.380530973452,
+      "cached_cost_per_task": 2007.6907079646016,
+      "predicted_hit_fraction": 0.8346638432337796,
+      "deepseek_calls": 1110,
+      "deepseek_yuan_per_task": 0.00839154407079646,
+      "deepseek_hit_per_task": 5365.592920353983,
+      "deepseek_miss_per_task": 2319.150442477876,
+      "deepseek_output_per_task": 442.3274336283186,
+      "actual_hit_fraction": 0.6982136770246989,
+      "finish_reason_length": 1
+    },
+    "r4 reselect|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.6225296116190387,
+      "em": 0.4896755162241888,
+      "searches_per_task": 7.548672566371682,
+      "turns_per_task": 8.56637168141593,
+      "self_finish_rate": 0.7433628318584071,
+      "format_invalid_turns": 3,
+      "retrieval_complete_rate": 0.6991150442477876,
+      "evidence_complete_rate": 0.44542772861356933,
+      "gold_lost": 111,
+      "gold_retrieved": 613,
+      "kept_passages": 5.938053097345133,
+      "uncached_qwen_tokens_per_task": 7991.194690265486,
+      "cached_cost_per_task": 2727.400442477876,
+      "predicted_hit_fraction": 0.7572494061494676,
+      "deepseek_calls": 968,
+      "deepseek_yuan_per_task": 0.008122547256637169,
+      "deepseek_hit_per_task": 5218.548672566371,
+      "deepseek_miss_per_task": 2339.3451327433627,
+      "deepseek_output_per_task": 404.3893805309734,
+      "actual_hit_fraction": 0.6904765807770578,
+      "finish_reason_length": 2
+    },
+    "r4 append|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.6306936114834174,
+      "em": 0.5132743362831859,
+      "searches_per_task": 7.778761061946903,
+      "turns_per_task": 8.769911504424778,
+      "self_finish_rate": 0.6902654867256637,
+      "format_invalid_turns": 1,
+      "retrieval_complete_rate": 0.7168141592920354,
+      "evidence_complete_rate": 0.49557522123893805,
+      "gold_lost": 95,
+      "gold_retrieved": 614,
+      "kept_passages": 7.68141592920354,
+      "uncached_qwen_tokens_per_task": 9452.849557522124,
+      "cached_cost_per_task": 2465.4601769911505,
+      "predicted_hit_fraction": 0.8243194916174549,
+      "deepseek_calls": 991,
+      "deepseek_yuan_per_task": 0.007909857699115045,
+      "deepseek_hit_per_task": 6786.265486725663,
+      "deepseek_miss_per_task": 2155.6283185840707,
+      "deepseek_output_per_task": 415.8938053097345,
+      "actual_hit_fraction": 0.758929331356625,
+      "finish_reason_length": 0
+    }
+  },
+  "qwen_same_tasks": {
+    "no_compress|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.16061690598727638,
+      "em": 0.10185185185185185,
+      "searches_per_task": 3.3333333333333335,
+      "turns_per_task": 4.333333333333333,
+      "self_finish_rate": 0.9722222222222222,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.16666666666666666,
+      "evidence_complete_rate": 0.16666666666666666,
+      "gold_lost": 0,
+      "gold_retrieved": 140,
+      "kept_passages": 60.19444444444444,
+      "uncached_qwen_tokens_per_task": 18539.583333333332,
+      "cached_cost_per_task": 10030.745833333332,
+      "predicted_hit_fraction": 0.5907959695845976
+    },
+    "oracle|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.26348151982209955,
+      "em": 0.17592592592592593,
+      "searches_per_task": 4.055555555555555,
+      "turns_per_task": 5.055555555555555,
+      "self_finish_rate": 0.9166666666666666,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.18518518518518517,
+      "evidence_complete_rate": 0.18518518518518517,
+      "gold_lost": 0,
+      "gold_retrieved": 153,
+      "kept_passages": 4.222222222222222,
+      "uncached_qwen_tokens_per_task": 3244.027777777778,
+      "cached_cost_per_task": 1259.4013888888887,
+      "predicted_hit_fraction": 0.7181487348546475
+    },
+    "LLMLingua-2|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.1238616520793447,
+      "em": 0.06481481481481481,
+      "searches_per_task": 3.2777777777777777,
+      "turns_per_task": 4.277777777777778,
+      "self_finish_rate": 0.9722222222222222,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.1574074074074074,
+      "evidence_complete_rate": 0.08333333333333333,
+      "gold_lost": 44,
+      "gold_retrieved": 141,
+      "kept_passages": 46.666666666666664,
+      "uncached_qwen_tokens_per_task": 6856.972222222223,
+      "cached_cost_per_task": 5953.348611111111,
+      "predicted_hit_fraction": 0.31815143548132274
+    },
+    "RR-τ reselect|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.14412110523221633,
+      "em": 0.07407407407407407,
+      "searches_per_task": 5.388888888888889,
+      "turns_per_task": 6.388888888888889,
+      "self_finish_rate": 0.75,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.17592592592592593,
+      "evidence_complete_rate": 0.037037037037037035,
+      "gold_lost": 46,
+      "gold_retrieved": 145,
+      "kept_passages": 4.0,
+      "uncached_qwen_tokens_per_task": 4284.416666666667,
+      "cached_cost_per_task": 1370.3874999999998,
+      "predicted_hit_fraction": 0.7751217266709457
+    },
+    "r4 reselect|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.17591634077141322,
+      "em": 0.09259259259259259,
+      "searches_per_task": 4.111111111111111,
+      "turns_per_task": 5.111111111111111,
+      "self_finish_rate": 0.9166666666666666,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.19444444444444445,
+      "evidence_complete_rate": 0.009259259259259259,
+      "gold_lost": 51,
+      "gold_retrieved": 149,
+      "kept_passages": 3.5555555555555554,
+      "uncached_qwen_tokens_per_task": 3292.5555555555557,
+      "cached_cost_per_task": 1491.0611111111111,
+      "predicted_hit_fraction": 0.664284750109675
+    },
+    "r4 append|musique": {
+      "n_tasks": 36,
+      "n_questions": 108,
+      "f1": 0.20268000920174833,
+      "em": 0.12037037037037036,
+      "searches_per_task": 3.8333333333333335,
+      "turns_per_task": 4.833333333333333,
+      "self_finish_rate": 0.9722222222222222,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.17592592592592593,
+      "evidence_complete_rate": 0.009259259259259259,
+      "gold_lost": 51,
+      "gold_retrieved": 147,
+      "kept_passages": 3.888888888888889,
+      "uncached_qwen_tokens_per_task": 3069.6111111111113,
+      "cached_cost_per_task": 1220.2472222222223,
+      "predicted_hit_fraction": 0.710395815611822
+    },
+    "no_compress|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.48853613524666156,
+      "em": 0.35964912280701755,
+      "searches_per_task": 2.973684210526316,
+      "turns_per_task": 3.973684210526316,
+      "self_finish_rate": 1.0,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.6578947368421053,
+      "evidence_complete_rate": 0.6578947368421053,
+      "gold_lost": 0,
+      "gold_retrieved": 188,
+      "kept_passages": 59.39473684210526,
+      "uncached_qwen_tokens_per_task": 16186.921052631578,
+      "cached_cost_per_task": 10141.019736842105,
+      "predicted_hit_fraction": 0.5195877763561549
+    },
+    "oracle|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.5113789322785651,
+      "em": 0.38596491228070173,
+      "searches_per_task": 3.1578947368421053,
+      "turns_per_task": 4.157894736842105,
+      "self_finish_rate": 0.9736842105263158,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.6140350877192983,
+      "evidence_complete_rate": 0.6140350877192983,
+      "gold_lost": 0,
+      "gold_retrieved": 179,
+      "kept_passages": 4.7105263157894735,
+      "uncached_qwen_tokens_per_task": 2389.3684210526317,
+      "cached_cost_per_task": 1218.6052631578948,
+      "predicted_hit_fraction": 0.6166571214590951
+    },
+    "LLMLingua-2|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.28964168939214313,
+      "em": 0.18421052631578946,
+      "searches_per_task": 2.9473684210526314,
+      "turns_per_task": 3.9473684210526314,
+      "self_finish_rate": 1.0,
+      "format_invalid_turns": 1,
+      "retrieval_complete_rate": 0.6052631578947368,
+      "evidence_complete_rate": 0.23684210526315788,
+      "gold_lost": 105,
+      "gold_retrieved": 180,
+      "kept_passages": 27.210526315789473,
+      "uncached_qwen_tokens_per_task": 4857.394736842105,
+      "cached_cost_per_task": 5192.553947368421,
+      "predicted_hit_fraction": 0.15083350940779386
+    },
+    "RR-τ reselect|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.42316993304676703,
+      "em": 0.30701754385964913,
+      "searches_per_task": 3.1842105263157894,
+      "turns_per_task": 4.184210526315789,
+      "self_finish_rate": 0.9736842105263158,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.5789473684210527,
+      "evidence_complete_rate": 0.34210526315789475,
+      "gold_lost": 36,
+      "gold_retrieved": 175,
+      "kept_passages": 5.2368421052631575,
+      "uncached_qwen_tokens_per_task": 2500.9210526315787,
+      "cached_cost_per_task": 1259.7723684210525,
+      "predicted_hit_fraction": 0.6218971957699795
+    },
+    "r4 reselect|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.441635408809924,
+      "em": 0.32456140350877194,
+      "searches_per_task": 3.710526315789474,
+      "turns_per_task": 4.7105263157894735,
+      "self_finish_rate": 0.9473684210526315,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.6578947368421053,
+      "evidence_complete_rate": 0.05263157894736842,
+      "gold_lost": 77,
+      "gold_retrieved": 187,
+      "kept_passages": 3.3684210526315788,
+      "uncached_qwen_tokens_per_task": 2651.7105263157896,
+      "cached_cost_per_task": 1318.975,
+      "predicted_hit_fraction": 0.6271622091003821
+    },
+    "r4 append|hotpotqa": {
+      "n_tasks": 38,
+      "n_questions": 114,
+      "f1": 0.4074325771694193,
+      "em": 0.2894736842105263,
+      "searches_per_task": 3.6578947368421053,
+      "turns_per_task": 4.657894736842105,
+      "self_finish_rate": 0.9736842105263158,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.631578947368421,
+      "evidence_complete_rate": 0.05263157894736842,
+      "gold_lost": 75,
+      "gold_retrieved": 183,
+      "kept_passages": 3.6315789473684212,
+      "uncached_qwen_tokens_per_task": 2827.7368421052633,
+      "cached_cost_per_task": 1134.45,
+      "predicted_hit_fraction": 0.7073445381279431
+    },
+    "no_compress|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.4850088183421517,
+      "em": 0.4358974358974359,
+      "searches_per_task": 3.3076923076923075,
+      "turns_per_task": 4.3076923076923075,
+      "self_finish_rate": 0.9743589743589743,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.37606837606837606,
+      "evidence_complete_rate": 0.37606837606837606,
+      "gold_lost": 0,
+      "gold_retrieved": 182,
+      "kept_passages": 59.58974358974359,
+      "uncached_qwen_tokens_per_task": 14732.076923076924,
+      "cached_cost_per_task": 8558.265384615384,
+      "predicted_hit_fraction": 0.5575605994942138
+    },
+    "oracle|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.5042463709130376,
+      "em": 0.4358974358974359,
+      "searches_per_task": 4.153846153846154,
+      "turns_per_task": 5.153846153846154,
+      "self_finish_rate": 0.9487179487179487,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.452991452991453,
+      "evidence_complete_rate": 0.452991452991453,
+      "gold_lost": 0,
+      "gold_retrieved": 199,
+      "kept_passages": 5.102564102564102,
+      "uncached_qwen_tokens_per_task": 3644.8205128205127,
+      "cached_cost_per_task": 1532.825641025641,
+      "predicted_hit_fraction": 0.6912091622815657
+    },
+    "LLMLingua-2|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.34031339031339036,
+      "em": 0.3076923076923077,
+      "searches_per_task": 4.256410256410256,
+      "turns_per_task": 5.256410256410256,
+      "self_finish_rate": 0.8717948717948718,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.358974358974359,
+      "evidence_complete_rate": 0.3076923076923077,
+      "gold_lost": 22,
+      "gold_retrieved": 175,
+      "kept_passages": 55.1025641025641,
+      "uncached_qwen_tokens_per_task": 9311.615384615385,
+      "cached_cost_per_task": 4965.5192307692305,
+      "predicted_hit_fraction": 0.5972826880130413
+    },
+    "RR-τ reselect|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.45857988165680474,
+      "em": 0.4188034188034188,
+      "searches_per_task": 4.794871794871795,
+      "turns_per_task": 5.794871794871795,
+      "self_finish_rate": 0.8461538461538461,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.4358974358974359,
+      "evidence_complete_rate": 0.23076923076923078,
+      "gold_lost": 35,
+      "gold_retrieved": 196,
+      "kept_passages": 5.487179487179487,
+      "uncached_qwen_tokens_per_task": 4327.615384615385,
+      "cached_cost_per_task": 1664.996153846154,
+      "predicted_hit_fraction": 0.7210520390811544
+    },
+    "r4 reselect|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.4885984385984386,
+      "em": 0.4188034188034188,
+      "searches_per_task": 3.923076923076923,
+      "turns_per_task": 4.923076923076923,
+      "self_finish_rate": 1.0,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.452991452991453,
+      "evidence_complete_rate": 0.15384615384615385,
+      "gold_lost": 60,
+      "gold_retrieved": 201,
+      "kept_passages": 4.102564102564102,
+      "uncached_qwen_tokens_per_task": 2943.076923076923,
+      "cached_cost_per_task": 1320.6923076923076,
+      "predicted_hit_fraction": 0.6677121449729918
+    },
+    "r4 append|2wiki": {
+      "n_tasks": 39,
+      "n_questions": 117,
+      "f1": 0.48188169854836527,
+      "em": 0.42735042735042733,
+      "searches_per_task": 4.282051282051282,
+      "turns_per_task": 5.282051282051282,
+      "self_finish_rate": 1.0,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.47863247863247865,
+      "evidence_complete_rate": 0.20512820512820512,
+      "gold_lost": 48,
+      "gold_retrieved": 202,
+      "kept_passages": 4.538461538461538,
+      "uncached_qwen_tokens_per_task": 3369.5128205128203,
+      "cached_cost_per_task": 1413.0910256410257,
+      "predicted_hit_fraction": 0.6921871076241715
+    },
+    "no_compress|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.38284889973680536,
+      "em": 0.30383480825958703,
+      "searches_per_task": 3.2035398230088497,
+      "turns_per_task": 4.20353982300885,
+      "self_finish_rate": 0.9823008849557522,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.40412979351032446,
+      "evidence_complete_rate": 0.40412979351032446,
+      "gold_lost": 0,
+      "gold_retrieved": 510,
+      "kept_passages": 59.716814159292035,
+      "uncached_qwen_tokens_per_task": 16434.327433628318,
+      "cached_cost_per_task": 9559.627876106195,
+      "predicted_hit_fraction": 0.5569278420573385
+    },
+    "oracle|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.4299410850069869,
+      "em": 0.336283185840708,
+      "searches_per_task": 3.7876106194690267,
+      "turns_per_task": 4.787610619469026,
+      "self_finish_rate": 0.9469026548672567,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.4218289085545723,
+      "evidence_complete_rate": 0.4218289085545723,
+      "gold_lost": 0,
+      "gold_retrieved": 531,
+      "kept_passages": 4.6902654867256635,
+      "uncached_qwen_tokens_per_task": 3094.9469026548672,
+      "cached_cost_per_task": 1340.05,
+      "predicted_hit_fraction": 0.680850029594343
+    },
+    "LLMLingua-2|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.2543152733980537,
+      "em": 0.1887905604719764,
+      "searches_per_task": 3.504424778761062,
+      "turns_per_task": 4.504424778761062,
+      "self_finish_rate": 0.9469026548672567,
+      "format_invalid_turns": 1,
+      "retrieval_complete_rate": 0.3775811209439528,
+      "evidence_complete_rate": 0.21238938053097345,
+      "gold_lost": 171,
+      "gold_retrieved": 496,
+      "kept_passages": 43.0353982300885,
+      "uncached_qwen_tokens_per_task": 7031.725663716814,
+      "cached_cost_per_task": 5356.573893805309,
+      "predicted_hit_fraction": 0.40685640932058875
+    },
+    "RR-τ reselect|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.34649055423674624,
+      "em": 0.2713864306784661,
+      "searches_per_task": 4.442477876106195,
+      "turns_per_task": 5.442477876106195,
+      "self_finish_rate": 0.8584070796460177,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.40117994100294985,
+      "evidence_complete_rate": 0.20648967551622419,
+      "gold_lost": 117,
+      "gold_retrieved": 516,
+      "kept_passages": 4.929203539823009,
+      "uncached_qwen_tokens_per_task": 3699.566371681416,
+      "cached_cost_per_task": 1434.8685840707965,
+      "predicted_hit_fraction": 0.7184601878718146
+    },
+    "r4 reselect|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.3731900257335141,
+      "em": 0.2831858407079646,
+      "searches_per_task": 3.911504424778761,
+      "turns_per_task": 4.911504424778761,
+      "self_finish_rate": 0.9557522123893806,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.43952802359882004,
+      "evidence_complete_rate": 0.07374631268436578,
+      "gold_lost": 188,
+      "gold_retrieved": 537,
+      "kept_passages": 3.6814159292035398,
+      "uncached_qwen_tokens_per_task": 2956.433628318584,
+      "cached_cost_per_task": 1374.391592920354,
+      "predicted_hit_fraction": 0.6542653340397573
+    },
+    "r4 append|ALL": {
+      "n_tasks": 113,
+      "n_questions": 339,
+      "f1": 0.36789650006271785,
+      "em": 0.2831858407079646,
+      "searches_per_task": 3.9292035398230087,
+      "turns_per_task": 4.929203539823009,
+      "self_finish_rate": 0.9823008849557522,
+      "format_invalid_turns": 0,
+      "retrieval_complete_rate": 0.4336283185840708,
+      "evidence_complete_rate": 0.09144542772861357,
+      "gold_lost": 174,
+      "gold_retrieved": 532,
+      "kept_passages": 4.0265486725663715,
+      "uncached_qwen_tokens_per_task": 3091.778761061947,
+      "cached_cost_per_task": 1257.9517699115042,
+      "predicted_hit_fraction": 0.7026084019566593
+    }
+  },
+  "pairs": {
+    "r4 reselect − RR-τ reselect|musique": {
+      "n": 108,
+      "delta_f1": 0.11505499860763019,
+      "delta_em": 0.07407407407407407,
+      "f1_higher": 30,
+      "f1_equal": 65,
+      "f1_lower": 13,
+      "em_2x2_left_rows_right_columns": [
+        [
+          74,
+          6
+        ],
+        [
+          14,
+          14
+        ]
+      ]
+    },
+    "r4 reselect − RR-τ reselect|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.10460056512688092,
+      "delta_em": 0.07894736842105263,
+      "f1_higher": 25,
+      "f1_equal": 79,
+      "f1_lower": 10,
+      "em_2x2_left_rows_right_columns": [
+        [
+          43,
+          7
+        ],
+        [
+          16,
+          48
+        ]
+      ]
+    },
+    "r4 reselect − RR-τ reselect|2wiki": {
+      "n": 117,
+      "delta_f1": 0.15804338112030422,
+      "delta_em": 0.1452991452991453,
+      "f1_higher": 40,
+      "f1_equal": 66,
+      "f1_lower": 11,
+      "em_2x2_left_rows_right_columns": [
+        [
+          35,
+          8
+        ],
+        [
+          25,
+          49
+        ]
+      ]
+    },
+    "r4 reselect − RR-τ reselect|ALL": {
+      "n": 339,
+      "delta_f1": 0.12637604679989403,
+      "delta_em": 0.10029498525073746,
+      "f1_higher": 95,
+      "f1_equal": 210,
+      "f1_lower": 34,
+      "em_2x2_left_rows_right_columns": [
+        [
+          152,
+          21
+        ],
+        [
+          55,
+          111
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|musique": {
+      "n": 108,
+      "delta_f1": -0.013358842397585089,
+      "delta_em": -0.046296296296296294,
+      "f1_higher": 19,
+      "f1_equal": 70,
+      "f1_lower": 19,
+      "em_2x2_left_rows_right_columns": [
+        [
+          68,
+          12
+        ],
+        [
+          7,
+          21
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.06686794533054921,
+      "delta_em": 0.05263157894736842,
+      "f1_higher": 26,
+      "f1_equal": 73,
+      "f1_lower": 15,
+      "em_2x2_left_rows_right_columns": [
+        [
+          41,
+          9
+        ],
+        [
+          15,
+          49
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|2wiki": {
+      "n": 117,
+      "delta_f1": -0.04129586686147772,
+      "delta_em": -0.042735042735042736,
+      "f1_higher": 10,
+      "f1_equal": 92,
+      "f1_lower": 15,
+      "em_2x2_left_rows_right_columns": [
+        [
+          32,
+          11
+        ],
+        [
+          6,
+          68
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|ALL": {
+      "n": 339,
+      "delta_f1": 0.003978095474780316,
+      "delta_em": -0.011799410029498525,
+      "f1_higher": 55,
+      "f1_equal": 235,
+      "f1_lower": 49,
+      "em_2x2_left_rows_right_columns": [
+        [
+          141,
+          32
+        ],
+        [
+          28,
+          138
+        ]
+      ]
+    },
+    "r4 append − no_compress|musique": {
+      "n": 108,
+      "delta_f1": 0.014680363360918916,
+      "delta_em": 0.009259259259259259,
+      "f1_higher": 18,
+      "f1_equal": 70,
+      "f1_lower": 20,
+      "em_2x2_left_rows_right_columns": [
+        [
+          64,
+          10
+        ],
+        [
+          11,
+          23
+        ]
+      ]
+    },
+    "r4 append − no_compress|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.09119035202236503,
+      "delta_em": 0.08771929824561403,
+      "f1_higher": 27,
+      "f1_equal": 78,
+      "f1_lower": 9,
+      "em_2x2_left_rows_right_columns": [
+        [
+          40,
+          6
+        ],
+        [
+          16,
+          52
+        ]
+      ]
+    },
+    "r4 append − no_compress|2wiki": {
+      "n": 117,
+      "delta_f1": -0.06722229960302517,
+      "delta_em": -0.05982905982905983,
+      "f1_higher": 13,
+      "f1_equal": 86,
+      "f1_lower": 18,
+      "em_2x2_left_rows_right_columns": [
+        [
+          30,
+          15
+        ],
+        [
+          8,
+          64
+        ]
+      ]
+    },
+    "r4 append − no_compress|ALL": {
+      "n": 339,
+      "delta_f1": 0.01214209533915903,
+      "delta_em": 0.011799410029498525,
+      "f1_higher": 58,
+      "f1_equal": 234,
+      "f1_lower": 47,
+      "em_2x2_left_rows_right_columns": [
+        [
+          134,
+          31
+        ],
+        [
+          35,
+          139
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|musique": {
+      "n": 108,
+      "delta_f1": -0.03518173401214337,
+      "delta_em": -0.06481481481481481,
+      "f1_higher": 20,
+      "f1_equal": 68,
+      "f1_lower": 20,
+      "em_2x2_left_rows_right_columns": [
+        [
+          65,
+          15
+        ],
+        [
+          8,
+          20
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.12638185401343296,
+      "delta_em": 0.12280701754385964,
+      "f1_higher": 29,
+      "f1_equal": 74,
+      "f1_lower": 11,
+      "em_2x2_left_rows_right_columns": [
+        [
+          44,
+          6
+        ],
+        [
+          20,
+          44
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|2wiki": {
+      "n": 117,
+      "delta_f1": 0.12296315772937191,
+      "delta_em": 0.11965811965811966,
+      "f1_higher": 37,
+      "f1_equal": 66,
+      "f1_lower": 14,
+      "em_2x2_left_rows_right_columns": [
+        [
+          31,
+          12
+        ],
+        [
+          26,
+          48
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|ALL": {
+      "n": 339,
+      "delta_f1": 0.07373036442052032,
+      "delta_em": 0.061946902654867256,
+      "f1_higher": 86,
+      "f1_equal": 208,
+      "f1_lower": 45,
+      "em_2x2_left_rows_right_columns": [
+        [
+          140,
+          33
+        ],
+        [
+          54,
+          112
+        ]
+      ]
+    },
+    "oracle − r4 reselect|musique": {
+      "n": 108,
+      "delta_f1": 0.1375094749681579,
+      "delta_em": 0.1388888888888889,
+      "f1_higher": 30,
+      "f1_equal": 64,
+      "f1_lower": 14,
+      "em_2x2_left_rows_right_columns": [
+        [
+          59,
+          6
+        ],
+        [
+          21,
+          22
+        ]
+      ]
+    },
+    "oracle − r4 reselect|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.009853459700460927,
+      "delta_em": 0.03508771929824561,
+      "f1_higher": 15,
+      "f1_equal": 89,
+      "f1_lower": 10,
+      "em_2x2_left_rows_right_columns": [
+        [
+          40,
+          6
+        ],
+        [
+          10,
+          58
+        ]
+      ]
+    },
+    "oracle − r4 reselect|2wiki": {
+      "n": 117,
+      "delta_f1": 0.034917617994541066,
+      "delta_em": 0.042735042735042736,
+      "f1_higher": 20,
+      "f1_equal": 84,
+      "f1_lower": 13,
+      "em_2x2_left_rows_right_columns": [
+        [
+          29,
+          9
+        ],
+        [
+          14,
+          65
+        ]
+      ]
+    },
+    "oracle − r4 reselect|ALL": {
+      "n": 339,
+      "delta_f1": 0.059173094418215055,
+      "delta_em": 0.07079646017699115,
+      "f1_higher": 65,
+      "f1_equal": 237,
+      "f1_lower": 37,
+      "em_2x2_left_rows_right_columns": [
+        [
+          128,
+          21
+        ],
+        [
+          45,
+          145
+        ]
+      ]
+    }
+  },
+  "qwen_pairs": {
+    "r4 reselect − RR-τ reselect|musique": {
+      "n": 108,
+      "delta_f1": 0.03179523553919689,
+      "delta_em": 0.018518518518518517,
+      "f1_higher": 13,
+      "f1_equal": 90,
+      "f1_lower": 5,
+      "em_2x2_left_rows_right_columns": [
+        [
+          96,
+          2
+        ],
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    "r4 reselect − RR-τ reselect|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.01846547576315697,
+      "delta_em": 0.017543859649122806,
+      "f1_higher": 12,
+      "f1_equal": 89,
+      "f1_lower": 13,
+      "em_2x2_left_rows_right_columns": [
+        [
+          72,
+          5
+        ],
+        [
+          7,
+          30
+        ]
+      ]
+    },
+    "r4 reselect − RR-τ reselect|2wiki": {
+      "n": 117,
+      "delta_f1": 0.030018556941633866,
+      "delta_em": 0.0,
+      "f1_higher": 16,
+      "f1_equal": 91,
+      "f1_lower": 10,
+      "em_2x2_left_rows_right_columns": [
+        [
+          60,
+          8
+        ],
+        [
+          8,
+          41
+        ]
+      ]
+    },
+    "r4 reselect − RR-τ reselect|ALL": {
+      "n": 339,
+      "delta_f1": 0.026699471496767907,
+      "delta_em": 0.011799410029498525,
+      "f1_higher": 41,
+      "f1_equal": 270,
+      "f1_lower": 28,
+      "em_2x2_left_rows_right_columns": [
+        [
+          228,
+          15
+        ],
+        [
+          19,
+          77
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|musique": {
+      "n": 108,
+      "delta_f1": 0.015299434784136874,
+      "delta_em": -0.009259259259259259,
+      "f1_higher": 14,
+      "f1_equal": 81,
+      "f1_lower": 13,
+      "em_2x2_left_rows_right_columns": [
+        [
+          91,
+          7
+        ],
+        [
+          6,
+          4
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|hotpotqa": {
+      "n": 114,
+      "delta_f1": -0.04690072643673752,
+      "delta_em": -0.03508771929824561,
+      "f1_higher": 15,
+      "f1_equal": 76,
+      "f1_lower": 23,
+      "em_2x2_left_rows_right_columns": [
+        [
+          63,
+          14
+        ],
+        [
+          10,
+          27
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|2wiki": {
+      "n": 117,
+      "delta_f1": 0.0035896202562869244,
+      "delta_em": -0.017094017094017096,
+      "f1_higher": 16,
+      "f1_equal": 84,
+      "f1_lower": 17,
+      "em_2x2_left_rows_right_columns": [
+        [
+          57,
+          11
+        ],
+        [
+          9,
+          40
+        ]
+      ]
+    },
+    "r4 reselect − no_compress|ALL": {
+      "n": 339,
+      "delta_f1": -0.009658874003291223,
+      "delta_em": -0.02064896755162242,
+      "f1_higher": 45,
+      "f1_equal": 241,
+      "f1_lower": 53,
+      "em_2x2_left_rows_right_columns": [
+        [
+          211,
+          32
+        ],
+        [
+          25,
+          71
+        ]
+      ]
+    },
+    "r4 append − no_compress|musique": {
+      "n": 108,
+      "delta_f1": 0.042063103214471965,
+      "delta_em": 0.018518518518518517,
+      "f1_higher": 15,
+      "f1_equal": 81,
+      "f1_lower": 12,
+      "em_2x2_left_rows_right_columns": [
+        [
+          89,
+          6
+        ],
+        [
+          8,
+          5
+        ]
+      ]
+    },
+    "r4 append − no_compress|hotpotqa": {
+      "n": 114,
+      "delta_f1": -0.08110355807724229,
+      "delta_em": -0.07017543859649122,
+      "f1_higher": 14,
+      "f1_equal": 74,
+      "f1_lower": 26,
+      "em_2x2_left_rows_right_columns": [
+        [
+          63,
+          18
+        ],
+        [
+          10,
+          23
+        ]
+      ]
+    },
+    "r4 append − no_compress|2wiki": {
+      "n": 117,
+      "delta_f1": -0.0031271197937864583,
+      "delta_em": -0.008547008547008548,
+      "f1_higher": 14,
+      "f1_equal": 86,
+      "f1_lower": 17,
+      "em_2x2_left_rows_right_columns": [
+        [
+          56,
+          11
+        ],
+        [
+          10,
+          40
+        ]
+      ]
+    },
+    "r4 append − no_compress|ALL": {
+      "n": 339,
+      "delta_f1": -0.014952399674087504,
+      "delta_em": -0.02064896755162242,
+      "f1_higher": 43,
+      "f1_equal": 241,
+      "f1_lower": 55,
+      "em_2x2_left_rows_right_columns": [
+        [
+          208,
+          35
+        ],
+        [
+          28,
+          68
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|musique": {
+      "n": 108,
+      "delta_f1": 0.05205468869206853,
+      "delta_em": 0.027777777777777776,
+      "f1_higher": 18,
+      "f1_equal": 80,
+      "f1_lower": 10,
+      "em_2x2_left_rows_right_columns": [
+        [
+          95,
+          3
+        ],
+        [
+          6,
+          4
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.15199371941778092,
+      "delta_em": 0.14035087719298245,
+      "f1_higher": 36,
+      "f1_equal": 67,
+      "f1_lower": 11,
+      "em_2x2_left_rows_right_columns": [
+        [
+          71,
+          6
+        ],
+        [
+          22,
+          15
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|2wiki": {
+      "n": 117,
+      "delta_f1": 0.1482850482850483,
+      "delta_em": 0.1111111111111111,
+      "f1_higher": 28,
+      "f1_equal": 83,
+      "f1_lower": 6,
+      "em_2x2_left_rows_right_columns": [
+        [
+          64,
+          4
+        ],
+        [
+          17,
+          32
+        ]
+      ]
+    },
+    "r4 reselect − LLMLingua-2|ALL": {
+      "n": 339,
+      "delta_f1": 0.11887475233546041,
+      "delta_em": 0.0943952802359882,
+      "f1_higher": 82,
+      "f1_equal": 230,
+      "f1_lower": 27,
+      "em_2x2_left_rows_right_columns": [
+        [
+          230,
+          13
+        ],
+        [
+          45,
+          51
+        ]
+      ]
+    },
+    "oracle − r4 reselect|musique": {
+      "n": 108,
+      "delta_f1": 0.0875651790506863,
+      "delta_em": 0.08333333333333333,
+      "f1_higher": 18,
+      "f1_equal": 83,
+      "f1_lower": 7,
+      "em_2x2_left_rows_right_columns": [
+        [
+          88,
+          1
+        ],
+        [
+          10,
+          9
+        ]
+      ]
+    },
+    "oracle − r4 reselect|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.06974352346864104,
+      "delta_em": 0.06140350877192982,
+      "f1_higher": 22,
+      "f1_equal": 81,
+      "f1_lower": 11,
+      "em_2x2_left_rows_right_columns": [
+        [
+          64,
+          6
+        ],
+        [
+          13,
+          31
+        ]
+      ]
+    },
+    "oracle − r4 reselect|2wiki": {
+      "n": 117,
+      "delta_f1": 0.01564793231459898,
+      "delta_em": 0.017094017094017096,
+      "f1_higher": 12,
+      "f1_equal": 94,
+      "f1_lower": 11,
+      "em_2x2_left_rows_right_columns": [
+        [
+          60,
+          6
+        ],
+        [
+          8,
+          43
+        ]
+      ]
+    },
+    "oracle − r4 reselect|ALL": {
+      "n": 339,
+      "delta_f1": 0.0567510592734728,
+      "delta_em": 0.05309734513274336,
+      "f1_higher": 52,
+      "f1_equal": 258,
+      "f1_lower": 29,
+      "em_2x2_left_rows_right_columns": [
+        [
+          212,
+          13
+        ],
+        [
+          31,
+          83
+        ]
+      ]
+    }
+  },
+  "deepseek_minus_qwen": {
+    "no_compress|musique": {
+      "n": 108,
+      "delta_f1": 0.2355190953570583,
+      "delta_em": 0.2037037037037037,
+      "f1_higher": 39,
+      "f1_equal": 60,
+      "f1_lower": 9,
+      "em_2x2_left_rows_right_columns": [
+        [
+          72,
+          3
+        ],
+        [
+          25,
+          8
+        ]
+      ]
+    },
+    "no_compress|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.17623087803143203,
+      "delta_em": 0.14912280701754385,
+      "f1_higher": 40,
+      "f1_equal": 61,
+      "f1_lower": 13,
+      "em_2x2_left_rows_right_columns": [
+        [
+          48,
+          8
+        ],
+        [
+          25,
+          33
+        ]
+      ]
+    },
+    "no_compress|2wiki": {
+      "n": 117,
+      "delta_f1": 0.2938188424613764,
+      "delta_em": 0.23931623931623933,
+      "f1_higher": 52,
+      "f1_equal": 52,
+      "f1_lower": 13,
+      "em_2x2_left_rows_right_columns": [
+        [
+          27,
+          11
+        ],
+        [
+          39,
+          40
+        ]
+      ]
+    },
+    "no_compress|ALL": {
+      "n": 339,
+      "delta_f1": 0.23570261640745307,
+      "delta_em": 0.1976401179941003,
+      "f1_higher": 131,
+      "f1_equal": 173,
+      "f1_lower": 35,
+      "em_2x2_left_rows_right_columns": [
+        [
+          147,
+          22
+        ],
+        [
+          89,
+          81
+        ]
+      ]
+    },
+    "oracle|musique": {
+      "n": 108,
+      "delta_f1": 0.256805114092808,
+      "delta_em": 0.2222222222222222,
+      "f1_higher": 47,
+      "f1_equal": 52,
+      "f1_lower": 9,
+      "em_2x2_left_rows_right_columns": [
+        [
+          61,
+          4
+        ],
+        [
+          28,
+          15
+        ]
+      ]
+    },
+    "oracle|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.23010948603053868,
+      "delta_em": 0.21052631578947367,
+      "f1_higher": 38,
+      "f1_equal": 64,
+      "f1_lower": 12,
+      "em_2x2_left_rows_right_columns": [
+        [
+          41,
+          5
+        ],
+        [
+          29,
+          39
+        ]
+      ]
+    },
+    "oracle|2wiki": {
+      "n": 117,
+      "delta_f1": 0.26820304102355386,
+      "delta_em": 0.23931623931623933,
+      "f1_higher": 50,
+      "f1_equal": 57,
+      "f1_lower": 10,
+      "em_2x2_left_rows_right_columns": [
+        [
+          31,
+          7
+        ],
+        [
+          35,
+          44
+        ]
+      ]
+    },
+    "oracle|ALL": {
+      "n": 339,
+      "delta_f1": 0.25176162103026684,
+      "delta_em": 0.22418879056047197,
+      "f1_higher": 135,
+      "f1_equal": 173,
+      "f1_lower": 31,
+      "em_2x2_left_rows_right_columns": [
+        [
+          133,
+          16
+        ],
+        [
+          92,
+          98
+        ]
+      ]
+    },
+    "LLMLingua-2|musique": {
+      "n": 108,
+      "delta_f1": 0.29409724087954825,
+      "delta_em": 0.25925925925925924,
+      "f1_higher": 45,
+      "f1_equal": 55,
+      "f1_lower": 8,
+      "em_2x2_left_rows_right_columns": [
+        [
+          70,
+          3
+        ],
+        [
+          31,
+          4
+        ]
+      ]
+    },
+    "LLMLingua-2|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.31561141520306674,
+      "delta_em": 0.2543859649122807,
+      "f1_higher": 54,
+      "f1_equal": 53,
+      "f1_lower": 7,
+      "em_2x2_left_rows_right_columns": [
+        [
+          62,
+          2
+        ],
+        [
+          31,
+          19
+        ]
+      ]
+    },
+    "LLMLingua-2|2wiki": {
+      "n": 117,
+      "delta_f1": 0.2742552458992882,
+      "delta_em": 0.20512820512820512,
+      "f1_higher": 50,
+      "f1_equal": 56,
+      "f1_lower": 11,
+      "em_2x2_left_rows_right_columns": [
+        [
+          47,
+          10
+        ],
+        [
+          34,
+          26
+        ]
+      ]
+    },
+    "LLMLingua-2|ALL": {
+      "n": 339,
+      "delta_f1": 0.2944839738004647,
+      "delta_em": 0.23893805309734514,
+      "f1_higher": 149,
+      "f1_equal": 164,
+      "f1_lower": 26,
+      "em_2x2_left_rows_right_columns": [
+        [
+          179,
+          15
+        ],
+        [
+          96,
+          49
+        ]
+      ]
+    },
+    "RR-τ reselect|musique": {
+      "n": 108,
+      "delta_f1": 0.12360105510690306,
+      "delta_em": 0.1111111111111111,
+      "f1_higher": 28,
+      "f1_equal": 70,
+      "f1_lower": 10,
+      "em_2x2_left_rows_right_columns": [
+        [
+          85,
+          3
+        ],
+        [
+          15,
+          5
+        ]
+      ]
+    },
+    "RR-τ reselect|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.20386446043499484,
+      "delta_em": 0.17543859649122806,
+      "f1_higher": 35,
+      "f1_equal": 74,
+      "f1_lower": 5,
+      "em_2x2_left_rows_right_columns": [
+        [
+          57,
+          2
+        ],
+        [
+          22,
+          33
+        ]
+      ]
+    },
+    "RR-τ reselect|2wiki": {
+      "n": 117,
+      "delta_f1": 0.12090853116494142,
+      "delta_em": 0.06837606837606838,
+      "f1_higher": 36,
+      "f1_equal": 64,
+      "f1_lower": 17,
+      "em_2x2_left_rows_right_columns": [
+        [
+          46,
+          14
+        ],
+        [
+          22,
+          35
+        ]
+      ]
+    },
+    "RR-τ reselect|ALL": {
+      "n": 339,
+      "delta_f1": 0.14966301058239848,
+      "delta_em": 0.11799410029498525,
+      "f1_higher": 99,
+      "f1_equal": 208,
+      "f1_lower": 32,
+      "em_2x2_left_rows_right_columns": [
+        [
+          188,
+          19
+        ],
+        [
+          59,
+          73
+        ]
+      ]
+    },
+    "r4 reselect|musique": {
+      "n": 108,
+      "delta_f1": 0.20686081817533636,
+      "delta_em": 0.16666666666666666,
+      "f1_higher": 40,
+      "f1_equal": 58,
+      "f1_lower": 10,
+      "em_2x2_left_rows_right_columns": [
+        [
+          77,
+          3
+        ],
+        [
+          21,
+          7
+        ]
+      ]
+    },
+    "r4 reselect|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.2899995497987188,
+      "delta_em": 0.23684210526315788,
+      "f1_higher": 47,
+      "f1_equal": 61,
+      "f1_lower": 6,
+      "em_2x2_left_rows_right_columns": [
+        [
+          47,
+          3
+        ],
+        [
+          30,
+          34
+        ]
+      ]
+    },
+    "r4 reselect|2wiki": {
+      "n": 117,
+      "delta_f1": 0.24893335534361175,
+      "delta_em": 0.21367521367521367,
+      "f1_higher": 52,
+      "f1_equal": 53,
+      "f1_lower": 12,
+      "em_2x2_left_rows_right_columns": [
+        [
+          32,
+          11
+        ],
+        [
+          36,
+          38
+        ]
+      ]
+    },
+    "r4 reselect|ALL": {
+      "n": 339,
+      "delta_f1": 0.2493395858855246,
+      "delta_em": 0.20648967551622419,
+      "f1_higher": 139,
+      "f1_equal": 172,
+      "f1_lower": 28,
+      "em_2x2_left_rows_right_columns": [
+        [
+          156,
+          17
+        ],
+        [
+          87,
+          79
+        ]
+      ]
+    },
+    "r4 append|musique": {
+      "n": 108,
+      "delta_f1": 0.20813635550350526,
+      "delta_em": 0.19444444444444445,
+      "f1_higher": 41,
+      "f1_equal": 54,
+      "f1_lower": 13,
+      "em_2x2_left_rows_right_columns": [
+        [
+          68,
+          6
+        ],
+        [
+          27,
+          7
+        ]
+      ]
+    },
+    "r4 append|hotpotqa": {
+      "n": 114,
+      "delta_f1": 0.3485247881310393,
+      "delta_em": 0.30701754385964913,
+      "f1_higher": 54,
+      "f1_equal": 53,
+      "f1_lower": 7,
+      "em_2x2_left_rows_right_columns": [
+        [
+          43,
+          3
+        ],
+        [
+          38,
+          30
+        ]
+      ]
+    },
+    "r4 append|2wiki": {
+      "n": 117,
+      "delta_f1": 0.2297236626521377,
+      "delta_em": 0.18803418803418803,
+      "f1_higher": 50,
+      "f1_equal": 52,
+      "f1_lower": 15,
+      "em_2x2_left_rows_right_columns": [
+        [
+          33,
+          12
+        ],
+        [
+          34,
+          38
+        ]
+      ]
+    },
+    "r4 append|ALL": {
+      "n": 339,
+      "delta_f1": 0.26279711142069956,
+      "delta_em": 0.23008849557522124,
+      "f1_higher": 145,
+      "f1_equal": 159,
+      "f1_lower": 35,
+      "em_2x2_left_rows_right_columns": [
+        [
+          144,
+          21
+        ],
+        [
+          99,
+          75
+        ]
+      ]
+    }
+  }
+}

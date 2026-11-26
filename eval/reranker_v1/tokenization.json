@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "split": {
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/data/split.json",
+    "size": 56749,
+    "sha256": "fce57594bf8f7423b8caf0e48d0cccf359f7ab7a85aad2d8045757a5c5eecba6"
+  },
+  "template": {
+    "source": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B#using-transformers",
+    "prefix": "<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n",
+    "body": "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {document}",
+    "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "instruction": "Given the four questions of a multi-hop QA task, judge whether the passage is a supporting fact needed to answer any of them.",
+    "yes_token_id": 9693,
+    "no_token_id": 2152,
+    "pad_token_id": 151643,
+    "padding_side": "left",
+    "max_pair_tokens": 512,
+    "truncation": "right end of document only",
+    "score": "last_position_logit_yes_minus_no",
+    "probability": "sigmoid"
+  },
+  "tokenizer_sha256": {
+    "config.json": "d479c427a9ca5295218063d4f9aca4f297ab4ac27487cca7af42c84643d51ef0",
+    "tokenizer_config.json": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "partitions": {
+    "train": {
+      "index": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/data/train.pairs.jsonl",
+        "size": 70250457,
+        "sha256": "75fd226321d4850e8ab54dfb909fc6dea78a20b0aaaf8d2dce8e36f7a6ebb15c"
+      },
+      "tokens": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/data/train.tokens.i32",
+        "size": 893050056,
+        "sha256": "d95b76d519d51409461fadb70dfab44ead4990eab9bd3d348101af9ca04a483b"
+      },
+      "pairs": 825566,
+      "tokens_count": 223262514,
+      "truncated": 6834,
+      "lengths": {
+        "n": 825566,
+        "min": 158,
+        "max": 512,
+        "mean": 270.43569381491,
+        "p50": 255.0,
+        "p90": 357.0
+      },
+      "negative_ratios": {
+        "7": {
+          "file": {
+            "path": "/root/userfolder/ctx-compressor/reranker_v1/data/sample_order_7.npy",
+            "size": 2713728,
+            "sha256": "837d6f2f4ca341451f4e7bbfd8ebb0e7f92717fbc999aa39da741c1861396b0a"
+          },
+          "n": 339200,
+          "positives": 42400,
+          "truncated": 3146
+        },
+        "3": {
+          "file": {
+            "path": "/root/userfolder/ctx-compressor/reranker_v1/data/sample_order_3.npy",
+            "size": 1356928,
+            "sha256": "6e1ef337f3da4047d16353af2212deab873baaaba1dc38e9eaa669731bb7e7da"
+          },
+          "n": 169600,
+          "positives": 42400,
+          "truncated": 1944
+        }
+      }
+    },
+    "train-val": {
+      "index": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/data/train-val.pairs.jsonl",
+        "size": 3005655,
+        "sha256": "88c36d6bff38fd223d4a8b7a934bc20fe4bdb1749a9f11240b349037b44c54a3"
+      },
+      "tokens": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/data/train-val.tokens.i32",
+        "size": 38960976,
+        "sha256": "bcde47a7154bddee420667cc827186b0f9fb061b753d94e467b2262f94364274"
+      },
+      "pairs": 36018,
+      "tokens_count": 9740244,
+      "truncated": 278,
+      "lengths": {
+        "n": 36018,
+        "min": 168,
+        "max": 512,
+        "mean": 270.42711977344663,
+        "p50": 254.0,
+        "p90": 357.0
+      }
+    },
+    "heldout": {
+      "index": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/data/heldout.pairs.jsonl",
+        "size": 3752839,
+        "sha256": "4d1b4f65dd4dc52e9e7c65e5a1af246d05beb1a5671e0a57ce3014cdb84740bb"
+      },
+      "tokens": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/data/heldout.tokens.i32",
+        "size": 49251916,
+        "sha256": "d0657ed3ef305d103f74be534405f5c635fa1da52d69c8df53d0ead77ae7baaf"
+      },
+      "pairs": 45497,
+      "tokens_count": 12312979,
+      "truncated": 395,
+      "lengths": {
+        "n": 45497,
+        "min": 162,
+        "max": 512,
+        "mean": 270.63276699562607,
+        "p50": 255,
+        "p90": 358.0
+      }
+    }
+  }
+}

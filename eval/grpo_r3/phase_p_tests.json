@@ -1,0 +1,30 @@
+{
+  "tests": 729,
+  "skipped": 0,
+  "errors": 0,
+  "failures": 0,
+  "status": "passed",
+  "passed": 729,
+  "legacy_tests_matched": 705,
+  "elapsed_seconds": 13.7704446031712,
+  "utc": "2026-11-23T09:02:55.928116+00:00",
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/grpo_r3/cpu_suite_8s66vpz8/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/grpo_r3/cpu_suite_8s66vpz8/tests.xml",
+    "tests"
+  ],
+  "log": "/root/userfolder/ctx-compressor/grpo_r3/cpu_suite_8s66vpz8/pytest.log",
+  "xml": "/root/userfolder/ctx-compressor/grpo_r3/cpu_suite_8s66vpz8/tests.xml",
+  "xml_sha256": "6eac853db69b96044d205aeb3f35e93e22322d79efe1f347d6265a640d269364",
+  "gpu_cli_invocations": 0,
+  "locked_dev_open_attempts": 0
+}

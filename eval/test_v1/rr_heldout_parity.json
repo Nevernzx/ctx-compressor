@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "n_tasks": 10,
+  "tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "policies": {
+    "RR-fill": {
+      "n": 540,
+      "action_mismatches": 0,
+      "reference": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-fill/steps.jsonl",
+        "size": 60479450,
+        "sha256": "24de3f90c626355a442f36241856f6c280e84fc913a4a35e41ca4dbe6b06844a"
+      }
+    },
+    "RR-τ": {
+      "n": 540,
+      "action_mismatches": 0,
+      "reference": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/rollouts/heldout/RR-τ/steps.jsonl",
+        "size": 39302183,
+        "sha256": "b10e984b025a64de8aec98b57a9e3ec1418d5c1ce479b35b958e28cec081c9b0"
+      }
+    }
+  }
+}

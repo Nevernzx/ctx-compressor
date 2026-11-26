@@ -1,0 +1,924 @@
+{
+  "status": "complete",
+  "n_tasks": 100,
+  "n_predictions": 21600,
+  "task_order": [
+    3775,
+    938,
+    781,
+    117,
+    3226,
+    3197,
+    2948,
+    4492,
+    465,
+    1907,
+    2938,
+    785,
+    4052,
+    1555,
+    3952,
+    2197,
+    2951,
+    377,
+    4322,
+    1010,
+    1857,
+    3368,
+    3435,
+    3441,
+    2779,
+    1354,
+    707,
+    2723,
+    1830,
+    1584,
+    3480,
+    242,
+    1180,
+    1492,
+    3082,
+    3094,
+    2116,
+    2543,
+    1820,
+    1848,
+    4490,
+    4144,
+    2195,
+    3869,
+    3058,
+    1715,
+    506,
+    1556,
+    1879,
+    696,
+    579,
+    704,
+    779,
+    2975,
+    942,
+    59,
+    3225,
+    58,
+    2421,
+    3304,
+    4561,
+    3029,
+    2648,
+    1349,
+    364,
+    1803,
+    845,
+    4465,
+    1709,
+    4559,
+    1789,
+    3096,
+    4409,
+    3420,
+    3265,
+    3954,
+    390,
+    3030,
+    2649,
+    389,
+    4604,
+    3290,
+    3527,
+    3755,
+    482,
+    291,
+    3852,
+    1518,
+    511,
+    3292,
+    4051,
+    474,
+    2492,
+    2155,
+    3391,
+    1053,
+    2661,
+    3996,
+    321,
+    304
+  ],
+  "tau": 0.5,
+  "RR_tau_equals_fill": false,
+  "tolerance": 1e-09,
+  "selection": "val100 six-cell F1; ties within 1e-9 take smaller tau",
+  "grid": {
+    "0.0": {
+      "tau": 0.0,
+      "n": 2400,
+      "em": 0.225,
+      "f1": 0.3081715908696418,
+      "evidence_loss": {
+        "n": 600,
+        "count": 337,
+        "rate": 0.5616666666666666,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 307,
+            "evidence_n": 2400,
+            "lost_evidence_count": 833,
+            "rate": 0.5116666666666667
+          },
+          "2": {
+            "n": 600,
+            "count": 322,
+            "evidence_n": 2400,
+            "lost_evidence_count": 990,
+            "rate": 0.5366666666666666
+          },
+          "3": {
+            "n": 432,
+            "count": 208,
+            "evidence_n": 618,
+            "lost_evidence_count": 286,
+            "rate": 0.48148148148148145
+          },
+          "4": {
+            "n": 132,
+            "count": 71,
+            "evidence_n": 138,
+            "lost_evidence_count": 74,
+            "rate": 0.5378787878787878
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 140,
+            "evidence_n": 1422,
+            "lost_evidence_count": 183,
+            "rate": 0.23333333333333334
+          },
+          "2": {
+            "n": 600,
+            "count": 303,
+            "evidence_n": 1380,
+            "lost_evidence_count": 615,
+            "rate": 0.505
+          },
+          "3": {
+            "n": 600,
+            "count": 306,
+            "evidence_n": 1362,
+            "lost_evidence_count": 686,
+            "rate": 0.51
+          },
+          "4": {
+            "n": 600,
+            "count": 304,
+            "evidence_n": 1392,
+            "lost_evidence_count": 699,
+            "rate": 0.5066666666666667
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 310,
+            "evidence_n": 5550,
+            "lost_evidence_count": 2145,
+            "rate": 0.5166666666666667
+          },
+          "dropped": {
+            "n": 600,
+            "count": 29,
+            "evidence_n": 5550,
+            "lost_evidence_count": 35,
+            "rate": 0.04833333333333333
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 30.208333333333332,
+      "mean_nongold": 24.591666666666665
+    },
+    "0.02": {
+      "tau": 0.02,
+      "n": 2400,
+      "em": 0.36583333333333334,
+      "f1": 0.4809702818300868,
+      "evidence_loss": {
+        "n": 600,
+        "count": 177,
+        "rate": 0.295,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 93,
+            "evidence_n": 2400,
+            "lost_evidence_count": 139,
+            "rate": 0.155
+          },
+          "2": {
+            "n": 600,
+            "count": 147,
+            "evidence_n": 2400,
+            "lost_evidence_count": 212,
+            "rate": 0.245
+          },
+          "3": {
+            "n": 432,
+            "count": 59,
+            "evidence_n": 618,
+            "lost_evidence_count": 65,
+            "rate": 0.13657407407407407
+          },
+          "4": {
+            "n": 132,
+            "count": 25,
+            "evidence_n": 138,
+            "lost_evidence_count": 25,
+            "rate": 0.1893939393939394
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 36,
+            "evidence_n": 1422,
+            "lost_evidence_count": 38,
+            "rate": 0.06
+          },
+          "2": {
+            "n": 600,
+            "count": 39,
+            "evidence_n": 1380,
+            "lost_evidence_count": 51,
+            "rate": 0.065
+          },
+          "3": {
+            "n": 600,
+            "count": 72,
+            "evidence_n": 1362,
+            "lost_evidence_count": 114,
+            "rate": 0.12
+          },
+          "4": {
+            "n": 600,
+            "count": 124,
+            "evidence_n": 1392,
+            "lost_evidence_count": 238,
+            "rate": 0.20666666666666667
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 165,
+            "evidence_n": 5550,
+            "lost_evidence_count": 421,
+            "rate": 0.275
+          },
+          "dropped": {
+            "n": 600,
+            "count": 15,
+            "evidence_n": 5550,
+            "lost_evidence_count": 20,
+            "rate": 0.025
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 18.656666666666666,
+      "mean_nongold": 10.141666666666667
+    },
+    "0.05": {
+      "tau": 0.05,
+      "n": 2400,
+      "em": 0.41041666666666665,
+      "f1": 0.5150217859814044,
+      "evidence_loss": {
+        "n": 600,
+        "count": 160,
+        "rate": 0.26666666666666666,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 62,
+            "evidence_n": 2400,
+            "lost_evidence_count": 76,
+            "rate": 0.10333333333333333
+          },
+          "2": {
+            "n": 600,
+            "count": 111,
+            "evidence_n": 2400,
+            "lost_evidence_count": 141,
+            "rate": 0.185
+          },
+          "3": {
+            "n": 432,
+            "count": 41,
+            "evidence_n": 618,
+            "lost_evidence_count": 44,
+            "rate": 0.09490740740740741
+          },
+          "4": {
+            "n": 132,
+            "count": 23,
+            "evidence_n": 138,
+            "lost_evidence_count": 23,
+            "rate": 0.17424242424242425
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 45,
+            "evidence_n": 1422,
+            "lost_evidence_count": 47,
+            "rate": 0.075
+          },
+          "2": {
+            "n": 600,
+            "count": 37,
+            "evidence_n": 1380,
+            "lost_evidence_count": 41,
+            "rate": 0.06166666666666667
+          },
+          "3": {
+            "n": 600,
+            "count": 46,
+            "evidence_n": 1362,
+            "lost_evidence_count": 62,
+            "rate": 0.07666666666666666
+          },
+          "4": {
+            "n": 600,
+            "count": 81,
+            "evidence_n": 1392,
+            "lost_evidence_count": 134,
+            "rate": 0.135
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 154,
+            "evidence_n": 5550,
+            "lost_evidence_count": 270,
+            "rate": 0.25666666666666665
+          },
+          "dropped": {
+            "n": 600,
+            "count": 10,
+            "evidence_n": 5550,
+            "lost_evidence_count": 14,
+            "rate": 0.016666666666666666
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 14.948333333333334,
+      "mean_nongold": 6.171666666666667
+    },
+    "0.1": {
+      "tau": 0.1,
+      "n": 2400,
+      "em": 0.44166666666666665,
+      "f1": 0.546274866458078,
+      "evidence_loss": {
+        "n": 600,
+        "count": 168,
+        "rate": 0.28,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 58,
+            "evidence_n": 2400,
+            "lost_evidence_count": 66,
+            "rate": 0.09666666666666666
+          },
+          "2": {
+            "n": 600,
+            "count": 111,
+            "evidence_n": 2400,
+            "lost_evidence_count": 125,
+            "rate": 0.185
+          },
+          "3": {
+            "n": 432,
+            "count": 26,
+            "evidence_n": 618,
+            "lost_evidence_count": 27,
+            "rate": 0.06018518518518518
+          },
+          "4": {
+            "n": 132,
+            "count": 21,
+            "evidence_n": 138,
+            "lost_evidence_count": 21,
+            "rate": 0.1590909090909091
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 57,
+            "evidence_n": 1422,
+            "lost_evidence_count": 59,
+            "rate": 0.095
+          },
+          "2": {
+            "n": 600,
+            "count": 45,
+            "evidence_n": 1380,
+            "lost_evidence_count": 46,
+            "rate": 0.075
+          },
+          "3": {
+            "n": 600,
+            "count": 44,
+            "evidence_n": 1362,
+            "lost_evidence_count": 52,
+            "rate": 0.07333333333333333
+          },
+          "4": {
+            "n": 600,
+            "count": 55,
+            "evidence_n": 1392,
+            "lost_evidence_count": 82,
+            "rate": 0.09166666666666666
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 163,
+            "evidence_n": 5550,
+            "lost_evidence_count": 226,
+            "rate": 0.27166666666666667
+          },
+          "dropped": {
+            "n": 600,
+            "count": 9,
+            "evidence_n": 5550,
+            "lost_evidence_count": 13,
+            "rate": 0.015
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 12.981666666666667,
+      "mean_nongold": 4.13
+    },
+    "0.2": {
+      "tau": 0.2,
+      "n": 2400,
+      "em": 0.44583333333333336,
+      "f1": 0.5537774067621628,
+      "evidence_loss": {
+        "n": 600,
+        "count": 182,
+        "rate": 0.30333333333333334,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 63,
+            "evidence_n": 2400,
+            "lost_evidence_count": 65,
+            "rate": 0.105
+          },
+          "2": {
+            "n": 600,
+            "count": 116,
+            "evidence_n": 2400,
+            "lost_evidence_count": 125,
+            "rate": 0.19333333333333333
+          },
+          "3": {
+            "n": 432,
+            "count": 26,
+            "evidence_n": 618,
+            "lost_evidence_count": 27,
+            "rate": 0.06018518518518518
+          },
+          "4": {
+            "n": 132,
+            "count": 15,
+            "evidence_n": 138,
+            "lost_evidence_count": 15,
+            "rate": 0.11363636363636363
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 63,
+            "evidence_n": 1422,
+            "lost_evidence_count": 70,
+            "rate": 0.105
+          },
+          "2": {
+            "n": 600,
+            "count": 55,
+            "evidence_n": 1380,
+            "lost_evidence_count": 56,
+            "rate": 0.09166666666666666
+          },
+          "3": {
+            "n": 600,
+            "count": 37,
+            "evidence_n": 1362,
+            "lost_evidence_count": 42,
+            "rate": 0.06166666666666667
+          },
+          "4": {
+            "n": 600,
+            "count": 54,
+            "evidence_n": 1392,
+            "lost_evidence_count": 64,
+            "rate": 0.09
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 178,
+            "evidence_n": 5550,
+            "lost_evidence_count": 221,
+            "rate": 0.2966666666666667
+          },
+          "dropped": {
+            "n": 600,
+            "count": 7,
+            "evidence_n": 5550,
+            "lost_evidence_count": 11,
+            "rate": 0.011666666666666667
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 11.498333333333333,
+      "mean_nongold": 2.635
+    },
+    "0.3": {
+      "tau": 0.3,
+      "n": 2400,
+      "em": 0.4716666666666667,
+      "f1": 0.5746756341924875,
+      "evidence_loss": {
+        "n": 600,
+        "count": 219,
+        "rate": 0.365,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 78,
+            "evidence_n": 2400,
+            "lost_evidence_count": 79,
+            "rate": 0.13
+          },
+          "2": {
+            "n": 600,
+            "count": 146,
+            "evidence_n": 2400,
+            "lost_evidence_count": 154,
+            "rate": 0.24333333333333335
+          },
+          "3": {
+            "n": 432,
+            "count": 35,
+            "evidence_n": 618,
+            "lost_evidence_count": 36,
+            "rate": 0.08101851851851852
+          },
+          "4": {
+            "n": 132,
+            "count": 26,
+            "evidence_n": 138,
+            "lost_evidence_count": 26,
+            "rate": 0.19696969696969696
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 75,
+            "evidence_n": 1422,
+            "lost_evidence_count": 82,
+            "rate": 0.125
+          },
+          "2": {
+            "n": 600,
+            "count": 65,
+            "evidence_n": 1380,
+            "lost_evidence_count": 66,
+            "rate": 0.10833333333333334
+          },
+          "3": {
+            "n": 600,
+            "count": 65,
+            "evidence_n": 1362,
+            "lost_evidence_count": 67,
+            "rate": 0.10833333333333334
+          },
+          "4": {
+            "n": 600,
+            "count": 62,
+            "evidence_n": 1392,
+            "lost_evidence_count": 80,
+            "rate": 0.10333333333333333
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 216,
+            "evidence_n": 5550,
+            "lost_evidence_count": 286,
+            "rate": 0.36
+          },
+          "dropped": {
+            "n": 600,
+            "count": 5,
+            "evidence_n": 5550,
+            "lost_evidence_count": 9,
+            "rate": 0.008333333333333333
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 10.703333333333333,
+      "mean_nongold": 1.945
+    },
+    "0.5": {
+      "tau": 0.5,
+      "n": 2400,
+      "em": 0.4741666666666667,
+      "f1": 0.5766381172342341,
+      "evidence_loss": {
+        "n": 600,
+        "count": 306,
+        "rate": 0.51,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 104,
+            "evidence_n": 2400,
+            "lost_evidence_count": 105,
+            "rate": 0.17333333333333334
+          },
+          "2": {
+            "n": 600,
+            "count": 186,
+            "evidence_n": 2400,
+            "lost_evidence_count": 190,
+            "rate": 0.31
+          },
+          "3": {
+            "n": 432,
+            "count": 69,
+            "evidence_n": 618,
+            "lost_evidence_count": 70,
+            "rate": 0.1597222222222222
+          },
+          "4": {
+            "n": 132,
+            "count": 42,
+            "evidence_n": 138,
+            "lost_evidence_count": 42,
+            "rate": 0.3181818181818182
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 86,
+            "evidence_n": 1422,
+            "lost_evidence_count": 99,
+            "rate": 0.14333333333333334
+          },
+          "2": {
+            "n": 600,
+            "count": 86,
+            "evidence_n": 1380,
+            "lost_evidence_count": 111,
+            "rate": 0.14333333333333334
+          },
+          "3": {
+            "n": 600,
+            "count": 93,
+            "evidence_n": 1362,
+            "lost_evidence_count": 99,
+            "rate": 0.155
+          },
+          "4": {
+            "n": 600,
+            "count": 84,
+            "evidence_n": 1392,
+            "lost_evidence_count": 98,
+            "rate": 0.14
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 306,
+            "evidence_n": 5550,
+            "lost_evidence_count": 401,
+            "rate": 0.51
+          },
+          "dropped": {
+            "n": 600,
+            "count": 2,
+            "evidence_n": 5550,
+            "lost_evidence_count": 6,
+            "rate": 0.0033333333333333335
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 9.731666666666667,
+      "mean_nongold": 1.16
+    },
+    "0.7": {
+      "tau": 0.7,
+      "n": 2400,
+      "em": 0.47375,
+      "f1": 0.5712275618819737,
+      "evidence_loss": {
+        "n": 600,
+        "count": 356,
+        "rate": 0.5933333333333334,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 170,
+            "evidence_n": 2400,
+            "lost_evidence_count": 182,
+            "rate": 0.2833333333333333
+          },
+          "2": {
+            "n": 600,
+            "count": 230,
+            "evidence_n": 2400,
+            "lost_evidence_count": 247,
+            "rate": 0.38333333333333336
+          },
+          "3": {
+            "n": 432,
+            "count": 80,
+            "evidence_n": 618,
+            "lost_evidence_count": 81,
+            "rate": 0.18518518518518517
+          },
+          "4": {
+            "n": 132,
+            "count": 42,
+            "evidence_n": 138,
+            "lost_evidence_count": 42,
+            "rate": 0.3181818181818182
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 122,
+            "evidence_n": 1422,
+            "lost_evidence_count": 135,
+            "rate": 0.20333333333333334
+          },
+          "2": {
+            "n": 600,
+            "count": 109,
+            "evidence_n": 1380,
+            "lost_evidence_count": 146,
+            "rate": 0.18166666666666667
+          },
+          "3": {
+            "n": 600,
+            "count": 145,
+            "evidence_n": 1362,
+            "lost_evidence_count": 151,
+            "rate": 0.24166666666666667
+          },
+          "4": {
+            "n": 600,
+            "count": 100,
+            "evidence_n": 1392,
+            "lost_evidence_count": 120,
+            "rate": 0.16666666666666666
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 356,
+            "evidence_n": 5550,
+            "lost_evidence_count": 547,
+            "rate": 0.5933333333333334
+          },
+          "dropped": {
+            "n": 600,
+            "count": 2,
+            "evidence_n": 5550,
+            "lost_evidence_count": 5,
+            "rate": 0.0033333333333333335
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 8.928333333333333,
+      "mean_nongold": 0.5983333333333334
+    },
+    "0.9": {
+      "tau": 0.9,
+      "n": 2400,
+      "em": 0.44083333333333335,
+      "f1": 0.5324260280771504,
+      "evidence_loss": {
+        "n": 600,
+        "count": 522,
+        "rate": 0.87,
+        "by_hop": {
+          "1": {
+            "n": 600,
+            "count": 314,
+            "evidence_n": 2400,
+            "lost_evidence_count": 404,
+            "rate": 0.5233333333333333
+          },
+          "2": {
+            "n": 600,
+            "count": 390,
+            "evidence_n": 2400,
+            "lost_evidence_count": 489,
+            "rate": 0.65
+          },
+          "3": {
+            "n": 432,
+            "count": 138,
+            "evidence_n": 618,
+            "lost_evidence_count": 140,
+            "rate": 0.3194444444444444
+          },
+          "4": {
+            "n": 132,
+            "count": 54,
+            "evidence_n": 138,
+            "lost_evidence_count": 54,
+            "rate": 0.4090909090909091
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 600,
+            "count": 235,
+            "evidence_n": 1422,
+            "lost_evidence_count": 265,
+            "rate": 0.39166666666666666
+          },
+          "2": {
+            "n": 600,
+            "count": 235,
+            "evidence_n": 1380,
+            "lost_evidence_count": 302,
+            "rate": 0.39166666666666666
+          },
+          "3": {
+            "n": 600,
+            "count": 246,
+            "evidence_n": 1362,
+            "lost_evidence_count": 270,
+            "rate": 0.41
+          },
+          "4": {
+            "n": 600,
+            "count": 206,
+            "evidence_n": 1392,
+            "lost_evidence_count": 250,
+            "rate": 0.3433333333333333
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 600,
+            "count": 522,
+            "evidence_n": 5550,
+            "lost_evidence_count": 1084,
+            "rate": 0.87
+          },
+          "dropped": {
+            "n": 600,
+            "count": 2,
+            "evidence_n": 5550,
+            "lost_evidence_count": 3,
+            "rate": 0.0033333333333333335
+          }
+        }
+      },
+      "n_trajectories": 600,
+      "mean_keep": 7.7283333333333335,
+      "mean_nongold": 0.29
+    }
+  },
+  "predictions_sha256": "f80e1891152b817529c32b12be4222b3dfdf23e7de6c1f8bf09379b4835114ae"
+}

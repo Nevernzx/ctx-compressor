@@ -1,0 +1,114 @@
+{
+ "note": "post-hoc; EM=1 answers; gold_hop order; title match after MuSiQue normalization",
+ "deepseek": {
+  "no_compress": {
+   "correct": 170,
+   "evidence_complete": 159,
+   "incomplete": 11,
+   "last_hop_kept": 6,
+   "dropped_earlier_hops": 10,
+   "dropped_title_in_notes": 1,
+   "dropped_last_hop": 5
+  },
+  "oracle": {
+   "correct": 190,
+   "evidence_complete": 179,
+   "incomplete": 11,
+   "last_hop_kept": 6,
+   "dropped_earlier_hops": 8,
+   "dropped_title_in_notes": 1,
+   "dropped_last_hop": 5
+  },
+  "LLMLingua-2": {
+   "correct": 145,
+   "incomplete": 27,
+   "last_hop_kept": 4,
+   "dropped_earlier_hops": 35,
+   "dropped_title_in_notes": 11,
+   "dropped_last_hop": 23,
+   "evidence_complete": 118
+  },
+  "RR-τ reselect": {
+   "correct": 132,
+   "evidence_complete": 116,
+   "incomplete": 16,
+   "last_hop_kept": 1,
+   "dropped_earlier_hops": 15,
+   "dropped_title_in_notes": 1,
+   "dropped_last_hop": 15
+  },
+  "r4 reselect": {
+   "correct": 166,
+   "evidence_complete": 153,
+   "incomplete": 13,
+   "last_hop_kept": 9,
+   "dropped_last_hop": 4,
+   "dropped_earlier_hops": 13,
+   "dropped_title_in_notes": 2
+  },
+  "r4 append": {
+   "correct": 174,
+   "evidence_complete": 157,
+   "incomplete": 17,
+   "last_hop_kept": 10,
+   "dropped_earlier_hops": 19,
+   "dropped_title_in_notes": 1,
+   "dropped_last_hop": 7
+  }
+ },
+ "qwen3_8b_same_tasks": {
+  "no_compress": {
+   "correct": 103,
+   "evidence_complete": 98,
+   "incomplete": 5,
+   "last_hop_kept": 3,
+   "dropped_last_hop": 2,
+   "dropped_earlier_hops": 6,
+   "dropped_title_in_notes": 2
+  },
+  "oracle": {
+   "correct": 114,
+   "evidence_complete": 105,
+   "incomplete": 9,
+   "last_hop_kept": 9,
+   "dropped_earlier_hops": 12,
+   "dropped_title_in_notes": 1
+  },
+  "LLMLingua-2": {
+   "correct": 64,
+   "evidence_complete": 58,
+   "incomplete": 6,
+   "last_hop_kept": 2,
+   "dropped_earlier_hops": 8,
+   "dropped_title_in_notes": 2,
+   "dropped_last_hop": 4
+  },
+  "RR-τ reselect": {
+   "correct": 92,
+   "evidence_complete": 87,
+   "incomplete": 5,
+   "last_hop_kept": 3,
+   "dropped_last_hop": 2,
+   "dropped_earlier_hops": 6,
+   "dropped_title_in_notes": 1
+  },
+  "r4 reselect": {
+   "correct": 96,
+   "incomplete": 10,
+   "last_hop_kept": 8,
+   "dropped_earlier_hops": 12,
+   "dropped_title_in_notes": 4,
+   "dropped_last_hop": 2,
+   "evidence_complete": 86
+  },
+  "r4 append": {
+   "correct": 96,
+   "incomplete": 12,
+   "last_hop_kept": 9,
+   "dropped_earlier_hops": 15,
+   "dropped_title_in_notes": 5,
+   "dropped_last_hop": 3,
+   "evidence_complete": 84
+  }
+ }
+}

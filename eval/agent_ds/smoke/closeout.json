@@ -1,0 +1,37 @@
+{
+ "status": "failed_superseded_by_smoke2",
+ "halt": "stopped_cost_cap at 2026-11-26T06:41:31Z",
+ "cause": "worst-case reservations (UTF-8 byte bound x peak price) for 16 in-flight calls plus 0.2795 CNY spent exceeded the 0.5 CNY smoke cap",
+ "spent_yuan": "0.27951984",
+ "chat_calls": 170,
+ "http_errors": 0,
+ "finding": "deepseek-flash chained several Thought/Action pairs in one turn (no Observation stop) in 12/170 calls; those turns were format-invalid and two in a row forced a no-search finish",
+ "fix_in_smoke2": [
+  "stop sequences [\nObservation, \nThought:] so each turn keeps its first Thought/Action (Task 20 rule: exactly one action per turn)",
+  "reservation bound min(UTF-8 bytes, 1.5 x Qwen3 prompt tokens + 512)",
+  "smoke2 cap 1 CNY"
+ ],
+ "decided_before_any_row_comparison": true,
+ "artifacts": [
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke/attempts.jsonl",
+   "size": 198764,
+   "sha256": "fd3767fbf6091e4e5ed2126f953cce06fbaf56ded13127acee956518f5bfba1f"
+  },
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke/episodes.jsonl",
+   "size": 59221,
+   "sha256": "a3a34e734e81aa9174167030383dc9d13ed2f6aaa7d04ee759a989a4915e4069"
+  },
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke/status.json",
+   "size": 2475,
+   "sha256": "6d10ca6aac36f062cc4978536420698f8c48670f14cb3628de894d65c45744a9"
+  },
+  {
+   "path": "/root/userfolder/ctx-compressor/agent_ds/smoke/worker.log",
+   "size": 10077,
+   "sha256": "f1957b7ca1917cacdfb9d37cb5712ea6e589f09664832cb9338cfc6510301d5b"
+  }
+ ]
+}

@@ -1,0 +1,428 @@
+{
+  "status": "passed",
+  "episodes": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/episodes.jsonl",
+    "size": 408482,
+    "sha256": "baeb6dfc091c93b28db76dc4dd6e7a5e61aa855e2ea3d1cedc8f1be6bfa55036"
+  },
+  "n_episodes": 16,
+  "wall_seconds": 1237.729502538219,
+  "engine_loads": [
+    {
+      "engine": "agent",
+      "startup_seconds": 44.54272289900109,
+      "effective_disable_cascade_attn": true,
+      "source": "llm_engine.vllm_config.model_config.disable_cascade_attn",
+      "log_evidence": null,
+      "shutdown_seconds": 1.546407449990511
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 27.855927317868918,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 8669,
+        "free_mib": 39841
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586746": 34170
+      },
+      "shutdown_seconds": 0.67147346585989
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 27.907434202264994,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3587542": 34170
+      },
+      "shutdown_seconds": 0.8162891231477261
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.840071575250477,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3587946": 34170
+      },
+      "shutdown_seconds": 0.5954630495980382
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.339001100044698,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3588200": 34170
+      },
+      "shutdown_seconds": 0.6414811951108277
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 24.941501564811915,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3588434": 34170
+      },
+      "shutdown_seconds": 0.6521152961067855
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.247847536113113,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3588672": 34170
+      },
+      "shutdown_seconds": 0.6060559712350368
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 21.96767094032839,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3588946": 34170
+      },
+      "shutdown_seconds": 0.6218840647488832
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.075530017260462,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3589161": 34170
+      },
+      "shutdown_seconds": 0.6367280990816653
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.432075024116784,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3589390": 34170
+      },
+      "shutdown_seconds": 0.6294058403000236
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 23.462705634068698,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3589646": 34170
+      },
+      "shutdown_seconds": 0.6621413580141962
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 21.96994356997311,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3589881": 34170
+      },
+      "shutdown_seconds": 0.6756445369683206
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.67925540683791,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3590098": 34170
+      },
+      "shutdown_seconds": 0.6617723749950528
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.188357011880726,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3590351": 34170
+      },
+      "shutdown_seconds": 0.6208673007786274
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 21.99708858318627,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3590605": 34170
+      },
+      "shutdown_seconds": 0.6244087889790535
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.547129552811384,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3590840": 34170
+      },
+      "shutdown_seconds": 0.6456702873110771
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.291381142102182,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3591092": 34170
+      },
+      "shutdown_seconds": 0.6234507630579174
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 23.434725780040026,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3591309": 34170
+      },
+      "shutdown_seconds": 0.6781983389519155
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.563640227075666,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3591544": 34170
+      },
+      "shutdown_seconds": 0.636244046036154
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.317748988047242,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3591795": 34170
+      },
+      "shutdown_seconds": 0.8422884969040751
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.627998775802553,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3592030": 34170
+      },
+      "shutdown_seconds": 0.6345222052186728
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.317792757879943,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3592265": 34170
+      },
+      "shutdown_seconds": 0.6303455331362784
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.495120806153864,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3592501": 34170
+      },
+      "shutdown_seconds": 0.6658799527212977
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.384830817114562,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3592740": 34170
+      },
+      "shutdown_seconds": 1.0457963650114834
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.640347150154412,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3592972": 34170
+      },
+      "shutdown_seconds": 0.6311443392187357
+    },
+    {
+      "engine": "r4",
+      "startup_seconds": 22.20268872519955,
+      "admission": {
+        "total_mib": 49140,
+        "used_mib": 9100,
+        "free_mib": 39410
+      },
+      "compute_apps_mib": {
+        "3586510": 8288,
+        "3586352": 426,
+        "3593227": 34170
+      },
+      "shutdown_seconds": 1.0077097536996007
+    }
+  ],
+  "versions": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "bm25s": "0.3.16",
+    "scipy": "1.17.1",
+    "llmlingua": "0.2.2",
+    "tiktoken": "0.14.0",
+    "nltk": "3.10.4",
+    "accelerate": "1.12.0"
+  },
+  "peak_observed_gpu1_mib": 43659,
+  "gpu_snapshots": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/gpu_snapshots.jsonl",
+    "size": 26601,
+    "sha256": "2e4b2d55c48e1c7e27e7fcf7f3d5ea880bdc9f8613b1ba8f9c82cacf988e1c31"
+  },
+  "root_usage_check": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/root_usage_check.json",
+    "size": 1682,
+    "sha256": "530cefe68e86b978c8758c72dbd6755f9a8fd25a39ba1d46746c0c3138ae8fb3"
+  },
+  "weight_transfers": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main_pilot/weight_transfers.jsonl",
+    "size": 9544,
+    "sha256": "f4987206db3dbe1f30f042c61aeb1ec69a96bc525f70c4705041c1e31e20c328"
+  },
+  "residency_check": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/main_pilot/residency_check.json",
+    "size": 712,
+    "sha256": "5535351d9ecf254e9cdce2ed22029f5280e2c271917d4682a66297489efb75ff"
+  }
+}

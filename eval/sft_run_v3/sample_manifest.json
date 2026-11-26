@@ -1,0 +1,291 @@
+{
+  "status": "complete",
+  "n_states": 22158,
+  "n_eligible": 22158,
+  "overlength": {
+    "count": 0,
+    "n": 22158,
+    "rate": 0.0
+  },
+  "max_length": 8392,
+  "cells": {
+    "append|loose": {
+      "n_states": 3693,
+      "two_adds": {
+        "count": 1088,
+        "n": 3693,
+        "rate": 0.29461142702409965
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "nonempty_drop": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "mean_drops": {
+        "sum": 0,
+        "n": 3693,
+        "mean": 0.0
+      },
+      "full_training_token_length": {
+        "n": 3693,
+        "mean": 3304.8077443812617,
+        "p50": 3227.0,
+        "p90": 4441.0,
+        "p99": 5508.119999999999,
+        "max": 7965
+      },
+      "overlength": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "user_text_checked": 3693,
+      "prompt_ids_checked": 74
+    },
+    "append|mid": {
+      "n_states": 3693,
+      "two_adds": {
+        "count": 1092,
+        "n": 3693,
+        "rate": 0.2956945572705118
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "nonempty_drop": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "mean_drops": {
+        "sum": 0,
+        "n": 3693,
+        "mean": 0.0
+      },
+      "full_training_token_length": {
+        "n": 3693,
+        "mean": 3306.4830760899,
+        "p50": 3227.0,
+        "p90": 4435.200000000001,
+        "p99": 5508.119999999999,
+        "max": 7965
+      },
+      "overlength": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "user_text_checked": 3693,
+      "prompt_ids_checked": 74
+    },
+    "append|tight": {
+      "n_states": 3693,
+      "two_adds": {
+        "count": 987,
+        "n": 3693,
+        "rate": 0.26726238830219334
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 0,
+        "n": 0,
+        "rate": null
+      },
+      "nonempty_drop": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "mean_drops": {
+        "sum": 0,
+        "n": 3693,
+        "mean": 0.0
+      },
+      "full_training_token_length": {
+        "n": 3693,
+        "mean": 3295.9455727051177,
+        "p50": 3231.0,
+        "p90": 4390.8,
+        "p99": 5364.24,
+        "max": 7958
+      },
+      "overlength": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "user_text_checked": 3693,
+      "prompt_ids_checked": 73
+    },
+    "reselect|loose": {
+      "n_states": 3693,
+      "two_adds": {
+        "count": 1098,
+        "n": 3693,
+        "rate": 0.29731925264013
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 1574,
+        "n": 3293,
+        "rate": 0.4779836015791072
+      },
+      "nonempty_drop": {
+        "count": 1574,
+        "n": 3693,
+        "rate": 0.42621175196317357
+      },
+      "mean_drops": {
+        "sum": 2126,
+        "n": 3693,
+        "mean": 0.5756837259680476
+      },
+      "full_training_token_length": {
+        "n": 3693,
+        "mean": 3157.7424857839155,
+        "p50": 3100.0,
+        "p90": 4143.8,
+        "p99": 5104.32,
+        "max": 7541
+      },
+      "overlength": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "user_text_checked": 3693,
+      "prompt_ids_checked": 75
+    },
+    "reselect|mid": {
+      "n_states": 3693,
+      "two_adds": {
+        "count": 1091,
+        "n": 3693,
+        "rate": 0.29542377470890874
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 1572,
+        "n": 3293,
+        "rate": 0.47737625265715156
+      },
+      "nonempty_drop": {
+        "count": 1572,
+        "n": 3693,
+        "rate": 0.4256701868399675
+      },
+      "mean_drops": {
+        "sum": 2139,
+        "n": 3693,
+        "mean": 0.579203899268887
+      },
+      "full_training_token_length": {
+        "n": 3693,
+        "mean": 3155.643920931492,
+        "p50": 3094.0,
+        "p90": 4151.400000000001,
+        "p99": 5104.32,
+        "max": 7305
+      },
+      "overlength": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "user_text_checked": 3693,
+      "prompt_ids_checked": 74
+    },
+    "reselect|tight": {
+      "n_states": 3693,
+      "two_adds": {
+        "count": 1098,
+        "n": 3693,
+        "rate": 0.29731925264013
+      },
+      "nongold_in_kept_reselect_step_ge_1": {
+        "count": 1581,
+        "n": 3293,
+        "rate": 0.48010932280595203
+      },
+      "nonempty_drop": {
+        "count": 1586,
+        "n": 3693,
+        "rate": 0.42946114270241
+      },
+      "mean_drops": {
+        "sum": 2150,
+        "n": 3693,
+        "mean": 0.5821825074465204
+      },
+      "full_training_token_length": {
+        "n": 3693,
+        "mean": 3157.1700514486865,
+        "p50": 3104.0,
+        "p90": 4143.8,
+        "p99": 5079.959999999999,
+        "max": 7541
+      },
+      "overlength": {
+        "count": 0,
+        "n": 3693,
+        "rate": 0.0
+      },
+      "user_text_checked": 3693,
+      "prompt_ids_checked": 74
+    }
+  },
+  "c_receipt": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/dagger_rollouts.json",
+    "bytes": 5601,
+    "sha256": "5651795a83c1d5e7f2aebe73a584d18c5f1f914ecccdcd49d530dab15010f1be"
+  },
+  "user_text_checked": 22158,
+  "prompt_ids_checked": 444,
+  "eligible_file": {
+    "path": "/root/userfolder/ctx-compressor/data/sft_v3/dagger_eligible.jsonl",
+    "bytes": 292579912,
+    "sha256": "8346c899463f3179c15d40ffa2d0e90403ae9302510ed541e5de77eafc1342d2",
+    "lines": 22158
+  },
+  "seed": 20261122,
+  "files": {
+    "train": {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v3/train_30k.jsonl",
+      "bytes": 390679526,
+      "sha256": "2e87d0aee1bc1b504cfea4d94913769fcd009bc6cc99a7d60245a6bbb37e171b",
+      "lines": 30000
+    },
+    "eval_loss": {
+      "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/heldout_eval_loss_1k.jsonl",
+      "bytes": 12829257,
+      "lines": 1000,
+      "sha256": "8536500669e12550d2dd1f87b2313dc17475503da6d2415e8c17ffcbbc615277"
+    },
+    "sample_ids": {
+      "path": "/root/userfolder/ctx-compressor/data/sft_v3/sample_ids.json",
+      "bytes": 591909,
+      "sha256": "3f72ef33156500f87bb3625a8565354308a8a71efc563a433cd18967dc0e6138"
+    }
+  },
+  "frozen_v2_train": {
+    "path": "/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/train_20k.jsonl",
+    "bytes": 258839400,
+    "lines": 20000,
+    "sha256": "952127caaeb6ed35f871caf4b93b12cba51b2e2f31030d86a0f30e1c230ed6cf"
+  },
+  "frozen_v2_manifest": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run_v2/sample_manifest.json",
+    "bytes": 5048,
+    "sha256": "a03db13d44a87dffcfab5d883ab16ee1acc1126a715f8449e6ad3e817c5f6c91"
+  },
+  "frozen_rows_source_id_and_bytes_checked": 20000,
+  "fixed_eval_loss_ids_checked": 1000,
+  "selected_by_mode": {
+    "reselect": 5000,
+    "append": 5000
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "tests": 849,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "matched_latency_resume_tests": 849,
+  "elapsed_seconds": 15.956448276061565,
+  "xml_sha256": "0cf219e0df8a4df04cf197217de025941d41a39aab2bb8c5a066f2bc05004d3d",
+  "xml": "/root/userfolder/ctx-compressor/reranker_v1/cpu_suite_0r5hkfki/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/reranker_v1/cpu_suite_0r5hkfki/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-25T00:03:39.215368+00:00"
+}

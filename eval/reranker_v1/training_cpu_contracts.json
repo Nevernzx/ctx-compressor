@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "full_head_exact_test_n": 2,
+  "bce_grad_in_both_label_rows": true,
+  "bce_grad_in_transformer": true,
+  "cuda_initialized": false,
+  "model_fixture": "random CPU Qwen3 tiny"
+}

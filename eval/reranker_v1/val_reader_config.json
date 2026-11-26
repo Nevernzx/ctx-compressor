@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "pid": 3436891,
+  "started_utc": "2026-11-24T21:55:27.643894+00:00",
+  "parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "seed": 20261117,
+    "disable_cascade_attn": true
+  },
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 48,
+    "seed": 20261117,
+    "enable_thinking": false,
+    "n": 1,
+    "system_messages": 0
+  },
+  "source_sha256": "a77c26c6c34b73dee47a2e0a8c48bdf8f506721158d17f54370523723089e6da",
+  "package_versions": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "bm25s": "0.3.16",
+    "scipy": "1.17.1"
+  },
+  "cuda_visible_devices": "1",
+  "cuda_device_order": "PCI_BUS_ID",
+  "before": {
+    "at_utc": "2026-11-24T21:55:27.646963+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940439437312,
+    "available_bytes": 14257778688
+  },
+  "input_provenance": {
+    "preflight_sha256": "ef53a0da8c808588b5fa264e93941f10dfe40eb92db78dad01869872d124c7be",
+    "n_tasks": 100,
+    "batch_size": 216,
+    "task17_phase": "val"
+  },
+  "automatic_retry": false,
+  "effective_disable_cascade_attn": true,
+  "effective_disable_cascade_attn_source": "llm_engine.vllm_config.model_config.disable_cascade_attn",
+  "sampling_params_repr": "SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0, top_p=1.0, top_k=0, min_p=0.0, seed=20261117, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=False, max_tokens=48, min_tokens=0, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, structured_outputs=None, extra_args=None)",
+  "inference_seconds": 662.8744449508376,
+  "ended_utc": "2026-11-24T22:07:13.970701+00:00",
+  "elapsed_seconds": 706.323707352858,
+  "predictions": 21600,
+  "tasks": 100,
+  "engine_shutdown": true,
+  "peak_gpu1_mib": 42501,
+  "n_resource_samples": 335,
+  "df_after_reader": {
+    "at_utc": "2026-11-24T22:07:13.974142+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940439461888,
+    "available_bytes": 14257754112
+  },
+  "predictions_sha256": "f80e1891152b817529c32b12be4222b3dfdf23e7de6c1f8bf09379b4835114ae",
+  "peak_observed_root_used_bytes": 940780314624,
+  "peak_observed_root_delta_bytes": 340901888,
+  "df_opening": {
+    "at_utc": "2026-11-24T21:45:25.180832+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940439412736,
+    "available_bytes": 14257803264
+  }
+}

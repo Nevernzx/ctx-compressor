@@ -1,0 +1,44 @@
+{
+  "phase": "P",
+  "status": "passed",
+  "utc": "2026-11-22T12:29:54.114753+00:00",
+  "checks": {
+    "launch_live": {
+      "entries": 51,
+      "exit_code": 1,
+      "stdout": "HANDOFF.md: FAILED\nscripts/run_sft_v3_pipeline.py: FAILED\n",
+      "stderr": "sha256sum: WARNING: 2 computed checksums did NOT match\n"
+    },
+    "launch_historical": {
+      "entries": 51,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "resume1_live": {
+      "entries": 19,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "checks_identical_to_start": true,
+  "start_receipt_sha256": "722b2dccc5b668d0b88647feb0555c52503e63c7bdb774cfcb60772ef0ac5584",
+  "protected_live_files_verified": 196,
+  "live_baseline_sha256": "3ea60f0c9f7c4f55121bb507d7d68222225ba1ffa2e36c307ee4cdea5f4269f9",
+  "test_receipt_sha256": "cf134410b33b288246c193dcbdd7cc639a984ddcd479da555141b6f958b26e68",
+  "advantage_check_sha256": "4800041efe3cc956996980f7b18d8e5085fcf44adc5ef9dfe213014cc7e67152",
+  "verified_absent": [
+    "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "/root/userfolder/ctx-compressor/grpo_r2/states",
+    "/root/userfolder/ctx-compressor/grpo_r2/filter",
+    "/root/userfolder/ctx-compressor/grpo_r2/data",
+    "/root/userfolder/ctx-compressor/grpo_r2/train",
+    "/root/userfolder/ctx-compressor/grpo_r2/pipeline_status.json",
+    "/root/userfolder/ctx-compressor/grpo_r2/pipeline.pid",
+    "/root/workplace/ctx-compressor/eval/grpo_r2/start_model.json",
+    "/root/workplace/ctx-compressor/eval/grpo_r2/training_checks.json",
+    "/root/workplace/ctx-compressor/eval/grpo_r2/selected_checkpoint.json",
+    "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2"
+  ]
+}

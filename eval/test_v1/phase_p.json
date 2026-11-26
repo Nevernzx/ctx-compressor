@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "locked_files": {
+    "/root/userfolder/ctx-compressor/data/test_dev_v1/test_tasks.jsonl": {
+      "sha256": "f2e1856acb54991badddab06ebea99bba942e1c51aaa429d69756751d0ffc71a",
+      "size": 2348597
+    },
+    "/root/userfolder/ctx-compressor/data/test_dev_v1/steps.jsonl": {
+      "sha256": "e285d284d4baed60b09bfc7cae73b469b4b1e0e0d966468116faa2315f41293b",
+      "size": 1924496
+    },
+    "/root/userfolder/ctx-compressor/data/test_dev_v1/excluded_ids.json": {
+      "sha256": "1d0e27ddb8f88c4d53374f3a1257fb265836fe79135c21629afeccdaa9915ad9",
+      "size": 17498
+    },
+    "/root/workplace/ctx-compressor/eval/test_dev_v1/exclusion_audit.json": {
+      "sha256": "aa114c1e677293bc9e30a4947b4c2ea3efb9c4074e6865bf473228a578edcc19",
+      "size": 4606
+    },
+    "/root/workplace/ctx-compressor/eval/test_dev_v1/structural_stats.json": {
+      "sha256": "70d0d86e2dd3412334248e1f456fee2f45f59ce1ac163da500fd2704463fc80a",
+      "size": 2271
+    }
+  },
+  "inputs": {
+    "lock_preflight.json": {
+      "path": "/root/workplace/ctx-compressor/eval/test_v1/lock_preflight.json",
+      "size": 1263,
+      "sha256": "941b5d5c5b1f541a9d0d2c5a68f18443f841277ec7548ae61fef3bbb920b464c"
+    },
+    "model_preflight.json": {
+      "path": "/root/workplace/ctx-compressor/eval/test_v1/model_preflight.json",
+      "size": 11717,
+      "sha256": "880826f75071f8d2f185aa849df385d39b59776e78fba6dcebc8f56fc6728457"
+    },
+    "data_preflight.json": {
+      "path": "/root/workplace/ctx-compressor/eval/test_v1/data_preflight.json",
+      "size": 2549,
+      "sha256": "26d620e71b7979dd4a5471d00d793d708df6224c6be8a6a5eddb42991897add5"
+    },
+    "context_limit_preflight.json": {
+      "path": "/root/workplace/ctx-compressor/eval/test_v1/context_limit_preflight.json",
+      "size": 198,
+      "sha256": "bd2dee57f5ae0252b09e90a912a44b3a371f370d493f028f36386352962159f7"
+    },
+    "rr_heldout_parity.json": {
+      "path": "/root/workplace/ctx-compressor/eval/test_v1/rr_heldout_parity.json",
+      "size": 765,
+      "sha256": "32d7fc9638bb0666089444885e0b79e28f975822458e3bfa776f2103ce49b780"
+    },
+    "cpu_baselines.json": {
+      "path": "/root/workplace/ctx-compressor/eval/test_v1/cpu_baselines.json",
+      "size": 930,
+      "sha256": "fa317ce351c8c92acaf37a8b97d9b73c412b8d4d0667fedb4cefd022fd28bc5f"
+    },
+    "cpu_tests.json": {
+      "path": "/root/workplace/ctx-compressor/eval/test_v1/cpu_tests.json",
+      "size": 484,
+      "sha256": "e53b2702bf457aa7f5cef06c2f1009ca32273f10be4786e0f5ec1ff0ea585058"
+    }
+  },
+  "n_cpu_tests": 857,
+  "priority": "task19_before_task20",
+  "shared_lock": "/root/userfolder/ctx-compressor/rt/gpu1_t19_t20.lock"
+}

@@ -1,0 +1,131 @@
+{
+ "note": "post-hoc, not pre-registered; EM=1 answers, yes/no answers excluded; string match after MuSiQue normalization",
+ "tasks": 113,
+ "deepseek": {
+  "no_compress": {
+   "n": 323,
+   "correct": 163,
+   "A_in_final_context": 151,
+   "yes_no": 16,
+   "D_never_retrieved": 10,
+   "B_only_in_own_notes": 2,
+   "B_thought_not_query": 2,
+   "B_noted_after_seen": 0
+  },
+  "oracle": {
+   "n": 323,
+   "correct": 179,
+   "A_in_final_context": 170,
+   "yes_no": 16,
+   "D_never_retrieved": 4,
+   "B_only_in_own_notes": 5,
+   "B_thought_not_query": 5,
+   "B_noted_after_seen": 2
+  },
+  "LLMLingua-2": {
+   "n": 323,
+   "correct": 139,
+   "B_only_in_own_notes": 61,
+   "B_thought_not_query": 60,
+   "B_noted_after_seen": 36,
+   "D_never_retrieved": 16,
+   "yes_no": 16,
+   "A_in_final_context": 57,
+   "C_seen_dropped_not_noted": 5
+  },
+  "RR-τ reselect": {
+   "n": 323,
+   "correct": 123,
+   "A_in_final_context": 87,
+   "D_never_retrieved": 11,
+   "B_only_in_own_notes": 17,
+   "B_thought_not_query": 14,
+   "B_noted_after_seen": 14,
+   "yes_no": 16,
+   "C_seen_dropped_not_noted": 8
+  },
+  "r4 reselect": {
+   "n": 323,
+   "yes_no": 16,
+   "correct": 156,
+   "A_in_final_context": 142,
+   "D_never_retrieved": 4,
+   "B_only_in_own_notes": 8,
+   "B_thought_not_query": 8,
+   "B_noted_after_seen": 5,
+   "C_seen_dropped_not_noted": 2
+  },
+  "r4 append": {
+   "n": 323,
+   "yes_no": 16,
+   "correct": 163,
+   "A_in_final_context": 148,
+   "D_never_retrieved": 9,
+   "C_seen_dropped_not_noted": 1,
+   "B_only_in_own_notes": 5,
+   "B_thought_not_query": 5,
+   "B_noted_after_seen": 1
+  }
+ },
+ "qwen3_8b_same_tasks": {
+  "no_compress": {
+   "n": 323,
+   "correct": 91,
+   "A_in_final_context": 87,
+   "yes_no": 16,
+   "D_never_retrieved": 2,
+   "B_only_in_own_notes": 2,
+   "B_thought_not_query": 2,
+   "B_noted_after_seen": 0
+  },
+  "oracle": {
+   "n": 323,
+   "correct": 105,
+   "A_in_final_context": 101,
+   "yes_no": 16,
+   "C_seen_dropped_not_noted": 2,
+   "D_never_retrieved": 2
+  },
+  "LLMLingua-2": {
+   "n": 323,
+   "correct": 59,
+   "A_in_final_context": 42,
+   "yes_no": 16,
+   "C_seen_dropped_not_noted": 8,
+   "B_only_in_own_notes": 7,
+   "B_thought_not_query": 5,
+   "B_noted_after_seen": 0,
+   "D_never_retrieved": 2
+  },
+  "RR-τ reselect": {
+   "n": 323,
+   "correct": 79,
+   "A_in_final_context": 73,
+   "C_seen_dropped_not_noted": 4,
+   "yes_no": 16,
+   "D_never_retrieved": 2
+  },
+  "r4 reselect": {
+   "n": 323,
+   "correct": 86,
+   "A_in_final_context": 71,
+   "C_seen_dropped_not_noted": 3,
+   "D_never_retrieved": 5,
+   "yes_no": 16,
+   "B_only_in_own_notes": 7,
+   "B_thought_not_query": 7,
+   "B_noted_after_seen": 0
+  },
+  "r4 append": {
+   "n": 323,
+   "correct": 86,
+   "C_seen_dropped_not_noted": 5,
+   "A_in_final_context": 70,
+   "D_never_retrieved": 5,
+   "yes_no": 16,
+   "B_only_in_own_notes": 6,
+   "B_thought_not_query": 6,
+   "B_noted_after_seen": 0
+  }
+ }
+}

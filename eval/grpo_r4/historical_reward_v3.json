@@ -1,0 +1,668 @@
+{
+  "status": "complete",
+  "task_gold_source": {
+    "path": "/root/userfolder/ctx-compressor/data/traj_train/heldout_tasks.jsonl",
+    "bytes": 62323855,
+    "sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+  },
+  "strategies": {
+    "grpo_r2:checkpoint-125": {
+      "steps": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/checkpoint-125/steps.jsonl",
+        "bytes": 236195097,
+        "sha256": "057746aca748d0bf3809a81c48d863c0cffb168d934face3b0e379d031f16274"
+      },
+      "metrics": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-125/checkpoint-125_results.json",
+        "bytes": 32516,
+        "sha256": "e98a810821e6b4e7f20ac43c511ef09a6ee54783d944631004c195fb728f64b0"
+      },
+      "heldout": {
+        "reselect|tight": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2921053,
+            "reward": {
+              "sum": -1460.5265,
+              "n": 2326,
+              "mean": -0.6279133705932932
+            },
+            "n_lost": {
+              "sum": 255,
+              "n": 2326,
+              "mean": 0.10963026655202064
+            },
+            "n_nongold_after": {
+              "sum": 1808,
+              "n": 2326,
+              "mean": 0.7773000859845228
+            },
+            "used_per_1000": {
+              "sum": 1742.493,
+              "n": 2326,
+              "mean": 0.7491371453138435
+            },
+            "invalid": {
+              "count": 45,
+              "n": 2326,
+              "rate": 0.01934651762682717
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2418,
+              "n": 249,
+              "mean": 9.710843373493976
+            },
+            "nongold": {
+              "sum": 323,
+              "n": 249,
+              "mean": 1.2971887550200802
+            }
+          }
+        },
+        "reselect|mid": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2801817,
+            "reward": {
+              "sum": -1400.9085,
+              "n": 2326,
+              "mean": -0.6022822441960447
+            },
+            "n_lost": {
+              "sum": 217,
+              "n": 2326,
+              "mean": 0.09329320722269992
+            },
+            "n_nongold_after": {
+              "sum": 1892,
+              "n": 2326,
+              "mean": 0.8134135855546002
+            },
+            "used_per_1000": {
+              "sum": 1758.377,
+              "n": 2326,
+              "mean": 0.7559660361134996
+            },
+            "invalid": {
+              "count": 2,
+              "n": 2326,
+              "rate": 0.0008598452278589854
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2488,
+              "n": 249,
+              "mean": 9.991967871485944
+            },
+            "nongold": {
+              "sum": 357,
+              "n": 249,
+              "mean": 1.4337349397590362
+            }
+          }
+        },
+        "reselect|loose": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2775714,
+            "reward": {
+              "sum": -1387.857,
+              "n": 2326,
+              "mean": -0.5966711092003439
+            },
+            "n_lost": {
+              "sum": 210,
+              "n": 2326,
+              "mean": 0.09028374892519346
+            },
+            "n_nongold_after": {
+              "sum": 1852,
+              "n": 2326,
+              "mean": 0.7962166809974205
+            },
+            "used_per_1000": {
+              "sum": 1759.074,
+              "n": 2326,
+              "mean": 0.7562656921754085
+            },
+            "invalid": {
+              "count": 2,
+              "n": 2326,
+              "rate": 0.0008598452278589854
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2482,
+              "n": 249,
+              "mean": 9.967871485943775
+            },
+            "nongold": {
+              "sum": 344,
+              "n": 249,
+              "mean": 1.3815261044176708
+            }
+          }
+        },
+        "append|tight": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -3493711,
+            "reward": {
+              "sum": -1746.8555,
+              "n": 2326,
+              "mean": -0.7510126827171109
+            },
+            "n_lost": {
+              "sum": 232,
+              "n": 2326,
+              "mean": 0.0997420464316423
+            },
+            "n_nongold_after": {
+              "sum": 2849,
+              "n": 2326,
+              "mean": 1.2248495270851247
+            },
+            "used_per_1000": {
+              "sum": 1906.031,
+              "n": 2326,
+              "mean": 0.8194458297506448
+            },
+            "invalid": {
+              "count": 106,
+              "n": 2326,
+              "rate": 0.04557179707652623
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2643,
+              "n": 249,
+              "mean": 10.614457831325302
+            },
+            "nongold": {
+              "sum": 523,
+              "n": 249,
+              "mean": 2.1004016064257027
+            }
+          }
+        },
+        "append|mid": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -3219532,
+            "reward": {
+              "sum": -1609.766,
+              "n": 2326,
+              "mean": -0.6920748065348238
+            },
+            "n_lost": {
+              "sum": 138,
+              "n": 2326,
+              "mean": 0.05932932072226999
+            },
+            "n_nongold_after": {
+              "sum": 2990,
+              "n": 2326,
+              "mean": 1.2854686156491832
+            },
+            "used_per_1000": {
+              "sum": 1968.732,
+              "n": 2326,
+              "mean": 0.846402407566638
+            },
+            "invalid": {
+              "count": 9,
+              "n": 2326,
+              "rate": 0.003869303525365434
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2791,
+              "n": 249,
+              "mean": 11.208835341365463
+            },
+            "nongold": {
+              "sum": 584,
+              "n": 249,
+              "mean": 2.3453815261044175
+            }
+          }
+        },
+        "append|loose": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -3183170,
+            "reward": {
+              "sum": -1591.585,
+              "n": 2326,
+              "mean": -0.6842583834909717
+            },
+            "n_lost": {
+              "sum": 129,
+              "n": 2326,
+              "mean": 0.055460017196904556
+            },
+            "n_nongold_after": {
+              "sum": 2959,
+              "n": 2326,
+              "mean": 1.2721410146173688
+            },
+            "used_per_1000": {
+              "sum": 1972.29,
+              "n": 2326,
+              "mean": 0.8479320722269992
+            },
+            "invalid": {
+              "count": 3,
+              "n": 2326,
+              "rate": 0.0012897678417884782
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2799,
+              "n": 249,
+              "mean": 11.240963855421686
+            },
+            "nongold": {
+              "sum": 584,
+              "n": 249,
+              "mean": 2.3453815261044175
+            }
+          }
+        },
+        "pooled": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 13956,
+            "reward_units_1_over_2000": -18394997,
+            "reward": {
+              "sum": -9197.4985,
+              "n": 13956,
+              "mean": -0.6590354327887646
+            },
+            "n_lost": {
+              "sum": 1181,
+              "n": 13956,
+              "mean": 0.08462310117512181
+            },
+            "n_nongold_after": {
+              "sum": 14350,
+              "n": 13956,
+              "mean": 1.0282315849813701
+            },
+            "used_per_1000": {
+              "sum": 11106.997,
+              "n": 13956,
+              "mean": 0.7958581971911722
+            },
+            "invalid": {
+              "count": 167,
+              "n": 13956,
+              "rate": 0.011966179421037547
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 15621,
+              "n": 1494,
+              "mean": 10.45582329317269
+            },
+            "nongold": {
+              "sum": 2715,
+              "n": 1494,
+              "mean": 1.8172690763052208
+            }
+          }
+        }
+      }
+    },
+    "sft_v3:checkpoint-3000": {
+      "steps": {
+        "path": "/root/userfolder/ctx-compressor/eval_rollouts_v3/checkpoint-3000/steps.jsonl",
+        "bytes": 231628037,
+        "sha256": "51b9c94fb33756fc03f5efb9d909a6ffcbe9335f36489501e40c1dc5d725efbe"
+      },
+      "metrics": {
+        "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/checkpoint-3000/checkpoint-3000_results.json",
+        "bytes": 32497,
+        "sha256": "1f62d14418e2721df6953a1cf78e7cd67779468519bc69989521ca72b0254f70"
+      },
+      "heldout": {
+        "reselect|tight": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2570930,
+            "reward": {
+              "sum": -1285.465,
+              "n": 2326,
+              "mean": -0.5526504729148752
+            },
+            "n_lost": {
+              "sum": 300,
+              "n": 2326,
+              "mean": 0.1289767841788478
+            },
+            "n_nongold_after": {
+              "sum": 1097,
+              "n": 2326,
+              "mean": 0.4716251074806535
+            },
+            "used_per_1000": {
+              "sum": 1591.89,
+              "n": 2326,
+              "mean": 0.6843895098882201
+            },
+            "invalid": {
+              "count": 14,
+              "n": 2326,
+              "rate": 0.0060189165950128975
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2231,
+              "n": 249,
+              "mean": 8.959839357429718
+            },
+            "nongold": {
+              "sum": 173,
+              "n": 249,
+              "mean": 0.6947791164658634
+            }
+          }
+        },
+        "reselect|mid": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2545338,
+            "reward": {
+              "sum": -1272.669,
+              "n": 2326,
+              "mean": -0.5471491831470335
+            },
+            "n_lost": {
+              "sum": 293,
+              "n": 2326,
+              "mean": 0.12596732588134135
+            },
+            "n_nongold_after": {
+              "sum": 1133,
+              "n": 2326,
+              "mean": 0.4871023215821152
+            },
+            "used_per_1000": {
+              "sum": 1594.778,
+              "n": 2326,
+              "mean": 0.6856311263972485
+            },
+            "invalid": {
+              "count": 1,
+              "n": 2326,
+              "rate": 0.0004299226139294927
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2243,
+              "n": 249,
+              "mean": 9.008032128514056
+            },
+            "nongold": {
+              "sum": 180,
+              "n": 249,
+              "mean": 0.7228915662650602
+            }
+          }
+        },
+        "reselect|loose": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2528143,
+            "reward": {
+              "sum": -1264.0715,
+              "n": 2326,
+              "mean": -0.5434529234737747
+            },
+            "n_lost": {
+              "sum": 288,
+              "n": 2326,
+              "mean": 0.12381771281169389
+            },
+            "n_nongold_after": {
+              "sum": 1111,
+              "n": 2326,
+              "mean": 0.47764402407566636
+            },
+            "used_per_1000": {
+              "sum": 1596.623,
+              "n": 2326,
+              "mean": 0.6864243336199485
+            },
+            "invalid": {
+              "count": 0,
+              "n": 2326,
+              "rate": 0.0
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2243,
+              "n": 249,
+              "mean": 9.008032128514056
+            },
+            "nongold": {
+              "sum": 178,
+              "n": 249,
+              "mean": 0.714859437751004
+            }
+          }
+        },
+        "append|tight": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2745525,
+            "reward": {
+              "sum": -1372.7625,
+              "n": 2326,
+              "mean": -0.5901816423043852
+            },
+            "n_lost": {
+              "sum": 237,
+              "n": 2326,
+              "mean": 0.10189165950128977
+            },
+            "n_nongold_after": {
+              "sum": 1610,
+              "n": 2326,
+              "mean": 0.6921754084264833
+            },
+            "used_per_1000": {
+              "sum": 1704.325,
+              "n": 2326,
+              "mean": 0.7327278589853826
+            },
+            "invalid": {
+              "count": 26,
+              "n": 2326,
+              "rate": 0.01117798796216681
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2408,
+              "n": 249,
+              "mean": 9.670682730923694
+            },
+            "nongold": {
+              "sum": 286,
+              "n": 249,
+              "mean": 1.1485943775100402
+            }
+          }
+        },
+        "append|mid": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2688641,
+            "reward": {
+              "sum": -1344.3205,
+              "n": 2326,
+              "mean": -0.5779537833190026
+            },
+            "n_lost": {
+              "sum": 214,
+              "n": 2326,
+              "mean": 0.09200343938091143
+            },
+            "n_nongold_after": {
+              "sum": 1657,
+              "n": 2326,
+              "mean": 0.7123817712811694
+            },
+            "used_per_1000": {
+              "sum": 1726.401,
+              "n": 2326,
+              "mean": 0.7422188306104901
+            },
+            "invalid": {
+              "count": 2,
+              "n": 2326,
+              "rate": 0.0008598452278589854
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2438,
+              "n": 249,
+              "mean": 9.791164658634537
+            },
+            "nongold": {
+              "sum": 293,
+              "n": 249,
+              "mean": 1.176706827309237
+            }
+          }
+        },
+        "append|loose": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 2326,
+            "reward_units_1_over_2000": -2659211,
+            "reward": {
+              "sum": -1329.6055,
+              "n": 2326,
+              "mean": -0.5716274720550301
+            },
+            "n_lost": {
+              "sum": 204,
+              "n": 2326,
+              "mean": 0.08770421324161651
+            },
+            "n_nongold_after": {
+              "sum": 1643,
+              "n": 2326,
+              "mean": 0.7063628546861564
+            },
+            "used_per_1000": {
+              "sum": 1723.451,
+              "n": 2326,
+              "mean": 0.7409505588993981
+            },
+            "invalid": {
+              "count": 1,
+              "n": 2326,
+              "rate": 0.0004299226139294927
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 2445,
+              "n": 249,
+              "mean": 9.819277108433734
+            },
+            "nongold": {
+              "sum": 293,
+              "n": 249,
+              "mean": 1.176706827309237
+            }
+          }
+        },
+        "pooled": {
+          "heldout_reward_v3": {
+            "mu": 0.5,
+            "non_gold_price": 0.16,
+            "n_steps": 13956,
+            "reward_units_1_over_2000": -15737788,
+            "reward": {
+              "sum": -7868.894,
+              "n": 13956,
+              "mean": -0.5638359128690169
+            },
+            "n_lost": {
+              "sum": 1536,
+              "n": 13956,
+              "mean": 0.11006018916595013
+            },
+            "n_nongold_after": {
+              "sum": 8251,
+              "n": 13956,
+              "mean": 0.5912152479220407
+            },
+            "used_per_1000": {
+              "sum": 9937.468,
+              "n": 13956,
+              "mean": 0.7120570364001148
+            },
+            "invalid": {
+              "count": 44,
+              "n": 13956,
+              "rate": 0.0031527658354829464
+            }
+          },
+          "final_context": {
+            "segments": {
+              "sum": 14008,
+              "n": 1494,
+              "mean": 9.376171352074966
+            },
+            "nongold": {
+              "sum": 1403,
+              "n": 1494,
+              "mean": 0.9390896921017403
+            }
+          }
+        }
+      }
+    }
+  }
+}

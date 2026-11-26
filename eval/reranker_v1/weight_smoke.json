@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "input_snapshot_revision": "0311d7b88fd535395d154b17fe08f85327306508",
+  "n_pairs": 4,
+  "max_abs_logit_difference": 5.7220458984375e-06,
+  "selective_head_matches_full_head": true,
+  "cuda_initialized": false,
+  "weights": {
+    "path": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B/model.safetensors",
+    "size": 1191588280,
+    "sha256": "27cd75a405b9c1b46b59abfd88aaa209e6fed2a1972cde9b70e7659537c5e65b"
+  },
+  "data_preflight": {
+    "path": "/root/workplace/ctx-compressor/eval/reranker_v1/data_preflight.json",
+    "size": 56749,
+    "sha256": "fce57594bf8f7423b8caf0e48d0cccf359f7ab7a85aad2d8045757a5c5eecba6"
+  },
+  "tokenization": {
+    "path": "/root/workplace/ctx-compressor/eval/reranker_v1/tokenization.json",
+    "size": 4486,
+    "sha256": "50a75a7d0da6069c5c92b7d1259a570924f8d425ec59034ff90293441305a917"
+  }
+}

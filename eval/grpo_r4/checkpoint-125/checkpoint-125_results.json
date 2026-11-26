@@ -1,0 +1,1266 @@
+{
+  "schema_version": 1,
+  "strategy": "checkpoint-125",
+  "settings": {
+    "n_tasks": 249,
+    "n_trajectories": 1494,
+    "modes": [
+      "reselect",
+      "append"
+    ],
+    "budgets": {
+      "tight": 1876,
+      "mid": 2814,
+      "loose": 5628
+    },
+    "split": "train-heldout",
+    "saved_retrieval_steps": true,
+    "invalid_reason_priority": [
+      "invalid_json",
+      "invalid_candidate_id",
+      "append_drop",
+      "over_budget"
+    ],
+    "max_tokens": 256,
+    "r_read": 0.05,
+    "r_write": 1.25,
+    "no_compress": "nonbinding reference; requested and effective budgets recorded"
+  },
+  "configs": {
+    "checkpoint-125|reselect|tight": {
+      "policy": "checkpoint-125",
+      "strategy": "checkpoint-125",
+      "mode": "reselect",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "budget_binding": true,
+      "metrics": {
+        "n_tasks": 249,
+        "n_steps": 2326,
+        "step_recall": {
+          "micro": {
+            "n": 2326,
+            "mean": 0.9681157478234006
+          },
+          "task_macro": {
+            "n": 249,
+            "mean": 0.9679347075928095
+          }
+        },
+        "final_recall": {
+          "n": 249,
+          "mean": 0.9053977370242425
+        },
+        "evidence_loss": {
+          "n": 249,
+          "count": 147,
+          "rate": 0.5903614457831325,
+          "by_hop": {
+            "1": {
+              "n": 249,
+              "count": 70,
+              "evidence_n": 996,
+              "lost_evidence_count": 76,
+              "rate": 0.28112449799196787
+            },
+            "2": {
+              "n": 249,
+              "count": 87,
+              "evidence_n": 996,
+              "lost_evidence_count": 104,
+              "rate": 0.3493975903614458
+            },
+            "3": {
+              "n": 174,
+              "count": 35,
+              "evidence_n": 272,
+              "lost_evidence_count": 35,
+              "rate": 0.20114942528735633
+            },
+            "4": {
+              "n": 59,
+              "count": 7,
+              "evidence_n": 62,
+              "lost_evidence_count": 7,
+              "rate": 0.11864406779661017
+            }
+          },
+          "by_question_position": {
+            "1": {
+              "n": 249,
+              "count": 52,
+              "evidence_n": 584,
+              "lost_evidence_count": 54,
+              "rate": 0.20883534136546184
+            },
+            "2": {
+              "n": 249,
+              "count": 53,
+              "evidence_n": 578,
+              "lost_evidence_count": 59,
+              "rate": 0.21285140562248997
+            },
+            "3": {
+              "n": 249,
+              "count": 53,
+              "evidence_n": 584,
+              "lost_evidence_count": 57,
+              "rate": 0.21285140562248997
+            },
+            "4": {
+              "n": 249,
+              "count": 44,
+              "evidence_n": 580,
+              "lost_evidence_count": 52,
+              "rate": 0.17670682730923695
+            }
+          },
+          "by_mechanism": {
+            "never_kept": {
+              "n": 249,
+              "count": 134,
+              "evidence_n": 2326,
+              "lost_evidence_count": 195,
+              "rate": 0.5381526104417671
+            },
+            "dropped": {
+              "n": 249,
+              "count": 26,
+              "evidence_n": 2326,
+              "lost_evidence_count": 27,
+              "rate": 0.10441767068273092
+            }
+          }
+        },
+        "evidence_complete_questions": {
+          "n": 996,
+          "count": 794,
+          "rate": 0.7971887550200804
+        },
+        "occupancy": {
+          "n": 249,
+          "mean": 0.6609594026425534,
+          "max": 0.9984008528784648
+        },
+        "action_validity": {
+          "n": 2326,
+          "invalid_count": 15,
+          "over_budget_count": 0
+        },
+        "cost": {
+          "plain": {
+            "n": 249,
+            "mean": 6562.718875502008,
+            "relative_to_no_compress": 0.06256474738860654
+          },
+          "cached": {
+            "n": 249,
+            "mean": 1933.7118473895569,
+            "relative_to_no_compress": 0.06611304284485271
+          }
+        },
+        "invalid_outputs": {
+          "invalid_json": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "invalid_candidate_id": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          },
+          "append_drop": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "over_budget": {
+            "count": 13,
+            "n": 2326,
+            "rate": 0.005588993981083405
+          },
+          "any_invalid": {
+            "count": 15,
+            "n": 2326,
+            "rate": 0.006448839208942391
+          }
+        },
+        "output_limit": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "requested_budget_occupancy": {
+          "n": 249,
+          "mean": 0.6609594026425534,
+          "max": 0.9984008528784648
+        },
+        "generation": {
+          "n": 2326,
+          "output_tokens": 24815,
+          "prompt_tokens": 7352174
+        }
+      }
+    },
+    "checkpoint-125|reselect|mid": {
+      "policy": "checkpoint-125",
+      "strategy": "checkpoint-125",
+      "mode": "reselect",
+      "budget_tier": "mid",
+      "budget": 2814,
+      "budget_binding": true,
+      "metrics": {
+        "n_tasks": 249,
+        "n_steps": 2326,
+        "step_recall": {
+          "micro": {
+            "n": 2326,
+            "mean": 0.9684550640913497
+          },
+          "task_macro": {
+            "n": 249,
+            "mean": 0.9682929162301198
+          }
+        },
+        "final_recall": {
+          "n": 249,
+          "mean": 0.9078104180513814
+        },
+        "evidence_loss": {
+          "n": 249,
+          "count": 149,
+          "rate": 0.5983935742971888,
+          "by_hop": {
+            "1": {
+              "n": 249,
+              "count": 70,
+              "evidence_n": 996,
+              "lost_evidence_count": 76,
+              "rate": 0.28112449799196787
+            },
+            "2": {
+              "n": 249,
+              "count": 88,
+              "evidence_n": 996,
+              "lost_evidence_count": 104,
+              "rate": 0.3534136546184739
+            },
+            "3": {
+              "n": 174,
+              "count": 31,
+              "evidence_n": 272,
+              "lost_evidence_count": 31,
+              "rate": 0.1781609195402299
+            },
+            "4": {
+              "n": 59,
+              "count": 5,
+              "evidence_n": 62,
+              "lost_evidence_count": 5,
+              "rate": 0.0847457627118644
+            }
+          },
+          "by_question_position": {
+            "1": {
+              "n": 249,
+              "count": 51,
+              "evidence_n": 584,
+              "lost_evidence_count": 53,
+              "rate": 0.20481927710843373
+            },
+            "2": {
+              "n": 249,
+              "count": 50,
+              "evidence_n": 578,
+              "lost_evidence_count": 56,
+              "rate": 0.20080321285140562
+            },
+            "3": {
+              "n": 249,
+              "count": 54,
+              "evidence_n": 584,
+              "lost_evidence_count": 59,
+              "rate": 0.21686746987951808
+            },
+            "4": {
+              "n": 249,
+              "count": 41,
+              "evidence_n": 580,
+              "lost_evidence_count": 48,
+              "rate": 0.1646586345381526
+            }
+          },
+          "by_mechanism": {
+            "never_kept": {
+              "n": 249,
+              "count": 136,
+              "evidence_n": 2326,
+              "lost_evidence_count": 190,
+              "rate": 0.5461847389558233
+            },
+            "dropped": {
+              "n": 249,
+              "count": 26,
+              "evidence_n": 2326,
+              "lost_evidence_count": 26,
+              "rate": 0.10441767068273092
+            }
+          }
+        },
+        "evidence_complete_questions": {
+          "n": 996,
+          "count": 800,
+          "rate": 0.8032128514056225
+        },
+        "occupancy": {
+          "n": 249,
+          "mean": 0.44594154871083475,
+          "max": 0.9353233830845771
+        },
+        "action_validity": {
+          "n": 2326,
+          "invalid_count": 2,
+          "over_budget_count": 0
+        },
+        "cost": {
+          "plain": {
+            "n": 249,
+            "mean": 6597.570281124498,
+            "relative_to_no_compress": 0.06289699830934131
+          },
+          "cached": {
+            "n": 249,
+            "mean": 1944.601405622489,
+            "relative_to_no_compress": 0.06648535365785584
+          }
+        },
+        "invalid_outputs": {
+          "invalid_json": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "invalid_candidate_id": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          },
+          "append_drop": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "over_budget": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "any_invalid": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          }
+        },
+        "output_limit": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "requested_budget_occupancy": {
+          "n": 249,
+          "mean": 0.44594154871083475,
+          "max": 0.9353233830845771
+        },
+        "generation": {
+          "n": 2326,
+          "output_tokens": 24811,
+          "prompt_tokens": 7357077
+        }
+      }
+    },
+    "checkpoint-125|reselect|loose": {
+      "policy": "checkpoint-125",
+      "strategy": "checkpoint-125",
+      "mode": "reselect",
+      "budget_tier": "loose",
+      "budget": 5628,
+      "budget_binding": true,
+      "metrics": {
+        "n_tasks": 249,
+        "n_steps": 2326,
+        "step_recall": {
+          "micro": {
+            "n": 2326,
+            "mean": 0.969232848693296
+          },
+          "task_macro": {
+            "n": 249,
+            "mean": 0.9690646113157371
+          }
+        },
+        "final_recall": {
+          "n": 249,
+          "mean": 0.9098539456973187
+        },
+        "evidence_loss": {
+          "n": 249,
+          "count": 145,
+          "rate": 0.5823293172690763,
+          "by_hop": {
+            "1": {
+              "n": 249,
+              "count": 69,
+              "evidence_n": 996,
+              "lost_evidence_count": 74,
+              "rate": 0.27710843373493976
+            },
+            "2": {
+              "n": 249,
+              "count": 87,
+              "evidence_n": 996,
+              "lost_evidence_count": 102,
+              "rate": 0.3493975903614458
+            },
+            "3": {
+              "n": 174,
+              "count": 30,
+              "evidence_n": 272,
+              "lost_evidence_count": 30,
+              "rate": 0.1724137931034483
+            },
+            "4": {
+              "n": 59,
+              "count": 5,
+              "evidence_n": 62,
+              "lost_evidence_count": 5,
+              "rate": 0.0847457627118644
+            }
+          },
+          "by_question_position": {
+            "1": {
+              "n": 249,
+              "count": 49,
+              "evidence_n": 584,
+              "lost_evidence_count": 51,
+              "rate": 0.19678714859437751
+            },
+            "2": {
+              "n": 249,
+              "count": 52,
+              "evidence_n": 578,
+              "lost_evidence_count": 58,
+              "rate": 0.20883534136546184
+            },
+            "3": {
+              "n": 249,
+              "count": 54,
+              "evidence_n": 584,
+              "lost_evidence_count": 58,
+              "rate": 0.21686746987951808
+            },
+            "4": {
+              "n": 249,
+              "count": 39,
+              "evidence_n": 580,
+              "lost_evidence_count": 44,
+              "rate": 0.1566265060240964
+            }
+          },
+          "by_mechanism": {
+            "never_kept": {
+              "n": 249,
+              "count": 133,
+              "evidence_n": 2326,
+              "lost_evidence_count": 185,
+              "rate": 0.5341365461847389
+            },
+            "dropped": {
+              "n": 249,
+              "count": 26,
+              "evidence_n": 2326,
+              "lost_evidence_count": 26,
+              "rate": 0.10441767068273092
+            }
+          }
+        },
+        "evidence_complete_questions": {
+          "n": 996,
+          "count": 802,
+          "rate": 0.8052208835341366
+        },
+        "occupancy": {
+          "n": 249,
+          "mean": 0.22347670711274376,
+          "max": 0.46766169154228854
+        },
+        "action_validity": {
+          "n": 2326,
+          "invalid_count": 2,
+          "over_budget_count": 0
+        },
+        "cost": {
+          "plain": {
+            "n": 249,
+            "mean": 6606.29718875502,
+            "relative_to_no_compress": 0.06298019504254673
+          },
+          "cached": {
+            "n": 249,
+            "mean": 1951.4425702811234,
+            "relative_to_no_compress": 0.06671925107788539
+          }
+        },
+        "invalid_outputs": {
+          "invalid_json": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "invalid_candidate_id": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          },
+          "append_drop": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "over_budget": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "any_invalid": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          }
+        },
+        "output_limit": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "requested_budget_occupancy": {
+          "n": 249,
+          "mean": 0.22347670711274376,
+          "max": 0.46766169154228854
+        },
+        "generation": {
+          "n": 2326,
+          "output_tokens": 24814,
+          "prompt_tokens": 7358883
+        }
+      }
+    },
+    "checkpoint-125|append|tight": {
+      "policy": "checkpoint-125",
+      "strategy": "checkpoint-125",
+      "mode": "append",
+      "budget_tier": "tight",
+      "budget": 1876,
+      "budget_binding": true,
+      "metrics": {
+        "n_tasks": 249,
+        "n_steps": 2326,
+        "step_recall": {
+          "micro": {
+            "n": 2326,
+            "mean": 0.9705560549606123
+          },
+          "task_macro": {
+            "n": 249,
+            "mean": 0.9705366686678296
+          }
+        },
+        "final_recall": {
+          "n": 249,
+          "mean": 0.9118670486140361
+        },
+        "evidence_loss": {
+          "n": 249,
+          "count": 142,
+          "rate": 0.570281124497992,
+          "by_hop": {
+            "1": {
+              "n": 249,
+              "count": 62,
+              "evidence_n": 996,
+              "lost_evidence_count": 65,
+              "rate": 0.24899598393574296
+            },
+            "2": {
+              "n": 249,
+              "count": 86,
+              "evidence_n": 996,
+              "lost_evidence_count": 99,
+              "rate": 0.3453815261044177
+            },
+            "3": {
+              "n": 174,
+              "count": 35,
+              "evidence_n": 272,
+              "lost_evidence_count": 35,
+              "rate": 0.20114942528735633
+            },
+            "4": {
+              "n": 59,
+              "count": 9,
+              "evidence_n": 62,
+              "lost_evidence_count": 9,
+              "rate": 0.15254237288135594
+            }
+          },
+          "by_question_position": {
+            "1": {
+              "n": 249,
+              "count": 41,
+              "evidence_n": 584,
+              "lost_evidence_count": 42,
+              "rate": 0.1646586345381526
+            },
+            "2": {
+              "n": 249,
+              "count": 51,
+              "evidence_n": 578,
+              "lost_evidence_count": 56,
+              "rate": 0.20481927710843373
+            },
+            "3": {
+              "n": 249,
+              "count": 51,
+              "evidence_n": 584,
+              "lost_evidence_count": 53,
+              "rate": 0.20481927710843373
+            },
+            "4": {
+              "n": 249,
+              "count": 46,
+              "evidence_n": 580,
+              "lost_evidence_count": 57,
+              "rate": 0.18473895582329317
+            }
+          },
+          "by_mechanism": {
+            "never_kept": {
+              "n": 249,
+              "count": 142,
+              "evidence_n": 2326,
+              "lost_evidence_count": 208,
+              "rate": 0.570281124497992
+            },
+            "dropped": {
+              "n": 249,
+              "count": 0,
+              "evidence_n": 2326,
+              "lost_evidence_count": 0,
+              "rate": 0.0
+            }
+          }
+        },
+        "evidence_complete_questions": {
+          "n": 996,
+          "count": 807,
+          "rate": 0.8102409638554217
+        },
+        "occupancy": {
+          "n": 249,
+          "mean": 0.6751440730940822,
+          "max": 0.994136460554371
+        },
+        "action_validity": {
+          "n": 2326,
+          "invalid_count": 17,
+          "over_budget_count": 0
+        },
+        "cost": {
+          "plain": {
+            "n": 249,
+            "mean": 6703.365461847389,
+            "relative_to_no_compress": 0.06390558162403545
+          },
+          "cached": {
+            "n": 249,
+            "mean": 1855.0526104417665,
+            "relative_to_no_compress": 0.06342370652543519
+          }
+        },
+        "invalid_outputs": {
+          "invalid_json": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "invalid_candidate_id": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          },
+          "append_drop": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "over_budget": {
+            "count": 15,
+            "n": 2326,
+            "rate": 0.006448839208942391
+          },
+          "any_invalid": {
+            "count": 17,
+            "n": 2326,
+            "rate": 0.007308684436801376
+          }
+        },
+        "output_limit": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "requested_budget_occupancy": {
+          "n": 249,
+          "mean": 0.6751440730940822,
+          "max": 0.994136460554371
+        },
+        "generation": {
+          "n": 2326,
+          "output_tokens": 24410,
+          "prompt_tokens": 7380947
+        }
+      }
+    },
+    "checkpoint-125|append|mid": {
+      "policy": "checkpoint-125",
+      "strategy": "checkpoint-125",
+      "mode": "append",
+      "budget_tier": "mid",
+      "budget": 2814,
+      "budget_binding": true,
+      "metrics": {
+        "n_tasks": 249,
+        "n_steps": 2326,
+        "step_recall": {
+          "micro": {
+            "n": 2326,
+            "mean": 0.9706964777364608
+          },
+          "task_macro": {
+            "n": 249,
+            "mean": 0.9707517256248546
+          }
+        },
+        "final_recall": {
+          "n": 249,
+          "mean": 0.9160230666254758
+        },
+        "evidence_loss": {
+          "n": 249,
+          "count": 141,
+          "rate": 0.5662650602409639,
+          "by_hop": {
+            "1": {
+              "n": 249,
+              "count": 64,
+              "evidence_n": 996,
+              "lost_evidence_count": 68,
+              "rate": 0.2570281124497992
+            },
+            "2": {
+              "n": 249,
+              "count": 83,
+              "evidence_n": 996,
+              "lost_evidence_count": 94,
+              "rate": 0.3333333333333333
+            },
+            "3": {
+              "n": 174,
+              "count": 31,
+              "evidence_n": 272,
+              "lost_evidence_count": 31,
+              "rate": 0.1781609195402299
+            },
+            "4": {
+              "n": 59,
+              "count": 5,
+              "evidence_n": 62,
+              "lost_evidence_count": 5,
+              "rate": 0.0847457627118644
+            }
+          },
+          "by_question_position": {
+            "1": {
+              "n": 249,
+              "count": 42,
+              "evidence_n": 584,
+              "lost_evidence_count": 43,
+              "rate": 0.1686746987951807
+            },
+            "2": {
+              "n": 249,
+              "count": 52,
+              "evidence_n": 578,
+              "lost_evidence_count": 58,
+              "rate": 0.20883534136546184
+            },
+            "3": {
+              "n": 249,
+              "count": 47,
+              "evidence_n": 584,
+              "lost_evidence_count": 49,
+              "rate": 0.18875502008032127
+            },
+            "4": {
+              "n": 249,
+              "count": 42,
+              "evidence_n": 580,
+              "lost_evidence_count": 48,
+              "rate": 0.1686746987951807
+            }
+          },
+          "by_mechanism": {
+            "never_kept": {
+              "n": 249,
+              "count": 141,
+              "evidence_n": 2326,
+              "lost_evidence_count": 198,
+              "rate": 0.5662650602409639
+            },
+            "dropped": {
+              "n": 249,
+              "count": 0,
+              "evidence_n": 2326,
+              "lost_evidence_count": 0,
+              "rate": 0.0
+            }
+          }
+        },
+        "evidence_complete_questions": {
+          "n": 996,
+          "count": 813,
+          "rate": 0.8162650602409639
+        },
+        "occupancy": {
+          "n": 249,
+          "mean": 0.45611586359653267,
+          "max": 0.9353233830845771
+        },
+        "action_validity": {
+          "n": 2326,
+          "invalid_count": 2,
+          "over_budget_count": 0
+        },
+        "cost": {
+          "plain": {
+            "n": 249,
+            "mean": 6707.056224899598,
+            "relative_to_no_compress": 0.06394076698888396
+          },
+          "cached": {
+            "n": 249,
+            "mean": 1875.5648594377499,
+            "relative_to_no_compress": 0.06412501432294725
+          }
+        },
+        "invalid_outputs": {
+          "invalid_json": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "invalid_candidate_id": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          },
+          "append_drop": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "over_budget": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "any_invalid": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          }
+        },
+        "output_limit": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "requested_budget_occupancy": {
+          "n": 249,
+          "mean": 0.45611586359653267,
+          "max": 0.9353233830845771
+        },
+        "generation": {
+          "n": 2326,
+          "output_tokens": 24396,
+          "prompt_tokens": 7376917
+        }
+      }
+    },
+    "checkpoint-125|append|loose": {
+      "policy": "checkpoint-125",
+      "strategy": "checkpoint-125",
+      "mode": "append",
+      "budget_tier": "loose",
+      "budget": 5628,
+      "budget_binding": true,
+      "metrics": {
+        "n_tasks": 249,
+        "n_steps": 2326,
+        "step_recall": {
+          "micro": {
+            "n": 2326,
+            "mean": 0.9710022004841441
+          },
+          "task_macro": {
+            "n": 249,
+            "mean": 0.9709678909113011
+          }
+        },
+        "final_recall": {
+          "n": 249,
+          "mean": 0.9163435404399256
+        },
+        "evidence_loss": {
+          "n": 249,
+          "count": 140,
+          "rate": 0.5622489959839357,
+          "by_hop": {
+            "1": {
+              "n": 249,
+              "count": 62,
+              "evidence_n": 996,
+              "lost_evidence_count": 66,
+              "rate": 0.24899598393574296
+            },
+            "2": {
+              "n": 249,
+              "count": 83,
+              "evidence_n": 996,
+              "lost_evidence_count": 96,
+              "rate": 0.3333333333333333
+            },
+            "3": {
+              "n": 174,
+              "count": 29,
+              "evidence_n": 272,
+              "lost_evidence_count": 29,
+              "rate": 0.16666666666666666
+            },
+            "4": {
+              "n": 59,
+              "count": 6,
+              "evidence_n": 62,
+              "lost_evidence_count": 6,
+              "rate": 0.1016949152542373
+            }
+          },
+          "by_question_position": {
+            "1": {
+              "n": 249,
+              "count": 40,
+              "evidence_n": 584,
+              "lost_evidence_count": 41,
+              "rate": 0.1606425702811245
+            },
+            "2": {
+              "n": 249,
+              "count": 52,
+              "evidence_n": 578,
+              "lost_evidence_count": 59,
+              "rate": 0.20883534136546184
+            },
+            "3": {
+              "n": 249,
+              "count": 47,
+              "evidence_n": 584,
+              "lost_evidence_count": 49,
+              "rate": 0.18875502008032127
+            },
+            "4": {
+              "n": 249,
+              "count": 40,
+              "evidence_n": 580,
+              "lost_evidence_count": 48,
+              "rate": 0.1606425702811245
+            }
+          },
+          "by_mechanism": {
+            "never_kept": {
+              "n": 249,
+              "count": 140,
+              "evidence_n": 2326,
+              "lost_evidence_count": 197,
+              "rate": 0.5622489959839357
+            },
+            "dropped": {
+              "n": 249,
+              "count": 0,
+              "evidence_n": 2326,
+              "lost_evidence_count": 0,
+              "rate": 0.0
+            }
+          }
+        },
+        "evidence_complete_questions": {
+          "n": 996,
+          "count": 817,
+          "rate": 0.820281124497992
+        },
+        "occupancy": {
+          "n": 249,
+          "mean": 0.22857670911078573,
+          "max": 0.46766169154228854
+        },
+        "action_validity": {
+          "n": 2326,
+          "invalid_count": 2,
+          "over_budget_count": 0
+        },
+        "cost": {
+          "plain": {
+            "n": 249,
+            "mean": 6735.361445783133,
+            "relative_to_no_compress": 0.06421061078807025
+          },
+          "cached": {
+            "n": 249,
+            "mean": 1880.4837349397578,
+            "relative_to_no_compress": 0.06429318923859033
+          }
+        },
+        "invalid_outputs": {
+          "invalid_json": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "invalid_candidate_id": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          },
+          "append_drop": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "over_budget": {
+            "count": 0,
+            "n": 2326,
+            "rate": 0.0
+          },
+          "any_invalid": {
+            "count": 2,
+            "n": 2326,
+            "rate": 0.0008598452278589854
+          }
+        },
+        "output_limit": {
+          "count": 0,
+          "n": 2326,
+          "rate": 0.0
+        },
+        "requested_budget_occupancy": {
+          "n": 249,
+          "mean": 0.22857670911078573,
+          "max": 0.46766169154228854
+        },
+        "generation": {
+          "n": 2326,
+          "output_tokens": 24402,
+          "prompt_tokens": 7383631
+        }
+      }
+    }
+  },
+  "combined": {
+    "n_tasks": 1494,
+    "n_steps": 13956,
+    "step_recall": {
+      "micro": {
+        "n": 13956,
+        "mean": 0.9696763989648755
+      },
+      "task_macro": {
+        "n": 1494,
+        "mean": 0.9695914200571109
+      }
+    },
+    "final_recall": {
+      "n": 1494,
+      "mean": 0.9112159594087356
+    },
+    "evidence_loss": {
+      "n": 1494,
+      "count": 864,
+      "rate": 0.5783132530120482,
+      "by_hop": {
+        "1": {
+          "n": 1494,
+          "count": 397,
+          "evidence_n": 5976,
+          "lost_evidence_count": 425,
+          "rate": 0.2657295850066934
+        },
+        "2": {
+          "n": 1494,
+          "count": 514,
+          "evidence_n": 5976,
+          "lost_evidence_count": 599,
+          "rate": 0.34404283801874164
+        },
+        "3": {
+          "n": 1044,
+          "count": 191,
+          "evidence_n": 1632,
+          "lost_evidence_count": 191,
+          "rate": 0.18295019157088122
+        },
+        "4": {
+          "n": 354,
+          "count": 37,
+          "evidence_n": 372,
+          "lost_evidence_count": 37,
+          "rate": 0.10451977401129943
+        }
+      },
+      "by_question_position": {
+        "1": {
+          "n": 1494,
+          "count": 275,
+          "evidence_n": 3504,
+          "lost_evidence_count": 284,
+          "rate": 0.18406961178045517
+        },
+        "2": {
+          "n": 1494,
+          "count": 310,
+          "evidence_n": 3468,
+          "lost_evidence_count": 346,
+          "rate": 0.2074966532797858
+        },
+        "3": {
+          "n": 1494,
+          "count": 306,
+          "evidence_n": 3504,
+          "lost_evidence_count": 325,
+          "rate": 0.20481927710843373
+        },
+        "4": {
+          "n": 1494,
+          "count": 252,
+          "evidence_n": 3480,
+          "lost_evidence_count": 297,
+          "rate": 0.1686746987951807
+        }
+      },
+      "by_mechanism": {
+        "never_kept": {
+          "n": 1494,
+          "count": 826,
+          "evidence_n": 13956,
+          "lost_evidence_count": 1173,
+          "rate": 0.5528781793842035
+        },
+        "dropped": {
+          "n": 1494,
+          "count": 78,
+          "evidence_n": 13956,
+          "lost_evidence_count": 79,
+          "rate": 0.05220883534136546
+        }
+      }
+    },
+    "evidence_complete_questions": {
+      "n": 5976,
+      "count": 4833,
+      "rate": 0.8087349397590361
+    },
+    "occupancy": {
+      "n": 1494,
+      "mean": 0.44836905071125593,
+      "max": 0.9984008528784648
+    },
+    "action_validity": {
+      "n": 13956,
+      "invalid_count": 40,
+      "over_budget_count": 0
+    },
+    "cost": {
+      "plain": {
+        "n": 1494,
+        "mean": 6652.061579651941,
+        "relative_to_no_compress": 0.06341648335691405
+      },
+      "cached": {
+        "n": 1494,
+        "mean": 1906.8095046854073,
+        "relative_to_no_compress": 0.06519325961126114
+      }
+    },
+    "invalid_outputs": {
+      "invalid_json": {
+        "count": 0,
+        "n": 13956,
+        "rate": 0.0
+      },
+      "invalid_candidate_id": {
+        "count": 12,
+        "n": 13956,
+        "rate": 0.0008598452278589854
+      },
+      "append_drop": {
+        "count": 0,
+        "n": 13956,
+        "rate": 0.0
+      },
+      "over_budget": {
+        "count": 28,
+        "n": 13956,
+        "rate": 0.002006305531670966
+      },
+      "any_invalid": {
+        "count": 40,
+        "n": 13956,
+        "rate": 0.002866150759529951
+      }
+    },
+    "output_limit": {
+      "count": 0,
+      "n": 13956,
+      "rate": 0.0
+    },
+    "requested_budget_occupancy": {
+      "n": 1494,
+      "mean": 0.44836905071125593,
+      "max": 0.9984008528784648
+    },
+    "generation": {
+      "n": 13956,
+      "output_tokens": 147648,
+      "prompt_tokens": 44209629
+    }
+  },
+  "checkpoint_step": 125,
+  "runtime": {
+    "elapsed_seconds": 1970.4949634489603,
+    "max_prompt_tokens": 7695,
+    "input_truncations": 0
+  },
+  "steps_artifact": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r4/checkpoint-125/steps.jsonl",
+    "bytes": 231506861,
+    "sha256": "396bad38be158abd78424ba6b347c5d3fd76610e872038c66a7e787776384b3f"
+  }
+}

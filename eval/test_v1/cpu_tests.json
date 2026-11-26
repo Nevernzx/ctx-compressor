@@ -1,0 +1,14 @@
+{
+  "tests": 857,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "matched_task18_close_tests": 849,
+  "elapsed_seconds": 14.885063791647553,
+  "xml_sha256": "7a6aed9e8a9bd6787906e9ac01d9f1aa39ba51b070be04db620f00ab22e16528",
+  "xml": "/root/userfolder/ctx-compressor/test_v1/cpu_suite_io_c7u2l/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/test_v1/cpu_suite_io_c7u2l/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-25T03:09:31.480725+00:00"
+}

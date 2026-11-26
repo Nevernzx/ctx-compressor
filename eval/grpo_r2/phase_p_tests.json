@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "tests": 691,
+  "passed": 691,
+  "legacy_tests_matched": 644,
+  "skipped": 0,
+  "errors": 0,
+  "failures": 0,
+  "gpu_cli_invocations": 0,
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/grpo_r2/tmp/phase_p_suite_7_ynyvdl/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/grpo_r2/tmp/phase_p_suite_7_ynyvdl/tests.xml",
+    "tests"
+  ],
+  "cuda_visible_devices": "",
+  "exit_code": 0,
+  "xml_sha256": "c28eba20400a8a0adaae1cdd0ecd7bbc0a5aa120e35be88b20b47fce78384d61",
+  "wall_seconds": 15.73418920300901,
+  "utc": "2026-11-22T12:26:40.190079+00:00",
+  "log": "/root/userfolder/ctx-compressor/grpo_r2/tmp/phase_p_suite_7_ynyvdl/pytest.log"
+}

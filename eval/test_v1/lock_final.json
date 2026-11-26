@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "first_use_task": 19,
+  "files": {
+    "/root/userfolder/ctx-compressor/data/test_dev_v1/test_tasks.jsonl": {
+      "sha256": "f2e1856acb54991badddab06ebea99bba942e1c51aaa429d69756751d0ffc71a",
+      "size": 2348597
+    },
+    "/root/userfolder/ctx-compressor/data/test_dev_v1/steps.jsonl": {
+      "sha256": "e285d284d4baed60b09bfc7cae73b469b4b1e0e0d966468116faa2315f41293b",
+      "size": 1924496
+    },
+    "/root/userfolder/ctx-compressor/data/test_dev_v1/excluded_ids.json": {
+      "sha256": "1d0e27ddb8f88c4d53374f3a1257fb265836fe79135c21629afeccdaa9915ad9",
+      "size": 17498
+    },
+    "/root/workplace/ctx-compressor/eval/test_dev_v1/exclusion_audit.json": {
+      "sha256": "aa114c1e677293bc9e30a4947b4c2ea3efb9c4074e6865bf473228a578edcc19",
+      "size": 4606
+    },
+    "/root/workplace/ctx-compressor/eval/test_dev_v1/structural_stats.json": {
+      "sha256": "70d0d86e2dd3412334248e1f456fee2f45f59ce1ac163da500fd2704463fc80a",
+      "size": 2271
+    }
+  },
+  "lock": {
+    "path": "/root/workplace/ctx-compressor/eval/test_dev_v1/LOCK.md",
+    "size": 1531,
+    "sha256": "a85aff80adb8c35bd6988dfefb3674f8e5f94fa0fcbd4dcc036ca872c037b77e"
+  },
+  "verified_utc": "2026-11-25T10:27:39.714233+00:00"
+}

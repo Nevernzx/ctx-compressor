@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "stage": "compiler-cpu-preflight",
+  "python": "/root/userfolder/ctx-compressor/envs/reader/bin/python",
+  "environment_script": {
+    "path": "/root/workplace/ctx-compressor/scripts/grpo_r2_environment.sh",
+    "sha256": "ca3d774ca5f1751679cb19646212c46648f7aff933fa78f1038460c11b9a58c0"
+  },
+  "CC": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-gcc",
+  "CXX": "/root/userfolder/ctx-compressor/toolchains/gcc13_20261118/envs/gcc/bin/x86_64-conda-linux-gnu-g++",
+  "TRITON_CACHE_DIR": "/root/userfolder/ctx-compressor/reranker_v1/runtime_cache/compiler-cpu-preflight/cache/triton",
+  "cache_root": "/root/userfolder/ctx-compressor/reranker_v1/runtime_cache/compiler-cpu-preflight/cache",
+  "ipc": {
+    "sample": "/root/userfolder/ctx-compressor/rt/r17/00000000-0000-0000-0000-000000000000",
+    "path_bytes": 75,
+    "uri_bytes": 81,
+    "limit_exclusive": 100
+  },
+  "cuda_visible_devices": "",
+  "compiled": {
+    "prefix": "/root/userfolder/ctx-compressor/envs/reader",
+    "torch": "2.8.0",
+    "vllm": "0.11.0",
+    "compile_and_load_passed": true
+  },
+  "gcc": "13.4.0"
+}

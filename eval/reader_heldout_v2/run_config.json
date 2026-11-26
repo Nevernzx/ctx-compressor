@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "pid": 3289478,
+  "started_utc": "2026-11-24T03:26:15.752464+00:00",
+  "parameters": {
+    "model": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+    "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-8B",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": true,
+    "seed": 20261117,
+    "disable_cascade_attn": true
+  },
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 48,
+    "seed": 20261117,
+    "enable_thinking": false,
+    "n": 1,
+    "system_messages": 0
+  },
+  "source_sha256": "a77c26c6c34b73dee47a2e0a8c48bdf8f506721158d17f54370523723089e6da",
+  "package_versions": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "bm25s": "0.3.16",
+    "scipy": "1.17.1"
+  },
+  "cuda_visible_devices": "1",
+  "cuda_device_order": "PCI_BUS_ID",
+  "before": {
+    "at_utc": "2026-11-24T03:26:15.755489+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940402667520,
+    "available_bytes": 14294548480
+  },
+  "input_provenance": {
+    "path": "/root/userfolder/ctx-compressor/reader_heldout_v2/input_preflight.json",
+    "sha256": "6529fd37af0bb728c3da04f62d112bc27cf2f30b780423ad7ca46f28b036179e",
+    "batch_size": 224
+  },
+  "automatic_retry": false,
+  "effective_disable_cascade_attn": true,
+  "effective_disable_cascade_attn_source": "llm_engine.vllm_config.model_config.disable_cascade_attn",
+  "sampling_params_repr": "SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0, top_p=1.0, top_k=0, min_p=0.0, seed=20261117, stop=[], stop_token_ids=[], bad_words=[], include_stop_str_in_output=False, ignore_eos=False, max_tokens=48, min_tokens=0, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, structured_outputs=None, extra_args=None)",
+  "smoke": {
+    "n": 40,
+    "raw_output_mismatches": 1
+  },
+  "inference_seconds": 3181.863483495079,
+  "ended_utc": "2026-11-24T04:20:32.409073+00:00",
+  "elapsed_seconds": 3256.653520652093,
+  "predictions": 55776,
+  "tasks": 249,
+  "engine_shutdown": true,
+  "peak_gpu1_mib": 42423,
+  "n_resource_samples": 1539,
+  "df_after_reader": {
+    "at_utc": "2026-11-24T04:20:32.412780+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940402745344,
+    "available_bytes": 14294470656
+  },
+  "predictions_sha256": "f18938579aa6c0fe19a60ffeb5fbdd23542a7bb8453276e4362edf7232146fb6",
+  "peak_observed_root_used_bytes": 940712751104,
+  "peak_observed_root_delta_bytes": 310153216,
+  "df_opening": {
+    "at_utc": "2026-11-24T03:13:02.446654+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940402597888,
+    "available_bytes": 14294618112
+  }
+}

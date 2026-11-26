@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "n_tasks": 451,
+  "metrics": {
+    "RR-fill": {
+      "path": "/root/userfolder/ctx-compressor/test_v1/rollouts/RR-fill/metrics.json",
+      "size": 31506,
+      "sha256": "87638720efdab54f9d119453b878d3e271bdb3d5e4482d022351829627be792d"
+    },
+    "RR-τ": {
+      "path": "/root/userfolder/ctx-compressor/test_v1/rollouts/RR-τ/metrics.json",
+      "size": 31755,
+      "sha256": "54deb26e757eb995b3fd9b63235a0839c32b49a6f77ff2843f7c0bd1f92f4992"
+    }
+  },
+  "tau": 0.5
+}

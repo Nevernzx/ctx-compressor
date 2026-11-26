@@ -1,0 +1,699 @@
+{
+  "strategy": "checkpoint-500",
+  "checkpoint_step": 500,
+  "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+  "adapter_sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf",
+  "heldout_reward_v3": {
+    "mu": 0.5,
+    "non_gold_price": 0.16,
+    "n_steps": 13956,
+    "reward_units_1_over_2000": -15188473,
+    "reward": {
+      "sum": -7594.2365,
+      "n": 13956,
+      "mean": -0.544155667813127
+    },
+    "n_lost": {
+      "sum": 1466,
+      "n": 13956,
+      "mean": 0.10504442533677272
+    },
+    "n_nongold_after": {
+      "sum": 7395,
+      "n": 13956,
+      "mean": 0.5298796216680998
+    },
+    "used_per_1000": {
+      "sum": 9810.073,
+      "n": 13956,
+      "mean": 0.7029287044998567
+    },
+    "invalid": {
+      "count": 40,
+      "n": 13956,
+      "rate": 0.002866150759529951
+    }
+  },
+  "final_context": {
+    "segments": {
+      "sum": 14048,
+      "n": 1494,
+      "mean": 9.402945113788487
+    },
+    "nongold": {
+      "sum": 1360,
+      "n": 1494,
+      "mean": 0.9103078982597055
+    }
+  },
+  "evidence_loss": {
+    "n": 1494,
+    "count": 862,
+    "rate": 0.5769745649263721,
+    "by_hop": {
+      "1": {
+        "n": 1494,
+        "count": 414,
+        "evidence_n": 5976,
+        "lost_evidence_count": 443,
+        "rate": 0.27710843373493976
+      },
+      "2": {
+        "n": 1494,
+        "count": 519,
+        "evidence_n": 5976,
+        "lost_evidence_count": 604,
+        "rate": 0.3473895582329317
+      },
+      "3": {
+        "n": 1044,
+        "count": 183,
+        "evidence_n": 1632,
+        "lost_evidence_count": 185,
+        "rate": 0.1752873563218391
+      },
+      "4": {
+        "n": 354,
+        "count": 36,
+        "evidence_n": 372,
+        "lost_evidence_count": 36,
+        "rate": 0.1016949152542373
+      }
+    },
+    "by_question_position": {
+      "1": {
+        "n": 1494,
+        "count": 273,
+        "evidence_n": 3504,
+        "lost_evidence_count": 283,
+        "rate": 0.1827309236947791
+      },
+      "2": {
+        "n": 1494,
+        "count": 305,
+        "evidence_n": 3468,
+        "lost_evidence_count": 344,
+        "rate": 0.20414993306559573
+      },
+      "3": {
+        "n": 1494,
+        "count": 312,
+        "evidence_n": 3504,
+        "lost_evidence_count": 332,
+        "rate": 0.20883534136546184
+      },
+      "4": {
+        "n": 1494,
+        "count": 259,
+        "evidence_n": 3480,
+        "lost_evidence_count": 309,
+        "rate": 0.17336010709504684
+      }
+    },
+    "by_mechanism": {
+      "never_kept": {
+        "n": 1494,
+        "count": 827,
+        "evidence_n": 13956,
+        "lost_evidence_count": 1194,
+        "rate": 0.5535475234270415
+      },
+      "dropped": {
+        "n": 1494,
+        "count": 71,
+        "evidence_n": 13956,
+        "lost_evidence_count": 74,
+        "rate": 0.04752342704149933
+      }
+    }
+  },
+  "final_recall": {
+    "n": 1494,
+    "mean": 0.9102929069294582
+  },
+  "run": {
+    "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-500/run.json",
+    "bytes": 7421,
+    "sha256": "d30788440e0cf1d0ff2b60bbeefe231806dae1cd3fcd73d4891907b0be5b1417"
+  },
+  "n_candidates": 4,
+  "candidates": [
+    {
+      "strategy": "checkpoint-125",
+      "checkpoint_step": 125,
+      "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-125",
+      "adapter_sha256": "015d8f4c29c880a8e2cedbf599041dbacb2761635857a4e52bd9a7ca0d85610c",
+      "heldout_reward_v3": {
+        "mu": 0.5,
+        "non_gold_price": 0.16,
+        "n_steps": 13956,
+        "reward_units_1_over_2000": -15523540,
+        "reward": {
+          "sum": -7761.77,
+          "n": 13956,
+          "mean": -0.5561600745199198
+        },
+        "n_lost": {
+          "sum": 1453,
+          "n": 13956,
+          "mean": 0.10411292633992549
+        },
+        "n_nongold_after": {
+          "sum": 8123,
+          "n": 13956,
+          "mean": 0.5820435654915449
+        },
+        "used_per_1000": {
+          "sum": 9938.18,
+          "n": 13956,
+          "mean": 0.7121080538836343
+        },
+        "invalid": {
+          "count": 40,
+          "n": 13956,
+          "rate": 0.002866150759529951
+        }
+      },
+      "final_context": {
+        "segments": {
+          "sum": 14167,
+          "n": 1494,
+          "mean": 9.482597054886211
+        },
+        "nongold": {
+          "sum": 1463,
+          "n": 1494,
+          "mean": 0.9792503346720214
+        }
+      },
+      "evidence_loss": {
+        "n": 1494,
+        "count": 864,
+        "rate": 0.5783132530120482,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 397,
+            "evidence_n": 5976,
+            "lost_evidence_count": 425,
+            "rate": 0.2657295850066934
+          },
+          "2": {
+            "n": 1494,
+            "count": 514,
+            "evidence_n": 5976,
+            "lost_evidence_count": 599,
+            "rate": 0.34404283801874164
+          },
+          "3": {
+            "n": 1044,
+            "count": 191,
+            "evidence_n": 1632,
+            "lost_evidence_count": 191,
+            "rate": 0.18295019157088122
+          },
+          "4": {
+            "n": 354,
+            "count": 37,
+            "evidence_n": 372,
+            "lost_evidence_count": 37,
+            "rate": 0.10451977401129943
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 275,
+            "evidence_n": 3504,
+            "lost_evidence_count": 284,
+            "rate": 0.18406961178045517
+          },
+          "2": {
+            "n": 1494,
+            "count": 310,
+            "evidence_n": 3468,
+            "lost_evidence_count": 346,
+            "rate": 0.2074966532797858
+          },
+          "3": {
+            "n": 1494,
+            "count": 306,
+            "evidence_n": 3504,
+            "lost_evidence_count": 325,
+            "rate": 0.20481927710843373
+          },
+          "4": {
+            "n": 1494,
+            "count": 252,
+            "evidence_n": 3480,
+            "lost_evidence_count": 297,
+            "rate": 0.1686746987951807
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 826,
+            "evidence_n": 13956,
+            "lost_evidence_count": 1173,
+            "rate": 0.5528781793842035
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 78,
+            "evidence_n": 13956,
+            "lost_evidence_count": 79,
+            "rate": 0.05220883534136546
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.9112159594087356
+      },
+      "run": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-125/run.json",
+        "bytes": 7417,
+        "sha256": "9cf57674384c8bc489f8d85cda4c3491520084a03d2939dc7d11001b8d9d2736"
+      }
+    },
+    {
+      "strategy": "checkpoint-250",
+      "checkpoint_step": 250,
+      "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-250",
+      "adapter_sha256": "7911c44e12401cdcd919909c2c742065b81d6d06a9aaa157d24de0394d160db7",
+      "heldout_reward_v3": {
+        "mu": 0.5,
+        "non_gold_price": 0.16,
+        "n_steps": 13956,
+        "reward_units_1_over_2000": -15340570,
+        "reward": {
+          "sum": -7670.285,
+          "n": 13956,
+          "mean": -0.5496048294640298
+        },
+        "n_lost": {
+          "sum": 1492,
+          "n": 13956,
+          "mean": 0.10690742333046718
+        },
+        "n_nongold_after": {
+          "sum": 7596,
+          "n": 13956,
+          "mean": 0.5442820292347378
+        },
+        "used_per_1000": {
+          "sum": 9835.85,
+          "n": 13956,
+          "mean": 0.7047757237030668
+        },
+        "invalid": {
+          "count": 45,
+          "n": 13956,
+          "rate": 0.0032244196044711954
+        }
+      },
+      "final_context": {
+        "segments": {
+          "sum": 14037,
+          "n": 1494,
+          "mean": 9.39558232931727
+        },
+        "nongold": {
+          "sum": 1381,
+          "n": 1494,
+          "mean": 0.9243641231593038
+        }
+      },
+      "evidence_loss": {
+        "n": 1494,
+        "count": 878,
+        "rate": 0.5876840696117804,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 426,
+            "evidence_n": 5976,
+            "lost_evidence_count": 455,
+            "rate": 0.285140562248996
+          },
+          "2": {
+            "n": 1494,
+            "count": 528,
+            "evidence_n": 5976,
+            "lost_evidence_count": 612,
+            "rate": 0.3534136546184739
+          },
+          "3": {
+            "n": 1044,
+            "count": 195,
+            "evidence_n": 1632,
+            "lost_evidence_count": 195,
+            "rate": 0.1867816091954023
+          },
+          "4": {
+            "n": 354,
+            "count": 38,
+            "evidence_n": 372,
+            "lost_evidence_count": 38,
+            "rate": 0.10734463276836158
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 274,
+            "evidence_n": 3504,
+            "lost_evidence_count": 292,
+            "rate": 0.18340026773761714
+          },
+          "2": {
+            "n": 1494,
+            "count": 314,
+            "evidence_n": 3468,
+            "lost_evidence_count": 356,
+            "rate": 0.2101740294511379
+          },
+          "3": {
+            "n": 1494,
+            "count": 312,
+            "evidence_n": 3504,
+            "lost_evidence_count": 333,
+            "rate": 0.20883534136546184
+          },
+          "4": {
+            "n": 1494,
+            "count": 268,
+            "evidence_n": 3480,
+            "lost_evidence_count": 319,
+            "rate": 0.17938420348058903
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 822,
+            "evidence_n": 13956,
+            "lost_evidence_count": 1170,
+            "rate": 0.5502008032128514
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 121,
+            "evidence_n": 13956,
+            "lost_evidence_count": 130,
+            "rate": 0.08099062918340026
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.9079918482528972
+      },
+      "run": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-250/run.json",
+        "bytes": 7414,
+        "sha256": "823f12add486c2407477c221cbc66f8adc12a1d1c4a57dce012524b2bfed774e"
+      }
+    },
+    {
+      "strategy": "checkpoint-375",
+      "checkpoint_step": 375,
+      "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-375",
+      "adapter_sha256": "a32e432087aa732b368a89d33d526337875782186b4f41771a8cf3504bfe7c54",
+      "heldout_reward_v3": {
+        "mu": 0.5,
+        "non_gold_price": 0.16,
+        "n_steps": 13956,
+        "reward_units_1_over_2000": -15193670,
+        "reward": {
+          "sum": -7596.835,
+          "n": 13956,
+          "mean": -0.5443418601318429
+        },
+        "n_lost": {
+          "sum": 1477,
+          "n": 13956,
+          "mean": 0.10583261679564344
+        },
+        "n_nongold_after": {
+          "sum": 7373,
+          "n": 13956,
+          "mean": 0.5283032387503582
+        },
+        "used_per_1000": {
+          "sum": 9798.31,
+          "n": 13956,
+          "mean": 0.7020858412152479
+        },
+        "invalid": {
+          "count": 41,
+          "n": 13956,
+          "rate": 0.0029378045285182
+        }
+      },
+      "final_context": {
+        "segments": {
+          "sum": 14034,
+          "n": 1494,
+          "mean": 9.393574297188755
+        },
+        "nongold": {
+          "sum": 1355,
+          "n": 1494,
+          "mean": 0.9069611780455153
+        }
+      },
+      "evidence_loss": {
+        "n": 1494,
+        "count": 862,
+        "rate": 0.5769745649263721,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 413,
+            "evidence_n": 5976,
+            "lost_evidence_count": 439,
+            "rate": 0.27643908969210174
+          },
+          "2": {
+            "n": 1494,
+            "count": 521,
+            "evidence_n": 5976,
+            "lost_evidence_count": 615,
+            "rate": 0.34872824631860777
+          },
+          "3": {
+            "n": 1044,
+            "count": 184,
+            "evidence_n": 1632,
+            "lost_evidence_count": 187,
+            "rate": 0.17624521072796934
+          },
+          "4": {
+            "n": 354,
+            "count": 36,
+            "evidence_n": 372,
+            "lost_evidence_count": 36,
+            "rate": 0.1016949152542373
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 286,
+            "evidence_n": 3504,
+            "lost_evidence_count": 296,
+            "rate": 0.19143239625167335
+          },
+          "2": {
+            "n": 1494,
+            "count": 307,
+            "evidence_n": 3468,
+            "lost_evidence_count": 347,
+            "rate": 0.20548862115127176
+          },
+          "3": {
+            "n": 1494,
+            "count": 315,
+            "evidence_n": 3504,
+            "lost_evidence_count": 331,
+            "rate": 0.21084337349397592
+          },
+          "4": {
+            "n": 1494,
+            "count": 253,
+            "evidence_n": 3480,
+            "lost_evidence_count": 303,
+            "rate": 0.16934404283801874
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 831,
+            "evidence_n": 13956,
+            "lost_evidence_count": 1209,
+            "rate": 0.5562248995983936
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 65,
+            "evidence_n": 13956,
+            "lost_evidence_count": 68,
+            "rate": 0.04350736278447122
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.9097119636276313
+      },
+      "run": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-375/run.json",
+        "bytes": 7418,
+        "sha256": "e90ae934187b3013ac116983abe6616ec26deaeb49722b779158a2f13a707711"
+      }
+    },
+    {
+      "strategy": "checkpoint-500",
+      "checkpoint_step": 500,
+      "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+      "adapter_sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf",
+      "heldout_reward_v3": {
+        "mu": 0.5,
+        "non_gold_price": 0.16,
+        "n_steps": 13956,
+        "reward_units_1_over_2000": -15188473,
+        "reward": {
+          "sum": -7594.2365,
+          "n": 13956,
+          "mean": -0.544155667813127
+        },
+        "n_lost": {
+          "sum": 1466,
+          "n": 13956,
+          "mean": 0.10504442533677272
+        },
+        "n_nongold_after": {
+          "sum": 7395,
+          "n": 13956,
+          "mean": 0.5298796216680998
+        },
+        "used_per_1000": {
+          "sum": 9810.073,
+          "n": 13956,
+          "mean": 0.7029287044998567
+        },
+        "invalid": {
+          "count": 40,
+          "n": 13956,
+          "rate": 0.002866150759529951
+        }
+      },
+      "final_context": {
+        "segments": {
+          "sum": 14048,
+          "n": 1494,
+          "mean": 9.402945113788487
+        },
+        "nongold": {
+          "sum": 1360,
+          "n": 1494,
+          "mean": 0.9103078982597055
+        }
+      },
+      "evidence_loss": {
+        "n": 1494,
+        "count": 862,
+        "rate": 0.5769745649263721,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 414,
+            "evidence_n": 5976,
+            "lost_evidence_count": 443,
+            "rate": 0.27710843373493976
+          },
+          "2": {
+            "n": 1494,
+            "count": 519,
+            "evidence_n": 5976,
+            "lost_evidence_count": 604,
+            "rate": 0.3473895582329317
+          },
+          "3": {
+            "n": 1044,
+            "count": 183,
+            "evidence_n": 1632,
+            "lost_evidence_count": 185,
+            "rate": 0.1752873563218391
+          },
+          "4": {
+            "n": 354,
+            "count": 36,
+            "evidence_n": 372,
+            "lost_evidence_count": 36,
+            "rate": 0.1016949152542373
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 273,
+            "evidence_n": 3504,
+            "lost_evidence_count": 283,
+            "rate": 0.1827309236947791
+          },
+          "2": {
+            "n": 1494,
+            "count": 305,
+            "evidence_n": 3468,
+            "lost_evidence_count": 344,
+            "rate": 0.20414993306559573
+          },
+          "3": {
+            "n": 1494,
+            "count": 312,
+            "evidence_n": 3504,
+            "lost_evidence_count": 332,
+            "rate": 0.20883534136546184
+          },
+          "4": {
+            "n": 1494,
+            "count": 259,
+            "evidence_n": 3480,
+            "lost_evidence_count": 309,
+            "rate": 0.17336010709504684
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 827,
+            "evidence_n": 13956,
+            "lost_evidence_count": 1194,
+            "rate": 0.5535475234270415
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 71,
+            "evidence_n": 13956,
+            "lost_evidence_count": 74,
+            "rate": 0.04752342704149933
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.9102929069294582
+      },
+      "run": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-500/run.json",
+        "bytes": 7421,
+        "sha256": "d30788440e0cf1d0ff2b60bbeefe231806dae1cd3fcd73d4891907b0be5b1417"
+      }
+    }
+  ],
+  "rule": "Maximum pooled held-out reward v3, then fewer loss trajectories, then earliest step."
+}

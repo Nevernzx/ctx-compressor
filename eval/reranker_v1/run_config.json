@@ -1,0 +1,363 @@
+{
+  "status": "complete",
+  "task": 17,
+  "reader_shares_v16_protocol": true,
+  "template": {
+    "source": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B#using-transformers",
+    "prefix": "<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n",
+    "body": "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {document}",
+    "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "instruction": "Given the four questions of a multi-hop QA task, judge whether the passage is a supporting fact needed to answer any of them.",
+    "yes_token_id": 9693,
+    "no_token_id": 2152,
+    "pad_token_id": 151643,
+    "padding_side": "left",
+    "max_pair_tokens": 512,
+    "truncation": "right end of document only",
+    "score": "last_position_logit_yes_minus_no",
+    "probability": "sigmoid"
+  },
+  "stages": {
+    "S1": {
+      "stage": "complete",
+      "utc": "2026-11-24T21:44:26.047181+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3414528,
+      "outputs": {
+        "training.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/training.json",
+          "size": 60413,
+          "sha256": "ff21c119168668dd10b70f6358ce0c8a265f919aec2b7187accce9bbb055a95f"
+        }
+      },
+      "wall_seconds": 11139.92667969875,
+      "root_before": {
+        "at_utc": "2026-11-24T18:38:46.116870+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940438900736,
+        "available_bytes": 14258315264
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T21:44:26.046523+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940439412736,
+        "available_bytes": 14257803264
+      }
+    },
+    "prepare_val": {
+      "stage": "complete",
+      "utc": "2026-11-24T21:45:26.200121+00:00",
+      "gpu": false,
+      "exit_code": 0,
+      "child_pid": 3435583,
+      "outputs": {
+        "input_preflight.json": {
+          "path": "/root/userfolder/ctx-compressor/reranker_v1/val_reader/input_preflight.json",
+          "size": 372828,
+          "sha256": "ef53a0da8c808588b5fa264e93941f10dfe40eb92db78dad01869872d124c7be"
+        }
+      },
+      "wall_seconds": 60.13950044196099,
+      "root_before": {
+        "at_utc": "2026-11-24T21:44:26.057324+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940439412736,
+        "available_bytes": 14257803264
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T21:45:26.200039+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940439412736,
+        "available_bytes": 14257803264
+      }
+    },
+    "reader_val": {
+      "stage": "complete",
+      "utc": "2026-11-24T22:07:15.632616+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3436891,
+      "outputs": {
+        "val_reader_config.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/val_reader_config.json",
+          "size": 2924,
+          "sha256": "21324d836d3cc3f339f89797784a0d1af21dc1b3a372fe7bae4b54ba3dba9372"
+        }
+      },
+      "wall_seconds": 709.1660821069963,
+      "root_before": {
+        "at_utc": "2026-11-24T21:55:26.463334+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940439437312,
+        "available_bytes": 14257778688
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T22:07:15.632536+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940439465984,
+        "available_bytes": 14257750016
+      }
+    },
+    "tau": {
+      "stage": "complete",
+      "utc": "2026-11-24T22:07:20.316538+00:00",
+      "gpu": false,
+      "exit_code": 0,
+      "child_pid": 3439378,
+      "outputs": {
+        "tau_selection.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/tau_selection.json",
+          "size": 21863,
+          "sha256": "b0894fddee602ace289c3d069a6750c70aa0a6fad0a5095d52669bc3d587d132"
+        }
+      },
+      "wall_seconds": 4.628494992852211,
+      "root_before": {
+        "at_utc": "2026-11-24T22:07:15.685286+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940439465984,
+        "available_bytes": 14257750016
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T22:07:20.316457+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940439490560,
+        "available_bytes": 14257725440
+      }
+    },
+    "prepare_heldout": {
+      "stage": "complete",
+      "utc": "2026-11-24T22:19:11.241820+00:00",
+      "gpu": false,
+      "exit_code": 0,
+      "child_pid": 3441391,
+      "outputs": {
+        "input_preflight.json": {
+          "path": "/root/userfolder/ctx-compressor/reranker_v1/heldout_reader/input_preflight.json",
+          "size": 300176,
+          "sha256": "001626d67364ccb8db179b8dc4345501c79809f54b950e1c63a3f1cc02244786"
+        }
+      },
+      "wall_seconds": 146.7868938362226,
+      "root_before": {
+        "at_utc": "2026-11-24T22:16:44.451796+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940441268224,
+        "available_bytes": 14255947776
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T22:19:11.241752+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940441296896,
+        "available_bytes": 14255919104
+      }
+    },
+    "reader_heldout": {
+      "stage": "complete",
+      "utc": "2026-11-24T23:00:44.819821+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3442866,
+      "outputs": {
+        "heldout_reader_config.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/heldout_reader_config.json",
+          "size": 2993,
+          "sha256": "4dadac14894c070c6f418aca5ce3bea927123d39fa1664bad6fbf004d6b69d12"
+        }
+      },
+      "wall_seconds": 1893.4410651251674,
+      "root_before": {
+        "at_utc": "2026-11-24T22:29:11.375198+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940441804800,
+        "available_bytes": 14255411200
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T23:00:44.819703+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940441903104,
+        "available_bytes": 14255312896
+      }
+    },
+    "latency_eager": {
+      "stage": "complete",
+      "utc": "2026-11-24T23:33:41.723487+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3453439,
+      "outputs": {
+        "latency_eager.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/latency_eager.json",
+          "size": 2502,
+          "sha256": "5e7fa7cb04e10a5dcb5763ab0639b9f18641cb92bd316bfc7b8a492074811b31"
+        }
+      },
+      "wall_seconds": 276.5927196079865,
+      "root_before": {
+        "at_utc": "2026-11-24T23:29:05.127271+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442001408,
+        "available_bytes": 14255214592
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T23:33:41.723418+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442030080,
+        "available_bytes": 14255185920
+      }
+    },
+    "latency_graph": {
+      "stage": "complete",
+      "utc": "2026-11-24T23:47:29.665628+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3455554,
+      "outputs": {
+        "latency_graph.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/latency_graph.json",
+          "size": 2507,
+          "sha256": "fa296267d2c97379ae1aad15b2df7c10dd9a8e624c7512c3e6b7a3933dcd0a7a"
+        }
+      },
+      "wall_seconds": 227.7845292291604,
+      "root_before": {
+        "at_utc": "2026-11-24T23:43:41.878153+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442054656,
+        "available_bytes": 14255161344
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T23:47:29.665552+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442058752,
+        "available_bytes": 14255157248
+      }
+    },
+    "latency_reranker": {
+      "stage": "complete",
+      "utc": "2026-11-24T23:59:18.560944+00:00",
+      "gpu": true,
+      "exit_code": 0,
+      "child_pid": 3458114,
+      "outputs": {
+        "latency_reranker.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/latency_reranker.json",
+          "size": 2129,
+          "sha256": "df05e5d0caea2446585f761be70b71c84db23b08b4e2337f3bd8faf7d331d7a5"
+        }
+      },
+      "wall_seconds": 108.53343179216608,
+      "root_before": {
+        "at_utc": "2026-11-24T23:57:30.024378+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442079232,
+        "available_bytes": 14255136768
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T23:59:18.560874+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442083328,
+        "available_bytes": 14255132672
+      }
+    },
+    "compare": {
+      "stage": "complete",
+      "utc": "2026-11-24T23:59:32.519958+00:00",
+      "gpu": false,
+      "exit_code": 0,
+      "child_pid": 3458347,
+      "outputs": {
+        "heldout_comparison.json": {
+          "path": "/root/workplace/ctx-compressor/eval/reranker_v1/heldout_comparison.json",
+          "size": 344332,
+          "sha256": "dc1f3e2a18a8aa18adb331695e49119584d1cb1e7eceac41eb82d900ef93b209"
+        }
+      },
+      "wall_seconds": 13.947922540362924,
+      "root_before": {
+        "at_utc": "2026-11-24T23:59:18.568508+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442083328,
+        "available_bytes": 14255132672
+      },
+      "root_after": {
+        "at_utc": "2026-11-24T23:59:32.519889+00:00",
+        "size_bytes": 1005867986944,
+        "used_bytes": 940442431488,
+        "available_bytes": 14254784512
+      }
+    }
+  },
+  "phase_p_artifacts": {
+    "download": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/model_card.json",
+      "size": 3832,
+      "sha256": "19bcbd77070e3105931d304cae1a1fbeaaca39e14ea392c9c850357303a8846c"
+    },
+    "split": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/data_preflight.json",
+      "size": 56749,
+      "sha256": "fce57594bf8f7423b8caf0e48d0cccf359f7ab7a85aad2d8045757a5c5eecba6"
+    },
+    "tokens": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/tokenization.json",
+      "size": 4486,
+      "sha256": "50a75a7d0da6069c5c92b7d1259a570924f8d425ec59034ff90293441305a917"
+    },
+    "bm25": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/bm25_action_check.json",
+      "size": 528,
+      "sha256": "b6611531893c6b8d6e95e51e1ddaae8777940afa12ff7aa7cdd5dc715e77c30b"
+    },
+    "latency_inputs": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/latency_input.json",
+      "size": 1045,
+      "sha256": "ff8908ce0e27f79ea73923e5ee17796399b95eca5d916c03e7ce4b22fc30cc7a"
+    },
+    "cpu_tests": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/cpu_tests.json",
+      "size": 486,
+      "sha256": "85d3508a7e5f6188aeb75eb5ac176add452bb9c9d3e9991f69330d6ae4dbd15e"
+    },
+    "weight_cpu_smoke": {
+      "path": "/root/workplace/ctx-compressor/eval/reranker_v1/weight_smoke.json",
+      "size": 870,
+      "sha256": "32544e509232fd3f6804225ca5503d171342ae5d87c0b2081baca1a4bf10aae3"
+    }
+  },
+  "shared_lock": "/root/userfolder/ctx-compressor/rt/gpu1_t17_t18.lock",
+  "GPU": 1,
+  "requested_order": "after_task18",
+  "automatic_retry": false,
+  "owned_small_root_bytes": 569203,
+  "root_start": {
+    "at_utc": "2026-11-24T23:19:04.816115+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940441985024,
+    "available_bytes": 14255230976
+  },
+  "root_end": {
+    "at_utc": "2026-11-24T23:59:32.529919+00:00",
+    "size_bytes": 1005867986944,
+    "used_bytes": 940442431488,
+    "available_bytes": 14254784512
+  },
+  "resume": {
+    "path": "/root/workplace/ctx-compressor/eval/reranker_v1/latency_resume.json",
+    "size": 20791,
+    "sha256": "e2e26bee59ff68373c2e2d0ef30557a480e40c7344444fd6363e9cece5bb363c"
+  },
+  "compressor_environments": {
+    "eager": {
+      "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/latency-eager/receipt_environment.json",
+      "size": 947,
+      "sha256": "9a575076cf646232e67a21413f6c757248b1a84130c9cb298c8fd27b062ddd66"
+    },
+    "graph": {
+      "path": "/root/userfolder/ctx-compressor/reranker_v1/stages/latency-graph/receipt_environment.json",
+      "size": 947,
+      "sha256": "ebfaef0a9e7cc149d62ff7f813303ca693a1a090c121f6a39d880f65256c9ef8"
+    }
+  }
+}

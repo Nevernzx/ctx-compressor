@@ -1,0 +1,14 @@
+{
+  "tests": 884,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "status": "passed",
+  "matched_queue_tests": 882,
+  "elapsed_seconds": 15.177262281998992,
+  "xml_sha256": "f1e2413db856b9fabaf0514f4f7e0ee6ad8c9d8e0ce343851787f146f1fe06fd",
+  "xml": "/root/userfolder/ctx-compressor/test_v1/cpu_suite_88_s_i6o/tests.xml",
+  "log": "/root/userfolder/ctx-compressor/test_v1/cpu_suite_88_s_i6o/pytest.log",
+  "cpu_guard_events": [],
+  "utc": "2026-11-25T10:25:35.250528+00:00"
+}

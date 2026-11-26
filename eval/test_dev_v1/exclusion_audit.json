@@ -1,0 +1,125 @@
+{
+  "scanned_files": 758,
+  "scanned_bytes": 11659914554,
+  "files_with_dev_ids": {
+    "/root/workplace/ctx-compressor/README.md": {
+      "n_distinct_dev_ids": 15,
+      "extra_ids_vs_task01_acceptance_and_02": [
+        "2hop__252311_366220",
+        "2hop__259228_793698",
+        "2hop__460946_294723",
+        "2hop__701895_752697",
+        "3hop1__103881_443779_52195",
+        "3hop1__105126_443779_52195",
+        "3hop1__105767_443779_52195",
+        "3hop1__454441_55349_651302",
+        "4hop1__93963_170667_443779_52195",
+        "4hop3__857_846_326964_7713",
+        "4hop3__857_846_613770_7713",
+        "4hop3__862_846_613770_7713"
+      ]
+    },
+    "/root/workplace/ctx-compressor/data/feasibility/final_contexts.jsonl": {
+      "n_distinct_dev_ids": 600,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/workplace/ctx-compressor/data/feasibility/tasks_dev150.jsonl": {
+      "n_distinct_dev_ids": 600,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/workplace/ctx-compressor/data/reader/predictions.jsonl": {
+      "n_distinct_dev_ids": 600,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/workplace/ctx-compressor/data/reader/smoke_predictions.jsonl": {
+      "n_distinct_dev_ids": 20,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/workplace/ctx-compressor/data/traj/acceptance.jsonl": {
+      "n_distinct_dev_ids": 12,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/workplace/ctx-compressor/eval/acceptance/acceptance_checks.json": {
+      "n_distinct_dev_ids": 12,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/workplace/ctx-compressor/eval/acceptance/data_audit.json": {
+      "n_distinct_dev_ids": 15,
+      "extra_ids_vs_task01_acceptance_and_02": [
+        "2hop__252311_366220",
+        "2hop__259228_793698",
+        "2hop__460946_294723",
+        "2hop__701895_752697",
+        "3hop1__103881_443779_52195",
+        "3hop1__105126_443779_52195",
+        "3hop1__105767_443779_52195",
+        "3hop1__454441_55349_651302",
+        "4hop1__93963_170667_443779_52195",
+        "4hop3__857_846_326964_7713",
+        "4hop3__857_846_613770_7713",
+        "4hop3__862_846_613770_7713"
+      ]
+    },
+    "/root/workplace/ctx-compressor/eval/acceptance/data_audit.md": {
+      "n_distinct_dev_ids": 15,
+      "extra_ids_vs_task01_acceptance_and_02": [
+        "2hop__252311_366220",
+        "2hop__259228_793698",
+        "2hop__460946_294723",
+        "2hop__701895_752697",
+        "3hop1__103881_443779_52195",
+        "3hop1__105126_443779_52195",
+        "3hop1__105767_443779_52195",
+        "3hop1__454441_55349_651302",
+        "4hop1__93963_170667_443779_52195",
+        "4hop3__857_846_326964_7713",
+        "4hop3__857_846_613770_7713",
+        "4hop3__862_846_613770_7713"
+      ]
+    },
+    "/root/workplace/ctx-compressor/eval/acceptance/traj_samples.md": {
+      "n_distinct_dev_ids": 12,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/workplace/ctx-compressor/logs/acceptance.log": {
+      "n_distinct_dev_ids": 12,
+      "extra_ids_vs_task01_acceptance_and_02": []
+    },
+    "/root/userfolder/ctx-compressor/hedge_v2/history/task08_at_start/README.md": {
+      "n_distinct_dev_ids": 15,
+      "extra_ids_vs_task01_acceptance_and_02": [
+        "2hop__252311_366220",
+        "2hop__259228_793698",
+        "2hop__460946_294723",
+        "2hop__701895_752697",
+        "3hop1__103881_443779_52195",
+        "3hop1__105126_443779_52195",
+        "3hop1__105767_443779_52195",
+        "3hop1__454441_55349_651302",
+        "4hop1__93963_170667_443779_52195",
+        "4hop3__857_846_326964_7713",
+        "4hop3__857_846_613770_7713",
+        "4hop3__862_846_613770_7713"
+      ]
+    }
+  },
+  "rule": "Exact raw dev question IDs found in previous experiment records, logs, reports, and saved examples; scan includes external training and held-out data and outputs. Raw source corpus membership alone is not prior question use. Training and dev raw question ID sets were checked disjoint.",
+  "task01_acceptance": 12,
+  "task02_feasibility": 600,
+  "acceptance_and_feasibility_intersection": 12,
+  "additional_ids": [
+    "2hop__252311_366220",
+    "2hop__259228_793698",
+    "2hop__460946_294723",
+    "2hop__701895_752697",
+    "3hop1__103881_443779_52195",
+    "3hop1__105126_443779_52195",
+    "3hop1__105767_443779_52195",
+    "3hop1__454441_55349_651302",
+    "4hop1__93963_170667_443779_52195",
+    "4hop3__857_846_326964_7713",
+    "4hop3__857_846_613770_7713",
+    "4hop3__862_846_613770_7713"
+  ],
+  "union": 612
+}

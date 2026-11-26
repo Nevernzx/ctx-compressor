@@ -1,0 +1,89 @@
+{
+  "kind": "compressor",
+  "engine": {
+    "model": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "tokenizer": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+    "trust_remote_code": false,
+    "dtype": "bfloat16",
+    "max_model_len": 40960,
+    "gpu_memory_utilization": 0.7,
+    "tensor_parallel_size": 1,
+    "enable_prefix_caching": true,
+    "enable_chunked_prefill": true,
+    "max_num_seqs": 16,
+    "max_num_batched_tokens": 8192,
+    "enforce_eager": false,
+    "enable_lora": true,
+    "max_lora_rank": 16,
+    "max_loras": 1,
+    "max_cpu_loras": 5,
+    "seed": 20261118
+  },
+  "adapter": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125/adapter_model.safetensors",
+    "bytes": 69782384,
+    "sha256": "84612222c59733d2652dba101c526f448f3f9ea525ce80696489f4a2ebf05886"
+  },
+  "sampling": {
+    "temperature": 0,
+    "max_tokens": 256,
+    "seed": 20261118
+  },
+  "n_states": 300,
+  "warmup_n": 20,
+  "payloads_pretokenized": true,
+  "versions": {
+    "torch": "2.8.0",
+    "vllm": "0.11.0"
+  },
+  "status": "complete",
+  "load_wall_seconds": 119.742388329003,
+  "sequential_seconds": {
+    "n": 300,
+    "min": 0.06569724529981613,
+    "max": 0.5952578601427376,
+    "mean": 0.17143432943771283,
+    "p50": 0.16783827799372375,
+    "p90": 0.2236451471224428
+  },
+  "prompt_tokens": {
+    "n": 300,
+    "min": 1725,
+    "max": 6790,
+    "mean": 3184.09,
+    "p50": 3046.0,
+    "p90": 4257.6
+  },
+  "output_tokens": {
+    "n": 300,
+    "min": 9,
+    "max": 18,
+    "mean": 11.243333333333334,
+    "p50": 11.0,
+    "p90": 15.0
+  },
+  "submitted_together": {
+    "n_states": 300,
+    "wall_seconds": 37.18798979092389,
+    "steps_per_second": 8.067120639933542
+  },
+  "per_state": {
+    "n": 300,
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/latency/graph/per_state.jsonl",
+    "size": 65256,
+    "sha256": "6d07724009e174fbe85a525a1940da8b375f54d13dde8879f06db1b0021dfffe"
+  },
+  "engine_shutdown": true,
+  "state_selection": {
+    "n": 300,
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/data/latency_states.jsonl",
+    "size": 4467567,
+    "sha256": "def775be771a2cc318bc20bcae52f293343c58cbe36f58bf831d64beda59423e"
+  },
+  "gpu0_background": {
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/latency/graph/gpu0_background.jsonl",
+    "size": 784,
+    "sha256": "b2b6b836f326e3613923af4727571a07d880ab3e7a416770aa7a0a11b42b1b55"
+  },
+  "gpu0_role": "read-only context for latency; separate job on same machine"
+}

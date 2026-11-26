@@ -1,0 +1,20 @@
+{
+  "status": "preserved_pretest_failure",
+  "episodes": 0,
+  "old_status": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main/status.json",
+    "size": 3652,
+    "sha256": "18815a673593e2f3ad1dead60e6ae7aea5d0099cb5a4bf61f16a2f8c8355f56a"
+  },
+  "old_log": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/main/logs/main.log",
+    "size": 10029,
+    "sha256": "05aa6872502fa7085ac40e529354d7914b8b04ea41fdfb9a617d7a41f3a4015b"
+  },
+  "old_preflight": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/main/preflight.json",
+    "size": 9120,
+    "sha256": "aefbb8c3e25de6896ccf0ca7ceb3c16b74531f7939b870d9463f6cfc9644f958"
+  },
+  "fix": "Use the installed vLLM worker extension and invoke methods by name."
+}

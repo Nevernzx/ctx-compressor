@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "scope": "任务14 C",
+  "input_preflight": "/root/userfolder/ctx-compressor/reader_heldout_v2/deepseek_compressor/input_preflight/preflight.json",
+  "input_preflight_sha256": "425f8dca6cc7eba52a3f9722f14b5b8d13aa3d55db800521cf5db5252d0b690e",
+  "inference": {
+    "predictions_sha256": "13e0812b9bb7d8b62490846d67044873516cba125d8e0de1093278a9a8999467",
+    "run_config_sha256": "43bc86e107d3737739937d1dc3d5fd09736be31d69f095d84a0a5006785386ea",
+    "effective_disable_cascade_attn": true,
+    "effective_value_source": "llm_engine.vllm_config.model_config.disable_cascade_attn",
+    "path": "/root/userfolder/ctx-compressor/reader_heldout_v2/deepseek_compressor/predictions.jsonl",
+    "n": 240
+  },
+  "F_sources": {
+    "/root/workplace/ctx-compressor/eval/deepseek_api/TASK14_SHA256SUMS": "8f92bfe4ac3013c0fd0918525dbfc2abb883a33743fd04aabe79679464ec4193",
+    "/root/userfolder/ctx-compressor/deepseek_api/full/status.json": "343f0bc88e8fd8744b6f58bfc4e4a1b65ed2575022ae7ae98b6383f15c815341",
+    "/root/userfolder/ctx-compressor/deepseek_api/full/predictions.jsonl": "d6073589cb6424b05679f6777440e7492d0badf46963006bce76889e8ac00b61",
+    "/root/workplace/ctx-compressor/eval/deepseek_api/deepseek_api_results.json": "9aee1e19c80ee79f59c8d7143cab75b16cc9c5a8bf691a44156c6ebd8757784d"
+  },
+  "scores": {
+    "combined": {
+      "DeepSeek": {
+        "n": 240,
+        "f1": 0.5176306863071569,
+        "em": 0.44583333333333336
+      },
+      "Qwen3-8B": {
+        "n": 240,
+        "f1": 0.4254542949334616,
+        "em": 0.3333333333333333
+      },
+      "paired_deepseek_minus_qwen": {
+        "n": 240,
+        "left_scores": {
+          "n": 240,
+          "f1": 0.5176306863071569,
+          "em": 0.44583333333333336
+        },
+        "right_scores": {
+          "n": 240,
+          "f1": 0.4254542949334616,
+          "em": 0.3333333333333333
+        },
+        "f1_counts": {
+          "left_higher": 50,
+          "equal": 165,
+          "right_higher": 25
+        },
+        "em_matrix_correct_then_incorrect": [
+          [
+            70,
+            37
+          ],
+          [
+            10,
+            123
+          ]
+        ],
+        "f1_difference_pp": 9.217639137369533,
+        "em_difference_pp": 11.250000000000004
+      }
+    },
+    "reselect": {
+      "DeepSeek": {
+        "n": 120,
+        "f1": 0.4638400161929574,
+        "em": 0.4
+      },
+      "Qwen3-8B": {
+        "n": 120,
+        "f1": 0.39587882796216134,
+        "em": 0.2833333333333333
+      },
+      "paired_deepseek_minus_qwen": {
+        "n": 120,
+        "left_scores": {
+          "n": 120,
+          "f1": 0.4638400161929574,
+          "em": 0.4
+        },
+        "right_scores": {
+          "n": 120,
+          "f1": 0.39587882796216134,
+          "em": 0.2833333333333333
+        },
+        "f1_counts": {
+          "left_higher": 26,
+          "equal": 78,
+          "right_higher": 16
+        },
+        "em_matrix_correct_then_incorrect": [
+          [
+            28,
+            20
+          ],
+          [
+            6,
+            66
+          ]
+        ],
+        "f1_difference_pp": 6.796118823079605,
+        "em_difference_pp": 11.66666666666667
+      }
+    },
+    "append": {
+      "DeepSeek": {
+        "n": 120,
+        "f1": 0.5714213564213565,
+        "em": 0.49166666666666664
+      },
+      "Qwen3-8B": {
+        "n": 120,
+        "f1": 0.4550297619047619,
+        "em": 0.38333333333333336
+      },
+      "paired_deepseek_minus_qwen": {
+        "n": 120,
+        "left_scores": {
+          "n": 120,
+          "f1": 0.5714213564213565,
+          "em": 0.49166666666666664
+        },
+        "right_scores": {
+          "n": 120,
+          "f1": 0.4550297619047619,
+          "em": 0.38333333333333336
+        },
+        "f1_counts": {
+          "left_higher": 24,
+          "equal": 87,
+          "right_higher": 9
+        },
+        "em_matrix_correct_then_incorrect": [
+          [
+            42,
+            17
+          ],
+          [
+            4,
+            57
+          ]
+        ],
+        "f1_difference_pp": 11.63915945165946,
+        "em_difference_pp": 10.833333333333329
+      }
+    }
+  }
+}

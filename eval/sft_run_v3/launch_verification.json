@@ -1,0 +1,72 @@
+{
+  "status": "running",
+  "stage": "C",
+  "verified_utc": "2026-11-21T15:16:06.449182+00:00",
+  "pipeline": {
+    "pid": 2378893,
+    "ppid": 1,
+    "sid": 2378893,
+    "tty_nr": 0,
+    "cmdline": [
+      "/root/userfolder/ctx-compressor/envs/grpo/bin/python",
+      "-B",
+      "-u",
+      "scripts/run_sft_v3_pipeline.py"
+    ]
+  },
+  "stage_process": {
+    "pid": 2378915,
+    "ppid": 2378893,
+    "sid": 2378893,
+    "tty_nr": 0,
+    "cmdline": [
+      "/root/userfolder/ctx-compressor/envs/grpo/bin/python",
+      "-B",
+      "-u",
+      "/root/workplace/ctx-compressor/scripts/rollout_dagger_v3.py",
+      "run"
+    ]
+  },
+  "gpu_processes_this_session": [
+    {
+      "pid": 2379110,
+      "ppid": 2378915,
+      "sid": 2378893,
+      "tty_nr": 0,
+      "cmdline": [
+        "VLLM::EngineCore"
+      ],
+      "gpu_memory_mib": 34706
+    }
+  ],
+  "gpu1": {
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 35087,
+    "utilization_pct": 98
+  },
+  "last_resource_monitor": {
+    "utc": "2026-11-21T15:15:55.520281+00:00",
+    "stage": "C",
+    "pid": 2378915,
+    "alive": true,
+    "nonfinite": false,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 35087,
+    "utilization_pct": 100,
+    "external_free_bytes": 717049671680,
+    "overlay_free_bytes": 16828071936
+  },
+  "monitor_samples": 5,
+  "steps_bytes_at_check": 0,
+  "formal_capture_bytes_at_check": {},
+  "status_path": "/root/userfolder/ctx-compressor/dagger_v3/pipeline_status.json",
+  "log": "/root/userfolder/ctx-compressor/dagger_v3/logs/C.log",
+  "interactive_inputs": {
+    "path": "/root/workplace/ctx-compressor/eval/sft_run_v3/launch_inputs.json",
+    "bytes": 6654,
+    "sha256": "be887a88b7961d8cb386317298c476f234445ebe880a50ebdf628c78544ef2cb"
+  }
+}

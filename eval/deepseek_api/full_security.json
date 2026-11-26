@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "matches": 0,
+  "source_scan": {
+    "files": 112,
+    "bytes": 9810069,
+    "matches": 0
+  },
+  "source_and_report_scan": {
+    "files": 115,
+    "bytes": 9933726,
+    "matches": 0
+  },
+  "scope": "Task 14 program, test receipts, API archives, ledger, balance receipts and all three full reports."
+}

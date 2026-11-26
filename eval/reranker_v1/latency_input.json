@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "source": {
+    "path": "/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/checkpoint-125/steps.jsonl",
+    "sha256": "057746aca748d0bf3809a81c48d863c0cffb168d934face3b0e379d031f16274"
+  },
+  "r2_run": {
+    "path": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-125/run.json",
+    "sha256": "7362b1d802b2219b562d6538efe54ca71acadac7906da561761229925bacd557"
+  },
+  "sample_seed": 20261129,
+  "selection_order": [
+    [
+      "reselect",
+      "tight"
+    ],
+    [
+      "reselect",
+      "mid"
+    ],
+    [
+      "reselect",
+      "loose"
+    ],
+    [
+      "append",
+      "tight"
+    ],
+    [
+      "append",
+      "mid"
+    ],
+    [
+      "append",
+      "loose"
+    ]
+  ],
+  "states": {
+    "n": 300,
+    "path": "/root/userfolder/ctx-compressor/reranker_v1/data/latency_states.jsonl",
+    "size": 4467567,
+    "sha256": "def775be771a2cc318bc20bcae52f293343c58cbe36f58bf831d64beda59423e"
+  },
+  "n_per_cell": 50,
+  "warmup_rule": "first 20 selected states repeated as warmups before timing all 300"
+}

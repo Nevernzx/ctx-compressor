@@ -1,0 +1,73 @@
+{
+  "split": "MuSiQue-Ans dev",
+  "seed": 20261122,
+  "budgets": {
+    "tight": 1876,
+    "mid": 2814,
+    "loose": 5628
+  },
+  "source_questions": 2417,
+  "dev_corpus_paragraphs": 21100,
+  "excluded_questions": 612,
+  "remaining_before_grouping": 1805,
+  "dropped_remainder_ids": [
+    "3hop1__398232_326948_59893"
+  ],
+  "tasks": 451,
+  "questions": 1804,
+  "steps": 4771,
+  "hop_distribution_questions": {
+    "2": 942,
+    "3": 561,
+    "4": 301
+  },
+  "natural_retrieval_hit": {
+    "hits": 4330,
+    "n": 4771,
+    "rate": 0.9075665478935234
+  },
+  "per_task_unique_gold_token_p90": {
+    "value": 1850.0,
+    "n_tasks": 451,
+    "task02_reference": 1875.6,
+    "task02_n_tasks": 150,
+    "delta": -25.6
+  },
+  "gold_overlap": {
+    "denominator": "distinct test gold (title, original paragraph_text) across all locked tasks, counted once per pair; compare strings verbatim, including case and whitespace",
+    "train_corpus": {
+      "hits": 574,
+      "n": 2155,
+      "rate": 0.26635730858468676
+    },
+    "sft_v2_gold_any_training_pool_row": {
+      "hits": 0,
+      "n": 2155,
+      "rate": 0.0
+    },
+    "sft_v2_gold_any_optimized_row": {
+      "hits": 0,
+      "n": 2155,
+      "rate": 0.0
+    },
+    "full_sft_v2_training_pool_rows": 88562,
+    "actually_optimized_unique_rows": 20000,
+    "gold_lookup": "row meta (task,mode,step) -> matching Task 06 train rollout state -> state.gold mapped via pid_by_lid -> Task 04 train corpus; held-out rows excluded"
+  },
+  "reproduction_task02": {
+    "task_count": 150,
+    "distinct_steps": 1594,
+    "historical_rows": 30286,
+    "configs_per_step": 19,
+    "rebuilt_tasks_byte_identical": true,
+    "tasks_sha256": "630d2986e72ad3008b973f48bd87ea775d4c9a76a8bf6ed9760fe80cd4e66b53",
+    "historical_steps_sha256": "bb9959e46b188cf2637f10a770537574bf450573bdafeebf0d89d49cef03104c",
+    "step_comparison": "All configs: (task,step,question_index,hop_index,gold,returned); returned is ordered full retrieval; historical new is the fresh subset after removing retained candidates. Other retrieval fields are covered by byte-identical task JSONL; policy outputs were not recomputed."
+  },
+  "package_versions": {
+    "numpy": "2.2.6",
+    "bm25s": "0.3.16",
+    "tokenizers": "0.22.2",
+    "scipy": "1.17.1"
+  }
+}

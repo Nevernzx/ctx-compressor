@@ -1,0 +1,462 @@
+{
+  "strategy": "checkpoint-3000",
+  "checkpoint_step": 3000,
+  "path": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints/checkpoint-3000",
+  "adapter_sha256": "97c85137ad8531ef79c26cdb049630ac10ef88650c937f98ae8cf013a08820a5",
+  "evidence_loss": {
+    "n": 1494,
+    "count": 886,
+    "rate": 0.5930388219544847,
+    "by_hop": {
+      "1": {
+        "n": 1494,
+        "count": 420,
+        "evidence_n": 5976,
+        "lost_evidence_count": 448,
+        "rate": 0.28112449799196787
+      },
+      "2": {
+        "n": 1494,
+        "count": 542,
+        "evidence_n": 5976,
+        "lost_evidence_count": 644,
+        "rate": 0.3627844712182062
+      },
+      "3": {
+        "n": 1044,
+        "count": 212,
+        "evidence_n": 1632,
+        "lost_evidence_count": 218,
+        "rate": 0.20306513409961685
+      },
+      "4": {
+        "n": 354,
+        "count": 41,
+        "evidence_n": 372,
+        "lost_evidence_count": 41,
+        "rate": 0.11581920903954802
+      }
+    },
+    "by_question_position": {
+      "1": {
+        "n": 1494,
+        "count": 282,
+        "evidence_n": 3504,
+        "lost_evidence_count": 317,
+        "rate": 0.18875502008032127
+      },
+      "2": {
+        "n": 1494,
+        "count": 326,
+        "evidence_n": 3468,
+        "lost_evidence_count": 378,
+        "rate": 0.2182061579651941
+      },
+      "3": {
+        "n": 1494,
+        "count": 328,
+        "evidence_n": 3504,
+        "lost_evidence_count": 353,
+        "rate": 0.21954484605087016
+      },
+      "4": {
+        "n": 1494,
+        "count": 264,
+        "evidence_n": 3480,
+        "lost_evidence_count": 303,
+        "rate": 0.17670682730923695
+      }
+    },
+    "by_mechanism": {
+      "never_kept": {
+        "n": 1494,
+        "count": 782,
+        "evidence_n": 13956,
+        "lost_evidence_count": 1084,
+        "rate": 0.5234270414993306
+      },
+      "dropped": {
+        "n": 1494,
+        "count": 226,
+        "evidence_n": 13956,
+        "lost_evidence_count": 267,
+        "rate": 0.15127175368139223
+      }
+    }
+  },
+  "final_recall": {
+    "n": 1494,
+    "mean": 0.9045633193223597
+  },
+  "rule": "lowest pooled evidence-loss rate, highest pooled final recall, earliest step",
+  "n_checkpoints": 4,
+  "n_trajectories_per_checkpoint": 1494,
+  "eval_loss_used": false,
+  "candidates": [
+    {
+      "strategy": "checkpoint-1000",
+      "checkpoint_step": 1000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoint_archive/checkpoint-1000",
+      "adapter_sha256": "2a98879490682618ae1f21f952afe3f13db8874b11ad433a29df43c6b9ce6e65",
+      "evidence_loss": {
+        "n": 1494,
+        "count": 1164,
+        "rate": 0.7791164658634538,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 523,
+            "evidence_n": 5976,
+            "lost_evidence_count": 605,
+            "rate": 0.3500669344042838
+          },
+          "2": {
+            "n": 1494,
+            "count": 957,
+            "evidence_n": 5976,
+            "lost_evidence_count": 1346,
+            "rate": 0.6405622489959839
+          },
+          "3": {
+            "n": 1044,
+            "count": 388,
+            "evidence_n": 1632,
+            "lost_evidence_count": 423,
+            "rate": 0.3716475095785441
+          },
+          "4": {
+            "n": 354,
+            "count": 88,
+            "evidence_n": 372,
+            "lost_evidence_count": 88,
+            "rate": 0.24858757062146894
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 426,
+            "evidence_n": 3504,
+            "lost_evidence_count": 520,
+            "rate": 0.285140562248996
+          },
+          "2": {
+            "n": 1494,
+            "count": 509,
+            "evidence_n": 3468,
+            "lost_evidence_count": 589,
+            "rate": 0.34069611780455156
+          },
+          "3": {
+            "n": 1494,
+            "count": 573,
+            "evidence_n": 3504,
+            "lost_evidence_count": 743,
+            "rate": 0.38353413654618473
+          },
+          "4": {
+            "n": 1494,
+            "count": 492,
+            "evidence_n": 3480,
+            "lost_evidence_count": 610,
+            "rate": 0.3293172690763052
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 1118,
+            "evidence_n": 13956,
+            "lost_evidence_count": 2150,
+            "rate": 0.7483266398929049
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 204,
+            "evidence_n": 13956,
+            "lost_evidence_count": 312,
+            "rate": 0.13654618473895583
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.8272257769747765
+      }
+    },
+    {
+      "strategy": "checkpoint-2000",
+      "checkpoint_step": 2000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints/checkpoint-2000",
+      "adapter_sha256": "85310ec3e153aadbde834ef93bc5a874e2b729f29f25a41dd22e6757164447bb",
+      "evidence_loss": {
+        "n": 1494,
+        "count": 1020,
+        "rate": 0.6827309236947792,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 481,
+            "evidence_n": 5976,
+            "lost_evidence_count": 512,
+            "rate": 0.321954484605087
+          },
+          "2": {
+            "n": 1494,
+            "count": 714,
+            "evidence_n": 5976,
+            "lost_evidence_count": 917,
+            "rate": 0.4779116465863454
+          },
+          "3": {
+            "n": 1044,
+            "count": 272,
+            "evidence_n": 1632,
+            "lost_evidence_count": 278,
+            "rate": 0.26053639846743293
+          },
+          "4": {
+            "n": 354,
+            "count": 78,
+            "evidence_n": 372,
+            "lost_evidence_count": 80,
+            "rate": 0.22033898305084745
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 361,
+            "evidence_n": 3504,
+            "lost_evidence_count": 402,
+            "rate": 0.24163319946452477
+          },
+          "2": {
+            "n": 1494,
+            "count": 405,
+            "evidence_n": 3468,
+            "lost_evidence_count": 487,
+            "rate": 0.2710843373493976
+          },
+          "3": {
+            "n": 1494,
+            "count": 403,
+            "evidence_n": 3504,
+            "lost_evidence_count": 502,
+            "rate": 0.2697456492637216
+          },
+          "4": {
+            "n": 1494,
+            "count": 348,
+            "evidence_n": 3480,
+            "lost_evidence_count": 396,
+            "rate": 0.23293172690763053
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 970,
+            "evidence_n": 13956,
+            "lost_evidence_count": 1582,
+            "rate": 0.6492637215528781
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 164,
+            "evidence_n": 13956,
+            "lost_evidence_count": 205,
+            "rate": 0.10977242302543508
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.8732602905795723
+      }
+    },
+    {
+      "strategy": "checkpoint-3000",
+      "checkpoint_step": 3000,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints/checkpoint-3000",
+      "adapter_sha256": "97c85137ad8531ef79c26cdb049630ac10ef88650c937f98ae8cf013a08820a5",
+      "evidence_loss": {
+        "n": 1494,
+        "count": 886,
+        "rate": 0.5930388219544847,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 420,
+            "evidence_n": 5976,
+            "lost_evidence_count": 448,
+            "rate": 0.28112449799196787
+          },
+          "2": {
+            "n": 1494,
+            "count": 542,
+            "evidence_n": 5976,
+            "lost_evidence_count": 644,
+            "rate": 0.3627844712182062
+          },
+          "3": {
+            "n": 1044,
+            "count": 212,
+            "evidence_n": 1632,
+            "lost_evidence_count": 218,
+            "rate": 0.20306513409961685
+          },
+          "4": {
+            "n": 354,
+            "count": 41,
+            "evidence_n": 372,
+            "lost_evidence_count": 41,
+            "rate": 0.11581920903954802
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 282,
+            "evidence_n": 3504,
+            "lost_evidence_count": 317,
+            "rate": 0.18875502008032127
+          },
+          "2": {
+            "n": 1494,
+            "count": 326,
+            "evidence_n": 3468,
+            "lost_evidence_count": 378,
+            "rate": 0.2182061579651941
+          },
+          "3": {
+            "n": 1494,
+            "count": 328,
+            "evidence_n": 3504,
+            "lost_evidence_count": 353,
+            "rate": 0.21954484605087016
+          },
+          "4": {
+            "n": 1494,
+            "count": 264,
+            "evidence_n": 3480,
+            "lost_evidence_count": 303,
+            "rate": 0.17670682730923695
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 782,
+            "evidence_n": 13956,
+            "lost_evidence_count": 1084,
+            "rate": 0.5234270414993306
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 226,
+            "evidence_n": 13956,
+            "lost_evidence_count": 267,
+            "rate": 0.15127175368139223
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.9045633193223597
+      }
+    },
+    {
+      "strategy": "checkpoint-3750",
+      "checkpoint_step": 3750,
+      "path": "/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints/checkpoint-3750",
+      "adapter_sha256": "0eedbcbf094620fd9c13b4949cc6c4788a4a46266a6cbcee76d0f3dc8ca74064",
+      "evidence_loss": {
+        "n": 1494,
+        "count": 920,
+        "rate": 0.6157965194109772,
+        "by_hop": {
+          "1": {
+            "n": 1494,
+            "count": 465,
+            "evidence_n": 5976,
+            "lost_evidence_count": 494,
+            "rate": 0.3112449799196787
+          },
+          "2": {
+            "n": 1494,
+            "count": 545,
+            "evidence_n": 5976,
+            "lost_evidence_count": 648,
+            "rate": 0.3647925033467202
+          },
+          "3": {
+            "n": 1044,
+            "count": 208,
+            "evidence_n": 1632,
+            "lost_evidence_count": 212,
+            "rate": 0.19923371647509577
+          },
+          "4": {
+            "n": 354,
+            "count": 35,
+            "evidence_n": 372,
+            "lost_evidence_count": 35,
+            "rate": 0.09887005649717515
+          }
+        },
+        "by_question_position": {
+          "1": {
+            "n": 1494,
+            "count": 301,
+            "evidence_n": 3504,
+            "lost_evidence_count": 323,
+            "rate": 0.20147255689424365
+          },
+          "2": {
+            "n": 1494,
+            "count": 319,
+            "evidence_n": 3468,
+            "lost_evidence_count": 373,
+            "rate": 0.21352074966532797
+          },
+          "3": {
+            "n": 1494,
+            "count": 333,
+            "evidence_n": 3504,
+            "lost_evidence_count": 364,
+            "rate": 0.22289156626506024
+          },
+          "4": {
+            "n": 1494,
+            "count": 289,
+            "evidence_n": 3480,
+            "lost_evidence_count": 329,
+            "rate": 0.1934404283801874
+          }
+        },
+        "by_mechanism": {
+          "never_kept": {
+            "n": 1494,
+            "count": 859,
+            "evidence_n": 13956,
+            "lost_evidence_count": 1206,
+            "rate": 0.5749665327978581
+          },
+          "dropped": {
+            "n": 1494,
+            "count": 159,
+            "evidence_n": 13956,
+            "lost_evidence_count": 183,
+            "rate": 0.10642570281124498
+          }
+        }
+      },
+      "final_recall": {
+        "n": 1494,
+        "mean": 0.9014842717151996
+      }
+    }
+  ],
+  "heldout_sha256": "5a6c8ce2c2c738ff2a0e3a15e95d43e8b6ecde7806d7104e5472cf74dddaafac"
+}

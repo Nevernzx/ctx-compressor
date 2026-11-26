@@ -1,0 +1,344 @@
+{
+  "status": "passed",
+  "pipeline_status": {
+    "path": "/root/userfolder/ctx-compressor/grpo_r2/pipeline_status.json",
+    "bytes": 20423,
+    "sha256": "b140f27f6507623e1ea0725813a68f8f19c6d3dc01ef017373e03c9b97fa5ef5"
+  },
+  "controller_pid": 3036932,
+  "controller_exited": true,
+  "started_utc": "2026-11-22T17:56:22.487195+00:00",
+  "ended_utc": "2026-11-23T06:37:32.878616+00:00",
+  "automatic_retry": false,
+  "selected_checkpoint": {
+    "strategy": "checkpoint-125",
+    "path": "/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125",
+    "checkpoint_step": 125,
+    "n_candidates": 4,
+    "evidence_loss": {
+      "n": 1494,
+      "count": 714,
+      "rate": 0.4779116465863454,
+      "by_hop": {
+        "1": {
+          "n": 1494,
+          "count": 346,
+          "evidence_n": 5976,
+          "lost_evidence_count": 377,
+          "rate": 0.23159303882195448
+        },
+        "2": {
+          "n": 1494,
+          "count": 421,
+          "evidence_n": 5976,
+          "lost_evidence_count": 482,
+          "rate": 0.2817938420348059
+        },
+        "3": {
+          "n": 1044,
+          "count": 142,
+          "evidence_n": 1632,
+          "lost_evidence_count": 146,
+          "rate": 0.1360153256704981
+        },
+        "4": {
+          "n": 354,
+          "count": 45,
+          "evidence_n": 372,
+          "lost_evidence_count": 45,
+          "rate": 0.1271186440677966
+        }
+      },
+      "by_question_position": {
+        "1": {
+          "n": 1494,
+          "count": 218,
+          "evidence_n": 3504,
+          "lost_evidence_count": 236,
+          "rate": 0.1459170013386881
+        },
+        "2": {
+          "n": 1494,
+          "count": 246,
+          "evidence_n": 3468,
+          "lost_evidence_count": 265,
+          "rate": 0.1646586345381526
+        },
+        "3": {
+          "n": 1494,
+          "count": 245,
+          "evidence_n": 3504,
+          "lost_evidence_count": 265,
+          "rate": 0.1639892904953146
+        },
+        "4": {
+          "n": 1494,
+          "count": 228,
+          "evidence_n": 3480,
+          "lost_evidence_count": 284,
+          "rate": 0.15261044176706828
+        }
+      },
+      "by_mechanism": {
+        "never_kept": {
+          "n": 1494,
+          "count": 582,
+          "evidence_n": 13956,
+          "lost_evidence_count": 814,
+          "rate": 0.3895582329317269
+        },
+        "dropped": {
+          "n": 1494,
+          "count": 201,
+          "evidence_n": 13956,
+          "lost_evidence_count": 236,
+          "rate": 0.13453815261044177
+        }
+      }
+    },
+    "final_recall": {
+      "n": 1494,
+      "mean": 0.9265694869610578
+    },
+    "adapter_sha256": "84612222c59733d2652dba101c526f448f3f9ea525ce80696489f4a2ebf05886",
+    "rule": "Lowest pooled loss, highest pooled final recall, earliest optimizer step (GRPO only)."
+  },
+  "stages": [
+    {
+      "stage": "F0",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/merged_start/run.json",
+        "bytes": 7136,
+        "sha256": "44ff761d81090bb7dcd3dc6dd7ae48a0d48482481c2b83e0105f50a9ad869cb5"
+      },
+      "started_utc": "2026-11-22T17:56:28.609487+00:00",
+      "ended_utc": "2026-11-22T18:38:08.316487+00:00",
+      "uses_gpu": true
+    },
+    {
+      "stage": "B",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/states/state_checks.json",
+        "bytes": 16545,
+        "sha256": "f92f6a520a1c3e4d57696908c4cea845c8551b2dd1eee72a7292cbe4325f8372"
+      },
+      "started_utc": "2026-11-22T18:38:08.527875+00:00",
+      "ended_utc": "2026-11-22T19:45:51.237389+00:00",
+      "uses_gpu": true
+    },
+    {
+      "stage": "C",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/filter/sampling_probe.json",
+        "bytes": 130484,
+        "sha256": "e2b9f6ceaa22db514c12be8ed3e0656a00d71356fccbdf8a37f06c73742c7dba"
+      },
+      "started_utc": "2026-11-22T19:45:52.016892+00:00",
+      "ended_utc": "2026-11-22T22:08:57.535986+00:00",
+      "uses_gpu": true
+    },
+    {
+      "stage": "D",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/data/dataset_stats.json",
+        "bytes": 1597,
+        "sha256": "33a499b92a5015277cf36bc66381f8876e0097c6a5594dc67bf25b1d50c748ee"
+      },
+      "started_utc": "2026-11-22T22:08:57.589161+00:00",
+      "ended_utc": "2026-11-22T22:09:33.520107+00:00",
+      "uses_gpu": false
+    },
+    {
+      "stage": "E",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r2/train/training_runtime.json",
+        "bytes": 215,
+        "sha256": "88b3870802df976f007d1d3600c162811a6d8ba9797871e3d0b7c09b2aed9f36"
+      },
+      "started_utc": "2026-11-22T22:09:33.566718+00:00",
+      "ended_utc": "2026-11-23T03:37:31.233112+00:00",
+      "uses_gpu": true
+    },
+    {
+      "stage": "E_check",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/training_checks.json",
+        "bytes": 14926,
+        "sha256": "302cc5d0e2254e4aeadc840bd49741f968da70b3aa49ef91a0be10eb13846a01"
+      },
+      "started_utc": "2026-11-23T03:37:31.237025+00:00",
+      "ended_utc": "2026-11-23T03:37:34.777728+00:00",
+      "uses_gpu": false
+    },
+    {
+      "stage": "F_checkpoint-125",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-125/run.json",
+        "bytes": 7416,
+        "sha256": "7362b1d802b2219b562d6538efe54ca71acadac7906da561761229925bacd557"
+      },
+      "started_utc": "2026-11-23T03:37:35.086086+00:00",
+      "ended_utc": "2026-11-23T04:22:43.690783+00:00",
+      "uses_gpu": true
+    },
+    {
+      "stage": "F_checkpoint-250",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-250/run.json",
+        "bytes": 7415,
+        "sha256": "d361d812edb67ba0c5d6c81c1ad6481b82d4bbd48b50351f6463bac7335f1dea"
+      },
+      "started_utc": "2026-11-23T04:22:43.909157+00:00",
+      "ended_utc": "2026-11-23T05:07:44.549689+00:00",
+      "uses_gpu": true
+    },
+    {
+      "stage": "F_checkpoint-375",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-375/run.json",
+        "bytes": 7416,
+        "sha256": "4b3f9420a846327f8fb4544df160dd8de60bdeb2616f17608375aae8d662f635"
+      },
+      "started_utc": "2026-11-23T05:07:44.763438+00:00",
+      "ended_utc": "2026-11-23T05:52:36.877623+00:00",
+      "uses_gpu": true
+    },
+    {
+      "stage": "F_checkpoint-500",
+      "status": "complete",
+      "exit_code": 0,
+      "receipt": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r2/checkpoint-500/run.json",
+        "bytes": 7420,
+        "sha256": "b4c685f1faad8ae19fa5592224e8610a06c9aa2fa969c35b4801d4893b6b1442"
+      },
+      "started_utc": "2026-11-23T05:52:37.091434+00:00",
+      "ended_utc": "2026-11-23T06:37:32.572884+00:00",
+      "uses_gpu": true
+    }
+  ],
+  "evaluation": [
+    {
+      "name": "merged_start",
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "evidence_loss_count": 884,
+      "final_recall": 0.904621295334151,
+      "step0": {
+        "n": 1494,
+        "user_byte_mismatches": 0,
+        "token_id_mismatches": 0,
+        "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+      },
+      "steps_sha256": "5686b48aa0a0a9c89483985be2f595dd9fec13c7ea0fb40c989753d6ec23d3cd",
+      "engine_shutdown": true
+    },
+    {
+      "name": "checkpoint-125",
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "evidence_loss_count": 714,
+      "final_recall": 0.9265694869610578,
+      "step0": {
+        "n": 1494,
+        "user_byte_mismatches": 0,
+        "token_id_mismatches": 0,
+        "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+      },
+      "steps_sha256": "057746aca748d0bf3809a81c48d863c0cffb168d934face3b0e379d031f16274",
+      "engine_shutdown": true
+    },
+    {
+      "name": "checkpoint-250",
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "evidence_loss_count": 718,
+      "final_recall": 0.9260255604131147,
+      "step0": {
+        "n": 1494,
+        "user_byte_mismatches": 0,
+        "token_id_mismatches": 0,
+        "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+      },
+      "steps_sha256": "91449b49d99f42a6767b4baa613ec1ffe345f325f9848150f3a8ace91af623b5",
+      "engine_shutdown": true
+    },
+    {
+      "name": "checkpoint-375",
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "evidence_loss_count": 735,
+      "final_recall": 0.9265524153074399,
+      "step0": {
+        "n": 1494,
+        "user_byte_mismatches": 0,
+        "token_id_mismatches": 0,
+        "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+      },
+      "steps_sha256": "c7cb5c81b6d4427060d650d63654501dcc9caedcb1805ef84666ab625e9221fd",
+      "engine_shutdown": true
+    },
+    {
+      "name": "checkpoint-500",
+      "n_trajectories": 1494,
+      "n_steps": 13956,
+      "evidence_loss_count": 724,
+      "final_recall": 0.927404983830691,
+      "step0": {
+        "n": 1494,
+        "user_byte_mismatches": 0,
+        "token_id_mismatches": 0,
+        "identity_and_hashes_sha256": "b6a05d83cd1f6fb4919dd69aa9d33172c8ae5dd62b1980c3a511384d2c8b5f74"
+      },
+      "steps_sha256": "18c4f4b08fc4eb139104449ca907c482b8295cd54941438d3c1873568eff980e",
+      "engine_shutdown": true
+    }
+  ],
+  "all_eval_trajectory_runs": 7470,
+  "all_eval_steps": 69780,
+  "last_recorded_monitor": {
+    "utc": "2026-11-23T06:37:32.528552+00:00",
+    "stage": "F_checkpoint-500",
+    "pid": 3125901,
+    "alive": false,
+    "nonfinite": false,
+    "oom": false,
+    "index": 1,
+    "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+    "memory_used_mib": 375,
+    "utilization_pct": 0,
+    "external_free_bytes": 687456915456,
+    "overlay_free_bytes": 15065219072
+  },
+  "formal_training_reward_recheck": {
+    "n": 16032,
+    "mismatches": 0,
+    "advantage_mismatches": 0,
+    "optimizer_steps": 500,
+    "n_planned_completions": 16000,
+    "extra_logged_completions": 32,
+    "tolerance": 1e-05,
+    "mu": 0.5,
+    "definition": "Every logged completion including the terminal repeated table; one trailing EOS removed. Check reward against the eval parser and advantage against reward minus group mean."
+  },
+  "external_file_count": 147,
+  "external_bytes": 6919278289
+}

@@ -1,0 +1,16 @@
+{
+  "system": "Answer all three numbered questions using the passage collection. In each turn, write a Thought of one or two sentences and exactly one Action. To retrieve relevant passages, write your query in search brackets. Read the resulting Observation before deciding your next action. When you have your final answers, finish with a JSON object of strings for questions 1, 2, and 3. Use exactly one of these two formats:\nThought: <one or two sentences>\nAction: search[<query>]\nThought: <one or two sentences>\nAction: finish[{\"1\":\"<answer>\",\"2\":\"<answer>\",\"3\":\"<answer>\"}]",
+  "user_format": "{question_number}. {question}",
+  "history_round_format": "{raw_output}\nObservation:\n{observation}\n\n",
+  "observation_line": "[P{first_appearance_number}] {title}: {text}",
+  "empty_observation": "(no passages retained)",
+  "invalid_observation": "Invalid action format.",
+  "forced_user": "Search limit reached. Give your final answers now.",
+  "assembly": "One Qwen assistant transcript with stable tokenized round chunks; forced finish adds a user message",
+  "forced_history_guard": "If role framing would exceed the hard window, keep the triggering turn in the archive but omit it from the final prompt",
+  "enable_thinking": false,
+  "prompt_limit": 40448,
+  "max_searches": 12,
+  "max_consecutive_invalid": 2,
+  "top_k": 20
+}

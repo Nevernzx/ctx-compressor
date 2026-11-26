@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "tests": 617,
+  "passed": 617,
+  "legacy_tests_matched": 568,
+  "skipped": 0,
+  "errors": 0,
+  "failures": 0,
+  "command": [
+    "/root/workplace/ctx-compressor/.conda/envs/ctxc/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/root/userfolder/ctx-compressor/dagger_v3/tmp/test_suite_cmi5rl6e/cases",
+    "--junitxml",
+    "/root/userfolder/ctx-compressor/dagger_v3/tmp/test_suite_cmi5rl6e/tests.xml",
+    "tests"
+  ],
+  "cuda_visible_devices": "",
+  "exit_code": 0,
+  "xml_sha256": "b34e330079023768409ffe5da84b2b08b0b1493007df63521412ca00249a466c",
+  "wall_seconds": 15.553746880032122,
+  "utc": "2026-11-21T15:12:25.695653+00:00",
+  "log": "/root/userfolder/ctx-compressor/dagger_v3/tmp/test_suite_cmi5rl6e/pytest.log"
+}

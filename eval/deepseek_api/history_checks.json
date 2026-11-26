@@ -1,0 +1,69 @@
+{
+  "07": {
+    "total": 41,
+    "rehashed": 41,
+    "sealed_locked": 0
+  },
+  "08": {
+    "total": 183,
+    "rehashed": 183,
+    "sealed_locked": 0
+  },
+  "09": {
+    "total": 115,
+    "rehashed": 115,
+    "sealed_locked": 0
+  },
+  "10_launch": {
+    "total": 51,
+    "rehashed": 45,
+    "sealed_locked": 6
+  },
+  "10_resume1": {
+    "total": 19,
+    "rehashed": 19,
+    "sealed_locked": 0
+  },
+  "10": {
+    "total": 243,
+    "rehashed": 234,
+    "sealed_locked": 9
+  },
+  "11_phase_a": {
+    "total": 76,
+    "rehashed": 76,
+    "sealed_locked": 0
+  },
+  "11_phase_p": {
+    "total": 21,
+    "rehashed": 21,
+    "sealed_locked": 0
+  },
+  "11": {
+    "total": 223,
+    "rehashed": 223,
+    "sealed_locked": 0
+  },
+  "12": {
+    "total": 57,
+    "rehashed": 57,
+    "sealed_locked": 0
+  },
+  "06": {
+    "task05_files": 299,
+    "protected_prefixes": [
+      "HANDOFF.md",
+      "NOTES.md",
+      "README.md"
+    ],
+    "historical_tasks": [
+      "TASK_01",
+      "TASK_02",
+      "TASK_03",
+      "TASK_04",
+      "TASK_05"
+    ],
+    "project_files": 345,
+    "other_manifest_entries_preserved": 357
+  }
+}

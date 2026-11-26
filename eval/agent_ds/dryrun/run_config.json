@@ -1,0 +1,258 @@
+{
+  "status": "complete",
+  "task": 21,
+  "stage": "dryrun",
+  "gpu_index": 1,
+  "gate_readings": [
+    {
+      "utc": "2026-11-26T06:12:40.388417+00:00",
+      "index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "memory_used_mib": 375,
+      "utilization_pct": 0
+    },
+    {
+      "utc": "2026-11-26T06:17:40.449065+00:00",
+      "index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "memory_used_mib": 375,
+      "utilization_pct": 0
+    },
+    {
+      "utc": "2026-11-26T06:22:40.745312+00:00",
+      "index": 1,
+      "uuid": "GPU-4318dc90-4126-038a-9402-1323533db94f",
+      "memory_used_mib": 375,
+      "utilization_pct": 0
+    }
+  ],
+  "rows": [
+    "no_compress",
+    "oracle",
+    "LLMLingua-2",
+    "RR-τ reselect",
+    "r4 reselect",
+    "r4 append"
+  ],
+  "datasets": {
+    "musique": [
+      0
+    ],
+    "hotpotqa": [
+      0
+    ],
+    "2wiki": [
+      0
+    ]
+  },
+  "n_episodes": 18,
+  "wall_seconds": 711.1731328410096,
+  "agent": {
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com/beta/chat/completions",
+    "thinking": "disabled",
+    "temperature": 0,
+    "max_tokens": 256,
+    "stop": [
+      "\nObservation"
+    ],
+    "prefix_completion": true,
+    "concurrency": 16,
+    "total_cap_yuan": "8",
+    "stage_caps_yuan": {
+      "probe": "0.1",
+      "smoke": "0.5",
+      "main": "8"
+    },
+    "price_units_1e-8_cny": {
+      "hit": 2,
+      "miss": 100,
+      "output": 400
+    },
+    "limits_in_qwen3_tokens": {
+      "prompt_limit": 40448,
+      "max_model_len": 40960
+    }
+  },
+  "compressors": {
+    "r4": {
+      "params": {
+        "model": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+        "tokenizer": "/root/userfolder/ctx-compressor/grpo_r2/merged_start",
+        "trust_remote_code": false,
+        "dtype": "bfloat16",
+        "max_model_len": 40960,
+        "gpu_memory_utilization": 0.7,
+        "tensor_parallel_size": 1,
+        "enable_prefix_caching": true,
+        "enable_chunked_prefill": true,
+        "max_num_seqs": 16,
+        "max_num_batched_tokens": 8192,
+        "enforce_eager": true,
+        "enable_lora": true,
+        "max_lora_rank": 16,
+        "max_loras": 1,
+        "max_cpu_loras": 5,
+        "seed": 20261118
+      },
+      "adapter": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500",
+      "adapter_weight": {
+        "path": "/root/userfolder/ctx-compressor/grpo_r4/train/checkpoint-500/adapter_model.safetensors",
+        "bytes": 69782384,
+        "sha256": "f68c074912fdc355ee79179327590c17980a540a0cfc1f9373b8683c4d679cdf"
+      },
+      "sampling": {
+        "temperature": 0,
+        "seed": 20261118,
+        "max_tokens": 256
+      },
+      "source_run": {
+        "path": "/root/workplace/ctx-compressor/eval/grpo_r4/checkpoint-500/run.json",
+        "bytes": 7421,
+        "sha256": "d30788440e0cf1d0ff2b60bbeefe231806dae1cd3fcd73d4891907b0be5b1417"
+      }
+    },
+    "reranker": {
+      "checkpoint": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300",
+      "weights": {
+        "path": "/root/userfolder/ctx-compressor/reranker_v1/train/checkpoint-5300/model.safetensors",
+        "size": 2383141336,
+        "sha256": "c3b41d67662ed0dd9a46a39c696b2060b323895dec844254b1d34ca604de73c3"
+      },
+      "template": {
+        "source": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B#using-transformers",
+        "prefix": "<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\n<|im_start|>user\n",
+        "body": "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {document}",
+        "suffix": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+        "instruction": "Given the four questions of a multi-hop QA task, judge whether the passage is a supporting fact needed to answer any of them.",
+        "yes_token_id": 9693,
+        "no_token_id": 2152,
+        "pad_token_id": 151643,
+        "padding_side": "left",
+        "max_pair_tokens": 512,
+        "truncation": "right end of document only",
+        "score": "last_position_logit_yes_minus_no",
+        "probability": "sigmoid"
+      },
+      "tau": 0.5,
+      "tokenizer": "/root/userfolder/ctx-compressor/models/Qwen3-Reranker-0.6B"
+    },
+    "llmlingua2": {
+      "model": "/root/userfolder/ctx-compressor/models/llmlingua-2-xlm-roberta-large-meetingbank",
+      "wheel": "/root/userfolder/ctx-compressor/vendor/llmlingua-0.2.2",
+      "config": {
+        "use_llmlingua2": true,
+        "rate": 0.33,
+        "force_tokens": [
+          "\n",
+          "?"
+        ]
+      }
+    }
+  },
+  "task20_frozen_config": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/smoke_run_config.json",
+    "size": 74272,
+    "sha256": "5c3df2563e62ee44f71b8def11ed1e355e30c9e1152cc7e8d1ad71c4a8f469c1"
+  },
+  "task20_prompts": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/prompts.json",
+    "size": 1622,
+    "sha256": "94fc288b8e9be1736178c131a0d96cc0c89716f887f04fa1000530b8bc4de986"
+  },
+  "data_receipt": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/data_preflight.json",
+    "size": 50658,
+    "sha256": "590d56d00e6834dc4dc7a748b7faa15f0d73ae2d74d611ba80f2be450d48c3c0"
+  },
+  "versions": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "bm25s": "0.3.16",
+    "scipy": "1.17.1",
+    "llmlingua": "0.2.2",
+    "tiktoken": "0.14.0",
+    "nltk": "3.10.4",
+    "accelerate": "1.12.0"
+  },
+  "engine_loads": [
+    {
+      "engine": "r4",
+      "startup_seconds": 47.175361529923975,
+      "shutdown_seconds": 0.6299609770067036
+    }
+  ],
+  "ledger": {
+    "spent_yuan": "0.01008",
+    "reserved_yuan": "0",
+    "calls": 72,
+    "attempts": 72,
+    "input_cache_hit_tokens": 0,
+    "input_cache_miss_tokens": 7200,
+    "completion_tokens": 720,
+    "stage_totals": {
+      "spent_yuan": "0.01008",
+      "reserved_yuan": "0",
+      "calls": 72,
+      "attempts": 72,
+      "input_cache_hit_tokens": 0,
+      "input_cache_miss_tokens": 7200,
+      "completion_tokens": 720
+    },
+    "peak_pauses": 0
+  },
+  "balances": {
+    "start": "99",
+    "end": "99"
+  },
+  "root_usage_check": {
+    "path": "/root/userfolder/ctx-compressor/agent_ds/dryrun/root_usage_check.json",
+    "size": 1176,
+    "sha256": "48da6ab575404fde082a9a969a8036fad87c20107b7e4e0299ec7e199ce07f8b"
+  },
+  "episodes": {
+    "path": "/root/userfolder/ctx-compressor/agent_ds/dryrun/episodes.jsonl",
+    "size": 510764,
+    "sha256": "2a172f4a822ac3fb2e5b8fee7b79c2d35496e55bec913e5c3f7a0a2c5ad55384"
+  },
+  "attempts": {
+    "path": "/root/userfolder/ctx-compressor/agent_ds/dry/smoke/attempts.jsonl",
+    "size": 58268,
+    "sha256": "1f84dadb0759a4bb92186cc85e30235b8d50b4521ab74d94f9301650014f9522"
+  },
+  "ledger_file": {
+    "path": "/root/userfolder/ctx-compressor/agent_ds/dry/ledger.jsonl",
+    "size": 28190,
+    "sha256": "c89e696451f7038aba2957dc997dd26ad24192baf57b5c1347297749496b9118"
+  },
+  "secret_scan": {
+    "files": 11,
+    "bytes": 649551,
+    "matches": 0
+  },
+  "code": {
+    "scripts/agent_ds_client.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_ds_client.py",
+      "size": 9645,
+      "sha256": "3b7a83967624f06027f1ff95c3f858cd693dd7bddd955da4505ff3a0cc97e133"
+    },
+    "scripts/agent_ds_run.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_ds_run.py",
+      "size": 20023,
+      "sha256": "d76308bd1b9b124cc8ec456673333ec89c8d27a6666bac9d4490e06f851fb761"
+    },
+    "scripts/agent_ds_report.py": {
+      "path": "/root/workplace/ctx-compressor/scripts/agent_ds_report.py",
+      "size": 9403,
+      "sha256": "1125f7c310835f1f8eb46dd47df478c03fce0b9d1a909d5d71c0612130de5650"
+    },
+    "tests/test_agent_ds.py": {
+      "path": "/root/workplace/ctx-compressor/tests/test_agent_ds.py",
+      "size": 14898,
+      "sha256": "58aba71c2cbc180fa7836d5628d4d6938d7cefd534d4c7e91119786d3a8e3a6e"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "status": "waiting_main_approval",
+  "pipeline": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/try3/status.json",
+    "size": 3221,
+    "sha256": "b8d339cf7ecc7d16d2da3a7faf6ee858d98864694ca8c9f9e82ea6f03acfed1f"
+  },
+  "report": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/agent_v1_report.md",
+    "size": 5690,
+    "sha256": "6fd79149bd74ab529da948d15e8b5ef913a3b8327cc56f71b0697d118bd8b58d"
+  },
+  "verified_episodes": 240,
+  "n_smoke_tasks_per_dataset": 10,
+  "task10_sha256": "cb325756d7d206d519b877652f7f7531ee66ce5312a0ff69599713c1559113a3",
+  "smoke_results": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/smoke_results.json",
+    "size": 133110,
+    "sha256": "e30f95a2324032bda26d40712b72931fc9fb1ab8908f7421f4b672203d146ef9"
+  },
+  "frozen_run_config": {
+    "path": "/root/workplace/ctx-compressor/eval/agent_v1/try3/smoke_run_config.json",
+    "size": 74272,
+    "sha256": "5c3df2563e62ee44f71b8def11ed1e355e30c9e1152cc7e8d1ad71c4a8f469c1"
+  },
+  "main_eta_seconds": 5150.2651217198,
+  "root_usage_check": {
+    "path": "/root/userfolder/ctx-compressor/agent_v1/try3/smoke/root_usage_check.json",
+    "size": 2456,
+    "sha256": "d8e5db781be6f1ecf1529fe3b406492f0556dc7042c42241510fef8d5faa0905"
+  },
+  "waiting_line": "WAITING: 任务20 冒烟完成（格式无效／强制 finish／超长数 no_compress 0.00%/10.00%/0，latest 0.00%/10.00%/0，oracle 0.00%/3.33%/0，RR-τ reselect 0.00%/10.00%/0，RR-τ append 0.00%/6.67%/0，LLMLingua-2 0.00%/6.67%/0，r4 reselect 0.00%/10.00%/0，r4 append 0.00%/13.33%/0，主运行 ETA 约 1 小时 26 分钟）"
+}
