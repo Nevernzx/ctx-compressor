@@ -89,7 +89,8 @@ ctx-compressor/
 ├── specs/          实验方案和各任务的任务书
 ├── docs/           结果汇总、数据说明、完整实验记录
 ├── requirements/   各环境的精确版本锁
-└── requirements.txt
+├── requirements.txt
+└── LICENSE
 ```
 
 ## 环境安装
@@ -149,3 +150,9 @@ CUDA_VISIBLE_DEVICES= python -m pytest tests/
 | [`docs/LAB_NOTEBOOK.md`](docs/LAB_NOTEBOOK.md) | 21 个任务的完整实验记录 |
 | [`specs/PLAN_v2.md`](specs/PLAN_v2.md) | 方案设计与相关工作对比 |
 | [`eval/`](eval/) | 每个任务的报告与原始结果 |
+
+## 许可
+
+- 代码：[MIT](LICENSE)。
+- 模型权重：基于 [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B)，遵循 Apache-2.0。
+- 数据集：遵循各自的许可证，见上方"数据来源"。
