@@ -2,7 +2,7 @@
 
 本目录实现 PLAN v2 §5 的预算感知片段选择框架：对每次检索返回的段落输出 `{"add":[],"drop":[]}`，支持重选（reselect）与只追加（append）两种模式。奖励采用可获得证据召回，全部召回时才给予预算节省奖励；成本模型按相邻步骤的最长公共片段前缀计算缓存读写费用。
 
-任务 01 只完成框架、数据下载、字段核对和三任务验收。独立小模型、可溯源选择、可验证密集奖励及含缓存成本是后续项目定位；与 [Provence](https://arxiv.org/abs/2501.16214)、[Acon](https://arxiv.org/abs/2510.00615)、[ContextBudget](https://arxiv.org/abs/2604.01664) 的差异尚待精读核实。唯一规格保存在 [specs/PLAN_v2.md](specs/PLAN_v2.md)，本次范围见 [任务书](specs/TASK_01_framework_and_data_20261117.md)。
+任务 01 只完成框架、数据下载、字段核对和三任务验收。独立小模型、可溯源选择、可验证密集奖励及含缓存成本是后续项目定位；与 [Provence](https://arxiv.org/abs/2501.16214)、[Acon](https://arxiv.org/abs/2510.00615)、[ContextBudget](https://arxiv.org/abs/2604.01664) 的差异尚待精读核实。唯一规格保存在 [specs/PLAN_v2.md](../specs/PLAN_v2.md)，本次范围见 [任务书](../specs/TASK_01_framework_and_data_20261117.md)。
 
 ## 机器、环境和目录
 
@@ -21,7 +21,7 @@ eval/acceptance/        人工可读验收文档与远程机器可读检查结�
 specs/                 原始任务书与唯一规格的只读副本
 ```
 
-独立 conda 环境位于 `.conda/envs/ctxc`，Python **3.11.18**。已安装 bm25s、transformers/tokenizers、NumPy、SciPy、pytest 及其依赖；未安装 torch。完整版本见 [requirements.lock.txt](requirements.lock.txt)。激活方式：
+独立 conda 环境位于 `.conda/envs/ctxc`，Python **3.11.18**。已安装 bm25s、transformers/tokenizers、NumPy、SciPy、pytest 及其依赖；未安装 torch。完整版本见 [requirements.lock.txt](../requirements/lock.txt)。激活方式：
 
 ```bash
 ssh 5880
@@ -51,11 +51,11 @@ bash scripts/run_python.sh scripts/acceptance.py
 
 先校验收到的交付快照，再复现计算。审计和验收报告包含生成时间，重跑后会改变其摘要；若将重跑结果作为新交付版本，应同步更新 README 中的审计报告、运行 `scripts/data_card.py`，最后重新执行 `scripts/checksums.py` 生成清单并用 `--verify` 核对。完整命令见 HANDOFF。
 
-验收仅用 MuSiQue-Ans dev 的段落建语料库与 BM25 索引。固定种子抽取互不重复的 12 题，分成 3 个四题任务，按题和跳的原顺序执行；同一个任务分别运行 reselect 与 append。预算 **3000 token 为占位，正式值由 PLAN §6 试验定**。输出见 [三任务两模式轨迹](eval/acceptance/traj_samples.md)；原始/替换查询、证据片段、自然命中、编号、oracle 动作、执行结果与 recall 都逐步列出。
+验收仅用 MuSiQue-Ans dev 的段落建语料库与 BM25 索引。固定种子抽取互不重复的 12 题，分成 3 个四题任务，按题和跳的原顺序执行；同一个任务分别运行 reselect 与 append。预算 **3000 token 为占位，正式值由 PLAN §6 试验定**。输出见 [三任务两模式轨迹](../eval/acceptance/traj_samples.md)；原始/替换查询、证据片段、自然命中、编号、oracle 动作、执行结果与 recall 都逐步列出。
 
-数据核对报告见 [eval/acceptance/data_audit.md](eval/acceptance/data_audit.md)。该报告全文附在本文后部，以便直接核查每种跳数的 5 条分解问题。
+数据核对报告见 [eval/acceptance/data_audit.md](../eval/acceptance/data_audit.md)。该报告全文附在本文后部，以便直接核查每种跳数的 5 条分解问题。
 
-[独立复核](eval/acceptance/independent_review.md) 从原始 dev 重新核对了全部 58 个状态，并对其中 489 个不同候选片段重新分词，结果一致。
+[独立复核](../eval/acceptance/independent_review.md) 从原始 dev 重新核对了全部 58 个状态，并对其中 489 个不同候选片段重新分词，结果一致。
 
 ## 片段、状态和 SFT 约定
 
@@ -542,13 +542,13 @@ dev查询校验：2417/2417通过，拒绝0题。检索自然命中 **1456/1594 
 
 全量原始轨迹token均值=24804.687、P90=29887.100（n=150）；去重轨迹均值=23411.533、P90=28772.000。全部 **150/150** 测试通过；30286个状态中非法动作和超预算均为0。no_compress任务末召回为1、丢失率为0。
 
-完整的19配置指标、损失拆分、输入长度、缓存成本及PLAN原四行判据见[实验报告](eval/feasibility/feasibility_report.md)，所有分布与比例均有n。阅读模型相关格标为“未测（需阅读模型）”，本任务不作开工决策，不定义“接近”阈值。[机器结果](eval/feasibility/feasibility_results.json)、[运行配置](eval/feasibility/run_config.json)和[20条答案命中样例](eval/feasibility/answer_leak_samples.md)已同步镜像。
+完整的19配置指标、损失拆分、输入长度、缓存成本及PLAN原四行判据见[实验报告](../eval/feasibility/feasibility_report.md)，所有分布与比例均有n。阅读模型相关格标为“未测（需阅读模型）”，本任务不作开工决策，不定义“接近”阈值。[机器结果](../eval/feasibility/feasibility_results.json)、[运行配置](../eval/feasibility/run_config.json)和[20条答案命中样例](../eval/feasibility/answer_leak_samples.md)已同步镜像。
 
 原始实验产物仅在5880的`data/feasibility/`：`tasks_dev150.jsonl`、`steps.jsonl`、`final_contexts.jsonl`和`corpus_dev_ntok.jsonl`。最终保留集合及四题的question/answer/answer_aliases均保存，以后可直接补阅读模型评测。任务01的验收目录、轨迹和3000占位预算保持原样。
 
 任务02扩展了摘要覆盖范围，因此从本节起使用 `bash scripts/run_python.sh scripts/checksums_task02.py --verify`；任务01的原校验脚本未改动，旧清单保存在`specs/TASK01_SHA256SUMS`。原文档前缀与62个其他任务01文件也由新校验器逐项保护。确切命令见HANDOFF的任务02追加节。
 
-[独立落盘复核](eval/feasibility/independent_check.md)已通过：21,100段重新分词、30,286状态重放、2,850最终上下文核对，5,687,736项比较无差异；全部12组oracle汇总比较及1,800次逐任务比较均无低于其他策略的反例。
+[独立落盘复核](../eval/feasibility/independent_check.md)已通过：21,100段重新分词、30,286状态重放、2,850最终上下文核对，5,687,736项比较无差异；全部12组oracle汇总比较及1,800次逐任务比较均无低于其他策略的反例。
 
 
 ## 任务03：§6 阅读模型 F1（Qwen3-8B）
@@ -584,14 +584,14 @@ dev查询校验：2417/2417通过，拒绝0题。检索自然命中 **1456/1594 
 
 正式代码、小结果和文档仍在 `/root/workplace/ctx-compressor`。独立reader环境为 `/root/userfolder/ctx-compressor/envs/reader`，模型为 `/root/userfolder/ctx-compressor/models/Qwen3-8B`，所有缓存和临时文件为 `/root/userfolder/ctx-compressor/cache`。启动前 source `scripts/reader_environment.sh`。
 
-- [完整中文报告](eval/reader/reader_report.md)：20配置EM/F1、位置/跳数/证据齐全分组、prompt分布和逐题配对，所有分组附n。
-- [机器结果](eval/reader/reader_results.json)、[运行参数与资源](eval/reader/run_config.json)、[原始40条小样](eval/reader/smoke_samples.md)、[小样审阅](eval/reader/smoke_review.json)。
-- [模型manifest](eval/reader/model_manifest.json)：16文件、16,397,461,896 bytes，官方SHA256和离线复核均通过；[环境锁定](requirements.reader.lock.txt)与[准备记录](notes_task03_environment.md)。
+- [完整中文报告](../eval/reader/reader_report.md)：20配置EM/F1、位置/跳数/证据齐全分组、prompt分布和逐题配对，所有分组附n。
+- [机器结果](../eval/reader/reader_results.json)、[运行参数与资源](../eval/reader/run_config.json)、[原始40条小样](../eval/reader/smoke_samples.md)、[小样审阅](../eval/reader/smoke_review.json)。
+- [模型manifest](../eval/reader/model_manifest.json)：16文件、16,397,461,896 bytes，官方SHA256和离线复核均通过；[环境锁定](../requirements/reader.lock.txt)与[准备记录](notes/notes_task03_environment.md)。
 - 逐题原始输出和评分为 `data/reader/predictions.jsonl`；该文件仅留在5880，3080的mirror只同步代码、文档和eval/reader小结果，不同步data/reader或权重。
 
 ### 验证与运行记录
 
-旧新测试共 202 项全部通过（[测试记录](eval/reader/tests.xml)）；CPU报告重新解析、评分和核对全部12,000条元数据/user消息SHA1。输入截断0，prompt+48超限0；全配置最大prompt 32,382 tokens，no_compress最大 32,382，加48后 32,430≤40,960。固定48-token输出上限命中 207/12,000（1.725%），原样保留并评分；>20词解析结果 708/12,000，空解析 0/12,000。40条smoke中的一次输出上限命中及实现guard修正见NOTES，未重新生成smoke。
+旧新测试共 202 项全部通过（[测试记录](../eval/reader/tests.xml)）；CPU报告重新解析、评分和核对全部12,000条元数据/user消息SHA1。输入截断0，prompt+48超限0；全配置最大prompt 32,382 tokens，no_compress最大 32,382，加48后 32,430≤40,960。固定48-token输出上限命中 207/12,000（1.725%），原样保留并评分；>20词解析结果 708/12,000，空解析 0/12,000。40条smoke中的一次输出上限命中及实现guard修正见NOTES，未重新生成smoke。
 
 物理 GPU 1（NVIDIA RTX 5880 Ada Generation，UUID `GPU-4318dc90-4126-038a-9402-1323533db94f`），记录到的本任务 GPU 进程均属于该 UUID；峰值显存 42,423 MiB。root Used 基线 931,190,407,168 bytes，推理收尾 931,367,436,288 bytes；最终增量 177,029,120 bytes（验收门槛 300,000,000 bytes）。另保留成功全量进程的全盘计数瞬时峰值 501,190,656 bytes及3次已复查事件；历史超限和未能归因的调查经过见NOTES。 全量生成耗时 1750.871 秒；本次全量进程（含准备、引擎初始化）1910.128 秒。保留任务01/02所有不变文件和三份文档的原字节前缀；最终验收使用 `scripts/checksums_task03.py --verify`，覆盖新代码、结果和data/reader，外置权重由manifest独立记录。
 
@@ -603,11 +603,11 @@ dev查询校验：2417/2417通过，拒绝0题。检索自然命中 **1456/1594 
 
 训练部分 **4,735 个任务、88,562 条 SFT 样本**，5% 留出 **249 个任务、4,652 条样本**；两部分共 n=93,214 条，全部使用 ms-swift 实际 Qwen3 模板编码，裁切和丢弃均为 0。完整序列 P50/P99/max 为 **3194/5308/8390 token**，`max_length=8392`。
 
-一次基准使用均匀抽样的 reselect/append 各800条，共1,600条，**100个 optimizer step**；实际吞吐 **5602.89 token/s**（完整未padding序列token），每条 **0.5790 秒**。首10/末10步loss均值 **3.998265/0.163077**。最长8,390-token样本另做一次带驻留Adam状态的前向/反向检查，额外optimizer step=0，未OOM。只使用物理GPU 1，结束已释放；root增量低于300 MB，最终读数见[资源检查](eval/sft_prep/final_resource_check.json)。
+一次基准使用均匀抽样的 reselect/append 各800条，共1,600条，**100个 optimizer step**；实际吞吐 **5602.89 token/s**（完整未padding序列token），每条 **0.5790 秒**。首10/末10步loss均值 **3.998265/0.163077**。最长8,390-token样本另做一次带驻留Adam状态的前向/反向检查，额外optimizer step=0，未OOM。只使用物理GPU 1，结束已释放；root增量低于300 MB，最终读数见[资源检查](../eval/sft_prep/final_resource_check.json)。
 
-- [完整中文报告和估时表](eval/sft_prep/sft_prep_report.md)、[机器结果](eval/sft_prep/sft_prep_results.json)。估时只列全量×1/2/3 epoch、20k×2、40k×2，尚未选择正式训练方案。
-- [模板及labels核验](eval/sft_prep/template_check.md)、[模型逐文件校验](eval/sft_prep/model_manifest.json)、[基准配置](eval/sft_prep/bench_run_config.json)、[基准结果](eval/sft_prep/bench_results.json)。
-- [环境准备记录](notes_task04_environment.md)、[依赖锁定](requirements.train.lock.txt)、[旧结果保护核验](eval/sft_prep/reference_fix_checks.json)。旧202项和新增测试共 **264 项通过**。
+- [完整中文报告和估时表](../eval/sft_prep/sft_prep_report.md)、[机器结果](../eval/sft_prep/sft_prep_results.json)。估时只列全量×1/2/3 epoch、20k×2、40k×2，尚未选择正式训练方案。
+- [模板及labels核验](../eval/sft_prep/template_check.md)、[模型逐文件校验](../eval/sft_prep/model_manifest.json)、[基准配置](../eval/sft_prep/bench_run_config.json)、[基准结果](../eval/sft_prep/bench_results.json)。
+- [环境准备记录](notes/notes_task04_environment.md)、[依赖锁定](../requirements/train.lock.txt)、[旧结果保护核验](../eval/sft_prep/reference_fix_checks.json)。旧202项和新增测试共 **264 项通过**。
 
 大数据、模型、独立环境和基准输出均在 `/root/userfolder/ctx-compressor/`。轨迹 `data/traj_train/`，SFT `data/sft/`，环境 `envs/train`，模型 `models/Qwen3-1.7B`，基准 `runs/bench_task04_20261117`；正式项目仅保留代码、文档和小结果。外置文件路径、字节/行数和SHA256见各manifest，不进入项目SHA256SUMS。
 
@@ -618,27 +618,27 @@ dev查询校验：2417/2417通过，拒绝0题。检索自然命中 **1456/1594 
 
 A 选定 per-device **1 × 累积16**，group_by_length=False，实测 **5695.282197 token/s**（n=30 optimizer steps、480样本暴露）。B 完成 **20,000条 × 2 epoch**，2500 optimizer steps、40,000次样本暴露，无NaN/OOM。训练循环 **25774.874464秒**（含5次验证/保存），worker计时 **26053.937670秒**（含其计时区间内启动/编码）。
 
-C 完成原始模型与5个checkpoint，共 **6×13956=83736** 个动作、**6×1494=8964** 条轨迹，另完成4项CPU基线。按任务书合并证据丢失率排序选中 **checkpoint-2000**（1238/1494，任务末召回0.5795890633240051）。其路径为 `/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000`；[选中checkpoint指针](eval/sft_run/selected_checkpoint.json)记录adapter SHA及选择规则。
+C 完成原始模型与5个checkpoint，共 **6×13956=83736** 个动作、**6×1494=8964** 条轨迹，另完成4项CPU基线。按任务书合并证据丢失率排序选中 **checkpoint-2000**（1238/1494，任务末召回0.5795890633240051）。其路径为 `/root/userfolder/ctx-compressor/runs/sft_20k_20261117/checkpoints/checkpoint-2000`；[选中checkpoint指针](../eval/sft_run/selected_checkpoint.json)记录adapter SHA及选择规则。
 
-- [完整中文报告](eval/sft_run/sft_run_report.md)、[结构化结果](eval/sft_run/sft_run_results.json)、[loss曲线](eval/sft_run/loss_curve.svg)。
-- [全量闭环审计](eval/sft_run/model_rollout_audit.json)、[最终报告一致性](eval/sft_run/final_report_audit_consistency.json)、[源码/依赖终检](eval/sft_run/final_dependency_verification.json)。
-- [失败资源验收](eval/sft_run/final_resource_check.json)、[151项外置文件清单](eval/sft_run/external_artifact_manifest.json)、[额外工具链完整清单](eval/sft_run/toolchain_full_artifact_manifest.json)。外置清单complete只表示文件覆盖完整，任务验收仍失败。
+- [完整中文报告](../eval/sft_run/sft_run_report.md)、[结构化结果](../eval/sft_run/sft_run_results.json)、[loss曲线](../eval/sft_run/loss_curve.svg)。
+- [全量闭环审计](../eval/sft_run/model_rollout_audit.json)、[最终报告一致性](../eval/sft_run/final_report_audit_consistency.json)、[源码/依赖终检](../eval/sft_run/final_dependency_verification.json)。
+- [失败资源验收](../eval/sft_run/final_resource_check.json)、[151项外置文件清单](../eval/sft_run/external_artifact_manifest.json)、[额外工具链完整清单](../eval/sft_run/toolchain_full_artifact_manifest.json)。外置清单complete只表示文件覆盖完整，任务验收仍失败。
 
 原264项及新增测试共462项通过；历史82个Python源码仍与测试收据一致。新增纯审计工具的真实全树验证单独留证。数据仅使用train及其249个留出任务；未在dev测试任务评测，未运行GRPO或阅读模型F1。报告只列实测数值与checkpoint选择。
 
 
 ## 任务06　CPU 数据完成，训练正在等卡
 
-v2 将 reselect 的每步噪声改为随机 0–2 个片段。训练数据 88,562 行、留出数据 4,652 行。step ≥ 1 的训练 reselect 目标中，非空 drop 从 39,536/39,546 变为 26,300/39,546。抽中的 20,000 个训练样本与 1,000 个验证样本的 ID 和顺序均与任务05一致。472 项 CPU 测试通过。每个拆分、模式和预算的统计见[当前报告](eval/sft_run_v2/sft_v2_report.md)。
+v2 将 reselect 的每步噪声改为随机 0–2 个片段。训练数据 88,562 行、留出数据 4,652 行。step ≥ 1 的训练 reselect 目标中，非空 drop 从 39,536/39,546 变为 26,300/39,546。抽中的 20,000 个训练样本与 1,000 个验证样本的 ID 和顺序均与任务05一致。472 项 CPU 测试通过。每个拆分、模式和预算的统计见[当前报告](../eval/sft_run_v2/sft_v2_report.md)。
 
-5880 的后台脚本 PID 1141340 每 600 秒检查一次物理 GPU 1。首次观测为 42088 MiB，连续两次低于 2 GB 后启动训练。训练计划为 2 个 epoch、2,500 个 optimizer step，随后对五个 v2 checkpoint 评测。实时状态文件为 `/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation_status.json`。[启动验证](eval/sft_run_v2/waiting_launch.json)记录了 SSH 重连后读取的 PID、独立会话和日志文件。
+5880 的后台脚本 PID 1141340 每 600 秒检查一次物理 GPU 1。首次观测为 42088 MiB，连续两次低于 2 GB 后启动训练。训练计划为 2 个 epoch、2,500 个 optimizer step，随后对五个 v2 checkpoint 评测。实时状态文件为 `/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/continuation_status.json`。[启动验证](../eval/sft_run_v2/waiting_launch.json)记录了 SSH 重连后读取的 PID、独立会话和日志文件。
 
 
 ## 任务06　留出集闭环评测完成
 
 五个 v2 checkpoint 各完成 1,494 条留出轨迹、13,956 个动作。按六个模式与预算组合的合并证据丢失率，选中 **checkpoint-2000**，丢失 956/1,494（63.989%），任务末平均证据召回为 89.006%（n=1,494）。中档预算为 2,814 token，重选模式的任务末召回为 88.506%，只追加模式为 89.586%（各 n=249）。
 
-[完整中文报告](eval/sft_run_v2/sft_v2_report.md) · [结构化结果](eval/sft_run_v2/sft_v2_results.json) · [选中的 LoRA](eval/sft_run_v2/selected_checkpoint.json) · [损失曲线](eval/sft_run_v2/loss_curve.svg)
+[完整中文报告](../eval/sft_run_v2/sft_v2_report.md) · [结构化结果](../eval/sft_run_v2/sft_v2_results.json) · [选中的 LoRA](../eval/sft_run_v2/selected_checkpoint.json) · [损失曲线](../eval/sft_run_v2/loss_curve.svg)
 
 
 ## 任务07　GRPO 准备（2026-11-20，5880 GPU 0，Claude 完成）
@@ -647,23 +647,23 @@ v2 将 reselect 的每步噪声改为随机 0–2 个片段。训练数据 88,56
 - 流程：`build_grpo_states.py`（训练任务上的闭环状态）→ `make_grpo_dataset.py` → `merge_sft_lora.py`（SFT LoRA 合并进基座）→ `train_grpo.sh`（在合并模型上训新 LoRA，KL 参照 = SFT 模型）→ 评测链路复用 `build_grpo_states.py --adapter`。
 - 所有模型输出数字来自替身 v1 checkpoint-2000，不是正式结果。关键数：奖励与评测解析器在 13,956 条输出上 0 处不一致；冒烟训练 25 步，每步约 40.4 秒（4 个 prompt × 8 个补全）；替身模型下 77.6%（149/192）的 8 样本组奖励全相同。
 
-[GRPO 准备报告](eval/grpo_prep/grpo_prep_report.md) · [规模推算](eval/grpo_prep/projection.json) · [任务07 校验清单](eval/grpo_prep/TASK07_SHA256SUMS)
+[GRPO 准备报告](../eval/grpo_prep/grpo_prep_report.md) · [规模推算](../eval/grpo_prep/projection.json) · [任务07 校验清单](../eval/grpo_prep/TASK07_SHA256SUMS)
 
 
 ## 任务08　正式 GRPO 已启动
 
-从任务06选中的 v2 checkpoint-2000 启动正式 GRPO。CPU 合并后，GPU 1 上的固定训练提示中，贪心文本和生成 token ID 均为 0/30 不一致。完整 CPU 测试通过 527/527。后台阶段依次运行合并模型留出评测、训练状态生成、八次采样过滤、均衡抽样、优化与各 checkpoint 的留出评测。[起点核验](eval/grpo_v2/a_checks.json) · [后台启动记录](eval/grpo_v2/launch_verification.json)
+从任务06选中的 v2 checkpoint-2000 启动正式 GRPO。CPU 合并后，GPU 1 上的固定训练提示中，贪心文本和生成 token ID 均为 0/30 不一致。完整 CPU 测试通过 527/527。后台阶段依次运行合并模型留出评测、训练状态生成、八次采样过滤、均衡抽样、优化与各 checkpoint 的留出评测。[起点核验](../eval/grpo_v2/a_checks.json) · [后台启动记录](../eval/grpo_v2/launch_verification.json)
 
 
 ## 任务08　正式 GRPO 训练与留出评测完成
 
 从 SFT v2 checkpoint-2000 构建的 22,158 个训练状态中，有 4,002 个状态的八次采样奖励存在差异。分层抽取 2,000 个提示后完成 500 个优化步。按六格合并证据丢失率，从四个 GRPO checkpoint 中选中 **checkpoint-500**，丢失 947/1,494 条轨迹，任务末平均召回 89.30%（n=1,494）。同一留出集上，SFT v2 为 956/1,494 和 89.01%（n=1,494）。
 
-紧预算下，重选模式的证据丢失为 SFT 164/249、GRPO 161/249，只追加模式为 SFT 155/249、GRPO 159/249。[中文报告](eval/grpo_v2/grpo_v2_report.md) · [结构化结果](eval/grpo_v2/grpo_v2_results.json) · [训练曲线](eval/grpo_v2/training_curve.svg)
+紧预算下，重选模式的证据丢失为 SFT 164/249、GRPO 161/249，只追加模式为 SFT 155/249、GRPO 159/249。[中文报告](../eval/grpo_v2/grpo_v2_report.md) · [结构化结果](../eval/grpo_v2/grpo_v2_results.json) · [训练曲线](../eval/grpo_v2/training_curve.svg)
 
 ## 任务09　置信度阈值与第二个候选片段
 
-使用任务06的 SFT v2 checkpoint-2000，在 400 个训练任务的 22,158 个状态上按平均单步奖励选出 τ=0.99。每个留出策略覆盖 249 个任务的六种模式与预算组合（各 n=1,494 条轨迹）。H0（不加段）、H1（τ=0.99）、H2（预算允许时总加段）的证据丢失数依次为 957、806、916，末步平均召回依次为 88.99%、90.62%、88.14%，平均缓存成本依次为 1,800.30、2,478.70、3,475.33 个等价输入 token（以上各 n=1,494）。[中文报告](eval/hedge_v2/hedge_v2_report.md) · [结果 JSON](eval/hedge_v2/hedge_v2_results.json) · [成本与证据丢失率](eval/hedge_v2/cost_vs_loss.svg)
+使用任务06的 SFT v2 checkpoint-2000，在 400 个训练任务的 22,158 个状态上按平均单步奖励选出 τ=0.99。每个留出策略覆盖 249 个任务的六种模式与预算组合（各 n=1,494 条轨迹）。H0（不加段）、H1（τ=0.99）、H2（预算允许时总加段）的证据丢失数依次为 957、806、916，末步平均召回依次为 88.99%、90.62%、88.14%，平均缓存成本依次为 1,800.30、2,478.70、3,475.33 个等价输入 token（以上各 n=1,494）。[中文报告](../eval/hedge_v2/hedge_v2_report.md) · [结果 JSON](../eval/hedge_v2/hedge_v2_results.json) · [成本与证据丢失率](../eval/hedge_v2/cost_vs_loss.svg)
 
 ## 任务10 SFT v3 与锁定测试集
 
@@ -673,47 +673,47 @@ v2 将 reselect 的每步噪声改为随机 0–2 个片段。训练数据 88,56
 
 ## 任务10　SFT v3 留出集结果
 
-在 30,000 条样本上训练两轮后，四个候选中按留出集选中 checkpoint-3000。证据丢失为 886/1,494 条轨迹（59.30%），最终平均召回为 90.46%（n=1,494）。任务06的 SFT v2 在只追加和重选模式分别丢失 466/747 和 490/747 条，SFT v3 分别为 396/747 和 490/747 条。两个模型在同一批训练状态上各采样 2,400 次，单次请求新增至少两段的次数分别为 SFT v2 的 0 次和 SFT v3 的 420 次（各 n=300 个状态）。[任务10报告](eval/sft_run_v3/sft_v3_report.md) · [机器结果](eval/sft_run_v3/sft_v3_results.json) · [训练曲线](eval/sft_run_v3/loss_curve.svg)
+在 30,000 条样本上训练两轮后，四个候选中按留出集选中 checkpoint-3000。证据丢失为 886/1,494 条轨迹（59.30%），最终平均召回为 90.46%（n=1,494）。任务06的 SFT v2 在只追加和重选模式分别丢失 466/747 和 490/747 条，SFT v3 分别为 396/747 和 490/747 条。两个模型在同一批训练状态上各采样 2,400 次，单次请求新增至少两段的次数分别为 SFT v2 的 0 次和 SFT v3 的 420 次（各 n=300 个状态）。[任务10报告](../eval/sft_run_v3/sft_v3_report.md) · [机器结果](../eval/sft_run_v3/sft_v3_results.json) · [训练曲线](../eval/sft_run_v3/loss_curve.svg)
 
 ## 任务11　第二轮 GRPO 留出评测
 
-从任务10 SFT v3 checkpoint-3000 出发，按丢失率、最终召回、训练步数的预登记顺序，从四个 GRPO 候选中选中 checkpoint-125。起点和所选模型的轨迹证据丢失分别为 886/1,494（59.30%）和 714/1,494（47.79%），最终平均召回分别为 90.46% 和 92.66%（各 n=1,494 条轨迹）。紧预算只追加模式为 137/249 和 115/249，紧预算重选模式为 165/249 和 144/249。平均单步奖励分别为 −0.469241 和 −0.494518（各 n=13,956 步）。[中文报告](eval/grpo_r2/grpo_r2_report.md) · [结构化结果](eval/grpo_r2/grpo_r2_results.json) · [训练曲线](eval/grpo_r2/training_curve.svg)
+从任务10 SFT v3 checkpoint-3000 出发，按丢失率、最终召回、训练步数的预登记顺序，从四个 GRPO 候选中选中 checkpoint-125。起点和所选模型的轨迹证据丢失分别为 886/1,494（59.30%）和 714/1,494（47.79%），最终平均召回分别为 90.46% 和 92.66%（各 n=1,494 条轨迹）。紧预算只追加模式为 137/249 和 115/249，紧预算重选模式为 165/249 和 144/249。平均单步奖励分别为 −0.469241 和 −0.494518（各 n=13,956 步）。[中文报告](../eval/grpo_r2/grpo_r2_report.md) · [结构化结果](../eval/grpo_r2/grpo_r2_results.json) · [训练曲线](../eval/grpo_r2/training_curve.svg)
 
 
 ## 任务12　Qwen3-8B 留出集阅读评测
 
 在 249 个留出任务的 996 道不同问题上，Qwen3-8B 共给出 49,800 条回答。GRPO r2 checkpoint-125 的合并结果为 F1 56.118%、EM 46.034%（n=5,976），SFT v3 checkpoint-3000 为 F1 56.137%、EM 45.716%（n=5,976），H1 为 F1 54.972%、EM 44.679%（n=5,976）。
 
-r2 与 SFT v3 的配对差为 F1 -0.019 个百分点、EM +0.318 个百分点（n=5,976 个配对），与 H1 的配对差为 F1 +1.145 个百分点、EM +1.355 个百分点（n=5,976 个配对）。报告逐格列出紧、中、松预算下的读者分数及轨迹缓存成本。[报告](eval/reader_heldout/reader_heldout_report.md) · [结构化结果](eval/reader_heldout/reader_heldout_results.json)
+r2 与 SFT v3 的配对差为 F1 -0.019 个百分点、EM +0.318 个百分点（n=5,976 个配对），与 H1 的配对差为 F1 +1.145 个百分点、EM +1.355 个百分点（n=5,976 个配对）。报告逐格列出紧、中、松预算下的读者分数及轨迹缓存成本。[报告](../eval/reader_heldout/reader_heldout_report.md) · [结构化结果](../eval/reader_heldout/reader_heldout_results.json)
 
 
 ## 任务13 · GRPO 第三轮（2026-11-24）
 
-任务13 从 r2 checkpoint-125 出发，使用 2,000/2,000 条 gold-varying 训练状态。留出集选中 checkpoint-250，丢证据 592/1,494，最终召回 93.702%（n=1,494 条轨迹）。Qwen3-8B 读者 F1 为 50.709%，相对 r2 为 -5.409 个百分点（n=5,976 个配对题次）。[完整报告](eval/grpo_r3/grpo_r3_report.md)
+任务13 从 r2 checkpoint-125 出发，使用 2,000/2,000 条 gold-varying 训练状态。留出集选中 checkpoint-250，丢证据 592/1,494，最终召回 93.702%（n=1,494 条轨迹）。Qwen3-8B 读者 F1 为 50.709%，相对 r2 为 -5.409 个百分点（n=5,976 个配对题次）。[完整报告](../eval/grpo_r3/grpo_r3_report.md)
 
 
 ## 任务14 · DeepSeek API 子集实验
 
-全量调用 n=2,588，小样 n=36，两阶段账本合计 ¥3.03074106。[报告](eval/deepseek_api/deepseek_api_report.md) · [结果](eval/deepseek_api/deepseek_api_results.json)
+全量调用 n=2,588，小样 n=36，两阶段账本合计 ¥3.03074106。[报告](../eval/deepseek_api/deepseek_api_report.md) · [结果](../eval/deepseek_api/deepseek_api_results.json)
 
 
 ## 任务17 · 同数据重排基线
 
-val100 选出 RR-τ 的 τ=0.5（n=100 个验证任务）。同批留出比较 r2 − RR-τ 的 ΔF1 为 +0.536 个百分点（n=5,976）。[报告](eval/reranker_v1/reranker_v1_report.md) · [按预算的 F1](eval/reranker_v1/budget_f1_with_reranker.svg) · [按成本的 F1](eval/reranker_v1/cost_f1_with_reranker.svg)
+val100 选出 RR-τ 的 τ=0.5（n=100 个验证任务）。同批留出比较 r2 − RR-τ 的 ΔF1 为 +0.536 个百分点（n=5,976）。[报告](../eval/reranker_v1/reranker_v1_report.md) · [按预算的 F1](../eval/reranker_v1/budget_f1_with_reranker.svg) · [按成本的 F1](../eval/reranker_v1/cost_f1_with_reranker.svg)
 
 ## 任务18 · GRPO 第四轮
 
-reward v3 选中 checkpoint-500（n=4 个候选）。同批留出比较 r4 − r2 的 ΔF1 为 +0.401 个百分点（n=5,976）。[报告](eval/grpo_r4/grpo_r4_report.md) · [训练曲线](eval/grpo_r4/training_curve.svg)
+reward v3 选中 checkpoint-500（n=4 个候选）。同批留出比较 r4 − r2 的 ΔF1 为 +0.401 个百分点（n=5,976）。[报告](../eval/grpo_r4/grpo_r4_report.md) · [训练曲线](../eval/grpo_r4/training_curve.svg)
 
 
 ## 任务19 · 锁定测试集
 
-锁定测试集已于任务19第一次使用。r4 F1 为 44.866%（n=10,824 题次），r4 − RR-τ 的 ΔF1 为 +20.841 个百分点（n=10,824 对）。[报告](eval/test_v1/test_v1_report.md)
+锁定测试集已于任务19第一次使用。r4 F1 为 44.866%（n=10,824 题次），r4 − RR-τ 的 ΔF1 为 +20.841 个百分点（n=10,824 对）。[报告](../eval/test_v1/test_v1_report.md)
 
 
 ## 任务20 · 真实 Agent 测试
 
-本地 Qwen3-8B 在 MuSiQue、HotpotQA 和 2Wiki 上完成 n=300 个多题任务。合并 r4 重选 − RR-τ 重选 ΔF1 为 +0.993 个百分点（n=900 题对）。[任务20报告](eval/agent_v1/agent_v1_report.md)
+本地 Qwen3-8B 在 MuSiQue、HotpotQA 和 2Wiki 上完成 n=300 个多题任务。合并 r4 重选 − RR-τ 重选 ΔF1 为 +0.993 个百分点（n=900 题对）。[任务20报告](../eval/agent_v1/agent_v1_report.md)
 
 ---
 

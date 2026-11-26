@@ -112,7 +112,7 @@ Question: {question}
 
 选择vLLM 0.11.0，官方v0.11.0[CUDA文档](https://github.com/vllm-project/vllm/blob/v0.11.0/docs/getting_started/installation/gpu/cuda.inc.md)明确使用CUDA12.8 wheel；配套torch 2.8.0、xformers0.0.32.post1，与Ada和驱动580.95.05相容并经本地smoke验证。numpy 2.2.6满足numba0.61.2的<2.3限制。全部传递依赖锁定在requirements.reader.lock.txt。ModelScope官方master清单16文件、16,397,461,896 bytes，下载URL固定各文件revision，逐文件核对官方Sha256后再次离线复核。模型manifest固定摘要 `e4d78679a6b360e59592d3afb87ddde6aa34fb31dd8fbb6f064fc66cf0519a2e`。
 
-环境、模型、TMP/PIP/XDG/HF/ModelScope/vLLM/Triton/TorchInductor/CUDA/CuPy/Ray/Conda/pycache等缓存全部在userfolder。完整变量、来源、安装1179秒、模型下载2442.489秒和离线校验37.540秒见[准备记录](notes_task03_environment.md)。下载的有效partial EOF改为Range继续，只有无进展/校验错误消耗重试预算；进程先退出后再从3改4线程续传，没有并发manifest writer。
+环境、模型、TMP/PIP/XDG/HF/ModelScope/vLLM/Triton/TorchInductor/CUDA/CuPy/Ray/Conda/pycache等缓存全部在userfolder。完整变量、来源、安装1179秒、模型下载2442.489秒和离线校验37.540秒见[准备记录](notes/notes_task03_environment.md)。下载的有效partial EOF改为Range继续，只有无进展/校验错误消耗重试预算；进程先退出后再从3改4线程续传，没有并发manifest writer。
 
 ### 本次smoke审阅及guard修正
 
@@ -120,9 +120,9 @@ Question: {question}
 
 no_compress/task4/question1（0-based）产生35词、48 tokens的解释性单行，finish_reason=length，末尾为“the 2001 Honda”。它未遵从短答案格式；固定规则没有可删除的think或Answer前缀，因此保留原文，EM=F1=0。该项占1/40=2.5%，也是唯一>20词样本。其余39条均stop且≤20词，但no_compress/task4/question3仍是一条16词解释句（23 tokens），解析只去末尾句号，EM=F1=0，不能把其余39条一概称为短语。
 
-初始实现额外把任意finish_reason=length当作smoke失败，所以在生成任何全量预测前退出。按任务固定max_tokens=48，length属于输出预算命中；任务明确禁止的是输入上下文截断。修正这一额外guard后，保留原始smoke_predictions.jsonl、smoke_samples.md、smoke_checks.json和[初次运行配置](eval/reader/run_config_smoke_initial.json)，保存[独立审阅](eval/reader/smoke_review.json)，通过 `--reuse-reviewed-smoke` 核对摘要和输入后复用原40条小样进行校验，未重新生成smoke。随后只执行一次12,000题全量；没有改变模板、48-token上限、解析规则，也没有按得分或输出长度筛除、挑选或补跑样本。初始smoke进程仅记录到物理GPU1 UUID，未出现其他GPU进程归属。
+初始实现额外把任意finish_reason=length当作smoke失败，所以在生成任何全量预测前退出。按任务固定max_tokens=48，length属于输出预算命中；任务明确禁止的是输入上下文截断。修正这一额外guard后，保留原始smoke_predictions.jsonl、smoke_samples.md、smoke_checks.json和[初次运行配置](../eval/reader/run_config_smoke_initial.json)，保存[独立审阅](../eval/reader/smoke_review.json)，通过 `--reuse-reviewed-smoke` 核对摘要和输入后复用原40条小样进行校验，未重新生成smoke。随后只执行一次12,000题全量；没有改变模板、48-token上限、解析规则，也没有按得分或输出长度筛除、挑选或补跑样本。初始smoke进程仅记录到物理GPU1 UUID，未出现其他GPU进程归属。
 
-一次尝试启动全量时，root的overlay全盘df计数相对基线出现341,770,240 bytes的单采样增量，触发磁盘guard；2秒后回落至约55.8MB。该尝试在第一条全量预测前停止，predictions为0行，GPU已释放。初次smoke的CPU准备期（GPU仍375MiB）也曾记录205,033,472 bytes的单采样尖峰。不能只凭回落认定是外部I/O；先停下调查，不把原始峰值删去或改低。调查处置：空闲120点的root增量约55.8–60.2MB；CPU-only完整prepare复检的1334个0.1秒采样约60.1–64.6MB，没有超过100MB，tempfile实际目录为userfolder/cache/tmp。没有定位具体写入者，未证实属于他人I/O。保留原始磁盘中止run_config与0行文件；新guard保留300MB门槛，超限时采集可见writable root FD元数据并暂停后续提交：在提交边界检查到本任务存在>100MB的root可写普通文件即停止；超过300MB持续60秒则停止；仅在连续两次、间隔2秒的root读数均≤300MB后记录incident并恢复。4个合成control-flow检查通过。最终验收依据成功完成、最终增量≤300MB和所有超限事件均已完成上述复查，不宣称全程峰值≤300MB。 [CPU诊断摘要](eval/reader/root_disk_cpu_diagnostic.json)保留实际采样范围和外置诊断trace摘要。
+一次尝试启动全量时，root的overlay全盘df计数相对基线出现341,770,240 bytes的单采样增量，触发磁盘guard；2秒后回落至约55.8MB。该尝试在第一条全量预测前停止，predictions为0行，GPU已释放。初次smoke的CPU准备期（GPU仍375MiB）也曾记录205,033,472 bytes的单采样尖峰。不能只凭回落认定是外部I/O；先停下调查，不把原始峰值删去或改低。调查处置：空闲120点的root增量约55.8–60.2MB；CPU-only完整prepare复检的1334个0.1秒采样约60.1–64.6MB，没有超过100MB，tempfile实际目录为userfolder/cache/tmp。没有定位具体写入者，未证实属于他人I/O。保留原始磁盘中止run_config与0行文件；新guard保留300MB门槛，超限时采集可见writable root FD元数据并暂停后续提交：在提交边界检查到本任务存在>100MB的root可写普通文件即停止；超过300MB持续60秒则停止；仅在连续两次、间隔2秒的root读数均≤300MB后记录incident并恢复。4个合成control-flow检查通过。最终验收依据成功完成、最终增量≤300MB和所有超限事件均已完成上述复查，不宣称全程峰值≤300MB。 [CPU诊断摘要](../eval/reader/root_disk_cpu_diagnostic.json)保留实际采样范围和外置诊断trace摘要。
 
 全量完成后的交付审阅又加固了暂停期间新增告警的再次检查，避免只检查进入暂停前的告警。本次所有实际告警已由独立验收检查，均无本任务大文件写入；该代码加固未重新运行推理、未修改任何预测或评分。实际执行源码保存在 `specs/task03_executed_run_reader.py.txt`，摘要见 `eval/reader/execution_source_receipt.json`；新增竞态检查的验证见 `eval/reader/disk_guard_late_alert_check.json`。
 
@@ -190,7 +190,7 @@ A8曾在初始化阶段因缺length字段退出，0 optimizer step；原日志�
 
 早期A1的ms-swift默认check_model逻辑存在模型仓库元数据GET尝试；既有日志不足以确认是否送达，相关审计如实保留。其后A4/A8/B显式check_model=False；未调用外部模型推理API。下载仅发生在5880的独立工具链准备，未使用代理；3080仅同步mirror小产物。
 
-根盘计数采用原始基线931440451584 bytes和终态df，不以“可能为其他进程”扣减。此前仅将确认为本任务所有的pytest-7/8临时树迁至userfolder，逐文件/链接验证保留；没有清理未知或他人文件。C期间曾观测非本任务GPU进程共享占用，仅留元数据证据，未管理其他进程。详细时间线、来源边界与收据索引见[执行日志](notes_task05_execution.md)。
+根盘计数采用原始基线931440451584 bytes和终态df，不以“可能为其他进程”扣减。此前仅将确认为本任务所有的pytest-7/8临时树迁至userfolder，逐文件/链接验证保留；没有清理未知或他人文件。C期间曾观测非本任务GPU进程共享占用，仅留元数据证据，未管理其他进程。详细时间线、来源边界与收据索引见[执行日志](notes/notes_task05_execution.md)。
 
 严格finalizer的300MB门槛保持不变。独立失败导出器仅在其余完成/PID/GPU门禁全部通过且根盘仍超限时，导出failed资源收据与稳定完整外置清单，返回码仍为1。最终报告无缺项，整体failed；这与模型计算完整、文件清单完整及审计通过分别记录。
 
@@ -216,9 +216,9 @@ SFT 数据统计使用 step ≥ 1 动作前的保留区，空集按 gold 的子�
 
 ## 任务06　留出集闭环评测完成
 
-每条轨迹在最后一步少保留任何一段已揭示的证据，即计一次证据丢失；任务末召回则先按轨迹计算再取平均。选择顺序沿用任务05，依次看合并丢失率最低、合并末召回最高和 checkpoint 步数最早。评测使用同一批 249 个训练留出任务、2,326 个检索步骤。两版保存的教师轨迹不同，剥离教师动作后，任务身份、题目和检索步骤的序列哈希一致；首步提示逐字节和 token ID 均相同（n=1,494）。[输入核验](eval/sft_run_v2/heldout_v2_preflight.json)
+每条轨迹在最后一步少保留任何一段已揭示的证据，即计一次证据丢失；任务末召回则先按轨迹计算再取平均。选择顺序沿用任务05，依次看合并丢失率最低、合并末召回最高和 checkpoint 步数最早。评测使用同一批 249 个训练留出任务、2,326 个检索步骤。两版保存的教师轨迹不同，剥离教师动作后，任务身份、题目和检索步骤的序列哈希一致；首步提示逐字节和 token ID 均相同（n=1,494）。[输入核验](../eval/sft_run_v2/heldout_v2_preflight.json)
 
-中档重选模式下，已保留旧证据的逐步存活率为 v1 的 2,247/3,681 与 v2 的 8,742/8,764。第 1 步起、输出有效且保留区全为已知证据时，仍有删除动作的步数分别为 1,313/1,699 与 10/1,328。两项统计对应的模型分别为各版本选中的 checkpoint-2000。只追加模式按协议不能删除。完整分母和首错分类见[留出集报告](eval/sft_run_v2/sft_v2_report.md)。
+中档重选模式下，已保留旧证据的逐步存活率为 v1 的 2,247/3,681 与 v2 的 8,742/8,764。第 1 步起、输出有效且保留区全为已知证据时，仍有删除动作的步数分别为 1,313/1,699 与 10/1,328。两项统计对应的模型分别为各版本选中的 checkpoint-2000。只追加模式按协议不能删除。完整分母和首错分类见[留出集报告](../eval/sft_run_v2/sft_v2_report.md)。
 
 后台等卡 130,812.48 秒，优化循环 24,081.22 秒，含启动、保存和退出的训练阶段墙钟为 24,365.28 秒（各 n=1）。训练记录覆盖 2,500 个优化步、40,000 次样本使用和 5 次固定子集验证。训练与评测共记录 1,140 次资源观测，最大相邻间隔 30.61 秒。
 
@@ -252,9 +252,9 @@ Claude 只读失败分析（3080）：`claude_checks/grpo_failure_analysis.py`�
 
 ## 任务09　打分口径与 H0 一致性
 
-固定样本取自任务06的 13,926 个有效步。候选第一名与原贪心动作一致 297/300。最终实现对同一次 BF16 前向的原始 logits 独立归一化，与 vLLM 返回的生成对数概率核对，最大绝对差为 7.024×10⁻⁷ nat（n=300 步）。任务06保存的正文隐藏停止符 EOS，直接重编码与含 EOS 的完整序列一致 0/300，与正文 token 一致 300/300。让诊断解码保留 EOS 后，完整 token 序列一致 300/300。[打分回执](eval/hedge_v2/score_checks.json)
+固定样本取自任务06的 13,926 个有效步。候选第一名与原贪心动作一致 297/300。最终实现对同一次 BF16 前向的原始 logits 独立归一化，与 vLLM 返回的生成对数概率核对，最大绝对差为 7.024×10⁻⁷ nat（n=300 步）。任务06保存的正文隐藏停止符 EOS，直接重编码与含 EOS 的完整序列一致 0/300，与正文 token 一致 300/300。让诊断解码保留 EOS 后，完整 token 序列一致 300/300。[打分回执](../eval/hedge_v2/score_checks.json)
 
-H0 与任务06 SFT v2 在 13,956 个对齐步中有 13,618 个输入状态相同，这些步骤的原始输出有 96/13,618 条不同。末步证据丢失分别为 957/1,494 和 956/1,494。在紧预算重选模式，H0、H1、H2 分别丢失 165、173、183 条轨迹；在紧预算只追加模式，分别丢失 157、115、187 条轨迹（每策略每格 n=249）。[H0 逐格差异](eval/hedge_v2/nohedge/extra.json)
+H0 与任务06 SFT v2 在 13,956 个对齐步中有 13,618 个输入状态相同，这些步骤的原始输出有 96/13,618 条不同。末步证据丢失分别为 957/1,494 和 956/1,494。在紧预算重选模式，H0、H1、H2 分别丢失 165、173、183 条轨迹；在紧预算只追加模式，分别丢失 157、115、187 条轨迹（每策略每格 n=249）。[H0 逐格差异](../eval/hedge_v2/nohedge/extra.json)
 
 ## 任务10 预登记口径与启动记录
 
@@ -267,56 +267,56 @@ H0 与任务06 SFT v2 在 13,956 个对齐步中有 13,618 个输入状态相同
 
 E 按贪心策略评测，从 4 个候选的合并证据丢失率、最终召回和训练步依次选点。选中第 3,000 步（丢失 886/1,494 条轨迹）。固定验证集的最低 loss 出现在第 3,500 步（0.03483550，n=1,000 条验证样本），使用该验证集记录训练曲线。跨方法表中的平均新增段数按实际执行后新增的片段计，无效动作贡献零（每种方法 n=13,956 步）。丢弃精确率按实际丢掉的段计，SFT v2 为 61/129，SFT v3 为 526/793。
 
-F 在同一批 DAgger 状态上比较两种策略，300/300 个状态的 ID、提示与奖励输入逐项相同，与已抽取的 10,000 个 DAgger 训练状态交集为零。SFT v3 请求至少新增两段为 420/2,400 次，实际执行为 414/2,400 次。按 B 的奖励，在 μ=0.5 时，组内奖励零方差为 SFT v3 的 149/300 组、SFT v2 的 218/300 组。各价格和各模式另列于报告。[探针对照](eval/sft_run_v3/sft_v3_report.md) · [原始输出复核](eval/sft_run_v3/final_audit.json)
+F 在同一批 DAgger 状态上比较两种策略，300/300 个状态的 ID、提示与奖励输入逐项相同，与已抽取的 10,000 个 DAgger 训练状态交集为零。SFT v3 请求至少新增两段为 420/2,400 次，实际执行为 414/2,400 次。按 B 的奖励，在 μ=0.5 时，组内奖励零方差为 SFT v3 的 149/300 组、SFT v2 的 218/300 组。各价格和各模式另列于报告。[探针对照](../eval/sft_run_v3/sft_v3_report.md) · [原始输出复核](../eval/sft_run_v3/final_audit.json)
 
 ## 任务11　奖励分项、分母与选点
 
 第二轮复用任务10的奖励 v2，μ=0.5。无效输出执行为空操作，另扣一分。Swift 按每八次生成的奖励减组内均值计算优势，未按组内标准差缩放。正式训练的 500 个优化步各有 32 个新样本；加上 Swift 在收尾时重复记录的末步 32 条，共复算 16,032 条日志，奖励与优势不一致数均为 0/16,032。
 
-对比表中每步新增取实际执行后的新增片段，以全部决策步为分母。留出集上，SFT v3 与 GRPO checkpoint-125 分别有 890/13,956 和 2,867/13,956 步新增至少两段。每步丢失的可得金段由 0.110060 变为 0.084623，平均保留量由 0.712057 变为 0.795858 千 token，无效输出由 44/13,956 变为 167/13,956（两种策略各 n=13,956 步）。H1 使用包装器实际执行的动作，BM25 和 oracle 使用归档的确定性动作。相同状态的原始输出差异仅在输入一致的观测上计数；F0 与起点为 252/13,057。[留出集与奖励表](eval/grpo_r2/grpo_r2_report.md)
+对比表中每步新增取实际执行后的新增片段，以全部决策步为分母。留出集上，SFT v3 与 GRPO checkpoint-125 分别有 890/13,956 和 2,867/13,956 步新增至少两段。每步丢失的可得金段由 0.110060 变为 0.084623，平均保留量由 0.712057 变为 0.795858 千 token，无效输出由 44/13,956 变为 167/13,956（两种策略各 n=13,956 步）。H1 使用包装器实际执行的动作，BM25 和 oracle 使用归档的确定性动作。相同状态的原始输出差异仅在输入一致的观测上计数；F0 与起点为 252/13,057。[留出集与奖励表](../eval/grpo_r2/grpo_r2_report.md)
 
 
 ## 任务12　Qwen3-8B 留出集阅读评测
 
-沿用任务03的阅读模板、生成参数和 EM/F1 解析。历史小样的原始回答有 1/40 条不同。判定证据齐全时按问题核对所有支持段，判定整条轨迹丢失时核对任务中全部支持段。两种对照的实际评测次数见结构化结果，其中闭卷对照为 n=996。完整输入长度预检覆盖 49,800/49,800 条，截断为 0/49,800。GPU 1 的峰值显存为 42,423 MiB（n=1,515 个监控样本）。[报告](eval/reader_heldout/reader_heldout_report.md) · [结构化结果](eval/reader_heldout/reader_heldout_results.json)
+沿用任务03的阅读模板、生成参数和 EM/F1 解析。历史小样的原始回答有 1/40 条不同。判定证据齐全时按问题核对所有支持段，判定整条轨迹丢失时核对任务中全部支持段。两种对照的实际评测次数见结构化结果，其中闭卷对照为 n=996。完整输入长度预检覆盖 49,800/49,800 条，截断为 0/49,800。GPU 1 的峰值显存为 42,423 MiB（n=1,515 个监控样本）。[报告](../eval/reader_heldout/reader_heldout_report.md) · [结构化结果](../eval/reader_heldout/reader_heldout_results.json)
 
 
 ## 任务13 · GRPO 第三轮（2026-11-24）
 
-北京时间 08:11:22，首次 G 在 vLLM 初始化时因 ZMQ IPC 路径超过 107 字节失败。保留首跑 reader_heldout/grpo_r3_checkpoint-250/。手动恢复时沿用任务12 的环境脚本，在 source 后把 TMPDIR、TMP、TEMP、RAY_TMPDIR 指向 /root/userfolder/ctx-compressor/rt/g13，检查路径 75 字节、URI 81 字节。第二次输出在 reader_heldout/grpo_r3_checkpoint-250_try2/，两次请求哈希相同（各 n=5,976）。[恢复与校验记录](eval/grpo_r3/final_audit.json)
+北京时间 08:11:22，首次 G 在 vLLM 初始化时因 ZMQ IPC 路径超过 107 字节失败。保留首跑 reader_heldout/grpo_r3_checkpoint-250/。手动恢复时沿用任务12 的环境脚本，在 source 后把 TMPDIR、TMP、TEMP、RAY_TMPDIR 指向 /root/userfolder/ctx-compressor/rt/g13，检查路径 75 字节、URI 81 字节。第二次输出在 reader_heldout/grpo_r3_checkpoint-250_try2/，两次请求哈希相同（各 n=5,976）。[恢复与校验记录](../eval/grpo_r3/final_audit.json)
 
 任务13 的读者 F1（r3 50.709）待复测，见任务15。
 
 
 ## 任务14 · 错峰与账本
 
-全量调用 n=2,588，小样 n=36，两阶段账本合计 ¥3.03074106。全量按北京时间高峰暂停，每笔调用按实际 usage 核算。余额与逐笔账本的差额见 [运行配置](eval/deepseek_api/run_config.json)。
+全量调用 n=2,588，小样 n=36，两阶段账本合计 ¥3.03074106。全量按北京时间高峰暂停，每笔调用按实际 usage 核算。余额与逐笔账本的差额见 [运行配置](../eval/deepseek_api/run_config.json)。
 
 任务12 / 13 的读者 F1 被任务16（关 cascade）取代，旧数保留。
 
 
 ## 任务17 · 复算与续跑
 
-第一次续跑在 held-out 准备入口把映射键写入每条记录的 task 字段。第二次加载任务11的签名环境脚本，把 C 编译器检查放到 GPU 闸门前。两次均按回执复用已完成阶段。事后按训练 gold 出现情况分组，r4 用任务18 G 与任务17 RR-τ 配对。[异常与分组结果](eval/reranker_v1/reranker_v1_report.md)
+第一次续跑在 held-out 准备入口把映射键写入每条记录的 task 字段。第二次加载任务11的签名环境脚本，把 C 编译器检查放到 GPU 闸门前。两次均按回执复用已完成阶段。事后按训练 gold 出现情况分组，r4 用任务18 G 与任务17 RR-τ 配对。[异常与分组结果](../eval/reranker_v1/reranker_v1_report.md)
 
 ## 任务18 · 奖励定价与确认范围
 
-C 在同批缓存动作上重打分，D 复用任务11的 2,000/2,000 个 state_id。无关段价格来自任务16留出集的回归（n=41,832 行）。最终结论以锁定测试集为准。[奖励与逐项回执](eval/grpo_r4/grpo_r4_results.json)
+C 在同批缓存动作上重打分，D 复用任务11的 2,000/2,000 个 state_id。无关段价格来自任务16留出集的回归（n=41,832 行）。最终结论以锁定测试集为准。[奖励与逐项回执](../eval/grpo_r4/grpo_r4_results.json)
 
 
 ## 任务19 · 锁定检查
 
-锁定测试集已于任务19第一次使用。动手前及交付前的五个文件 SHA256 一致。锁定集去重 gold 在全部 train 与 held-out 轨迹中当过 gold 的段数为 0/2,155。[交付前锁定核验](eval/test_v1/lock_final.json)
+锁定测试集已于任务19第一次使用。动手前及交付前的五个文件 SHA256 一致。锁定集去重 gold 在全部 train 与 held-out 轨迹中当过 gold 的段数为 0/2,155。[交付前锁定核验](../eval/test_v1/lock_final.json)
 
 
 ## 任务19／20 · 资源监控路径事故
 
-北京时间 2026-11-25 18:27:26，任务20的首条闸门采样（n=1）因继承默认目录误写任务10的已签名日志。原始前缀（n=655 条）已按授权恢复并验签，追加版和原始事故回执另行保留。任务20显式限定监控输出目录，CPU 回归也核对了任务19的监控路径。[事故记录](eval/test_v1/historical_monitor_incident.json)
+北京时间 2026-11-25 18:27:26，任务20的首条闸门采样（n=1）因继承默认目录误写任务10的已签名日志。原始前缀（n=655 条）已按授权恢复并验签，追加版和原始事故回执另行保留。任务20显式限定监控输出目录，CPU 回归也核对了任务19的监控路径。[事故记录](../eval/test_v1/historical_monitor_incident.json)
 
 
 ## 任务20 · 正式运行与冒烟记录
 
-正式运行沿用 try3 冻结的 Thought: 预填、任务划分和解码。任务10日志恢复、监控目录修复、冒烟峰值和规则 (a)–(d) 均已在报告存档。open-provence 为第三方复现，缺少 NLTK 数据，本轮未跑。全部推理落盘后触发根分区规则 (a)，原失败回执保留。按授权仅以现有归档做 CPU 收尾。[配置与签名来源](eval/agent_v1/run_config.json)
+正式运行沿用 try3 冻结的 Thought: 预填、任务划分和解码。任务10日志恢复、监控目录修复、冒烟峰值和规则 (a)–(d) 均已在报告存档。open-provence 为第三方复现，缺少 NLTK 数据，本轮未跑。全部推理落盘后触发根分区规则 (a)，原失败回执保留。按授权仅以现有归档做 CPU 收尾。[配置与签名来源](../eval/agent_v1/run_config.json)
 
 ## 2026-11-26 任务21 / 仓库整理（Claude）
 

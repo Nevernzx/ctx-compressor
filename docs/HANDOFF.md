@@ -201,13 +201,13 @@ export CUDA_VISIBLE_DEVICES=''
 
 只检查旧任务保护可用 `scripts/checksums_task03.py --verify-previous`；只检查文档追加前置条件可用 `scripts/append_reader_documents.py --check-only`（已有任务03marker时同样拒绝）。权重不进入SHA256SUMS，数据预测进入；任务01/02不变文件和三份主文档原字节前缀持续核对。
 
-主要结果：[reader_report.md](eval/reader/reader_report.md)、[reader_results.json](eval/reader/reader_results.json)、[run_config.json](eval/reader/run_config.json)、[smoke_samples.md](eval/reader/smoke_samples.md)。逐题预测位于 `data/reader/predictions.jsonl`，不复制到3080。mirror仅用rsync -a同步代码、文档、requirements.reader.lock.txt和eval/reader小结果，不使用--delete、不同步data/reader、模型、环境或cache。
+主要结果：[reader_report.md](../eval/reader/reader_report.md)、[reader_results.json](../eval/reader/reader_results.json)、[run_config.json](../eval/reader/run_config.json)、[smoke_samples.md](../eval/reader/smoke_samples.md)。逐题预测位于 `data/reader/predictions.jsonl`，不复制到3080。mirror仅用rsync -a同步代码、文档、requirements.reader.lock.txt和eval/reader小结果，不使用--delete、不同步data/reader、模型、环境或cache。
 
 
 ## 任务04：SFT 数据与吞吐基准
 
 
-任务04已完成数据、环境、模型和唯一100-step吞吐基准。正式训练样本量尚未选择；不要启动全量SFT、额外benchmark或GRPO。结果入口为 [sft_prep_report.md](eval/sft_prep/sft_prep_report.md)，每个统计附分母，附5个方案估时；[sft_prep_results.json](eval/sft_prep/sft_prep_results.json)供程序读取。
+任务04已完成数据、环境、模型和唯一100-step吞吐基准。正式训练样本量尚未选择；不要启动全量SFT、额外benchmark或GRPO。结果入口为 [sft_prep_report.md](../eval/sft_prep/sft_prep_report.md)，每个统计附分母，附5个方案估时；[sft_prep_results.json](../eval/sft_prep/sft_prep_results.json)供程序读取。
 
 ### CPU复核
 
@@ -296,7 +296,7 @@ A/B/C及全量闭环审计已结束，现有模型和结果可直接使用。最
 
 5880 的流水线已于北京时间 2026-11-20 20:51 正常退出。v2 选中的 LoRA 位于 `/root/userfolder/ctx-compressor/runs/sft_20k_v2_20261118/checkpoints/checkpoint-2000`，基础模型位于 `/root/userfolder/ctx-compressor/models/Qwen3-1.7B`。adapter_model.safetensors 的 SHA-256 为 `7253eae08072782971fa8b7874e97fc3e76dee4ebd11ced5c014147090cf1f9c`。选点按 n=5 个完整 checkpoint、每个 n=1,494 条轨迹计算。
 
-五个 checkpoint 的动作原文与逐步状态位于 `/root/userfolder/ctx-compressor/eval_rollouts_v2/<checkpoint>/steps.jsonl`。固定数据、训练输出和原始闭环文件的路径、大小及 SHA-256 见[外置清单](eval/sft_run_v2/external_manifest_v2.json)。[机器可读结果](eval/sft_run_v2/sft_v2_results.json)和[中文报告](eval/sft_run_v2/sft_v2_report.md)包含中档基线及全部 checkpoint 诊断。[测试记录](eval/sft_run_v2/final_tests_v2.json)及[资源记录](eval/sft_run_v2/final_resource_v2.json)保留了本次收尾的核验依据。
+五个 checkpoint 的动作原文与逐步状态位于 `/root/userfolder/ctx-compressor/eval_rollouts_v2/<checkpoint>/steps.jsonl`。固定数据、训练输出和原始闭环文件的路径、大小及 SHA-256 见[外置清单](../eval/sft_run_v2/external_manifest_v2.json)。[机器可读结果](../eval/sft_run_v2/sft_v2_results.json)和[中文报告](../eval/sft_run_v2/sft_v2_report.md)包含中档基线及全部 checkpoint 诊断。[测试记录](../eval/sft_run_v2/final_tests_v2.json)及[资源记录](../eval/sft_run_v2/final_resource_v2.json)保留了本次收尾的核验依据。
 
 
 ## 任务07　GRPO 准备　已完成，正式 GRPO 待定
@@ -313,15 +313,15 @@ A/B/C及全量闭环审计已结束，现有模型和结果可直接使用。最
 
 ## 任务08　正式 GRPO 训练与留出评测完成
 
-流水线于北京时间 2026-11-21 08:55:52 结束，状态为 `evaluation_complete`。选中的 LoRA 在 5880 的 `/root/userfolder/ctx-compressor/grpo_v2/train/checkpoint-500`，加载时使用合并后的基座 `/root/userfolder/ctx-compressor/grpo_v2/merged_v2_ckpt2000`。适配器权重 SHA-256 为 `e1f77a2077a14eb85ae03edd71f3800d42986faeaafbbcd3b038f33fad14c33c`。[选点记录](eval/grpo_v2/selected_checkpoint.json)
+流水线于北京时间 2026-11-21 08:55:52 结束，状态为 `evaluation_complete`。选中的 LoRA 在 5880 的 `/root/userfolder/ctx-compressor/grpo_v2/train/checkpoint-500`，加载时使用合并后的基座 `/root/userfolder/ctx-compressor/grpo_v2/merged_v2_ckpt2000`。适配器权重 SHA-256 为 `e1f77a2077a14eb85ae03edd71f3800d42986faeaafbbcd3b038f33fad14c33c`。[选点记录](../eval/grpo_v2/selected_checkpoint.json)
 
-四个 GRPO checkpoint 和 F0 各完成 1,494 条留出轨迹、13,956 个决策步；逐步输出在 `/root/userfolder/ctx-compressor/eval_rollouts_grpo_v2/<策略>/steps.jsonl`。训练与采样的原始文件在 `/root/userfolder/ctx-compressor/grpo_v2/`。[完整清单](eval/grpo_v2/TASK08_SHA256SUMS)记录外置路径和哈希。[优化日志 CSV](eval/grpo_v2/training_curve.csv)与[训练核验](eval/grpo_v2/training_checks.json)保留每步数值和奖励复算结果。
+四个 GRPO checkpoint 和 F0 各完成 1,494 条留出轨迹、13,956 个决策步；逐步输出在 `/root/userfolder/ctx-compressor/eval_rollouts_grpo_v2/<策略>/steps.jsonl`。训练与采样的原始文件在 `/root/userfolder/ctx-compressor/grpo_v2/`。[完整清单](../eval/grpo_v2/TASK08_SHA256SUMS)记录外置路径和哈希。[优化日志 CSV](../eval/grpo_v2/training_curve.csv)与[训练核验](../eval/grpo_v2/training_checks.json)保留每步数值和奖励复算结果。
 
 ## 任务09　阈值选取与留出集回执
 
-5880 流水线于北京时间 2026-11-21 22:02:42 完成，训练状态打分与 H0、H1、H2 共 4/4 个阶段退出码为 0。输入为原始 Qwen3-1.7B 加任务06的 SFT v2 checkpoint-2000。τ=0.99 由训练状态的最高平均单步奖励选定（1.204460，n=22,158），三个留出运行均引用同一份[选点回执](eval/hedge_v2/train_selection.json)。
+5880 流水线于北京时间 2026-11-21 22:02:42 完成，训练状态打分与 H0、H1、H2 共 4/4 个阶段退出码为 0。输入为原始 Qwen3-1.7B 加任务06的 SFT v2 checkpoint-2000。τ=0.99 由训练状态的最高平均单步奖励选定（1.204460，n=22,158），三个留出运行均引用同一份[选点回执](../eval/hedge_v2/train_selection.json)。
 
-逐状态候选分数和九档开放环动作在 5880 的 `/root/userfolder/ctx-compressor/hedge_v2/train/state_scores.jsonl`。三个策略的逐步贪心原文、实际动作及加段记录在 `/root/userfolder/ctx-compressor/eval_rollouts_hedge_v2/{nohedge,tau_star,always}/steps.jsonl`，每个文件 n=13,956 步。[报告](eval/hedge_v2/hedge_v2_report.md) · [独立复算](eval/hedge_v2/final_audit.json) · [任务09校验清单](eval/hedge_v2/TASK09_SHA256SUMS)
+逐状态候选分数和九档开放环动作在 5880 的 `/root/userfolder/ctx-compressor/hedge_v2/train/state_scores.jsonl`。三个策略的逐步贪心原文、实际动作及加段记录在 `/root/userfolder/ctx-compressor/eval_rollouts_hedge_v2/{nohedge,tau_star,always}/steps.jsonl`，每个文件 n=13,956 步。[报告](../eval/hedge_v2/hedge_v2_report.md) · [独立复算](../eval/hedge_v2/final_audit.json) · [任务09校验清单](../eval/hedge_v2/TASK09_SHA256SUMS)
 
 ## 任务10 后台流水线
 
@@ -335,53 +335,53 @@ A/B/C及全量闭环审计已结束，现有模型和结果可直接使用。最
 
 ## 任务10　续跑收尾与选中权重
 
-5880 上的续跑于北京时间 2026-11-23 01:06:48 完成。外盘 `/root/userfolder/ctx-compressor/dagger_v3/pipeline_status_resume1.json` 登记 `evaluation_complete`。10/10 个阶段的回执路径、字节数及 SHA256 均已核验。所选适配器是 `/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints/checkpoint-3000`，配合原始 Qwen3-1.7B 基座加载；权重 SHA256 为 `97c85137ad8531ef79c26cdb049630ac10ef88650c937f98ae8cf013a08820a5`。[选点回执](eval/sft_run_v3/selected_checkpoint.json)
+5880 上的续跑于北京时间 2026-11-23 01:06:48 完成。外盘 `/root/userfolder/ctx-compressor/dagger_v3/pipeline_status_resume1.json` 登记 `evaluation_complete`。10/10 个阶段的回执路径、字节数及 SHA256 均已核验。所选适配器是 `/root/userfolder/ctx-compressor/runs/sft_v3_20261121/checkpoints/checkpoint-3000`，配合原始 Qwen3-1.7B 基座加载；权重 SHA256 为 `97c85137ad8531ef79c26cdb049630ac10ef88650c937f98ae8cf013a08820a5`。[选点回执](../eval/sft_run_v3/selected_checkpoint.json)
 
-四次评测的逐步记录在外盘 `eval_rollouts_v3/<checkpoint>/steps.jsonl`（各 n=13,956 步）。两次探针原始记录在 `dagger_v3/probe/{v2,v3}/sampler/probe_outputs.jsonl`（各 n=2,400 次生成）。锁定的 dev 集保留 451 个任务，首次策略使用仍遵循既有锁定记录。[报告](eval/sft_run_v3/sft_v3_report.md) · [测试回执](eval/sft_run_v3/final_tests.json) · [任务10清单](eval/sft_run_v3/TASK10_SHA256SUMS) · [测试集锁定记录](eval/test_dev_v1/LOCK.md)
+四次评测的逐步记录在外盘 `eval_rollouts_v3/<checkpoint>/steps.jsonl`（各 n=13,956 步）。两次探针原始记录在 `dagger_v3/probe/{v2,v3}/sampler/probe_outputs.jsonl`（各 n=2,400 次生成）。锁定的 dev 集保留 451 个任务，首次策略使用仍遵循既有锁定记录。[报告](../eval/sft_run_v3/sft_v3_report.md) · [测试回执](../eval/sft_run_v3/final_tests.json) · [任务10清单](../eval/sft_run_v3/TASK10_SHA256SUMS) · [测试集锁定记录](../eval/test_dev_v1/LOCK.md)
 
 ## 任务11　正式 GRPO 归档
 
-5880 上的流水线在北京时间 2026-11-23 14:37:32 写入 `evaluation_complete`。10/10 个阶段的退出码为零；阶段回执、字节数与 SHA256 已核验。加载所选策略时，基座为 `/root/userfolder/ctx-compressor/grpo_r2/merged_start`，其上加载新 LoRA `/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125`。适配器权重 SHA256 为 `84612222c59733d2652dba101c526f448f3f9ea525ce80696489f4a2ebf05886`。[选点回执](eval/grpo_r2/selected_checkpoint.json) · [流水线核验](eval/grpo_r2/final_audit.json)
+5880 上的流水线在北京时间 2026-11-23 14:37:32 写入 `evaluation_complete`。10/10 个阶段的退出码为零；阶段回执、字节数与 SHA256 已核验。加载所选策略时，基座为 `/root/userfolder/ctx-compressor/grpo_r2/merged_start`，其上加载新 LoRA `/root/userfolder/ctx-compressor/grpo_r2/train/checkpoint-125`。适配器权重 SHA256 为 `84612222c59733d2652dba101c526f448f3f9ea525ce80696489f4a2ebf05886`。[选点回执](../eval/grpo_r2/selected_checkpoint.json) · [流水线核验](../eval/grpo_r2/final_audit.json)
 
-F0 和四个 checkpoint 的逐步动作位于 `/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/<策略>/steps.jsonl`（各 n=13,956 步）；训练状态、采样原文、数据集及优化日志保存在外盘 `grpo_r2/{states,filter,data,train}/`。[报告](eval/grpo_r2/grpo_r2_report.md) · [结果 JSON](eval/grpo_r2/grpo_r2_results.json) · [逐步训练 CSV](eval/grpo_r2/training_curve.csv) · [文件清单](eval/grpo_r2/TASK11_SHA256SUMS)
+F0 和四个 checkpoint 的逐步动作位于 `/root/userfolder/ctx-compressor/eval_rollouts_grpo_r2/<策略>/steps.jsonl`（各 n=13,956 步）；训练状态、采样原文、数据集及优化日志保存在外盘 `grpo_r2/{states,filter,data,train}/`。[报告](../eval/grpo_r2/grpo_r2_report.md) · [结果 JSON](../eval/grpo_r2/grpo_r2_results.json) · [逐步训练 CSV](../eval/grpo_r2/training_curve.csv) · [文件清单](../eval/grpo_r2/TASK11_SHA256SUMS)
 
 
 ## 任务12　Qwen3-8B 留出集阅读评测
 
-读者评测的主比较为 r2 对 SFT v3 F1 -0.019 个百分点、EM +0.318 个百分点（n=5,976 个配对）、r2 对 H1 F1 +1.145 个百分点、EM +1.355 个百分点（n=5,976 个配对）。CPU 测试通过 729/729 项，历史清单回执在 [history_post.json](eval/reader_heldout/history_post.json)。逐题预测保存在 5880 的 /root/userfolder/ctx-compressor/reader_heldout/predictions.jsonl，对应 [TASK12_SHA256SUMS](eval/reader_heldout/TASK12_SHA256SUMS)。任务13 G 通过这份清单校验 r2 的 5,976 条观测。[报告](eval/reader_heldout/reader_heldout_report.md) · [结构化结果](eval/reader_heldout/reader_heldout_results.json)
+读者评测的主比较为 r2 对 SFT v3 F1 -0.019 个百分点、EM +0.318 个百分点（n=5,976 个配对）、r2 对 H1 F1 +1.145 个百分点、EM +1.355 个百分点（n=5,976 个配对）。CPU 测试通过 729/729 项，历史清单回执在 [history_post.json](../eval/reader_heldout/history_post.json)。逐题预测保存在 5880 的 /root/userfolder/ctx-compressor/reader_heldout/predictions.jsonl，对应 [TASK12_SHA256SUMS](../eval/reader_heldout/TASK12_SHA256SUMS)。任务13 G 通过这份清单校验 r2 的 5,976 条观测。[报告](../eval/reader_heldout/reader_heldout_report.md) · [结构化结果](../eval/reader_heldout/reader_heldout_results.json)
 
 
 ## 任务13 · GRPO 第三轮（2026-11-24）
 
-任务13 已完成。原 pipeline_status.json 记录第一次 G 退出；grpo_r3/continuation_status.json 记录第二次 G 和全流程终态 evaluation_complete。所选适配器为 /root/userfolder/ctx-compressor/grpo_r3/train/checkpoint-250，读者预测在 /root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/predictions.jsonl（n=5,976）。[结果](eval/grpo_r3/grpo_r3_results.json) · [训练曲线](eval/grpo_r3/training_curve.svg) · [文件清单](eval/grpo_r3/TASK13_SHA256SUMS)
+任务13 已完成。原 pipeline_status.json 记录第一次 G 退出；grpo_r3/continuation_status.json 记录第二次 G 和全流程终态 evaluation_complete。所选适配器为 /root/userfolder/ctx-compressor/grpo_r3/train/checkpoint-250，读者预测在 /root/userfolder/ctx-compressor/reader_heldout/grpo_r3_checkpoint-250_try2/predictions.jsonl（n=5,976）。[结果](../eval/grpo_r3/grpo_r3_results.json) · [训练曲线](../eval/grpo_r3/training_curve.svg) · [文件清单](../eval/grpo_r3/TASK13_SHA256SUMS)
 
 任务13 的读者 F1（r3 50.709）待复测，见任务15。
 
 
 ## 任务14 · A、B 全量完成
 
-API 子集预测和闭环轨迹位于 /root/userfolder/ctx-compressor/deepseek_api/full/。C 阶段等待读者配置决定。[结果](eval/deepseek_api/deepseek_api_results.json) · [清单](eval/deepseek_api/TASK14_SHA256SUMS)
+API 子集预测和闭环轨迹位于 /root/userfolder/ctx-compressor/deepseek_api/full/。C 阶段等待读者配置决定。[结果](../eval/deepseek_api/deepseek_api_results.json) · [清单](../eval/deepseek_api/TASK14_SHA256SUMS)
 
 任务12 / 13 的读者 F1 被任务16（关 cascade）取代，旧数保留。
 
 
 ## 任务17 · 归档交接
 
-北京时间 2026-11-25 07:59:32 完成（n=10 阶段）。原始轨迹、预测、延迟和失败日志位于 5880 的 /root/userfolder/ctx-compressor/reranker_v1/。[运行配置](eval/reranker_v1/run_config.json) · [结果](eval/reranker_v1/reranker_v1_results.json) · [清单](eval/reranker_v1/TASK17_SHA256SUMS)
+北京时间 2026-11-25 07:59:32 完成（n=10 阶段）。原始轨迹、预测、延迟和失败日志位于 5880 的 /root/userfolder/ctx-compressor/reranker_v1/。[运行配置](../eval/reranker_v1/run_config.json) · [结果](../eval/reranker_v1/reranker_v1_results.json) · [清单](../eval/reranker_v1/TASK17_SHA256SUMS)
 
 ## 任务18 · 归档交接
 
-北京时间 2026-11-25 02:28:45 完成（n=12 阶段）。checkpoint-500 的平均无关段数为 0.910（n=1,494 轨迹）。5880 的 grpo_r4/、eval_rollouts_grpo_r4/ 和 reader_t18/ 保留原始训练、闭环与阅读产物。[结果](eval/grpo_r4/grpo_r4_results.json) · [清单](eval/grpo_r4/TASK18_SHA256SUMS)
+北京时间 2026-11-25 02:28:45 完成（n=12 阶段）。checkpoint-500 的平均无关段数为 0.910（n=1,494 轨迹）。5880 的 grpo_r4/、eval_rollouts_grpo_r4/ 和 reader_t18/ 保留原始训练、闭环与阅读产物。[结果](../eval/grpo_r4/grpo_r4_results.json) · [清单](../eval/grpo_r4/TASK18_SHA256SUMS)
 
 
 ## 任务19 · 测试交接
 
-锁定测试集已于任务19第一次使用。GPU 流水线在北京时间 2026-11-25 18:16:29 完成。5880 的 /root/userfolder/ctx-compressor/test_v1/ 留存轨迹、分数、请求、预测和阶段回执。[结构化结果](eval/test_v1/test_v1_results.json) · [签名清单](eval/test_v1/TASK19_SHA256SUMS)
+锁定测试集已于任务19第一次使用。GPU 流水线在北京时间 2026-11-25 18:16:29 完成。5880 的 /root/userfolder/ctx-compressor/test_v1/ 留存轨迹、分数、请求、预测和阶段回执。[结构化结果](../eval/test_v1/test_v1_results.json) · [签名清单](../eval/test_v1/TASK19_SHA256SUMS)
 
 
 ## 任务20 · 真实 Agent 交接
 
-正式推理在 UTC 2026-11-25T16:38:36.113557+00:00 的控制器退出前完成，后续经授权以现有归档做 CPU 收尾。5880 的 agent_v1/main_try2 留存全部正式逐轮对话和监控。[结构化结果](eval/agent_v1/agent_v1_results.json) · [交付清单](eval/agent_v1/TASK20_SHA256SUMS)
+正式推理在 UTC 2026-11-25T16:38:36.113557+00:00 的控制器退出前完成，后续经授权以现有归档做 CPU 收尾。5880 的 agent_v1/main_try2 留存全部正式逐轮对话和监控。[结构化结果](../eval/agent_v1/agent_v1_results.json) · [交付清单](../eval/agent_v1/TASK20_SHA256SUMS)
 
 ## 2026-11-26 任务21 交接（Claude）
 

@@ -1,179 +1,151 @@
-# ctx-compressor：面向多步搜索 Agent 的预算感知上下文压缩器
+# ctx-compressor
 
-> **TL;DR (English).**
-> - **What it is.** A 1.7B extractive context compressor (Qwen3-1.7B, LoRA SFT + GRPO). It decides which retrieved passages a search agent keeps under a token budget. It outputs passage ids only, so everything it keeps is traceable, and it is decoupled from the main LLM.
-> - **Locked test set** (fixed MuSiQue trajectories, 10,824 paired question-cells): F1 44.9.
->   - +20.8 over a reranker fine-tuned on the same data (Qwen3-Reranker-0.6B);
->   - +21.4 over no compression, at about 7% of the cached input cost.
-> - **Real ReAct agent with DeepSeek as the main model** (MuSiQue / HotpotQA / 2Wiki, 339 questions): F1 62.3.
->   - Matches no compression (61.9) with about 68% lower actual API cost;
->   - +12.6 over the fine-tuned reranker;
->   - +7.4 over LLMLingua-2.
-> - **With a weaker main model (Qwen3-8B)**, the compressor only ties the reranker. All results are single runs (point estimates).
+> 给多步搜索 Agent 用的 1.7B 上下文压缩器：每次搜索后只留下有用的段落，省 token，也不丢答案。
 
-## 问题
+搜索型 Agent 每一步都把检索结果塞进上下文，一条多跳任务很快就积累几万 token，其中大部分是噪声。本项目基于 Qwen3-1.7B，用 LoRA SFT + GRPO 训练一个**抽取式**压缩器。Agent 每次搜索后，压缩器根据问题、已保留的段落、新返回的段落和 token 预算，决定留哪些、丢哪些：
 
-搜索型 Agent 每一步都把工具返回的段落追加进上下文。一条多跳任务的轨迹会积累几万 token，其中大部分是噪声：既推高大模型的输入成本，也会干扰较弱的主模型作答。
+```json
+{"add": [12, 15], "drop": [3]}
+```
 
-本项目训练一个独立的小模型当"上下文管家"。主 Agent 每次搜索后，压缩器拿到下面这些输入：
+压缩器只输出段落编号、不改写原文，所以每条保留下来的内容都能追溯到来源。它和主模型解耦，主模型可以换成任意 API 模型。
 
-- 当前问题；
-- 已保留的段落；
-- 新返回的段落；
-- token 预算。
+## 项目特点
 
-它输出要保留的段落编号，形如 `{"add": [...], "drop": [...]}`。有两种模式：
-
-- **reselect**：可以丢掉旧段，压得更狠。
-- **append**：只追加、不删除，所以前缀不变，最大化 prompt cache 命中。
-
-和已有工作相比，本项目的取舍是：
-
-- 压缩器与主模型解耦，主模型可以换成任意 API；
-- 只做抽取、不改写原文，保留下来的内容都能追溯到来源；
-- 用数据集自带的证据标注算密集奖励，训练循环里不调用大模型；
-- 按含 prompt caching 的价格评测成本。
-
-相关工作的对比见 `specs/PLAN_v2.md` §2。
-
-## 方法
-
-| 部分 | 做法 |
-|---|---|
-| 任务构造 | 把 MuSiQue-Ans 的 4 道多跳题拼成一个多目标任务。每一跳用 BM25 取 top-20 段落；没有自然命中 gold 时插入 gold 段。一条轨迹约 10 步、检索内容约 2.3 万 token。训练任务 4,735 个，留出任务 249 个。 |
-| SFT | Qwen3-1.7B 加 LoRA。目标动作由 oracle 规则生成：留住全部 gold、丢掉其余段，并在预算内装箱。reselect 模式会随机加入噪声段，构造出"有东西该删"的状态。SFT v3 再加一轮 DAgger：在模型自己跑出来的状态上重新标注 oracle 动作。 |
-| GRPO | 从合并后的 SFT v3 起步，训新的 LoRA（r16 / α32，lr 1.5e-5，β 0.04，每组 8 个采样，500 步）。逐步奖励（reward v3）是 `−丢失的 gold 段数 − 0.16 × 无关段数 − 0.5 × 已用 token/1000 − 1[非法输出]`，无关段的系数用读者 F1 回归标定。 |
-| 对照 | 同数据微调的 Qwen3-Reranker-0.6B（打分后按阈值 τ = 0.5 保留，或按预算填满），以及 BM25、latest、LLMLingua-2、oracle（上限）、不压缩。 |
-| 成本 | 逐轮比较前后两次 prompt 的 token 最长公共前缀：命中部分按 0.05 计价，未命中按 1.25 计价（`eval/cost.py`）。真实 Agent 部分另外用 DeepSeek API 的实际计费做了核对。 |
+- **抽取式、可溯源**：只选编号，不生成摘要，不会编造内容。
+- **即插即用**：压缩器是独立的小模型，不需要训练主模型。
+- **两种模式**：
+  - `reselect`：可以删掉旧段落，压得更狠；
+  - `append`：只追加，前缀保持不变，prompt cache 的命中率最高。
+- **密集且便宜的奖励**：用数据集自带的证据标注逐步打分，训练循环里不调用大模型。
+- **严格的评测**：
+  - 和训练零重叠的锁定测试集，只用一次；
+  - 真实的 ReAct Agent；
+  - 成本按含 prompt caching 的价格算，并用 DeepSeek API 的实际账单做了核对。
 
 ## 结果
 
-**以下都是单次运行的点估计，n 是题次数，不算置信区间。**
+### 锁定测试集（固定轨迹，MuSiQue dev）
 
-### 1. 锁定测试集：固定轨迹 + Qwen3-8B 读者（任务19）
+固定的多步检索轨迹，由 Qwen3-8B 在最后作答，共 451 个任务、10,824 个配对题次。
 
-- **数据**：MuSiQue dev 上重建的 451 个任务、1,804 道题，每道题在 2 种模式 × 3 档预算下各算一次，配对题次 n = 10,824。
-- **隔离**：测试集的 gold 段在训练中一次都没当过 gold。
-- **为什么要另建测试集**：留出集里 83% 的 gold 段在训练时当过 gold，微调重排模型可以靠记忆打平压缩器。这里所有设置都在跑测试集之前定死，测试集只用了一次。
-
-| 行 | F1 | 开缓存输入成本 / 轨迹 |
+| 方法 | F1 ↑ | 输入成本 / 轨迹（开缓存）↓ |
 |---|---|---|
-| oracle（上限） | 54.3 | 2,109 |
-| **r4（GRPO，主行）** | **44.9** | 2,316 |
-| v3（SFT） | 43.8 | — |
-| RR-τ（微调重排模型） | 24.0 | 1,676 |
 | 不压缩 | 23.5 | 34,649 |
-| BM25 | 14.7 | — |
+| BM25 | 14.7 | 17,598 |
+| 微调重排模型（Qwen3-Reranker-0.6B，同数据训练） | 24.0 | **1,676** |
+| 本项目：SFT | 43.8 | 2,530 |
+| **本项目：SFT + GRPO** | **44.9** | 2,316 |
+| oracle（上限） | 54.3 | 2,109 |
 
-配对比较：
+> 留出集里 83% 的证据段在训练中出现过，重排模型靠记忆就能和压缩器打平。所以另建了证据段与训练零重叠的测试集，所有设置在测试前定死。
 
-| 比较 | ΔF1 |
+### 真实 ReAct Agent（主模型 DeepSeek）
+
+自建的 ReAct 搜索 Agent，只有一个 BM25 检索工具，在 MuSiQue / HotpotQA / 2Wiki 上测试，共 339 道题。HotpotQA 和 2Wiki 没参与训练。
+
+| 方法 | F1 ↑ | 实际 API 成本（元 / 任务）↓ |
+|---|---|---|
+| 不压缩 | 61.9 | 0.0250 |
+| LLMLingua-2 | 54.9 | 0.0334 |
+| 微调重排模型 | 49.6 | 0.0084 |
+| 本项目（reselect） | 62.3 | 0.0081 |
+| **本项目（append）** | **63.1** | **0.0079** |
+| oracle（上限） | 68.2 | 0.0064 |
+
+> 以上均为单次运行。主模型换成 Qwen3-8B 后（900 道题），本项目和重排模型基本打平（+1.0 / +1.7），比不压缩低 1.0，成本约为不压缩的 1/6。主模型越强、搜得越全，压缩器的优势越明显。详见 [`docs/RESULTS.md`](docs/RESULTS.md)。
+
+## 整体流程
+
+```text
+MuSiQue 多跳题
+   │  每 4 题拼成一个任务，逐跳 BM25 top-20
+   ▼
+多步轨迹（约 10 步 / 2.3 万 token）
+   │  oracle 保留动作 + 噪声段 + DAgger
+   ▼
+SFT（LoRA，Qwen3-1.7B）
+   │  逐步奖励：−丢失证据 −无关段 −token 用量
+   ▼
+GRPO
+   ├──► 锁定测试集：固定轨迹 + Qwen3-8B 作答
+   └──► 真实 ReAct Agent：Qwen3-8B / DeepSeek 作主模型
+```
+
+Agent 中的一步：
+
+```text
+Thought → search[query] → BM25 top-20 → 压缩器：留哪些 / 丢哪些 → 写回上下文 → … → finish[答案]
+```
+
+## 项目结构
+
+```text
+ctx-compressor/
+├── src/            核心逻辑：轨迹构造、oracle 动作、奖励、Agent 循环、指标
+├── scripts/        数据、训练、评测流水线（按任务前缀命名）
+├── tests/          CPU 测试
+├── eval/           每个实验的报告、结果 JSON 和图；cost.py 是成本模型
+├── specs/          实验方案和各任务的任务书
+├── docs/           结果汇总、数据说明、完整实验记录
+├── requirements/   各环境的精确版本锁
+└── requirements.txt
+```
+
+## 环境安装
+
+```bash
+git clone git@github.com:Nevernzx/ctx-compressor.git
+cd ctx-compressor
+pip install -r requirements.txt                  # 数据处理与 CPU 测试
+# 训练与推理环境的精确版本见：
+#   requirements/train.lock.txt   (torch 2.8, transformers 4.57, TRL, PEFT)
+#   requirements/reader.lock.txt  (vLLM 0.11)
+```
+
+## 训练
+
+```bash
+# 1. SFT：构造 oracle 动作标签 + 噪声段，DAgger 一轮，LoRA 训练，留出集选 checkpoint
+python -m scripts.run_sft_v3_pipeline
+# 2. 把 SFT LoRA 合并进基座
+python -m scripts.merge_sft_lora
+# 3. GRPO（ms-swift）：闭环状态重打分、导出数据、训练、留出集选 checkpoint
+python -m scripts.grpo_r4_prepare prepare
+python -m scripts.run_grpo_r4_pipeline
+# 基线：同数据微调的重排模型
+python -m scripts.train_reranker_v1
+```
+
+## 评测
+
+```bash
+# 锁定测试集（固定轨迹 + Qwen3-8B 作答）
+python -m scripts.test_v1_pipeline detach
+# 真实 ReAct Agent：本地 Qwen3-8B / DeepSeek API
+python -m scripts.agent_v1_main launch
+python -m scripts.agent_ds_run launch main --approved
+# CPU 测试
+CUDA_VISIBLE_DEVICES= python -m pytest tests/
+```
+
+> 这些流水线是在 2 × RTX 5880 Ada 的服务器上跑的，模型、数据和输出路径写在各脚本开头，换机器需要先改路径。模型权重和轨迹数据不在仓库里。
+
+## 数据来源
+
+| 数据集 | 用途 | 许可 |
+|---|---|---|
+| [MuSiQue](https://github.com/StonyBrookNLP/musique) | 训练、留出集、锁定测试集 | CC BY 4.0 |
+| [HotpotQA](https://hotpotqa.github.io/) | 真实 Agent 的跨数据集测试 | CC BY-SA 4.0 |
+| [2WikiMultihopQA](https://github.com/Alab-NII/2wikimultihop) | 真实 Agent 的跨数据集测试 | Apache-2.0 |
+
+下载和校验方式见 [`docs/DATA_CARD.md`](docs/DATA_CARD.md)。
+
+## 文档
+
+| 文档 | 内容 |
 |---|---|
-| r4 − RR-τ | +20.8 |
-| r4 − 不压缩 | +21.4 |
-| r4 − v3（GRPO 相对 SFT 的增益，很小） | +1.1 |
-
-按跳拆开看保留率（第 1 / 2 / 3 / 4 跳）：
-
-- r4：88 / 71 / 64 / 65；
-- RR-τ：82 / 30 / 29 / 15。
-
-### 2. 真实 ReAct Agent，主模型 Qwen3-8B（任务20）
-
-- **Agent**：自建的 ReAct 循环，只有一个 BM25 搜索工具（top-20），最多搜 12 次。
-- **任务**：每个任务 3 道题；MuSiQue、HotpotQA、2Wiki 各 100 个任务，共 900 题。HotpotQA 和 2Wiki 没参与训练。
-
-| 行 | F1 | 开缓存 / 不开缓存成本（每任务） |
-|---|---|---|
-| oracle | 41.4 | 1,363 / 3,121 |
-| 不压缩 | 35.5 | 9,452 / 15,795 |
-| r4 append | 34.6 | 1,302 / 3,302 |
-| r4 reselect | 34.5 | 1,467 / 3,257 |
-| RR-τ reselect | 33.5 | 1,502 / 3,650 |
-| LLMLingua-2 | 24.4 | 5,512 / 6,855 |
-
-- r4 和重排模型基本打平：reselect 高 1.0，append 高 1.7。
-- r4 比不压缩低 1.0，开缓存成本约为它的 1/6。
-- **瓶颈在 Agent 搜不全**：一道题的 gold 段被全部搜到过的比例只有约 40%。
-
-### 3. 真实 ReAct Agent，主模型 DeepSeek（`deepseek-flash`，任务21）
-
-- **范围**：与任务20 的前 120 个任务相同。其中 7 个任务被 DeepSeek 的内容审核拒绝，按预注册规则整体排除，剩 339 道题。
-- **成本**：是 DeepSeek 实际计费，单位是元 / 任务。
-
-| 行 | DeepSeek F1 | 同题 Qwen F1 | 实际成本（元 / 任务） |
-|---|---|---|---|
-| oracle | 68.2 | 43.0 | 0.0064 |
-| **r4 append** | **63.1** | 36.8 | **0.0079** |
-| **r4 reselect** | **62.3** | 37.3 | **0.0081** |
-| 不压缩 | 61.9 | 38.3 | 0.0250 |
-| LLMLingua-2 | 54.9 | 25.4 | 0.0334 |
-| RR-τ reselect | 49.6 | 34.7 | 0.0084 |
-
-- **对重排模型的优势重新拉开**：r4 reselect 比 RR-τ 高 12.6，同一批题上 Qwen 只高 2.7。DeepSeek 搜得更全，至少有一次搜到全部 gold 的比例是 65–73%（LLMLingua-2 为 58%），Qwen 只有 38–44%；搜到的证据多了，"留得住"才开始起作用。
-- **和不压缩打平**：r4 reselect 高 0.4，r4 append 高 1.2，实际账单降约 68%。但分数据集看不一致：HotpotQA 上 r4 高，2Wiki 上低。
-- **事后分析**（不在预注册里，见 `eval/agent_ds/main/posthoc_report.md`）：r4 丢掉的段大多是 Agent 已经读过的。在这类题上，DeepSeek 的 F1 仍有 75，接近证据齐全时的 81；Qwen 只有 46。
-
-### 局限
-
-- 所有数字都是单次运行。
-- GRPO 相对 SFT 的增益很小（+1.1）。
-- 真实 Agent 实验的规模小（339–900 题），分数据集看结果不一致。
-- 固定轨迹评测和真实 Agent 之间有落差：在 Qwen 主模型下，r4 对重排模型的优势从 +20.8 缩到 +1。
-- 压缩器本身的推理成本没有计入。
-
-## 评测上的几个坑（都已在流程里修掉）
-
-- **留出集泄漏**：重排模型靠记住训练时见过的 gold 和压缩器打平。为此另建了与训练零重叠的锁定测试集（任务10 建、任务19 用）。
-- **vLLM cascade attention**：读者 greedy 输出会随批次构成变化（任务15）。之后所有读者评测都设 `disable_cascade_attn=True`。
-- **SFT v1 的 reselect 学成了"每步都删"**：根源是训练数据设计的疏漏。任务06 修了数据，任务10 加了 DAgger。
-- **DeepSeek 一轮连写多步动作**：加 `\nThought:` 作停止符后解决（任务21）。
-
-## 任务索引
-
-每个任务的任务书在 `specs/`，报告和结果 JSON 在 `eval/<目录>/`。
-
-| 任务 | 内容 | 结果目录 |
-|---|---|---|
-| 01–02 | 框架、数据、不需要读者模型的可行性检查 | `eval/acceptance`, `eval/feasibility` |
-| 03 | 读者 F1 可行性（Qwen3-8B） | `eval/reader` |
-| 04–06 | SFT 数据、训练、reselect 噪声修正 | `eval/sft_prep`, `eval/sft_run`, `eval/sft_run_v2` |
-| 07–09 | GRPO 准备、GRPO v2、免训练加段上限 | `eval/grpo_prep`, `eval/grpo_v2`, `eval/hedge_v2` |
-| 10 | SFT v3（DAgger）、锁定测试集 | `eval/sft_run_v3`, `eval/test_dev_v1` |
-| 11, 13 | GRPO r2（reward v2）、r3 | `eval/grpo_r2`, `eval/reward_v2`, `eval/grpo_r3` |
-| 12, 15, 16 | 留出集读者 F1、批次一致性诊断、关闭 cascade 后重跑 | `eval/reader_heldout`, `eval/reader_diag`, `eval/reader_heldout_v2` |
-| 14 | DeepSeek 子集（换读者 + API 压缩器基线） | `eval/deepseek_api` |
-| 17 | 同数据微调的重排模型基线 | `eval/reranker_v1` |
-| 18 | GRPO r4（reward v3），选出 ckpt-500 | `eval/grpo_r4` |
-| 19 | 锁定测试集最终对比 | `eval/test_v1` |
-| 20 | 真实 ReAct Agent（Qwen3-8B） | `eval/agent_v1` |
-| 21 | 真实 ReAct Agent（DeepSeek）+ 事后分析 | `eval/agent_ds` |
-
-## 仓库结构
-
-```
-src/        核心逻辑：轨迹构造、oracle 动作、奖励、读者、Agent 循环、指标
-scripts/    各任务的流水线与报告脚本（文件名带任务前缀，如 agent_v1_*、grpo_r4_*）
-tests/      CPU 测试（pytest）
-specs/      任务书（中文，预注册的设置与判据）和总体方案 PLAN_v2.md
-eval/       每个任务的报告（*.md）、结果 JSON、SVG 图、SHA256 清单；cost.py 是成本模型
-docs/       LAB_NOTEBOOK.md：逐任务的完整实验记录（原 README）
-NOTES.md, HANDOFF.md   工程备忘与交接记录
-DATA_CARD.md, data_notes.md, notes_*.md   数据来源、环境与早期任务的说明
-```
-
-模型权重、轨迹数据和大文件不在仓库里：训练运行在另一台机器上，大文件放在仓库外的目录中，各任务报告里记录了路径和 sha256。
-
-## 复现
-
-- **环境**：
-  - CPU 和数据处理用 `requirements.txt` / `requirements.lock.txt`；
-  - 训练用 `requirements.train.lock.txt`（TRL + PEFT）；
-  - 读者和 Agent 用 `requirements.reader.lock.txt`（vLLM 0.11）。
-- **数据**：MuSiQue（CC BY 4.0）、HotpotQA（CC BY-SA 4.0）、2WikiMultihopQA（Apache-2.0），下载和校验见 `DATA_CARD.md`。
-- **测试**：`CUDA_VISIBLE_DEVICES= python -m pytest tests/`。部分测试会读原机器上的数据和模型路径，换机器后需要先准备好数据。
-- 每个任务的完整运行方式写在对应任务书和报告里。
-
-## 许可
-
-代码暂未指定许可证。数据集遵循各自的许可证；模型权重遵循 Qwen3（Apache-2.0）及各基线模型的许可证。
+| [`docs/RESULTS.md`](docs/RESULTS.md) | 全部结果、配对比较和局限 |
+| [`docs/LAB_NOTEBOOK.md`](docs/LAB_NOTEBOOK.md) | 21 个任务的完整实验记录 |
+| [`specs/PLAN_v2.md`](specs/PLAN_v2.md) | 方案设计与相关工作对比 |
+| [`eval/`](eval/) | 每个任务的报告与原始结果 |

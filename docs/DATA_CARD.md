@@ -211,6 +211,6 @@ dev 跳数分布：`{"2": 1252, "3": 760, "4": 405}`。
 经过引用、证据索引和语料映射校验，可用于模拟 2,417 题，保守跳过 0 题；原因计数：`{}`。
 
 
-2 / 3 / 4 跳各 5 条完整原始分解样例已逐条打印在 [README](README.md) 和 [数据核对全文](eval/acceptance/data_audit.md)。
+2 / 3 / 4 跳各 5 条完整原始分解样例已逐条打印在 [README](LAB_NOTEBOOK.md) 和 [数据核对全文](../eval/acceptance/data_audit.md)。
 
 下载失败尝试、可复现命令与各步耗时见 [HANDOFF](HANDOFF.md)；镜像许可元数据冲突与保守处理见 [NOTES](NOTES.md)。
