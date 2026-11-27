@@ -55,6 +55,17 @@
 
 > 以上均为单次运行。主模型换成 Qwen3-8B 后（900 道题），本项目和重排模型基本打平（+1.0 / +1.7），比不压缩低 1.0，成本约为不压缩的 1/6。主模型越强、搜得越全，压缩器的优势越明显。详见 [`docs/RESULTS.md`](docs/RESULTS.md)。
 
+## 模型权重
+
+| 版本 | 内容 | 下载 |
+|---|---|---|
+| 合并版（日常使用） | Qwen3-1.7B 依次合并 SFT LoRA 和 GRPO LoRA，单个 bf16 模型 | [Hugging Face](https://huggingface.co/nzxjx827/ctx-compressor-qwen3-1.7b) · [ModelScope](https://www.modelscope.ai/models/never0214/ctx-compressor-qwen3-1.7b) |
+| 精确复现版 | SFT 合并底座 + GRPO LoRA，即上面所有结果实际用的部署 | [ModelScope](https://www.modelscope.ai/models/never0214/ctx-compressor-qwen3-1.7b-lora) |
+
+- 合并成 bf16 会改变少量决策：重放 DeepSeek Agent 的 1,830 次压缩调用，合并版和 LoRA 部署的动作一致率为 94.6%；作为参照，LoRA 部署自己重跑也只有 97.1% 一致（vLLM 的 greedy 输出会随批次构成变化）。
+- 输入模板、调用代码（transformers / vLLM / peft）和动作的执行规则见各模型卡。
+- ModelScope 仓库在国际站 modelscope.ai，用 SDK 下载时要传 `endpoint="https://www.modelscope.ai"`。
+
 ## 整体流程
 
 ```text
@@ -130,7 +141,7 @@ python -m scripts.agent_ds_run launch main --approved
 CUDA_VISIBLE_DEVICES= python -m pytest tests/
 ```
 
-> 这些流水线是在 2 × RTX 5880 Ada 的服务器上跑的，模型、数据和输出路径写在各脚本开头，换机器需要先改路径。模型权重和轨迹数据不在仓库里。
+> 这些流水线是在 2 × RTX 5880 Ada 的服务器上跑的，模型、数据和输出路径写在各脚本开头，换机器需要先改路径。模型权重见上方"模型权重"，轨迹数据不在仓库里。
 
 ## 数据来源
 
@@ -154,5 +165,5 @@ CUDA_VISIBLE_DEVICES= python -m pytest tests/
 ## 许可
 
 - 代码：[MIT](LICENSE)。
-- 模型权重：基于 [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B)，遵循 Apache-2.0。
+- 模型权重（见"模型权重"）：基于 [Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B)，遵循 Apache-2.0。
 - 数据集：遵循各自的许可证，见上方"数据来源"。
